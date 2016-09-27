@@ -1,0 +1,5 @@
+sky_lighting
+global_lighting
+light_sources
+light_baking
+reflections

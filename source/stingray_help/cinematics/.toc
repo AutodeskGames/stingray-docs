@@ -1,0 +1,7 @@
+create_simple_animations
+animate_subobjects
+animate_shading_enviro
+animated_cameras
+animated_movies
+story_editor
+storyEd_hotkeys

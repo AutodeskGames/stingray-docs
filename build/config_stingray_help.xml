@@ -1,0 +1,138 @@
+<ADE_HTML_2_1_tools_Config>
+	<project>
+		<output>..\output\stingray_help\%SR_DOC_LANG%\preview</output>
+		<output>..\output\stingray_help\%SR_DOC_LANG%\stingray_help.zip</output>
+		<AKN>
+			<component_id>Stingray-Help</component_id>
+			<product>Stingray</product>
+			<release>NA</release>
+			<language>%SR_DOC_LANG_AKN%</language>
+			<book>GeneralUser</book>
+			<local_output>..\output\stingray_help\%SR_DOC_LANG%\AKN</local_output>
+			<post_to_AKN>false</post_to_AKN>
+			<post_to_AKN_beta>false</post_to_AKN_beta>
+			<redirect_to_help include="*">true</redirect_to_help>
+		</AKN>
+		<language>%SR_DOC_LANG%</language>
+		<project_title>Stingray Help</project_title>
+		<project_title lang="ko">Stingray 도움말</project_title>
+		<export_for_localization>%SR_DOC_EXPORT_DIR%</export_for_localization>
+		<import_from_localization>%SR_DOC_IMPORT_DIR%</import_from_localization>
+	</project>
+
+	<global>
+		<syntax_coloring include="\stingray_help\*,\lua_ref\*,\changelog\*" default_lang="lang-lua">true</syntax_coloring>
+		<!-- Disabling machine translation for now.
+		<add_MT include="\stingray_help\*,\lua_ref\*,\flow_ref\*" fromlanguage="en">true</add_MT>
+		-->
+		<!-- search filters for offline Javascript -->
+		<search_filter id="topics" include_expression="stingray_help/.*htm">
+			<label lang="en">Search help topics?</label>
+		</search_filter>
+		<search_filter id="lua_ref" include_expression="lua_ref/.*">
+			<label lang="en">Search Lua API Reference?</label>
+		</search_filter>
+		<search_filter id="flow_ref" include_expression="flow_ref/.*">
+			<label lang="en">Search Flow node Reference?</label>
+		</search_filter>
+		<!-- search filters for AKN  -->
+		<meta name="topic-subtype" content="Lua reference" include="*\lua_ref\*.html"></meta>
+		<meta name="topic-subtype" content="Flow reference" include="*\flow_ref\*.html"></meta>
+		<!-- context IDs for CSH -->
+		<contextId include="*\level_viewport.html" id="tools_level_viewport"></contextId>
+		<contextId include="*\level_flow_editor.html" id="tools_level_flow_editor"></contextId>
+		<contextId include="*\level_explorer.html" id="tools_level_explorer"></contextId>
+		<contextId include="*\object_panel.html" id="tools_object_panel"></contextId>
+		<contextId include="*\property_editor.html" id="tools_property_editor"></contextId>
+		<contextId include="*\connections.html" id="tools_connections"></contextId>
+		<contextId include="*\debugger_view.html" id="tools_debugger_view"></contextId>
+		<contextId include="*\deployer.html" id="tools_deployer"></contextId>
+		<contextId include="*\asset_browser.html" id="tools_asset_browser"></contextId>
+		<contextId include="*\script_editor.html" id="tools_script_editor"></contextId>
+		<contextId include="*\log_console.html" id="tools_console"></contextId>
+		<contextId include="*\skeleton_editor.html" id="tools_skeleton_editor"></contextId>
+		<contextId include="*\anim_clip_editor.html" id="tools_anim_clip"></contextId>
+		<contextId include="*\animation_controller_editor.html" id="tools_animation_controller_editor"></contextId>
+		<contextId include="*\humanik_window.html" id="tools_humanik_window"></contextId>
+		<contextId include="*\navigation_window.html" id="tools_navigation_window"></contextId>
+		<contextId include="*\shading_environment.html" id="tools_shading_environment"></contextId>
+		<contextId include="*\status_bar.html" id="tools_status_bar"></contextId>
+		<contextId include="*\story_editor.html" id="tools_story_editor"></contextId>
+		<contextId include="*\asset_preview.html" id="tools_asset_preview"></contextId>
+		<contextId include="*\system_requirements.html" id="system_requirements"></contextId>
+		<contextId include="*\object_lifetimes.html" id="lua_userdata_binding"></contextId>
+		<replace pattern="BEGIN_STANDALONE.*END_STANDALONE" replacement="" include="*.html"></replace>
+		<insert_family_links include="\stingray_help\*,\changelog\*"></insert_family_links>
+		<validate_todos>true</validate_todos>
+		<default_file>./homepage/homepage.htm</default_file>
+		<rename_toc_node old_title="Stingray FAQ" new_title="FAQ"></rename_toc_node>
+	</global>
+
+	<merge id="images">
+		<source>..\source\resources\*.png</source>
+		<merge_toc>false</merge_toc>
+	</merge>
+
+	<merge id="homepage">
+		<source>..\source\resources\stingray-help-homepage\*.*</source>
+		<search_prefix></search_prefix>
+		<apply_template>false</apply_template>
+		<merge_toc>false</merge_toc>
+	</merge>
+
+	<merge id="stingray_help">
+		<source convert_from="markdown" get_metadata="true">..\source\stingray_help\*.md</source>
+		<source>..\source\stingray_help\*.png</source>
+		<source>..\source\stingray_help\*.jp*g</source>
+		<source>..\source\stingray_help\*.gif</source>
+		<source>..\source\stingray_help\*.toc</source>
+		<search_prefix></search_prefix>
+		<merge_toc_config>
+			<source type="directory"></source>
+			<promote_first_topic>false</promote_first_topic>
+		</merge_toc_config>
+	</merge>
+
+	<doxygen id="flow_ref">
+		<source>..\output\flow_HTML</source>
+		<link>true</link>
+		<link_xpath>//strong</link_xpath>
+		<language>lua</language>
+		<search_prefix></search_prefix>
+		<search_excludes></search_excludes>
+		<merge_toc_config>
+			<first_entry_title>Flow node reference</first_entry_title>
+			<first_entry_title lang="ko">흐름 노드 참조</first_entry_title>
+			<promote_first_topic>false</promote_first_topic>
+		</merge_toc_config>
+	</doxygen>
+
+	<doxygen id="shaders_ref">
+		<source>..\output\shaders_HTML</source>
+		<link>true</link>
+		<link_xpath>//strong</link_xpath>
+		<language>lua</language>
+		<search_prefix></search_prefix>
+		<search_excludes></search_excludes>
+		<merge_toc_config>
+			<first_entry_title>Shader node reference</first_entry_title>
+			<first_entry_title lang="ko">Stingray 셰이더 노드 참조</first_entry_title>
+			<parent_filename>\lighting_rendering.html</parent_filename>
+			<promote_first_topic>false</promote_first_topic>
+		</merge_toc_config>
+	</doxygen>
+
+	<doxygen id="lua_ref">
+		<source>..\output\lua_HTML</source>
+		<link>true</link>
+		<language>lua</language>
+		<search_prefix></search_prefix>
+		<search_excludes></search_excludes>
+		<merge_toc_config>
+			<first_entry_title>Lua API reference</first_entry_title>
+			<first_entry_title lang="ko">Lua API 참조</first_entry_title>
+			<promote_first_topic>false</promote_first_topic>
+		</merge_toc_config>
+	</doxygen>
+
+</ADE_HTML_2_1_tools_Config>

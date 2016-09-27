@@ -1,0 +1,26 @@
+#new {
+	float: left;
+	margin: 0 .66% 0 0;
+	width: 49.5%;
+}
+#help {
+	float: left;
+	width: 49.5%;
+}
+#reference {
+	float: left;
+	margin: 0 .66% 0 0;
+	width: 49.5%;
+}
+#resources {
+	float: left;
+	width: 49.5%;
+}
+#header {
+   background: #000 url(../images/heroBannerMed.png) no-repeat bottom center;
+   height: 8.688em;
+}
+#container {
+	/*	width: 29.375em;*/
+	max-width: 470px;
+}

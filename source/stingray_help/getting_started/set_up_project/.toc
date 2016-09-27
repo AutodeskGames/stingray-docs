@@ -1,0 +1,8 @@
+template_projects
+project_structure
+about_resources
+test_a_project
+project_manager
+project_settings
+editor_settings
+version_control

@@ -1,0 +1,4 @@
+vid_audio_setup
+vid_audio_import
+vid_audio_understandSources
+vid_audio_trigger

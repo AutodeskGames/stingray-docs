@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Exploring the Learning Museum</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=lua"></script>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/tutorial1.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800?v=b18370dd9abe6aebb884645b2e6223b6">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700?v=f764c631e77b110275de7f6ba6ea128e">
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js" type="text/javascript"></script>
+  <script src="./js/reload.js" type="text/javascript"></script>
+  <script src="./js/codetoggle.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="header museum-tutorial">
+    <div class="header-content">
+      Exploring the Learning Museum
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="row">
+                    <div class="col-md-12">
+                       	
+			<a name="step1"></a><h2>Introduction</h2>
+		<p>The Learning Museum is an interactive environment that helps you learn about Stingray's core systems. Each room in the museum is dedicated to one concept and includes live examples. This tutorial highlights four concepts that are included in the museum: customizing your project's main menu, levels of detail, creating light masks, and particle effects. </p>
+		
+		<p>	<a href="https://d3ui957tjb5bqd.cloudfront.net/files/apps/stingray/examples/v1_4/museum_of_learning.rar" class="block"><i class="fa fa-angle-double-down fa-lg"></i> Download Project Files</a> </p>
+			
+			<p><img src="img/museum_main.png"  /> </p></ol>
+			
+			<a name="step2"></a><h2>Part 1: Customize the main menu</h2>
+			<p> Every Stingray project starts with a main menu that lets you open or quit the application. You can customize the menu's look and feel using Scaleform Studio.</p>
+			<p>For more information, see <a href="/cloudhelp/ENU/Stingray-Help/stingray_help/video_tutorials/vid_ss_integrateMenu.html">Integrating a main menu in your Stingray project using Lua</a>.</p>
+			<ol>
+			<li>Create a new project using the basic project template.
+			<p>By default, the basic project template includes main menu level that you can work with.</li>
+			<li>In the <b>Asset Browser</b>, select <b>script > lua</b> and double-click <b>project.lua</b>. </li>
+			<li>In the <b>Script Editor</b> window that appears, ensure that the path of the basic variable points to the scene you want to load and close:
+			<p><img src="img/learning_lua.png" /> </p></li>
+			<li>(Optional) While it is possible to cover the viewport with a 2d background, you can also do the following to create a 3D background for your main menu.
+			<ul><li>In Stingray, open the main menu level, and create a scene that you want to use as a background for your main menu.</li>
+			<li>In your Stingray scene, create a new camera and set its translate and rotate transforms to (0, 0, 0).</li> 
+			<li>When you are finished creating your scene, click <img src="img/icon_run_proj.png" />.
+			<p>The following image shows the main menu with a new 3d background, however the text is difficult to read. You can make changes to the text and formatting using Scaleform Studio.</p>
+			<p><img src="img/main_menu_before.png" /> </p></li>
+			<li>In the <b>Asset Browser</b> select <b>content > ui > simple_menu.s2d</b> and double-click <b>simple_menu.s2dproj</b>.
+			<p>Scaleform Studio opens. Scaleform comes with different interaction templates like buttons and sliders, called widgets. The simple_menu project already has two buttons that can be customized to fit your needs.</p></li>
+			<li>Double-click the <b>Start</b> button.
+			<p><img src="img/start_button.png" /> </p>
+			<p>The <b>Start</b> button is a layer, with customizable properties including text formatting and effects for various button states.</p></li>
+			<li>In the <b>Timeline</b> tab at the bottom of your screen, select any of the four states (label, focus, hover, background) to edit its <b>Properties</b>.</li>
+			<p><img src="img/scaleform_timeline.png" /> </p>
+			<li>Select the label layer and use the Text component section in the Properties panel to rename the text, set its size, font color, and alignment.
+			<p>Tip: Select File > Import to import your own TIFF font to any folder in your Scaleform Studio Project.</li>
+			<li>Select the background layer and use the Effects section to change the background color in the selected frames.</li>
+			<li>Remember to save your Scaleform Studio project, and click <img src="img/icon_run_proj.png" /> in your Stingray scene to test your design as you work.</li></ul></li>
+			<p><img src="img/main_menu_after.png" /> </p>
+			<p>For more information on working in the Scaleform Studio Editor, see the <a href="http://www.autodesk.com/scaleformstudio-help" target="_blank">Scaleform Studio Help</a>.</p>
+			</ol>
+			
+									
+			<a name="step3"></a><h2>Part 2: Levels of Detail</h2>
+			<p><img src="img/museum_lod.png" /></p>
+			<p>Levels of Detail (LODs) let you associate multiple versions of the same geometry to be replaced in your game based on a certain threshold value. This lets you produce a high-quality version of a model for up close and a low-quality version for far away, with multiple versions in between. You can create an LOD object using 3d modeling software (Maya, Maya LT), and then import it into Stingray. 
+			<ol>
+			<li>When creating LOD objects in your 3d modeling software, ensure the following:</li>
+			<ul>
+			<li>All of the different objects are placed at the same geographic location.</li>
+			<li>Each object is assigned a relevant name depending on its order in the group. For example, ObjectName_LOD1, ObjectName_LOD2, ObjectName_LOD3.</li></li>
+			<li>Each object is detailed enough for the size at which it is seen on screen.</li></ul>
+			<p>Objects respecting these guidelines can be exported from your modeling software as a group to Stingray.</p>
+			<li>In Stingray, import an FBX file containing your LOD geometry. <b>Level of Detail</b> is on by default in the <b>FBX Import</b> options.
+			<p>By default, the Stingray engine renders all of the objects simultaneously. Parameters called LOD steps must be set within the LOD object to tell Stingray which object to render at each screen height percentage.</li>
+			<li>In the <b>Asset Browser</b>, double-click the imported unit to open it in the <b>Unit Editor</b>. Your LODs and the associated geometry display in the tree view on the left side of the <b>Unit Editor</b>.</li>
+			<li>Switch to the Level of Detail panel (top right in the <b>Unit Editor</b>).</li>
+			<li>Select one of your LOD objects from the <b>LOD Object</b> drop-down menu, and enter a name for the group in the dialog box that appears.
+			<li>Do the following for each of your LODs to create LOD steps:
+			<ul><li>Click <img src="img/icon_new_step.png" /> to create a new LOD step.</li>
+			<li>In the <b>LOD Step Range</b> dialog box that appears, enter a step range.
+			<p>The step range is a percentage of the screen height. For example, a step range of 80-100 is the highest resolution, when your object takes up most of your screen.</p></li>
+			<li>In the tree view, select an LOD object and click <img src="img/icon_add_lod.png" /> to assign it to the selected step range.
+			<p><img src="img/lod_add_step.png" /></p> </li>
+			<li>Continue to create LOD steps until all of your LOD objects are assigned to a step range. 
+			<p>Together, all of the ranges should cover every possible screen size the unit can have, ranging from 0% to 100% of the screen height.</p>	
+			<p><img src="img/lod_add_step_complete.png" /></p></li></ul>
+			<li>Drag the unit from the <b>Asset Browser</b> into the <b>Level Viewport</b> to place it in your level.
+			<p>Zoom in and out with the camera (scroll wheel or Alt + right-drag) to see the LOD geometry switching.</ol>
+						
+			
+			
+			<a name="step4"></a><h2>Part 3: Creating Light Masks</h2>
+			<p>Applying a texture to an object is relatively simple because UV coordinates can be used to project the texture's pixels onto the object's surface. The challenge with light-based materials is that they are based on light sources, which do not have UV coordinates. Controlling intensity variations inside a light using texture masks can help produce interesting effects. The following steps explain how to create a custom material for light sources, so they can support textures masks.
+			<p>
+			<ol>
+			<li>Create a new material. Navigate in the <b>Asset Browser</b> to the folder where you want to save your new material, Right-click in the <b>Asset Browser</b> and choose <b>Create > Material(Empty)</b>.</li>
+			<li>Double-click the new material in the <b>Asset Browser</b> to open its shader graph in the <b>Shader Graph Editor</b></li>
+			<li>Select and delete the <b>Standard Base</b> node that is in the graph by default. Replace it with an <b>Output > Light Base</b> node.</li>
+			<li>Apply your material to a light in the scene so that you can see its effect as you work on the material's shader graph. With a light source selected, find the <b>Material Resource</b> setting and set it to your new material.
+			<li>Return to the <b>Shader Graph Editor</b> and set up your light material's shader graph as follows:
+			<p><img src="img/light_mat_flow.png" /></p>
+			<p>The Light Vector node provides information about the light's direction as a normalized vector in world space. We need XY values to map our texture as though it was on a canvas. The Light Vector node only gives us vectors with directions and forces coming out of a single point. The Dot product and Construct Nodes take these outgoing vectors and project them back onto the imaginary canvas.</p></li>
+			<li>Add the following to the operation chain:</li>
+			<ul>
+			<li>A hardcoded offset to the UV coordinates.</li>
+			<li>A Clamp node. This restrains the UV values between 0 and 1 and prevents the texture from tiling.</li>
+			<p><img src="img/light_mat_flow2.png" /></p></li></ul>
+			<li>Plug this chain operation into the sample texture's UV parameter.</li>
+			<li>Before connecting the texture to your Light Base node, multiply the texture by the Light Colour node.
+			<p><img src="img/light_mat_flow3.png" /></p>
+			<p>Directly connecting the texture to the Light Base material's Light Colour node overrides its colour and intensity, creating a very weak light. Multiplying the texture by the Light Colour creates a strong light.</li>
+			<li>Your completed shader graph should match the following:
+			<p><img src="img/light_mat_flow4.png" /></li>
+			</ol>
+
+			<a name="step5"></a><h2>Part 4: Creating Particle Effects: Fire</h2>
+			<p><img src="img/museum_fire.png" /></p>
+			<p>Particle systems can be used to add an atmospheric layer, like rain or fog, to a scene. Fire is a complex element requiring multiple particle systems and other units to function properly: flames, smoke, and wind. Together, these systems work together to create a believable fire.</p>
+			<p>For a full tutorial on creating particle effects, see <a href="particle_tutorial.html">Creating Particle Effects</a>.</p>
+			
+			
+			
+			
+			
+
+			
+            <br>			
+			<a href="#top" >Return to top</a>
+			
+                       
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 side-content">
+        <a href="#step1" class="block">Introduction</a>
+        <a href="#step2" class="block">Customize the Main Menu<a>
+        <a href="#step3" class="block">Levels of Detail</a>
+        <a href="#step4" class="block">Creating Lighting Masks</a>
+		<a href="#step5" class="block">Creating Particle Effects: Fire</a>
+		
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

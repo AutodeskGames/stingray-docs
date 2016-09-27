@@ -1,0 +1,4 @@
+localizing_resources
+localizing_audio
+localizing_strings
+localizing_uis

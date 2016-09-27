@@ -1,0 +1,9 @@
+what_is_stingray
+interface_overview
+customize_layout
+basic_navigation
+hotkeys
+set_up_project
+open_existing_project
+downloads_creativeMkt
+common_windows

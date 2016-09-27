@@ -1,0 +1,27 @@
+#new {
+	width: 24.5%;
+	margin: 0 .66% 0 0;
+	float: left;
+}
+#help {
+	width: 24.5%;
+	margin: 0 .66% 0 0;
+	float: left;
+}
+#reference {
+	width: 24.5%;
+	margin: 0 .66% 0 0;
+	float: left;
+}
+#resources {
+	width: 24.5%;
+	float: left;
+}
+#header {
+   background: #000 url(../images/heroBanner.png) no-repeat bottom center;
+   height: 16.125em;
+}
+#container {
+/*	width: 57.875em;*/
+	width: 57.750em;
+}

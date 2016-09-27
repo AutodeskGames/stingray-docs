@@ -1,0 +1,5 @@
+lightmap_uvsetup
+bake_settings
+bake_lightmaps
+bake_with_beast
+bake_with_stingray

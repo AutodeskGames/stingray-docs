@@ -1,0 +1,74 @@
+/* M&E Portal  base CSS*/
+body {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	padding-bottom: 1.25em;
+}
+#container {
+	margin: 0 auto;
+	text-align: left;
+}
+#header {
+	background: #000 url(../images/heroBannerSmall.png) no-repeat bottom center;
+	height: 6.313em;
+}
+#content {
+	background-color: #fff;
+	margin: 0.20em 0 0 0;
+	padding: 0 0 0.250em 0;
+}
+p.credit {
+	font-size: .75em;
+	margin: 0 .25em .25em 0;
+	text-align: right;
+}
+.colBanner {
+	background-color: #000;
+	color: #fff;
+	height: 2.218em;
+	padding: 0.750em 0 0 0;
+}
+.colBanner h2 {
+	margin:  0 0 0 0.750em;
+	font-size: 1em;
+	font-weight: normal;
+}
+#new, #reference  {
+	background-color: #e1e1e1;
+}
+#help, #resources {
+        background-color: #fff;
+}
+
+dl {
+	height: 8.9em;
+	margin: 0.750em 0 0 0.750em;
+	min-height: 142px;
+}
+dd {
+	font-size: .9em;
+}
+img {
+	border: none;
+}
+.clear {
+	clear: both;
+}
+#footer {
+	background-color: #000;
+	height: 2.5em;
+	margin: 0.250em 0 0 0;
+	padding: 0.5em 0 0 0;
+}
+#footer p {
+	font-size: .9em;
+	margin: 0.250em 0 0 0.5em;
+}
+#footer a {
+	color: #fff;
+	text-decoration: none;
+
+}
+#footer a:hover {
+	text-decoration: underline;
+}

@@ -1,0 +1,49 @@
+# Updating to the latest changes from Autodesk
+
+The Autodesk Games repositories are regularly updated with new changes. However, if you have created your own forks, those forks will not automatically be kept in sync with the upstream source. The head revisions of your forks will remain at their current revisions until you explicitly update them.
+
+There are several ways that you can update your fork using GitHub or your local Git client. The following suggestions may work for you. See the [GitHub help](https://help.github.com/articles/syncing-a-fork/) if you need more detail.
+
+## Before you update
+
+We generally recommend cleaning your source directory of any generated, untracked files each time you update to a newer revision. This makes sure that any deprecated or obsolete files from previous builds are no longer around to cause potential problems when you work with the new revision.
+
+For example, the following command line removes all untracked directories and files:
+
+```
+> git clean -dxf
+```
+
+See also [the Git clean documentation](http://git-scm.com/docs/git-clean).
+
+## Method 1: using GitHub
+
+This is a fast and simple way to update to the latest revision when there are no conflicts between your fork and the Autodesk repository.
+
+1.	From the home page of your fork in GitHub, start a new pull request.
+
+2.	Use your branch in your fork as the base, and use the corresponding branch in the upstream source repository as the head.
+
+3.	If there are differences between your base fork and the upstream source, you will be able to create and merge the pull request.
+
+## Method 2: local merge
+
+This approach may be better if you have made changes in your fork that may conflict with changes made in the upstream source repository.
+
+1.	Get a local copy of your branch from your fork.
+
+2.	If you don't already have a remote named `upstream` set up in your local repository, create one. Set it up to point back to the main Autodesk Games repository.
+
+3.	Pull the changes from the `upstream` repository to your local branch. Make sure you pull from the right branch: if you're currently working in the `master` branch of your fork, pull from the `master` branch of the upstream remote; if you're currently working in the `develop` branch of your fork, pull from the `develop` branch of the upstream remote.
+
+4.	Your Git client should alert you of any conflicts that it found. If you have any conflicts, resolve them now.
+
+5.	Commit and push your local changes back up to your fork.
+
+See also [this topic](https://help.github.com/articles/syncing-a-fork/) in the GitHub help for instructions on carrying out these tasks using the command line.
+
+## After you update
+
+1.	If you use any "closed" console plaforms, make sure that you also update the repositories for those platforms so that it will be in sync with the code in the public platforms repository.
+
+2.	Always remember to update your libraries again, in case the requirements have changed. See ~{ Library dependencies }~.

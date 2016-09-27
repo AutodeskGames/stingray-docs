@@ -1,0 +1,34 @@
+<ADE_HTML_2_1_tools_Config>
+	<project>
+		<!-- <output>..\output\tutorials\%SR_DOC_LANG%\preview</output> -->
+		<AKN>
+			<component_id>Stingray-Tutorials</component_id>
+			<product>Stingray</product>
+			<release>NA</release>
+			<language>%SR_DOC_LANG_AKN%</language>
+			<book>Developer</book>
+			<local_output>..\output\AKN</local_output>
+			<post_to_AKN>false</post_to_AKN>
+			<post_to_AKN_beta>false</post_to_AKN_beta>
+		</AKN>
+		<language>%SR_DOC_LANG%</language>
+		<project_title>Stingray Tutorials</project_title>
+		<!-- one day we may localize these tutorials...  -->
+		<!-- export_for_localization>%SR_DOC_EXPORT_DIR%</export_for_localization -->
+		<!-- import_from_localization>%SR_DOC_IMPORT_DIR%</import_from_localization -->
+	</project>
+
+	<global>
+	</global>
+
+	<merge id="tutorials">
+		<source>..\source\tutorials\*.*</source>
+		<search_prefix></search_prefix>
+		<apply_template>false</apply_template>
+		<merge_toc_config>
+			<source type="directory"></source>
+			<promote_first_topic>false</promote_first_topic>
+		</merge_toc_config>
+	</merge>
+
+</ADE_HTML_2_1_tools_Config>

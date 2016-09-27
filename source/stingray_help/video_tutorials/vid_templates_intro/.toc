@@ -1,0 +1,3 @@
+vid_templates_basicEmpty
+vid_templates_character
+vid_templates_vehicle

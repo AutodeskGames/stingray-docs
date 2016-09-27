@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://docs.autodesk.com -->
+<html lang="en-US">
+<head>
+	<meta charset='utf-8' />
+	<title>Stingray Help Portal</title>
+	<script>
+	function equalHeight(group) {
+   	tallest = 0;
+   	group.each(function() {
+      	thisHeight = $(this).height();
+      	if(thisHeight > tallest) {
+         	tallest = thisHeight;
+     		}
+   	});
+   	group.height(tallest);
+	}
+	function loadSheet() {
+		if (document.createStyleSheet)
+		{
+			var pagewidth = $(document).width();
+			var minWidth = (pagewidth > 1275) ? '800' : '600';
+			var ieStartSheet = document.createStyleSheet('./homepage/style/' + minWidth + '.css');
+			ieStartSheet.media = 'all and (min-width:' + minWidth +')'
+		}
+	}
+	$(document).ready(function() {
+	loadSheet();
+	window.setTimeout(function() { equalHeight($(".columns")); }, 200);
+});
+</script>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="styles/mePortal.css" />
+	<link rel="stylesheet" type="text/css" href="styles/600.css" media="all and (min-width: 850px)" />
+    <link rel="stylesheet" type="text/css" href="styles/800.css" media="all and (min-width: 1275px)" />
+
+</head>
+<body>
+<div id="container" class="related-links">
+<div id="header"></div>
+<div id="content">
+<p class="credit">&nbsp;</p>
+<div id="new" class="columns"><div class="colBanner"><h2>&nbsp;</h2></div>
+<dl>
+<dt><a href="../stingray_help/getting_started/what_is_stingray.html"><img src="images/WhatIsStingray.png" width="204" height="95" alt="What is Stingray?"></a></dt>
+<dd><a href="../stingray_help/getting_started/what_is_stingray.html">What is Stingray?</a></dd>
+</dl>
+<dl>
+<dt><a href="../stingray_help/getting_started/interface_overview.html"><img src="images/interface.png" width="204" height="95" alt="Interface Overview"></a></dt>
+<dd><a href="../stingray_help/getting_started/interface_overview.html">Interface Overview</a></dd>
+</dl>
+<dl>
+<dt><a href="../stingray_help/getting_started/set_up_project/template_projects.html"><img src="images/template.png" width="204" height="95" alt="Template Projects"></a></dt>
+<dd><a href="../stingray_help/getting_started/set_up_project/template_projects.html">Template Projects</a></dd>
+</dl>
+<dl>
+<dt><a href="../stingray_help/getting_started/set_up_project.html"><img src="images/setup.png" width="204" height="95" alt="Set up Project"></a></dt>
+<dd><a href="../stingray_help/getting_started/set_up_project.html">Set up a Project</a></dd>
+</dl>
+</div>
+
+<div id="help" class="columns"><div class="colBanner"><h2>&nbsp;</h2></div>
+<dl>
+<dt><a href="../stingray_help/video_tutorials/vid_gettingStarted.html"><img src="images/video.png" width="204" height="95" alt="Getting Started"></a></dt>
+<dd><a href="../stingray_help/video_tutorials/vid_gettingStarted.html">Getting started</a></dd>
+</dl>
+<dl>
+<dt><a href="../stingray_help/importing_assets.html"><img src="images/import.png" width="204" height="95" alt="Import Assets"></a></dt>
+<dd><a href="../stingray_help/importing_assets.html">Import Assets</a></dd>
+</dl>
+<dl>
+<dt><a href="../stingray_help/creating_gameplay.html"><img src="images/gameplay.png" width="204" height="95" alt="Create Gameplay"></a></dt>
+<dd><a href="../stingray_help/creating_gameplay.html">Create Gameplay</a></dd>
+</dl>
+<dl>
+<dt><a href="../stingray_help/importing_assets/link_to_dcc.html"><img src="images/interop.png" width="204" height="95" alt="Interop"></a></dt>
+<dd><a href="../stingray_help/importing_assets/link_to_dcc.html">Interop</a></dd>
+</dl>
+<dl>
+<dt><a href="../stingray_help/deploying.html"><img src="images/package_deploy.png" width="204" height="95" alt="Package and Deploy"></a></dt>
+<dd><a href="../stingray_help/deploying.html">Package and Deploy</a></dd>
+</dl>
+</div>
+
+<div id="reference" class="columns"><div class="colBanner"><h2>Reference</h2></div>
+<dl>
+<dt><a href="../flow_ref/index.html"><img src="images/Flow.png" width="204" height="95" alt="Flow node reference"></a></dt>
+<dd><a href="../flow_ref/index.html">Flow node reference</a></dd>
+</dl>
+<dl>
+<dt><a href="../lua_ref/index.html"><img src="images/lua.png" width="204" height="95" alt="Lua API Reference"></a></dt>
+<dd><a href="../lua_ref/index.html">Lua API reference</a></dd>
+</dl>
+<dl>
+<dt><a href="/view/Stingray/ENU/?contextId=DEVELOPER_HOME" target="_blank"><img src="images/dev_help.png" width="204" height="95" alt="Developer Help"></a></dt>
+<dd><a href="/view/Stingray/ENU/?contextId=DEVELOPER_HOME" target="_blank">Developer Help</a></dd>
+</dl>
+<dl>
+<dt><a href="../stingray_help/reference/plugins.html"><img src="images/middleware.png" width="204" height="95" alt="Middleware"></a></dt>
+<dd><a href="../stingray_help/reference/plugins.html">Middleware</a></dd>
+</dl>
+</div>
+
+<div id="resources" class="columns"><div class="colBanner"><h2>Community Resources</h2></div>
+<dl>
+<dt><a href="http://www.autodesk.com/stingray-forums" target="_blank"><img src="images/Forums.png" width="204" height="95" alt="Forums"></a></dt>
+<dd><a href="http://www.autodesk.com/stingray-forums" target="_blank">Forums</a></dd>
+</dl>
+<dl>
+<dt><a href="http://www.youtube.com/user/autodeskgameshowtos" target="_blank"><img src="images/learning.png" width="204" height="95" alt="Autodesk Games Solutions Learning Channel"></a></dt>
+<dd><a href="http://www.youtube.com/user/autodeskgameshowtos" target="_blank">Autodesk Games Solutions Learning Channel</a></dd>
+</dl>
+<dl>
+<dt><a href="http://www.autodesk.com/stingray-support" target="blank"><img src="images/Support.png" width="204" height="95" alt="Support"></a></dt>
+<dd><a href="http://www.autodesk.com/stingray-support" target="blank">Support</a></dd>
+</dl>
+<dl>
+<dt><a href="http://area.autodesk.com/creativecommons" target="_blank"><img src="images/creativeCommons.png" width="204" height="95" alt="Autodesk Open Learning"></a></dt>
+<dd><a href="http://area.autodesk.com/creativecommons" target="_blank">Autodesk Open Learning</a></dd>
+</dl>
+</div>
+ 
+</div>
+<div class="clear"></div>
+<div id="footer"><p><a href="Stingray_DCN.htm">&copy; Copyright 2015 Autodesk, Inc. All rights reserved</a></p></div>
+</div>
+</body>
+</html>

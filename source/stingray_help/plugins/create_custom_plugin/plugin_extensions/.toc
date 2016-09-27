@@ -1,0 +1,9 @@
+menus
+actions
+resources
+services
+assets
+templates
+previews
+migrations
+events
