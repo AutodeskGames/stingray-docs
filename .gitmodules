@@ -1,0 +1,3 @@
+[submodule "build/ixg-doc-tools"]
+	path = build/ixg-doc-tools
+	url = https://git.autodesk.com/gameware/ixg-doc-tools
