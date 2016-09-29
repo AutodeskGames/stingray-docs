@@ -16,7 +16,7 @@ Dir.chdir("#{$script_dir}")
 
 $doctools_dir = ENV["IXG_DOCTOOLS_DIR"]
 if $doctools_dir == nil or $doctools_dir.empty?
-	$doctools_dir = "#{$script_dir}/ixg-doc-tools/tools"
+	$doctools_dir = "#{$script_dir}/ixg-doc-tools"
 else
 	puts "Overriding this repo's copy of IXG doc tools to use the %IXG_DOCTOOLS_DIR% location: "
 	puts "#{$doctools_dir}"
@@ -76,7 +76,7 @@ def build()
 	if $options[:dev_help] or $options[:all]
 		puts "Generating HTML for Stingray Developer Help..."
 		output_path = "output/developer_help/#{$lang_dir}/preview"
-		system("#{$doctools_dir}/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_developer_help.xml")
+		system("#{$doctools_dir}/tools/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_developer_help.xml")
 		puts "Done. Look under #{output_path}."
 		if $options[:dev_help] and $options[:launch]
 			system("start", "#{$script_dir}/../#{output_path}/index.html")
@@ -86,7 +86,7 @@ def build()
 	if $options[:tutorials] or $options[:all]
 		puts "Building the Stingray Tutorials..."
 		output_path = "output/tutorials/#{$lang_dir}/preview"
-		system("#{$doctools_dir}/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_tutorials.xml")
+		system("#{$doctools_dir}/tools/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_tutorials.xml")
 		puts "Done. Look under #{output_path}."
 		if $options[:dev_help] and $options[:launch]
 			system("start", "#{$script_dir}/../#{output_path}/index.html")
@@ -97,13 +97,15 @@ def build()
 		puts "Generating HTML for main Stingray help..."
 		output_path = "output/stingray_help/#{$lang_dir}/preview/"
 		# Run reference doc generation in the engine submodule
+		ENV["SR_DOCTOOLS_DIR"] = $doctools_dir
 		ENV["SR_DOC_DIR"] = "#{$script_dir}/.."
 		system("ruby", "../stingray/docs/build/make_docs.rb", "--shader-ref")
 		system("ruby", "../stingray/docs/build/make_docs.rb", "--flow-ref")
 		system("ruby", "../stingray/docs/build/make_docs.rb", "--lua-ref")
 		ENV["SR_DOC_DIR"] = ""
+		ENV["SR_DOCTOOLS_DIR"] = ""
 		# Generate the main help and bundle it
-		system("#{$doctools_dir}/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_stingray_help.xml")
+		system("#{$doctools_dir}/tools/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_stingray_help.xml")
 		puts "Done. Look under #{output_path}."
 		if $options[:help] and $options[:launch]
 			system("start", "#{$script_dir}/../#{output_path}/index.html")
