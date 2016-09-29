@@ -78,6 +78,8 @@ In order to avoid confusion, we're adopting the following conventions for how we
 
 -	The `master` branch shall always be the latest public "live" help. Anytime we need to make a change to the stuff that is live, we do it here. This branch's submodule will typically point to the `master` branch of the engine repo.
 
+	**NOTE** This is not currently the case! We have started this repo in the middle of the 1.6 dev cycle, basing it on the mainline `develop` content. So, if we need to update the live 1.5 docs before 1.6 is ready, we will need to use the old repo instead of this one.
+
 -	The `develop` branch of this repo should track the `develop` branch of the engine repo. Anytime we're doing work that applies to something done in the mainline develop branch of the engine, we put it here. This branch's submodule will point to a relatively recent commit in the `develop` branch of the engine repo.
 
 -	When the engine repo creates a `release/1.X` branch, we'll create one here too. Most of our work will probably get done in these release branches. Each release branch's submodule will point to a relatively recent commit in the corresponding branch of the engine repo.

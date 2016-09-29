@@ -1,3 +1,6 @@
 [submodule "build/ixg-doc-tools"]
 	path = build/ixg-doc-tools
 	url = https://git.autodesk.com/gameware/ixg-doc-tools
+[submodule "stingray"]
+	path = stingray
+	url = https://git.autodesk.com/gameware/stingray

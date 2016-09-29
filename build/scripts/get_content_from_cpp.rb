@@ -13,7 +13,7 @@ def run_extractions()
 			alphabetize,
 			make_toc,
 			should_join_lines,
-			"../../../runtime/application/application_options.cpp")
+			"../../stingray/runtime/application/application_options.cpp")
 
 	# get the console commands.
 	markdown_file = "../../source/stingray_help/reference/console_commands.md"
@@ -24,8 +24,8 @@ def run_extractions()
 			alphabetize,
 			make_toc,
 			should_join_lines,
-			"../../../runtime/application/script/interface/*.cpp",
-			"../../../runtime/game/*.cpp")
+			"../../stingray/runtime/application/script/interface/*.cpp",
+			"../../stingray/runtime/game/*.cpp")
 
 end
 

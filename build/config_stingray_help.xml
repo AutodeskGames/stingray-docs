@@ -94,7 +94,7 @@
 	</merge>
 
 	<doxygen id="flow_ref">
-		<source>..\output\flow_HTML</source>
+		<source>..\stingray\docs\output\flow_HTML</source>
 		<link>true</link>
 		<link_xpath>//strong</link_xpath>
 		<language>lua</language>
@@ -108,7 +108,7 @@
 	</doxygen>
 
 	<doxygen id="shaders_ref">
-		<source>..\output\shaders_HTML</source>
+		<source>..\stingray\docs\output\shaders_HTML</source>
 		<link>true</link>
 		<link_xpath>//strong</link_xpath>
 		<language>lua</language>
@@ -123,7 +123,7 @@
 	</doxygen>
 
 	<doxygen id="lua_ref">
-		<source>..\output\lua_HTML</source>
+		<source>..\stingray\docs\output\lua_HTML</source>
 		<link>true</link>
 		<language>lua</language>
 		<search_prefix></search_prefix>

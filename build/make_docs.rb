@@ -96,6 +96,13 @@ def build()
 	if $options[:help] or $options[:all]
 		puts "Generating HTML for main Stingray help..."
 		output_path = "output/stingray_help/#{$lang_dir}/preview/"
+		# Run reference doc generation in the engine submodule
+		ENV["SR_DOC_DIR"] = "#{$script_dir}/.."
+		system("ruby", "../stingray/docs/build/make_docs.rb", "--shader-ref")
+		system("ruby", "../stingray/docs/build/make_docs.rb", "--flow-ref")
+		system("ruby", "../stingray/docs/build/make_docs.rb", "--lua-ref")
+		ENV["SR_DOC_DIR"] = ""
+		# Generate the main help and bundle it
 		system("#{$doctools_dir}/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_stingray_help.xml")
 		puts "Done. Look under #{output_path}."
 		if $options[:help] and $options[:launch]
