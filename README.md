@@ -66,7 +66,9 @@ The Stingray docs that are generated from the Markdown source in this repo are b
 
 Building the docs in this docs repository will automatically build these reference docs in the engine submodule, package them up where they're needed, create links for better navigation, etc.
 
-If you want to generate standalone versions of the reference docs, you can do so in the engine repository. See the `docs/readme.md` file in the engine repo for details.
+This repo does contain some extra material used when building these references. This includes images and large JSON files that we use to compare different releases of the APIs and create a version history that shows customers exactly what has changed in each different release. We've been asked not to store this material in the main engine repo where the reference docs are generated. So we are keeping it here.
+
+When you build the reference docs using the scripts in this docs repo, that material will get included in the built reference docs automatically.
 
 # Branching conventions
 
