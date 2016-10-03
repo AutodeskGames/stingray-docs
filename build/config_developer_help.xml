@@ -32,6 +32,8 @@
 		<contextId include="*\developer\introduction.html" id="DEVELOPER_HOME"></contextId>
 		<!-- add_MT include="\developer\*" fromlanguage="en">true</add_MT -->
 		<insert_family_links include="\developer\*"></insert_family_links>
+		<!-- find and replace variables with version numbers -->
+		<replace variable_file="variables.ini" include="*.html"></replace>
 	</global>
 
 	<merge id="images">

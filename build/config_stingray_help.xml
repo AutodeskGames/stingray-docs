@@ -66,6 +66,8 @@
 		<validate_todos>true</validate_todos>
 		<default_file>./homepage/homepage.htm</default_file>
 		<rename_toc_node old_title="Stingray FAQ" new_title="FAQ"></rename_toc_node>
+		<!-- find and replace variables with version numbers -->
+		<replace variable_file="variables.ini" include="*.html"></replace>
 	</global>
 
 	<merge id="images">
