@@ -10,13 +10,13 @@ This table provides an at-a-glance summary of **only** the tools that require sp
 
 Software						|	Version
 ----------------------------	|	----------------------------------------
-Ruby							|	**2.2.1** or later
-Visual Studio 		 			|	**2012 Update 5** or later (with exceptions, see below)
-QT Add-in for Visual Studio		|	**1.2.2** ONLY
-NVIDIA CodeWorks for Android	|	**1R4** ONLY
-PlayStation 4 SDK				|	**3.5** ONLY
-Xbox One XDK					|	**March 2016 QFE 5** ONLY
-Xcode and iOS					|	**Xcode 7** and **iOS 9**
+Ruby							|	**SR_DOC_RUBY_VERSION** or later
+Visual Studio 		 			|	**SR_DOC_VISUAL_STUDIO_VERSION** or later (with exceptions, see below)
+QT Add-in for Visual Studio		|	**SR_DOC_QT_ADDIN_VERSION** ONLY
+NVIDIA CodeWorks for Android	|	**SR_DOC_CODEWORKS_VERSION** ONLY
+PlayStation 4 SDK				|	**SR_DOC_PS4_SDK_VERSION** ONLY
+Xbox One XDK					|	**SR_DOC_XDK_VERSION** ONLY
+Xcode and iOS					|	**Xcode SR_DOC_XCODE_VERSION** and **iOS SR_DOC_IOS_VERSION**
 
 ## About development and target platforms
 
@@ -46,7 +46,7 @@ You can carry out various Git tasks using its command-line tools, any of a wide 
 
 ### Ruby
 
-We use [Ruby](https://www.ruby-lang.org/en) to create build projects and to download library dependencies. We recommend version 2.2.1 or later.
+We use [Ruby](https://www.ruby-lang.org/en) to create build projects and to download library dependencies. We recommend version SR_DOC_RUBY_VERSION or later.
 
 Download an installer for Windows here:
 
@@ -58,9 +58,9 @@ Ruby 2.x is pre-installed with recent versions of Mac OS X. If you have an older
 
 You must install the following tools on your Windows development machines, no matter what target platforms you intend to support.
 
-### Visual Studio 2012
+### Microsoft Visual Studio
 
-We use Visual Studio 2012 to compile code on Windows. You will need **Update 5**.
+We use Visual Studio SR_DOC_VISUAL_STUDIO_VERSION to compile code on Windows.
 
 Note that the free Express version is **not** sufficient.
 
@@ -68,9 +68,9 @@ You may be able to use later versions of Visual Studio to build for some target 
 
 ### QT Add-in for Visual Studio 2012
 
-The Stingray Editor project uses QT for its window framework. In order to re-build the Stingray Editor, you will need to install the QT Add-in for Visual Studio 2012. You need version **1.2.2**. Download it from this link:
+The Stingray Editor project uses QT for its window framework. In order to re-build the Stingray Editor, you will need to install the QT Add-in for Visual Studio 2012. You need version **SR_DOC_QT_ADDIN_VERSION**. Download it from this link:
 
-<http://download.qt-project.org/official_releases/vsaddin/qt-vs-addin-1.2.2-opensource.exe>
+<http://SR_DOC_QT_DOWNLOAD_URL>
 
 ### Microsoft Expression Blend SDK
 
@@ -84,11 +84,11 @@ If you need your engine and editing tools to support Android platforms, install 
 
 ### NVIDIA CodeWorks for Android
 
-Install the NVIDIA CodeWorks for Android **version 1R4**. Only this version is currently supported.
+Install the NVIDIA CodeWorks for Android **version SR_DOC_CODEWORKS_VERSION**. Only this version is currently supported.
 
 You can download it here:
 
-<https://developer.nvidia.com/gameworksdownload#?dn=codeworks-for-android-1r4>
+<https://SR_DOC_CODEWORKS_DOWNLOAD_URL>
 
 To get to this download link, you must register for a free membership in the NVIDIA GameWorks developer program.
 
@@ -100,7 +100,7 @@ If you need your engine and editing tools to support PlayStation 4, install the 
 
 ### PlayStation platform SDK
 
-Install the PlayStation 4 platform SDK, **version 3.5**. Only this version is currently supported.
+Install the PlayStation 4 platform SDK, **version SR_DOC_PS4_SDK_VERSION**. Only this version is currently supported.
 
 You can get the SDK using the SDK Manager utility, available to registered developers on the Sony DevNet: <https://ps4.scedev.net/>.
 
@@ -110,7 +110,7 @@ If you need your engine and editing tools to support Xbox One, install the follo
 
 ### Xbox One platform SDK
 
-Install the XDK: the Xbox One platform libraries. You need the **March 2016 QFE 5** release. Other versions may or may not be compatible.
+Install the XDK: the Xbox One platform libraries. You need the **SR_DOC_XDK_VERSION** release. Other versions may or may not be compatible.
 
 You can download the SDK from the Microsoft Game Developer Network Portal, available to registered developers at <https://developer.xboxlive.com/>.
 
@@ -120,8 +120,8 @@ If you need your engine and editing tools to support iOS, install the following 
 
 ### Xcode
 
-You must use Xcode 7, which includes the iOS SDK 9.x. You can download it from <https://developer.apple.com/downloads>.
+You must use Xcode SR_DOC_XCODE_VERSION, which includes the iOS SDK SR_DOC_IOS_SDK_VERSION. You can download it from <https://developer.apple.com/downloads>.
 
-We recommend you disable auto update on your Apple developement machine. <!-- If you already have a newer version of Xcode installed (Xcode 7), you can simply delete that from your application folder and copy the one you have downloaded from the Apple website there. -->
+We recommend you disable auto update on your Apple developement machine.
 
 Note that if this is your first time doing iOS development, you will also have to register with the Apple Developer Program in order to set up Xcode with a signing identity for your organization. See <http://developer.apple.com> if you need more information.
