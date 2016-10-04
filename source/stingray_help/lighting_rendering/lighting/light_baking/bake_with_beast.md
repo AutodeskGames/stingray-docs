@@ -1,8 +1,10 @@
 # About baking with Beast
 
+![UPDATED](../../../images/updated.png)
+
 Autodesk Beast is a rendering SDK that simulates lighting and global illumination for games. Stingray comes with a simple, ready-to-use integration of the main lightmap baking features of Beast.
 
-> ![](../../../images/icon_CreativeMarket.png) To see some simple demonstrations of the ways you can set up a Stingray level to use Beast, download the 'Beast Examples' project from <a href="http://www.autodesk.com/stingray-creativemarket-examples" target="blank">Creative Market.</a>
+> To see some simple demonstrations of the ways you can set up a Stingray level to use Beast, download the 'Beast Examples' project from the **Online Examples** tab in the ~{ Project Manager }~.
 
 ![Beast example project](../../../images/example_project_beast.jpg)
 
@@ -28,9 +30,9 @@ You can choose what kinds of illumination you want to include in your lightmaps:
 
 -	both direct *and* indirect illumination, combined together in the same texture.
 
-A common approach is to bake only the indirect light, and to let the direct light be applied by the real-time renderer in the game. If you choose this approach, you will probably want to leave the **Baked** option unchecked for each of the lights in your scene, so that they continue to shine direct light and make dynamic shadows at runtime.
+A common approach is to bake only the indirect light, and to let the direct light be applied by the real-time renderer in the game. If you choose this approach, you will probably want to leave the **Baking** option set to "Indirect" for each of the lights in your scene, so that they continue to shine direct light and make dynamic shadows at runtime.
 
-You may, however, want to bake direct illumination in order to get the direct shadows baked into your lightmaps. If you decide to bake the direct illumination, you will need to check the **Baked** option for the lights in your scene. This includes the direct light and shadow in the bake, and avoids counting the direct illumination from the light twice: once as part of the baked lightmap, and once again by the real-time renderer on top of the lightmap.
+You may, however, want to bake direct illumination in order to get the direct shadows baked into your lightmaps. If you decide to bake the direct illumination, you will need to set the **Baking** option to "Direct & Indirect" for the lights in your scene. This includes the direct light and shadow in the bake, and avoids counting the direct illumination from the light twice: once as part of the baked lightmap, and once again by the real-time renderer on top of the lightmap.
 
 ## How does it bake?
 
@@ -54,13 +56,8 @@ You can use the settings in the **Bake Lightmaps** window to control the way Bea
 <dt>Illumination type</dt>
 <dd>Determines what kind of illumination is baked into the lightmaps. See [Standard vs. directional lightmaps] above.</dd>
 
-<dt>Total sample passes</dt>
-<dd>Sets the maximum number of passes the light baker will make.
-
-Increasing this value may improve the quality of the final results, if the number of passes is not high enough to converge on a high-quality result. However, it also makes the full baking session take longer to complete.</dd>
-
 <dt>Quality preset</dt>
-<dd>Select one of these presets to quickly adjust the settings below to produce low, medium or high quality lightmaps. These presets can give you a good starting point ifyou're not sure what values to use for the quality settings below.</dd>
+<dd>Select one of these presets to quickly adjust the settings below to produce low, medium or high quality lightmaps. These presets can give you a good starting point if you're not sure what values to use for the quality settings below.</dd>
 
 <dt>Minimum samples</dt>
 <dd>Beast uses adaptive sampling to determine how many samples it should use for each shaded texel. This setting determines the lowest number of samples that Beast will use for any texel. Increasing this value may increase quality, but may also increase baking time.</dd>
@@ -73,10 +70,10 @@ Increasing this value may improve the quality of the final results, if the numbe
 
 Lowering the value of this setting usually increases the number of samples made per texel, which may increase the quality of the result, but also increases baking time.</dd>
 
-<dt>Lightmap texel scale</dt>
+<dt>Lightmap resolution (Texel/Meter)</dt>
 <dd>Controls the size of the lightmaps produced by the baker.
 
-This value multiplies the texture resolution for each target's lightmap. For example, if a target requires a 32x32 texture when the scale is set to 1, it will require a 64x64 texture when the scale is set to 2, 128x128 when the scale is set to 4, etc.
+This value multiplies the texture resolution for each target's lightmap. For example, if a target requires a 32x32 texture when the resolution is set to 1, it will require a 64x64 texture when the resolution is set to 2, 128x128 when the resolution is set to 4, etc.
 
 Increasing this number will permit the baker to put more detail into each lightmap, which allows room for higher quality, more precise results. However, increasing this value can actually produce noisier results if there are not enough sample passes to achieve that level of detail. Increasing this value also increases the size in memory of each lightmap, and makes each sample pass take longer.</dd>
 
@@ -86,7 +83,7 @@ Increasing this number will permit the baker to put more detail into each lightm
 <dt>Filter gain</dt>
 <dd>Determines the size of the filter used to blur the initial results. Increasing this value produces smoother results, but increases baking time and may wash out some details, like hard shadows from direct lights.</dd>
 
-<dt>Skylight intensity</dt>
+<dt>Radiance map intensity</dt>
 <dd>Determines how much the skydome texture contributes to the baked lighting.</dd>
 
 <dt>Live bake</dt>

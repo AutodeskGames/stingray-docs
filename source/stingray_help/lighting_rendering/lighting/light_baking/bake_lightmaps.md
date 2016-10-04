@@ -1,12 +1,14 @@
 # Bake lightmaps
 
-Whether you want to use Beast or the Stingray baker to generate lightmaps for your level, the general procedure is the same:
+![UPDATED](../../../images/updated.png)
+
+Whether you want to use the Stingray baker or Beast to generate lightmaps for your level, the general procedure is the same:
 
 1.	Prepare the objects and lights in your level for baking.
 
 	All bake targets need to be set up with secondary UV sets, either in their *.fbx* files or generated automatically by Stingray.
 
-	For each light, set the **Baked** option to determine whether or not the light's direct illumination should be included in the lightmap.
+	For each light, set the **Baking** option to determine whether or not the light's direct illumination should be included in the lightmap.
 
 	See ~{ Unwrap UVs for light baking }~ and ~{ Lightmap baking settings }~.
 
@@ -18,7 +20,7 @@ Whether you want to use Beast or the Stingray baker to generate lightmaps for yo
 
 1.	In the **Bake Lightmaps** window, set the baking options you want.
 
-	The key option is the **Baker** setting, which controls whether your lightmaps will be baked by Beast or by the Stingray baker. See ~{ About baking with Beast }~ and ~{ About baking with the Stingray baker }~.
+	The key option is the **Baker** setting, which controls whether your lightmaps will be baked by the Stingray baker or by Beast. See ~{ About baking with the Stingray baker }~  and ~{ About baking with Beast }~.
 
 	> **Note:** Hover over the other options in this dialog box for descriptions of each attribute.
 
