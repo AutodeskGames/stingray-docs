@@ -1,7 +1,5 @@
 # Batch import assets
 
-[![NEW](../images/new.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
-
 You can manually batch import multiple FBX files and textures to your project.
 
 * Copy the asset files to your project.

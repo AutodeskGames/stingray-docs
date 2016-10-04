@@ -1,7 +1,5 @@
 # Adapt scenes to different lighting environments
 
-[![NEW](../../images/new.png "What else is new in v1.5?")](../../release_notes/readme_1.5.html)
-
 The auto exposure component for the default shading environment lets you automatically adjust the scene to changes in light levels, creating an eye adaptation effect as you move through differently lit environments, like exiting a dark room and moving into a brighter outdoor scene.
 
 To add the auto exposure component to the default shading environment, click the + icon, and select **Shading Environment > Auto Exposure**. With this component enabled, the regular **Exposure** component has no effect in your scene.

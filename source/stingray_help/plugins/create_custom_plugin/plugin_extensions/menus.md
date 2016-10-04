@@ -1,7 +1,5 @@
 # Create a new menu item
 
-[![UPDATED](../../../images/updated.png "What else is new in v1.3?")](../../../release_notes/readme_1_5.html)
-
 You can use the `menus` extension to add new items into the main menus of the Stingray editor.
 
 Each custom menu item can either launch an HTML panel, or carry out an *action* that you define in your plug-in. For background about actions, see also ~{ Register an action }~.
@@ -85,8 +83,6 @@ To make a menu item that runs an action, you need to add a single parameter: `ac
 
 ## Create new menu hierarchies
 
-[![NEW](../../../images/new.png "What else is new in v1.5?")](../../../release_notes/readme_1.5.html)
-
 You can create a new menu by using the `path` parameter without specifying any `action` or `panel` to trigger. You can then follow this entry with other menu extensions that populate the menu with new items.
 
 If the path contains no `/` delimiters, the new item is created in the main menu bar.
@@ -120,8 +116,6 @@ This configuration produces the following:
 ![Nested custom menus](../../../images/plugin_menu_extension_nested.png)
 
 ## Create separators
-
-[![NEW](../../../images/new.png "What else is new in v1.5?")](../../../release_notes/readme_1.5.html)
 
 You can create simple menu separators, or separators with a label.
 
@@ -175,8 +169,6 @@ This configuration produces the following:
 Only one of the `separator` and `section` parameters can be set for any menu item. Both of these may only be set for menu items that have no `panel`, `action` or `event` configured for them.
 
 ## Check and uncheck a menu item
-
-[![NEW](../../../images/new.png "What else is new in v1.5?")](../../../release_notes/readme_1.5.html)
 
 You can make menu items with the type `action` checkable, and assign them a default checked or unchecked state. Each time the user selects the menu item, the checkbox state toggles between these states.
 

@@ -1,7 +1,5 @@
 # Set up vector field (wind) effects
 
-[![UPDATED](../../images/updated.png "What else is new in v1.3?")](../../release_notes/readme_1_5.html)
-
 Physical effects like wind are modeled by *vector fields*: areas in the 3D world within which defined forces act on physical objects, blowing or pushing them in a certain direction.
 
 You can set up vector fields in either of the following ways:
@@ -13,8 +11,6 @@ You can set up vector fields in either of the following ways:
 Once you have your vector fields set up and active in the game world, you can make them apply to the visible objects in your game. See [Applying vector fields to game objects].
 
 ## Setting up vector fields in the Stingray editor
-
-[![NEW](../../images/new.png "What else is new in v1.5?")](../../release_notes/readme_1.5.html)
 
 To set up a vector field in the Stingray editor:
 

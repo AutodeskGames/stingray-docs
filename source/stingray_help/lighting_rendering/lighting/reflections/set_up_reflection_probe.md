@@ -1,7 +1,5 @@
 # Set up a baked reflection probe
 
-![UPDATED](../../../images/updated.png)
-
 This page describes how to set up and bake reflection probes to provide localized reflections for particular areas of your level.
 
 1.	Enter the reflection probe placement mode by doing either of the following:
@@ -21,8 +19,6 @@ This page describes how to set up and bake reflection probes to provide localize
 		The falloff is always linear over the distance set in the **Falloff** control. So, for example, if the light volume is set to `[-10,-10,-10],[10,10,10]`, and the falloff is set to `2,2,2`, everything between `[-8,-8,-8],[8,8,8]` will show the reflections from this probe at full intensity. At a distance of `8` meters from the probe location on each axis, the reflections will begin to fade out. They will fade linearly over the next `2` meters on each axis, reaching zero contribution at the outer bounds of the light volume.
 
 	-	The **Trace Box Min** and **Trace Box Max** settings control the parallax correction box. Set the dimensions of this box on all sides to roughly match the distance between the probe and the things it is reflecting. See [Parallax correction] below.
-
-	[![NEW](../../../images/new.png "What else is new in v1.5?")](../../../release_notes/readme_1.5.html)
 
 	You can also use the reflection probe gizmo to set these box extents visually in the viewport. To do so:
 

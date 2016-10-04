@@ -1,10 +1,6 @@
 # Download assets and example projects
 
-[![UPDATED](../images/updated.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
-
 The template projects available in the ~{ Project Manager }~ provide good starting points for creating your own game projects. However, in order to make them as easy as possible to understand and apply, they are intentionally kept relatively lightweight and simplistic. Therefore they only scratch the surface of what is possible with Stingray.
-
-[![NEW](../images/new.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
 
 Sample game projects that illustrate the potential of specific elements of Stingray and example projects that show more complex usage of components like Scaleform Studio, HumanIK, Gameware Navigation and Beast are available as online examples in Stingray. Download these projects using the **Online Examples** tab in the **Project Manager**.
 

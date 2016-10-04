@@ -1,7 +1,5 @@
 # Respond to an editor event
 
-[![NEW](../../../images/new.png "What else is new in v1.5?")](../../../release_notes/readme_1.5.html)
-
 You can use the `events` extension to make your plug-in listen for named events in the editor, and respond by carrying out actions.
 
 For more information on editor events, see also ~{ Emit and handle editor events }~.

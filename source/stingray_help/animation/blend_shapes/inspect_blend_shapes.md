@@ -1,7 +1,5 @@
 # Inspect blend shapes
 
-[![NEW](../../images/new.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
-
 After importing a blend shape from your DCC into Stingray, you can take a closer look at its contents, and adjust the influence of its morph targets.
 
 ## Inspect blend shapes

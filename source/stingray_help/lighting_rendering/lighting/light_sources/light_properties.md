@@ -1,7 +1,5 @@
 # Light source properties
 
-![UPDATED](../../../images/updated.png)
-
 This page details the properties you can set for placeable light sources.
 
 ## Common properties
@@ -28,8 +26,6 @@ This page details the properties you can set for placeable light sources.
 </dl>
 
 ## Light Gizmo settings
-
-[![NEW](../../../images/new.png "What else is new in v1.5?")](../../../release_notes/readme_1.5.html)
 
 <dl>
 <dt>Gizmo scale</dt>

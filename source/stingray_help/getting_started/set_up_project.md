@@ -1,7 +1,5 @@
 ﻿# Set up a project
 
-[![UPDATED](../images/updated.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
-
 Before you can start working on content and test run your game, you need to set up a project.
 
 To get started, create a new project based on one of the ~{ Template projects }~. This ensures your project has all the required architecture when you're ready to compile and play it.
@@ -19,8 +17,6 @@ To get started, create a new project based on one of the ~{ Template projects }~
 	> **Note:** Running your project from a network location is not recommended. It's better to specify a local location for your project.
 
 	Stingray starts to compile the project data and loads your new project. Once the project loads successfully, the name displays in the Stingray Editor title bar.
-
-[![NEW](../images/new.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
 
 You can also build upon the example projects available in Stingray.
 

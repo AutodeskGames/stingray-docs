@@ -1,7 +1,5 @@
 ﻿# Hotkeys
 
-[![UPDATED](../images/updated.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
-
 ###General Level Viewport
 
 | Action  | Hotkey |
@@ -72,8 +70,6 @@
 | Import  | Ctrl + I |
 | **Project Manager**  | Alt + F7 |
 | Quit  | Ctrl + Q |
-
-[![NEW](../images/new.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
 
 ###Selection and marquee selection
 

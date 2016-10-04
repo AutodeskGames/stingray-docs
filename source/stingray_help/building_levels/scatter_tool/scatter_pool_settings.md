@@ -1,7 +1,5 @@
 # Scatter Pool Settings
 
-[![NEW](../../images/new.png "What else is new in v1.5?")](../../release_notes/readme_1.5.html)
-
 When you scatter a unit, a scatter pool is created. Scatter pools let you make changes to all of the scatter data in your project at once. The Scatter Pool settings let you control how and when the scattered units are rendered. Similar to Level of Detail (LoDs), you can make your scattered units grow as you move the camera closer, and fade as you move the camera farther away.
 
 Select the scatter pool in the **Explorer** > **Scatter Pool Settings**.

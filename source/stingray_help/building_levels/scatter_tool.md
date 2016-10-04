@@ -1,7 +1,5 @@
 # Scatter Tool
 
-[![NEW](../images/new.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
-
 You can use the Scatter tool to randomly scatter the selected unit either as an array or over the surface of an object.
 
 Before you can use the Scatter Tool, it must be loaded in your project.
