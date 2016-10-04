@@ -12,6 +12,7 @@
 			<post_to_AKN>false</post_to_AKN>
 			<post_to_AKN_beta>false</post_to_AKN_beta>
 			<redirect_to_help include="*">true</redirect_to_help>
+			<athena include="*"></athena>
 		</AKN>
 		<language>%SR_DOC_LANG%</language>
 		<project_title>Stingray Help</project_title>

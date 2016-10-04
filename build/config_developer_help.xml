@@ -10,6 +10,8 @@
 			<local_output>..\output\developer_help\%SR_DOC_LANG%\AKN</local_output>
 			<post_to_AKN>false</post_to_AKN>
 			<post_to_AKN_beta>false</post_to_AKN_beta>
+			<redirect_to_help include="*">true</redirect_to_help>
+			<athena include="*"></athena>
 		</AKN>
 		<language>%SR_DOC_LANG%</language>
 		<project_title>Stingray Developer Help</project_title>
