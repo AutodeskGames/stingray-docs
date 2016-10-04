@@ -35,7 +35,7 @@ You can now capture the active camera or viewport and save frames to disk in the
 
 ### Improved Stingray and Beast lightmap baker options
 
-The revamped Stingray and the Beast lightmap bakers now reflect more meaningful baker settings. See ~{ About baking with Stingray baker }~ and ~{ About baking with Beast }~ for the updated options.
+The revamped Stingray and the Beast lightmap bakers now reflect more meaningful baker settings. See ~{ About baking with the Stingray baker }~ and ~{ About baking with Beast }~ for the updated options.
 
 
 ## Experimental features

@@ -15,7 +15,7 @@ The Set Engine Resource window lets you tag the assets you want to export to Sti
     - **Asset Name:** The name of the asset. By default, the node name is used. When multiple assets are selected, this field is disabled.
     - **Result:** When one asset is selected, this field shows the output path  of the single asset.
 4. Click **Apply and Close**.
-5. Send your assets to your DCC. See ~{ Send assets to your DCC with Level Sync }~.
+5. Send your assets to your DCC. See ~{ Send assets from Maya and Maya LT with Level Sync }~.
 
     > **Note:** Tagging respects instancing. During tagging, the name of the first instance is used as the **Asset Name**, and all instances receive the same tag.
 
