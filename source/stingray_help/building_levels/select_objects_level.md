@@ -1,7 +1,5 @@
 # Select objects in a level
 
-[![NEW](../images/new.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
-
 The Select tool ![](../images/icon_select.png) lets you select multiple objects to manipulate and control them as a single object. The Select tool has two modes of selection, **Window** or **Crossing**.
 
 While the **Window** mode selects only objects within in a marquee selection, the **Crossing** mode selects all objects in a marquee selection and any objects that intersect the selection.

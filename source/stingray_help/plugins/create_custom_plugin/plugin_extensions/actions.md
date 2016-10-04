@@ -1,7 +1,5 @@
 # Register an action
 
-[![UPDATED](../../../images/updated.png "What else is new in v1.3?")](../../../release_notes/readme_1_5.html)
-
 You can use the `actions` extension to define named commands or script blocks, which you trigger from other extensions in your plug-in.
 
 By themselves, the actions that you set up in the `actions` extension don't do anything. You have to set up your plug-in to invoke these commands in response to the user interacting with your plug-in. For example, you can:
@@ -275,8 +273,6 @@ extensions = {
 >	The program you want to run, followed by any parameters you want to pass on the command line. For example, the path shown above starts the basic Notepad text editor and opens whatever filename is passed to the action when it is invoked. See also [Pass parameters to an action] below.
 
 ## Emit an event
-
-[![NEW](../../../images/new.png "What else is new in v1.5?")](../../../release_notes/readme_1.5.html)
 
 Your action can emit an *event* to the editor. Your plug-in (or other plug-ins, or the editor itself) can then respond to this event.
 

@@ -1,7 +1,5 @@
 #Toolbar
 
-![UPDATED](../../images/updated.png)
-
 The Toolbar displays in the main Stingray Editor window, on the left side of the ~{ Level Viewport }~.
 
 ![Level Viewport toolbar](../../images/comp_levelEd_toolbar.png)
@@ -17,7 +15,6 @@ The Toolbar displays in the main Stingray Editor window, on the left side of the
 <dd>Lets you test the entire project on your PC. See ~{Test a project}~.</dd>
 
 <dt>Select</dt>
-[![NEW](../../images/new.png "What else is new in v1.5?")](../../release_notes/readme_1.5.html)
 <dd>Activates the Select tool. Using the Select tool, you can select objects within the marquee selection (**Window** mode) or objects that intersect the marquee selection (**Crossing** mode). See ~{ Select objects in a level  }~. **Hotkey: q**</dd>
 
 <dt>Move</dt>
@@ -43,7 +40,6 @@ The Toolbar displays in the main Stingray Editor window, on the left side of the
 <dd>Activates rotation snapping, letting you use the rotate tool to snap an object to the selected angle increment. See ~{ Snap objects in a level }~.</dd>
 
 <dt>Scatter Tool Mode</dt>
-[![NEW](../../images/new.png "What else is new in v1.5?")](../../release_notes/readme_1.5.html)
 <dd>Activates Scatter Tool mode, letting you use the **Scatter Tool** to randomly scatter the selected unit as an array or over the surface of an object. See ~{ Scatter Tool }~.</dd>
 
 <dt>Sub-object Mode</dt>

@@ -1,7 +1,5 @@
 # Paint with the Scatter Tool
 
-[![NEW](../../images/new.png "What else is new in v1.5?")](../../release_notes/readme_1.5.html)
-
 ## To create a scatter brush
 1. Right-click anywhere in the **Asset Browser** and select **Create > Scatter Brush**.
 2. A **Scatter Brush** panel appears in the **Property Editor**.

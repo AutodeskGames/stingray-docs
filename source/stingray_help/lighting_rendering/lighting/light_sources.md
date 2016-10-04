@@ -1,7 +1,5 @@
 # Light sources
 
-![UPDATED](../../images/updated.png)
-
 Your level needs some light sources to provide illumination for the other objects, scenery and characters in the scene. Without any light sources, a level is lit only the ambient global lighting provided by the shading environment, which provides a flat, dull, even illumination. By placing light sources in your scene, you can make your level much more realistic, dynamic, and attractive.
 
 The direct light and shadows from the light sources you place in your level are calculated in real-time, unless you specifically reserve the light only for baking.

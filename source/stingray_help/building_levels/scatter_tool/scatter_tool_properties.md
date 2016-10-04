@@ -1,7 +1,5 @@
 # Scatter Tool Properties
 
-[![NEW](../../images/new.png "What else is new in v1.5?")](../../release_notes/readme_1.5.html)
-
 When you create a new Scatter Brush, the following properties appear in the Property Editor. See ~{ Scatter Tool }~ and ~{ Paint with the Scatter Tool }~ for more information.
 
 ![](../../images/scatter_brush_property_ed.png) </dd>

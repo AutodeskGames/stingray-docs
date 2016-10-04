@@ -1,7 +1,5 @@
 # Copy and paste objects in a level
 
-[![NEW](../images/new.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
-
 Add common objects throughout your project by copy and pasting level objects in the current level or to other levels.
 
 >Tip: You can also paste level objects to a text editor to view its json data.

@@ -1,7 +1,5 @@
 # Run your project in a browser using WebGL
 
-[![UPDATED](../images/updated.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
-
 If you've been waiting impatiently to see your Stingray projects up and running in a web browser, this experimental feature offers you a first glimpse of the possibilities.
 
 In this release, you can:

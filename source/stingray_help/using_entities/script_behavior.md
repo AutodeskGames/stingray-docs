@@ -1,7 +1,5 @@
 # Script an entity's behavior
 
-[![NEW](../images/new.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
-
 Often, you need entities of a given type to behave in a certain way. For example, you might want all doors to be closed when spawned, but open when a player-controlled unit comes close enough, or in response to some other event.
 
 This is made easier by *script* components, which associate your entities with Lua modules in your project. When certain events occur in the lifetime of the entity, functions in your Lua module are automatically invoked to handle the events for the associated entities.

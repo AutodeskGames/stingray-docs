@@ -1,7 +1,5 @@
 # View animated blend shape targets in Stingray
 
-[![NEW](../../images/new.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
-
 After you create blend shapes in your DCC and import them in to Stingray, any animated target shapes you added to your base object in your DCC are not automatically visible. You can use animation controllers or flow to setup your animation in Stingray.
 
 ## View the animated targets in Stingray using animation controllers

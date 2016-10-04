@@ -1,7 +1,5 @@
 # Emit and handle editor events
 
-[![NEW](../../images/new.png "What else is new in v1.5?")](../../release_notes/readme_1.5.html)
-
 While a user works in the editor, their actions trigger *events* in the JavaScript environment. Other editor sub-systems and plug-ins listen for these events and respond to them by carrying out more actions -- which may in turn emit more events for other systems to respond to.
 
 You can connect your plug-in to this event framework by listening for events that happen in the editor, and by emitting new events of your own.
