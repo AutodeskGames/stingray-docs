@@ -1,6 +1,6 @@
 # Send assets from 3ds Max with Level Sync
 
-[![NEW](../../images/new.png "What else is new in v1.5?")](../release_notes/readme_1.6.html)
+[![NEW](../../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html)
 
 Level sync workflows let you automatically rebuild your 3ds Max Vray scenes in Stingray. Once 3ds Max is linked to the Stingray editor, scene assets can be automatically or manually tagged, and then quickly be reproduced with the same layout in Stingray. Modifications you make to the assets in 3ds Max are then updated inside Stingray. This makes it easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools.
 
