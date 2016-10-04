@@ -1,6 +1,8 @@
 # About baking with the Stingray baker
 
-The Stingray light baker is an experimental new light baking system built in to Stingray.
+![UPDATED](../../../images/updated.png)
+
+The Stingray light baker is the light baking system built in to Stingray.
 
 ## What does it bake?
 
@@ -8,7 +10,7 @@ For each surface, the Stingray baker includes in the lightmap:
 
 -	All *indirect* illumination, which hits the baked surface after bouncing off of one or more other surfaces in the scene. This also includes light coming from emissive textures, and environmental light contributed by the sky texture.
 
--	*Direct* illumination and shadows only from lights that have their **Baked** property enabled.
+-	*Direct* illumination and shadows only from lights that have their **Baking** property set to "Direct & Indirect".
 
 ## How does it bake?
 
@@ -26,10 +28,10 @@ You can use the settings in the **Bake Lightmaps** window to control the way the
 
 <dl>
 
-<dt>Lightmap texel scale</dt>
+<dt>Lightmap resolution (Texel/Meter)</dt>
 <dd>Controls the size of the lightmaps produced by the baker.
 
-This value multiplies the texture resolution for each target's lightmap. For example, if a target requires a 32x32 texture when the scale is set to 1, it will require a 64x64 texture when the scale is set to 2, 128x128 when the scale is set to 4, etc.
+This value multiplies the texture resolution for each target's lightmap. For example, if a target requires a 32x32 texture when the resolution is set to 1, it will require a 64x64 texture when the resolution is set to 2, 128x128 when the resolution is set to 4, etc.
 
 Increasing this number will permit the baker to put more detail into each lightmap, which allows room for higher quality, more precise results. However, increasing this value can actually produce noisier results if there are not enough sample passes to achieve that level of detail. Increasing this value also increases the size in memory of each lightmap, and makes each sample pass take longer.</dd>
 
@@ -38,13 +40,13 @@ Increasing this number will permit the baker to put more detail into each lightm
 
 Increasing this value may improve the quality of the final results, if the number of passes is not high enough to converge on a high-quality result. However, it also makes the full baking session take longer to complete.</dd>
 
-<dt>Skylight intensity</dt>
+<dt>Radiance map intensity</dt>
 <dd>Determines how much the skydome texture contributes to the baked lighting.</dd>
 
-<dt>Indirect scale</dt>
+<dt>Indirect intensity</dt>
 <dd>Increases or decreases the strength of the indirect illumination the Stingray baker applies to the surfaces in your level.</dd>
 
-<dt>Emissive scale</dt>
+<dt>Emissive intensity</dt>
 <dd>Increases or decreases the amount of diffuse light cast out into the scene from surfaces whose materials have emissive color and emissive intensity.</dd>
 
 <dt>Diffuse boost</dt>
@@ -53,6 +55,9 @@ Increasing this value may improve the quality of the final results, if the numbe
 Raising this value causes darker surfaces to become brighter and to bounce more light back out into the scene. This may help you get better results if the materials in your scene are too dark to scatter light effectively.
 
 Note that you may need to set this value very high in order to see the effect.</dd>
+
+<dt>Filter Lightmaps</dt>
+<dd>Applies a filter to reduce the light noise.</dd>
 
 </dl>
 
