@@ -22,16 +22,16 @@ There are also a few other settings to be aware of. Note that most of these sett
 
 		**Contributes**: Determines whether light that bounces off this mesh continues to contribute to lighting other objects in the scene.
 
-		**Resolution multiplier**: Stingray bakes multiple unwrapped objects into the same 1024x1024 texture atlas. Increase this value for more important objects in order to assign them more space in the atlas.
+		**Resolution multiplier**: Stingray bakes a lightmap for each object, depending on the Resolution multiplier we multiply the global resolution for each object to make each lightmap larger or smaller. The global multiplier is defined in texels per meter. There is no hard set lightmap resolution for objects, it is all based on the global resolution multiplied by each object’s resolution multiplier. See the tooltip for a better explanation.
 
 -	Properties per light. Select a light. In the tree view of the  ~{ Property Editor }~, you'll find its additional bake settings:
 
-	-	Under the **Light** category, the **Baking** setting determines whether or not the light *only* contributes to the baked lightmaps. When set to "Direct & Indirect", the light will contribute to baked direct and indirect light, but will not contribute to real-time dynamic lighting at all. When set to "Indirect", the light will render in realtime.
+	-	Under the **Light** category, the **Baking** setting determines whether or not the light *only* contributes to the baked lightmaps. When set to "Direct & Indirect", the light will contribute to baked direct and indirect light, but will not contribute to real-time dynamic lighting at all. When set to "Indirect", the direct light will still be rendered in realtime.
 
 	-	Under the **Light** category, the **Indirect Intensity** setting adjusts how strongly the indirect light emitted by this light affects nearby surfaces. Used only by Beast, not by the Stingray baker.
 
 -	Global lighting settings in the shading environment. See ~{ Shading environment properties }~.
 
-	-	The texture set for the **Skydome map** will contribute to the way your objects are lit. Note that when baking, the intensity of the sky is not taken from the shading environment; it is set in the **Bake lightmaps** window.
+	-	The texture set for the **Radiance map** will contribute to baked lighting in the scene. Note that when baking, you can multiply the effect of the **Radiance map** by increasing the multiplier in th **Bake lightmaps** window. To generate radiance map for your scene use the Reflection Probe baking workflows.
 
-	-	The **Baked Diffuse Tint** and intensity settings adjust the color and brightness of the baked lightmaps for all meshes in the scene.
+	-	The **Baked Diffuse Tint** and intensity settings adjust the color and brightness of the baked lightmaps and diffuse probes for all meshes in the scene.

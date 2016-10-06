@@ -71,9 +71,9 @@ You can use the settings in the **Bake Lightmaps** window to control the way Bea
 Lowering the value of this setting usually increases the number of samples made per texel, which may increase the quality of the result, but also increases baking time.</dd>
 
 <dt>Lightmap resolution (Texel/Meter)</dt>
-<dd>Controls the size of the lightmaps produced by the baker.
+<dd>Controls the global resolution of the lightmaps produced by the baker in texels per meter.
 
-This value multiplies the texture resolution for each target's lightmap. For example, if a target requires a 32x32 texture when the resolution is set to 1, it will require a 64x64 texture when the resolution is set to 2, 128x128 when the resolution is set to 4, etc.
+The Beast will make sure that all surfaces keep the assigned lightmap resolution. Use the resolution multiplier found in the per mesh settings to allow for higher resolution on certain objects in your scene.
 
 Increasing this number will permit the baker to put more detail into each lightmap, which allows room for higher quality, more precise results. However, increasing this value can actually produce noisier results if there are not enough sample passes to achieve that level of detail. Increasing this value also increases the size in memory of each lightmap, and makes each sample pass take longer.</dd>
 
@@ -84,7 +84,7 @@ Increasing this number will permit the baker to put more detail into each lightm
 <dd>Determines the size of the filter used to blur the initial results. Increasing this value produces smoother results, but increases baking time and may wash out some details, like hard shadows from direct lights.</dd>
 
 <dt>Radiance map intensity</dt>
-<dd>Determines how much the skydome texture contributes to the baked lighting.</dd>
+<dd>Determines how much the radiance map texture contributes to the baked lighting.</dd>
 
 <dt>Live bake</dt>
 <dd>Select this option to start a live baking session, in which lower-quality lightmaps are drawn in the viewport as soon as they become available. The bake results are progressively improved, and higher-quality results are automatically reloaded into the viewport.

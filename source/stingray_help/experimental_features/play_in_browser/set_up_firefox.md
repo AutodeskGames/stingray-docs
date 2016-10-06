@@ -1,5 +1,7 @@
 # Use Mozilla Firefox to run your project
 
+![UPDATED](../../images/updated.png)
+
 This page describes how to set up Firefox to ~{ Run your project in a browser using WebGL }~.
 
 ## Step 1. Get a compatible version
@@ -28,7 +30,11 @@ WebGL 2.0 is disabled by default, so you'll need to enable it in your browser se
 
 	![Firefox flags](../../images/experimental_webgl_firefox_flags.png)
 
-1.	We also recommend allowing multiple JavaScript workers to share memory. This can help improve the runtime performance of the project. Find and enable the following setting:
+2. [![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html) Since data is read as a URL, disable the following setting to allow reading from `file://url`:
+
+	`security.fileuri.strict_origin_policy`
+
+3.	We also recommend allowing multiple JavaScript workers to share memory. This can help improve the runtime performance of the project. Find and enable the following setting:
 
 	-	`javascript.options.shared_memory`
 
