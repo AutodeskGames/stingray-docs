@@ -36,6 +36,6 @@ There are also a few other settings to be aware of. Note that most of these sett
 
 	-	The **Baked Diffuse Tint** and intensity settings adjust the color and brightness of the baked lightmaps and diffuse probes for all meshes in the scene.
 
--	The **AO Reflection Occusion Intensity** and **AO Reflection Occlusion Falloff** settings control the intensity and falloff of how the light baked AO will occlude specular lighting.  Adjust these values if the reflection is removing too much of contact shadows in your scene.
+	-	The **AO Reflection Occusion Intensity** and **AO Reflection Occlusion Falloff** settings control the intensity and falloff of how the light baked AO will occlude specular lighting.  Adjust these values if the reflection is removing too much of contact shadows in your scene.
 
--	The **AO Baked Diffuse Intensity** controls the intensity of which the light baked AO will apply to the diffuse lighting. Modify this value if you want more contribution to the diffuse lighting from your light baked AO.
+	-	The **AO Baked Diffuse Intensity** controls the intensity of which the light baked AO will apply to the diffuse lighting. Modify this value if you want more contribution to the diffuse lighting from your light baked AO.

@@ -13,9 +13,6 @@ Download and install either of the following pre-release versions:
 -	[Firefox Nightly](https://nightly.mozilla.org/)
 -	[Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/channel/#developer)
 
-The [Firefox Beta](https://www.mozilla.org/en-US/firefox/channel/#beta) and official [Firefox public release](https://www.mozilla.org/en-US/firefox/new/) are currently behind version 49, but should be updated over time. This [Release calendar](https://wiki.mozilla.org/RapidRelease/Calendar) gives an indication of the expected timelines for Version 49 to become the latest official release.
-
-For more about the differences between all of these versions, see the [Mozilla wiki](https://wiki.mozilla.org/Release_Management/Release_Process). (Note that what's called *Aurora* on this page is now called the *Developer Edition*.)
 
 ## Step 2. Set up Firefox
 
