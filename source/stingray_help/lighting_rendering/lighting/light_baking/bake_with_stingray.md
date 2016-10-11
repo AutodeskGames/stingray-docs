@@ -29,9 +29,9 @@ You can use the settings in the **Bake Lightmaps** window to control the way the
 <dl>
 
 <dt>Lightmap resolution (Texel/Meter)</dt>
-<dd>Controls the size of the lightmaps produced by the baker.
+<dd>Controls the global resolution of the lightmaps produced by the baker in texels per meter.
 
-This value multiplies the texture resolution for each target's lightmap. For example, if a target requires a 32x32 texture when the resolution is set to 1, it will require a 64x64 texture when the resolution is set to 2, 128x128 when the resolution is set to 4, etc.
+The Stingray Baker will make sure that all surfaces keep the assigned lightmap resolution. Use the resolution multiplier found in the per mesh settings to allow for higher resolution on certain objects in your scene.
 
 Increasing this number will permit the baker to put more detail into each lightmap, which allows room for higher quality, more precise results. However, increasing this value can actually produce noisier results if there are not enough sample passes to achieve that level of detail. Increasing this value also increases the size in memory of each lightmap, and makes each sample pass take longer.</dd>
 
@@ -41,7 +41,7 @@ Increasing this number will permit the baker to put more detail into each lightm
 Increasing this value may improve the quality of the final results, if the number of passes is not high enough to converge on a high-quality result. However, it also makes the full baking session take longer to complete.</dd>
 
 <dt>Radiance map intensity</dt>
-<dd>Determines how much the skydome texture contributes to the baked lighting.</dd>
+<dd>Determines how much the radiance map texture contributes to the baked lighting.</dd>
 
 <dt>Indirect intensity</dt>
 <dd>Increases or decreases the strength of the indirect illumination the Stingray baker applies to the surfaces in your level.</dd>

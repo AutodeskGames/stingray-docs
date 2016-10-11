@@ -40,9 +40,9 @@ The revamped Stingray and the Beast lightmap bakers now reflect more meaningful 
 
 ## Experimental features
 
-### Heading
+### Faster loading of projects in a browser
 
-Paragraph.
+Stingray now runs projects quickly in a web browser using WebGL. The launching process has been updated to load the content from a URL instead of packaging the compiled data to a separate folder and reading the data. The URL also displays the location of the content folder. See ~{ Run your project in a browser using WebGL }~.
 
 ### Heading
 

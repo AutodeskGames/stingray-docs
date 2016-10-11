@@ -1,5 +1,7 @@
 # Run your project in a browser using WebGL
 
+[![UPDATED](../images/updated.png "What else is new in v1.6?")](../release_notes/readme_1.6.html)
+
 If you've been waiting impatiently to see your Stingray projects up and running in a web browser, this experimental feature offers you a first glimpse of the possibilities.
 
 In this release, you can:
@@ -51,17 +53,15 @@ When you get the project successfully running in the browser, it looks something
 
 ## About the HTML5 (WebGL2) project output
 
-When you launch or deploy to the HTML5 (WebGL2) target, Stingray compiles your project's assets the same way it does for any other platform. It writes all the compiled resources to the `webgl` folder under your project `_data` folder. However, for WebGL targets, these individual data files are just an intermediate stage in the process.
+[![NEW](../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html)
 
-The compilation process also creates an additional `webgl_packaged` folder in the same location, where it drops your project in its final runnable form. This folder contains:
+When you launch or deploy to the HTML5 (WebGL2) target, Stingray compiles your project's assets the same way it does for any other platform. It writes all the compiled resources to the `webgl` folder under your project `_data` folder and reads the data directly from here to display it as a URL.
 
--	A `package.data` file that bundles up all of your project assets into a single binary file.
+Deploying the project to the HTML5 (WebGL2) target copies the `webgl` directory to the final location you set in the **Deployer** panel.  This folder will also contain:
 
 -	A set of *.js* files that are essentially the result of compiling the game engine's runtime code into JavaScript.
 
 -	An *.html* wrapper that loads the engine JavaScript and instructs it to launch your project. This default page is branded with Stingray logos, but you can customize it freely if you want, or use it as a model to write your own HTML wrapper page.
-
-Deploying the project to the HTML5 (WebGL2) target copies this `webgl_packaged` directory to the final location you set in the **Deployer** panel.
 
 To launch your project from disk, open the *.html* wrapper file in any supported browser. To launch your project over an Internet connection, host these files on a web server and direct your browser to open the wrapper *.html* file at its URL on your web server.
 
