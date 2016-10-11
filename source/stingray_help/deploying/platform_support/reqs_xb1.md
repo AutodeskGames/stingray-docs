@@ -12,6 +12,6 @@ If you need to register for a new account, or if you need to add Xbox One access
 
 ## Xbox One platform SDK
 
-On your Windows development machine, install the XDK: the Xbox One platform libraries. You need the **November 2015** release. Other versions may or may not be compatible.
+On your Windows development machine, install the XDK: the Xbox One platform libraries. You need the **SR_DOC_XDK_VERSION** release. Other versions may or may not be compatible.
 
 You can download the SDK from the Microsoft Game Developer Network Portal, available to registered developers at <https://developer.xboxlive.com/>.

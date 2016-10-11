@@ -12,6 +12,7 @@
 			<post_to_AKN>false</post_to_AKN>
 			<post_to_AKN_beta>false</post_to_AKN_beta>
 			<redirect_to_help include="*">true</redirect_to_help>
+			<athena include="*"></athena>
 		</AKN>
 		<language>%SR_DOC_LANG%</language>
 		<project_title>Stingray Help</project_title>
@@ -66,6 +67,8 @@
 		<validate_todos>true</validate_todos>
 		<default_file>./homepage/homepage.htm</default_file>
 		<rename_toc_node old_title="Stingray FAQ" new_title="FAQ"></rename_toc_node>
+		<!-- find and replace variables with version numbers -->
+		<replace variable_file="variables.ini" include="*.html"></replace>
 	</global>
 
 	<merge id="images">
