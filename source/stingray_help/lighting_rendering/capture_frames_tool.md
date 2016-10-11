@@ -6,6 +6,8 @@ The **Capture Frames** Tool lets you render frames to disk. The following **Capt
 
 > **Note:** The Capture Frames Tool is a plugin and must be loaded from the **Plugin Manager**.
 
+![](../images/capture_settings.png)
+
 <dl>
 
 <dt>Capture Source</dt>
