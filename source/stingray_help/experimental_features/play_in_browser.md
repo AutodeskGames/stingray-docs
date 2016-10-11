@@ -20,7 +20,7 @@ In addition, you may notice that not all of the rendering settings offered by th
 
 1.	Install and set up a supported browser.
 
-	Stingray requires WebGL 2.0 (including OpenGL ES 3.0 and GLSL 3.00), which is currently supported by Google Chrome (Version 52) and Mozilla Firefox.
+	Stingray requires WebGL 2.0 (including OpenGL ES 3.0 and GLSL 3.00), which is currently supported by Google Chrome (Version 52) and Mozilla Firefox (Version 49).
 
 	Follow the instructions under ~{ Use Google Chrome to run your project }~ or ~{ Use Mozilla Firefox to run your project }~.
 
@@ -35,7 +35,7 @@ In addition, you may notice that not all of the rendering settings offered by th
 	-	Set a name to identify the connection.
 	-	Set the **Platform** option to **HTML5 (WebGL2)**.
 	-	Set the **Browser Path** to point to the *.exe* file for your installation of Firefox or Chrome. If you have multiple versions of these browsers installed, make sure that this setting points to the version that you have already set up to use WebGL 2.0.
-	-	Leave the **Command Line** blank. For WebGL connections, this defines extra parameters that are sent to the launched HTML page in the URL search string. It's not used for anything at the moment, but might be useful if you want to customize the HTML wrapper page (see the next section).
+	-	Leave the **Command Line** blank. For WebGL connections, this defines extra parameters that are sent to the launched HTML page in the URL search string. These command-line parameters will be passed to the URL as GET parameters, which are then read by the engine and honored just like any platforms. If you want to customize the HTML page, enter the parameters here. Note that parameters that won’t make sense in the context of a web page might not yield the intended results.
 
 	![WebGL connection](../images/experimental_webgl_connection.png)
 
