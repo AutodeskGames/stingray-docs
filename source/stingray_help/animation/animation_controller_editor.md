@@ -1,7 +1,5 @@
 # Anim Controller Editor
 
-![Updated](../images/updated.png)
-
 - **Window > Animation > Anim Controller**
 - Double-click an Animation Controller icon in the **Asset Browser**.
 
@@ -54,10 +52,8 @@ The Properties panel at the bottom gives you controls for changing the propertie
 | Previous Key | , (Comma)             |
 | Next Key | Alt + ,              |
 | Previous Frame | . (Period)             |
-| Next Frame | Alt + .
-| [![NEW](../images/new.png "What else is new in v1.3?")](../release_notes/readme_1.3.html) Duplicate an event | Shift-drag
-
-
+| Next Frame | Alt + . |
+| Duplicate an event | Shift-drag |
 
 ---
 Related topics:

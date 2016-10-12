@@ -8,7 +8,7 @@ It's best to create UV sets using 3D design tools like Maya or 3ds Max, and save
 
 -	Unfolding and flattening a convex mesh into 2D usually involves introducing some "seams": places where an edge of the model has to be split. At these places, the seams can sometimes be visible when the lightmap is applied back to the object in the game. Therefore, it's best to make the seams occur where they are least noticeable.
 
-You can automatically generate a UV set for light baking as you import an FBX file. The **Generate UVs for Light Baking** is on by default in the **FBX Import** options. See ~{ Import an FBX file }~.
+You can automatically generate a UV set for light baking as you import an FBX file. The **Generate UVs for Light Baking** is on by default in the **Import FBX** options. See ~{ Import an FBX file }~.
 
 If you have a unit in Stingray that doesn't yet have UVs for a mesh, you can have Stingray auto-generate a UV set for you in the **Unit Editor**. This lets you bake lighting for any mesh, even if its UV set has not been optimized.
 

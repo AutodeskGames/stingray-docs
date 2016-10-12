@@ -18,7 +18,7 @@ For example, an animation clip recorded on a flat ground can be warped to play b
 
 3.	~{ Import a character mesh }~.
 
-	Import the characterized character, and during the import process make sure to select **New or Update Skeleton** and enter a name to create a new skeleton.
+	Import the characterized character, and during the import process make sure to select **New or update skeleton** for **Skeleton** and enter a name to create a new skeleton.
 
 	Don’t place the character unit in your level yet.
 
@@ -28,7 +28,7 @@ For example, an animation clip recorded on a flat ground can be warped to play b
 
 1.	~{ Import animation clips }~.
 
-	Import an FBX file containing your character animation clip. In the FBX import options, turn off other options except for Animations and select the target skeleton created earlier for the character.
+	Import an FBX file containing your character animation clip. In the Import FBX options, turn off other options except for Animations and select the target skeleton created earlier for the character.
 
 	Most Autodesk content creation software (3ds Max, Maya, Maya LT, MotionBuilder) comes with some generic motion capture clips, or you can also download clips from Creative Market. These clips usually already contain characterized skeletons, including foot markers.
 

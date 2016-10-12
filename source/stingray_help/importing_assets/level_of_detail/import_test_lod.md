@@ -6,7 +6,7 @@ For information on setting up LODs in your FBX file, refer to the documentation 
 
 1. Import an FBX file containing your LOD geometry.
 	See also ~{ Import an FBX file }~.
-	**Level of Detail** is on by default in the **FBX Import** options.
+	**Level of Details** is on by default in the **Import FBX** options.
 
 2. In the **Asset Browser**, double-click the imported unit to open it in the ~{ Unit Editor }~.
 	Your LODs and the associated geometry display in the tree view on the left side of the **Unit Editor**.

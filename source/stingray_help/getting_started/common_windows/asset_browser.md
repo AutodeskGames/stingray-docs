@@ -16,7 +16,7 @@ The **Asset Browser** is the main way to browse and import assets in your game p
 | Return to the last opened folder  | Backspace  |
 | Open selected asset in Windows Explorer  | Right-click the asset and select **Show in Explorer**.  |
 | Open a directory location in Windows Explorer  | Right-click anywhere in the **File View** and select **Show in Explorer**.  |
-| Update assets in a scene  | Right-click the assets and select **Re-import** option to import them again using the **FBX Import** options window. Note that the Re-import option displays only for units, animation clips and skeletons.|
+| Update assets in a scene  | Right-click the assets and select **Re-import** option to import them again using the **Import FBX** options window. Note that the Re-import option displays only for units, animation clips and skeletons.|
 | Duplicate assets and folders | Right-click assets and select **Duplicate**. For folders in the Asset Browser, right-click and select **Duplicate Folder**. |
 
 ## Tree view
