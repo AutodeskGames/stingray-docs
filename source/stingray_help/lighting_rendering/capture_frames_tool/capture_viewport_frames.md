@@ -1,6 +1,6 @@
-# Capture viewport frames
+# Capture frames to disk
 
-[![NEW](../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html)
+[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
 
 The **Capture Frames** Tool lets you render frames to disk.
 
@@ -11,7 +11,7 @@ The **Capture Frames** Tool lets you render frames to disk.
   A new capture settings file named your_name.capture_settings appears in the selected folder.
 4. Select the file to view the **Capture Settings** in the **Property Editor**.
 5. Adjust the settings to customize your capture. See ~{ Capture Frames Tool }~.
-6. Click ![](../images/icon_save.png) to save your changes.
+6. Click ![](../../images/icon_save.png) to save your changes.
 7. Click **Start Capturing**.
     The captured frames are saved to the selected **Output Directory**.
 8. Click **Stop Capturing** to end your capture.
