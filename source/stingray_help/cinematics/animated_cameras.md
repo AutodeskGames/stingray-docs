@@ -6,7 +6,7 @@
 
 	- Use the **Asset Browser** to navigate to the folder where you want to import the camera.
 	- Click **Import**.
-	- In the **FBX Import Options**, enable **New or Update Skeleton** and enter a name for the skeleton,and ensure **Animation** and **Import clips** are on.
+	- In the **Import FBX** options, select **New or update skeleton** in **Skeleton** and enter a name for the skeleton in **Skeleton Name**,and ensure **Animation** and **Import clips** are on.
 
 3. Drag the camera unit from the **Asset Browser** into your level.
 

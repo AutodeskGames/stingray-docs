@@ -18,7 +18,7 @@ With a properly configured FBX file, you can automatically import a model with i
 
 4. Click **Import**.
 
-5. In the **FBX Import** options, do the following:
+5. In the **Import FBX** options, do the following:
 	- Ensure that **Materials** is on.
 	- Ensure that **Shared Materials** is on.
 <br>

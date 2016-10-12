@@ -10,15 +10,15 @@
 
 1. Browse to select an FBX animation clip and click **Open**.
 
-1. In the **FBX Import** options, set the following:
+1. In the **Import FBX** options, set the following:
 
-	- Turn on **Animation and Skeleton**.
+	- Turn on **Animation**.
 
 	- If you didn't create your own folder in step one, turn on **Create Animation Folder**.
 
-	- To select a target skeleton, turn off **New or Update Skeleton**, and in **Target Skeleton**, select the skeleton of the target character unit. <br>Example: `content/models/my_character/CharacterName`
+	- To select a target skeleton, select **Target skeleton** in **Skeleton**, and in **Target Skeleton**, select the skeleton of the target character unit. <br>Example: `content/models/my_character/CharacterName`
 
-	- Turn off all other options except for **Animation and Skeleton**.
+	- Turn off all other options except for **Animation**.
 
 	The animation clip is imported, applied to the character, and starts to playback in the **Asset Preview** window.
 

@@ -35,11 +35,11 @@ This method of shape animation lets you create target shapes directly on the bas
 
 ## Import blend shapes in Stingray
 
-1. In Stingray, ensure the following options are selected in the **FBX Import** window that appears:
+1. In Stingray, ensure the following options are selected in the **Import FBX** window that appears:
 
 	  - Blend Shapes
 
-	  - New or Update Skeleton: The name of your shape should appear in this field.
+	  - Skeleton with **New or update skeleton** selection: The name of your shape should appear in the Skeleton Name.
 
 	  - Import Clips
 

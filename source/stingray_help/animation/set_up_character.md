@@ -19,7 +19,7 @@
 
 1. Click **Import**, then navigate to select the character mesh FBX file. See also ~{ Import an FBX file }~.
 
-1. In the **FBX Import Options**, enable **Animation and Skeleton** and **New or Update Skeleton**, then enter a name for this new character skeleton.
+1. In the **Import FBX** options, enable **Animation** and select **New or update skeleton** for the **Skeleton**, then enter a name for this new character skeleton.
 
 	This creates a Stingray skeleton for the character mesh that lets you apply animation clips later on.
 
@@ -34,13 +34,13 @@
 
 1. Right-click in this directory and select **Import Asset**, then browse to select an animation clip and click **Open**.
 
-1. In the **FBX Import Options**, turn off **Unit Mesh**, then set the following:
+1. In the **Import FBX** options, turn off **Unit Mesh**, then set the following:
 
-	* For **Target skeleton**, select the skeleton of the character you created earlier.
+	* Select **Target skeleton** as the **Skeleton**, and then select the skeleton of the character you created earlier.
 
-	Example: `content/models/new_character/Sven`
+		Example: `content/models/new_character/Sven`
 
-	* Enable all options in the **Animation and Skeleton** section, including **Create Animation Folder**.
+	* Enable all options in the **Animation** section, including **Create Animation Folder**.
 
 	![](../images/import_clip_settings.png)
 
@@ -81,19 +81,19 @@
 
 1. Set up the preview environment in the **Anim Controller** Editor as follows:
 
-  * Select Animation Controller in the tree view.
+  	* Select Animation Controller in the tree view.
 
-	![](../images/anim_ctrlr_selected.png)
+		![](../images/anim_ctrlr_selected.png)
 
-  * In the options below the Animation preview pane, use the drop-down lists to select the skeleton, unit, and level you want to see in the preview.
+  	* In the options below the Animation preview pane, use the drop-down lists to select the skeleton, unit, and level you want to see in the preview.
 
-	![](../images/anim_ctrl_general.png)
+		![](../images/anim_ctrl_general.png)
 
-	* Above the preview panel, click the Settings icon, and set the options you want.
+		* Above the preview panel, click the Settings icon, and set the options you want.
 
-	![](../images/animCtrl_preview_gear.png)
+		![](../images/animCtrl_preview_gear.png)
 
-	For example, if you find that your character's physics cause them to fall through the floor, you can disable Physics in the preview.
+		For example, if you find that your character's physics cause them to fall through the floor, you can disable Physics in the preview.
 
 ### Set up layers and states
 
@@ -123,7 +123,7 @@ By default, one empty layer displays in the node graph area.
 
 Now you'll want to add events to trigger each state.
 
-1. In the tree view, right-click **Anim Events** and select **Add Anim Event**, then rename the event in the properties panel.
+1. In the tree view, right-click **Events** and select **Add New AnimEvent**, then rename the event in the properties panel.
 <br>Example: move
 
 1. Add a transition that is triggered by the move event:
