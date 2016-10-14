@@ -31,7 +31,7 @@ New level sync workflows let you automatically rebuild your Vray scenes in Sting
 
 ### Capture frames to disk
 
-You can now capture the active camera or viewport and save frames to disk in the OpenEXR file format. The new Capture Frames tool also supports capturing frames on a test engine. For more information, see ~{ Capture Frames Tool }~.  
+You can now capture the active camera or viewport and save frames to disk in the OpenEXR file format. The new Capture Frames tool also supports capturing frames on a test engine. For more information, see ~{ Capture Frames Tool }~.
 
 ### Improved Stingray and Beast lightmap baker options
 
@@ -118,12 +118,14 @@ For a complete list of all new, modified, and removed elements in the Lua API in
 
 If your project contains any API elements that have been modified or removed, you will need to adjust your code accordingly.
 
+-	Note that with the changes to the resource localization system, `stingray.Application.set_resource_property_preference_order()` has been removed.
+
 ### Flow node changes
 
 For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
 
-### Material node changes
+-	This release mostly features the addition of several Flow nodes for working with entities.
 
-For a complete list of all new, modified, and removed material shader nodes in this release, see the [version history](../../shader_ref/versions.html).
+-	Only one node has been removed: **Application > Get Source Platform**.
 
 [Return to top](#top)
