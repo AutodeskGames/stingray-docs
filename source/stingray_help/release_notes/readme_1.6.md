@@ -1,7 +1,7 @@
 # Stingray 1.6 Release Notes
 <a name="top"></a>
 
-Stingray 1.6 (1.6.XXX.X)...
+Stingray 1.6 Beta (1.6.932.0) focuses on delivering great workflows between 3ds Max and Stingray, making it easy to send scenes from Max and produce stunning photoreal interior renders with Stingray. With the new Render to Frames tool, you can now capture high quality videos of your interactive projects and share online.
 
 Sections in this topic:
 
