@@ -46,13 +46,17 @@ Stingray now runs projects quickly in a web browser using WebGL. The launching p
 
 ### Light baking improvements
 
-Improvements to light baking and post-processing effects (SSAO, SSR) increase the lighting quality of architectural visualization scenes.  If you bake lighting, ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps. New shading environment properties help you control how to apply baked AO and SSAO to your final scene. 
+Improvements to light baking and post-processing effects (SSAO, SSR) increase the lighting quality of architectural visualization scenes.  If you bake lighting, ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps. New shading environment properties help you control how to apply baked AO and SSAO to your final scene.
 
 ## Other Benefits
 
-### Heading
+### New Stingray file extension
 
-Paragraph.
+Browsing for Stingray projects has been made easy in this Stingray release. Stingray projects have a new unique file extension *.stingray_project* that you can use to open the projects. Double-click the *.stingray_project* file to open the project in the Editor.
+
+### Simplified texture import
+
+Stingray includes new texture categories and templates such as Normal, Linear Greyscale, Albedo, Albedo Opacity and Roughness/Metallic/AO templates to easily categorize textures and apply texture settings. The newly added texture templates in the **Texture Manager** come with default compression settings for each supported platform, allowing your textures to work on all platforms.  The textures imported in your project are now assigned the default compression settings.
 
 [Return to top](#top)
 
