@@ -1,5 +1,10 @@
 var version_diff_lua_ref_Release_1_6 = {
   "tab":[{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"tab_gearvr__mobile__options\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html\">gearvr_mobile_options</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options"
+    },{
       "change":"removed",
       "name":"oculus_mobile_options",
       "version":"Release 1.6",
@@ -42,9 +47,24 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.RenderBuffer.RB_NORMAL_SEMANTIC"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_ProceduralMesh_MO__SHADOW__CASTER__CONTEXT\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#con_stingray_ProceduralMesh_MO__SHADOW__CASTER__CONTEXT\">stingray.ProceduralMesh.MO_SHADOW_CASTER_CONTEXT</a></span>",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__TEXCOORD__SEMANTIC\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__TEXCOORD__SEMANTIC\">stingray.RenderBuffer.RB_TEXCOORD_SEMANTIC</a></span>",
       "version":"Release 1.6",
-      "name":"stingray.ProceduralMesh.MO_SHADOW_CASTER_CONTEXT"
+      "name":"stingray.RenderBuffer.RB_TEXCOORD_SEMANTIC"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__ETC2__RGB8\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__ETC2__RGB8\">stingray.RenderBuffer.RB_ETC2_RGB8</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.RenderBuffer.RB_ETC2_RGB8"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__BLOCK__COMPRESSED__7\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__BLOCK__COMPRESSED__7\">stingray.RenderBuffer.RB_BLOCK_COMPRESSED_7</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.RenderBuffer.RB_BLOCK_COMPRESSED_7"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_GearVR_EXTRA__LATENCY__ON\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#con_stingray_GearVR_EXTRA__LATENCY__ON\">stingray.GearVR.EXTRA_LATENCY_ON</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.EXTRA_LATENCY_ON"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__TEXTURE__BUFFER__VIEW\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__TEXTURE__BUFFER__VIEW\">stingray.RenderBuffer.RB_TEXTURE_BUFFER_VIEW</a></span>",
@@ -52,34 +72,14 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.RenderBuffer.RB_TEXTURE_BUFFER_VIEW"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__ETC2__RGB8A1\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__ETC2__RGB8A1\">stingray.RenderBuffer.RB_ETC2_RGB8A1</a></span>",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__VALIDITY__UPDATABLE\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__VALIDITY__UPDATABLE\">stingray.RenderBuffer.RB_VALIDITY_UPDATABLE</a></span>",
       "version":"Release 1.6",
-      "name":"stingray.RenderBuffer.RB_ETC2_RGB8A1"
+      "name":"stingray.RenderBuffer.RB_VALIDITY_UPDATABLE"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__TEXTURE__TYPE__2D\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__TEXTURE__TYPE__2D\">stingray.RenderBuffer.RB_TEXTURE_TYPE_2D</a></span>",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__TANGENT__SEMANTIC\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__TANGENT__SEMANTIC\">stingray.RenderBuffer.RB_TANGENT_SEMANTIC</a></span>",
       "version":"Release 1.6",
-      "name":"stingray.RenderBuffer.RB_TEXTURE_TYPE_2D"
-    },{
-      "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__VERTEX__BUFFER__VIEW\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__VERTEX__BUFFER__VIEW\">stingray.RenderBuffer.RB_VERTEX_BUFFER_VIEW</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.RenderBuffer.RB_VERTEX_BUFFER_VIEW"
-    },{
-      "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__TEXTURE__TYPE__3D\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__TEXTURE__TYPE__3D\">stingray.RenderBuffer.RB_TEXTURE_TYPE_3D</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.RenderBuffer.RB_TEXTURE_TYPE_3D"
-    },{
-      "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__ETC2__RG11\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__ETC2__RG11\">stingray.RenderBuffer.RB_ETC2_RG11</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.RenderBuffer.RB_ETC2_RG11"
-    },{
-      "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__TEXCOORD__SEMANTIC\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__TEXCOORD__SEMANTIC\">stingray.RenderBuffer.RB_TEXCOORD_SEMANTIC</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.RenderBuffer.RB_TEXCOORD_SEMANTIC"
+      "name":"stingray.RenderBuffer.RB_TANGENT_SEMANTIC"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_Camera_STEREO\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Camera.html#con_stingray_Camera_STEREO\">stingray.Camera.STEREO</a></span>",
@@ -97,9 +97,19 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.RenderBuffer.RB_TEXTURE_TYPE_CUBE"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_GearVR_EXTRA__LATENCY__OFF\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#con_stingray_GearVR_EXTRA__LATENCY__OFF\">stingray.GearVR.EXTRA_LATENCY_OFF</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.EXTRA_LATENCY_OFF"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__BLEND__WEIGHTS__SEMANTIC\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__BLEND__WEIGHTS__SEMANTIC\">stingray.RenderBuffer.RB_BLEND_WEIGHTS_SEMANTIC</a></span>",
       "version":"Release 1.6",
       "name":"stingray.RenderBuffer.RB_BLEND_WEIGHTS_SEMANTIC"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__TEXTURE__TYPE__2D\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__TEXTURE__TYPE__2D\">stingray.RenderBuffer.RB_TEXTURE_TYPE_2D</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.RenderBuffer.RB_TEXTURE_TYPE_2D"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__VERTEX__DESCRIPTION\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__VERTEX__DESCRIPTION\">stingray.RenderBuffer.RB_VERTEX_DESCRIPTION</a></span>",
@@ -107,24 +117,24 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.RenderBuffer.RB_VERTEX_DESCRIPTION"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__VERTEX__BUFFER__VIEW\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__VERTEX__BUFFER__VIEW\">stingray.RenderBuffer.RB_VERTEX_BUFFER_VIEW</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.RenderBuffer.RB_VERTEX_BUFFER_VIEW"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__FLOAT__COMPONENT\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__FLOAT__COMPONENT\">stingray.RenderBuffer.RB_FLOAT_COMPONENT</a></span>",
       "version":"Release 1.6",
       "name":"stingray.RenderBuffer.RB_FLOAT_COMPONENT"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__VALIDITY__UPDATABLE\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__VALIDITY__UPDATABLE\">stingray.RenderBuffer.RB_VALIDITY_UPDATABLE</a></span>",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__TEXTURE__TYPE__3D\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__TEXTURE__TYPE__3D\">stingray.RenderBuffer.RB_TEXTURE_TYPE_3D</a></span>",
       "version":"Release 1.6",
-      "name":"stingray.RenderBuffer.RB_VALIDITY_UPDATABLE"
+      "name":"stingray.RenderBuffer.RB_TEXTURE_TYPE_3D"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__PVR__RGB__2BPP\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__PVR__RGB__2BPP\">stingray.RenderBuffer.RB_PVR_RGB_2BPP</a></span>",
       "version":"Release 1.6",
       "name":"stingray.RenderBuffer.RB_PVR_RGB_2BPP"
-    },{
-      "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__TANGENT__SEMANTIC\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__TANGENT__SEMANTIC\">stingray.RenderBuffer.RB_TANGENT_SEMANTIC</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.RenderBuffer.RB_TANGENT_SEMANTIC"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__RAW__BUFFER__VIEW\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__RAW__BUFFER__VIEW\">stingray.RenderBuffer.RB_RAW_BUFFER_VIEW</a></span>",
@@ -137,14 +147,14 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.RenderBuffer.RB_PVR_RGB_4BPP"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_ProceduralMesh_MO__TRIANGLE__LIST\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#con_stingray_ProceduralMesh_MO__TRIANGLE__LIST\">stingray.ProceduralMesh.MO_TRIANGLE_LIST</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.ProceduralMesh.MO_TRIANGLE_LIST"
-    },{
-      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__PVR__RGBA__4BPP\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__PVR__RGBA__4BPP\">stingray.RenderBuffer.RB_PVR_RGBA_4BPP</a></span>",
       "version":"Release 1.6",
       "name":"stingray.RenderBuffer.RB_PVR_RGBA_4BPP"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_ProceduralMesh_MO__TRIANGLE__LIST\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#con_stingray_ProceduralMesh_MO__TRIANGLE__LIST\">stingray.ProceduralMesh.MO_TRIANGLE_LIST</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.ProceduralMesh.MO_TRIANGLE_LIST"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__PVR__RGBA__2BPP\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__PVR__RGBA__2BPP\">stingray.RenderBuffer.RB_PVR_RGBA_2BPP</a></span>",
@@ -172,24 +182,24 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.RenderBuffer.RB_ETC2_RGBA8"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__ETC2__RGB8A1\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__ETC2__RGB8A1\">stingray.RenderBuffer.RB_ETC2_RGB8A1</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.RenderBuffer.RB_ETC2_RGB8A1"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__BINORMAL__SEMANTIC\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__BINORMAL__SEMANTIC\">stingray.RenderBuffer.RB_BINORMAL_SEMANTIC</a></span>",
       "version":"Release 1.6",
       "name":"stingray.RenderBuffer.RB_BINORMAL_SEMANTIC"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__ETC2__RGB8\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__ETC2__RGB8\">stingray.RenderBuffer.RB_ETC2_RGB8</a></span>",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__ETC2__RG11\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__ETC2__RG11\">stingray.RenderBuffer.RB_ETC2_RG11</a></span>",
       "version":"Release 1.6",
-      "name":"stingray.RenderBuffer.RB_ETC2_RGB8"
+      "name":"stingray.RenderBuffer.RB_ETC2_RG11"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_ProceduralMesh_MO__VIEWPORT__VISIBLE__FLAG\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#con_stingray_ProceduralMesh_MO__VIEWPORT__VISIBLE__FLAG\">stingray.ProceduralMesh.MO_VIEWPORT_VISIBLE_FLAG</a></span>",
       "version":"Release 1.6",
       "name":"stingray.ProceduralMesh.MO_VIEWPORT_VISIBLE_FLAG"
-    },{
-      "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__BLOCK__COMPRESSED__7\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__BLOCK__COMPRESSED__7\">stingray.RenderBuffer.RB_BLOCK_COMPRESSED_7</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.RenderBuffer.RB_BLOCK_COMPRESSED_7"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__BLOCK__COMPRESSED__4\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__BLOCK__COMPRESSED__4\">stingray.RenderBuffer.RB_BLOCK_COMPRESSED_4</a></span>",
@@ -227,14 +237,24 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.RenderBuffer.RB_VALIDITY_STATIC"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_ProceduralMesh_MO__SHADOW__CASTER__FLAG\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#con_stingray_ProceduralMesh_MO__SHADOW__CASTER__FLAG\">stingray.ProceduralMesh.MO_SHADOW_CASTER_FLAG</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.ProceduralMesh.MO_SHADOW_CASTER_FLAG"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_ProceduralMesh_MO__SHADOW__CASTER__CONTEXT\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#con_stingray_ProceduralMesh_MO__SHADOW__CASTER__CONTEXT\">stingray.ProceduralMesh.MO_SHADOW_CASTER_CONTEXT</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.ProceduralMesh.MO_SHADOW_CASTER_CONTEXT"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_ProceduralMesh_MO__LINE__LIST\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#con_stingray_ProceduralMesh_MO__LINE__LIST\">stingray.ProceduralMesh.MO_LINE_LIST</a></span>",
       "version":"Release 1.6",
       "name":"stingray.ProceduralMesh.MO_LINE_LIST"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_ProceduralMesh_MO__SHADOW__CASTER__FLAG\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#con_stingray_ProceduralMesh_MO__SHADOW__CASTER__FLAG\">stingray.ProceduralMesh.MO_SHADOW_CASTER_FLAG</a></span>",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_GearVR_EXTRA__LATENCY__DYNAMIC\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#con_stingray_GearVR_EXTRA__LATENCY__DYNAMIC\">stingray.GearVR.EXTRA_LATENCY_DYNAMIC</a></span>",
       "version":"Release 1.6",
-      "name":"stingray.ProceduralMesh.MO_SHADOW_CASTER_FLAG"
+      "name":"stingray.GearVR.EXTRA_LATENCY_DYNAMIC"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"con_stingray_RenderBuffer_RB__ETC2__R11\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#con_stingray_RenderBuffer_RB__ETC2__R11\">stingray.RenderBuffer.RB_ETC2_R11</a></span>",
@@ -266,6 +286,11 @@ var version_diff_lua_ref_Release_1_6 = {
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"ns_stingray_GoogleVR\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GoogleVR.html\">stingray.GoogleVR</a></span>",
       "version":"Release 1.6",
       "name":"stingray.GoogleVR"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"ns_stingray_GearVR\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html\">stingray.GearVR</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR"
     }],
   "sig":[{
       "change":"added",
@@ -274,9 +299,9 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.RenderBuffer.component_type"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Float32Array_mul\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Float32Array.html#sig_stingray_Float32Array_mul\">stingray.Float32Array.mul()</a></span>",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_hmd__world__pose\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_hmd__world__pose\">stingray.GearVR.hmd_world_pose()</a></span>",
       "version":"Release 1.6",
-      "name":"stingray.Float32Array.mul"
+      "name":"stingray.GearVR.hmd_world_pose"
     },{
       "change":"modified",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_SteamVR_initialize\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_SteamVR.html#sig_stingray_SteamVR_initialize\">stingray.SteamVR.initialize()</a></span>",
@@ -285,14 +310,14 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.SteamVR.initialize"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Float32Array\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray.html#sig_stingray_Float32Array\">stingray.Float32Array()</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.Float32Array"
-    },{
-      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_RenderBuffer_num__bits\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#sig_stingray_RenderBuffer_num__bits\">stingray.RenderBuffer.num_bits()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.RenderBuffer.num_bits"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_create__layer\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_create__layer\">stingray.GearVR.create_layer()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.create_layer"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_PS4_neo__mode\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_PS4.html#sig_stingray_PS4_neo__mode\">stingray.PS4.neo_mode()</a></span>",
@@ -315,6 +340,11 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.GoogleVR.link_node_to_eye"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_set__layer__visibility\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_set__layer__visibility\">stingray.GearVR.set_layer_visibility()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.set_layer_visibility"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Float32Array_get\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Float32Array.html#sig_stingray_Float32Array_get\">stingray.Float32Array.get()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.Float32Array.get"
@@ -323,11 +353,6 @@ var version_diff_lua_ref_Release_1_6 = {
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Application_set__resource__override\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Application.html#sig_stingray_Application_set__resource__override\">stingray.Application.set_resource_override()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.Application.set_resource_override"
-    },{
-      "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Oculus_controller__local__pose\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Oculus.html#sig_stingray_Oculus_controller__local__pose\">stingray.Oculus.controller_local_pose()</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.Oculus.controller_local_pose"
     },{
       "change":"modified",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Camera_vertical__fov\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Camera.html#sig_stingray_Camera_vertical__fov\">stingray.Camera.vertical_fov()</a></span>",
@@ -366,6 +391,11 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.Oculus.controller_pulse"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_RenderDataComponent_get__property\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderDataComponent.html#sig_stingray_RenderDataComponent_get__property\">stingray.RenderDataComponent.get_property()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.RenderDataComponent.get_property"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Application_set__resource__override__flag\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Application.html#sig_stingray_Application_set__resource__override__flag\">stingray.Application.set_resource_override_flag()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.Application.set_resource_override_flag"
@@ -379,6 +409,11 @@ var version_diff_lua_ref_Release_1_6 = {
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Oculus_controller__pressed\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Oculus.html#sig_stingray_Oculus_controller__pressed\">stingray.Oculus.controller_pressed()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.Oculus.controller_pressed"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_set__high__quality__layer\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_set__high__quality__layer\">stingray.GearVR.set_high_quality_layer()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.set_high_quality_layer"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GoogleVR_compute__distorted__point\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GoogleVR.html#sig_stingray_GoogleVR_compute__distorted__point\">stingray.GoogleVR.compute_distorted_point()</a></span>",
@@ -421,6 +456,11 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.UnitComponent.unit"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_setup__hmd\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_setup__hmd\">stingray.GearVR.setup_hmd()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.setup_hmd"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Oculus_controller__held\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Oculus.html#sig_stingray_Oculus_controller__held\">stingray.Oculus.controller_held()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.Oculus.controller_held"
@@ -431,6 +471,11 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.Camera.set_mode"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_profile\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_profile\">stingray.GearVR.profile()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.profile"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_ProceduralMesh_set__flags\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#sig_stingray_ProceduralMesh_set__flags\">stingray.ProceduralMesh.set_flags()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.ProceduralMesh.set_flags"
@@ -439,6 +484,11 @@ var version_diff_lua_ref_Release_1_6 = {
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_ProceduralMesh_flags\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#sig_stingray_ProceduralMesh_flags\">stingray.ProceduralMesh.flags()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.ProceduralMesh.flags"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_mobile__options\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_mobile__options\">stingray.GearVR.mobile_options()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.mobile_options"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_ProceduralMesh_set__visibility\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#sig_stingray_ProceduralMesh_set__visibility\">stingray.ProceduralMesh.set_visibility()</a></span>",
@@ -454,6 +504,12 @@ var version_diff_lua_ref_Release_1_6 = {
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_SteamVR_tracking__space__pose\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_SteamVR.html#sig_stingray_SteamVR_tracking__space__pose\">stingray.SteamVR.tracking_space_pose()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.SteamVR.tracking_space_pose"
+    },{
+      "change":"modified",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Camera_set__frustum\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Camera.html#sig_stingray_Camera_set__frustum\">stingray.Camera.set_frustum()</a></span>",
+      "details":"<table class='paramTable'><tr><td style='border:none'><span class='paramTableCaption'>Signatures</span></td></tr><tr class='version-removed-inner'><td>stingray.Camera.set_frustum (self:stingray.Camera, left:number, right:number, down:number, up:number) : nil</td></tr><tr class='version-added-inner'><td><span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Camera_set__frustum\" data-adsktooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Camera.html#sig_stingray_Camera_set__frustum\">stingray.Camera.set_frustum (self:stingray.Camera, left:number, right:number, down:number, up:number, index:number?) : nil</a></span></td></tr></table>",
+      "version":"Release 1.6",
+      "name":"stingray.Camera.set_frustum"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_RenderDataComponent_instances\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderDataComponent.html#sig_stingray_RenderDataComponent_instances\">stingray.RenderDataComponent.instances()</a></span>",
@@ -471,6 +527,11 @@ var version_diff_lua_ref_Release_1_6 = {
       "version":"Release 1.6",
       "name":"stingray.Oculus.link_node_to_tracker"
     },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_ProceduralMesh_visibility\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#sig_stingray_ProceduralMesh_visibility\">stingray.ProceduralMesh.visibility()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.ProceduralMesh.visibility"
+    },{
       "change":"modified",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Oculus_initialize\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Oculus.html#sig_stingray_Oculus_initialize\">stingray.Oculus.initialize()</a></span>",
       "details":"<table class='paramTable'><tr><td style='border:none'><span class='paramTableCaption'>Signatures</span></td></tr><tr class='version-removed-inner'><td>stingray.Oculus.initialize () : boolean</td></tr><tr class='version-added-inner'><td><span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Oculus_initialize\" data-adsktooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Oculus.html#sig_stingray_Oculus_initialize\">stingray.Oculus.initialize (render_target:string, camera:stingray.Camera, world:stingray.World, flags:integer?) : boolean</a></span></td></tr></table>",
@@ -478,9 +539,14 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.Oculus.initialize"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_ProceduralMesh_visibility\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#sig_stingray_ProceduralMesh_visibility\">stingray.ProceduralMesh.visibility()</a></span>",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Float32Array_sqrt\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Float32Array.html#sig_stingray_Float32Array_sqrt\">stingray.Float32Array.sqrt()</a></span>",
       "version":"Release 1.6",
-      "name":"stingray.ProceduralMesh.visibility"
+      "name":"stingray.Float32Array.sqrt"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Unit_animation__get__seeds\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Unit.html#sig_stingray_Unit_animation__get__seeds\">stingray.Unit.animation_get_seeds()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.Unit.animation_get_seeds"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_RenderBuffer_update__description\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#sig_stingray_RenderBuffer_update__description\">stingray.RenderBuffer.update_description()</a></span>",
@@ -488,14 +554,19 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.RenderBuffer.update_description"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Float32Array_push\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Float32Array.html#sig_stingray_Float32Array_push\">stingray.Float32Array.push()</a></span>",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_unlink__node__from__tracker\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_unlink__node__from__tracker\">stingray.GearVR.unlink_node_from_tracker()</a></span>",
       "version":"Release 1.6",
-      "name":"stingray.Float32Array.push"
+      "name":"stingray.GearVR.unlink_node_from_tracker"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GoogleVR_unlink__eye\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GoogleVR.html#sig_stingray_GoogleVR_unlink__eye\">stingray.GoogleVR.unlink_eye()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.GoogleVR.unlink_eye"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Float32Array_push\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Float32Array.html#sig_stingray_Float32Array_push\">stingray.Float32Array.push()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.Float32Array.push"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_ProceduralMesh_clear__resources\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#sig_stingray_ProceduralMesh_clear__resources\">stingray.ProceduralMesh.clear_resources()</a></span>",
@@ -513,6 +584,11 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.GoogleVR.refresh_viewer_profile"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Oculus_tracking__space__pose\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Oculus.html#sig_stingray_Oculus_tracking__space__pose\">stingray.Oculus.tracking_space_pose()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.Oculus.tracking_space_pose"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Oculus_controller__touched\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Oculus.html#sig_stingray_Oculus_controller__touched\">stingray.Oculus.controller_touched()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.Oculus.controller_touched"
@@ -521,16 +597,6 @@ var version_diff_lua_ref_Release_1_6 = {
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_EntityManager_render__data__component\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_EntityManager.html#sig_stingray_EntityManager_render__data__component\">stingray.EntityManager.render_data_component()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.EntityManager.render_data_component"
-    },{
-      "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Oculus_tracking__space__pose\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Oculus.html#sig_stingray_Oculus_tracking__space__pose\">stingray.Oculus.tracking_space_pose()</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.Oculus.tracking_space_pose"
-    },{
-      "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_ProceduralMesh_set__batch__info\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#sig_stingray_ProceduralMesh_set__batch__info\">stingray.ProceduralMesh.set_batch_info()</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.ProceduralMesh.set_batch_info"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Float32Array_swap\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Float32Array.html#sig_stingray_Float32Array_swap\">stingray.Float32Array.swap()</a></span>",
@@ -543,14 +609,14 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.RenderDataComponent.destroy"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_remove__layer\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_remove__layer\">stingray.GearVR.remove_layer()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.remove_layer"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Oculus_controller__released\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Oculus.html#sig_stingray_Oculus_controller__released\">stingray.Oculus.controller_released()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.Oculus.controller_released"
-    },{
-      "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Float32Array_sqrt\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Float32Array.html#sig_stingray_Float32Array_sqrt\">stingray.Float32Array.sqrt()</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.Float32Array.sqrt"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Float32Array_size\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Float32Array.html#sig_stingray_Float32Array_size\">stingray.Float32Array.size()</a></span>",
@@ -558,9 +624,9 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.Float32Array.size"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Script_exists\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Script.html#sig_stingray_Script_exists\">stingray.Script.exists()</a></span>",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_shutdown\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_shutdown\">stingray.GearVR.shutdown()</a></span>",
       "version":"Release 1.6",
-      "name":"stingray.Script.exists"
+      "name":"stingray.GearVR.shutdown"
     },{
       "change":"modified",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Camera_set__vertical__fov\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Camera.html#sig_stingray_Camera_set__vertical__fov\">stingray.Camera.set_vertical_fov()</a></span>",
@@ -569,20 +635,29 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.Camera.set_vertical_fov"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Script_exists\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Script.html#sig_stingray_Script_exists\">stingray.Script.exists()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.Script.exists"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_set__tracking__space__pose\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_set__tracking__space__pose\">stingray.GearVR.set_tracking_space_pose()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.set_tracking_space_pose"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GoogleVR_set__tracking__pose\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GoogleVR.html#sig_stingray_GoogleVR_set__tracking__pose\">stingray.GoogleVR.set_tracking_pose()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.GoogleVR.set_tracking_pose"
-    },{
-      "change":"modified",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Camera_set__frustum\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Camera.html#sig_stingray_Camera_set__frustum\">stingray.Camera.set_frustum()</a></span>",
-      "details":"<table class='paramTable'><tr><td style='border:none'><span class='paramTableCaption'>Signatures</span></td></tr><tr class='version-removed-inner'><td>stingray.Camera.set_frustum (self:stingray.Camera, left:number, right:number, down:number, up:number) : nil</td></tr><tr class='version-added-inner'><td><span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Camera_set__frustum\" data-adsktooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Camera.html#sig_stingray_Camera_set__frustum\">stingray.Camera.set_frustum (self:stingray.Camera, left:number, right:number, down:number, up:number, index:number?) : nil</a></span></td></tr></table>",
-      "version":"Release 1.6",
-      "name":"stingray.Camera.set_frustum"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_ProceduralMesh_add__resource\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#sig_stingray_ProceduralMesh_add__resource\">stingray.ProceduralMesh.add_resource()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.ProceduralMesh.add_resource"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_RenderDataComponent_set__property\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderDataComponent.html#sig_stingray_RenderDataComponent_set__property\">stingray.RenderDataComponent.set_property()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.RenderDataComponent.set_property"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_RenderBuffer_format\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#sig_stingray_RenderBuffer_format\">stingray.RenderBuffer.format()</a></span>",
@@ -594,16 +669,6 @@ var version_diff_lua_ref_Release_1_6 = {
       "version":"Release 1.6",
       "name":"stingray.FlowComponent.set_property"
     },{
-      "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_RenderDataComponent_set__property\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderDataComponent.html#sig_stingray_RenderDataComponent_set__property\">stingray.RenderDataComponent.set_property()</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.RenderDataComponent.set_property"
-    },{
-      "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_FlowComponent_set__flow__variable\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_FlowComponent.html#sig_stingray_FlowComponent_set__flow__variable\">stingray.FlowComponent.set_flow_variable()</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.FlowComponent.set_flow_variable"
-    },{
       "change":"modified",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Camera_set__orthographic__view\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Camera.html#sig_stingray_Camera_set__orthographic__view\">stingray.Camera.set_orthographic_view()</a></span>",
       "details":"<table class='paramTable'><tr><td style='border:none'><span class='paramTableCaption'>Signatures</span></td></tr><tr class='version-removed-inner'><td>stingray.Camera.set_orthographic_view (self:stingray.Camera, min_x:number, max_x:number, min_z:number, max_z:number) : nil</td></tr><tr class='version-added-inner'><td><span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Camera_set__orthographic__view\" data-adsktooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Camera.html#sig_stingray_Camera_set__orthographic__view\">stingray.Camera.set_orthographic_view (self:stingray.Camera, min_x:number, max_x:number, min_z:number, max_z:number, index:number?) : nil</a></span></td></tr></table>",
@@ -611,14 +676,39 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.Camera.set_orthographic_view"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_set__mobile__options\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_set__mobile__options\">stingray.GearVR.set_mobile_options()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.set_mobile_options"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_FlowComponent_set__flow__variable\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_FlowComponent.html#sig_stingray_FlowComponent_set__flow__variable\">stingray.FlowComponent.set_flow_variable()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.FlowComponent.set_flow_variable"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_ProceduralMesh_set__materials\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#sig_stingray_ProceduralMesh_set__materials\">stingray.ProceduralMesh.set_materials()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.ProceduralMesh.set_materials"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_set__layer__pose\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_set__layer__pose\">stingray.GearVR.set_layer_pose()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.set_layer_pose"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_set__layer__dimensions\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_set__layer__dimensions\">stingray.GearVR.set_layer_dimensions()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.set_layer_dimensions"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Localizer_set__language\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Localizer.html#sig_stingray_Localizer_set__language\">stingray.Localizer.set_language()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.Localizer.set_language"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Oculus_controller__local__pose\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Oculus.html#sig_stingray_Oculus_controller__local__pose\">stingray.Oculus.controller_local_pose()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.Oculus.controller_local_pose"
     },{
       "change":"modified",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Camera_set__frustum__half__angles\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Camera.html#sig_stingray_Camera_set__frustum__half__angles\">stingray.Camera.set_frustum_half_angles()</a></span>",
@@ -642,9 +732,19 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.ProceduralMesh.set_bounding_box"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_ProceduralMesh_set__batch__info\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#sig_stingray_ProceduralMesh_set__batch__info\">stingray.ProceduralMesh.set_batch_info()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.ProceduralMesh.set_batch_info"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Unit_animation__set__seeds\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Unit.html#sig_stingray_Unit_animation__set__seeds\">stingray.Unit.animation_set_seeds()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.Unit.animation_set_seeds"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Float32Array_mul\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Float32Array.html#sig_stingray_Float32Array_mul\">stingray.Float32Array.mul()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.Float32Array.mul"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_RenderBuffer_destroy__buffer\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#sig_stingray_RenderBuffer_destroy__buffer\">stingray.RenderBuffer.destroy_buffer()</a></span>",
@@ -655,6 +755,11 @@ var version_diff_lua_ref_Release_1_6 = {
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_ProceduralMesh_create\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_ProceduralMesh.html#sig_stingray_ProceduralMesh_create\">stingray.ProceduralMesh.create()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.ProceduralMesh.create"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GoogleVR_initialize\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GoogleVR.html#sig_stingray_GoogleVR_initialize\">stingray.GoogleVR.initialize()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GoogleVR.initialize"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Application_clear__resource__override__flag\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Application.html#sig_stingray_Application_clear__resource__override__flag\">stingray.Application.clear_resource_override_flag()</a></span>",
@@ -673,14 +778,14 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.SteamVR.link_node_to_tracker"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Application_clear__resource__override\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Application.html#sig_stingray_Application_clear__resource__override\">stingray.Application.clear_resource_override()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.Application.clear_resource_override"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_RenderBuffer_create__description\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#sig_stingray_RenderBuffer_create__description\">stingray.RenderBuffer.create_description()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.RenderBuffer.create_description"
-    },{
-      "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GoogleVR_eye__fov\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GoogleVR.html#sig_stingray_GoogleVR_eye__fov\">stingray.GoogleVR.eye_fov()</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.GoogleVR.eye_fov"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Float32Array_resize\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Float32Array.html#sig_stingray_Float32Array_resize\">stingray.Float32Array.resize()</a></span>",
@@ -693,6 +798,11 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.GoogleVR.reset_tracking"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GoogleVR_eye__fov\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GoogleVR.html#sig_stingray_GoogleVR_eye__fov\">stingray.GoogleVR.eye_fov()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GoogleVR.eye_fov"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Camera_mode\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Camera.html#sig_stingray_Camera_mode\">stingray.Camera.mode()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.Camera.mode"
@@ -703,14 +813,19 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.Trophies.remove_context"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GoogleVR_initialize\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GoogleVR.html#sig_stingray_GoogleVR_initialize\">stingray.GoogleVR.initialize()</a></span>",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_valid__session\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_valid__session\">stingray.GearVR.valid_session()</a></span>",
       "version":"Release 1.6",
-      "name":"stingray.GoogleVR.initialize"
+      "name":"stingray.GearVR.valid_session"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Float32Array_sub\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Float32Array.html#sig_stingray_Float32Array_sub\">stingray.Float32Array.sub()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.Float32Array.sub"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_eye__info\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_eye__info\">stingray.GearVR.eye_info()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.eye_info"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_RenderBuffer_compressed__format\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#sig_stingray_RenderBuffer_compressed__format\">stingray.RenderBuffer.compressed_format()</a></span>",
@@ -724,6 +839,26 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.Replay.record_screen_debug_text"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Float32Array\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray.html#sig_stingray_Float32Array\">stingray.Float32Array()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.Float32Array"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_link__node__to__tracker\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_link__node__to__tracker\">stingray.GearVR.link_node_to_tracker()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.link_node_to_tracker"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_recenter\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_recenter\">stingray.GearVR.recenter()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.recenter"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_clear__layers\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_clear__layers\">stingray.GearVR.clear_layers()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.clear_layers"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_RenderBuffer_num__components\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderBuffer.html#sig_stingray_RenderBuffer_num__components\">stingray.RenderBuffer.num_components()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.RenderBuffer.num_components"
@@ -734,19 +869,24 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.ProceduralMesh.remove_resource"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Unit_animation__get__seeds\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_Unit.html#sig_stingray_Unit_animation__get__seeds\">stingray.Unit.animation_get_seeds()</a></span>",
-      "version":"Release 1.6",
-      "name":"stingray.Unit.animation_get_seeds"
-    },{
-      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_Oculus_controller__world__pose\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_Oculus.html#sig_stingray_Oculus_controller__world__pose\">stingray.Oculus.controller_world_pose()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.Oculus.controller_world_pose"
     },{
       "change":"added",
-      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_RenderDataComponent_get__property\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_RenderDataComponent.html#sig_stingray_RenderDataComponent_get__property\">stingray.RenderDataComponent.get_property()</a></span>",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_hmd__info\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_hmd__info\">stingray.GearVR.hmd_info()</a></span>",
       "version":"Release 1.6",
-      "name":"stingray.RenderDataComponent.get_property"
+      "name":"stingray.GearVR.hmd_info"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_hmd__local__pose\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_hmd__local__pose\">stingray.GearVR.hmd_local_pose()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.hmd_local_pose"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_initialize\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_initialize\">stingray.GearVR.initialize()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.initialize"
     },{
       "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_FlowComponent_get__property\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_FlowComponent.html#sig_stingray_FlowComponent_get__property\">stingray.FlowComponent.get_property()</a></span>",
@@ -754,9 +894,19 @@ var version_diff_lua_ref_Release_1_6 = {
       "name":"stingray.FlowComponent.get_property"
     },{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_enable\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_enable\">stingray.GearVR.enable()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.enable"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_FlowComponent_trigger__flow__event\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"obj_stingray_FlowComponent.html#sig_stingray_FlowComponent_trigger__flow__event\">stingray.FlowComponent.trigger_flow_event()</a></span>",
       "version":"Release 1.6",
       "name":"stingray.FlowComponent.trigger_flow_event"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"sig_stingray_GearVR_clear__all__tracker__node__links\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"ns_stingray_GearVR.html#sig_stingray_GearVR_clear__all__tracker__node__links\">stingray.GearVR.clear_all_tracker_node_links()</a></span>",
+      "version":"Release 1.6",
+      "name":"stingray.GearVR.clear_all_tracker_node_links"
     },{
       "change":"removed",
       "name":"stingray.Application.source_platform",
@@ -790,9 +940,89 @@ var version_diff_lua_ref_Release_1_6 = {
     }],
   "mem":[{
       "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_correct__chromatic__aberration\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_correct__chromatic__aberration\">gearvr_mobile_options.options.correct_chromatic_aberration</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.correct_chromatic_aberration"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_debug__graph__freeze\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_debug__graph__freeze\">gearvr_mobile_options.options.debug_graph_freeze</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.debug_graph_freeze"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_allow__power__save\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_allow__power__save\">gearvr_mobile_options.options.allow_power_save</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.allow_power_save"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_z__far\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_z__far\">gearvr_mobile_options.options.z_far</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.z_far"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_flip__y\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_flip__y\">gearvr_mobile_options.options.flip_y</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.flip_y"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_flush__frames\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_flush__frames\">gearvr_mobile_options.options.flush_frames</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.flush_frames"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_render__thread__sched__fifo\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_render__thread__sched__fifo\">gearvr_mobile_options.options.render_thread_sched_fifo</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.render_thread_sched_fifo"
+    },{
+      "change":"added",
       "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_ps4__keyboard__options_supported__languages\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_ps4__keyboard__options.html#mem_ps4__keyboard__options_supported__languages\">ps4_keyboard_options.supported_languages</a></span>",
       "version":"Release 1.6",
       "name":"ps4_keyboard_options.supported_languages"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_z__near\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_z__near\">gearvr_mobile_options.options.z_near</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.z_near"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_minimum__vsyncs\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_minimum__vsyncs\">gearvr_mobile_options.options.minimum_vsyncs</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.minimum_vsyncs"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_main__thread__sched__fifo\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_main__thread__sched__fifo\">gearvr_mobile_options.options.main_thread_sched_fifo</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.main_thread_sched_fifo"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_debug__graph__show\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_debug__graph__show\">gearvr_mobile_options.options.debug_graph_show</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.debug_graph_show"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_debug__latency__mode\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_debug__latency__mode\">gearvr_mobile_options.options.debug_latency_mode</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.debug_latency_mode"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_gpu__level\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_gpu__level\">gearvr_mobile_options.options.gpu_level</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.gpu_level"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_reduced__latency\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_reduced__latency\">gearvr_mobile_options.options.reduced_latency</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.reduced_latency"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_extra__latency__mode\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_extra__latency__mode\">gearvr_mobile_options.options.extra_latency_mode</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.extra_latency_mode"
+    },{
+      "change":"added",
+      "display_name":"<span class=\"hasTooltip\" data-reftooltip=\"mem_gearvr__mobile__options_options_cpu__level\" data-reftooltip-refid=\"lua_ref\"><a class=\"el\" href=\"tab_gearvr__mobile__options.html#mem_gearvr__mobile__options_options_cpu__level\">gearvr_mobile_options.options.cpu_level</a></span>",
+      "version":"Release 1.6",
+      "name":"gearvr_mobile_options.options.cpu_level"
     },{
       "change":"removed",
       "name":"oculus_mobile_options.options.gpu_level",
