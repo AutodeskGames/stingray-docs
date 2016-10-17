@@ -3,7 +3,7 @@
 
 Stingray 1.6 Beta (1.6.932.0) focuses on delivering great workflows between 3ds Max and Stingray, making it easy to send scenes from Max and produce stunning real-time renders with Stingray. With the new Render to Frames tool, you can now capture high quality videos of your interactive projects and share online.
 
-	>> **Important**: We strongly recommended that you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
+> **Important**: We strongly recommended that you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
 Sections in this topic:
 
@@ -197,7 +197,7 @@ This section lists known limitations and workarounds for Stingray.
 
 Unless otherwise noted in the **What's Fixed** section, please be aware that this release contains the same **Known Limitations** described in the previous versions of Stingray Release Notes.
 
-	>> **Note**: We recommended you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
+> **Note**: We recommended you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
 - **GAME-18398 After opening a v1.5 project in Stingray v1.5, all existing v1.6 projects require migration**
 
