@@ -2,6 +2,12 @@
 
 Views extension allows a user to define named "views" (panel or dialog) that can be either registered to global menu or shown using the views module. Named views can even be shown from plugin who haven't registered the view as long as the view unique name is know in advance (ex: popping the color picker from any plugin).
 
+## Views module
+- **$stingray_install_dir\editor\core\extensions\views.js**: You can find Jsdoc on the different functions this module provide.
+- **$stingray_install_dir\editor\core\extensions\tests\view-extension-spec.js** : unit tests files with some use cases.
+
+
+
 ## Views extension format
 
 ```lua

@@ -1,6 +1,10 @@
 # Contextual actions
 Contextual action encapsulate an action sequence that are made available in right-click contextual menu (ex: right click on a Stingray asset, right click on a Level object). Contextual actions can be specified with multiple predicates to decide if they should be available for a specific context (ex: should only display this action for units or lights).
 
+## Contextual actions module
+- **$stingray_install_dir\editor\core\extensions\contextual-actions.js**: You can find Jsdoc on the different functions this module provide.
+- **$stingray_install_dir\editor\core\extensions\tests\contextual-actions-spec.js** : unit tests files with some use cases.
+
 ## Contextual action format
 
 You can specify a contextual actions block in a plugin descriptor file:
