@@ -1,6 +1,6 @@
 # Views and Dialogs
 
-Views extension allows a user to define named "views" (either panel or dialog) that can be either registered to global menu or shown using the hostService. Named views can even be shown from plugin who haven't registered the view as long as the view unique name is know in advance (ex: popping the color picker from any plugin).
+Views extension allows a user to define named "views" (panel or dialog) that can be either registered to global menu or shown using the views module. Named views can even be shown from plugin who haven't registered the view as long as the view unique name is know in advance (ex: popping the color picker from any plugin).
 
 ## Views extension format
 
@@ -34,7 +34,7 @@ views = [
 ]
 ```
 `name`
- > Unique name of the view. **Required**. This name must be unique among all views registered within Stingray. Will be used to specify which views to show by multiple API.
+ > Unique name of the view. **Required**. This name must be unique among all views registered within Stingray. This will be used to specify which view to show.
 
 `type`
  > Can be either **dialog** (generally modal), **panel** (tool window) or **window** (top level window). **Required**. Note that any registered **panel** will also be available in any of the `Tab Activator + Button`.
@@ -55,7 +55,7 @@ views = [
 
 ## Registering menu
 
-A registered view can easily be registered as a menu item. Almost of the tools in the Singray Window menu comes from registered named view.
+A named view can easily be registered as a menu item. Most of the General tools available in the Stingray *Window menu* comes from registered named views.
 
 ![window_menu](../../../images/window_menu.png)
 
@@ -82,7 +82,7 @@ menus = [
 ```
 
 ## Open view action
-In the stingray-editor.plugin file there is a global action called open-view that allows a user to pop open a view from within an action sequence:
+In the stingray-editor.plugin file there is a global action called **open-view** that allows a user to pop open a view from within an action sequence:
 
 The contextual action extension allows a user to bind a sequence of action to a contextal menu:
 ```lua
@@ -107,7 +107,7 @@ contextual_actions = [
 ![show_dependencies](../../../images/open_dependencies.png)
 
 ## Opening panel
-Alternatively, from within javascript you can use the view module to open a panel:
+Alternatively, from within javascript you can use the views module to open a panel:
 
 ```javascript
 // From dependency-actions.js
@@ -121,7 +121,7 @@ define([
 
     return {
         showDependencies: function (dependencyPath) {
-        	// use the views module to open a view called "dependency" passing this view a custom resource query parameters
+        	// use the views module to open a view called "dependency" passing this view a custom resource query parameter
             return views.open('dependency', {}, {
                 resource: encodeURIComponent(dependencyPath)
             });
@@ -169,10 +169,10 @@ define([
 });
 ```
 
-It is worth noting that when a custom view is opened, we inject a few useful API into the global window object to allow a user to manipulate the view more easily:
+It is worth noting that when a custom dialog is opened, we inject a few useful API into the global window object to allow a user to manipulate the dialog more easily:
 
 `window.options`
-> The thrid parameter passed to the views.openDialog function. Allow a caller to pass a plain Json object to be retrieve back by the dialog view.
+> The third parameter passed to the `views.openDialog` function. Allows a caller to pass a plain Json object to be retrieve back by the dialog.
 
 `window.accept(result)`
 > Function that will close the dialog passing back the `result` to the dialog invoker. Dialog will be considered valid.
@@ -183,7 +183,7 @@ It is worth noting that when a custom view is opened, we inject a few useful API
 ```javascript
 // From text-input-dialog.js
 
-// Fetch initial values from the openDialog options
+// Fetch initial values from the `views.openDialog` options parameter:
 $scope.dataContext = {
     TextValue: window.options.defaultValue
 };
