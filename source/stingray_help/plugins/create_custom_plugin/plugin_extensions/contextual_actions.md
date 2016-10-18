@@ -43,7 +43,7 @@ contextual_actions = [
 
 `do`
 
-> Action sequence. **Required**. A list of action to run if the contextual action is executed. Each of these action will be passed the "context" on which to operate (ex: asset path, levelo objectdescriptor). Check action extension to see how to define new action.
+> Action sequence (see ~{ Register an action }~). **Required**. A list of action to run if the contextual action is executed. Each of these action will be passed the "context" on which to operate (ex: asset path, levelo objectdescriptor). Check action extension to see how to define new action.
 
 
 ### Single Asset Predicates
