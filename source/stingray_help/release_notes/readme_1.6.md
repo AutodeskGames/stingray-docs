@@ -205,6 +205,11 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 	**Workaround:** Click Ok when prompted to migrate your 1.6 projects, even though migration isn't actually required.
 
+- **Previous VR templates will not work in v1.6. Expect to port any previous VR projects to use the new templates.**
+
+	Stingray 1.6 is a significant update for VR. Instanced stereo rendering has now been implemented as a first class citizen of our base renderer which removes the need for the previous `vr_renderer.render_config`. Extra flow nodes for SteamVR and Oculus are also been provided to remove any tracking lag. 
+
+
 [Return to top](#top)
 
 ## Upgrade Requirements
