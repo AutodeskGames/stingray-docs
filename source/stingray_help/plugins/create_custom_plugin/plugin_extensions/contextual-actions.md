@@ -89,6 +89,9 @@ Or a wildcard (*):
     ]
 }
 ```
+![singleasset sublime](../../../images/single_asset_contextual_sublime.png)
+
+
 
 Alternatively, for more involved predicate (some that requires actual processing) you can use the "predicate" key which needs to map on an action:
 
@@ -234,7 +237,7 @@ The list of supported category is built dynamically according to the object filt
 
 Note that you can also specify multiple categories:
 
-```
+```lua
 {
     type = "level_object"
     label = "Reset position"
@@ -252,6 +255,8 @@ Note that you can also specify multiple categories:
     ]
 }
 ```
+
+![singleasset_browser](../../../images/single_level_object_find_asset_browser.png)
 
 You can write a custom predicate similar to what can be done with an asset:
 
@@ -333,3 +338,4 @@ duplicateLevelObjects: function (levelObjects) {
 }
 ```
 
+![multi_level/_object duplicate](../../../images/multi_level_objects_duplicate.png)
