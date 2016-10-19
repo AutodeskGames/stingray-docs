@@ -232,8 +232,12 @@ For a complete list of all new, modified, and removed Flow nodes in this release
 
 ### Forward axis settings
 
-Set the forward axis setting (`reverse_forward_axis`)  to preserve the forward direction in imported assets in *.stingray_project*  instead of *settings.ini*. See ~{  Best practices: preserving axis orientation }~.
+To preserve the forward direction in imported assets, set the forward axis setting (`reverse_forward_axis`)   in *.stingray_project*  instead of *settings.ini*. See ~{  Best practices: preserving axis orientation }~.
 
 In migrated projects, the forward axis setting is still read from *settings.ini*.
+
+### FBX Version 2017.1
+
+This release of Stingray picks up the latest version of FBX (2017.1), which provides various security improvements.
 
 [Return to top](#top)

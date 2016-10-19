@@ -1,6 +1,6 @@
 # Open an existing project
 
-[![UPDATED](../images/updated.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
+[![UPDATED](../images/updated.png "What else is new in v1.6?")](../release_notes/readme_1.6.html)
 
 The Stingray Editor keeps track of the projects you create and work on. You can can easily re-open any project when you launch the editor, or by opening the **Project Manager** from the **File** menu.
 
