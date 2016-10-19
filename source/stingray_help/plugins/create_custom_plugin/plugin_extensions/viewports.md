@@ -230,7 +230,7 @@ var MouseBehavior = function (engineViewportId, engineViewportInterops) {
 
 ### Viewport behavior (lua)
 
-The lua counterpart of the javascript ViewportBehavior allows the user to interacts directly with the engine: you can instantiate new units, setup materials, control the camera, modify the shading_environment... 
+The lua counterpart of the javascript ViewportBehavior allows the user to interact directly with the engine: you can instantiate new units, setup materials, control the camera, modify the shading_environment...
 
 A lua ViewportBehavior can implement the following interface:
 
