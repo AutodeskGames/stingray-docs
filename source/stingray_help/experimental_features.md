@@ -24,8 +24,3 @@ Experimental features are hidden by default. If you want to try them out, enable
 2.	In the ~{ Property Editor }~, turn on **Enable experimental editor features**.
 
 ![Experimental features setting](images/experimental_features_setting.png)
-
----
-Related topics:
-- ~{ Scatter Tool }~
----

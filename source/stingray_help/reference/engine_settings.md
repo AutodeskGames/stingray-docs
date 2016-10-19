@@ -20,7 +20,6 @@ This topic describes all the settings that you can configure in this file in ord
 - [Import axis setting](#import-axis-setting)
 - [Wwise settings](#wwise-settings)
 - [PhysX settings](#physx-settings)
-- [Project description](#project-description)
 - [Custom settings](#custom-settings)
 - [Script data](#script-data)
 - [Network settings](#network-settings)
@@ -554,20 +553,6 @@ Generic options are placed in the root block. You can override these generic set
 `apex_cloth_lod_unit_cost` and `apex_lod_resource_budget`
 
 > Configures the cloth simulation budget.
-
-[Back to top](#top)
-
-## Project description
-
-~~~{sjson}
-project_description = null
-// Stingray version for which the project was created with.
-stingray_version = "1.0.31.0"
-
-project_name = "vehicle_project_01"
-
-wwise_project = "../vehicle_project_01_wwise/vehicle_project_01.wproj"
-~~~
 
 [Back to top](#top)
 

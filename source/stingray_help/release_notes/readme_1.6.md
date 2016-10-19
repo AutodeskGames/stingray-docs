@@ -39,6 +39,9 @@ You can now capture the active camera or viewport and save frames to disk in the
 
 The revamped Stingray and the Beast lightmap bakers now reflect more meaningful baker settings. See ~{ About baking with the Stingray baker }~ and ~{ About baking with Beast }~ for the updated options.
 
+### Light baking improvements
+
+Improvements to light baking and post-processing effects (SSAO, SSR) increase the lighting quality of architectural visualization scenes.  If you bake lighting, ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps. New shading environment properties help you control how to apply baked AO and SSAO to your final scene.
 
 ## Experimental features
 
@@ -46,19 +49,15 @@ The revamped Stingray and the Beast lightmap bakers now reflect more meaningful 
 
 Stingray now runs projects quickly in a web browser using WebGL. The launching process has been updated to load the content from a URL instead of packaging the compiled data to a separate folder and reading the data. The URL also displays the location of the content folder. See ~{ Run your project in a browser using WebGL }~. Also check out the updated settings if you ~{ Use Mozilla Firefox to run your project }~.
 
-### Light baking improvements
-
-Improvements to light baking and post-processing effects (SSAO, SSR) increase the lighting quality of architectural visualization scenes.  If you bake lighting, ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps. New shading environment properties help you control how to apply baked AO and SSAO to your final scene.
-
 ## Other Benefits
 
 ### New Stingray file extension
 
-Browsing for Stingray projects has been made easy in this Stingray release. Stingray projects have a new unique file extension *.stingray_project* that you can use to open the projects. Double-click the *.stingray_project* file to open the project in the Editor.
+Browsing for Stingray projects has been made easy in this Stingray release. Stingray projects have a new unique file extension *.stingray_project* that you can use to open the projects. Double-click the *.stingray_project* file to open the project in the Editor. See ~{ Open an existing project }~ and ~{ About the project structure }~.
 
 ### Simplified texture import
 
-Stingray includes new texture categories and templates such as Normal, Linear Greyscale, Albedo, Albedo Opacity and Roughness/Metallic/AO templates to easily categorize textures and apply texture settings. The newly added texture templates in the **Texture Manager** come with default compression settings for each supported platform, allowing your textures to work on all platforms.  The textures imported in your project are now assigned the default compression settings.
+Stingray includes new texture categories and templates such as Normal, Linear Greyscale, Albedo, Albedo Opacity and Roughness/Metallic/AO templates to easily categorize textures and apply texture settings. The newly added texture templates in the **Texture Manager** come with default compression settings for each supported platform, allowing your textures to work on all platforms.  The textures imported in your project are now assigned the default compression settings. See ~{ Import textures }~.
 
 [Return to top](#top)
 
@@ -230,5 +229,11 @@ For a complete list of all new, modified, and removed Flow nodes in this release
 -	This release mostly features the addition of several Flow nodes for working with entities.
 
 -	Only one node has been removed: **Application > Get Source Platform**.
+
+### Forward axis settings
+
+Set the forward axis setting (`reverse_forward_axis`)  to preserve the forward direction in imported assets in *.stingray_project*  instead of *settings.ini*. See ~{  Best practices: preserving axis orientation }~.
+
+In migrated projects, the forward axis setting is still read from *settings.ini*.
 
 [Return to top](#top)

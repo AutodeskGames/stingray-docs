@@ -24,7 +24,10 @@ You can update the path to use either a custom folder with compiled data for the
 This can help Stingray to resolve relative paths when you right-click in the **Asset Browser** and select **Open Source Asset**.</dd>
 
 <dt>Default Level Template</dt>
-<dd>The level that is automatically loaded when opening a project.</dd>
+<dd>The level automatically loaded when creating new levels.</dd>
+
+<dt>Default Startup Level Template</dt>
+<dd>The level automatically loaded when opening a project.</dd>
 
 <dt>Create an extra root by default on asset import</dt>
 <dd>This option is enabled by default, and turning it off is not recommended. </dd>

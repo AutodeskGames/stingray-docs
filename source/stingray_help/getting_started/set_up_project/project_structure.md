@@ -1,16 +1,20 @@
 # About the project structure
 
+[![UPDATED](../../images/updated.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
+
 This topic provides a basic explanation of how Stingray projects are organized.
 
 ## Project directories: source and compiled data
 
-When you create a new project, you'll notice that Stingray actually creates a set of two project folders in the location you specify on disk: `<projectname>`, and `<projectname>_data`.
+[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html) When you create a new project, Stingray creates a folder with the same name as your project in the location you specify on the disk. This top level <projectname> folder contains a set of project folders:  `<projectname>`,`<projectname>_data` and `<projectname>_wwise` .
 
-Think of the main folder `<projectname>` as the source folder for your project, containing all the files you'll work with to build your game: exported models, textures, scripts, and so on. All Stingray tools and editors read and write to this source directory.
+Think of the `<projectname>` folder under the top level folder as the source folder for your project, containing all the files you'll work with to build your game: exported models, textures, scripts, and so on. All Stingray tools and editors read and write to this source directory.
 
 The second folder, `<projectname>_data`, contains your source data compiled into optimized binary formats that are used at runtime on the game's target platforms. While you work in the Stingray Editor, and any time you run your game from the editor, the compiled data for Windows is automatically refreshed.
 
-Stingray also creates a third folder, `<projectname>_wwise`, which is set up for authoring audio content using Wwise. (See ~{ Working with audio }~  ).
+Stingray creates a third folder, `<projectname>_wwise>`, which is set up for authoring audio content using Wwise. (See ~{ Working with audio }~  ).
+
+[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html) Stingray also creates a Stingray project file with a `stingray_project` extension, containing project information including the Stingray version, the default template and level loaded, Wwise project settings and migration settings.
 
 If you want to share your project with someone else, or if you want to check your project in to a version control system such as Git or SVN, you typically only need to worry about the source directory and the `_wwise` directory. Since the compiled data is always regenerated from the source directory, you don't need to redistribute it or check it into a source control system. See also ~{ Work with a version control system }~.
 
@@ -73,3 +77,8 @@ This file provides global configuration settings for the physics sub-system. For
 This file provides a variety of user-editable settings that control the operation of the engine, such as rendering settings or startup packages. This file always needs to be kept in the root of the game project.
 
 For details on all the settings that you can provide in this file, see ~{ Stingray engine settings.ini file reference }~.
+
+### project.settings
+[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
+
+This file is created on project migration and records the project settings for the migrated project.

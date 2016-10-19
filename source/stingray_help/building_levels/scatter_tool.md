@@ -12,8 +12,3 @@ Before you can use the Scatter Tool, it must be loaded in your project.
 4. Press F5 to reload the **Asset Browser**.
   The Scatter Tool mode icon appears in the ~{ Toolbar }~ ![](../images/toolbar_icon_scatter.png).
 5. ~{ Paint with the Scatter Tool }~.
-
----
-Related topics:
--	~{ About Experimental Features }~
----
