@@ -1,8 +1,8 @@
 # Viewports
 
-Viewports extension allows a user to to instantiate a viewport in a panel and to control the viewport behavior with a set of custom javascript and lua files. Basically you can write plugin that will package a 3D Viewport and control how the user interacts with the viewport. 
+Viewports extension allows a user to instantiate a viewport in a panel and to control the viewport behavior with a set of custom javascript and lua files. Basically you can write plugin that will package a 3D Viewport and control how the user interacts with the viewport.
 
-Viewport extension are a generalization of ~{ Define previews for custom assets }~ so there will be a lot of similarities between these 2 extensions.
+Viewports extension are a generalization of ~{ Define previews for custom assets }~ so there will be a lot of similarities between these 2 extensions.
 
 ## Viewports module
 - **$stingray_install_dir\editor\core\extensions\viewports.js**: You can find Jsdoc on the different functions this module provide.
@@ -52,7 +52,7 @@ Editor plugin are written in javascript while interaction with the Viewport need
 - EngineViewport checks for a ViewportBehavior (**javascript**) and forwards its event to the user **defined behavior** (see core/plugins/particle_editor/particle-viewport.js for an example of a MouseBehavior)
 	- This means you can vary how a viewport interact by changing the current ViewportBehavior.
 - A ViewportBehavior will send Lua commands to a specific viewport of the engine. The EditorViewport (**lua**) (implemented in core/editor_slave/stingray_editor/editor_viewport.lua) will receive these commands.
-- VEdirotViewport will forward inputs to its current **user defined lua behavior** (see core/editor_slave/stingray_editor/viewport_behavior.lua for the specification of a lua behavior). You can look at core/plugins/particle_editor/particle_editor/particle-behavior.lua for an example of a Behavior.
+- EditorViewport will forward inputs to its current **user defined lua behavior** (see core/editor_slave/stingray_editor/viewport_behavior.lua for the specification of a lua behavior). You can look at core/plugins/particle_editor/particle_editor/particle-behavior.lua for an example of a Behavior.
 
 
 ### Viewport setup (javascript)
