@@ -1,9 +1,9 @@
 # Stingray 1.6 Release Notes
 <a name="top"></a>
 
-Stingray 1.6 Beta (1.6.932.0) focuses on delivering great workflows between 3ds Max and Stingray, making it easy to send scenes from Max and produce stunning real-time renders with Stingray. With the new Render to Frames tool, you can now capture high quality videos of your interactive projects and share online.
+Stingray 1.6 (1.6.932.0) focuses on delivering great workflows between 3ds Max and Stingray, making it easy to send scenes from Max and produce stunning real-time renders with Stingray. With the new Render to Frames tool, you can now capture high quality videos of your interactive projects and share online.
 
-> **Important**: We strongly recommended that you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
+> **Important**: We strongly recommend that you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
 Sections in this topic:
 
@@ -42,6 +42,14 @@ The revamped Stingray and the Beast lightmap bakers now reflect more meaningful 
 ### Light baking improvements
 
 Improvements to light baking and post-processing effects (SSAO, SSR) increase the lighting quality of architectural visualization scenes.  If you bake lighting, ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps. New shading environment properties help you control how to apply baked AO and SSAO to your final scene.
+
+## Ready to learn Stingray?
+
+With Stingray 1.6, we aim to give you two things you need when learning anything new: more time, and some advice on where to start!
+
+Hobbyists, enthusiasts, and early adopters can now run Stingray using a Startup license, which lets you run Stingray free for one year for non-commercial projects. If the 30-day trial period was just not enough, the Stingray Startup license is for you. For more information, check out the Stingray installation topic.
+
+In addition, if you're tired of searching for and watching tutorial videos, pop open the Stingray **Help** menu and select the brand new top-secret Stingray **Hands-on Training Mission**. We've added 5 quick, *interactive* tutorial lessons that take you through the Stingray basics, and get you well on your way to creating your own project. (Pssst - it's not really a secret. Let us know what you think!) We added a note about this in the ~{ Getting Started }~ topic.
 
 ## Experimental features
 
@@ -203,6 +211,11 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 	After you launch Stingray 1.6 beta and create a project, if you then open Stingray 1.5 and work on your existing 1.5 projects, you'll be prompted to migrate your Stingray 1.6 projects the next time you work with Stingray 1.6 beta.
 
 	**Workaround:** Click Ok when prompted to migrate your 1.6 projects, even though migration isn't actually required.
+
+- **Previous VR templates will not work in v1.6. Expect to port any previous VR projects to use the new templates.**
+
+	Stingray 1.6 is a significant update for VR. Instanced stereo rendering has now been implemented as a first class citizen of our base renderer which removes the need for the previous `vr_renderer.render_config`. Extra flow nodes for SteamVR and Oculus have also been provided to remove any tracking lag.
+
 
 [Return to top](#top)
 
