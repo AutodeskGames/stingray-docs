@@ -17,7 +17,6 @@ This topic describes all the settings that you can configure in this file in ord
 - [Performance HUD setting](#performance-hud-setting)
 - [Log directory](#log-directory)
 - [Save directory](#save-directory)
-- [Import axis setting](#import-axis-setting)
 - [Wwise settings](#wwise-settings)
 - [PhysX settings](#physx-settings)
 - [Custom settings](#custom-settings)
@@ -315,17 +314,6 @@ ios = {
 	save_dir = "%SAVEDATA%/empty"
 }
 ~~~
-
-
-[Back to top](#top)
-
-# Import axis setting
-
-`import_reverse_forward_axis = true`
-
-> By default, `import_reverse_forward_axis` is set to true for all new Stingray projects, and this is the recommended setting. After an asset is imported, the setting is stored with the FBX file, not read from settings.ini.
-
-> (For advanced users.) For backwards compatibility with scenes authored for Bitsquid, you can set `import_reverse_forward_axis = false` so that imported scenes get rotated 180 degrees.
 
 
 [Back to top](#top)
