@@ -51,13 +51,13 @@ Stingray now runs projects quickly in a web browser using WebGL. The launching p
 
 ## Other Benefits
 
-### New Stingray file extension
+### Stingray file extension
 
-Browsing for Stingray projects has been made easy in this Stingray release. Stingray projects have a new unique file extension *.stingray_project* that you can use to open the projects. Double-click the *.stingray_project* file to open the project in the Editor. See ~{ Open an existing project }~ and ~{ About the project structure }~.
+Stingray projects now use the unique file extension *.stingray_project*, making it easy to find and open projects. Double-click the *.stingray_project* file to open the project in the Editor. Updated Help topics include: ~{ Open an existing project }~ and ~{ About the project structure }~.
 
 ### Simplified texture import
 
-Stingray includes new texture categories and templates such as Normal, Linear Greyscale, Albedo, Albedo Opacity and Roughness/Metallic/AO templates to easily categorize textures and apply texture settings. The newly added texture templates in the **Texture Manager** come with default compression settings for each supported platform, allowing your textures to work on all platforms.  The textures imported in your project are now assigned the default compression settings. See ~{ Import textures }~.
+Stingray includes new texture categories and templates such as Normal, Linear Greyscale, Albedo, Albedo Opacity and Roughness/Metallic/AO to help you categorize textures and apply texture settings. The newly added texture templates in the **Texture Manager** come with default compression settings to work on each supported platform. The textures imported in your project are now assigned the default compression settings. See ~{ Import textures }~.
 
 [Return to top](#top)
 
@@ -234,7 +234,7 @@ For a complete list of all new, modified, and removed Flow nodes in this release
 
 To preserve the forward direction in imported assets, set the forward axis setting (`reverse_forward_axis`)   in *.stingray_project*  instead of *settings.ini*. See ~{  Best practices: preserving axis orientation }~.
 
-In migrated projects, the forward axis setting is still read from *settings.ini*.
+In projects that you migrate from earlier versions of Stingray, the forward axis setting is still read from *settings.ini*.
 
 ### FBX Version 2017.1
 

@@ -28,7 +28,7 @@ Sometimes, however, you may want to open an existing project that somebody else 
 
 		> **Note:** During migration a .backup file, containing the file's original contents, is created for every migrated file.
 
-		>	**Note:** [![NEW](../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html) A .stingray_project file and a project.settings file are created for the migrated project.
+		>	**Note:** [![NEW](../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html) A .stingray_project file and a project.settings file are created for each project that you migrate from earlier versions of Stingray.
 
 	- Click **No**.
 	<br>
