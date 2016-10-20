@@ -39,13 +39,17 @@ You can now capture the active camera or viewport and save frames to disk in the
 
 The revamped Stingray and the Beast lightmap bakers now reflect more meaningful baker settings. See ~{ About baking with the Stingray baker }~ and ~{ About baking with Beast }~ for the updated options.
 
-## Ready to learn Stingray? 
+### Light baking improvements
 
-With Stingray 1.6, we aim to give you two things you need when learning anything new: more time, and some advice on where to start! 
+Improvements to light baking and post-processing effects (SSAO, SSR) increase the lighting quality of architectural visualization scenes.  If you bake lighting, ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps. New shading environment properties help you control how to apply baked AO and SSAO to your final scene.
+
+## Ready to learn Stingray?
+
+With Stingray 1.6, we aim to give you two things you need when learning anything new: more time, and some advice on where to start!
 
 Hobbyists, enthusiasts, and early adopters can now run Stingray using a Startup license, which lets you run Stingray free for one year for non-commercial projects. If the 30-day trial period was just not enough, the Stingray Startup license is for you. For more information, check out the Stingray installation topic.
 
-In addition, if you're tired of searching for and watching tutorial videos, pop open the Stingray **Help** menu and select the brand new top-secret Stingray **Hands-on Training Mission**. We've added 5 quick, *interactive* tutorial lessons that take you through the Stingray basics, and get you well on your way to creating your own project. (Pssst - it's not really a secret. Let us know what you think!) We added a note about this in the ~{ Getting Started }~ topic. 
+In addition, if you're tired of searching for and watching tutorial videos, pop open the Stingray **Help** menu and select the brand new top-secret Stingray **Hands-on Training Mission**. We've added 5 quick, *interactive* tutorial lessons that take you through the Stingray basics, and get you well on your way to creating your own project. (Pssst - it's not really a secret. Let us know what you think!) We added a note about this in the ~{ Getting Started }~ topic.
 
 ## Experimental features
 
@@ -53,19 +57,15 @@ In addition, if you're tired of searching for and watching tutorial videos, pop 
 
 Stingray now runs projects quickly in a web browser using WebGL. The launching process has been updated to load the content from a URL instead of packaging the compiled data to a separate folder and reading the data. The URL also displays the location of the content folder. See ~{ Run your project in a browser using WebGL }~. Also check out the updated settings if you ~{ Use Mozilla Firefox to run your project }~.
 
-### Light baking improvements
-
-Improvements to light baking and post-processing effects (SSAO, SSR) increase the lighting quality of architectural visualization scenes.  If you bake lighting, ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps. New shading environment properties help you control how to apply baked AO and SSAO to your final scene.
-
 ## Other Benefits
 
-### New Stingray file extension
+### Stingray file extension
 
-Browsing for Stingray projects has been made easy in this Stingray release. Stingray projects have a new unique file extension *.stingray_project* that you can use to open the projects. Double-click the *.stingray_project* file to open the project in the Editor.
+Stingray projects now use the unique file extension *.stingray_project*, making it easy to find and open projects. Double-click the *.stingray_project* file to open the project in the Editor. Updated Help topics include: ~{ Open an existing project }~ and ~{ About the project structure }~.
 
 ### Simplified texture import
 
-Stingray includes new texture categories and templates such as Normal, Linear Greyscale, Albedo, Albedo Opacity and Roughness/Metallic/AO templates to easily categorize textures and apply texture settings. The newly added texture templates in the **Texture Manager** come with default compression settings for each supported platform, allowing your textures to work on all platforms.  The textures imported in your project are now assigned the default compression settings.
+Stingray includes new texture categories and templates such as Normal, Linear Greyscale, Albedo, Albedo Opacity and Roughness/Metallic/AO to help you categorize textures and apply texture settings. The newly added texture templates in the **Texture Manager** come with default compression settings to work on each supported platform. The textures imported in your project are now assigned the default compression settings. See ~{ Import textures }~.
 
 [Return to top](#top)
 
@@ -214,7 +214,7 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 - **Previous VR templates will not work in v1.6. Expect to port any previous VR projects to use the new templates.**
 
-	Stingray 1.6 is a significant update for VR. Instanced stereo rendering has now been implemented as a first class citizen of our base renderer which removes the need for the previous `vr_renderer.render_config`. Extra flow nodes for SteamVR and Oculus have also been provided to remove any tracking lag. 
+	Stingray 1.6 is a significant update for VR. Instanced stereo rendering has now been implemented as a first class citizen of our base renderer which removes the need for the previous `vr_renderer.render_config`. Extra flow nodes for SteamVR and Oculus have also been provided to remove any tracking lag.
 
 
 [Return to top](#top)
@@ -242,5 +242,15 @@ For a complete list of all new, modified, and removed Flow nodes in this release
 -	This release mostly features the addition of several Flow nodes for working with entities.
 
 -	Only one node has been removed: **Application > Get Source Platform**.
+
+### Forward axis settings
+
+To preserve the forward direction in imported assets, set the forward axis setting (`reverse_forward_axis`)   in *.stingray_project*  instead of *settings.ini*. See ~{  Best practices: preserving axis orientation }~.
+
+In projects that you migrate from earlier versions of Stingray, the forward axis setting is still read from *settings.ini*.
+
+### FBX Version 2017.1
+
+This release of Stingray picks up the latest version of FBX (2017.1), which provides various security improvements.
 
 [Return to top](#top)
