@@ -6,7 +6,7 @@ Each revision of the Stingray source code depends on a specific set of base libr
 
 Each time you get a new local revision of the source code, you should use one of the methods below to get the library versions that correspond to the revision you have checked out.
 
->   **Note**: Each closed platform repository has its own set of library requirements. If you use any closed console platforms, make sure you have merged the source for those platforms into the public platforms repo *before* you follow the steps below to get the libraries you need.
+>   **Note**: Each closed platform repository has its own set of library requirements. If you use any closed console platforms, make sure you have your submodules up to date.
 
 >   **Note**: The first time you get library dependencies, it will take some time to complete all the required downloads. Subsequent builds based on the same revision will not need to download anything. Subsequent builds based on future revisions will only need to download the libraries that have changed since the version you last downloaded.
 
@@ -20,7 +20,7 @@ You have to specify a location on your computer where you want the Stingray buil
 
 **To get the libraries automatically when you build:**
 
-By default, the `make.rb` script will automatically get all the libraries it needs in order to build all of the targets you have asked it to build.
+By default, the `make.rb` script, which you use to build Stingray, will automatically get all the libraries it needs in order to build all of the targets you have asked it to build.
 
 If you want to *prevent* it from updating the libraries you currently have installed, pass it the `--no-update` command-line parameter.
 
@@ -42,7 +42,7 @@ There are some libraries for optional third-party integrations that Autodesk is 
 
 ### Steam
 
-Steam integration requires version **1.22** ONLY of the Steamworks SDK.
+Steam integration requires version **SR_DOC_STEAMWORKS_VERSION** ONLY of the Steamworks SDK.
 
 1.  Download the required version from:
 
@@ -52,6 +52,6 @@ Steam integration requires version **1.22** ONLY of the Steamworks SDK.
 
 3.  To make the Stingray build system able to find the SDK, you can do either of the following:
 
-    -   Copy the extracted files to a directory named `steamworks_sdk_134` within your Stingray libraries directory. The build process will look for files in `<SR_LIB_DIR>/steamworks_sdk_134/sdk`.
+    -   Copy the extracted files to a directory named `steamworks` within your Stingray libraries directory. The build process will look for files in `<SR_LIB_DIR>/steamworks/sdk`.
 
     -   If you want the Steamworks SDK to reside in a different location on your system, set up an environment variable named `SR_STEAM_ROOT` and set it to point to the `sdk` subdirectory.

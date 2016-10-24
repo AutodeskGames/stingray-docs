@@ -1,3 +1,0 @@
-merging_closed_platforms
-updating
-contributing
