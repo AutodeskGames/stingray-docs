@@ -54,9 +54,9 @@ If you intend to work on the Stingray source in your own version control system,
 
 -	Better traceability. You always have a clear record of exactly which branch and which revision you last retrieved, and you can easily diff the starting point of your own code base against any revision of any branch shared by Autodesk, or even any branch shared by another user in the community.
 
--	(Potentially) easier merging. When you need to update your code base to get new changes from Autodesk (see ~{ Updating to the latest changes from Autodesk }~), Git will take care of automating the merge as much as possible, and warn you of any updates that conflict with custom modifications that you may have made in your branch.
+-	(Potentially) easier merging. When you need to update your code base to get new changes from Autodesk (see ~{ Update to the latest changes from Autodesk }~), Git will take care of automating the merge as much as possible, and warn you of any updates that conflict with custom modifications that you may have made in your branch.
 
--	Easier to contribute changes. You cannot merge changes directly or create branches in the main Autodesk Games repositories. Therefore, if you want to contribute any of your own fixes or new developments back to the Stingray community (see ~{ Contributing changes back to the Stingray community
+-	Easier to contribute changes. You cannot merge changes directly or create branches in the main Autodesk Games repositories. Therefore, if you want to contribute any of your own fixes or new developments back to the Stingray community (see ~{ Contribute changes back to the Stingray community
  }~), you will need to have a fork of your own from which to make your pull request.
 
 Once you have your own fork, you can clone a local copy of the source code to your computer to work with.
