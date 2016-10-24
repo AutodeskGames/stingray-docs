@@ -5,7 +5,7 @@ This topic describes how to build the Stingray engine and editing tools from a l
 ## Pre-requisites
 
 -	You must have installed all the tools described in ~{ Software requirements }~.
--	You must have an up-to-date local copy of the source code for all platforms you need. That means the main `stingray-public-platforms` repository, as well as any private console platforms.
+-	You must have an up-to-date local copy of the source code for all platforms you need. That means the main `stingray` repository, as well as the submodules for any private console platforms that you have access to.
 -	You must have the `SR_LIB_DIR` environment variable set up to point to your Stingray library directory. See ~{ Library dependencies }~.
 
 ## Things to know about the build system
@@ -58,6 +58,12 @@ Accepted platform values are `win32`, `win64`, `ios`, `android`, `xb1`, `ps4`.
 ### iOS
 
 To build the engine for iOS, note that you must run the `make.rb` script on a Mac. Specifying the platform target is optional, since iOS is the only target that can be built on the Mac.
+
+#### iOS with Xcode 8
+
+Code signing is mandatory in Xcode 8. If you are using iOS 8, you need to set one additional environment variable before you run `make.rb`: `SR_IOS_DEVELOPMENT_TEAM`. Set its value to the numeric identifier of your Apple Development Team. For example:
+
+`export SR_IOS_DEVELOPMENT_TEAM=5557727`
 
 ### Xbox One
 

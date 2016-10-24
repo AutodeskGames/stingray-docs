@@ -1,6 +1,6 @@
-# Updating to the latest changes from Autodesk
+# Update to the latest changes from Autodesk
 
-The Autodesk Games repositories are regularly updated with new changes. However, if you have created your own forks, those forks will not automatically be kept in sync with the upstream source. The head revisions of your forks will remain at their current revisions until you explicitly update them.
+The Autodesk Games repositories are automatically updated with new changes from our internal development mirror. However, if you have created your own forks, your forks will not automatically be kept in sync with their "upstream" sources. The head revisions of your forks will remain at their current commits until you explicitly update them.
 
 There are several ways that you can update your fork using GitHub or your local Git client. The following suggestions may work for you. See the [GitHub help](https://help.github.com/articles/syncing-a-fork/) if you need more detail.
 
@@ -42,8 +42,10 @@ This approach may be better if you have made changes in your fork that may confl
 
 See also [this topic](https://help.github.com/articles/syncing-a-fork/) in the GitHub help for instructions on carrying out these tasks using the command line.
 
+## Method 3: delete and recrate your fork
+
+If your fork doesn't contain any changes that you have made, you can make sure you're starting with a clean slate by first [deleting your fork](https://help.github.com/articles/deleting-a-repository/), then forking the main <https://github.com/AutodeskGames/stingray> repository again. Follow the instructions under ~{ Clone the source and manage submodules }~ again to get a fresh local copy.
+
 ## After you update
 
-1.	If you use any "closed" console plaforms, make sure that you also update the repositories for those platforms so that it will be in sync with the code in the public platforms repository.
-
-2.	Always remember to update your libraries again, in case the requirements have changed. See ~{ Library dependencies }~.
+Always remember to update your libraries again, in case the requirements have changed. See ~{ Library dependencies }~.

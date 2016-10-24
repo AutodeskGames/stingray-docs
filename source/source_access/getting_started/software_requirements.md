@@ -2,7 +2,7 @@
 
 This topic lists the third-party software that you must install in order to rebuild the Stingray engine and editor from source.
 
->	**NOTE:** You only need Visual Studio to rebuild the engine and editing tools from source code. You don't need it to run a version of Stingray that you install on your computer, or to make a game using Flow and Lua.
+>	**NOTE:** You only need Visual Studio and the rest of the requirements on this page in order to rebuild the engine and editing tools from source code. You don't need it to run a version of Stingray that you install on your computer, or to make a game using Flow and Lua.
 
 ## Version requirement summary
 
@@ -32,7 +32,7 @@ You must install the following tools on all of your Windows and Mac OS X develop
 
 ### Git
 
-All Stingray source code is distributed through Git.
+All Stingray source code is distributed through [GitHub](http://www.github.com).
 
 You will need to install Git on your computer, if you do not already have it installed. Download it here:
 
@@ -43,6 +43,8 @@ You may also want to install a visual Git client, such as Sourcetree or Tortoise
 <http://git-scm.com/downloads/guis>
 
 You can carry out various Git tasks using its command-line tools, any of a wide variety of visual tools, and the web-based GitHub interface. Therefore, this documentation does not go into detail about how exactly to accomplish common tasks such as forking, pulling, making pull requests, etc. If you are not already familiar with Git, you should invest some time up front into getting a basic understanding of how it works.
+
+See also the section on ~{ Source code management }~ for more about working with the Stingray GitHub repositories.
 
 ### Ruby
 
@@ -64,11 +66,11 @@ We use Visual Studio SR_DOC_VISUAL_STUDIO_VERSION to compile code on Windows.
 
 Note that the free Express version is **not** sufficient.
 
-You may be able to use later versions of Visual Studio to build for some target platforms. However, when compiling against the Xbox One XDK, only **2012 update 4** is supported.
+You may be able to use later versions of Visual Studio to build for some target platforms. However, when compiling against the Xbox One XDK, only **2012 update 5** is supported.
 
 ### QT Add-in for Visual Studio 2012
 
-The Stingray Editor project uses QT for its window framework. In order to re-build the Stingray Editor, you will need to install the QT Add-in for Visual Studio 2012. You need version **SR_DOC_QT_ADDIN_VERSION**. Download it from this link:
+The Stingray editor uses QT for its main window. In order to re-build the Stingray editor, you will need to install the QT Add-in for Visual Studio 2012. You need version **SR_DOC_QT_ADDIN_VERSION**. Download it from this link:
 
 <http://SR_DOC_QT_DOWNLOAD_URL>
 
@@ -102,7 +104,7 @@ If you need your engine and editing tools to support PlayStation 4, install the 
 
 Install the PlayStation 4 platform SDK, **version SR_DOC_PS4_SDK_VERSION**. Only this version is currently supported.
 
-You can get the SDK using the SDK Manager utility, available to registered developers on the Sony DevNet: <https://ps4.scedev.net/>.
+You can get the SDK using the SDK Manager utility, which is available to registered developers on the Sony DevNet: <https://ps4.scedev.net/>.
 
 ## Windows development machines, for XBox One support
 
@@ -112,7 +114,7 @@ If you need your engine and editing tools to support Xbox One, install the follo
 
 Install the XDK: the Xbox One platform libraries. You need the **SR_DOC_XDK_VERSION** release. Other versions may or may not be compatible.
 
-You can download the SDK from the Microsoft Game Developer Network Portal, available to registered developers at <https://developer.xboxlive.com/>.
+You can download the SDK from the Microsoft Game Developer Network Portal, which is available to registered developers at <https://developer.xboxlive.com/>.
 
 ## Mac OS X development machines, for iOS support
 
@@ -120,8 +122,10 @@ If you need your engine and editing tools to support iOS, install the following 
 
 ### Xcode
 
-You must use Xcode SR_DOC_XCODE_VERSION, which includes the iOS SDK SR_DOC_IOS_SDK_VERSION. You can download it from <https://developer.apple.com/downloads>.
+We recommend Xcode SR_DOC_XCODE_VERSION, which includes the iOS SDK SR_DOC_IOS_SDK_VERSION. You can download it from <https://developer.apple.com/downloads>.
 
 We recommend you disable auto update on your Apple developement machine.
 
 Note that if this is your first time doing iOS development, you will also have to register with the Apple Developer Program in order to set up Xcode with a signing identity for your organization. See <http://developer.apple.com> if you need more information.
+
+It should also be possible to compile Stingray using Xcode 8. However, see the special instructions under ~{ Building Stingray from source }~ for Xcode 8.
