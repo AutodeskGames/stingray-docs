@@ -67,6 +67,10 @@ Stingray projects now use the unique file extension *.stingray_project*, making 
 
 Stingray includes new texture categories and templates such as Normal, Linear Greyscale, Albedo, Albedo Opacity and Roughness/Metallic/AO to help you categorize textures and apply texture settings. The newly added texture templates in the **Texture Manager** come with default compression settings to work on each supported platform. The textures imported in your project are now assigned the default compression settings. See ~{ Import a model with textures and materials }~.
 
+### Download new plug-ins
+
+Download new Stingray plug-ins and update existing ones using the **Get more plugins** selection in the **Plugin Manager**. Select any of the available plugins and click **Install** to download it. See ~{ Add and remove plug-ins using the Plugin Manager }~.
+
 [Return to top](#top)
 
 ## What's Fixed

@@ -1,5 +1,7 @@
 # Add and remove plug-ins using the Plugin Manager
 
+![UPDATED](../images/updated.png)
+
 -	**Window > Plugin Manager**
 
 The **Plugin Manager** panel lists each plug-in visible to the Stingray Editor, along with detailed information and activation status for each. You can use this panel to control which plug-ins are currently active in the Editor.
@@ -26,6 +28,12 @@ To load a plug-in that is already listed in the **Plugin Manager**, either:
 -	Check its checkbox in the **Loaded** column of the list view.
 -	Or, select the plug-in in the list view and click the **Load** button at the bottom right.
 
+## Download a plug-in
+
+[![NEW](../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html)
+
+To download a new Stingray plug-in not listed in the **Plugin Manager**, click **Get more plugins** at the bottom of the list view, then select any of the available plugins and click **Install**. Once downloaded, the plug-in is loaded in the **Plugin Manager**.
+
 ## Make a new plug-in visible to the Plugin Manager
 
 If you want to load a new plug-in that isn't already listed in the **Plugin Manager**, you can install it using either of the following methods:
@@ -41,13 +49,13 @@ The **Plugin Manager** looks for plug-ins in the following locations:
 
 -	Under the *editor/plugins* folder in your Stingray installation directory.
 -	In the current project.
--	In each folder that contains a plug-in you added through the **Add Plugin** button.
+-	In each folder that contains a plug-in you added through the **Add Plugin** or the **Get more plugins** button.
 
 ## Remove a plug-in from the Plugin Manager
 
 To remove a plug-in entirely so that it's no longer listed in the **Plugin Manager**, select the plug-in in the list view and click the **Remove** button at the bottom right.
 
-Note that you can only remove plug-ins that you have installed using the **Add Plugin** button. You cannot remove any standard plug-ins that are installed with Stingray, or any plug-ins that are found in the current project; you can only unload them.
+Note that you can only remove plug-ins that you have installed using the **Add Plugin** or the **Get more plugins**  button. You cannot remove any standard plug-ins that are installed with Stingray, or any plug-ins that are found in the current project; you can only unload them.
 
 Alternatively, you can delete the plug-in you want to remove from disk (or move it to another location on your computer), then press **F5** to refresh the list.
 

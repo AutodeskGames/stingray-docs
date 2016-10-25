@@ -2,7 +2,7 @@
 
 [![UPDATED](../images/updated.png "What else is new in v1.6?")](../release_notes/readme_1.6.html)
 
-The Stingray Editor keeps track of the projects you create and work on. You can can easily re-open any project when you launch the editor, or by opening the **Project Manager** from the **File** menu.
+The Stingray Editor keeps track of the projects you create and work on. You can easily re-open any project when you launch the editor, or by opening the **Project Manager** from the **File** menu.
 
 [![NEW](../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html) You can also double-click a Stingray project file (`.stingray_project`) to open the project in the Stingray Editor, provided no other projects are running at the moment.
 
