@@ -7,6 +7,10 @@ body {
   font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+div.pluck-module {
+	display:none;
+}
+
 *:focus {
   outline-color: #24b3b3;
 }
@@ -41,6 +45,7 @@ a:hover {
   width: 750px;
   color: #fff;
   margin-bottom: 50px;
+  white-space: nowrap;
 }
 
 a.block {

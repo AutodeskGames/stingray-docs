@@ -17,10 +17,8 @@ This topic describes all the settings that you can configure in this file in ord
 - [Performance HUD setting](#performance-hud-setting)
 - [Log directory](#log-directory)
 - [Save directory](#save-directory)
-- [Import axis setting](#import-axis-setting)
 - [Wwise settings](#wwise-settings)
 - [PhysX settings](#physx-settings)
-- [Project description](#project-description)
 - [Custom settings](#custom-settings)
 - [Script data](#script-data)
 - [Network settings](#network-settings)
@@ -320,17 +318,6 @@ ios = {
 
 [Back to top](#top)
 
-# Import axis setting
-
-`import_reverse_forward_axis = true`
-
-> By default, `import_reverse_forward_axis` is set to true for all new Stingray projects, and this is the recommended setting. After an asset is imported, the setting is stored with the FBX file, not read from settings.ini.
-
-> (For advanced users.) For backwards compatibility with scenes authored for Bitsquid, you can set `import_reverse_forward_axis = false` so that imported scenes get rotated 180 degrees.
-
-
-[Back to top](#top)
-
 ## Wwise settings
 
 ~~~{sjson}
@@ -554,20 +541,6 @@ Generic options are placed in the root block. You can override these generic set
 `apex_cloth_lod_unit_cost` and `apex_lod_resource_budget`
 
 > Configures the cloth simulation budget.
-
-[Back to top](#top)
-
-## Project description
-
-~~~{sjson}
-project_description = null
-// Stingray version for which the project was created with.
-stingray_version = "1.0.31.0"
-
-project_name = "vehicle_project_01"
-
-wwise_project = "../vehicle_project_01_wwise/vehicle_project_01.wproj"
-~~~
 
 [Back to top](#top)
 

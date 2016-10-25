@@ -1,7 +1,5 @@
 # Unwrap UVs for light baking
 
-[![UPDATED](../../../images/updated.png "What else is new in v1.5?")](../../../release_notes/readme_1.5.html)
-
 In order to store baked lighting for objects, Stingray needs to unfold each mesh using a *UV set*: a mapping of each vertex in the three-dimensional mesh into two-dimensional texture space. Since the first UV set assigned to a mesh (usually named *uv0* in Maya, for example) is usually used for textures like color maps and normal maps, Stingray bakes lightmaps using a second UV set (e.g. *uv1* in Maya).
 
 It's best to create UV sets using 3D design tools like Maya or 3ds Max, and save them in the *.fbx* file that you use to import the asset into Stingray. These design apps give you tools to optimize the way the 3D mesh is represented in 2D space:
@@ -10,7 +8,7 @@ It's best to create UV sets using 3D design tools like Maya or 3ds Max, and save
 
 -	Unfolding and flattening a convex mesh into 2D usually involves introducing some "seams": places where an edge of the model has to be split. At these places, the seams can sometimes be visible when the lightmap is applied back to the object in the game. Therefore, it's best to make the seams occur where they are least noticeable.
 
-[![NEW](../../../images/new.png "What else is new in v1.5?")](../../../release_notes/readme_1.5.html) You can automatically generate a UV set for light baking as you import an FBX file. The **Generate UVs for Light Baking** is on by default in the **FBX Import** options. See ~{ Import an FBX file }~.
+You can automatically generate a UV set for light baking as you import an FBX file. The **Generate UVs for Light Baking** is on by default in the **Import FBX** options. See ~{ Import an FBX file }~.
 
 If you have a unit in Stingray that doesn't yet have UVs for a mesh, you can have Stingray auto-generate a UV set for you in the **Unit Editor**. This lets you bake lighting for any mesh, even if its UV set has not been optimized.
 

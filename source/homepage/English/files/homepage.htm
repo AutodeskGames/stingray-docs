@@ -3,123 +3,16 @@
 
 <head>
   <title>Stingray Help Portal</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <link rel="stylesheet" href="../styles/bootstrap.css">
   <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800?v=b18370dd9abe6aebb884645b2e6223b6">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700?v=f764c631e77b110275de7f6ba6ea128e">
 
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    var show = 'page';
-    var q = '';
-
-    var typing; // timer identifier
-    var typingInterval = 300; // time in ms, 1s
-
-    function searchCallback(data) {
-      var results = [];
-      if (data.entries.item) {
-        results = data.entries.item;
-      }
-
-      var numResults = results.length;
-      if (numResults === 50) {
-        numResults = '50+';
-      }
-
-      var html = '<div class="col-md-12"><div class="col-md-12"><h1>SEARCHING \'' + $('.search-box').val() + '\' (' + numResults + ' Results)</h1></div></div>';
-
-      results.forEach(function (result) {
-        html += '<div class="col-md-12"><div class="col-md-12"><a href="' + result.url + '" class="block"><span class="result-title">' + result.title + '</span> ' + result.snippet + '</a></div></div>';
-      });
-      $('.search-results').html(html);
-    }
-
-    function search() {
-      q = $('.search-box').val();
-      if (q.length) {
-        show = 'search';
-
-        $('.page-content').fadeOut('fast', function () {
-          $('.search-close').css('cursor', 'pointer');
-          $('.search-close').show();
-
-          $('.search-results').html('<div class="col-md-12"><div class="col-md-12"><h1>SEARCHING \'' + q + '\' <i class="fa fa-spinner fa-spin"></i></h1></div></div>');
-          $('.search-results').fadeIn('fast', function () {
-            if (q.length < 4) {
-              q = q + '*';
-            }
-
-            $.ajax({
-              url: "http://beehive.autodesk.com/community/service/rest/cloudhelp/resource/cloudhelpchannel/search/jsonp",
-              dataType: "jsonp",
-              data: {
-                q: q,
-                cb: 'searchCallback',
-                origin: 'upi',
-                p: 'Stingray',
-                l: 'ENU',
-                maxresults: 50,
-                source: 'all'
-              }
-            });
-          });
-        });
-      } else {
-        closeSearch();
-      }
-    }
-
-    function closeSearch() {
-      q = '';
-      $('.search-box').val(q);
-      $('.search-close').css('cursor', '');
-      $('.search-close').hide();
-      if (show !== 'page') {
-        show = 'page';
-        $('.search-results').fadeOut('fast', function () {
-          $('.page-content').fadeIn('fast');
-        });
-      }
-    }
-
-    $(function () {
-      if ($('.search-box').val().length) {
-        search();
-      } else {
-        $('.search-results').hide();
-        $('.page-content').show();
-      }
-
-      // on keyup, start the countdown
-      $('.search-box').on('keyup', function () {
-        q
-        clearTimeout(typing);
-        typing = setTimeout(search, typingInterval);
-      });
-
-      // on keydown, clear the countdown
-      $('.search-box').on('keydown', function () {
-        clearTimeout(typing);
-      });
-
-      $('.search-close').click(closeSearch);
-
-    });
-  </script>
-</head>
-
-<body>
-  <div class="header search">
-    <div class="header-content">
-      <div class="form-group has-feedback search-form">
-        <input class="form-control search-box" type="text" placeholder="I need help with...">
-        <span class="glyphicon glyphicon-remove-sign form-control-feedback search-close" aria-hidden="true"></span>
-      </div>
-    </div>
-  </div>
   <div class="container">
     <div class="row search-results"></div>
     <div class="row page-content">
@@ -146,7 +39,7 @@
         </div>
         <div class="col-md-12">
           <div class="front-section">
-            <a href="https://creativemarket.com/apps/stingray/examples" target="_blank">
+            <a href="https://gamedev.autodesk.com/stingray/examples" target="_blank">
               <img class="img-responsive" src="../images/bench.png" alt="downloads" />
               <p>Example Downloads</p>
             </a>
@@ -215,6 +108,8 @@
           <p><a href="https://gamedev.autodesk.com/blogs" target="_blank" class="block">Blogs</a></p>
           <p><a href="http://www.autodesk.com/stingray-howtos" target="_blank" class="block">Learning Channel</a></p>
           <p><a href="http://www.autodesk.com/stingray-docs-archive" target="_blank">Documentation Archive</a></p>
+          <p><a href="https://www.facebook.com/AutodeskGameDev" target="_blank"><i class="fa fa-facebook"></i> Autodesk GameDev</a></p>
+          <p><a href="https://twitter.com/adskgamedev" target="_blank"><i class="fa fa-twitter"></i> @adskgamedev</a></p>
         </div>
       </div>
     </div>

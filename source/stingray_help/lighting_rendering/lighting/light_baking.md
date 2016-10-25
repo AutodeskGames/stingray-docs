@@ -35,7 +35,7 @@ With all the benefits listed above, why not always bake lighting all the time? T
 
 Textures take up a lot of memory at runtime. Baking lightmaps adds more textures that you need to load into the game, and therefore adds significantly to the game's memory footprint.
 
-You may be able to work around this issue by reducing the memory size of your lightmaps selectively for different platforms. You can compress the textures, and discard their largest map map steps. For more information, see ~{ Optimize memory usage }~ and ~{ Working with textures }~.
+You may be able to work around this issue by reducing the memory size of your lightmaps selectively for different platforms. You can compress the textures, and discard their largest mip map steps. For more information, see ~{ Optimize memory usage }~ and ~{ Working with textures }~.
 
 ### Workflow
 
@@ -57,8 +57,8 @@ A typical way to deal with this is to bake only indirect light, and only for obj
 
 With Stingray, you have two different options for baking lightmaps:
 
--	Autodesk Beast, a "middleware" technology for rendering and global illumination that has been production-proven in games with unique visual appeal, like *Mirror's Edge*.
+-	A GPU-accelerated light baker built in to Stingray.
 
--	An experimental, brand-new, GPU-accelerated light baker built in to Stingray.
+-	Autodesk Beast, a "middleware" technology for rendering and global illumination that has been production-proven in games with unique visual appeal, like *Mirror's Edge*.
 
 Although the two systems work in different ways internally, the process for using them in the Stingray Editor is very similar. See ~{ Bake lightmaps }~.

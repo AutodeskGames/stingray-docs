@@ -31,7 +31,7 @@ def parse_options(argv, options)
 		opts.on("--verbose", "Print verbose details.") { |v| options[:verbose] = v }
 		opts.on("--[no-]stingray-help", "Build the main Stingray Help.") { |v| options[:help] = v }
 		opts.on("--[no-]tutorials", "Build the Stingray tutorials.") { |v| options[:tutorials] = v }
-		opts.on("--[no-]dev-help", "Build the Stingray Developer Help for source customers.") { |v| options[:dev_help] = v }
+		opts.on("--[no-]source-access-help", "Build the Stingray Source Access Help.") { |v| options[:source_access_help] = v }
 		opts.on("--[no-]launch", "Launch the things you have built in the default browser.") { |v| options[:launch] = v }
 	end
 
@@ -73,12 +73,12 @@ def make_output_dir()
 end
 
 def build()
-	if $options[:dev_help] or $options[:all]
-		puts "Generating HTML for Stingray Developer Help..."
-		output_path = "output/developer_help/#{$lang_dir}/preview"
-		system("#{$doctools_dir}/tools/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_developer_help.xml")
+	if $options[:source_access_help] or $options[:all]
+		puts "Generating HTML for Stingray Source Access Help..."
+		output_path = "output/source_access_help/#{$lang_dir}/preview"
+		system("#{$doctools_dir}/tools/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_source_access_help.xml")
 		puts "Done. Look under #{output_path}."
-		if $options[:dev_help] and $options[:launch]
+		if $options[:source_access_help] and $options[:launch]
 			system("start", "#{$script_dir}/../#{output_path}/index.html")
 		end
 	end
@@ -88,7 +88,7 @@ def build()
 		output_path = "output/tutorials/#{$lang_dir}/preview"
 		system("#{$doctools_dir}/tools/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_tutorials.xml")
 		puts "Done. Look under #{output_path}."
-		if $options[:dev_help] and $options[:launch]
+		if $options[:tutorials] and $options[:launch]
 			system("start", "#{$script_dir}/../#{output_path}/index.html")
 		end
 	end

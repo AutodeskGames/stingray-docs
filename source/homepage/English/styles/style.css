@@ -1,10 +1,9 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  line-height: 24px;
+.container  * {
   font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.container  p {
+  line-height:24px;
 }
 
 *:focus {
@@ -20,17 +19,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.header {
-  min-height: 160px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  font-family: "Roboto Condensed", sans-serif;
-  color: #fff;
-  font-size: 30px;
-  line-height: 160px;
-}
-
 .search {
   background: url("../images/splash.png");
   line-height: normal;
@@ -41,16 +29,6 @@ a:hover {
   background: url("../images/stingray-splash.jpg");
 }
 
-.header-content {
-  margin: auto;
-  padding: 60px 80px;
-  line-height: 160px;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 50px;
-}
-
 .search-form {
   max-width: 500px;
   margin: auto;
@@ -59,6 +37,8 @@ a:hover {
 h1.heading {
   text-transform: uppercase;
   font-weight: bold;
+  font-size:44px;
+  margin-bottom:10px;
 }
 
 .front-section {
@@ -74,8 +54,11 @@ h1.heading {
   font-size: 27px;
 }
 
-.front-section a {
+.front-section a p {
   color: #fff;
+}
+
+.front-section a {
   background-color: #28D4D4;
   display: block;
 }
@@ -171,6 +154,12 @@ a:hover.example {
   color: #fff;
 }
 
+.side-content h2 {
+  font-size:30px;
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
 .side-content a:hover.expert p {
   background-color: #FF6600;
 }
@@ -183,4 +172,9 @@ a:hover.example {
 .footer {
   background-color: #E6E6E6;
   border-top: 5px #29cccc solid;
+}
+
+.footer h3 {
+  margin-top:20px;
+  font-size:24px;
 }

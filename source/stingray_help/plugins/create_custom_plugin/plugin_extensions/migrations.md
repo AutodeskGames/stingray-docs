@@ -1,7 +1,5 @@
 # Migrate an older project
 
-[![NEW](../../../images/new.png "What else is new in v1.5?")](../../../release_notes/readme_1.5.html)
-
 You can use the `migrations` extension to make each version of your plug-in carry out a set of actions when the user loads an older project for the first time.
 
 The typical use for this extension is to upgrade data assets managed your plug-in when the format of that data changes between two versions of your plug-in.

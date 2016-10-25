@@ -1,7 +1,5 @@
 # Mini Renderer
 
-[![NEW](../images/new.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
-
 To achieve the higher resolution and framerate required for VR, we built a special, lightweight rendering pipe tailored specifically for mobile VR, which we call the mini renderer (core/stingray_renderer/mini_renderer).
 
 The default Stingray rendering pipe (core/stingray_renderer/renderer) is designed to run on high-end mobile devices with a maximum resolution of 1280x720, targeting 30 FPS. For VR that is not enough; typical GearVR applications run in 1024x1024 per eye and must hit 60 FPS to avoid motion sickness.

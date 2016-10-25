@@ -1,5 +1,0 @@
-introduction
-getting_started
-building
-writing_plugins
-editor

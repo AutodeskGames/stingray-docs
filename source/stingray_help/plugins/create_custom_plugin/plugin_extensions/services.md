@@ -1,7 +1,5 @@
 # Register a custom service
 
-[![NEW](../../../images/new.png "What else is new in v1.5?")](../../../release_notes/readme_1.5.html)
-
 You can use the `services` extension to register new JavaScript services for the Stingray editor.
 
 These services are instantiated once, and are available as "web workers" throughout the whole Stingray session. You can then invoke the APIs of your custom JavaScript services from elsewhere in your plug-in -- or even from other plug-ins! -- exactly the same way you call functions in the JavaScript services that are built in to the Stingray editor. (See also ~{ Use built-in editor services }~ for more on how to use services.)

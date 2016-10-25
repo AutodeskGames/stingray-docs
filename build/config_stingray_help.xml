@@ -12,6 +12,7 @@
 			<post_to_AKN>false</post_to_AKN>
 			<post_to_AKN_beta>false</post_to_AKN_beta>
 			<redirect_to_help include="*">true</redirect_to_help>
+			<athena include="*\stingray_help\*"></athena>
 		</AKN>
 		<language>%SR_DOC_LANG%</language>
 		<project_title>Stingray Help</project_title>
@@ -21,10 +22,7 @@
 	</project>
 
 	<global>
-		<syntax_coloring include="\stingray_help\*,\lua_ref\*,\changelog\*" default_lang="lang-lua">true</syntax_coloring>
-		<!-- Disabling machine translation for now.
-		<add_MT include="\stingray_help\*,\lua_ref\*,\flow_ref\*" fromlanguage="en">true</add_MT>
-		-->
+		<syntax_coloring include="\stingray_help\*,\lua_ref\*" default_lang="lang-lua">true</syntax_coloring>
 		<!-- search filters for offline Javascript -->
 		<search_filter id="topics" include_expression="stingray_help/.*htm">
 			<label lang="en">Search help topics?</label>
@@ -36,6 +34,11 @@
 			<label lang="en">Search Flow node Reference?</label>
 		</search_filter>
 		<!-- search filters for AKN  -->
+		<meta name="topic-type" content="concept" include="*\stingray_help\*"></meta>
+		<meta name="topic-type" content="reference" include="*\flow_ref\*,*\lua_ref\*,*\shaders_ref\*"></meta>
+		<meta name="experiencelevel" content="general" include="*"></meta>
+		<meta name="audience" content="user" include="*"></meta>
+		<!-- These no longer seem to work? -->
 		<meta name="topic-subtype" content="Lua reference" include="*\lua_ref\*.html"></meta>
 		<meta name="topic-subtype" content="Flow reference" include="*\flow_ref\*.html"></meta>
 		<!-- context IDs for CSH -->

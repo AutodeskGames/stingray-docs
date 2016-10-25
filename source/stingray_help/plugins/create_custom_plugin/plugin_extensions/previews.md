@@ -1,7 +1,5 @@
 # Define previews for custom assets
 
-[![NEW](../../../images/new.png "What else is new in v1.5?")](../../../release_notes/readme_1.5.html)
-
 You can use the `previews` extension to define the way the ~{ Asset Preview }~ panel behaves when the user selects an asset of a specific type in the ~{ Asset Browser }~. If your plug-in adds a new type of resource to Stingray, this is a helpful way to provide users working in the editor with some visual feedback to distinguish between different resources of the same type within the project.
 
 ## How it works

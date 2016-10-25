@@ -6,10 +6,12 @@
 			<product>Stingray</product>
 			<release>NA</release>
 			<language>%SR_DOC_LANG_AKN%</language>
-			<book>Developer</book>
+			<book>GeneralUser</book>
 			<local_output>..\output\AKN</local_output>
 			<post_to_AKN>false</post_to_AKN>
 			<post_to_AKN_beta>false</post_to_AKN_beta>
+			<redirect_to_help include="*">true</redirect_to_help>
+			<athena include="*"></athena>
 		</AKN>
 		<language>%SR_DOC_LANG%</language>
 		<project_title>Stingray Tutorials</project_title>
@@ -19,6 +21,8 @@
 	</project>
 
 	<global>
+		<meta name="experiencelevel" content="general" include="*"></meta>
+		<meta name="audience" content="user" include="*"></meta>
 	</global>
 
 	<merge id="tutorials">

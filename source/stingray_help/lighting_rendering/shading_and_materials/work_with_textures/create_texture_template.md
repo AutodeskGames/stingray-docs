@@ -2,7 +2,16 @@
 
 A texture template is a file in your project that looks like a normal texture file (in terms of file format), usually set up by the technical artist on a project team.
 
-You can create texture templates to quickly configure imported textures without having to use the **Texture Manager**. For example, you can define a texture template for special textures like normal maps and always use that template when importing new normal map textures.
+The **Texture Manager** includes default texture templates such as
+
+-	Normal template for normal map textures.
+-	Linear grayscale template for greyscale textures.
+-	Albedo opacity template for textures with alpha channel.
+-	Albedo template for textures without alpha channel.
+-	Roughness/Metallic/AO template for RMA textures.
+-	Lightmap template for lightmap textures.
+
+You can create texture templates to quickly configure imported textures without having to use the **Texture Manager**.
 
 To create a new template:
 

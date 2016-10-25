@@ -31,8 +31,6 @@ This component is not exposed in the Stingray Editor, but you can set and get th
 
 ## Script component
 
-[![NEW](../images/new.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
-
 The script component offers a way to associate an entity with a *behavior*, which you implement in a Lua script module. See ~{ Script an entity's behavior }~.
 
 ## Tag component
@@ -52,8 +50,6 @@ The transform component also handles "parent-child" relationships between entiti
 Each entity can have only one transform component assigned to it. Each entity may be linked to only one parent entity at any given time, but may be linked to any number of child entities.
 
 ## Unit component
-
-[![NEW](../images/new.png "What else is new in v1.5?")](../release_notes/readme_1.5.html)
 
 The unit component associates an entity with a unit resource. When you spawn and unspawn an entity that has a unit component, an instance of that unit resource is automatically spawned and unspawned as well.
 

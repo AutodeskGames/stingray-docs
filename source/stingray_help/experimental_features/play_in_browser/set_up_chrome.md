@@ -1,7 +1,5 @@
 # Use Google Chrome to run your project
 
-[![UPDATED](../../images/updated.png "What else is new in v1.5?")](../../release_notes/readme_1.5.html)
-
 This page describes how to set up Chrome to ~{ Run your project in a browser using WebGL }~.
 
 ## Step 1. Get a compatible version
