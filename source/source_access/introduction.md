@@ -1,4 +1,4 @@
-# Introduction to the Source Access Help
+# Introduction to Stingray Source Access
 
 This documentation is for developers working with the Stingray source code distribution. It tells you how to get the source code, and how to rebuild the engine and editing tools from scratch.
 
