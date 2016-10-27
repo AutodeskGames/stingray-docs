@@ -10,7 +10,7 @@
 			<book>GeneralUser</book>
 			<local_output>..\output\stingray_help\%SR_DOC_LANG%\AKN</local_output>
 			<post_to_AKN>false</post_to_AKN>
-			<post_to_AKN_beta>false</post_to_AKN_beta>
+			<post_to_AKN_beta>true</post_to_AKN_beta>
 			<redirect_to_help include="*">true</redirect_to_help>
 			<athena include="*\stingray_help\*"></athena>
 			<job-specification>
@@ -113,7 +113,7 @@
 		<merge_toc_config>
 			<first_entry_title>Flow node reference</first_entry_title>
 			<first_entry_title lang="ko">흐름 노드 참조</first_entry_title>
-			<first_entry_title lang="ja">TODO: Flow ref title</first_entry_title>
+			<first_entry_title lang="ja">フロー ノード リファレンス</first_entry_title>
 			<promote_first_topic>false</promote_first_topic>
 		</merge_toc_config>
 	</doxygen>
@@ -128,7 +128,7 @@
 		<merge_toc_config>
 			<first_entry_title>Shader node reference</first_entry_title>
 			<first_entry_title lang="ko">Stingray 셰이더 노드 참조</first_entry_title>
-			<first_entry_title lang="ja">TODO: shader node ref title</first_entry_title>
+			<first_entry_title lang="ja">シェーダ ノード リファレンス</first_entry_title>
 			<parent_filename>\lighting_rendering.html</parent_filename>
 			<promote_first_topic>false</promote_first_topic>
 		</merge_toc_config>
@@ -143,7 +143,7 @@
 		<merge_toc_config>
 			<first_entry_title>Lua API reference</first_entry_title>
 			<first_entry_title lang="ko">Lua API 참조</first_entry_title>
-			<first_entry_title lang="ja">TODO: lua ref title</first_entry_title>
+			<first_entry_title lang="ja">Lua API リファレンス</first_entry_title>
 			<promote_first_topic>false</promote_first_topic>
 		</merge_toc_config>
 	</doxygen>
