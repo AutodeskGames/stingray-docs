@@ -13,6 +13,10 @@
 			<post_to_AKN_beta>false</post_to_AKN_beta>
 			<redirect_to_help include="*">true</redirect_to_help>
 			<athena include="*\stingray_help\*"></athena>
+			<job-specification>
+				<!-- this forces the title in the AKN Publisher to show up in English. -->
+				<parameter name="documenttitle">Stingray Help</parameter>
+			</job-specification>
 		</AKN>
 		<language>%SR_DOC_LANG%</language>
 		<project_title>Stingray Help</project_title>
