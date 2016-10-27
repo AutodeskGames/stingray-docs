@@ -29,6 +29,7 @@ def parse_options(argv, options)
 		opts.banner = "Usage: make_docs.rb [options]"
 		opts.on("--all", "Build all docs.") { |v| options[:all] = v }
 		opts.on("--verbose", "Print verbose details.") { |v| options[:verbose] = v }
+		opts.on("--[no-]dev-help", "Build the Stingray Developer Help for source customers.") { |v| options[:dev_help] = v }
 		opts.on("--[no-]stingray-help", "Build the main Stingray Help.") { |v| options[:help] = v }
 		opts.on("--[no-]tutorials", "Build the Stingray tutorials.") { |v| options[:tutorials] = v }
 		opts.on("--[no-]source-access-help", "Build the Stingray Source Access Help.") { |v| options[:source_access_help] = v }
@@ -73,6 +74,17 @@ def make_output_dir()
 end
 
 def build()
+	if $options[:dev_help] or $options[:all]
+		puts "Generating HTML for Stingray Developer Help..."
+		puts "NOTE: this build is deprecated in English. It is only kept temporarily to support localizing old content..."
+		output_path = "output/developer_help/#{$lang_dir}/preview"
+		system("#{$doctools_dir}/tools/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_developer_help.xml")
+		puts "Done. Look under #{output_path}."
+		if $options[:dev_help] and $options[:launch]
+			system("start", "#{$script_dir}/../#{output_path}/index.html")
+		end
+	end
+
 	if $options[:source_access_help] or $options[:all]
 		puts "Generating HTML for Stingray Source Access Help..."
 		output_path = "output/source_access_help/#{$lang_dir}/preview"

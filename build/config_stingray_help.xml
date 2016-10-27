@@ -21,6 +21,7 @@
 		<language>%SR_DOC_LANG%</language>
 		<project_title>Stingray Help</project_title>
 		<project_title lang="ko">Stingray 도움말</project_title>
+		<project_title lang="ja">Stingray ヘルプ</project_title>
 		<export_for_localization>%SR_DOC_EXPORT_DIR%</export_for_localization>
 		<import_from_localization>%SR_DOC_IMPORT_DIR%</import_from_localization>
 	</project>
@@ -112,6 +113,7 @@
 		<merge_toc_config>
 			<first_entry_title>Flow node reference</first_entry_title>
 			<first_entry_title lang="ko">흐름 노드 참조</first_entry_title>
+			<first_entry_title lang="ja">TODO: Flow ref title</first_entry_title>
 			<promote_first_topic>false</promote_first_topic>
 		</merge_toc_config>
 	</doxygen>
@@ -126,6 +128,7 @@
 		<merge_toc_config>
 			<first_entry_title>Shader node reference</first_entry_title>
 			<first_entry_title lang="ko">Stingray 셰이더 노드 참조</first_entry_title>
+			<first_entry_title lang="ja">TODO: shader node ref title</first_entry_title>
 			<parent_filename>\lighting_rendering.html</parent_filename>
 			<promote_first_topic>false</promote_first_topic>
 		</merge_toc_config>
@@ -140,6 +143,7 @@
 		<merge_toc_config>
 			<first_entry_title>Lua API reference</first_entry_title>
 			<first_entry_title lang="ko">Lua API 참조</first_entry_title>
+			<first_entry_title lang="ja">TODO: lua ref title</first_entry_title>
 			<promote_first_topic>false</promote_first_topic>
 		</merge_toc_config>
 	</doxygen>
