@@ -1,0 +1,50 @@
+<ADE_HTML_2_1_tools_Config>
+	<project>
+		<output>..\output\source_access_help\%SR_DOC_LANG%\preview</output>
+		<AKN>
+			<component_id>Stingray-Source-Access-Help</component_id>
+			<product>Stingray</product>
+			<release>NA</release>
+			<language>%SR_DOC_LANG_AKN%</language>
+			<book>Developer</book>
+			<local_output>..\output\source_access_help\%SR_DOC_LANG%\AKN</local_output>
+			<post_to_AKN>false</post_to_AKN>
+			<post_to_AKN_beta>false</post_to_AKN_beta>
+			<redirect_to_help include="*">true</redirect_to_help>
+			<athena include="*"></athena>
+		</AKN>
+		<language>%SR_DOC_LANG%</language>
+		<project_title>Stingray Source Access Help</project_title>
+		<project_title lang="ko">Stingray 개발자 도움말</project_title>
+		<export_for_localization>%SR_DOC_EXPORT_DIR%</export_for_localization>
+		<import_from_localization>%SR_DOC_IMPORT_DIR%</import_from_localization>
+	</project>
+
+	<global>
+		<syntax_coloring include="\source_access\*" default_lang="lang-lua">true</syntax_coloring>
+		<contextId include="*\source_access\introduction.html" id="SOURCE_ACCESS_HOME"></contextId>
+		<insert_family_links include="\source_access\*"></insert_family_links>
+		<!-- find and replace variables with version numbers -->
+		<replace variable_file="variables.ini" include="*.html"></replace>
+	</global>
+
+	<merge id="images">
+		<source>..\source\resources\*.png</source>
+		<merge_toc>false</merge_toc>
+	</merge>
+
+	<merge id="source_access">
+		<source convert_from="markdown">..\source\source_access\*.md</source>
+		<source>..\source\source_access\*.png</source>
+		<source>..\source\source_access\*.jp?g</source>
+		<source>..\source\source_access\*.gif</source>
+		<source>..\source\source_access\*.toc</source>
+		<source>..\source\source_access\*.toc</source>
+		<search_prefix></search_prefix>
+		<merge_toc_config>
+			<source type="directory"></source>
+			<promote_first_topic>false</promote_first_topic>
+		</merge_toc_config>
+	</merge>
+
+</ADE_HTML_2_1_tools_Config>

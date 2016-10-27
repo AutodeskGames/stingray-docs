@@ -1,4 +1,0 @@
-software_requirements
-user_accounts
-managing_source
-libraries

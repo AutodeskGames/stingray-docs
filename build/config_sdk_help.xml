@@ -28,7 +28,7 @@
 		<search_filter id="editor_js" include_expression="editor_js/.*\.htm">
 			<label lang="en">Search editor JavaScript API?</label>
 		</search_filter>
-		<!--contextId include="*\sdk_help\introduction.html" id="DEVELOPER_HOME"></contextId-->
+		<contextId include="*\sdk_help\introduction.html" id="SDK_HOME"></contextId>
 		<insert_family_links include="\sdk_help\*"></insert_family_links>
 		<!-- find and replace variables with version numbers -->
 		<replace variable_file="variables.ini" include="*.html"></replace>

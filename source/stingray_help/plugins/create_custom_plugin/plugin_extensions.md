@@ -22,6 +22,8 @@ The editor's plug-in system defines a number of different kinds of extensions th
 
 -	`events` register your plug-in to listen for editor events with a given name, and to carry out an action or a set of actions when that event happens. See ~{ Respond to an editor event }~ for configuration instructions, and ~{ Emit and handle editor events }~ for more background about events.
 
+-	`native extensions` offers a way to expose C/C++ functionalities to javascript. See ~{ Using native extensions }~
+
 Every plug-in needs to have at least one of these extensions. There is no limit to the number of extensions that a plug-in can have.
 
 ## Configuring extensions

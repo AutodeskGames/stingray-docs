@@ -10,7 +10,7 @@ For more information on supported file types, see ~{ Supported file formats }~.
 
 2.	Click **Import**, browse to select one or more image files, and click **Open**. Stingray will bring the selected image files into the project, and create a new *.texture* resource for each.
 
-3.	To set up properties for a new texture, such as the compression and other processing that is applied to it when it is compiled for different target platforms, double-click it in the Asset Browser to open it in the ~{ Texture Manager }~.
+3. To set up properties for a new texture, such as the compression and other processing that is applied to it when it is compiled for different target platforms, double-click it in the Asset Browser to open it in the ~{ Texture Manager }~.
 
 ## Quick texture import
 

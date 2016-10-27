@@ -24,12 +24,3 @@ Experimental features are hidden by default. If you want to try them out, enable
 2.	In the ~{ Property Editor }~, turn on **Enable experimental editor features**.
 
 ![Experimental features setting](images/experimental_features_setting.png)
-
-You can always tell when you have experimental features enabled by looking for this alert at the top of all your Stingray editor windows:
-
-![Experimental features alert](images/experimental_features_alert.png)
-
----
-Related topics:
-- ~{ Scatter Tool }~
----
