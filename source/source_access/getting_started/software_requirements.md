@@ -68,6 +68,8 @@ Note that the free Express version is **not** sufficient.
 
 You may be able to use later versions of Visual Studio to build for some target platforms. However, when compiling against the Xbox One XDK, only **2012 update 5** is supported.
 
+>	**NOTE:** The `develop` branch has now changed over to Visual Studio 2015! If you use the `develop` branch, check the `readme.md` file at the root of the repository for the latest requirements used in that branch.
+
 ### QT Add-in for Visual Studio 2012
 
 The Stingray editor uses QT for its main window. In order to re-build the Stingray editor, you will need to install the QT Add-in for Visual Studio 2012. You need version **SR_DOC_QT_ADDIN_VERSION**. Download it from this link:
