@@ -797,7 +797,7 @@
             "is_hidden":"False",
             "slot_type":"in",
             "connectionType":"String",
-            "description":"The string you want to expose.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The string you want to expose."
           }],
         "Pass-through Variables":[],
         "Outputs":[]
@@ -1152,7 +1152,7 @@
             "is_hidden":"False",
             "slot_type":"in",
             "connectionType":"Float",
-            "description":"The vertical FOV angle."
+            "description":"The vertical FOV angle in radians."
           },{
             "is_editable":"False",
             "name":"In",
@@ -1314,7 +1314,7 @@
             "is_hidden":"False",
             "slot_type":"var",
             "variableType":"string",
-            "description":"The name of the external entity you want to retrieve, as set in the [External Output Entity] node.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The name of the external entity you want to retrieve, as set in the [External Output Entity] node."
           }],
         "Inputs":[],
         "Pass-through Variables":[],
@@ -1483,7 +1483,7 @@
             "is_hidden":"False",
             "slot_type":"in",
             "connectionType":"Camera",
-            "description":"The camera you want to expose.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The camera you want to expose."
           }],
         "Pass-through Variables":[],
         "Outputs":[]
@@ -2383,7 +2383,7 @@
             "is_hidden":"False",
             "slot_type":"out",
             "connectionType":"String",
-            "description":"The material resource.\n\n      We leave this as a custom flow node due to special resource string handling"
+            "description":"The material resource."
           }]
       }
     },
@@ -3345,7 +3345,7 @@
             "is_hidden":"False",
             "slot_type":"var",
             "variableType":"string",
-            "description":"The name of the external unit you want to retrieve, as set in the [External Output Unit] node.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The name of the external unit you want to retrieve, as set in the [External Output Unit] node."
           }],
         "Inputs":[],
         "Pass-through Variables":[],
@@ -3514,7 +3514,7 @@
             "is_hidden":"False",
             "slot_type":"var",
             "variableType":"string",
-            "description":"The name of the external actor you want to retrieve, as set in the [External Output Actor] node.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The name of the external actor you want to retrieve, as set in the [External Output Actor] node."
           }],
         "Inputs":[],
         "Pass-through Variables":[],
@@ -4662,15 +4662,16 @@
             "is_editable":"True",
             "name":"Positioning",
             "is_hidden":"False",
-            "connectionType":"Float",
-            "slot_type":"in"
+            "slot_type":"in",
+            "connectionType":"String",
+            "description":"The positioniong for the sound scape \"closest\", \"random in shape\" or \"random around listener\""
           },{
             "is_editable":"True",
             "name":"Shape",
             "is_hidden":"False",
             "slot_type":"in",
-            "connectionType":"Float",
-            "description":"The shape for the sound scape."
+            "connectionType":"String",
+            "description":"The shape for the sound scape \"point\", \"sphere\" or \"box\"."
           },{
             "is_editable":"True",
             "name":"SphereRadius",
@@ -4776,7 +4777,7 @@
             "is_hidden":"False",
             "slot_type":"var",
             "variableType":"string",
-            "description":"The name of the external string you want to retrieve, as set in the [External Output String] node.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The name of the external string you want to retrieve, as set in the [External Output String] node."
           }],
         "Inputs":[],
         "Pass-through Variables":[],
@@ -5373,7 +5374,7 @@
             "is_hidden":"False",
             "slot_type":"var",
             "variableType":"string",
-            "description":"The name of the external vector3 you want to retrieve, as set in the [External Output Vector 3] node.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The name of the external vector3 you want to retrieve, as set in the [External Output Vector 3] node."
           }],
         "Inputs":[],
         "Pass-through Variables":[],
@@ -5498,7 +5499,7 @@
             "is_hidden":"False",
             "slot_type":"out",
             "connectionType":"Quaternion",
-            "description":"The rotation of the marker.\n\n        We leave this as custom since it uses LevelObject to fill in default values for outputs at level save-time"
+            "description":"The rotation of the marker."
           }]
       }
     },
@@ -5775,7 +5776,7 @@
             "is_hidden":"False",
             "slot_type":"out",
             "connectionType":"String",
-            "description":"The unit resource.\n\n        We leave this as a custom flow node due to special resource string handling"
+            "description":"The unit resource."
           }]
       }
     },
@@ -6412,7 +6413,7 @@
             "is_hidden":"False",
             "slot_type":"out",
             "connectionType":"String",
-            "description":"The name of the shape template.\n\n        We leave this as custom since it uses LevelObject to fill in default values for outputs at level save-time"
+            "description":"The name of the shape template."
           }]
       }
     },
@@ -7324,7 +7325,7 @@
             "is_hidden":"False",
             "slot_type":"var",
             "variableType":"string",
-            "description":"The name of the external light you want to retrieve, as set in the [External Output Light] node.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The name of the external light you want to retrieve, as set in the [External Output Light] node."
           }],
         "Inputs":[],
         "Pass-through Variables":[],
@@ -7454,7 +7455,7 @@
             "is_hidden":"False",
             "slot_type":"in",
             "connectionType":"Actor",
-            "description":"The actor you want to expose.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The actor you want to expose."
           }],
         "Pass-through Variables":[],
         "Outputs":[]
@@ -8142,7 +8143,7 @@
             "is_hidden":"False",
             "slot_type":"in",
             "connectionType":"Light",
-            "description":"The light you want to expose.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The light you want to expose."
           }],
         "Pass-through Variables":[],
         "Outputs":[]
@@ -8795,7 +8796,7 @@
             "is_hidden":"False",
             "slot_type":"in",
             "connectionType":"Id",
-            "description":"The Id you want to expose.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The Id you want to expose."
           }],
         "Pass-through Variables":[],
         "Outputs":[]
@@ -9631,7 +9632,7 @@
             "is_hidden":"False",
             "slot_type":"in",
             "connectionType":"Entity",
-            "description":"The entity you want to expose.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The entity you want to expose."
           }],
         "Pass-through Variables":[],
         "Outputs":[]
@@ -10335,7 +10336,7 @@
             "is_hidden":"False",
             "slot_type":"out",
             "connectionType":"Unit",
-            "description":"The unit holding the touched actor.\n\n        We leave this as a custom node due to \"Shape\" variable is special"
+            "description":"The unit holding the touched actor."
           }]
       }
     },
@@ -10357,7 +10358,7 @@
             "is_hidden":"False",
             "slot_type":"in",
             "connectionType":"Bool",
-            "description":"The Boolean value you want to expose.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The Boolean value you want to expose."
           }],
         "Pass-through Variables":[],
         "Outputs":[]
@@ -10526,7 +10527,7 @@
             "is_hidden":"False",
             "slot_type":"var",
             "variableType":"string",
-            "description":"The name of the external camera you want to retrieve, as set in the [External Output Camera] node.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The name of the external camera you want to retrieve, as set in the [External Output Camera] node."
           }],
         "Inputs":[],
         "Pass-through Variables":[],
@@ -10839,7 +10840,7 @@
             "is_hidden":"False",
             "slot_type":"out",
             "connectionType":"Float",
-            "description":"The vertical FOV angle."
+            "description":"The vertical FOV angle in radians."
           }]
       }
     },
@@ -11061,7 +11062,7 @@
             "is_hidden":"False",
             "slot_type":"out",
             "connectionType":"String",
-            "description":"The animation clip resource.\n\n      We leave this as a custom flow node due to special resource string handling"
+            "description":"The animation clip resource."
           }]
       }
     },
@@ -11170,7 +11171,7 @@
             "is_hidden":"False",
             "slot_type":"out",
             "connectionType":"String",
-            "description":"The effect resource.\n\n      We leave this as a custom flow node due to special resource string handling"
+            "description":"The effect resource."
           }]
       }
     },
@@ -11648,7 +11649,7 @@
             "is_hidden":"False",
             "slot_type":"out",
             "connectionType":"Bool",
-            "description":"Returns true if the unit's resource type matches the specified name, and false otherwise.\n\n        We leave this as a custom node until we can set specialized types for input/output fields from defintion"
+            "description":"Returns true if the unit's resource type matches the specified name, and false otherwise."
           }]
       }
     },
@@ -12350,7 +12351,7 @@
             "is_hidden":"False",
             "slot_type":"in",
             "connectionType":"Vector3",
-            "description":"The vector3 you want to expose.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The vector3 you want to expose."
           }],
         "Pass-through Variables":[],
         "Outputs":[]
@@ -12375,7 +12376,7 @@
             "is_hidden":"False",
             "slot_type":"out",
             "connectionType":"String",
-            "description":"The entity resource.\n\n        We leave this as a custom flow node due to special resource string handling"
+            "description":"The entity resource."
           }]
       }
     },
@@ -12496,7 +12497,7 @@
             "is_hidden":"False",
             "slot_type":"var",
             "variableType":"string",
-            "description":"The name of the external Boolean value you want to retrieve, as set in the [External Output Boolean] node.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The name of the external Boolean value you want to retrieve, as set in the [External Output Boolean] node."
           }],
         "Inputs":[],
         "Pass-through Variables":[],
@@ -12895,7 +12896,7 @@
             "is_hidden":"False",
             "slot_type":"in",
             "connectionType":"Quaternion",
-            "description":"The quaternion you want to expose.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The quaternion you want to expose."
           }],
         "Pass-through Variables":[],
         "Outputs":[]
@@ -13383,7 +13384,7 @@
             "is_hidden":"False",
             "slot_type":"out",
             "connectionType":"event",
-            "description":"The output event triggered when the unit is unlinked.\n\n        We leave this as a custom node since it uses special handling for ChildNode and ParentNode fields"
+            "description":"The output event triggered when the unit is unlinked."
           }]
       }
     },
@@ -13825,7 +13826,7 @@
             "is_hidden":"False",
             "slot_type":"var",
             "variableType":"string",
-            "description":"The name of the external event you want to emit.\n\n        We leave this as custom since it uses special handling for the Event string variable in the compile pass"
+            "description":"The name of the external event you want to emit."
           }],
         "Inputs":[{
             "is_editable":"False",
@@ -14247,7 +14248,7 @@
             "is_hidden":"False",
             "slot_type":"in",
             "connectionType":"Mover",
-            "description":"The mover you want to expose.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The mover you want to expose."
           }],
         "Pass-through Variables":[],
         "Outputs":[]
@@ -14755,7 +14756,7 @@
             "is_hidden":"False",
             "slot_type":"in",
             "connectionType":"Unit",
-            "description":"The unit you want to expose.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The unit you want to expose."
           }],
         "Pass-through Variables":[],
         "Outputs":[]
@@ -14864,7 +14865,7 @@
             "is_hidden":"False",
             "slot_type":"out",
             "connectionType":"event",
-            "description":"The output event.\n\n        We leave this as a custom node due to \"Actor\" variable is special"
+            "description":"The output event."
           }]
       }
     },
@@ -15715,7 +15716,7 @@
             "is_hidden":"False",
             "slot_type":"var",
             "variableType":"string",
-            "description":"The name of the external mover you want to retrieve, as set in the [External Output Mover] node.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The name of the external mover you want to retrieve, as set in the [External Output Mover] node."
           }],
         "Inputs":[],
         "Pass-through Variables":[],
@@ -16206,7 +16207,7 @@
             "is_hidden":"False",
             "slot_type":"out",
             "connectionType":"event",
-            "description":"The output event triggered when the actors end touch.\n\n        We leave this as a custom node due to \"Actor\" variable is special"
+            "description":"The output event triggered when the actors end touch."
           }]
       }
     },
@@ -16822,7 +16823,7 @@
             "is_hidden":"False",
             "slot_type":"var",
             "variableType":"string",
-            "description":"The name of the external numeric value you want to retrieve, as set in the [External Output Numeric] node.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The name of the external numeric value you want to retrieve, as set in the [External Output Numeric] node."
           }],
         "Inputs":[],
         "Pass-through Variables":[],
@@ -17048,7 +17049,7 @@
             "is_hidden":"False",
             "slot_type":"var",
             "variableType":"string",
-            "description":"The name of the external Id you want to retrieve, as set in the [External Output Id] node.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The name of the external Id you want to retrieve, as set in the [External Output Id] node."
           }],
         "Inputs":[],
         "Pass-through Variables":[],
@@ -17643,7 +17644,7 @@
             "is_hidden":"False",
             "slot_type":"in",
             "connectionType":"Float",
-            "description":"The numeric value you want to expose.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The numeric value you want to expose."
           }],
         "Pass-through Variables":[],
         "Outputs":[]
@@ -17718,7 +17719,7 @@
             "is_hidden":"False",
             "slot_type":"var",
             "variableType":"string",
-            "description":"The name of the external quaternion you want to retrieve, as set in the [External Output Quaternion] node.\n\n        We leave this as custom since it uses a \"non-input input string\" from its base class"
+            "description":"The name of the external quaternion you want to retrieve, as set in the [External Output Quaternion] node."
           }],
         "Inputs":[],
         "Pass-through Variables":[],
