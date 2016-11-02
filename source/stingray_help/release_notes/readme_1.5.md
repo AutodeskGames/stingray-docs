@@ -49,7 +49,7 @@ We've added some new components for the entity system:
 
 -	The unit component, which associates a unit resource with the entity. Whenever the entity is spawned and unspawned, an instance of that unit is spawned and unspawned too.
 
--	The script component, which defines behaviors for their associated entities: actions that will be carried out when the entity is spawned and unspawned, and every frame during the main update loop. See ~{ Script an entity's behavior }~.
+-	The script component, which defines behaviors for their associated entities: actions that will be carried out when the entity is spawned and unspawned, and every frame during the main update loop. See ~{ Set up an entity's behavior using Flow or Lua }~.
 
 -	Vector field components, which simulate effects like wind in the level. See ~{ Set up vector field (wind) effects }~.
 

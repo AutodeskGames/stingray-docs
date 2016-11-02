@@ -10,7 +10,7 @@
 			<book>GeneralUser</book>
 			<local_output>..\output\stingray_help\%SR_DOC_LANG%\AKN</local_output>
 			<post_to_AKN>false</post_to_AKN>
-			<post_to_AKN_beta>true</post_to_AKN_beta>
+			<post_to_AKN_beta>false</post_to_AKN_beta>
 			<redirect_to_help include="*">true</redirect_to_help>
 			<athena include="*\stingray_help\*"></athena>
 			<job-specification>

@@ -4,7 +4,7 @@ Since Stingray V1.5 it is possible to define new types of assets and to automati
 
 This makes defining new assets used **only** for editor purpose super easy (ex: scatter brush). Obviously, if you want to define a new type of asset that needs to be available on the runtime side of Stingray you will need to create a runtime plugin containing a compiler extension for it.
 
-For information on how to define new assets type so they are properly displayed in the ~{Asset Browser}~ (ex: icons, categories) please refer to ~{Register a custom asset type}.
+For information on how to define new assets type so they are properly displayed in the ~{Asset Browser}~ (ex: icons, categories) please refer to ~{Register a custom asset type}~.
 
 ## Type file specification and mounting
 

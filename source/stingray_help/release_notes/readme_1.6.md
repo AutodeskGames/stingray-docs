@@ -43,6 +43,14 @@ The revamped Stingray and the Beast lightmap bakers now reflect more meaningful 
 
 Improvements to light baking and post-processing effects (SSAO, SSR) increase the lighting quality of architectural visualization scenes.  If you bake lighting, ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps. New shading environment properties help you control how to apply baked AO and SSAO to your final scene.
 
+### Flow support for entities
+
+You can now use Flow to control entities:
+
+-	We've added [several new nodes](../../flow_ref/cat_Entity.html) that you can use to spawn entities dynamically in the level, to set and retrieve data in your entities' components, and to respond to entities being spawned and unspawned.
+
+-	You can use the new Flow component to assign a Flow graph to an entity. You can use these Flow components to set up reusable behaviors for your entities, much like the way that each type of unit has its own Unit Flow. See ~{ Set up an entity's behavior using Flow or Lua }~.
+
 ## Ready to learn Stingray?
 
 With Stingray 1.6, we aim to give you two things you need when learning anything new: more time, and some advice on where to start!
@@ -219,7 +227,7 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 - **Projects built on previous VR templates will not work in Stingray 1.6**
 
 	Stingray 1.6 is a significant update for VR, and as a result projects built with the previous VR templates no longer work. You'll need to manually migrate assets from your previous VR projects into the updated VR templates. We apologize for this, but we hope the improvements we've made for VR help to ease the pain.
-	
+
 	The Stingray renderer now implements instanced stereo rendering, which removes the need for the previous vr_renderer.render_config. In addition, we've added Flow nodes for SteamVR and Oculus to remove any tracking lag. Check out the What’s New section of the release notes for more details on the VR improvements.
 
 [Return to top](#top)
