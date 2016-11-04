@@ -20,6 +20,8 @@ Level sync workflows let you automatically rebuild your 3ds Max scenes in Stingr
 <br>
   The assets are sent to Stingray and open in the current scene. A new folder, with the same name as your scene in 3ds Max, is created.
 
+>**Note:** Level sync is supported in 3ds Max 2016 SP2 or higher.
+
 ---
 Related topics:
 - ~{ Tag assets with Level Sync }~

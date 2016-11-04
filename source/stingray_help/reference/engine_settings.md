@@ -27,6 +27,7 @@ This topic describes all the settings that you can configure in this file in ord
 - [Log consoles](#log-consoles)
 - [Crash report](#crash-report)
 - [Steam settings](#steam-settings)
+-	[XB1 settings](#xb1-settings)
 
 ## Generic settings
 
@@ -735,6 +736,29 @@ This can be used to turn off Steam support. The default is that Steam is enabled
 > * **top-right**
 > * **bottom-left**
 > * **bottom-right**
+
+[Back to top](#top)
+
+## XB1 settings
+
+The following settings define the XB1 APU heap allocation size.
+
+~~~{sjson}
+xb1 = {
+	//memory = {
+	//	apu_heap_size = 67108864
+	//	apu_heap_non_cached_size = 1048576
+	//}
+}
+~~~
+
+`apu_heap_size`
+
+>	Specifies the amount of cached heap memory allocated for XB1 APU.
+
+`apu_heap_non_cached_size`
+
+>	Specifies the amount of non-cached heap memory allocated for XB1 APU.
 
 [Back to top](#top)
 

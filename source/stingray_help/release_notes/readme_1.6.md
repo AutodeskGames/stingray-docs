@@ -43,6 +43,10 @@ The revamped Stingray and the Beast lightmap bakers now reflect more meaningful 
 
 Improvements to light baking and post-processing effects (SSAO, SSR) increase the lighting quality of architectural visualization scenes.  If you bake lighting, ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps. New shading environment properties help you control how to apply baked AO and SSAO to your final scene.
 
+### Conditional transitions in Animation Controller
+
+The animation controller adds a new node, TransitionSwitch to control the flow of transitions at runtime by evaluating an expression. This expression is defined in the TransitionSwitch and can use Animation Controller variables and functions ("sin", "cos", "abs", etc.). Any transition incoming into a TransitionSwitch, called  TransitionSwitchEntry, is triggered by an Anim Event, and one of the outgoing transitions, called TransitionSwitchExit, is taken depending on the outcome of the expression evaluated against the interval range values for this exit defined in the TransitionSwitch. See ~{ Animation controller states }~.
+
 ## Ready to learn Stingray?
 
 With Stingray 1.6, we aim to give you two things you need when learning anything new: more time, and some advice on where to start!
@@ -219,7 +223,7 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 - **Projects built on previous VR templates will not work in Stingray 1.6**
 
 	Stingray 1.6 is a significant update for VR, and as a result projects built with the previous VR templates no longer work. You'll need to manually migrate assets from your previous VR projects into the updated VR templates. We apologize for this, but we hope the improvements we've made for VR help to ease the pain.
-	
+
 	The Stingray renderer now implements instanced stereo rendering, which removes the need for the previous vr_renderer.render_config. In addition, we've added Flow nodes for SteamVR and Oculus to remove any tracking lag. Check out the What’s New section of the release notes for more details on the VR improvements.
 
 [Return to top](#top)
