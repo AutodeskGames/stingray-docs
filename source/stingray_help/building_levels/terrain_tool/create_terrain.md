@@ -19,10 +19,10 @@ The Stingray terrain tools let you create and edit terrain meshes by sculpting, 
     <dl>
 
     <dt>**Size**</dt>
-    <dd>Determines how large the terrain appears in the level, measured in meters.</dd>
+    <dd>Determines how large the terrain appears in the level, measured in meters. The maximum size allowed is 16000 x 16000 in meters.</dd>
 
     <dt>**Maximum Height**</dt>
-    <dd>Determines the maximum height its possible for you to paint. This value comes into play later on as you paint to add peaks to the terrain.</dt>
+    <dd>Determines the maximum height its possible for you to paint. This value comes into play later on as you paint to add peaks to the terrain. The maximum height allowed is 10000 meters.</dt>
 
     <dt>**Height Map Resolution**</dt>
     <dd>Alters the actual resolution of the backing textures for the height and material map. This affects the level of detail at which you can paint.</dd>

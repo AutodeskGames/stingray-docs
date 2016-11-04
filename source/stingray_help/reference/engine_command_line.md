@@ -36,25 +36,25 @@ In your gameplay code, you can access all of the command-line parameters that we
 Run the engine using the project settings from a particular toolchain directory (this will also compile the data if necessary):
 
 ```{nohighlight}
-stingray_win64_dev_x64.exe --toolchain C:\work\toolchain
+stingray_win64_dev.exe --toolchain C:\work\toolchain
 ```
 
 Run the engine using compiled data from a particular folder:
 
 ```{nohighlight}
-stingray_win64_dev_x64.exe --data-dir D:\Projects\testbed_data\win32
+stingray_win64_dev.exe --data-dir D:\Projects\testbed_data\win32
 ```
 
 Run the engine using bundled data:
 
 ```{nohighlight}
-stingray_win64_dev_x64.exe --bundle-dir D:\Projects\testbed_data\win32_bundled
+stingray_win64_dev.exe --bundle-dir D:\Projects\testbed_data\win32_bundled
 ```
 
 Run the engine using streamed data from a TCP/IP file server. The `--data-dir` is the directory on the file server the engine should use. The `--secret` should match the content of a `.stingray-asset-server-secret` file in that directory.
 
 ```{nohighlight}
-stingray_win64_dev_x64.exe --host 172.64.22.32 --data-dir D:\Projects\testbed_data\win32 --secret PqdjliMO52Tu4As+FxuJig==
+stingray_win64_dev.exe --host 172.64.22.32 --data-dir D:\Projects\testbed_data\win32 --secret PqdjliMO52Tu4As+FxuJig==
 ```
 
 ### Compiling data
@@ -62,25 +62,25 @@ stingray_win64_dev_x64.exe --host 172.64.22.32 --data-dir D:\Projects\testbed_da
 Cross-compile project data from the toolchain settings for a particular platform (`win32`, `xb1`, `android`, `macosx`, `ios`, `ps4`) :
 
 ```{nohighlight}
-stingray_win64_dev_x64.exe --compile-for ps4 --toolchain C:\work\toolchain
+stingray_win64_dev.exe --compile-for ps4 --toolchain C:\work\toolchain
 ```
 
 Cross-compile and bundle project data using the toolchain settings:
 
 ```{nohighlight}
-stingray_win64_dev_x64.exe --compile-for ps4 --bundle --toolchain C:\work\toolchain
+stingray_win64_dev.exe --compile-for ps4 --bundle --toolchain C:\work\toolchain
 ```
 
 Compile Win32 project data using a mapped core folder:
 
 ```{nohighlight}
-stingray_win64_dev_x64.exe --compile --source-dir D:\projects\testbed --data-dir D:\projects\testbed_data\win32 --map-source-dir core C:\work\toolchain
+stingray_win64_dev.exe --compile --source-dir D:\projects\testbed --data-dir D:\projects\testbed_data\win32 --map-source-dir core C:\work\toolchain
 ```
 
 Compile and bundle Win32 project data:
 
 ```{nohighlight}
-stingray_win64_dev_x64.exe --compile --bundle --source-dir D:\projects\testbed --data-dir  D:\projects\testbed_data\win32 --bundle-dir  D:\projects\testbed_data\win32_bundled --map-source-dir core C:\work\toolchain
+stingray_win64_dev.exe --compile --bundle --source-dir D:\projects\testbed --data-dir  D:\projects\testbed_data\win32 --bundle-dir  D:\projects\testbed_data\win32_bundled --map-source-dir core C:\work\toolchain
 ```
 
 ## Parameters
@@ -378,4 +378,3 @@ Specifies that the engine main window should be created as a child window to the
 #### --no-raw-input
 
 Disables the use of raw WM_INPUT messages in the engine.
-

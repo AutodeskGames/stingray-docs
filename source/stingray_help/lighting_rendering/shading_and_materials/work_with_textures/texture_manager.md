@@ -28,8 +28,11 @@ Selecting different formats for different platforms on the same texture is broad
 </dd>
 
  <dt>Discard The x Largest/Smallest Mip Steps</dt>
- <dd>Enter a value in one of these two fields to drop mip steps from the compiled texture. This lowers the texture resolution (if you drop any of the largest mip steps). This saves disk space and video memory when running the game on the chosen platforms.</dd>
+ <dd>Enter a value in one of these two fields to drop mip steps from the compiled texture. This lowers the texture resolution (if you drop any of the largest mip steps). This saves disk space and video memory when running the game on the chosen platforms.
 
+ >**Note:** If skipping the largest mip steps on any compressed textures, the textures need to be be data-compiled again to fix the colors being in wrong space in the mip levels.
+
+ </dd>
 
  <dt>Generate Mip Steps</dt>
  <dd>Use this drop-down menu to specify whether the original mip levels in the **Input Image** should be kept during compilation, or whether mip maps should be generated for the image using one of the two available mip step generation filters.</dd>
