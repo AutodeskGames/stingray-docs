@@ -11,7 +11,7 @@ The **Capture Frames** Tool lets you render frames to disk. The following **Capt
 <dl>
 
 <dt>Capture Source</dt>
-<dd>Lets you select the the source to capture: your test engine or one of the editor viewports.</dd>
+<dd>Lets you select the source to capture: your test engine or one of the editor viewports.</dd>
 </dl>
 
 ##General
@@ -26,9 +26,9 @@ The **Capture Frames** Tool lets you render frames to disk. The following **Capt
 <dt>File Type</dt>
 <dd>Lets you select a file type for your output. Currently, frames are exported using the OpenEXR format (.exr). The tool delivers three different buffers in OpenEXR when it captures:
 
--   Final: The final output image in sRGB colorspace.
--   HDR: An HDR version in linear colorspace.
--   Depth: A stabilized depth channel.</dd>
+-   default: The output image in sRGB colorspace.
+-   hdr_no_post: An HDR version in linear colorspace.
+-   depth: A stabilized depth channel.</dd>
 
 </dl>
 
