@@ -41,7 +41,17 @@ The revamped Stingray and the Beast lightmap bakers now reflect more meaningful 
 
 ### Light baking improvements
 
-Improvements to light baking and post-processing effects (SSAO, SSR) increase the lighting quality of architectural visualization scenes.  If you bake lighting, ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps. New shading environment properties help you control how to apply baked AO and SSAO to your final scene.
+The following Improvements to light baking and post-processing effects (SSAO, SSR) increase the lighting quality and performance of architectural visualization scenes:
+
+- Ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps.
+- New shading environment properties help you control how to apply baked AO and SSAO to your final scene. You can also run SSAO in screen space or world space. See ~{ Shading Environment Properties }~.
+- A new screen space reflection algorithm reflects GGX and matches up with pre-convoluted IBL reflection probes.
+- Normalization of lightmap resolution is now based on the UV space area.
+- UV seam fixup now automatically runs as a post-processing effect when you bake lightmaps.
+
+### VR mono and streo mirror mode support
+
+When you mirror your viewport to a VR app, you can now control the mirror window display. You can set the vr_mirror_mode to mono or stereo in your project’s settings.ini file. See ~{ Set VR mirror mode }~.
 
 ### Conditional transitions in Animation Controller
 
