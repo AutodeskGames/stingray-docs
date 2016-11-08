@@ -71,6 +71,10 @@ Stingray includes new texture categories and templates such as Normal, Linear Gr
 
 Download new Stingray plug-ins and update existing ones using the **Get more plugins** selection in the **Plugin Manager**. Select any of the available plugins and click **Install** to download it. See ~{ Add and remove plug-ins using the Plugin Manager }~.
 
+### FBX Version 2017.1
+
+This release of Stingray picks up the latest version of FBX (2017.1), which provides various security improvements.
+
 [Return to top](#top)
 
 ## What's Fixed
@@ -219,7 +223,7 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 - **Projects built on previous VR templates will not work in Stingray 1.6**
 
 	Stingray 1.6 is a significant update for VR, and as a result projects built with the previous VR templates no longer work. You'll need to manually migrate assets from your previous VR projects into the updated VR templates. We apologize for this, but we hope the improvements we've made for VR help to ease the pain.
-	
+
 	The Stingray renderer now implements instanced stereo rendering, which removes the need for the previous vr_renderer.render_config. In addition, we've added Flow nodes for SteamVR and Oculus to remove any tracking lag. Check out the What’s New section of the release notes for more details on the VR improvements.
 
 [Return to top](#top)
@@ -254,8 +258,8 @@ To preserve the forward direction in imported assets, set the forward axis setti
 
 In projects that you migrate from earlier versions of Stingray, the forward axis setting is still read from *settings.ini*.
 
-### FBX Version 2017.1
+### Advance notice: moving to Visual Studio 2015
 
-This release of Stingray picks up the latest version of FBX (2017.1), which provides various security improvements.
+This is planned to be the last release of Stingray to support Visual Studio 2012 for rebuilding all components from source code. The develop branch has already moved to Visual Studio 2015.
 
 [Return to top](#top)
