@@ -57,6 +57,10 @@ When you mirror your viewport to a VR app, you can now control the mirror window
 
 The animation controller adds a new node, TransitionSwitch to control the flow of transitions at runtime by evaluating an expression. This expression is defined in the TransitionSwitch and can use Animation Controller variables and functions ("sin", "cos", "abs", etc.). Any transition incoming into a TransitionSwitch, called  TransitionSwitchEntry, is triggered by an Anim Event, and one of the outgoing transitions, called TransitionSwitchExit, is taken depending on the outcome of the expression evaluated against the interval range values for this exit defined in the TransitionSwitch. See ~{ Animation controller states }~.
 
+### Cloth simulation improvements
+
+When importing a cloth object, you do not need to manually add the APEX cloth definitions to the corresponding physics file. The cloth definitions are imported along with the object and you can now add the cloth resources to the object in the Unit Editor. See ~{ Enable APEX Cloth }~.
+
 ## Ready to learn Stingray?
 
 With Stingray 1.6, we aim to give you two things you need when learning anything new: more time, and some advice on where to start!
