@@ -43,6 +43,10 @@ The revamped Stingray and the Beast lightmap bakers now reflect more meaningful 
 
 Improvements to light baking and post-processing effects (SSAO, SSR) increase the lighting quality of architectural visualization scenes.  If you bake lighting, ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps. New shading environment properties help you control how to apply baked AO and SSAO to your final scene.
 
+### Cloth simulation improvements
+
+When importing a cloth object, you do not need to manually add the APEX cloth definitions to the corresponding physics file. The cloth definitions are imported along with the object and you can now add the cloth resources to the object in the Unit Editor. See ~{ Enable APEX Cloth }~.
+
 ## Ready to learn Stingray?
 
 With Stingray 1.6, we aim to give you two things you need when learning anything new: more time, and some advice on where to start!
