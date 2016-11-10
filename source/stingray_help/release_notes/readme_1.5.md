@@ -129,15 +129,15 @@ To do this, use the new `stingray.Application.resource_package_from_url()` funct
 
 Custom plug-ins can now include:
 
--	*event* extensions, which respond to named events in the editor. See ~{ Respond to an editor event }~ and ~{ Emit and handle editor events }~.
--	*migration* extensions, which can upgrade project data from one version of your plug-in to another. See ~{ Migrate an older project }~.
--	*preview* extensions, which control the way the ~{ Asset Preview }~ behaves when a given type of resource is selected in the ~{ Asset Browser }~. See ~{ Define previews for custom assets }~.
--	*service* extensions, which add new custom services that your plug-in (or other plug-ins) can access just like the standard services built in to Stingray. See ~{ Register a custom service }~.
+-	*event* extensions, which respond to named events in the editor. See [Respond to an editor event](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_events_html) and [Emit and handle editor events](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_services_html).
+-	*migration* extensions, which can upgrade project data from one version of your plug-in to another. See [Migrate an older project](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_migrations_html).
+-	*preview* extensions, which control the way the ~{ Asset Preview }~ behaves when a given type of resource is selected in the ~{ Asset Browser }~. See [Define previews for custom assets](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_previews_html).
+-	*service* extensions, which add new custom services that your plug-in (or other plug-ins) can access just like the standard services built in to Stingray. See [Register a custom service](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_services_html).
 
 Plus:
 
--	action extensions can now trigger a named event, which you can respond to elsewhere in your plug-in. See ~{ Register an action }~.
--	menu extensions can now add separators and sub-menus. See ~{ Create a new menu item }~.
+-	action extensions can now trigger a named event, which you can respond to elsewhere in your plug-in. See [Register an action](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_actions_html).
+-	menu extensions can now add separators and sub-menus. See [Create a new menu item](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_menus_html).
 
 [Return to top](#top)
 
