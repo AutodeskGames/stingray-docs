@@ -25,7 +25,7 @@
 	</project>
 
 	<global>
-		<syntax_coloring include="\sdk_help\*" default_lang="lang-lua">true</syntax_coloring>
+		<syntax_coloring include="\sdk_help\*" default_lang="lang-sjson">true</syntax_coloring>
 		<search_filter id="concept" include_expression="sdk_help/.*\.htm">
 			<label lang="en">Search concept topics?</label>
 		</search_filter>
@@ -35,6 +35,10 @@
 		<contextId include="*\sdk_help\introduction.html" id="SDK_HOME"></contextId>
 		<contextId include="*\sdk_help\extend_editor.html" id="SDK_EDITOR_C_PLUGIN"></contextId>
 		<contextId include="*\sdk_help\extend_engine.html" id="SDK_ENGINE_PLUGIN"></contextId>
+		<meta name="indexterm" content="plugin" include="*"></meta>
+		<meta name="indexterm" content="plug-in" include="*"></meta>
+		<meta name="topic-type" content="concept" include="*\sdk_help\*"></meta>
+		<meta name="topic-type" content="reference" include="*\editor_js\*,*\editor_c\*,*\engine_c\*"></meta>
 		<insert_family_links include="\sdk_help\*"></insert_family_links>
 		<!-- find and replace variables with version numbers -->
 		<replace variable_file="variables.ini" include="*.html"></replace>
