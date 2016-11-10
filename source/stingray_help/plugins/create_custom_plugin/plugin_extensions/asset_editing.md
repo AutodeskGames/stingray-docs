@@ -8,7 +8,7 @@ For information on how to define new assets type so they are properly displayed 
 
 ## Type file specification and mounting
 
-To register a new type of asset and benefits from Property Editor editing capabilities, you need to create a `.type` file describing the data layout of that asset and ensure that `.type` file is in in a mapped folder. See ~{Make new resources available to the project}~ for more information on mapping a folder).
+To register a new type of asset and benefits from Property Editor editing capabilities, you need to create a `.type` file describing the data layout of that asset and ensure that `.type` file is in in a mapped folder. See ~{ Make new resources available to the project }~ for more information on mapping a folder.
 
 Here is an example on how it is done for `scatter.plugin`:
 

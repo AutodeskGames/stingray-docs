@@ -1,5 +1,7 @@
 # Animation controller states
 
+![UPDATED](../../images/updated.png)
+
 A state corresponds to something the character is doing. States can be things like walking, running, jumping, being idle. Each state is associated with a particular animation, or a mix of animations that play when the character is in that state. The character is in exactly one state at a time (per layer).
 
 In the state graph, states are represented by boxes and arrows that show the possible transitions between states. Transitions are triggered by anim events and the name of the anim event that triggers a particular transition is displayed along the transition arrow.
@@ -95,3 +97,15 @@ Target > The state that the shortcut state "points to". By default the Target is
 A transition from this shortcut is treated as a transition from the group. When you put a transition from the shortcut to any other state inside the group, you create a transition from every other state inside the group to the state you just connected.
 
 > **Warning:** Every time the transition is triggered, it can be taken every frame, even while it's blending. If using a shortcut from a group, make sure you're not sending the event every frame because it will transition/blend into itself over and over again.
+
+## TransitionSwitch
+
+[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
+
+A transition node that lets you choose at runtime which will be the destination state for a transition. This choice depends on the runtime evaluation of an expression.
+
+The TransitionSwitch node has incoming transitions, called TransitionSwitchEntries,with an anim event that triggers the conditional transition, and multiple exit transitions, called TransitionSwitchExits, with different blend settings and animation state targets. It also lists the interval of values set for each outgoing transition. The TransitionSwtich node evaluates its expression at runtime and switches to the outgoing transition depending on the interval of values tested in order against the evaluated expression.
+
+The TransitionSwitch node expression can have existing variable names of the current animation controller and include operators such as `sin`, `cos`, `abs`, `match`, `match_2d`, `match_range`,  and `match_range_2d`. The expression can also include the `rand` operator to generate random numbers from the seed in the layer. Note that you can set the seed of random number generator for each layer in C or LUA.
+
+You can edit the names and properties of the entry and exit transitions, change the min/max values of the interval range of the exit transitions and reorder the order of interval range of each exit transitions using the up/down arrows.  
