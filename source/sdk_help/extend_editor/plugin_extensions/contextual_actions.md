@@ -93,7 +93,7 @@ Or a wildcard (*):
     ]
 }
 ```
-![singleasset sublime](../../../images/single_asset_contextual_sublime.png)
+![singleasset sublime](../../images/single_asset_contextual_sublime.png)
 
 
 
@@ -260,7 +260,7 @@ Note that you can also specify multiple categories:
 }
 ```
 
-![singleasset_browser](../../../images/single_level_object_find_asset_browser.png)
+![singleasset_browser](../../images/single_level_object_find_asset_browser.png)
 
 You can write a custom predicate similar to what can be done with an asset:
 
@@ -342,4 +342,4 @@ duplicateLevelObjects: function (levelObjects) {
 }
 ```
 
-![multi_level/_object duplicate](../../../images/multi_level_objects_duplicate.png)
+![multi_level/_object duplicate](../../images/multi_level_objects_duplicate.png)

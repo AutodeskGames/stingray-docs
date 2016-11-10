@@ -2,7 +2,7 @@
 
 You can use the `templates` extension to add new types of assets that users can create from the ~{ Asset Browser}~.
 
-When a user clicks the ![Create asset icon](../../../images/icon_createAsset.png) button in the **Asset Browser**, or right-clicks the resource view and selects **Create** from the drop-down list, the **Asset Browser** shows them a list of the types of assets they can create. A template extension adds a new entry to that list, and associates it with a series of *actions*.
+When a user clicks the ![Create asset icon](../../images/icon_createAsset.png) button in the **Asset Browser**, or right-clicks the resource view and selects **Create** from the drop-down list, the **Asset Browser** shows them a list of the types of assets they can create. A template extension adds a new entry to that list, and associates it with a series of *actions*.
 
 This may be particularly useful if you are adding a new asset type to the editor with an *asset_type* extension, since it provides users an easy way to create new assets of that custom type. For an example of this usage, see the Scaleform Studio plug-in under *editor/plugins/scaleform_studio*.
 

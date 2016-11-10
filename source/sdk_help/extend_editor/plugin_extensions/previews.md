@@ -124,13 +124,13 @@ extensions = {
 >
 >	`enableViewportSettings`
 >
->	>	Determines whether the **Asset Preview** should show the settings icon ![Settings icon](../../../images/icon_gear.png). If you set this value to `true`, use the `viewportMenuEntries` object to configure which settings are visible to the user in this menu, and the `defaultViewportSettings` object to set the default values of those settings.
+>	>	Determines whether the **Asset Preview** should show the settings icon ![Settings icon](../../images/icon_gear.png). If you set this value to `true`, use the `viewportMenuEntries` object to configure which settings are visible to the user in this menu, and the `defaultViewportSettings` object to set the default values of those settings.
 >
 >	`viewportMenuEntries`
 >
 >	>	Determines which viewport settings the user can control.
 >	>
->	>	Some of these settings are found under the **View** menu inside the viewport itself, and some of these settings are found under the settings menu ![Settings icon](../../../images/icon_gear.png) when `enableViewportSettings` is set to `true`.
+>	>	Some of these settings are found under the **View** menu inside the viewport itself, and some of these settings are found under the settings menu ![Settings icon](../../images/icon_gear.png) when `enableViewportSettings` is set to `true`.
 >	>
 >	>	All of the following settings are optional. If omitted, each of these settings is shown or hidden according to the default values shown below. Note that for settings that have a state the user can change, the default value of that setting -- as opposed to the *visibility* of the setting -- is set by the `defaultViewportSettings` object, listed after these default visibility settings.
 >	>
@@ -156,31 +156,31 @@ extensions = {
 >	>
 >	>	`RootMotion`
 >	>
->	>	>	Shows or hides the ![Settings icon](../../../images/icon_gear.png) **> Root Motion** menu item. Default is `false`.
+>	>	>	Shows or hides the ![Settings icon](../../images/icon_gear.png) **> Root Motion** menu item. Default is `false`.
 >	>
 >	>	`FollowCamera`
 >	>
->	>	>	Shows or hides the ![Settings icon](../../../images/icon_gear.png) **> Follow Camera** menu item. Default is `false`.
+>	>	>	Shows or hides the ![Settings icon](../../images/icon_gear.png) **> Follow Camera** menu item. Default is `false`.
 >	>
 >	>	`Physics`
 >	>
->	>	>	Shows or hides the ![Settings icon](../../../images/icon_gear.png) **> Physics** menu item. Default is `false`.
+>	>	>	Shows or hides the ![Settings icon](../../images/icon_gear.png) **> Physics** menu item. Default is `false`.
 >	>
 >	>	`Flow`
 >	>
->	>	>	Shows or hides the ![Settings icon](../../../images/icon_gear.png) **> Flow** menu item. Default is `false`.
+>	>	>	Shows or hides the ![Settings icon](../../images/icon_gear.png) **> Flow** menu item. Default is `false`.
 >	>
 >	>	`PlaybackRate`
 >	>
->	>	>	Shows or hides the ![Settings icon](../../../images/icon_gear.png) **> Playback Rate** menu item. Default is `false`.
+>	>	>	Shows or hides the ![Settings icon](../../images/icon_gear.png) **> Playback Rate** menu item. Default is `false`.
 >	>
 >	>	`BoneSize`
 >	>
->	>	>	Shows or hides the ![Settings icon](../../../images/icon_gear.png) **> Bone Size** menu item. Default is `false`.
+>	>	>	Shows or hides the ![Settings icon](../../images/icon_gear.png) **> Bone Size** menu item. Default is `false`.
 >	>
 >	>	`ResetToggles`
 >	>
->	>	>	Shows or hides the ![Settings icon](../../../images/icon_gear.png) **> Reset Toggles** menu item. Default is `true`.
+>	>	>	Shows or hides the ![Settings icon](../../images/icon_gear.png) **> Reset Toggles** menu item. Default is `true`.
 >
 >	`defaultViewportSettings`
 >
@@ -210,27 +210,27 @@ extensions = {
 >	>
 >	>	`hasRootMotion`
 >	>
->	>	>	Controls the default setting of the ![Settings icon](../../../images/icon_gear.png) **> Root Motion** menu item. May be either `true` or `false`.
+>	>	>	Controls the default setting of the ![Settings icon](../../images/icon_gear.png) **> Root Motion** menu item. May be either `true` or `false`.
 >	>
 >	>	`doesFollowCamera`
 >	>
->	>	>	Controls the default setting of the ![Settings icon](../../../images/icon_gear.png) **> Follow Camera** menu item. May be either `true` or `false`.
+>	>	>	Controls the default setting of the ![Settings icon](../../images/icon_gear.png) **> Follow Camera** menu item. May be either `true` or `false`.
 >	>
 >	>	`doesApplyPhysics`
 >	>
->	>	>	Controls the default setting of the ![Settings icon](../../../images/icon_gear.png) **> Physics** menu item. May be either `true` or `false`.
+>	>	>	Controls the default setting of the ![Settings icon](../../images/icon_gear.png) **> Physics** menu item. May be either `true` or `false`.
 >	>
 >	>	`doesApplyFlow`
 >	>
->	>	>	Controls the default setting of the ![Settings icon](../../../images/icon_gear.png) **> Flow** menu item. May be either `true` or `false`.
+>	>	>	Controls the default setting of the ![Settings icon](../../images/icon_gear.png) **> Flow** menu item. May be either `true` or `false`.
 >	>
 >	>	`playbackSpeed`
 >	>
->	>	>	Controls the default setting of the ![Settings icon](../../../images/icon_gear.png) **> Playback Speed** menu item. This setting is a percentage expressed as a decimal number. A value of `1` indicates 100%, a value of `0.8` indicates 80%, a value of `1.5` indicates 150%, etc.
+>	>	>	Controls the default setting of the ![Settings icon](../../images/icon_gear.png) **> Playback Speed** menu item. This setting is a percentage expressed as a decimal number. A value of `1` indicates 100%, a value of `0.8` indicates 80%, a value of `1.5` indicates 150%, etc.
 >	>
 >	>	`skeletonBoneSize`
 >	>
->	>	>	Controls the default setting of the ![Settings icon](../../../images/icon_gear.png) **> Bone Size** menu item. This setting is a percentage expressed as a decimal number. A value of `1` indicates 100%, a value of `0.8` indicates 80%, a value of `1.5` indicates 150%, etc.
+>	>	>	Controls the default setting of the ![Settings icon](../../images/icon_gear.png) **> Bone Size** menu item. This setting is a percentage expressed as a decimal number. A value of `1` indicates 100%, a value of `0.8` indicates 80%, a value of `1.5` indicates 150%, etc.
 >	>
 
 ---

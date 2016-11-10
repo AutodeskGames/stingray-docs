@@ -113,7 +113,7 @@ extensions = {
 
 This configuration produces the following:
 
-![Nested custom menus](../../../images/plugin_menu_extension_nested.png)
+![Nested custom menus](../../images/plugin_menu_extension_nested.png)
 
 ## Create separators
 
@@ -156,7 +156,7 @@ extensions = {
 
 This configuration produces the following:
 
-![Menu separators](../../../images/plugin_menu_extension_separators.png)
+![Menu separators](../../images/plugin_menu_extension_separators.png)
 
 `separator`
 

@@ -32,7 +32,7 @@ extensions = {
     ]
 ```
 
-![particle editor viewport setup](../../../images/particle_editor_viewport_setup.png)
+![particle editor viewport setup](../../images/particle_editor_viewport_setup.png)
 
 `name`
  > Unique name of the viewport. **Required**. This name must be unique among all views registered within Stingray. This will be used to instantiate the viewport and to send it lua commands.
@@ -294,7 +294,7 @@ define([
 
     var $container = $("#viewport-here");
 
-	// Use Mithril mount function to attach the EngineViewport component and pass it the name of the 
+	// Use Mithril mount function to attach the EngineViewport component and pass it the name of the
     // viewport setup file (viewport-extension-test.js)
     m.mount($container[0], EngineViewport.component({
         name: "viewport-extension-test"

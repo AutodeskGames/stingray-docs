@@ -3,20 +3,23 @@ With version 1.6 of Stingray it is now possible to write custom file importers. 
 
 Here  are all the different ways to import files in Stingray:
 
-- Drag and drop:
-![drag and drop](../../../images/import_drag_drop.gif)
+-	Drag and drop:
 
-- Import button in Asset browser:
-![import button](../../../images/import_asset_button.gif)
+	![drag and drop](../../images/import_drag_drop.gif)
 
-- File / Import menu:
-![import menu](../../../images/import_file_menu.png)
+-	Import button in Asset browser:
+
+	![import button](../../images/import_button.png)
+
+-   **File > Import** menu:
+
+	![import menu](../../images/import_file_menu.png)
 
 ## Importer format
 
 An importer can be spcify in a .plugin file:
 
-```lua
+```sjson
 // From core/plugins/asset_browser/asset-browser.plugin defines different importers:
 imports = [
     {
@@ -59,24 +62,30 @@ imports = [
 ```
 
 `types`
-> List of file extensions supported for import. **Required**.
+
+>	List of file extensions supported for import. **Required**.
 
 `label`
-> Name group of files supported for import. **Required**. This is displayed in the file selector whe using the File import menu or the Asset browser Import button. Note that all importers registered in Stingray are available in the Import File Selector.
 
-![import file selector](../../../images/import_file_selector.png)
+>	Name group of files supported for import. **Required**. This is displayed in the file selector whe using the File import menu or the Asset browser Import button. Note that all importers registered in Stingray are available in the Import File Selector.
+
+![import file selector](../../images/import_file_selector.png)
 
 `regroup`
-> boolean. **Optional**. Regroup all assets to be imported of the same types and execute in batch. Each actions specified in the `do` section will get passed the whole list of files to import.
+
+>	boolean. **Optional**. Regroup all assets to be imported of the same types and execute in batch. Each actions specified in the `do` section will get passed the whole list of files to import.
 
 `do`
-> Action sequence. See ~{Register an action}~. **Required**. Array of actions to execute when files of the specified type are to be imported.
+
+>	Action sequence. See ~{Register an action}~. **Required**. Array of actions to execute when files of the specified type are to be imported.
 
 `priority`
-> Number. **Optional**. If multiple importers are registered for the same type of files, this defines the priority in which importers are executed. **Lower** prirotiy are ran first.
+
+>	Number. **Optional**. If multiple importers are registered for the same type of files, this defines the priority in which importers are executed. **Lower** prirotiy are ran first.
 
 `options`
-> Json. **Optional**. Custom user defined data that is passed to each actions of the import sequence. As an example in the Fbx importation `options` section can contain type file specification (used by the Generic Import dialog) and a validation function.
+
+>	Json. **Optional**. Custom user defined data that is passed to each actions of the import sequence. As an example in the Fbx importation `options` section can contain type file specification (used by the Generic Import dialog) and a validation function.
 
 ## Stingray core importers
 
@@ -87,7 +96,7 @@ We will go over those importers quickly to explain how they are "wired":
 ### Fbx import
 
 
-```lua
+```sjson
 {
     types = ["fbx", "bsi"]
     label = "Scenes"
@@ -117,7 +126,8 @@ We will go over those importers quickly to explain how they are "wired":
 The importFbx function is quite complicated and handles popping the resource dialog, merging options with the default Fbx importation options and then triggering the importation process itself.
 
 Let's look at `importFbx` to see which parameters it gets passed during an importation:
-```javascript
+
+```js
 
 // options: corresponds to the options objects in the importater descriptor above
 // previousResult: if there was a previous importer in the chain of importation these are all the results (compilation results, asset created).
@@ -136,7 +146,7 @@ importFbx: function (options, previousResult, assets, directory, flags) {
 
 A quick exerpt from `asset-browser-actions.js` showcase what happens during the `sceneImport.DoImport` call:
 
-```javascript
+```js
 
 importFbx: function (options, previousResult, assets, directory, flags) {
     let sceneImport = new SceneImport(options, flags, processFlags, showDialog, null, options.validate);
@@ -204,7 +214,7 @@ You can register another importer for a specific type of file. Your importer wil
 
 As an example we will write an importer to list what was created during Fbx importation:
 
-```lua
+```sjson
 // From asset-browser.plugin
 {
     types = ["fbx"] // Another importer for Fbx
@@ -221,7 +231,8 @@ As an example we will write an importer to list what was created during Fbx impo
 ```
 
 Here we look at how the `fbxImportLog` function is coded:
-```javascript
+
+```js
 fbxImportLog: function (options, previousResult, assets, directory, flags) {
     let fbxImportReport = previousResult[1];
 
@@ -236,7 +247,7 @@ fbxImportLog: function (options, previousResult, assets, directory, flags) {
 
 Stingray now supports a new Font importer which makes use of the Generic Import Dialog as well.
 
-```lua
+```sjson
 // From font-importer.plugin:
 imports = [
     {
@@ -272,7 +283,7 @@ imports = [
 
 Let's look at how the Import Dialog is setup:
 
-```javascript
+```js
 // From font-importer-module.js
 function fontImporterDialog (importOptions, previousResult, file, destination, flags) {
     if (!_.isArray(file)) file = [{ file: file, directory: destination }];
@@ -307,7 +318,7 @@ function fontImporterDialog (importOptions, previousResult, file, destination, f
 
 The `importFont` is interesting in how it runs a command tool to extract data from the font file and then writes textures assets:
 
-```javascript
+```js
 function importFontFile (importOptions, dialogResult, file, destination/*, flags*/) {
   if (!dialogResult.accepted) {
       return console.info('Font import has been cancelled.');
@@ -389,7 +400,7 @@ function importFontFile (importOptions, dialogResult, file, destination/*, flags
 
 The Generic import dialog uses type descriptors to automatically populate a dialog containing a property editor. A type descriptor is specified in a `.type` file. As an example here is an exerpt of the `font-import-options.type` file:
 
-```lua
+```sjson
 export = "#fonts"
 types = {
 	fonts = {
@@ -444,7 +455,7 @@ types = {
 
 Basically it is a json file that specifies how a specific piece of Json should be interpreted and edited. The Stingray property editor uses `.type` file to populates itself automatically and to edit a json data model:
 
-![font_importer_dialog](../../../images/font_importer_dialog.png)
+![font_importer_dialog](../../images/font_importer_dialog.png)
 
 The complete syntax of a type file can be found here: ~{ Stingray Type System }.
 

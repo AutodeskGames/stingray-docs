@@ -36,12 +36,24 @@ To download a new Stingray plug-in not listed in the **Plugin Manager**, click *
 
 ## Make a new plug-in visible to the Plugin Manager
 
-If you want to load a new plug-in that isn't already listed in the **Plugin Manager**, you can install it using either of the following methods:
+If you want to load a new plug-in that you have on your computer but that is not already listed in the **Plugin Manager**, you can install it using either of the following methods:
 
 -	Place the plug-in, along with any other files it requires, into one of the default search folders listed below. Press **F5** to refresh the list.
 -	Or, to add a plug-in from any other folder on your computer, click the **Add Plugin** button (top left) and browse to the location of the *.plugin* file.
 
 The new plug-in is added to the **Plugin Manager**, but it isn't immediately loaded. See [Load a plug-in] above.
+
+### Engine plug-in .dll files
+
+If the plug-in you want to install has any *.dll* files that contain plug-ins for the Stingray *engine*, you'll need to copy those files manually to the right folder:
+
+-	`engine/<platform>/<config>/plugins`, under your Stingray installation directory.
+
+Note that the engine has separte folders for different platforms (`win32` and `win64`), and for different configurations (most notably `dev` and `release`). If your plug-in is distributed with multiple *.dll* files for those different platforms and configs, make sure you copy each *.dll* file to its corresponding location.
+
+The tricky part is that not all *.dll* files will necessarily be engine plug-ins. Some *.dll* files can be used only to integrate with the editor, and these files you won't need to copy. See the docs or installation instructions for your plug-in, if any, to know which is which.
+
+>	**NOTE:** This manual step is only temporary: we plan to handle this automatically in future.
 
 ### Default plug-in search folders
 

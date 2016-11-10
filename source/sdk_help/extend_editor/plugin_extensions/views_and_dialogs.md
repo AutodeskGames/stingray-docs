@@ -45,7 +45,7 @@ views = [
 `type`
  > Can be either **dialog** (generally modal), **panel** (tool window) or **window** (top level window). **Required**. Note that any registered **panel** will also be available in any of the `Tab Activator + Button`.
 
-![tab_activator](../../../images/tab_activator_button.png)
+![tab_activator](../../images/tab_activator_button.png)
 
 `path`
  > Relative path to the html file within the plugin that will be used to load the view. **Required**.
@@ -63,7 +63,7 @@ views = [
 
 A named view can easily be registered as a menu item. Most of the General tools available in the Stingray *Window menu* comes from registered named views.
 
-![window_menu](../../../images/window_menu.png)
+![window_menu](../../images/window_menu.png)
 
 To register a new menu bound to a view, you use a menu extension:
 
@@ -110,7 +110,7 @@ contextual_actions = [
 ]
 ```
 
-![show_dependencies](../../../images/open_dependencies.png)
+![show_dependencies](../../images/open_dependencies.png)
 
 ## Opening panel
 Alternatively, from within javascript you can use the views module to open a panel:
@@ -219,4 +219,4 @@ $scope.close = function (accepted) {
 };
 ```
 
-![new_folder](../../../images/create_new_folder_dialog.png)
+![new_folder](../../images/create_new_folder_dialog.png)

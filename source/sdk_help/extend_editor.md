@@ -1,4 +1,4 @@
-# Create a custom plug-in
+# Extend the editor
 
 Our goal is for the editor's plug-in system to be flexible enough to accommodate literally any project editing tasks. We know we're not quite there yet, but you can already do great things with this framework! We're hoping that if you decide to join in the fun of adding new features to the editor, you'll consider sharing your work with the rest of the user community -- and most definitely share with us your feedback about your experiences at:
 
@@ -55,9 +55,3 @@ Sometimes you might need to have *both* an an editor plug-in that helps to creat
 You currently need source access in order to create engine-level plug-ins. For more information, see the [Developer Help](http://www.autodesk.com/stingray-help/?contextId=DEVELOPER_HOME). If you don't have source access, you might be able to get by with a Lua extension module, depending on what you need to do and what platforms you need to support. See also ~{ Calling C code from Lua }~.
 
 We're working hard to unify all these different kinds of plug-ins in future and reduce the number of technologies and languages you have to know.
-
----
-Tags:
--	plugin
--	plug-in
----

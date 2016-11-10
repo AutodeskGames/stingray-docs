@@ -46,7 +46,7 @@ There are 2 ways to ensure a Custom Asset is available for creation in the Asset
 
 In a `.type` file, if you set the `generic_creator` property to true you will be able to right click in the ~{Asset Browser}~ and see an creation menu item for your asset type.
 
-![create scatter brush](../../../images/scatter_brush_creation_menu.png)
+![create scatter brush](../../images/scatter_brush_creation_menu.png)
 
 Asset created using the `generic_creator` will be generated from the default values (or the default values of types) specified in the `.type` file.
 
@@ -84,7 +84,7 @@ types = {
 
 In the example above, notice how the editor block for the `scatter_brush` asset uses the `generic_selector` property. When this property is set to `true` it means selecting a scatter brush will allow the Property Editor modify it.
 
-![create scatter brush](../../../images/scatter_brush_property_editing.png)
+![create scatter brush](../../images/scatter_brush_property_editing.png)
 
 #### Template creation
 
@@ -117,7 +117,7 @@ In its `.type` file, capture_settings doesn't use `generic_creator` (but still u
  }
 ```
 
-![create scatter brush](../../../images/capture_settings_creation_menu.png)
+![create scatter brush](../../images/capture_settings_creation_menu.png)
 
 ## Listening to changes on asset
 
@@ -214,7 +214,7 @@ types = {
 }
 ```
 
-![blend shape preview](../../../images/blend_shape_preview_update.gif)
+![blend shape preview](../../images/blend_shape_preview_update.gif)
 
 ### Scatter brushes
 Scatter brushes are an editor only resource that encapsulate a list of units used to *paint/scatter* on anoter unit or a terrain.
@@ -240,7 +240,7 @@ objectEditingService.on("DataObjectsConsensusChanged", function (args) {
 }.bind(this));
 ```
 
-![capture_settings](../../../images/scatter_brush_property_editing.png)
+![capture_settings](../../images/scatter_brush_property_editing.png)
 
 ### Capture settings
 Capture Settings are an editor only resource that specify parameters needed to do a viewport capture and save the result as an `exr` stream of files. It showcases how a custom asset using the PRoperty Editor can act as a *specicalized editor*.
@@ -295,4 +295,4 @@ types = {
 ```
 - editor\plugins\capture_frames\capture_frames_actions.js : handle capture action and communicate with viewports to generate exr files.
 
-![capture_settings](../../../images/capture_settings_editing.png)
+![capture_settings](../../images/capture_settings_editing.png)
