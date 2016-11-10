@@ -1,7 +1,7 @@
 # Stingray 1.6 Release Notes
 <a name="top"></a>
 
-Stingray 1.6 (1.6.932.0) focuses on delivering great workflows between 3ds Max and Stingray, making it easy to send scenes from Max and produce stunning real-time renders with Stingray. With the new Render to Frames tool, you can now capture high quality videos of your interactive projects and share online.
+Stingray 1.6 (1.6.944.0) focuses on delivering great workflows between 3ds Max and Stingray, making it easy to send scenes from Max and produce stunning real-time renders with Stingray. With the new Render to Frames tool, you can now capture high quality videos of your interactive projects and share online.
 
 > **Important**: We strongly recommend that you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
@@ -120,6 +120,7 @@ This release of Stingray picks up the latest version of FBX (2017.1), which prov
 
 - GAME-17964 Asset Browser location not remembered between sessions
 - GAME-17525 Renaming a folder to have a dot/period works but trying to rename it back fails with "Source path is equal to Destination path"
+- GAME-17958 Pressing 'F' to frame after dragging a mesh from Asset Browser doesn't work
 
 ### Entities
 
@@ -130,6 +131,11 @@ This release of Stingray picks up the latest version of FBX (2017.1), which prov
 
 - GAME-4408 Delay node does not execute when attached to external event from unspawned unit
 - GAME-17256 Trying to access actor of unit that has PhysX actor gives access violation
+- GAME-18511 Get Camera Vertical FOV, Near Range, Far Range don't work properly
+- GAME-13555 Quit node exits Test Level but gives error "Testing failed. See logs."
+- GAME-8004 Tooltip for object under cursor should be hidden on right-click context menu
+- GAME-17745 "VR Un-Link Tracker" node is not unlinking the correct object
+- GAME-18513 Custom fields in dynamic section of flow nodes is broken
 
 ### General
 
@@ -137,38 +143,34 @@ This release of Stingray picks up the latest version of FBX (2017.1), which prov
 - GAME-13641 Test Level window sometimes opens completely offscreen
 - GAME-14095 Double-clicking on a color swatch sometimes opens both the Color Picker Simple and the Color Picker dialogs
 - GAME-18137 Remove editor viewport stalls by debouncing camera sync
-- GAME-17469 Terrain: creation dialog fields need better input validation.
 - GAME-12932 During Test Play switching back to Editor and doing F8 causes error "simple_project.lua:101: Level not loaded: `__level_editor_test`"
 - GAME-18233 Don't use light with mesh as default light in the preview viewport of editors
 - GAME-16615 When using scrollwheel or spinner-dragging to change multiple transformation fields all the fields should update
 - GAME-18172 Markers are blurry on close-up
 - GAME-18284 Disable non-applicable properties for non-offset animation
-- GAME-18383 Terrain: missing input validation on empty Height Map Resolution gives failure on compiling, "Height field cooking failed", "Assertion failed `_buffer->size() >= size` at `input_archive.inl:42`"
+- GAME-17469 Terrain: creation dialog fields need better input validation.
+- GAME-18383 Terrain: missing input validation on empty Height Map Resolution gives
+ failure on compiling, "Height field cooking failed", "Assertion failed `_buffer->size() >= size` at `input_archive.inl:42`"
+- GAME-12089 Terrain: Creation dialog may need size limit validation
+- GAME-18304 Engine crash with "Terrain loaded while other terrain is loaded" error
 - GAME-16481 Avoid Javascript error when the invoke array of an asset_type extension is empty
 - GAME-16252 Editor should limit numbers to 32bit as default
 - GAME-16203 Rename level_flow_editor plugins to flow_editor
 - GAME-15040 Plugin Manager: Copy action does not resolve paths with spaces
 - GAME-16488 Failed to re-use open-editor script editor named action
 - GAME-16477 Updating an plugin asset type extension is not auto updated in the asset browser
+- GAME-18639 Dialogs can end up behind the main editor window
+- GAME-18852 Z also toggles position snap. It should only toggle rotation snap
+- GAME-17320 Entering a very large rotation value crashes the engine
+- GAME-14960 Missing Yes/No shortcut keys in Save Changes dialog
+- GAME-17483 Wwise deadlock in update_async_reads
 
 ### Interop
 
 - GAME-10354 Using 'Send to Stingray' from DCC does not cause the Asset Browser to have spinning compiling icons
-- GAME-15883 Korean characters do not come over correctly with send all from 3dsmax to Stingray
-- GAME-15884 Node names in stingray do not match those in the Max scene using Korean characters
-- GAME-17620 Periods/Dots '.' in material names prevent import into stingray
-
-### Launcher
-
-- GAME-16328 Updates take longer to appear than in the Desktop Manager
-- GAME-16692 Search doesn't work in the Update tab
-- GAME-17522 Mudbox Learning link takes to the Stingray docs
-- GAME-17521 ReMake Learning and Documentation takes to the Stingray docs
-- GAME-17512 FBX Review documentation points to the Maya LT 2017 overview
-- GAME-16738 Clear Filters button looks like misaligned
-- GAME-16736 Assets tab always shows the same assets in the first page for all programs
-- GAME-16565 Download Progress bar only shows up after 23% of download completion
-- GAME-16766 No message is displayed when no assets are found
+- GAME-15883 Send All from 3ds Max does not work correctly when using localized file names
+- GAME-15884 Localized node names from 3ds Max do not transfer correctly
+- GAME-17620 Periods/Dots '.' in material names prevent import into Stingray
 
 ###Lua
 
@@ -185,42 +187,45 @@ This release of Stingray picks up the latest version of FBX (2017.1), which prov
 ### Platform-specific
 
 - GAME-16903 HTML5 (WebGL2): After the first click, clicking in the game and moving the mouse in any direction sends the camera pointing up at the sky
-- GAME-18416 Rebuilding GearVR on Android target does not initiate re-deploy
+- GAME-18416 Rebuilding GearVR on Android target does not initiate redeploy
 - GAME-16980 Expose sceKernelIsNeoMode to Lua on PS4
-- GAME-16781 Remove legacy platforms from stingray-testbed
-- GAME-16712 PS4 - Add threading to Trophies
+- GAME-16712 PS4: Add threading to Trophies
+- GAME-17948 PS4: Terrain crashes game on PS4 in debug builds
 - GAME-17450 SteamVR crash on startup if Steam not running
 
-### Rendering
+### Rendering and VR
 
 - GAME-18313 Particles shader does not show unless base color is set
 - GAME-17703 Make Occluder function with local lights
 - GAME-17394 Baker: Skylight leakage through transparent surfaces
 - GAME-17410 Baker: Fails to serialize global light baking properties
 - GAME-17244 Baker: Material fails sometimes for some objects
+- GAME-13000 Baker: Make sure baker doesn't pause when editor loses focus
 - GAME-17340 Creating a custom 'light base' (material resource) is broken
 - GAME-17644 Recursive shader_source includes causes crash
-- GAME-17435 VR Units linked to HMD need to have their culling structures updated
-- GAME-13738 'TAA' visualization modes are broken in VR renderpipe
-- GAME-13735 'Reconstructed Normals' visualization mode is broken using VR renderpipe
-- GAME-13737 'Depth of Field' visualization mode is broken in VR renderpipe
 - GAME-13536 Texture Manager: thumbnails often don't get properly generated (blank gray or wait icon)
 - GAME-13417 Reflection Probe seems broken on XB1
-- GAME-17592 Shadow ignored / pops on objects set in a distance greater than 250
+- GAME-17592 Shadow ignored/pops on objects set in a distance greater than 250
 - GAME-17279 Render target mip-map mismatch
-- GAME-18269 VR: Support mono/stereo mirror view when running VR app
 - GAME-14778 Many (450+) ShaderCompiler warnings when live linking character-template project to PS4
 - GAME-13704 Reflection Probe: Glossiness in SSR vs probe reflections differs a lot
 - GAME-16978 Bad error messages in PS4 renderer
-- GAME-17745 "VR Un-Link Tracker" flow node is not unlinking the correct object.
 - GAME-17227 Old PS4 shader does not work in V1.5
 - GAME-16935 Spotlight with scale applied can cause staircase effects passing through a density set material
-- GAME-17948 PS4: Terrain crashes game on PS4 in debug builds
+- GAME-13222 Beta Lightmapper will pause if the UI is set to background
+- GAME-17816 Shadow mesh lacks normal information
+- GAME-13322 Changing property on a material output node does not dirty flag the material resource
+- GAME-15534 VR: Test Level button launches viewport at 60fps instead of required 90fps
 - GAME-16968 VR: Culling on objects linked to tracker is wrong
+- GAME-17435 VR Units linked to HMD need to have their culling structures updated
+- GAME-18269 VR: Support mono/stereo mirror view when running VR app
+- GAME-13738 'TAA' visualization modes are broken in VR renderpipe
+- GAME-13735 'Reconstructed Normals' visualization mode is broken using VR renderpipe
+- GAME-13737 'Depth of Field' visualization mode is broken in VR renderpipe
 
 ### Scaleform Studio
 
-- GAME-16456 WebGL switching back and forth between fullscreen mode breaks the UI
+- GAME-17919 Error on startup, Error: [$rootScope:inprog] $digest already in progress
 
 ### Script Editor
 
@@ -238,7 +243,7 @@ This section lists known limitations and workarounds for Stingray.
 
 Unless otherwise noted in the **What's Fixed** section, please be aware that this release contains the same **Known Limitations** described in the previous versions of Stingray Release Notes.
 
-> **Note**: We recommended you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
+> **Note**: We recommend you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
 - **GAME-18398 After opening a v1.5 project in Stingray v1.5, all existing v1.6 projects require migration**
 
