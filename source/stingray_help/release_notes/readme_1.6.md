@@ -116,9 +116,9 @@ This release of Stingray picks up the latest version of FBX (2017.1), which prov
 - GAME-17608 Anim Controller Editor: Should be able to sort events by name, time, creation order
 - GAME-17607 Anim Controller Editor: Disable Ctrl+Left/Right navigation when textfield is selected
 - GAME-17727 Anim Controller Editor: Bug in marker time fixing on load
-- GAME-17611 Anim Controller Editor: List of Flow event in the context menu of timeline should be sorted alphabetically
+- GAME-17611 Anim Controller Editor: List of Flow event in the context menu of timeline right-click context menu should be sorted alphabetically
 - GAME-17613 Anim Controller Editor: Ctrl+S should save the controller, not the level
-- GAME-17615 Anim Controller Editor: ShortcutStates should have their own names
+- GAME-17615 Anim Controller Editor: Shortcut states should have their own names
 
 ### Asset Browser
 
@@ -155,8 +155,8 @@ This release of Stingray picks up the latest version of FBX (2017.1), which prov
 - GAME-17469 Terrain: creation dialog fields need better input validation.
 - GAME-18383 Terrain: missing input validation on empty Height Map Resolution gives
  failure on compiling, "Height field cooking failed", "Assertion failed `_buffer->size() >= size` at `input_archive.inl:42`"
-- GAME-12089 Terrain: Creation dialog may need size limit validation
-- GAME-18304 Engine crash with "Terrain loaded while other terrain is loaded" error
+- GAME-12089 Terrain: Terrain creation dialog needs Size limits
+- GAME-18304 Engine crash with "Terrain loaded while other terrain is loaded"
 - GAME-16481 Avoid Javascript error when the invoke array of an asset_type extension is empty
 - GAME-16252 Editor should limit numbers to 32bit as default
 - GAME-16203 Rename level_flow_editor plugins to flow_editor
@@ -168,32 +168,32 @@ This release of Stingray picks up the latest version of FBX (2017.1), which prov
 - GAME-17320 Entering a very large rotation value crashes the engine
 - GAME-14960 Missing Yes/No shortcut keys in Save Changes dialog
 - GAME-17483 Wwise deadlock in update_async_reads
+- GAME-18460 About Box: Product License Information button doesn't do anything
+- GAME-18344 Content: Primitive units use the actor type "mesh" instead of a simplified volume
 
 ### Interop
 
 - GAME-10354 Using 'Send to Stingray' from DCC does not cause the Asset Browser to have spinning compiling icons
 - GAME-15883 Send All from 3ds Max does not work correctly when using localized file names
 - GAME-15884 Localized node names from 3ds Max do not transfer correctly
-- GAME-17620 Periods/Dots '.' in material names prevent import into Stingray
+- GAME-17620 Material names containing periods do not import
 
 ###Lua
 
 - GAME-17572 Hot reloading no longer works in Stingray 1.4 or 1.5
-- GAME-17327 The DynamicData objects returned from the LevelResource are missing functions.
-- GAME-14261 Crash in release for Lua calls to functions that are only exposed in dev builds
+- GAME-17327 The DynamicData objects returned from the LevelResource are missing functions
 
 ###Particles
 
 - GAME-15985 Entering a longer value for a particle system Total gives "Error compiling resource" error
 - GAME-16834 Changing total Particles crashes particle compilation
-- GAME-17903 Windows exe renamed stingray_win64_dev.exe
+- GAME-17903 Extra x64 in Windows exe name
 
 ### Platform-specific
 
-- GAME-16903 HTML5 (WebGL2): After the first click, clicking in the game and moving the mouse in any direction sends the camera pointing up at the sky
 - GAME-18416 Rebuilding GearVR on Android target does not initiate redeploy
 - GAME-16980 Expose sceKernelIsNeoMode to Lua on PS4
-- GAME-16712 PS4: Add threading to Trophies
+- GAME-16712 PS4: Add threading to trophies
 - GAME-17948 PS4: Terrain crashes game on PS4 in debug builds
 - GAME-17450 SteamVR crash on startup if Steam not running
 
@@ -205,6 +205,8 @@ This release of Stingray picks up the latest version of FBX (2017.1), which prov
 - GAME-17410 Baker: Fails to serialize global light baking properties
 - GAME-17244 Baker: Material fails sometimes for some objects
 - GAME-13000 Baker: Make sure baker doesn't pause when editor loses focus
+- GAME-12884 Light-baking data lost after changes are made in the Property Editor
+- GAME-13975 Mesh loses Lightmap when applying a new material
 - GAME-17340 Creating a custom 'light base' (material resource) is broken
 - GAME-17644 Recursive shader_source includes causes crash
 - GAME-13536 Texture Manager: thumbnails often don't get properly generated (blank gray or wait icon)
@@ -215,7 +217,7 @@ This release of Stingray picks up the latest version of FBX (2017.1), which prov
 - GAME-13704 Reflection Probe: Glossiness in SSR vs probe reflections differs a lot
 - GAME-16978 Bad error messages in PS4 renderer
 - GAME-17227 Old PS4 shader does not work in V1.5
-- GAME-16935 Spotlight with scale applied can cause staircase effects passing through a density set material
+- GAME-16935 Spotlight with scale applied can cause staircase effects with materials containing density
 - GAME-13222 Beta Lightmapper will pause if the UI is set to background
 - GAME-17816 Shadow mesh lacks normal information
 - GAME-13322 Changing property on a material output node does not dirty flag the material resource
@@ -226,10 +228,6 @@ This release of Stingray picks up the latest version of FBX (2017.1), which prov
 - GAME-13738 'TAA' visualization modes are broken in VR renderpipe
 - GAME-13735 'Reconstructed Normals' visualization mode is broken using VR renderpipe
 - GAME-13737 'Depth of Field' visualization mode is broken in VR renderpipe
-
-### Scaleform Studio
-
-- GAME-17919 Error on startup, Error: [$rootScope:inprog] $digest already in progress
 
 ### Script Editor
 
