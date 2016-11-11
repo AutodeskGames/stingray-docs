@@ -97,6 +97,10 @@ Stingray includes new texture categories and templates such as Normal, Linear Gr
 
 Download new Stingray plug-ins and update existing ones using the **Get more plugins** selection in the **Plugin Manager**. Select any of the available plugins and click **Install** to download it. See ~{ Add and remove plug-ins using the Plugin Manager }~.
 
+### Switch between DX11 and DX12 when rendering
+
+Source customers can now toggle between DX11 and DX12 as the viewport renderer in the Editor (**Edit > Engine > Renderer**). Note that this option is available only if you compile the engine with `--use-d3d12` flag, provided your engine supports DX12. See ~{ Switch between DX11 and DX12 }~.
+
 ### FBX Version 2017.1
 
 This release of Stingray picks up the latest version of FBX (2017.1), which provides various security improvements.
