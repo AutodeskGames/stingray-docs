@@ -1,7 +1,7 @@
 # Stingray 1.6 Release Notes
 <a name="top"></a>
 
-Stingray 1.6 (1.6.944.0) focuses on delivering great workflows between 3ds Max and Stingray, making it easy to send scenes from Max and produce stunning real-time renders with Stingray. With the new Render to Frames tool, you can now capture high quality videos of your interactive projects and share online.
+Stingray 1.6 (1.6.1011.0) focuses on delivering great workflows between 3ds Max and Stingray, making it easy to send scenes from Max and produce stunning real-time renders with Stingray. With the new Render to Frames tool, you can now capture high quality videos of your interactive projects and share online.
 
 > **Important**: We strongly recommend that you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
