@@ -1,6 +1,6 @@
 # Extend the engine
 
-The topics in this section provide a brief introduction to Writing plug-ins for the runtime Stingray engine. You can write plug-ins to extend the engine by adding new features, adding new objects and functions to the Lua gameplay API, integrating external middleware into the engine, etc.
+The topics in this section provide a brief introduction to writing plug-ins for the runtime Stingray engine. You can write plug-ins to extend the engine by adding new features, adding new objects and functions to the Lua gameplay API, integrating external middleware into the engine, etc.
 
 ## Examples
 
@@ -13,3 +13,9 @@ For working examples of plug-ins that demonstrate the material in this section, 
 ## Related source code
 
 Most of the engine code that you will need to understand and interact with in order to write a plug-in is kept in the `runtime/application/plugin/plugin_api.h` file. Refer to this file as well as the sample plug-ins as you go through the topics in this section.
+
+## The update loop
+
+The update loop, also called the *game loop* or the *main loop*, is a key concept in real-time games.
+
+![The game loop](images/game_loop.png)

@@ -51,7 +51,3 @@ As another example, a custom editor plug-in might programmatically place entitie
 On the other hand, if you need to make the Stingray runtime engine behave differently when you play your project, you might need to create an engine-level plug-in using the engine's own plug-in API. This might be the case if you need to integrate third-party "middleware" into Stingray -- for example, we've written engine plug-ins that integrate third-party SDKs like Oculus and Steam, and our own SDKs like Gameware Navigation and HumanIK.
 
 Sometimes you might need to have *both* an an editor plug-in that helps to create some type of data in the project, *and* an engine-level plug-in that defines how that data gets compiled, loaded and used in the runtime game. For example, we ship an editor plug-in for Scaleform Studio that tells the **Asset Browser** what to do with Scaleform Studio data files, and an engine-level plug-in for Scaleform Studio that makes the runtime engine capable of loading and rendering the data in those *.s2d* projects.
-
-You currently need source access in order to create engine-level plug-ins. For more information, see the [Developer Help](http://www.autodesk.com/stingray-help/?contextId=DEVELOPER_HOME). If you don't have source access, you might be able to get by with a Lua extension module, depending on what you need to do and what platforms you need to support. See also ~{ Calling C code from Lua }~.
-
-We're working hard to unify all these different kinds of plug-ins in future and reduce the number of technologies and languages you have to know.

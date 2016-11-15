@@ -28,9 +28,11 @@ Any customer can use the Stingray SDK to make these kinds of plug-ins. You don't
 
  	Clone or download a zip from the GitHub repository, at <https://github.com/AutodeskGames/stingray-plugin-api-samples>.
 
-3.	Set up a basic *.plugin* file that describes your plug-in. Every plug-in is defined by one of these files. It contains metadata about your plug-in, and a set of *extensions* that define what the plug-in should do when it's loaded.
+3.	Create a new empty folder for your plug-in. You'll put all the files your plug-in needs in here.
 
-	An easy way to get started is to copy the minimal description from the ~{ Define a Stingray Plug-in }~ page.
+	In this folder, you'll have to create a new *.plugin* file to describe your plug-in. This descriptor contains metadata about your plug-in, and a set of *extensions* that define what the plug-in should do when it's loaded. An easy way to get started is to copy the minimal description from the ~{ Define a Stingray Plug-in }~ page.
+
+	You can also add an optional image called `thumbnail.png` in this folder. The editor's **Plugin Manager** will use this image to represent your plug-in.
 
 3.	Install and load your plug-in into the editor and/or the engine, so that you can test it out as you work. You'll need to use the editor's **Plugin Manager** to find and load your *.plugin* file. You'll also need to manually copy any *.dll* files that you build for the engine into the `engine/<platform>/<config>/plugins` folder inside your Stingray installation folder.
 
@@ -38,8 +40,8 @@ Any customer can use the Stingray SDK to make these kinds of plug-ins. You don't
 
 4.	Get working!
 
-	The sections on extending the editor and extending the engine describe how to go about setting up your plug-in to integrate with the editor and engine.
+	The sections on [extending the editor](./extend_editor.html), [extending the engine](./extend_engine.html) and [extending the project content](./extend_content.html) describe how to go about setting up your plug-in to hook in to the different parts of the Stingray system.
 
 5.	While you're working on your plug-in, you'll often need to reload it so that you can test and iterate on it. See ~{ Reload a Plug-in }~.
 
-6.	When your plug-in is ready, you'll need to package it up and distribute it to whoever will need to use it. See ~{ Distribute a Plug-in }~.
+6.	When your plug-in is ready, you'll need to package it up and distribute it to whoever else will need to use it. See ~{ Distribute a Plug-in }~.

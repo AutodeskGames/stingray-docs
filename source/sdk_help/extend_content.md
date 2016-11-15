@@ -1,4 +1,4 @@
-# Make new resources available to the project
+# Extend the project content
 
 You can use the `resources` extension to make new resources available for use in the editor. When your plug-in is loaded, users are able to work with these resources like any other assets in their project or in the core resources folder.
 
