@@ -49,6 +49,10 @@ Yes, eligible schools, teachers and students can obtain educational licenses. Pl
 
 Yes. Maya LT customers with an active Maintenance Subscription contract or Maya LT Desktop Subscription can use Stingray as a part of their Maya LT subscription,  using their Maya LT license. Stingray is included in the Maya LT installer.
 
+[![NEW](/images/new.png "What else is new in v1.6?")](/release_notes/readme_1.6.html)
+
+Some customers are eligible to run Stingray with a Non-commercial license. Refer to the [terms and conditions](http://www.autodesk.com/company/legal-notices-trademarks/terms-of-service-autodesk360-web-services/autodesk-web-services-entitlements/stingray-startup-license) to find out if you're eligible, then follow the set up instructions in the [Stingray Installation Supplement](http://help.autodesk.com/view/Stingray/ENU/?guid=GUID-2835E17D-888F-459E-A622-0CD8ED983A91) topic. 
+
 ##Do Maya LT customers with a perpetual license have access to Stingray? <a name="maya-lt-access"></a>
 
 Customers with a Maya LT perpetual license have access to Stingray for their respective version of Maya LT. To access the latest version of Stingray, your Maya LT license must have a valid Maintenance contract, or be on active Subscription. For more information about perpetual licenses see: [www.autodesk.com/products/perpetual-licenses](http://www.autodesk.com/products/perpetual-licenses).

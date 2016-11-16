@@ -73,7 +73,7 @@ You can now use Flow to control entities:
 
 With Stingray 1.6, we aim to give you two things you need when learning anything new: more time, and some advice on where to start!
 
-Hobbyists, enthusiasts, and early adopters can now run Stingray using a Startup license, which lets you run Stingray free for one year for non-commercial projects. If the 30-day trial period was just not enough, the Stingray Startup license is for you. For more information, check out the Stingray installation topic.
+Hobbyists, enthusiasts, and early adopters can now run Stingray using a non-commercial Startup license. If the 30-day trial period didn't give you enough time, check out the [terms and conditions](http://www.autodesk.com/company/legal-notices-trademarks/terms-of-service-autodesk360-web-services/autodesk-web-services-entitlements/stingray-startup-license) to see if you're eligible for the non-commercial license. Updated steps to install using this license are included in the [Stingray Installation Supplement](http://help.autodesk.com/view/Stingray/ENU/?guid=GUID-2835E17D-888F-459E-A622-0CD8ED983A91) topic.
 
 In addition, if you're tired of searching for and watching tutorial videos, pop open the Stingray **Help** menu and select the brand new top-secret Stingray **Hands-on Training Mission**. We've added 5 quick, *interactive* tutorial lessons that take you through the Stingray basics, and get you well on your way to creating your own project. (Pssst - it's not really a secret. Let us know what you think!) We added a note about this in the ~{ Getting Started }~ topic.
 
