@@ -8,7 +8,7 @@ There are three main contenders for a gameplay programming language:
 
 Using C++ is already possible with Stingray, since the core engine is written in C++. However, we believe that many designers need a more lightweight, friendlier option for scripting gameplay: one that doesn't require frequent recompiling of code, and that doesn't require extensive formal training in programming.
 
-C# and Java may be faster than the "dynamic" languages, and they do offer better refactoring tools, but they also come with heavy runtime environments. It is also debatable whether or not they are different %i enough from C++ to have a big impact on the productivity of gameplay programmers.
+C# and Java may be faster than the "dynamic" languages, and they do offer better refactoring tools, but they also come with heavy runtime environments. It is also debatable whether or not they are different enough from C++ to have a big impact on the productivity of gameplay programmers.
 
 Unlike C#, which offers limited support for *Edit and Continue* on Windows, using a dynamic scripting language offers the great advantage of hot-reloading scripts during gameplay on any target platform, decreasing iteration times for designers. But which of the many languages is most appropriate?
 
