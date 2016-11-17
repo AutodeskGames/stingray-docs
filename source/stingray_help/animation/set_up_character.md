@@ -169,7 +169,7 @@ As you select states in the **Anim Controller** Editor, use the preview pane on 
 
 2. Press Play in the **Level Viewport** ~{ Toolbar }~.
 
-	Now when you press a, the unit flow triggers the move event, and your character walks forward.
+	Now when you press 'a', the unit flow triggers the move event, and your character walks forward.
 
 ---
 Related topics:

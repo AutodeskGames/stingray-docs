@@ -31,14 +31,12 @@ The `navworld` Unit configures:
 This Unit lets you configure:
 
 *	Path finder configuration
-	Avoidance configuration: Set the `GwNavBotConfiguration/avoidance/enable` scriptdata to `false` to disable avoidance.
+	avoidance configuration: Set the `GwNavBotConfiguration/avoidance/enable` scriptdata to `false` to disable avoidance.
 *	Trajectory mode: Set the `GwNavBotConfiguration/use_channel` scriptdata to `true` to use a spline trajectory for smoother movements but heavier computation time.
 *	The shortcut trajectory configuration
 *	The channel trajectory configuration
 
 In Lua, the `NavWorld` object looks for unit instances containing a `GwNavBot` script data object, and automatically creates a bot using `GwnavBot/configuration_name` to retrieve the BotConfiguration to use for setting up the bot.
-
-
 
 ## Allowed, forbidden and custom cost of navmesh layers
 
@@ -49,7 +47,7 @@ Except for those specified into `navtag_layers` scriptdata array made of objects
 
 `layer_cost_multiplier` gives the cost applied when traversing such layer, negative or null costs forbid the layer to be traversed.
 
-For instance in the following example a navtag with `layer_id` 1 will c cost the traverrsed distance multiplied by 1 since it is not present. A navtag with `layer_id` 0 will cost twice the cost of `layer_id` 1. And A navtag with `layer_id` 2 cannot be traversed at all.
+For instance in the following example a navtag with `layer_id` 1 will cost the traversed distance multiplied by 1 since it is not present. A navtag with `layer_id` 0 will cost twice the cost of `layer_id` 1. And a navtag with `layer_id` 2 cannot be traversed at all.
 
     navtag_layers = [
       {
@@ -70,7 +68,7 @@ For instance in the following example a navtag with `layer_id` 1 will c cost the
 A Navgraph lets you connect portions of the NavMesh together.
 You'll typically use this to join two ledges for things like ladders, jumps, climbing, elevators, and so on.
 
-To place a NavGraph in the editor you can use the `navgraphconnector` Unit (the **Graph Connector** unit in the ~{ Create panel }~ or the Create menu). Place the unit, then translate, rotate and scale it.
+To place a NavGraph in the editor you can use the `navgraphconnector` unit (the **Graph Connector** unit in the ~{ Create panel }~ or the Create menu). Place the unit, then translate, rotate and scale it.
 At runtime, this unit automatically generates a set of NavGraph to join the two ledges.
 
 `GwNavGraphConnector/sampling_step` changes the navgraph density along the ledges.
@@ -104,8 +102,7 @@ The following script data setup the tagging (similarly to what is put in a `GwNa
 *	Integer script data `layer_id` : identifies the layer_id this navtag belongs to, allowing to control how bots traverse it.
 *	Integer script data `smartobject_id` : identifies the smartobject associated to this navtag to control the bot state and cost at runtime, and customize how the smartobject will be traversed by bots.
 *	Integer script data `user_data_id` : a custom value for users
-*	Object script data `color` with integers script data `r`, `g`, `b` :  a custom color to ease visual debug with the NAvigationLab.
-
+*	Object script data `color` with integers script data `r`, `g`, `b` :  a custom color to ease visual debug with the NavigationLab.
 
 ## Specifying the TagVolume for a Unit
 
@@ -133,7 +130,7 @@ Obstacles are navigation objects which can be either taken into consideration by
 
 ## Box obstacle
 
-Add a box obstacle to a Unit, adding a scriptdata object `GwNavBoxObstacle`.
+Add a box obstacle to a unit, adding a scriptdata object `GwNavBoxObstacle`.
 
 Height, width, depth and local center of the box can be set similarly to a TagVolume, see [Specifying the TagVolume for a Unit]. But it has two other parameters:
 
@@ -147,9 +144,9 @@ Finally, specifiy the tagging by adding children script data to `GwNavBoxObstacl
 
 ![Cylindrical Obstacles](../../images/canister.png)
 
-Add a cylinder obstacle to a Unit, adding a scriptdata object `GwNavCylinderObstacle`.
+Add a cylinder obstacle to a unit, adding a scriptdata object `GwNavCylinderObstacle`.
 
-The following children script data control the height and radius of the cylinder (the Unit root position is the base of the cylinder):
+The following children script data control the height and radius of the cylinder (the unit root position is the base of the cylinder):
 
 *	`GwNavCylinderObstacle/height`
 *	`GwNavCylinderObstacle/radius`
