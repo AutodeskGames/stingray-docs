@@ -275,292 +275,256 @@ var hdrColorProperty = props.hdrColor("Color", genModel([1,1,1]), genModel(1));
 
 ### Number
 
-#### Type file (String)
+Spinner showing a number. Comes with lots of nifty feature:
+- Right clicking on the spinner resets it to its default value.
+- Shift + Spinner modifies the data really fast.
+- Ctrl + Spinner modifies the data more slowly.
+
+Property       |Type     |Default   |Description
+---------------|---------|----------|-----------
+`min`     |`number` |`-2147483648`|Minimal value of the number
+`max`|`number` |`2147483647`  |Maximal value of the number
+`step` (in type file)|`number` |`0.1`  |When pressing the spinner button how much should it increment/decrement
+`increment` (in javascript)|`number` |`0.1`  |When pressing the spinner button how much should it increment/decrement
+`decimal`|`number` |`4`  |Number of decimals to show. If 0, the number is assumed to be an integer.
+`numericDefaultValue`|`number` |`0`  |Value to reset to whrn right clicking on the Spinner.
+
+
+#### Type file
 ```lua
-Color = {
-    type = "core/types/color"
+Number = {
+    type = ":number"
+    editor = {
+    	// Use min/max/default in the editor block instead of the type specification
+    	default = 1
+    	min = 0
+    	max = 1
+        control = "Number"
+        step = 0.3
+        priority = 4
+    }
 }
 ```
 
 ####Javascript
 ```javascript
-// Simple color:
-var colorProperty = props.color("Color", genModel([1,1,1]));
-
-// HDR color:
-var hdrColorProperty = props.hdrColor("Color", genModel([1,1,1]), genModel(1));
+var numberProperty = props.number("A Numeric Value", genModel(42.111), {
+	increment: 0.5,
+    min: -9,
+    max: 56.9
+});
 ```
 
 ![import menu](../images/property_number.png)
 
 ### Slider
 
-#### Type file (String)
+Slider property allows editing of a number using a slider instead of a spinner. Most of its parameters are similar to the number property.
+
+Property       |Type     |Default   |Description
+---------------|---------|----------|-----------
+`min`     |`number` |`-2147483648`|Minimal value of the number
+`max`|`number` |`2147483647`  |Maximal value of the number
+`step` (in type file)|`number` |`0.1`  |When pressing the spinner button how much should it increment/decrement
+`increment` (in javascript)|`number` |`0.1`  |When pressing the spinner button how much should it increment/decrement
+`decimal`|`number` |`4`  |Number of decimals to show. If 0, the number is assumed to be an integer.
+
+
+#### Type file
 ```lua
-Color = {
-    type = "core/types/color"
+Number = {
+    type = ":number"
+    editor = {
+    	// Use min/max/default in the editor block instead of the type specification
+    	default = 1
+    	min = 0
+    	max = 1
+        control = "Slider"
+        step = 0.3
+        priority = 4
+    }
 }
 ```
 
 ####Javascript
 ```javascript
-// Simple color:
-var colorProperty = props.color("Color", genModel([1,1,1]));
-
-// HDR color:
-var hdrColorProperty = props.hdrColor("Color", genModel([1,1,1]), genModel(1));
+var sliderProperty = props.slider("Percentable", genModel(50), {min: 0, max: 100, increment: 1});
 ```
 
-![import menu](../images/property_number.png)
+![import menu](../images/property_slider.png)
 
 ### String
 
-#### Type file (String)
+String property provide a textbox.
+
+Property       |Type     |Default   |Description
+---------------|---------|----------|-----------
+`isMultiline`     |`boolean` |`false`|Defines if the textbox should span over multiple lines.
+`lineRows`|`number` |`0`  |If `isMultiline` is `true` you can specify the number of lines of the textbox (between 1 and 8).
+
+
+
+#### Type file
 ```lua
-Color = {
-    type = "core/types/color"
+SingleLine = {
+    type = ":string"
+    editor = {
+        label = "Single Line"
+    }
+}
+MultiLine = {
+    type = ":string"
+    default = "pow"
+    editor = {
+        label = "Multi Line"
+        isMultiline = true
+        lineRows = 4
+    }
 }
 ```
 
 ####Javascript
 ```javascript
-// Simple color:
-var colorProperty = props.color("Color", genModel([1,1,1]));
+var stringProperty = props.color("Color", genModel([1,1,1]));
 
-// HDR color:
 var hdrColorProperty = props.hdrColor("Color", genModel([1,1,1]), genModel(1));
 ```
 
-![import menu](../images/property_number.png)
+![import menu](../images/property_string.png)
 
 
 ### Path
+Path property allows a user to select either a folder or a file on disk.
 
-#### Type file (String)
+Property       |Type     |Default   |Description
+---------------|---------|----------|-----------
+`browserType`     |`string` |``|Can be either `File` or `Folder`. Defines what type of native path selector will be popped.
+`browseTitle`|`string` |``  |Title of the native dialog.
+`browseFilter`|`string` |``  |File filter to only show files with a specific extension.
+
+#### Type file
 ```lua
-Color = {
-    type = "core/types/color"
+FilePath = {
+    type = ":string"
+    editor = {
+        control = "PathProperty"
+        browseType = "File"
+        browseTitle = "Select an exe"
+        browseFilter = "*.exe"
+    }
+}
+DirPath = {
+    type = ":string"
+    editor = {
+        control = "PathProperty"
+        browseType = "Folder"
+        browseTitle = "Select a folder"
+    }
 }
 ```
 
 ####Javascript
 ```javascript
-// Simple color:
-var colorProperty = props.color("Color", genModel([1,1,1]));
-
-// HDR color:
-var hdrColorProperty = props.hdrColor("Color", genModel([1,1,1]), genModel(1));
+var fileProperty = props.file("File", propertyModel('file'), "Pick an exec", "*.exe"),
+var dirProperty = props.directory("Folder", propertyModel('folder'), "Pick a folder"),
 ```
 
-![import menu](../images/property_number.png)
+![import menu](../images/property_path.png)
+
+![import menu](../images/property_path_selector.png)
 
 
 ### Range
+A control containing two numeric min and max value fields.
 
-#### Type file (String)
+#### Type file
 ```lua
-Color = {
-    type = "core/types/color"
+Range = {
+    type = "core/types/range"
 }
 ```
 
 ####Javascript
 ```javascript
-// Simple color:
-var colorProperty = props.color("Color", genModel([1,1,1]));
-
-// HDR color:
-var hdrColorProperty = props.hdrColor("Color", genModel([1,1,1]), genModel(1));
+var range1= props.range("Range [-100, 100]", "mini", propertyModel('rangeMin'), 'maxi', propertyModel('rangeMax'), {min: -100, max: 100, increment: 0.5}),
+var range2 = props.range("Read Only", "MIN", propertyModel('rangeMin'), 'Max', propertyModel('rangeMax'), {min: -100, max: 100, increment: 0.5, isReadOnly: true})
 ```
 
-![import menu](../images/property_number.png)
+![import menu](../images/property_range.png)
+![import menu](../images/property_range2.png)
 
 
 ### Vector
 
-#### Type file (String)
+A control that can be used to display vector of 2, 3 or 4 components (not a rotation though).
+
+
+#### Type file
 ```lua
-Color = {
-    type = "core/types/color"
+Position = {
+    type = "core/types/vector3"
+}
+```
+
+#### Vector3 Type Definition
+```lua
+export = "#vector3"
+types = {
+    vector3 = {
+        type = ":array"
+        value = ":number"
+        size = 3
+        default = [0, 0, 0]
+        editor = {
+            control = "adskPropertyVector3"
+        }
+    }
 }
 ```
 
 ####Javascript
 ```javascript
-// Simple color:
-var colorProperty = props.color("Color", genModel([1,1,1]));
 
-// HDR color:
-var hdrColorProperty = props.hdrColor("Color", genModel([1,1,1]), genModel(1));
+// Create an array model for the whole vector2
+var vec2 = props.vector2("Vector2", genModel([34, 78]), {min: -100, max: 100, increment: 0.5});
+
+// Create one model per vector components:
+var vec3 = props.vector3("Vector3", genModel([1,2,3]));
+
+var vec4 = props.vector4("Vector4", genModel([34, 78, 67, -90]));
 ```
 
-![import menu](../images/property_number.png)
+![import menu](../images/property_vector.png)
 
 ### Rotation
+A control that maps on an vector of 3 radians value and that outputs the result as degrees.
 
-#### Type file (String)
+#### Type file
 ```lua
-Color = {
-    type = "core/types/color"
+Rotation = {
+    type = "core/types/rotation"
+}
+```
+
+#### Rotation Type definition
+```lua
+export = "#rotation"
+types = {
+    rotation = {
+        type = ":array"
+        value = ":number"
+        size = 3
+        default = [0, 0, 0]
+        editor = {
+            control = "adskPropertyRotation"
+        }
+    }
 }
 ```
 
 ####Javascript
 ```javascript
-// Simple color:
-var colorProperty = props.color("Color", genModel([1,1,1]));
-
-// HDR color:
-var hdrColorProperty = props.hdrColor("Color", genModel([1,1,1]), genModel(1));
+var rotation = props.rotation("Rotation", genModel(0, -1.52, 3.14));
 ```
 
-![import menu](../images/property_number.png)
-
-## To check if it works properly:
-- table
-- color gradient
-
-## Container
-- Carousel
-- Table
-- json
-
-## Should not expose:
-- dict?
-- child
-- prefix
-- graph
-
-
-
-
-
-
-
-
-
-
-
-
-## `adskPropertyColor`
-A color well with an accompanying intensity slider. Clicking the color well will bring up a color picker.
-
-#### No additional customizable properties.
-
-### Example
-```
-export = "#color"
-types = {
-    color = {
-        type = ":struct"
-        fields = {
-            rgb = {
-                type = ":array"
-                value = "#component"
-                size = 3
-                default = [0, 0, 0]
-            }
-            alpha = {
-                type = "#component"
-                default = 1
-            }
-            intensity = {
-                type = ":number"
-                default = 1
-                min = 0
-            }
-        }
-        editor = {
-            control = "adskPropertyColor"
-        }
-    }
-    component = {
-        type = ":number"
-        min = 0
-        max = 1
-    }
-}
-```
---------------------------------------------------------------------------------
-
-## `adskPropertyVector3`
-A three-component vector control.
-
-#### No additional customizable properties.
-
-### Example
-```
-export = {
-    type = ":struct"
-    fields = {
-        x = ":number"
-        y = ":number"
-        z = ":number"
-    }
-    editor = {
-        control = "adskPropertyVector3"
-    }
-}
-```
---------------------------------------------------------------------------------
-
-## `adskPropertyQuaternion`
-A rotation control with per-axis Euler angle fields.
-
-#### No additional customizable properties.
-
-### Example
-```
-export = {
-    type = ":struct"
-    fields = {
-        x = ":number"
-        y = ":number"
-        z = ":number"
-    }
-    editor = {
-        control = "adskPropertyQuaternion"
-    }
-}
-```
---------------------------------------------------------------------------------
-
-## `adskPropertyRange`
-A control containing two numeric min and max value fields.
-
-#### No additional customizable properties.
-
-### Example
-```
-export = {
-    type = ":array"
-    value = ":number"
-    size = 2
-    default = [0, 100]
-    editor = {
-        control = "adskPropertyRange"
-    }
-}
-```
---------------------------------------------------------------------------------
-
-## `adskPropertySlider`
-A slider control.
-
-Property|Type    |Default |Description
---------|--------|--------|-----------
-`step`  |`Number`|`null`  |Snaps the value slider to regular increments.
-
-### Example
-```
-export = {
-    type = ":number"
-    min = 0
-    max = 100
-    default = 50
-    editor = {
-        control = "adskPropertySlider"
-        step = 10
-    }
-}
-```
+![import menu](../images/property_rotation.png)
