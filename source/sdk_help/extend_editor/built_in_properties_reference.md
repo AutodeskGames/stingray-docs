@@ -1,24 +1,24 @@
 # Built-In Properties Reference
-Stingray Property Editor supports a wide range of property types. This reference details the built-in Property Editor widgets and the set of supported properties that can be used to customize them.
+Stingray Property Editor supports a wide range of property types. This reference details the built-in Property Editor controls and the set of parameters that can be used to customize them.
 
 There are 2 major ways of specifying properties: using the editor block in a `.type` file (see ~{Stingray Type System}~) or using the pure javascript compact notation (see ~{Property Editor Usage}~).
 
 --------------------------------------------------------------------------------
 
 ## Common editor metadata properties
-These properties are available for all widget types.
+These parameters are available for all property control types.
 
 Property       |Type     |Default   |Description
 ---------------|---------|----------|-----------
 `order`     |`Number` |`Infinity`|Controls the ordering of properties in ascending order.
-`control` or `displayType`     |`String` |`null`    |Specify a widget to use when editing the property. See below for additional widget specific properties.
+`control` or `displayType`     |`String` |`null`    |Specify a control to use when editing the property. See below for additional control specific properties.
 `label`        |`String` |`null`    |Set a custom label for the property.
-`suffixLabel`       |`String` |`null`    |Set a suffix to be displayed after the field. Only shown for some widget types.
+`suffixLabel`       |`String` |`null`    |Set a suffix to be displayed after the property value. Only shown for some widget types.
 `description`  |`String` |`null`    |Set a description for the property. Shown in tooltips.
 `isReadOnly`     |`Boolean`|`false`    |If `true`, prevents the user from editing the property.
-`isMultiEditSupported`|`Boolean`|`true`    |If `false`, prevents the user from editing the property if several objects are selected.
-`showLabel`      |`Boolean`|`true`    |If `false`, hides the label of the property in editors.
-`showValue`      |`Boolean`|`true`    |If `false`, hides the value of the property in editors.
+`isMultiEditSupported`|`Boolean`|`true`    |If `false`, prevents the user from editing the property if several objects are selected (i.e. consensus editing).
+`showLabel`      |`Boolean`|`true`    |If `false`, hides the label of the property in editor.
+`showValue`      |`Boolean`|`true`    |If `false`, hides the value of the property in editor.
 
 ### Type file example
 ```lua
@@ -56,12 +56,7 @@ var numberProperty = props.slider("Health", m.prop(50), {
 ##Built-In Property Widgets
 
 ### Quick Mithril Model Recap
-The following compact property editor notation will use [Mithril](http://mithril.js.org/) getter/setter function for model. More information can be found ~{Property Editor Usage}~ but as a quick reminder a property model is:
-
-- a function that can be invoked with one or two arguments.
-- first arguments is the property triggering the model change.
-- if there is no second argument, the function you return the value of the property.
-- if there is a second argument, the function must set the value of the property.
+The following compact property editor notation will use [Mithril](http://mithril.js.org/) getter/setter function mecanism to encapsulate acces to the property model. More information can be found ~{Property Editor Usage}~.
 
 This is a quick example of a property model function:
 ```javascript
@@ -127,7 +122,7 @@ var actionProperty = props.action("Action", function () {
 ![import menu](../images/property_action.png)
 
 ###Boolean
-No custom property.
+A checkbox control.
 
 #### Type file
 ```lua
@@ -143,7 +138,7 @@ No custom property.
 
 ####Javascript
 ```javascript
-var actionProperty = props.bool("A bool", genModel(true));
+var actionProperty = props.bool("Boolean", genModel(true));
 ```
 
 ![import menu](../images/property_boolean.png)
@@ -153,11 +148,10 @@ A combobox that can either map on an Enum or a string.
 
 Property       |Type     |Default   |Description
 ---------------|---------|----------|-----------
-`options`     |`object` |`{}`|This is a javascript object where the keys are the "pretty label" for the different choices and the values are the actual model value. See below for an example.
-`fetch_options` (type file only)  |`action` (see ~{Register an action}~)|`null`  |Action that will return the options.
+`options`     |`object` |`{}`|This is a javascript object where the keys are the "pretty label" for the different choices and the values are the actual enum values. See below for an example.
+`fetch_options` (type file only)  |`action` (see ~{Register an action}~)|`null`  |Action that will return dynamically generated options.
 `defaultValueName`        |`String` |`null`    |Default label if no choice.
 `defaultValue`       |`String` |`null`    |Default value if no choice.
-`invalid`  |`String` |`""`    |CSS class to add to the choice if the value is invalid.
 
 #### Type file (Enum)
 ```lua
@@ -186,6 +180,8 @@ Enum = {
 
 #### Type file (String)
 ```lua
+// This effectively creates a string that will use a Combobox control to select between
+// a specific list of string values.
 ChoiceString = {
     type = ":string"
     default = "SurfaceNormal"
@@ -275,7 +271,7 @@ var hdrColorProperty = props.hdrColor("Color", genModel([1,1,1]), genModel(1));
 
 ### Number
 
-Spinner showing a number. Comes with lots of nifty feature:
+Spinner control allowing editing of a number value. Comes with lots of nifty features:
 - Right clicking on the spinner resets it to its default value.
 - Shift + Spinner modifies the data really fast.
 - Ctrl + Spinner modifies the data more slowly.
@@ -319,7 +315,7 @@ var numberProperty = props.number("A Numeric Value", genModel(42.111), {
 
 ### Slider
 
-Slider property allows editing of a number using a slider instead of a spinner. Most of its parameters are similar to the number property.
+Slider controls allows editing of a number using a slider. Most of its parameters are similar to the number property (see above).
 
 Property       |Type     |Default   |Description
 ---------------|---------|----------|-----------
@@ -387,7 +383,9 @@ MultiLine = {
 ```javascript
 var stringProperty = props.color("Color", genModel([1,1,1]));
 
-var hdrColorProperty = props.hdrColor("Color", genModel([1,1,1]), genModel(1));
+var colorModel = genModel([1,1,1]);
+var intensityModel = genModel(1);
+var hdrColorProperty = props.hdrColor("Color", colorModel, intensityModel);
 ```
 
 ![import menu](../images/property_string.png)
@@ -425,8 +423,8 @@ DirPath = {
 
 ####Javascript
 ```javascript
-var fileProperty = props.file("File", propertyModel('file'), "Pick an exec", "*.exe"),
-var dirProperty = props.directory("Folder", propertyModel('folder'), "Pick a folder"),
+var fileProperty = props.file("File", genModel('c:/Pogram Files (x86)/Git/bin/git.exe'), "Pick an exec", "*.exe"),
+var dirProperty = props.directory("Folder", genModel('c:/Pogram Files (x86)/Git'), "Pick a folder"),
 ```
 
 ![import menu](../images/property_path.png)
@@ -446,8 +444,8 @@ Range = {
 
 ####Javascript
 ```javascript
-var range1= props.range("Range [-100, 100]", "mini", propertyModel('rangeMin'), 'maxi', propertyModel('rangeMax'), {min: -100, max: 100, increment: 0.5}),
-var range2 = props.range("Read Only", "MIN", propertyModel('rangeMin'), 'Max', propertyModel('rangeMax'), {min: -100, max: 100, increment: 0.5, isReadOnly: true})
+var range1= props.range("Range [-100, 100]", "mini", genModel(25), 'maxi', genModel(75), {min: -100, max: 100, increment: 0.5}),
+var range2 = props.range("Read Only", "MIN", genModel(25), 'Max', genModel(75), {min: -100, max: 100, increment: 0.5, isReadOnly: true})
 ```
 
 ![import menu](../images/property_range.png)
@@ -485,19 +483,17 @@ types = {
 ####Javascript
 ```javascript
 
-// Create an array model for the whole vector2
 var vec2 = props.vector2("Vector2", genModel([34, 78]), {min: -100, max: 100, increment: 0.5});
 
-// Create one model per vector components:
 var vec3 = props.vector3("Vector3", genModel([1,2,3]));
 
 var vec4 = props.vector4("Vector4", genModel([34, 78, 67, -90]));
 ```
 
-![import menu](../images/property_vector.png)
+![import menu](../images/property-vector.png)
 
 ### Rotation
-A control that maps on an vector of 3 radians value and that outputs the result as degrees.
+A control that that uses as data model vector of 3 radians value and that shows 3 spinners with degrees values.
 
 #### Type file
 ```lua
