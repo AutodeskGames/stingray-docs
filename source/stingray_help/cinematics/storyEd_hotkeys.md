@@ -31,9 +31,9 @@
 |----------------------------|-----------------|
 | Play/stop animation | Spacebar |
 | Previous Key | , (Comma)             |
-| Next Key | Alt + ,              |
-| Previous Frame | . (Period)             |
-| Next Frame | Alt + .             |
+| Next Key | . (Period) |
+| Previous Frame | Alt + ,          |
+| Next Frame | Alt + .           |
 
 ---
 Related topics:
