@@ -1,5 +1,7 @@
 # Template projects
 
+![UPDATED](../../images/updated.png)
+
 The Stingray Editor ships with a few sample projects to help you get started. By default, template projects install in the following location: `C:\Program Files\Autodesk\Stingray\<version>\editor\templates`, and are available from the **Project Manager** every time you start Stingray or select **Templates** tab in the **Project Manager**.
 
 > ![](../../images/icon_video.png) You can find video walkthroughs of each template <a href="https://www.youtube.com/playlist?list=PLTjhBiJe1i2FMurxvbVZymn2vxC1S-WqU" target="blank">here.</a>
@@ -32,9 +34,11 @@ This template is a simple vehicle level. It contains a driveable four-wheeled ve
 
 ## vr_oculus
 
-This template has a simple Oculus VR level with a floor plan to walk around in. Currently for Windows only. It also includes a basic script that lets you spawn a free camera and a walk around camera (again, swap the two by pressing F2).
+This template has a simple Oculus VR level with a floor plan to walk around in. Currently for Windows only. It also includes a basic script that lets you spawn a free camera and a walk around camera (again, swap the two by pressing F2), and Oculus flow nodes.
 
 Use an Oculus Rift for projects based on this template.
+
+[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html) The vr_oculus template supports input from the Oculus Remote and Oculus Touch Controller. 
 
 > **Tip:** If the performance is lower for the vr_oculus template projects, make sure that the editor is **not** set to **Update Mode > Always** in the viewport.
 
