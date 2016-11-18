@@ -30,6 +30,8 @@ The **Capture Frames** Tool lets you render frames to disk. The following **Capt
 -   hdr_no_post: An HDR version in linear colorspace.
 -   depth: A stabilized depth channel.</dd>
 
+> **Note:** The rendered OpenEXR frames uses ZIP compression by default.
+
 </dl>
 
 ##Capture settings
