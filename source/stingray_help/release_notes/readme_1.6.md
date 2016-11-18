@@ -83,6 +83,8 @@ Hobbyists, enthusiasts, and early adopters can now run Stingray using a non-comm
 
 In addition, if you're tired of searching for and watching tutorial videos, pop open the Stingray **Help** menu and select the brand new top-secret Stingray **Hands-on Training Mission**. We've added 5 quick, *interactive* tutorial lessons that take you through the Stingray basics, and get you well on your way to creating your own project. (Pssst - it's not really a secret. Let us know what you think!) We added a note about this in the ~{ Getting Started }~ topic.
 
+<iframe width="854" height="480" src="http://player.ooyala.com/iframe.html?pbid=luNHlvNzE6jwDXsnEs7PWQYH5vEvraL9&amp;platform=html-fallback&amp;ec=JncmdoMDE6t0H__vQ6IKWGN4quy1i2jg" frameborder="0" allowfullscreen></iframe>
+
 ## Experimental features
 
 ### Faster launching of projects in a browser
