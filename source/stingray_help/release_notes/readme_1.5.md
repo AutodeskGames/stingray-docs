@@ -69,9 +69,7 @@ We've added some new components for the entity system:
 
 ![](../images/scatter_tool_scene.png)
 
-The new ~{ Scatter Tool }~ plug-in lets you scatter objects in the scene. Quickly build out your level by distributing lightweight units like grass, clumps of flowers, posters, or gas cans by painting with scatter brushes. Modify spawn behavior using the **Scatter Pools Settings**, which apply the selected settings to all of the scatter data in your project at once.
-
-Note: The **Scatter Tool** must be installed manually using the **Plugin Manager**.
+The new **Scatter Tool** plug-in lets you scatter objects in the scene. Quickly build out your level by distributing lightweight units like grass, clumps of flowers, posters, or gas cans by painting with scatter brushes. Modify spawn behavior using the **Scatter Pools Settings**, which apply the selected settings to all of the scatter data in your project at once. See ~{ Paint with the Scatter Tool }~.
 
 ### GearVR and Mini Renderer
 
