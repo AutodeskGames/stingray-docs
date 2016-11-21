@@ -29,7 +29,8 @@ Sections in this topic:
 
 ## Better interop with 3ds Max
 
-New level sync workflows let you automatically rebuild your 3ds Max scenes in Stingray. Once 3ds Max is linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray. Modifications you make to the assets in 3ds Max are then updated inside Stingray. This makes it easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools. See ~{ Level Sync with Maya, Maya LT, or 3ds Max }~.
+New level sync workflows let you automatically rebuild your 3ds Max scenes in Stingray. Once 3ds Max is linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray. Modifications you make to the assets in 3ds Max are then updated inside Stingray. This makes it easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools. This workflow also brings more Vray material properties into the Stingray shader, ensuring your Vray materials look and feel the same in Stingray as they do in 3ds Max. See ~{ Level Sync with Maya, Maya LT, or 3ds Max }~.
+
 
 ![](../images/sr-to-3ds.png)
 
@@ -40,6 +41,8 @@ You can now capture the active camera or viewport and save frames to disk in the
 ## Improved lightmap baker
 
 The revamped Stingray and the Beast lightmap bakers now reflect more meaningful baker settings. See ~{ About baking with the Stingray baker }~ and ~{ About baking with Beast }~ for the updated options.
+
+## What's New in Rendering
 
 ### Light baking improvements
 
@@ -52,7 +55,7 @@ The following Improvements to light baking and post-processing effects (SSAO, SS
 - UV seam fixup now automatically runs as a post-processing effect when you bake lightmaps.
 - Improved interaction with a lightmapped level, such as material management and object manipulations, without losing the lightmap.
 
-## VR Improvements
+### VR Improvements
 
 - When running or testing your game using a VR app, the game image appears in your HMD (head mount display) and on your mirror window (your monitor). Set the new vr_mirror_mode setting in the settings.ini to mono (default) or stereo to control the display on the mirror window. See ~{ Stingray engine settings.ini file reference }~.
 - Instanced stereo rendering is now built in to the default renderer provided with Stingray, and all material and post effect shaders are now VR-enabled to implement this optimization. See ~{ VR in Stingray }~.
