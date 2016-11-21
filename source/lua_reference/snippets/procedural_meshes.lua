@@ -3,7 +3,7 @@
 -- @des This example shows how to use the [stingray.ProceduralMesh] interface to create meshes
 -- on the fly:
 --
--- ![Procedural meshes](images/procedural_meshes.gif)
+-- ![Procedural meshes](procedural_meshes.gif)
 --
 -- To use this code in a project, first save it in a `.lua` file in your project. Then, in one of your
 -- project scripts, require the file and cache its return in a local variable:

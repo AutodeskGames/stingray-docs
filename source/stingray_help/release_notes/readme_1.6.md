@@ -35,6 +35,12 @@ New level sync workflows let you automatically rebuild your 3ds Max scenes in St
 
 You can now capture the active camera or viewport and save frames to disk in the OpenEXR file format. The new Capture Frames tool also supports capturing frames on a test engine. For more information, see ~{ Capture Frames Tool }~.
 
+### Open SDK for engine plug-ins (alpha)
+
+You can now write plug-ins for the Stingray engine in C without needing source code access! This greatly improves the ability for all customers to extend Stingray. You can hook the runtime engine in to other third-party libraries and middleware SDKs, support your own custom data types, write your own gameplay code in C, and more.
+
+For details on getting started, see the [Stingray SDK Help](http://www.autodesk.com/stingray-help?contextId=SDK_HOME).
+
 ### Improved Stingray and Beast lightmap baker options
 
 The revamped Stingray and the Beast lightmap bakers now reflect more meaningful baker settings. See ~{ About baking with the Stingray baker }~ and ~{ About baking with Beast }~ for the updated options.
@@ -48,6 +54,14 @@ The following Improvements to light baking and post-processing effects (SSAO, SS
 - A new screen space reflection algorithm reflects GGX and matches up with pre-convoluted IBL reflection probes.
 - Normalization of lightmap resolution is now based on the UV space area.
 - UV seam fixup now automatically runs as a post-processing effect when you bake lightmaps.
+
+### Procedural meshes in Lua
+
+You can now use Lua to create new geometry on the fly as your project is running. You can create meshes, apply materials, and have the resulting objects be lit and shaded dynamically like any other object that you placed in the scene using the Stingray editor.
+
+![Procedural mesh example](../../lua_ref/procedural_meshes.gif)
+
+Here's [the sample code](../../lua_ref/exa_ex__snippets_proc__meshes.html) for the scene above to get you started.
 
 ### VR mono and streo mirror mode support
 
