@@ -8,9 +8,9 @@ The following flow nodes are available in the Vive template:
 
 ![VR Templates](../../images/vr_steamvr_nodes.png)
 
-# Occulus Flow nodes
+# Oculus Flow nodes
 
-The following flow nodes are available in the Occulus template:
+The following flow nodes are available in the Oculus template:
 
 ![VR Templates](../../images/vr_occulus_nodes.png)
 
