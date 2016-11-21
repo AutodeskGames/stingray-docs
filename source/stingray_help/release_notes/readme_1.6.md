@@ -27,17 +27,17 @@ Sections in this topic:
 
 * * *
 
-### Level Sync with 3ds Max
+## Better interop with 3ds Max
 
 New level sync workflows let you automatically rebuild your 3ds Max scenes in Stingray. Once 3ds Max is linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray. Modifications you make to the assets in 3ds Max are then updated inside Stingray. This makes it easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools. See ~{ Level Sync with Maya, Maya LT, or 3ds Max }~.
 
 ![](../images/sr-to-3ds.png)
 
-### Capture frames to disk
+## Capture frames to disk
 
 You can now capture the active camera or viewport and save frames to disk in the OpenEXR file format. The new Capture Frames tool also supports capturing frames on a test engine. For more information, see ~{ Capture Frames Tool }~.
 
-### Improved Stingray and Beast lightmap baker options
+## Improved lightmap baker
 
 The revamped Stingray and the Beast lightmap bakers now reflect more meaningful baker settings. See ~{ About baking with the Stingray baker }~ and ~{ About baking with Beast }~ for the updated options.
 
@@ -52,12 +52,24 @@ The following Improvements to light baking and post-processing effects (SSAO, SS
 - UV seam fixup now automatically runs as a post-processing effect when you bake lightmaps.
 - Improved interaction with a lightmapped level, such as material management and object manipulations, without losing the lightmap.
 
-### VR Improvements
+## VR Improvements
 
 - When running or testing your game using a VR app, the game image appears in your HMD (head mount display) and on your mirror window (your monitor). Set the new vr_mirror_mode setting in the settings.ini to mono (default) or stereo to control the display on the mirror window. See ~{ Stingray engine settings.ini file reference }~.
 - Instanced stereo rendering is now built in to the default renderer provided with Stingray, and all material and post effect shaders are now VR-enabled to implement this optimization. See ~{ VR in Stingray }~.
 - The VR Oculus Touch template now supports input from the Oculus Remote and Oculus Touch Controler. The template now ships with Oculus flow nodes. See ~{ Template projects}~.
 - The VR SDK Version has been upgraded to 1.7.0.0. See ~{ Supported platforms }~.
+
+## Ready to learn Stingray?
+
+With Stingray 1.6, we aim to give you two things you need when learning anything new: more time, and some advice on where to start!
+
+Hobbyists, enthusiasts, and early adopters can now run Stingray using a non-commercial Startup license. If the 30-day trial period didn't give you enough time, check out the [terms and conditions](http://www.autodesk.com/company/legal-notices-trademarks/terms-of-service-autodesk360-web-services/autodesk-web-services-entitlements/stingray-startup-license) to see if you're eligible for the non-commercial license. Updated steps to install using this license are included in the [Stingray Installation Supplement](http://help.autodesk.com/view/Stingray/ENU/?guid=GUID-2835E17D-888F-459E-A622-0CD8ED983A91) topic.
+
+In addition, if you're tired of searching for and watching tutorial videos, pop open the Stingray **Help** menu and select the brand new top-secret Stingray **Hands-on Training Mission**. We've added 5 quick, *interactive* tutorial lessons that take you through the Stingray basics, and get you well on your way to creating your own project. (Pssst - it's not really a secret. Let us know what you think!) We added a note about this in the ~{ Getting Started }~ topic.
+
+<iframe width="854" height="480" src="http://player.ooyala.com/iframe.html?pbid=6055f5a2061d4016b11ebf1fa8a7751e&amp;platform=html-fallback&amp;ec=luNHlvNzE6jwDXsnEs7PWQYH5vEvraL9" frameborder="0" allowfullscreen></iframe>
+
+## What else is new?
 
 ### Conditional transitions in Animation Controller
 
@@ -74,24 +86,6 @@ You can now use Flow to control entities:
 -	We've added [several new nodes](../../flow_ref/cat_Entity.html) that you can use to spawn entities dynamically in the level, to set and retrieve data in your entities' components, and to respond to entities being spawned and unspawned.
 
 -	You can use the new Flow component to assign a Flow graph to an entity. You can use these Flow components to set up reusable behaviors for your entities, much like the way that each type of unit has its own Unit Flow. See ~{ Set up an entity's behavior using Flow or Lua }~.
-
-## Ready to learn Stingray?
-
-With Stingray 1.6, we aim to give you two things you need when learning anything new: more time, and some advice on where to start!
-
-Hobbyists, enthusiasts, and early adopters can now run Stingray using a non-commercial Startup license. If the 30-day trial period didn't give you enough time, check out the [terms and conditions](http://www.autodesk.com/company/legal-notices-trademarks/terms-of-service-autodesk360-web-services/autodesk-web-services-entitlements/stingray-startup-license) to see if you're eligible for the non-commercial license. Updated steps to install using this license are included in the [Stingray Installation Supplement](http://help.autodesk.com/view/Stingray/ENU/?guid=GUID-2835E17D-888F-459E-A622-0CD8ED983A91) topic.
-
-In addition, if you're tired of searching for and watching tutorial videos, pop open the Stingray **Help** menu and select the brand new top-secret Stingray **Hands-on Training Mission**. We've added 5 quick, *interactive* tutorial lessons that take you through the Stingray basics, and get you well on your way to creating your own project. (Pssst - it's not really a secret. Let us know what you think!) We added a note about this in the ~{ Getting Started }~ topic.
-
-<iframe width="854" height="480" src="http://player.ooyala.com/iframe.html?pbid=luNHlvNzE6jwDXsnEs7PWQYH5vEvraL9&amp;platform=html-fallback&amp;ec=JncmdoMDE6t0H__vQ6IKWGN4quy1i2jg" frameborder="0" allowfullscreen></iframe>
-
-## Experimental features
-
-### Faster launching of projects in a browser
-
-Stingray now runs projects quickly in a web browser using WebGL. The launching process has been updated to load the content from a URL instead of packaging the compiled data to a separate folder and reading the data. The URL also displays the location of the content folder. See ~{ Run your project in a browser using WebGL }~. Also check out the updated settings if you ~{ Use Mozilla Firefox to run your project }~.
-
-## Other Benefits
 
 ### Stingray file extension
 
@@ -112,6 +106,12 @@ Source customers can now toggle between DX11 and DX12 as the viewport renderer i
 ### FBX Version 2017.1
 
 This release of Stingray picks up the latest version of FBX (2017.1), which provides various security improvements.
+
+## Experimental features
+
+### Faster launching of projects in a browser
+
+Stingray now runs projects quickly in a web browser using WebGL. The launching process has been updated to load the content from a URL instead of packaging the compiled data to a separate folder and reading the data. The URL also displays the location of the content folder. See ~{ Run your project in a browser using WebGL }~. Also check out the updated settings if you ~{ Use Mozilla Firefox to run your project }~.
 
 [Return to top](#top)
 
