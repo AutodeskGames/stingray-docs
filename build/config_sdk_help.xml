@@ -32,6 +32,12 @@
 		<search_filter id="editor_js" include_expression="editor_js/.*\.htm">
 			<label lang="en">Search editor JavaScript API?</label>
 		</search_filter>
+		<search_filter id="editor_c" include_expression="editor_c/.*\.htm">
+			<label lang="en">Search editor C API?</label>
+		</search_filter>
+		<search_filter id="engine_c" include_expression="engine_c/.*\.htm">
+			<label lang="en">Search engine C API?</label>
+		</search_filter>
 		<contextId include="*\sdk_help\introduction.html" id="SDK_HOME"></contextId>
 		<contextId include="*\sdk_help\extend_editor.html" id="SDK_EDITOR_C_PLUGIN"></contextId>
 		<contextId include="*\sdk_help\extend_engine.html" id="SDK_ENGINE_PLUGIN"></contextId>
@@ -67,6 +73,7 @@
 		<apply_template>false</apply_template>
 		<merge_toc_config>
 			<source type="iframe">index.html</source>
+			<parent_filename>*\extend_editor.html</parent_filename>
 			<first_entry_title>Editor JavaScript API Reference</first_entry_title>
 			<promote_first_topic>false</promote_first_topic>
 		</merge_toc_config>
@@ -75,6 +82,7 @@
 	<doxygen id="editor_c">
 		<merge_toc_config>
 			<first_entry_title>Editor C API Reference</first_entry_title>
+			<parent_filename>*\extend_editor.html</parent_filename>
 		</merge_toc_config>
 		<include_input_dir>%SR_ENGINE_DIR%\docs\source\editor_c</include_input_dir>
 		<include_input_dir>%SR_ENGINE_DIR%\editor\stingray_editor\sdk</include_input_dir>
@@ -117,6 +125,7 @@
 	<doxygen id="engine_c">
 		<merge_toc_config>
 			<first_entry_title>Engine C API Reference</first_entry_title>
+			<parent_filename>*\extend_engine.html</parent_filename>
 		</merge_toc_config>
 		<include_input_dir>%SR_ENGINE_DIR%\docs\source\engine_c</include_input_dir>
 		<include_input_dir>%SR_ENGINE_DIR%\runtime\sdk</include_input_dir>

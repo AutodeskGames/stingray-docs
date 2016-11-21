@@ -12,7 +12,7 @@ Viewports extension are a generalization of ~{ Define previews for custom assets
 
 ## Viewports extension format
 
-```lua
+~~~sjson
 // From article-editor.plugin
 extensions = {
 	// This is the viewport extension definition that binds the lua and javascript to create a named viewport.
@@ -30,7 +30,7 @@ extensions = {
             path = "particle_editor"
         }
     ]
-```
+~~~
 
 ![particle editor viewport setup](../../images/particle_editor_viewport_setup.png)
 
@@ -61,7 +61,7 @@ Your viewport setup javascript file should return a module containing a `setup` 
 
 The return value of the setup function is a ViewportBehavior that will receive user events directly from the Viewport window.
 
-```javascript
+~~~js
 // Example from particle-viewport.js
 
 define([
@@ -117,11 +117,11 @@ define([
 
     return ParticleViewportController;
 });
-```
+~~~
 
 The object `engineViewportInterops` is a helper used to package communication between the lua environment and javascript. It helps in writing new ViewportBehavior The API to this helper is as follow:
 
-```javascript
+~~~js
 // From editor\core\components\engine-viewport.js
 // All of these functions returns a promise and sends lua command directly to the engine through a websocket connection.
 var EngineViewportInterops = {
@@ -150,10 +150,11 @@ var EngineViewportInterops = {
 
     mouseWheel: function (viewportId, delta) {}
 };
-```
+~~~
 
 The helper can be used to create ViewportBehavior from javascript:
-```javascript
+
+~~~js
 // From core/plugins/particle_editor/particle-viewport.js
 // This MouseBehavior implements all functions supported by a ViewportBehavior.
 var MouseBehavior = function (engineViewportId, engineViewportInterops) {
@@ -225,7 +226,7 @@ var MouseBehavior = function (engineViewportId, engineViewportInterops) {
 
         }
     };
-```
+~~~
 
 
 ### Viewport behavior (lua)
@@ -234,7 +235,7 @@ The lua counterpart of the javascript ViewportBehavior allows the user to intera
 
 A lua ViewportBehavior can implement the following interface:
 
-```lua
+~~~lua
 // From core/editor_slave/stingray_editor/viewport_behavior.lua
 ViewportBehavior = interface {
     required = {
@@ -269,7 +270,7 @@ ViewportBehavior = interface {
         post_render = function(viewport) end
     }
 }
-```
+~~~
 
 See core/plugins/particle_editor/particle_editor/particle-behavior.lua for an implementation of a ParticleBehavior.
 
@@ -279,7 +280,7 @@ In order to add a viewport to a javascript view, the easiest way is to use the E
 
 The easiest way to host a 3D viewport in a mithril view would be in plugin_tests/viewort_extension/viewport-extension-test.js:
 
-```javascript
+~~~js
 define([
     'app',
     'stingray',
@@ -300,16 +301,17 @@ define([
         name: "viewport-extension-test"
     }));
 });
-```
+~~~
 
 In order to attach the Mithril view to the #viewport-here element you need the html file:
-```js
+
+~~~html
 <!-- From plugin_tests/viewort_extension/viewport-extension-test.html -->
 <div class="module-viewport-extension-test fullscreen">
 	<!-- This element is the anchor on which we attach the viewport -->
     <div class="fullscreen" id="viewport-here"></div>
 </div>
-```
+~~~
 
 Screenshot of the viewport extension test:
 ![viewport extension test](../../../images\viewport_extension_test.png)

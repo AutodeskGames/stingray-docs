@@ -71,6 +71,8 @@ Note that you can only remove plug-ins that you have installed using the **Add P
 
 Alternatively, you can delete the plug-in you want to remove from disk (or move it to another location on your computer), then press **F5** to refresh the list.
 
+Don't be afraid; removing the plug-in in this way doesn't delete the plug-in files from your computer. You can add it back again anytime from its old location on your disk.
+
 ---
 Tags:
 -	plugin

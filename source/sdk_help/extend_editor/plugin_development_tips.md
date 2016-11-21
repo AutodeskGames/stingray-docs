@@ -2,14 +2,6 @@
 
 Developing a custom plug-in that integrates with the editor's JavaScript environment can be a tricky task. This page provides some tips and background information that may help you get started.
 
-## Reloading
-
-When you make changes to your plug-in, you don't need to shut down and restart your editor. You don't even have to go to the **Plugin Manager** to unload and reload your plug-in.
-
--	If you've changed your *.plugin* file, you can make the editor reload it by pressing **F5**. This recompiles your project resources, and refreshes all currently loaded plug-ins from their configuration files.
-
--	If your plug-in adds any JavaScript to the editor environment, you may also need to refresh the editor's HTML front-end. Press **Alt+F3**.
-
 ## Debugging and using the Developer Tools
 
 The Stingray editor's front-end HTML5 environment runs in the Chromium Embedded Framework (CEF). This means that you have access to the Chrome Developer Tools panel, which offers many essential development resources. You can use the DevTools to place breakpoints and debug your JavaScript code, explore the HTML of your panels, run JavaScript commands in a console, etc.

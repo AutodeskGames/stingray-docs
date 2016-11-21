@@ -1,4 +1,4 @@
-# Using native extensions
+# Call out to C code from JavaScript
 
 Native extensions can be used to expose C/C++ functionalities to Javascript. Native extensions are DLLs that are loaded at runtime, and do not require any information inside the `.plugin` file. The editor provides apis for your extension to register functions either in *synchronous* mode or *asynchronous* mode, and several editor workflow apis.
 
@@ -11,28 +11,32 @@ Bear in mind that in order to register functions in one mode or another, the ext
 
 ## Native extension Apis
 In order to be loadable by the editor, your extension must expose one function that the editor uses to load it in synchronous mode or asynchronous mode : `__declspec(dllexport) void *get_editor_plugin_api(unsigned api)`. Here is what this function looks like in your `*.cpp` file :
-```cpp
+
+~~~cpp
 extern "C" {
 __declspec(dllexport) void *get_editor_plugin_api(unsigned api)
 {
     ...
 }
 }
-```
+~~~
 
 This function is mandatory. Without it, your extension will never be loaded.
 
 To know which mode to load, the `api` id is passed as a parameter. The possible api ids are defined as follow :
-```cpp
+
+~~~cpp
 /* Plugin API_IDs for the different services that a plugin can implement. */
 enum EditorPluginApiID
 {
 	EDITOR_PLUGIN_SYNC_API_ID = 0,
 	EDITOR_PLUGIN_ASYNC_API_ID
 };
-```
+~~~
+
 You can use them like this:
-```cpp
+
+~~~cpp
 #include <editor_plugin_api/editor_plugin_api.h>
 ...
 extern "C" {
@@ -46,11 +50,12 @@ __declspec(dllexport) void *get_editor_plugin_api(unsigned api)
     ...
 }
 }
-```
+~~~
 
 ### EditorPluginSyncApi
 To register functions in synchronous mode, your extension must implement the `EditorPluginSyncApi`, which is defined as :
-```cpp
+
+~~~cpp
 /* This function can be used by the plugin to query for editor API. */
 typedef void *(*GetEditorApiFunction)(unsigned api);
 
@@ -68,10 +73,12 @@ struct EditorPluginSyncApi
 	/* Called when the plugins needs to be shutdown */
 	void (*shutdown)(GetEditorApiFunction get_editor_api);
 };
-```
+~~~
+
 Here is an example extension that uses the `EditorPluginSyncApi` :
 `editor_native_plugin.h`
-```cpp
+
+~~~cpp
 #pragma once
 
 #include <editor_plugin_api/editor_plugin_api.h>
@@ -87,9 +94,11 @@ namespace PLUGIN_NAMESPACE
 		static void shutdown(GetEditorApiFunction get_editor_api);
 	};
 }
-```
+~~~
+
 `editor_native_plugin.cpp`
-```cpp
+
+~~~cpp
 #include "editor_native_plugin.h"
 #include <cstdio>
 
@@ -132,10 +141,11 @@ __declspec(dllexport) void *get_editor_plugin_api(unsigned api)
 }
 }
 
-```
+~~~
 
 You can register your synchronous functions inside `plugin_loaded` and unregister functions inside `shutdown` using either the `EditorApi`, `EditorApi_V2` or `EditorApi_V3`, whichever you like :
-```cpp
+
+~~~cpp
 struct EditorApi
 {
 	typedef ConfigData* (*NativeFunctionHandler)(ConfigData **args, int num);
@@ -170,12 +180,14 @@ struct EditorApi_V3
 	bool (*unregister_native_function)(const char *ns, const char *name);
 };
 #endif
-```
+~~~
+
 The difference between these apis is the handler that you can register. `V1` and `V2` handle C function pointers, whereas `V3` handles `std::function` so you can register lambda expression. Each api behave the same. `ns` is the namespace in which you wish to register your function, and `name` is the name of your function. You would then call your function with `window.namespace.name()` inside your javascript. By using your plugin name as namespace you can reduce the chance of registering a function that is already registered by another extension.
 
-Here is an example (building upon the last one) where functions are registered inside `plugin_loaded` : 
+Here is an example (building upon the last one) where functions are registered inside `plugin_loaded` :
 `editor_native_plugin.h`
-```cpp
+
+~~~cpp
 // Comment if you don't use functional
 #include <functional>
 // Include after <functional>
@@ -190,9 +202,11 @@ public:
     // Test editor api v2
     static ConfigData* test_api_v2(ConfigData **args, int num, GetEditorApiFunction get_editor_api);
 }
-```
+~~~
+
 `editor_native_plugin.cpp`
-```cpp
+
+~~~cpp
 	...
 	void EditorTestPlugin::plugin_loaded(GetEditorApiFunction get_editor_api)
 	{
@@ -213,19 +227,19 @@ public:
 			...
 		});
 	}
-    
+
     // Every arguments are owned by the editor and will be destroyed when the function returns.
 	// All data returned is now owned by the editor.
 	ConfigData* EditorTestPlugin::test(ConfigData **args, int num)
 	{
 		...
 	}
-    
+
     ConfigData* EditorTestPlugin::test_api_v2(ConfigData** args, int num, GetEditorApiFunction get_editor_api)
 	{
 		...
 	}
-    
+
     void EditorTestPlugin::shutdown(GetEditorApiFunction get_editor_api)
 	{
     	auto api_v1 = static_cast<EditorApi_V2*>(get_editor_api(EDITOR_API_ID));
@@ -240,9 +254,11 @@ public:
 		}
 	}
     ...
-```
+~~~
+
 Here is an example showing how to load your extension and calling your functions from javascript :
-```javascript
+
+~~~js
 let path = 'path_to_your_dll'
 let id = stingray.loadNativeExtension(path);
 ...
@@ -252,11 +268,12 @@ window.editorNativeTest.test_api_v2();
 window.editorNativeTest.test_api_v3();
 ...
 stingray.unloadNativeExtension(id);
-```
+~~~
 
 ### EditorPluginAsyncApi
 To register functions in asynchronous mode, your extension must implement the `EditorPluginAsyncApi`, which is defined as :
-```cpp
+
+~~~cpp
 struct EditorPluginAsyncApi
 {
 	/* Called once the plugin has been loaded. */
@@ -271,10 +288,12 @@ struct EditorPluginAsyncApi
 	/* Called when the plugins needs to be shutdown */
 	void (*shutdown)(GetEditorApiFunction get_editor_api);
 };
-```
+~~~
+
 Here is an example extension that uses the `EditorPluginAsyncApi` :
 `editor_native_plugin.h`
-```cpp
+
+~~~cpp
 #pragma once
 
 #include <editor_plugin_api/editor_plugin_api.h>
@@ -290,9 +309,11 @@ namespace PLUGIN_NAMESPACE
 		static void shutdown_async(GetEditorApiFunction get_editor_api);
 	};
 }
-```
+~~~
+
 `editor_native_plugin.cpp`
-```cpp
+
+~~~cpp
 #include "editor_native_plugin.h"
 #include <cstdio>
 
@@ -335,9 +356,11 @@ __declspec(dllexport) void *get_editor_plugin_api(unsigned api)
 }
 }
 
-```
+~~~
+
 Like with the synchronous version, you register your functions inside `plugin_loaded_async` and unregister them in `shutdown_async`. You can use the `EditorAsyncApi` to do so :
-```cpp
+
+~~~cpp
 struct EditorAsyncApi
 {
 	typedef ConfigData* (*AsyncFunctionHandler)(ConfigData **args, int num, GetEditorApiFunction get_editor_api);
@@ -354,12 +377,14 @@ struct EditorAsyncApi
 	/* Used to unregister a previously registered async gui function. */
 	bool (*unregister_async_gui_function)(const char *name);
 };
-```
+~~~
+
 For async functions, things are a little different. First, you can only register a with a name because of the way the functions are called. But you can merge your namespace and name into a string like `"namespace.name"`. Secondly, you can register normal async functions that are executed in the browser process, or you can register functions to be executed specifically in Qt's gui thread, if you wish to do some gui stuff.
 
-Here is an example where functions are registered inside `plugin_loaded_async` : 
+Here is an example where functions are registered inside `plugin_loaded_async` :
 `editor_native_plugin.h`
-```cpp
+
+~~~cpp
 #include <editor_plugin_api/editor_plugin_api.h>
 ...
 class EditorTestPlugin
@@ -369,30 +394,34 @@ public:
     // Test async api
     static ConfigData* test_async_api(ConfigData **args, int num, GetEditorApiFunction get_editor_api);
 }
-```
+~~~
+
 `editor_native_plugin.cpp`
-```cpp
+
+~~~cpp
 	...
 	void EditorTestPlugin::plugin_loaded_async(GetEditorApiFunction get_editor_api)
 	{
 		auto async_api = static_cast<EditorAsyncApi*>(get_editor_api(EDITOR_ASYNC_API_ID));
 		async_api->register_async_function("test_async", &EditorTestPlugin::test_async_api);
 	}
-    
+
     ConfigData* EditorTestPlugin::test_async_api(ConfigData** args, int num, GetEditorApiFunction get_editor_api)
 	{
 		...
 	}
-    
+
     void EditorTestPlugin::shutdown_async(GetEditorApiFunction get_editor_api)
 	{
 		auto async_api = static_cast<EditorAsyncApi*>(get_editor_api(EDITOR_ASYNC_API_ID));
 		async_api->unregister_async_function("test_async");
 	}
     ...
-```
+~~~
+
 Here is an example showing how to load your extension and calling your functions from javascript :
-```javascript
+
+~~~js
 let path = 'path_to_your_dll'
 let pluginAsyncId = null;
 stingray.loadAsyncExtension(path).then(function (id) {
@@ -408,11 +437,12 @@ stingray.unloadAsyncExtension(pluginAsyncId).then(function () {
     console.warn('Plugin ' + pluginAsyncId + ' unloaded!');
     pluginAsyncId = null;
 });
-```
+~~~
 
 ### ConfigDataApi
 To communicate arguments and result values between javascript and the native extension, we use `ConfigData`, a `JSON` like structure that holds basic `JSON` values. To read and write `ConfigData`, we have an api called `ConfigDataApi`, which is defined as follow :
-```cpp
+
+~~~cpp
 struct ConfigData;
 
 enum {
@@ -462,8 +492,10 @@ struct ConfigDataApi
 
 	cd_realloc (*allocator)(struct ConfigData *cd, void **user_data);
 };
-```
+~~~
+
 `ConfigData` supports these different types :
+
  - `CD_TYPE_NULL` : represents a `null` value.
  - `CD_TYPE_UNDEFINED` : represents an `undefined` value.
  - `CD_TYPE_FALSE` : represents a `false` value.
@@ -475,7 +507,8 @@ struct ConfigDataApi
  - `CD_TYPE_HANDLE` : represents a user defined `handle` to a resource that lives only inside your extension. This handle should not be accessed or modified in your javascript. It is only useful if you wish to pass a resource handle between functions. The function to add a handle to a `ConfigData` also supports a deallocator, which is called when the javascript object that holds the handle is deallocated. **Warning**: This is only supported in synchronous mode.
 
 To create a `ConfigData`, you have to pass your own allocator function. This makes sure that wherever it is deleted, it is always done with the same resource allocator. Here is an example of a simple allocator function :
-```cpp
+
+~~~cpp
 void *EditorTestPlugin::config_data_reallocator(void *ud, void *ptr, int osize, int nsize, const char *file, int line)
 {
     if (nsize == 0) {
@@ -485,14 +518,15 @@ void *EditorTestPlugin::config_data_reallocator(void *ud, void *ptr, int osize, 
     auto *nptr = realloc(ptr, nsize);
     return nptr;
 }
-```
+~~~
 
 When using the different functions inside the api, `cd_loc` represents the location of the object that you are either reading or writing.
 
 When in synchronous mode, the parameters you pass to your functions are directly related to the `ConfigData` you receive, meaning that if you pass 3 parameters to your function, you will receive 3 `ConfigData`. However, when you are in asynchronous mode, you will always get one `ConfigData` which contains your arguments formatted depending on what you passed to `hostExecute`. Please refer to `stingray.hostExecute` to see what kind of payload you will receive.
 
 Here is the complete function `test` that copies what it receives and sends it back as result :
-```cpp
+
+~~~cpp
 cd_loc EditorTestPlugin::copy_config_data_value(ConfigData *orig_cd, cd_loc orig_loc, ConfigData *new_cd)
 {
 	\\ Assume _cd_api is a member of EditorTestPlugin and refers to ConfigDataApi
@@ -547,11 +581,12 @@ ConfigData* EditorTestPlugin::test(ConfigData **args, int num)
 
     return cd;
 }
-```
+~~~
 
 ### EditorLoggingApi
 The `EditorLoggingApi` can be used to log information into the log console. The api is defined as follow :
-```cpp
+
+~~~cpp
 struct EditorLoggingApi
 {
 	/* Used to print only in the dev tools console. */
@@ -566,10 +601,11 @@ struct EditorLoggingApi
 	/* Used to print an error in the stingray console. */
 	void (*error)(const char *message);
 };
-```
+~~~
 
 Here is an example using the logging api :
-```cpp
+
+~~~cpp
 ConfigData* EditorTestPlugin::test_logging(ConfigData** args, int num)
 {
     _logging_api->debug("Should print this in the dev tools only.");
@@ -586,11 +622,12 @@ ConfigData* EditorTestPlugin::test_logging(ConfigData** args, int num)
 
     return nullptr;
 }
-```
+~~~
 
 ### EditorEvalApi
 The `EditorEvalApi` can be used to execute javascript code inside you extension. The code is executed in the current global context. The `EditorEvalApi` is defined as :
-```cpp
+
+~~~cpp
 struct EditorEvalApi
 {
 	/* Used to evaluate a javascript code in the global context. `return_value` and `exception` are optional.
@@ -599,10 +636,11 @@ struct EditorEvalApi
 	 */
 	bool (*eval)(const char *js_code, ConfigData *return_value, ConfigData *exception);
 };
-```
+~~~
 
 Here is an example that uses the `EditorEvalApi` :
-```cpp
+
+~~~cpp
 ConfigData* EditorTestPlugin::test_eval(ConfigData** args, int num)
 {
     auto retval = _cd_api->make(config_data_reallocator, nullptr, 0, 0);
@@ -626,6 +664,6 @@ ConfigData* EditorTestPlugin::test_eval(ConfigData** args, int num)
     _cd_api->free(exception);
     return nullptr;
 }
-```
+~~~
 
 For a complete working example using all these apis, you can refer to the example native extension in **$stingray_install_dir\editor\plugin_tests\editor_native_code\**.
