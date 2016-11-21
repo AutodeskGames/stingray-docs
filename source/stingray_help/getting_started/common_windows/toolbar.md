@@ -40,7 +40,7 @@ The Toolbar displays in the main Stingray Editor window, on the left side of the
 <dd>Activates rotation snapping, letting you use the rotate tool to snap an object to the selected angle increment. See ~{ Snap objects in a level }~.</dd>
 
 <dt>Scatter Tool Mode</dt>
-<dd>Activates Scatter Tool mode, letting you use the **Scatter Tool** to randomly scatter the selected unit as an array or over the surface of an object. See ~{ Scatter Tool }~.</dd>
+<dd>Activates Scatter Tool mode, letting you use the **Scatter Tool** to randomly scatter the selected unit as an array or over the surface of an object. See ~{ Paint with the Scatter Tool }~.</dd>
 
 <dt>Sub-object Mode</dt>
 <dd>Activates sub-object mode, letting you use the **Story Editor** to animate a sub-object within a unit. See ~{ Animate sub-objects with the Story Editor }~.</dd>
