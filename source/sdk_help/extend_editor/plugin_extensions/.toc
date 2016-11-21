@@ -12,3 +12,5 @@ contextual_actions
 imports
 native_extensions
 viewports
+views_and_dialogs
+asset_editing
