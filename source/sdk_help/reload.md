@@ -27,3 +27,15 @@ Call the `stingray.Application.set_plugin_hot_reload_directory()` function, and 
 If the engine finds a newer version of a *.dll* file in one of these hot reload folders that matches a plug-in currently loaded in the engine, it copies the *.dll* from the hot reload folder into its plugins folder to overwrite the older version. Typically, you would set the hot reload folder to whatever folder you compile your plug-in binaries to. That way, any time you rebuild in Visual Studio, your plug-in will automatically be refreshed in the engine.
 
 You could include this Lua call in your project's Lua scripts or in a content plug-in. However, since the path is usually dependent on a particular machine's filesystem and usually only needed during development while you're testing out your plug-in, you will probably find it more convenient to just run the function from the editor's **Status Bar** when you need to enable hot reloads for a given project. For details, see [this page](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_playtesting_send_commands_statusline_html).
+
+Note that you may need to do some extra work in your plug-in code to support hot reloading. The best way to make your plug-in handle hot reloading smoothly is to keep *all* of the state information required by your code in a single binary blob. Then, you can implement the `PluginApi.start_reload` and `PluginApi.finish_reload` functions in your plug-in to temporarily cache the blob of state data before the reload starts, and resume from that cached data after the new code has been loaded.
+
+## Hot reload limitations
+
+Hot reloading can be a very effective and convenient way to avoid wasting time shutting down and restarting systems when testing out small iterations on your code and your assets. However, it does have some limitations, and might not work well in all cases.
+
+For example, suppose that your plug-in carries out some operations when it's first initialized. Later, you find that you need to add something else to that initialization sequence. But, when you reload the plug-in, your initialization code doesn't get run again -- the project carries on running from the point it was at before. So any new code that depends on those initialization-time changes might not work as expected.
+
+Hot reloading typically works best when you need to test out small tweaks to parameters and settings, or small changes within existing code blocks. The larger the changes you make, the more you risk running into problems after the refresh.
+
+For a deeper discussion about hot-reloading resources, see [here](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_playtesting_hot_reload_html). If you're reloading Lua code into the game's Lua environment, see also [this page](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_creating_gameplay_scripting_with_lua_live_reload_html).

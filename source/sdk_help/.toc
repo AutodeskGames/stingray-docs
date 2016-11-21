@@ -1,6 +1,7 @@
 introduction
 overview
 extensibility_options
+plugin_examples
 define_a_plugin
 extend_editor
 extend_content

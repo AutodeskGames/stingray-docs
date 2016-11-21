@@ -13,12 +13,12 @@ The following code block provides a minimal working plug-in definition that you 
 If you're familiar with the [`package.json` format](https://docs.npmjs.com/files/package.json) used by [node.js](https://nodejs.org/en/), many of these fields will be familiar to you already.
 
 ~~~{sjson}
-// [Required metadata] about the plug-in, shown in the Plugin Manager.
+// Required metadata about the plug-in, shown in the Plugin Manager.
 //
 name = "My Custom Plugin"
 version = "1.0.0"
 
-// [Optional descriptive metadata] about the plug-in.
+// Optional descriptive metadata about the plug-in.
 //
 description = "A minimal custom plug-in that triggers some Javascript code."
 author = {
@@ -26,6 +26,7 @@ author = {
 	company = "Autodesk inc."
 	url = "https://gamedev.autodesk.com/"
 }
+thumbnail = "my_image.png"
 
 keywords = ["plugin"]
 license = {
@@ -37,7 +38,7 @@ repository = {
     url = "http://www.github.com/octocat/hello-world.git"
 }
 
-// [Extensions] define the ways the plug-in extends Stingray.
+// Extensions define the ways the plug-in extends Stingray.
 // All plug-ins need at least one extension in order to be successfully loaded.
 //
 extensions = {
@@ -52,7 +53,8 @@ extensions = {
 	}]
 }
 
-// [Dependencies] that your plug-in needs in order to work.
+// Dependencies that your plug-in needs in order to work.
+//
 platforms = ["win64"]
 dependencies = {
 	"stingray" = ">=1.6"
@@ -106,6 +108,10 @@ The following parameters are all optional. They are used only for display purpos
 >	`email`
 >
 >	>	An e-mail address where users of your plug-in can reach you.
+
+`thumbnail`
+
+>	Specifies an image file for the editor's **Plugin Manager** to display for your plug-in. The path should be relative to the location of your *.plugin* file. Optional; the default is to use a file called `thumbnail.png` if it is present.
 
 ## Optional descriptive metadata for future use
 
@@ -161,6 +167,6 @@ You can use the `platforms` and `dependencies` properties to identify exactly wh
 
 `dependencies`
 
->	An array of items that lists which other Stingray plug-ins your plug-in depends on, and which versions of those other plug-ins must be installed. The key of each item must match the `name` key of another Stingray plug-in, and the value of that key should be a `SemVer` string that denotes the compatible versions of that plug-in.
+>	An array of items that lists which other Stingray plug-ins your plug-in depends on, and which versions of those other plug-ins must be installed. The key of each item must match the `name` key of another Stingray plug-in. Like each plug-in's own `version` property (described above), the value of each key should be a [semver](http://semver.org/) tag that denotes the compatible versions of that plug-in.
 >
 >	For example, `"stingray" >= "1.5"` means that the base Stingray app must be at least version 1.5 in order to successfully load the plug-in. Or, if your plug-in makes use of a new feature introduced by the new `script_editor` plug-in in version 1.6 of Stingray, you might also add `"Script Editor" >= "1.1.0"`. Note that for plug-in dependencies, the version number is the version of the *plug-in* as listed in that plug-in's *.plugin* descriptor file, not the version of Stingray that contains the version of the plug-in you want to match.

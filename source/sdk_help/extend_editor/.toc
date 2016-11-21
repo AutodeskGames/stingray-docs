@@ -1,5 +1,7 @@
 plugin_development_tips
 plugin_resource_format
 plugin_extensions
+native_extensions
 emit_respond_events
 services
+asset_editing

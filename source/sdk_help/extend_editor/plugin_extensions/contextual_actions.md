@@ -9,7 +9,7 @@ Contextual action encapsulate an action sequence that are made available in righ
 
 You can specify a contextual actions block in a plugin descriptor file:
 
-```lua
+~~~sjson
 contextual_actions = [
 	// Multiple contextual actions can be specified for a single plugin.
     {
@@ -28,7 +28,8 @@ contextual_actions = [
         ]
     }
 ]
-```
+~~~
+
 `type`
 
 > Action type. **Required**. Currently can be: **asset**, **level_object**. But a user could defined its own type. The action type act as a global predicate for a contextual action. As an example the asset browser checks for all contextual actions of type "asset" and then run their custom predicates to find the right mix of actions to populate the right click contextual menu. The Scene Explorer, looks for all "level_object" actions in the same manner.
@@ -51,7 +52,7 @@ There are a few ways of defining predicates for a **single selected asset** cont
 
 Extension can be an array of asset file extension (or a single extension string):
 
-```lua
+~~~sjson
 {
     label = "Open in Paint"
     type = "asset"
@@ -71,11 +72,11 @@ Extension can be an array of asset file extension (or a single extension string)
         }
     ]
 }
-```
+~~~
 
 Or a wildcard (*):
 
-```lua
+~~~sjson
 {
     type = "asset"
     label = "Open In Sublime"
@@ -92,14 +93,15 @@ Or a wildcard (*):
         }
     ]
 }
-```
+~~~
+
 ![singleasset sublime](../../images/single_asset_contextual_sublime.png)
 
 
 
 Alternatively, for more involved predicate (some that requires actual processing) you can use the "predicate" key which needs to map on an action:
 
-```lua
+~~~sjson
 // In tests-actions.plugin
 {
     label = "Checkout"
@@ -122,9 +124,9 @@ Alternatively, for more involved predicate (some that requires actual processing
         }
     ]
 }
-```
+~~~
 
-```javascript
+~~~js
 // In module-actions.js
 
 define(['common/file-system-utils', 'services/file-system-service', 'services/project-service'], function (fileUtils, fileSystemService, assetService, projectService) {
@@ -142,12 +144,12 @@ define(['common/file-system-utils', 'services/file-system-service', 'services/pr
         },
     }
 });
-```
+~~~
 
 #### Asset multi-selection
 If you want to register an action that can handle multi-selection of assets, the workflow is similar except no extension needs to be specfied. Also, when the user triggers the action sequence associated to a contextual action all the selected assets are passed as parameters.
 
-```lua
+~~~sjson
 // Example in tests-actions.plugin
 {
     type = "asset"
@@ -173,9 +175,9 @@ If you want to register an action that can handle multi-selection of assets, the
         }
     ]
 }
-```
+~~~
 
-```javascript
+~~~js
 // In module-actions.js
 define(['common/file-system-utils', 'services/file-system-service', 'services/project-service'], function (fileUtils, fileSystemService, assetService, projectService) {
 
@@ -193,12 +195,12 @@ define(['common/file-system-utils', 'services/file-system-service', 'services/pr
         },
     }
 });
-```
+~~~
 
 ### Single level objects predicates
 Predicate specification for level objects are really similar to asset. The global catchall predicate checks for the **category** of level objects being selected (ex: "unit")
 
-```lua
+~~~sjson
 // From asset-browser.plugin
 contextual_actions = [
     {
@@ -219,7 +221,7 @@ contextual_actions = [
         ]
     }
 ]
-```
+~~~
 
 The list of supported category is built dynamically according to the object filters in the folder **core/editor_slave/resources/filters**. By default the categories available are:
 - camera
@@ -241,7 +243,7 @@ The list of supported category is built dynamically according to the object filt
 
 Note that you can also specify multiple categories:
 
-```lua
+~~~sjson
 {
     type = "level_object"
     label = "Reset position"
@@ -258,13 +260,13 @@ Note that you can also specify multiple categories:
         }
     ]
 }
-```
+~~~
 
 ![singleasset_browser](../../images/single_level_object_find_asset_browser.png)
 
 You can write a custom predicate similar to what can be done with an asset:
 
-```lua
+~~~sjson
 // In test-actions.plugin
 {
     type = "level_object"
@@ -288,22 +290,22 @@ You can write a custom predicate similar to what can be done with an asset:
         }
     ]
 }
-```
+~~~
 
-```javascript
+~~~js
 // In module-actions.js
 isDoor: function (levelObjectTreeNode) {
     // If the unit resource corresponding to the level object is a door allow the user to close it.
     return levelObjectTreeNode.dataContext.Type &&
         levelObjectTreeNode.dataContext.Type.startsWith('model/content/door_');
 }
-```
+~~~
 
 #### Level objects multi-selection
 
 If you want to register an action that can handle multi-selection of level objects the workflow is similar except no category needs to be specified. Your predicate (and the triggered action sequence) will be called with the list of selected level objects.
 
-```lua
+~~~sjson
 {
     type = "level_object"
     label = "Duplicate Objects"
@@ -326,9 +328,9 @@ If you want to register an action that can handle multi-selection of level objec
         }
     ]
 }
-```
+~~~
 
-```javascript
+~~~js
 // from module-actions.js
 duplicateLevelObjects: function (levelObjects) {
 	if (!_.isArray(levelObjects)) {
@@ -340,6 +342,6 @@ duplicateLevelObjects: function (levelObjects) {
     	levelEditingService.duplicate(levelObject.dataContext.Id);
     });
 }
-```
+~~~
 
 ![multi_level/_object duplicate](../../images/multi_level_objects_duplicate.png)

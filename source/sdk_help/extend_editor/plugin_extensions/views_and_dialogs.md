@@ -10,7 +10,7 @@ Views extension allows a user to define named "views" (panel or dialog) that can
 
 ## Views extension format
 
-```lua
+~~~sjson
 // From stingray-editor.plugin
 views = [
     {
@@ -38,7 +38,8 @@ views = [
         title = "Plugin Manager"
     }
 ]
-```
+~~~
+
 `name`
  > Unique name of the view. **Required**. This name must be unique among all views registered within Stingray. This will be used to specify which view to show.
 
@@ -67,7 +68,7 @@ A named view can easily be registered as a menu item. Most of the General tools 
 
 To register a new menu bound to a view, you use a menu extension:
 
-```lua
+~~~sjson
 // From stingray-editor.plugin
 menus = [
     {
@@ -85,13 +86,14 @@ menus = [
         view = "project-manager"
     }
 ]
-```
+~~~
 
 ## Open view action
 In the stingray-editor.plugin file there is a global action called **open-view** that allows a user to pop open a view from within an action sequence:
 
 The contextual action extension allows a user to bind a sequence of action to a contextal menu:
-```lua
+
+~~~sjson
 contextual_actions = [
 	// Basically right clicking on any asset should add the "Show dependency" to the contextual menu
     {
@@ -108,14 +110,14 @@ contextual_actions = [
         ]
     }
 ]
-```
+~~~
 
 ![show_dependencies](../../images/open_dependencies.png)
 
 ## Opening panel
 Alternatively, from within javascript you can use the views module to open a panel:
 
-```javascript
+~~~js
 // From dependency-actions.js
 define([
     'app',
@@ -134,21 +136,21 @@ define([
         }
     };
 });
-```
+~~~
 
 ## Opening modal dialog
 Using the views module, you an also open a modal dialog and get back its return value when the dialog is closed.
 
-```javascript
+~~~js
 // From asset-browser-controller.js
 function createNewFolder(uniqueDirectoryEntry) {
 	return hostService.openModalTextInputDialog("Enter new folder name",
     	uniqueDirectoryEntry.Filename);
 }
 
-```
+~~
 
-```javascript
+~~~js
 // From host-service.js
 define([
     'app',
@@ -173,7 +175,7 @@ define([
 		}
     };
 });
-```
+~~~
 
 It is worth noting that when a custom dialog is opened, we inject a few useful API into the global window object to allow a user to manipulate the dialog more easily:
 
@@ -186,7 +188,7 @@ It is worth noting that when a custom dialog is opened, we inject a few useful A
 `window.reject(result)`
 > Function that will close the dialog passing back the `result` to the dialog invoker. Dialog will be considered rejected or cancelled.
 
-```javascript
+~~~js
 // From text-input-dialog.js
 
 // Fetch initial values from the `views.openDialog` options parameter:
@@ -217,6 +219,6 @@ $scope.close = function (accepted) {
     }
     window.close();
 };
-```
+~~~
 
 ![new_folder](../../images/create_new_folder_dialog.png)

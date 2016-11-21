@@ -19,7 +19,7 @@ Here  are all the different ways to import files in Stingray:
 
 An importer can be spcify in a .plugin file:
 
-```sjson
+~~~sjson
 // From core/plugins/asset_browser/asset-browser.plugin defines different importers:
 imports = [
     {
@@ -59,7 +59,7 @@ imports = [
         ]
     }
 ]
-```
+~~~
 
 `types`
 
@@ -96,7 +96,7 @@ We will go over those importers quickly to explain how they are "wired":
 ### Fbx import
 
 
-```sjson
+~~~sjson
 {
     types = ["fbx", "bsi"]
     label = "Scenes"
@@ -121,13 +121,13 @@ We will go over those importers quickly to explain how they are "wired":
         function_name = "importFbx"
     }
 }
-```
+~~~
 
 The importFbx function is quite complicated and handles popping the resource dialog, merging options with the default Fbx importation options and then triggering the importation process itself.
 
 Let's look at `importFbx` to see which parameters it gets passed during an importation:
 
-```js
+~~~js
 
 // options: corresponds to the options objects in the importater descriptor above
 // previousResult: if there was a previous importer in the chain of importation these are all the results (compilation results, asset created).
@@ -141,12 +141,12 @@ importFbx: function (options, previousResult, assets, directory, flags) {
 
     return sceneImport.doImport();
 }
-```
+~~~
 
 
 A quick exerpt from `asset-browser-actions.js` showcase what happens during the `sceneImport.DoImport` call:
 
-```js
+~~~js
 
 importFbx: function (options, previousResult, assets, directory, flags) {
     let sceneImport = new SceneImport(options, flags, processFlags, showDialog, null, options.validate);
@@ -206,7 +206,7 @@ var showDialog = function (categories, assets, title, validation) {
             });
     });
 };
-```
+~~~
 
 ### Extend importation of already registered file
 
@@ -214,7 +214,7 @@ You can register another importer for a specific type of file. Your importer wil
 
 As an example we will write an importer to list what was created during Fbx importation:
 
-```sjson
+~~~sjson
 // From asset-browser.plugin
 {
     types = ["fbx"] // Another importer for Fbx
@@ -228,11 +228,11 @@ As an example we will write an importer to list what was created during Fbx impo
          function_name = "fbxImportLog"
      }
 }
-```
+~~~
 
 Here we look at how the `fbxImportLog` function is coded:
 
-```js
+~~~js
 fbxImportLog: function (options, previousResult, assets, directory, flags) {
     let fbxImportReport = previousResult[1];
 
@@ -241,13 +241,13 @@ fbxImportLog: function (options, previousResult, assets, directory, flags) {
     console.log('Existing assets modified', fbxImportReport.changed);
     console.log('Assets remove', fbxImportReport.removed);
 }
-```
+~~~
 
 ## Font importation and Generic Import Dialog
 
 Stingray now supports a new Font importer which makes use of the Generic Import Dialog as well.
 
-```sjson
+~~~sjson
 // From font-importer.plugin:
 imports = [
     {
@@ -279,11 +279,11 @@ imports = [
         ]
     }
 ]
-```
+~~~
 
 Let's look at how the Import Dialog is setup:
 
-```js
+~~~js
 // From font-importer-module.js
 function fontImporterDialog (importOptions, previousResult, file, destination, flags) {
     if (!_.isArray(file)) file = [{ file: file, directory: destination }];
@@ -314,11 +314,11 @@ function fontImporterDialog (importOptions, previousResult, file, destination, f
           require.toUrl('core/views/import-dialog'),
           { width: 510, height: 430 });
 }
-```
+~~~
 
 The `importFont` is interesting in how it runs a command tool to extract data from the font file and then writes textures assets:
 
-```js
+~~~js
 function importFontFile (importOptions, dialogResult, file, destination/*, flags*/) {
   if (!dialogResult.accepted) {
       return console.info('Font import has been cancelled.');
@@ -394,13 +394,13 @@ function importFontFile (importOptions, dialogResult, file, destination/*, flags
     });
   });
 }
-```
+~~~
 
 ### Using the Generic import dialog
 
 The Generic import dialog uses type descriptors to automatically populate a dialog containing a property editor. A type descriptor is specified in a `.type` file. As an example here is an exerpt of the `font-import-options.type` file:
 
-```sjson
+~~~sjson
 export = "#fonts"
 types = {
 	fonts = {
@@ -451,16 +451,10 @@ types = {
 		}
 	}
 }
-```
+~~~
 
 Basically it is a json file that specifies how a specific piece of Json should be interpreted and edited. The Stingray property editor uses `.type` file to populates itself automatically and to edit a json data model:
 
 ![font_importer_dialog](../../images/font_importer_dialog.png)
 
 The complete syntax of a type file can be found here: ~{ Stingray Type System }.
-
----
-Tags:
--	plugin
--	plug-in
----

@@ -10,5 +10,4 @@ events
 views_and_dialogs
 contextual_actions
 imports
-native_extensions
 viewports

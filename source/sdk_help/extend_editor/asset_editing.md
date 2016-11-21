@@ -12,14 +12,14 @@ To register a new type of asset and benefits from Property Editor editing capabi
 
 Here is an example on how it is done for `scatter.plugin`:
 
-```lua
+~~~sjson
 resources = [
 	// This mount the scatter_type folder which contains the aptly named scatter_type.type file which describes the data model and editing requirements of a scatter brush.
     {
         path = "scatter_type"
     }
 ]
-```
+~~~
 
 ### Registering a type file for editing
 
@@ -27,7 +27,7 @@ When creating a `.type` file, you need to ensure the `extension` property is set
 
 Here is how `scatter_brush.type` specifies its extension:
 
-```lua
+~~~sjson
 export = "#scatter_brush"
 // This indicate to the type system that all file ending in .scatter_brush are custom assets.
 extension = "scatter_brush"
@@ -36,7 +36,7 @@ types = {
         ...
     }
 }
-```
+~~~
 
 ## Creating new custom asset
 
@@ -50,7 +50,7 @@ In a `.type` file, if you set the `generic_creator` property to true you will be
 
 Asset created using the `generic_creator` will be generated from the default values (or the default values of types) specified in the `.type` file.
 
-```lua
+~~~sjson
 // from scatter_brush.type
 
 export = "#scatter_brush"
@@ -80,7 +80,7 @@ types = {
         }
     }
     ...
-```
+~~~
 
 In the example above, notice how the editor block for the `scatter_brush` asset uses the `generic_selector` property. When this property is set to `true` it means selecting a scatter brush will allow the Property Editor modify it.
 
@@ -92,7 +92,7 @@ If you need to create an asset with a specific set of values that do NOT corresp
 
 As an example the capture_frames plugin uses the template system to instantiate new `capture_settings` asset:
 
-```lua
+~~~sjson
 // From capture_frames.plugin
 templates = [{
 		type = "asset"
@@ -103,10 +103,11 @@ templates = [{
 			"create-frame-capture \"$name.capture_settings\" \"$project/$output_dir\""
 		]
 	}]
-```
+~~~
 
 In its `.type` file, capture_settings doesn't use `generic_creator` (but still uses the Property Editor):
-```lua
+
+~~~sjson
 // Exerpt from capture_settings.type:
  editor = {
             label = "Capture Settings"
@@ -115,7 +116,7 @@ In its `.type` file, capture_settings doesn't use `generic_creator` (but still u
             version = "1.0.0"
         ...
  }
-```
+~~~
 
 ![create scatter brush](../../images/capture_settings_creation_menu.png)
 
@@ -125,7 +126,7 @@ It is possible to listen to changes happening in the Property editor when a Cust
 
 See how `preview-blend-shapes.js` listen to changes on blend shapes to properly update the blend weights in the ~{Asset Preview}~:
 
-```lua
+~~~js
 // From preview-blend-shapes.js
 
 setup: function (config, asset, viewportName) {
@@ -145,25 +146,24 @@ setup: function (config, asset, viewportName) {
 
             previewUtils.sendToViewport(this._viewportName, 'set_blend_shape_channel_weight_percentage', luaUtils.toSyntax(channel), luaUtils.toSyntax(changeDesc.Value));
         }));
-
-```
+~~~
 
 A change descriptor has the following properties:
 
-```javascript
+~~~js
 {
 	Type: string, // Can be either: ValueAdded, ValueRemoved, ValueChanged
     PropertyPath: string, // Json property path modified in the Custom asset
     Value: object, // Value set or added
     AssetsModified: Array<string> // List of assets that were modified (in case of consensus editing.)
 }
-```
+~~~
 
 ## Fetching Custom Asset data
 
 You can use the `assetService` to query the Json value of a custom asset.
 
-```javascript
+~~~js
 // From preview-blend-shapes.js
 
 // Get the managed (in memory representation) of a particular blend shape.
@@ -177,7 +177,7 @@ assetService.getManagedAsset(assetName + ".blend_shapes").then(function (dataObj
         console.error("Cannot find data for: ", assetName + ".blend_shapes");
     }
 });
-```
+~~~
 
 ## Use cases
 Stingray editor ships with 3 different Custom assets described using `.type` file. These are good examples showcasing usage opf the Stingray Type Descriptors.
@@ -187,7 +187,7 @@ Stingray editor ships with 3 different Custom assets described using `.type` fil
 - editor\plugins\blend_shapes\blend_shapes.plugin : selecting a `blend_shape` file will allow editing of properties and display the result using a custom preview behavior.
 - editor\plugins\blend_shapes\blend_shapes\blend_shapes.type : type file describing the data layout of a blend_shape file as well as which type of control to use for editing.
 
-```lua
+~~~js
 // From blend_shape.type
 
 export = "#blend_shapes"
@@ -212,7 +212,7 @@ types = {
         }
     }
 }
-```
+~~~
 
 ![blend shape preview](../../images/blend_shape_preview_update.gif)
 
@@ -224,7 +224,7 @@ Scatter brushes are an editor only resource that encapsulate a list of units use
 
 As a side node, the levelEditingService listens to changes on scatter brushes to reload the Lua scatter data model:
 
-```javascript
+~~~js
 objectEditingService.on("DataObjectsConsensusChanged", function (args) {
     if (this.SelectedToolName !== "scatter" ||
         !this.SelectedScatterBrush) {
@@ -238,7 +238,7 @@ objectEditingService.on("DataObjectsConsensusChanged", function (args) {
 
     this.invoke('UpdateLuaScatterBrushComponents');
 }.bind(this));
-```
+~~~
 
 ![capture_settings](../../images/scatter_brush_property_editing.png)
 
@@ -248,7 +248,7 @@ Capture Settings are an editor only resource that specify parameters needed to d
 - editor\plugins\capture_frames\capture_frames.plugin
 - editor\plugins\capture_frames\capture_frames\capture_settings.type : uses an Action button and special `clean/init` callbacks to be able to execute initialization code when a capture_settings are *selected/unselected*.
 
-```lua
+~~~sjson
 // From capture_settings.type
 export = "#capture_settings"
 extension = "capture_settings"
@@ -292,7 +292,8 @@ types = {
         }
     }
 }
-```
+~~~
+
 - editor\plugins\capture_frames\capture_frames_actions.js : handle capture action and communicate with viewports to generate exr files.
 
 ![capture_settings](../../images/capture_settings_editing.png)

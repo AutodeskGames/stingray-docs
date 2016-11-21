@@ -1,4 +1,4 @@
-# All the ways you can extend Stingray
+# All the Ways You can Extend Stingray
 
 As introduced in the ~{ System Overview }~, you can make your custom plug-in hook in to the Stingray editor, the runtime engine, and the project content. Depending on what you want your plug-in to do, you may need to integrate with one, two, or all three of these components.
 
@@ -18,7 +18,7 @@ Editor plug-ins add new capabilities to the Stingray editor, typically for the p
 
 -	Editor plug-ins can also optionally call out from JavaScript to **C** functions that you define in a *.dll*. This can be useful for heavy operations that need to be done with the fastest possible performance, or if you need to integrate directly with third-party libraries or applications.
 
-For more information on how to extend the editor in a plug-in, see ~{ Extend the editor }~.
+For more information on how to extend the editor in a plug-in, see ~{ Extend the Editor }~.
 
 Most of the panels and views that you see in the Stingray editor app are actually provided by plug-ins just like the ones you can write yourself:
 
@@ -36,7 +36,7 @@ Engine plug-ins integrate into the runtime viewing and playback engine, typicall
 
 -	Engine plug-ins can also contain C implementations for custom Flow nodes. (Note that these C implementations also have to be accompanied in the project by data descriptions for the new nodes. See TODO:link.)
 
-For more information on how to extend the engine in a plug-in, see ~{ Extend the engine }~.
+For more information on how to extend the engine in a plug-in, see ~{ Extend the Engine }~.
 
 ![Engine plug-ins](images/engine_plugins.png)
 
