@@ -1,5 +1,7 @@
 # Create occluder boxes
 
+[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
+
 Occluder boxes are gizmo units that let you occlude objects that are behind other objects and not render them. For example, when rendering the interior of an architectural scene, you can prevent objects behind a wall or room from being displayed and hide them by occluding. Occluder box supports occluding of shadow casting of light if the occluder is placed between the light source and the object. Occlusion culling can give you significant performance improvements at it lets you avoid rendering shadows and objects that give no visual impact to your final rendered frame, allowing you to spend hardware resources on rendering other more significant objects and effects.
 
 Occlusion culling also occludes sections of terrain and particle effect systems and is a great tool to optimize rendering whenever time is spent rendering objects that are not seen in the viewport.
