@@ -1,4 +1,4 @@
-#Property Editor Usage
+# Use the Property Editor component in your UI
 
 It is really easy to create new a Panel/Editor using the Stingray Editor SDK. This document will highlight how to create a panel containing 2 property editors: one will be setup using a `.type` file the onther one using pure javascript.
 
@@ -26,13 +26,13 @@ menus = [
 ]
 ```
 
-For more information on `.plugin` file see: ~{About plug-in definitions}~. Views definition can be found here: ~{Views and Dialogs}~. And menu customization can be found here: ~{Create a new menu item}~.
+For more information on `.plugin` file see: ~{ Define a Stingray Plug-in }~. Views definition can be found here: ~{ Views and Dialogs }~. And menu customization can be found here: ~{ Create a new menu item }~.
 
 ## Property Editor Panel
 
 ### Initialization
 
-Each javascript panel file file should begin with a `define` block that will specify which other javascript modules you want to include (see [RequireJs](http://requirejs.org/) for more information on require itself). You can also look at the last section in ~{# Tips for developing plug-ins}~ for more Stingray specific details on requiring files.
+Each javascript panel file file should begin with a `define` block that will specify which other javascript modules you want to include (see [RequireJs](http://requirejs.org/) for more information on require itself). You can also look at the last section in ~{ Tips for developing plug-ins}~ for more Stingray specific details on requiring files.
 
 ```javascript
 // This is the list of all modules we depend on:
@@ -51,7 +51,7 @@ define([
     'services/file-system-service'
 ],
 	/** This is the initialzation function of your module. Each required dependency gets injected
-    	in the same order it is included. Module starting with capital letter a generally Component 
+    	in the same order it is included. Module starting with capital letter a generally Component
         or class (that can be used with new). Module starting with a lowerCase are generally namespace
         containing functions and data.
     */
@@ -76,7 +76,7 @@ define([
     var editorContext = props.makeEditorContext(services);
 ```
 
-The section ~{# Use built-in editor services}~ contains more information on core Stingray services.
+The section ~{ Use built-in editor services}~ contains more information on core Stingray services.
 
 ### Property Editor using Type file
 We will first highlight how to create a property editor from a `.type` file. These files describe how to interpret JSON data (like Stingray Assets) and what type of properties should be used to modify this data. For more reference on `.type` file see ~{Stingray Type System}~.

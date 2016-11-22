@@ -8,21 +8,17 @@ The editor's plug-in system defines a number of different kinds of extensions th
 
 -	`actions` define reusable commands or script blocks that you can refer to from other extensions in your plug-in. See ~{ Register an action }~.
 
--	`resources` let your plug-in add new content to the current project -- units, entities, materials, etc. See ~{ Make new resources available to the project }~.
-
 -	`services` add new JavaScript worker services to the editor. Your plug-in (or other plug-ins) can require and use these services in exactly the same way as the standard Stingray editor services. See ~{ Register a custom service }~.
 
--	`asset_types` tell the ~{ Asset Browser }~ how to handle new types of data files in the project -- that is, files whose extensions don't match any known asset types. See ~{ Register a custom asset type }~.
+-	`asset_types` tell the **Asset Browser** how to handle new types of data files in the project -- that is, files whose extensions don't match any known asset types. See ~{ Register a custom asset type }~.
 
 -	`templates` tell the editor what to do when the user creates a new kind of custom asset. See ~{ Define templates for new assets }~.
 
--	`previews` control the way the ~{ Asset Preview }~ behaves when the user selects a given type of resource in the ~{ Asset Browser }~. See ~{ Define previews for custom assets }~.
+-	`previews` control the way the **Asset Preview** behaves when the user selects a given type of resource in the **Asset Browser**. See ~{ Define previews for custom assets }~.
 
 -	`migrations` offer your plugin a chance to carry out some actions the first time the editor loads a project while this version of your plugin is installed.
 
 -	`events` register your plug-in to listen for editor events with a given name, and to carry out an action or a set of actions when that event happens. See ~{ Respond to an editor event }~ for configuration instructions, and ~{ Emit and handle editor events }~ for more background about events.
-
--	`native extensions` offers a way to expose C/C++ functionalities to javascript. See ~{ Using native extensions }~
 
 Every plug-in needs to have at least one of these extensions. There is no limit to the number of extensions that a plug-in can have.
 

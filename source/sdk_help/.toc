@@ -6,6 +6,7 @@ define_a_plugin
 extend_editor
 extend_content
 extend_engine
+type_system
 custom_flow_nodes
 distribute_and_install
 reload

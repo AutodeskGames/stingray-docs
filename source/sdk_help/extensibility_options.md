@@ -64,7 +64,7 @@ Here are a few kinds of project assets that you may find particularly useful for
 
 -	Lua code that integrates with other applications or web services *via* [HTTP requests](http://help.autodesk.com/view/Stingray/ENU/?guid=__lua_ref_ns_stingray_Http_html) and/or [websocket connections](http://help.autodesk.com/view/Stingray/ENU/?guid=__lua_ref_obj_stingray_WebSocket_html), using the Lua interfaces provided by the engine.
 
-For more information on how to set up a plug-in to expose new resources to the project, see ~{ Extend the project }~.
+For more information on how to set up a plug-in to expose new resources to the project, see ~{ Extend the Project Content }~.
 
 If you choose to *Show mapped folders* in the **Asset Browser**, you can see all the asset folders that have been mounted by all of your plug-ins:
 

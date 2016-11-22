@@ -1,4 +1,4 @@
-# Extend the project content
+# Extend the Project Content
 
 Your plug-in can use the `resources` extension to make new assets and content available in the project. When your plug-in is loaded into the Stingray editor, users are able to work with these resources just like any other assets that live in their project source folder or in the `core` resources folder.
 

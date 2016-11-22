@@ -1,11 +1,17 @@
-# Built-In Properties Reference
-Stingray Property Editor supports a wide range of property types. This reference details the built-in Property Editor controls and the set of parameters that can be used to customize them.
+# Built-in metadata properties
 
-There are 2 major ways of specifying properties: using the editor block in a `.type` file (see ~{Stingray Type System}~) or using the pure javascript compact notation (see ~{Property Editor Usage}~).
+You can use the **Property Editor** to view and modify a wide range of different types of properties -- both simple types like strings, booleans, and numbers, and compound types like colors and rotations. You also have a lot of control over the way the **Property Editor** displays these values. Many property types can be represented using a variety of UI widgets -- like, a number could be edited using a text field, a slider, a spinner box, etc.; you can control display labels, tooltips, ordering, etc.
 
---------------------------------------------------------------------------------
+To tell the **Property Editor** how it should visually represent the data it is editing, you can give your data some metadata. There are two main ways to do this:
+
+-	If your data is described in a type file, you can use an `editor` block for each type in the data to describe how that type should be represented in the editor. See also ~{ Stingray Type System }~.
+
+-	Or, you can use a compact notation that is expressed purely in JavaScript. See ~{ Use the Property Editor component in your UI }~.
+
+This reference details the different kinds of built-in metadata the **Property Editor** understands, and shows how to use them in both SJSON type files and in JavaScript.
 
 ## Common editor metadata properties
+
 These parameters are available for all property control types.
 
 Property       |Type     |Default   |Description
@@ -21,7 +27,8 @@ Property       |Type     |Default   |Description
 `showValue`      |`Boolean`|`true`    |If `false`, hides the value of the property in editor.
 
 ### Type file example
-```lua
+
+```sjson
 {
     type = ":number"
     min = 0
@@ -38,8 +45,9 @@ Property       |Type     |Default   |Description
 }
 ```
 
-###Compact notation example
-```javascript
+### Compact notation example
+
+```js
 var numberProperty = props.slider("Health", m.prop(50), {
 	order: 140,
     suffix: "HP",
@@ -50,16 +58,21 @@ var numberProperty = props.slider("Health", m.prop(50), {
 })
 ```
 
+--------------------------------------------------------------------------------
+
+## Built-in control widgets
+
+The following sections describe the differen values you can use for the `control` or `displayType` metadata field. Each one defines a different kind of built-in widget for viewing and interacting with the value of the corresponding type -- like sliders, textfields, checkboxes, etc.
+
 ![import menu](../images/all_properties.png)
 
---------------------------------------------------------------------------------
-##Built-In Property Widgets
-
 ### Quick Mithril Model Recap
-The following compact property editor notation will use [Mithril](http://mithril.js.org/) getter/setter function mecanism to encapsulate acces to the property model. More information can be found ~{Property Editor Usage}~.
+
+The compact property editor notation in the following examples uses a [Mithril](http://mithril.js.org/) getter/setter function mechanism to encapsulate access to the property model. For more information, see ~{ Use the Property Editor component in your UI }~.
 
 This is a quick example of a property model function:
-```javascript
+
+```js
 var _propertyData = "This is my data";
 function propertyModel (property) {
 	if (arguments.length > 1) {
@@ -69,8 +82,9 @@ function propertyModel (property) {
 }
 ```
 
-Most examples below will use the following function which **generates** property model on the fly:
-```javascript
+Most examples below use the following function which **generates** a property model on the fly:
+
+```js
 function genModel (value) {
 	return function (property, newValue) {
     	if (arguments.length > 1) {
@@ -81,10 +95,11 @@ function genModel (value) {
 }
 ```
 
+### Action
 
+A simple button that triggers a custom function.
 
-### Property Action
-A simple button use to trigger a custom function.
+![import menu](../images/property_action.png)
 
 Property|Type    |Default |Description
 --------|--------|--------|-----------
@@ -95,7 +110,8 @@ Property|Type    |Default |Description
 `iconName`  |`string` |  |See [Font Awesome Icons](http://fontawesome.io/icons/) for a list of supported icons name.
 
 #### Type file
-```lua
+
+```sjson
 {
     type = ":string"
     editor = {
@@ -112,20 +128,22 @@ Property|Type    |Default |Description
 }
 ```
 
-### Javascript
-```javascript
+#### Javascript
+
+```js
 var actionProperty = props.action("Action", function () {
                         console.log('Action is triggered!');
                     }, {iconName: "fa-star-o"}),
 ```
 
-![import menu](../images/property_action.png)
+### Boolean
 
-###Boolean
 A checkbox control.
 
+![import menu](../images/property_boolean.png)
+
 #### Type file
-```lua
+```sjson
 {
     type = ":boolean"
     editor = {
@@ -136,15 +154,17 @@ A checkbox control.
 }
 ```
 
-####Javascript
-```javascript
+#### Javascript
+
+```js
 var actionProperty = props.bool("Boolean", genModel(true));
 ```
 
-![import menu](../images/property_boolean.png)
+### Choice
 
-###Choice
-A combobox that can either map on an Enum or a string.
+A combobox that can map to either an enum type or a string.
+
+![import menu](../images/property_choice.png)
 
 Property       |Type     |Default   |Description
 ---------------|---------|----------|-----------
@@ -154,7 +174,8 @@ Property       |Type     |Default   |Description
 `defaultValue`       |`String` |`null`    |Default value if no choice.
 
 #### Type file (Enum)
-```lua
+
+```sjson
 Enum = {
     type = ":enum"
     value = ":string"
@@ -179,7 +200,8 @@ Enum = {
 ```
 
 #### Type file (String)
-```lua
+
+```sjson
 // This effectively creates a string that will use a Combobox control to select between
 // a specific list of string values.
 ChoiceString = {
@@ -197,8 +219,9 @@ ChoiceString = {
 }
 ```
 
-####Javascript
-```javascript
+#### Javascript
+
+```js
 var options {
     'Beer': 1,
     'Scotch': 2,
@@ -209,20 +232,28 @@ var options {
 var choiceProperty = props.choice("Tough choice", genModel(2), options, {defaultValueName: "Choose a drink"});
 ```
 
-![import menu](../images/property_choice.png)
-
 ### Color
-A color well with an accompanying intensity slider. Clicking the color well will bring up a color picker.
+
+A color swatch with an accompanying intensity slider.
+
+![import menu](../images/property_color.png)
+
+Clicking the swatch brings up a color picker dialog:
+
+![import menu](../images/color_picker.png)
 
 #### Type file (String)
-```lua
+
+```sjson
 Color = {
     type = "core/types/color"
 }
 ```
 
-#### Color definition (see core/types/color)
-```lua
+#### Color base type definition
+
+```sjson
+// see core/types/color.type
 export = "#color"
 types = {
     color = {
@@ -256,8 +287,9 @@ types = {
 }
 ```
 
-####Javascript
-```javascript
+#### Javascript
+
+```js
 // Simple color:
 var colorProperty = props.color("Color", genModel([1,1,1]));
 
@@ -265,16 +297,15 @@ var colorProperty = props.color("Color", genModel([1,1,1]));
 var hdrColorProperty = props.hdrColor("Color", genModel([1,1,1]), genModel(1));
 ```
 
-![import menu](../images/property_color.png)
-
-![import menu](../images/color_picker.png)
-
 ### Number
 
-Spinner control allowing editing of a number value. Comes with lots of nifty features:
-- Right clicking on the spinner resets it to its default value.
-- Shift + Spinner modifies the data really fast.
-- Ctrl + Spinner modifies the data more slowly.
+A spinner control that allows editing of a number value. Comes with lots of nifty features:
+
+-	Right-clicking the spinner resets it to its default value.
+-	Holding `Shift` while spinning modifies the data more quickly.
+-	Holding `Ctrl` while spinning modifies the data more slowly.
+
+![import menu](../images/property_number.png)
 
 Property       |Type     |Default   |Description
 ---------------|---------|----------|-----------
@@ -285,9 +316,9 @@ Property       |Type     |Default   |Description
 `decimal`|`number` |`4`  |Number of decimals to show. If 0, the number is assumed to be an integer.
 `numericDefaultValue`|`number` |`0`  |Value to reset to whrn right clicking on the Spinner.
 
-
 #### Type file
-```lua
+
+```sjson
 Number = {
     type = ":number"
     editor = {
@@ -302,8 +333,9 @@ Number = {
 }
 ```
 
-####Javascript
-```javascript
+#### Javascript
+
+```js
 var numberProperty = props.number("A Numeric Value", genModel(42.111), {
 	increment: 0.5,
     min: -9,
@@ -311,11 +343,11 @@ var numberProperty = props.number("A Numeric Value", genModel(42.111), {
 });
 ```
 
-![import menu](../images/property_number.png)
-
 ### Slider
 
-Slider controls allows editing of a number using a slider. Most of its parameters are similar to the number property (see above).
+A slider control allows editing of a number using a left-to-right slider. Most of its parameters are similar to the [number] property (see above).
+
+![import menu](../images/property_slider.png)
 
 Property       |Type     |Default   |Description
 ---------------|---------|----------|-----------
@@ -327,7 +359,8 @@ Property       |Type     |Default   |Description
 
 
 #### Type file
-```lua
+
+```sjson
 Number = {
     type = ":number"
     editor = {
@@ -342,26 +375,25 @@ Number = {
 }
 ```
 
-####Javascript
-```javascript
+#### Javascript
+
+```js
 var sliderProperty = props.slider("Percentable", genModel(50), {min: 0, max: 100, increment: 1});
 ```
 
-![import menu](../images/property_slider.png)
-
 ### String
 
-String property provide a textbox.
+String properties are edited by default through simple text boxes.
+
+![import menu](../images/property_string.png)
 
 Property       |Type     |Default   |Description
 ---------------|---------|----------|-----------
 `isMultiline`     |`boolean` |`false`|Defines if the textbox should span over multiple lines.
 `lineRows`|`number` |`0`  |If `isMultiline` is `true` you can specify the number of lines of the textbox (between 1 and 8).
 
-
-
 #### Type file
-```lua
+```sjson
 SingleLine = {
     type = ":string"
     editor = {
@@ -379,8 +411,9 @@ MultiLine = {
 }
 ```
 
-####Javascript
-```javascript
+#### Javascript
+
+```js
 var stringProperty = props.color("Color", genModel([1,1,1]));
 
 var colorModel = genModel([1,1,1]);
@@ -388,20 +421,23 @@ var intensityModel = genModel(1);
 var hdrColorProperty = props.hdrColor("Color", colorModel, intensityModel);
 ```
 
-![import menu](../images/property_string.png)
-
-
 ### Path
-Path property allows a user to select either a folder or a file on disk.
+
+The path property allows a user to select either a folder or a file on disk,  using a window provided by the operating system.
+
+![import menu](../images/property_path.png)
+
+![import menu](../images/property_path_selector.png)
 
 Property       |Type     |Default   |Description
 ---------------|---------|----------|-----------
-`browserType`     |`string` |``|Can be either `File` or `Folder`. Defines what type of native path selector will be popped.
-`browseTitle`|`string` |``  |Title of the native dialog.
-`browseFilter`|`string` |``  |File filter to only show files with a specific extension.
+`browserType`     |`string` | |Can be either `File` or `Folder`. Defines what type of native path selector will be popped.
+`browseTitle`|`string` |  |Title of the native dialog.
+`browseFilter`|`string` |  |File filter to only show files with a specific extension.
 
 #### Type file
-```lua
+
+```sjson
 FilePath = {
     type = ":string"
     editor = {
@@ -421,51 +457,51 @@ DirPath = {
 }
 ```
 
-####Javascript
-```javascript
+#### Javascript
+
+```js
 var fileProperty = props.file("File", genModel('c:/Pogram Files (x86)/Git/bin/git.exe'), "Pick an exec", "*.exe"),
 var dirProperty = props.directory("Folder", genModel('c:/Pogram Files (x86)/Git'), "Pick a folder"),
 ```
 
-![import menu](../images/property_path.png)
-
-![import menu](../images/property_path_selector.png)
-
-
 ### Range
-A control containing two numeric min and max value fields.
+A control that contains two numeric min and max value fields.
+
+![import menu](../images/property_range.png)
+![import menu](../images/property_range2.png)
 
 #### Type file
-```lua
+```sjson
 Range = {
     type = "core/types/range"
 }
 ```
 
-####Javascript
-```javascript
+#### Javascript
+
+```js
 var range1= props.range("Range [-100, 100]", "mini", genModel(25), 'maxi', genModel(75), {min: -100, max: 100, increment: 0.5}),
 var range2 = props.range("Read Only", "MIN", genModel(25), 'Max', genModel(75), {min: -100, max: 100, increment: 0.5, isReadOnly: true})
 ```
 
-![import menu](../images/property_range.png)
-![import menu](../images/property_range2.png)
-
-
 ### Vector
 
-A control that can be used to display vector of 2, 3 or 4 components (not a rotation though).
+A control that can be used to display a list of 2, 3 or 4 components -- but not a rotation (see [Rotation] below).
 
+![import menu](../images/property-vector.png)
 
 #### Type file
-```lua
+
+```sjson
 Position = {
     type = "core/types/vector3"
 }
 ```
 
-#### Vector3 Type Definition
-```lua
+#### Vector3 base type definition
+
+```sjson
+// see core/types/vector3.type
 export = "#vector3"
 types = {
     vector3 = {
@@ -480,8 +516,9 @@ types = {
 }
 ```
 
-####Javascript
-```javascript
+#### Javascript
+
+```js
 
 var vec2 = props.vector2("Vector2", genModel([34, 78]), {min: -100, max: 100, increment: 0.5});
 
@@ -490,20 +527,24 @@ var vec3 = props.vector3("Vector3", genModel([1,2,3]));
 var vec4 = props.vector4("Vector4", genModel([34, 78, 67, -90]));
 ```
 
-![import menu](../images/property-vector.png)
-
 ### Rotation
-A control that that uses as data model vector of 3 radians value and that shows 3 spinners with degrees values.
+
+A control that that uses as its data model a vector made up of three radian values, and that shows three spinners with the values converted to degrees.
+
+![import menu](../images/property_rotation.png)
 
 #### Type file
-```lua
+
+```sjson
 Rotation = {
     type = "core/types/rotation"
 }
 ```
 
-#### Rotation Type definition
-```lua
+#### Rotation base type definition
+
+```sjson
+// see core/types/rotation.type
 export = "#rotation"
 types = {
     rotation = {
@@ -518,9 +559,8 @@ types = {
 }
 ```
 
-####Javascript
-```javascript
+#### Javascript
+
+```js
 var rotation = props.rotation("Rotation", genModel(0, -1.52, 3.14));
 ```
-
-![import menu](../images/property_rotation.png)

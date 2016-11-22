@@ -1,14 +1,14 @@
 # Custom Asset Editing
 
-Since Stingray V1.5 it is possible to define new types of assets and to automatically have the Property Editor generate editing UI for it. You will benefit from all the standard editing workflows: undo/redo, discard and creation from ~{ Asset Browser }~.
+Since Stingray V1.5 it is possible to define new types of assets and to automatically have the Property Editor generate editing UI for it. You will benefit from all the standard editing workflows: undo/redo, discard and creation from **Asset Browser**.
 
 This makes defining new assets used **only** for editor purpose super easy (ex: scatter brush). Obviously, if you want to define a new type of asset that needs to be available on the runtime side of Stingray you will need to create a runtime plugin containing a compiler extension for it.
 
-For information on how to define new assets type so they are properly displayed in the ~{Asset Browser}~ (ex: icons, categories) please refer to ~{Register a custom asset type}~.
+For information on how to define new assets type so they are properly displayed in the **Asset Browser** (ex: icons, categories) please refer to ~{Register a custom asset type}~.
 
 ## Type file specification and mounting
 
-To register a new type of asset and benefits from Property Editor editing capabilities, you need to create a `.type` file describing the data layout of that asset and ensure that `.type` file is in in a mapped folder. See ~{ Make new resources available to the project }~ for more information on mapping a folder.
+To register a new type of asset and benefits from Property Editor editing capabilities, you need to create a `.type` file describing the data layout of that asset and ensure that `.type` file is in in a mapped folder. See ~{ Extend the Project Content }~ for more information on mapping a folder from your plug-in.
 
 Here is an example on how it is done for `scatter.plugin`:
 
@@ -23,7 +23,7 @@ resources = [
 
 ### Registering a type file for editing
 
-When creating a `.type` file, you need to ensure the `extension` property is set to the file extension corresponding to your asset. This indicate to the Stingray type system that your `.type` file describes a new asset. See ~{Stingray Type Descriptor}~ for a complete description of the type format.
+When creating a `.type` file, you need to ensure the `extension` property is set to the file extension corresponding to your asset. This indicate to the Stingray type system that your `.type` file describes a new asset. See ~{ Stingray Type System }~ for a complete description of the type format.
 
 Here is how `scatter_brush.type` specifies its extension:
 
@@ -44,7 +44,7 @@ There are 2 ways to ensure a Custom Asset is available for creation in the Asset
 
 #### Generic creator and selector
 
-In a `.type` file, if you set the `generic_creator` property to true you will be able to right click in the ~{Asset Browser}~ and see an creation menu item for your asset type.
+In a `.type` file, if you set the `generic_creator` property to true you will be able to right click in the **Asset Browser** and see an creation menu item for your asset type.
 
 ![create scatter brush](../../images/scatter_brush_creation_menu.png)
 
@@ -124,7 +124,7 @@ In its `.type` file, capture_settings doesn't use `generic_creator` (but still u
 
 It is possible to listen to changes happening in the Property editor when a Custom Asset is modified and to react to those changes. You need to listen to the `DataObjectsConsensusChanged` of the `objectEditingService`.
 
-See how `preview-blend-shapes.js` listen to changes on blend shapes to properly update the blend weights in the ~{Asset Preview}~:
+See how `preview-blend-shapes.js` listen to changes on blend shapes to properly update the blend weights in the **Asset Preview**:
 
 ~~~js
 // From preview-blend-shapes.js
