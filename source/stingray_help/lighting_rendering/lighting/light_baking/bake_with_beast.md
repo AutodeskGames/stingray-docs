@@ -1,7 +1,5 @@
 # About baking with Beast
 
-![UPDATED](../../../images/updated.png)
-
 Autodesk Beast is a rendering SDK that simulates lighting and global illumination for games. Stingray comes with a simple, ready-to-use integration of the main lightmap baking features of Beast.
 
 > To see some simple demonstrations of the ways you can set up a Stingray level to use Beast, download the 'Beast Examples' project from the **Online Examples** tab in the ~{ Project Manager }~.
