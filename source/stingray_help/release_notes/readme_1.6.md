@@ -52,10 +52,6 @@ You can now use Lua to create new geometry on the fly as your project is running
 
 Here's [the sample code](../../lua_ref/exa_ex__snippets_proc__meshes.html) for the scene above to get you started.
 
-## Improved lightmap baker
-
-The revamped Stingray and the Beast lightmap bakers now reflect more meaningful baker settings. See ~{ About baking with the Stingray baker }~ and ~{ About baking with Beast }~ for the updated options.
-
 ## What's New in Rendering
 
 ### Light baking improvements
@@ -68,6 +64,8 @@ The following Improvements to light baking and post-processing effects (SSAO, SS
 - Normalization of lightmap resolution is now based on the UV space area.
 - UV seam fixup now automatically runs as a post-processing effect when you bake lightmaps.
 - Improved interaction with a lightmapped level, such as material management and object manipulations, without losing the lightmap.
+
+The Stingray lightmap baker interface now reflect more meaningful baker settings. See ~{ About baking with the Stingray baker }~ for the updated options.
 
 ### VR Improvements
 
@@ -111,6 +109,10 @@ Stingray projects now use the unique file extension *.stingray_project*, making 
 ### Simplified texture import
 
 Stingray includes new texture categories and templates such as Normal, Linear Greyscale, Albedo, Albedo Opacity and Roughness/Metallic/AO to help you categorize textures and apply texture settings. The newly added texture templates in the **Texture Manager** come with default compression settings to work on each supported platform. The textures imported in your project are now assigned the default compression settings. See ~{ Import a model with textures and materials }~.
+
+### Occluder boxes
+
+You can use occluder boxes from the **Create** menu to occlude objects and gain performance improvements by avoiding rendering shadows and objects that give no visual impact to your final rendered frame. For more information, see ~{ Create occluder boxes }~.
 
 ### Download new plug-ins
 
