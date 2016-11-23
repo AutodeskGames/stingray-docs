@@ -1,6 +1,6 @@
 # Getting Started
 
-Once you've downloaded and installed Stingray, you can select Autodesk Stingray Editor from the  Start menu to launch the application. You'll need to log in with your Autodesk ID when you run Stingray.
+Once you've downloaded and installed Stingray, you can select Autodesk > Stingray from the  Start menu to launch the application. You'll need to log in with your Autodesk ID when you run Stingray.
 
 [![NEW](images/new.png "What else is new in v1.6?")](release_notes/readme_1.6.html)
 
