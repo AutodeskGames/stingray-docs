@@ -3,8 +3,6 @@
 
 Stingray 1.6 (1.6.1011.0) focuses on delivering great workflows between 3ds Max and Stingray, making it easy to send scenes from Max and produce stunning real-time renders with Stingray. With the new Render to Frames tool, you can now capture high quality videos of your interactive projects and share online.
 
-> **Important**: We strongly recommend that you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
-
 Sections in this topic:
 
 -	[What's New](#whats-new)
@@ -76,9 +74,9 @@ The Stingray lightmap baker interface now reflect more meaningful baker settings
 
 ## Ready to learn Stingray?
 
-With Stingray 1.6, we aim to give you two things you need when learning anything new: more time, and some advice on where to start!
+With Stingray 1.6, we aim to give you two things you need when learning anything new: more time, and some advice on where to start.
 
-Hobbyists, enthusiasts, and early adopters can now run Stingray using a non-commercial Startup license. If the 30-day trial period didn't give you enough time, check out the [terms and conditions](http://www.autodesk.com/company/legal-notices-trademarks/terms-of-service-autodesk360-web-services/autodesk-web-services-entitlements/stingray-startup-license) to see if you're eligible for the non-commercial license. Updated steps to install using this license are included in the [Stingray Installation Supplement](http://help.autodesk.com/view/Stingray/ENU/?guid=GUID-2835E17D-888F-459E-A622-0CD8ED983A91) topic.
+Hobbyists, enthusiasts, and early adopters can now run Stingray using a Non-Commercial startup license. If the 30-day trial period didn't give you enough time, check out the [terms and conditions](http://www.autodesk.com/company/legal-notices-trademarks/terms-of-service-autodesk360-web-services/autodesk-web-services-entitlements/stingray-startup-license) to see if you're eligible for the Non-Commercial license. Updated steps to install using this license are included in the [Stingray Installation Supplement](http://help.autodesk.com/view/Stingray/ENU/?guid=GUID-2835E17D-888F-459E-A622-0CD8ED983A91) topic.
 
 In addition, if you're tired of searching for and watching tutorial videos, pop open the Stingray **Help** menu and select the brand new top-secret Stingray **Hands-on Training Mission**. We've added 5 quick, *interactive* tutorial lessons that take you through the Stingray basics, and get you well on your way to creating your own project. (Pssst - it's not really a secret. Let us know what you think!) We added a note about this in the ~{ Getting Started }~ topic.
 
