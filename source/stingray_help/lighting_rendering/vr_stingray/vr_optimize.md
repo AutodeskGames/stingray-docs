@@ -25,7 +25,7 @@ Typically polygon count is not a problem, as Stingray can handle a lot of polygo
 
 ## Texture Blowout
 
-To determine if you are running out of texture memory, you can use a tool like Process Explorer. Once you’ve confirmed that you have a problem with texture memory, you need to resize and compress your textures. You can use the ~ { Texture Manager }~ to set compression settings for your textures.
+To determine if you are running out of texture memory, you can use a tool like Process Explorer. Once you’ve confirmed that you have a problem with texture memory, you need to resize and compress your textures. You can use the ~{ Texture Manager }~ to set compression settings for your textures.
 
 ## Shadow casting
 

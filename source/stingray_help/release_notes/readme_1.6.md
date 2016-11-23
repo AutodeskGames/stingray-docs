@@ -36,6 +36,8 @@ New level sync workflows let you automatically rebuild your 3ds Max scenes in St
 
 You can now capture the active camera or viewport and save frames to disk in the OpenEXR file format. The new Capture Frames tool also supports capturing frames on a test engine. For more information, see ~{ Capture Frames Tool }~.
 
+<iframe width="854" height="480" src="http://player.ooyala.com/iframe.html?pbid=6055f5a2061d4016b11ebf1fa8a7751e&amp;platform=html-fallback&amp;ec=Q1NXBzNzE6ojiKx7X1QOSxveoWLkHNsf" frameborder="0" allowfullscreen></iframe>
+
 ### Open SDK for engine plug-ins (alpha)
 
 You can now write plug-ins for the Stingray engine in C without needing source code access! This greatly improves the ability for all customers to extend Stingray. You can hook the runtime engine in to other third-party libraries and middleware SDKs, support your own custom data types, write your own gameplay code in C, and more.
@@ -58,12 +60,11 @@ The following Improvements to light baking and post-processing effects (SSAO, SS
 
 - Ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps.
 - New shading environment properties help you control how to apply baked AO and SSAO to your final scene. You can also run SSAO in screen space or world space. See ~{ Shading Environment Properties }~.
-- A new screen space reflection algorithm reflects GGX and matches up with pre-convoluted IBL reflection probes.
+- A new screen space reflection algorithm allows for better refelection results.
 - Normalization of lightmap resolution is now based on the UV space area.
 - UV seam fixup now automatically runs as a post-processing effect when you bake lightmaps.
 - Improved interaction with a lightmapped level, such as material management and object manipulations, without losing the lightmap.
-
-The Stingray lightmap baker interface now reflect more meaningful baker settings. See ~{ About baking with the Stingray baker }~ for the updated options.
+- The Stingray lightmap baker interface now reflects more meaningful baker settings. See ~{ About baking with the Stingray baker }~ for the updated options.
 
 ### VR Improvements
 
