@@ -294,6 +294,33 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 	The Stingray renderer now implements instanced stereo rendering, which removes the need for the previous vr_renderer.render_config. In addition, we've added Flow nodes for SteamVR and Oculus to remove any tracking lag. Check out the What’s New section of the release notes for more details on the VR improvements.
 
+-	**GAME-18910 Deploying to any platform works in Development and Release configurations, but fails in Debug with engine runtime not being found**
+
+	**Workaround:** None.
+
+-	**GAME-19224 1.6 projects migrated from 1.5 won’t associate with the Wwise project**
+
+	After migrating 1.5 projects, Wwise won’t open the Wwise project.
+
+	**Workaround:** To force Wwise to link to the Wwise project, add the following to the *.stingray_project*  file located at the root of your project.
+
+	Add the code between `description` and `migration` lines:
+
+	~~~{sjson}
+	libraries = {
+		wwise = {
+  	project_file = "YourProject.wproj"
+  	root_folder = "../YourProject_wwise"
+	}
+	}
+	~~~
+
+-	**GAME-18474 iOS: Run Project does not work and terminates due to memory issues**
+
+	Templates can’t load on 1GB devices such as iPad Mini.
+
+	**Workaround:** Comment out `* = ["*"]` in *boot.package*. Note that this fix works only for basic and vehicle templates and not for character templates.
+
 [Return to top](#top)
 
 ## Upgrade Requirements
