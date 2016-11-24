@@ -243,7 +243,7 @@ Stingray now runs projects quickly in a web browser using WebGL. The launching p
 - GAME-17410 Baker: Fails to serialize global light baking properties
 - GAME-17244 Baker: Material fails sometimes for some objects
 - GAME-13000 Baker: Make sure baker doesn't pause when editor loses focus
-- GAME-12884 Light-baking data lost after changes are made in the Property Editor
+- GAME-12884 Light baking data lost after changes are made in the Property Editor
 - GAME-13975 Mesh loses Lightmap when applying a new material
 - GAME-17340 Creating a custom 'light base' (material resource) is broken
 - GAME-17644 Recursive shader_source includes causes crash
@@ -256,7 +256,7 @@ Stingray now runs projects quickly in a web browser using WebGL. The launching p
 - GAME-16978 Bad error messages in PS4 renderer
 - GAME-17227 Old PS4 shader does not work in V1.5
 - GAME-16935 Spotlight with scale applied can cause staircase effects with materials containing density
-- GAME-13222 Beta Lightmapper will pause if the UI is set to background
+- GAME-13222 Lightmapper will pause if the UI is set to background
 - GAME-17816 Shadow mesh lacks normal information
 - GAME-13322 Changing property on a material output node does not dirty flag the material resource
 - GAME-15534 VR: Test Level button launches viewport at 60fps instead of required 90fps
@@ -282,14 +282,6 @@ Stingray now runs projects quickly in a web browser using WebGL. The launching p
 This section lists known limitations and workarounds for Stingray.
 
 Unless otherwise noted in the **What's Fixed** section, please be aware that this release contains the same **Known Limitations** described in the previous versions of Stingray Release Notes.
-
-> **Note**: We recommend you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
-
-- **GAME-18398 After opening a v1.5 project in Stingray v1.5, all existing v1.6 projects require migration**
-
-	After you launch Stingray 1.6 beta and create a project, if you then open Stingray 1.5 and work on your existing 1.5 projects, you'll be prompted to migrate your Stingray 1.6 projects the next time you work with Stingray 1.6 beta.
-
-	**Workaround:** Click Ok when prompted to migrate your 1.6 projects, even though migration isn't actually required.
 
 - **Projects built on previous VR templates will not work in Stingray 1.6**
 
