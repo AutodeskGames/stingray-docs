@@ -312,11 +312,11 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 	}
 	~~~
 
--	**GAME-18474 iOS: Run Project does not work and terminates due to memory issues**
+-	**GAME-18474 Template projects won’t run on 1GB iOS devices**
 
-	Templates can't load on 1GB devices such as the iPad Mini.
-
-	**Workaround:** Comment out `* = ["*"]` in *boot.package*. Note that this fix works only for basic and vehicle templates and not for character templates.
+	Projects fail to run when you load one of the default Stingray template projects and deploy or connect to a 1GB iOS device, such as the iPad mini.
+	
+	**Workaround:** In the project *boot.package* (found in the settings.ini file), comment out `* = ["*"]`. Note that this fix works only for the basic and vehicle templates, and does not work for the character template.
 
 [Return to top](#top)
 
