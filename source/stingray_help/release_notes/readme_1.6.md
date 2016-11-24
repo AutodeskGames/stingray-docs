@@ -36,6 +36,8 @@ New level sync workflows let you automatically rebuild your 3ds Max scenes in St
 
 You can now capture the active camera or viewport and save frames to disk in the OpenEXR file format. The new Capture Frames tool also supports capturing frames on a test engine. For more information, see ~{ Capture Frames Tool }~.
 
+<br>
+
 <iframe width="854" height="480" src="http://player.ooyala.com/iframe.html?pbid=6055f5a2061d4016b11ebf1fa8a7751e&amp;platform=html-fallback&amp;ec=Q1NXBzNzE6ojiKx7X1QOSxveoWLkHNsf" frameborder="0" allowfullscreen></iframe>
 
 ### Open SDK for engine plug-ins (alpha)
@@ -80,6 +82,8 @@ With Stingray 1.6, we aim to give you two things you need when learning anything
 Hobbyists, enthusiasts, and early adopters can now run Stingray using a Non-Commercial startup license. If the 30-day trial period didn't give you enough time, check out the [terms and conditions](http://www.autodesk.com/company/legal-notices-trademarks/terms-of-service-autodesk360-web-services/autodesk-web-services-entitlements/stingray-startup-license) to see if you're eligible for the Non-Commercial license. Updated steps to install using this license are included in the [Stingray Installation Supplement](http://help.autodesk.com/view/Stingray/ENU/?guid=GUID-2835E17D-888F-459E-A622-0CD8ED983A91) topic.
 
 In addition, if you're tired of searching for and watching tutorial videos, pop open the Stingray **Help** menu and select the brand new top-secret Stingray **Hands-on Training Mission**. We've added 5 quick, *interactive* tutorial lessons that take you through the Stingray basics, and get you well on your way to creating your own project. (Pssst - it's not really a secret. Let us know what you think!) We added a note about this in the ~{ Getting Started }~ topic.
+
+<br>
 
 <iframe width="854" height="480" src="http://player.ooyala.com/iframe.html?pbid=6055f5a2061d4016b11ebf1fa8a7751e&amp;platform=html-fallback&amp;ec=luNHlvNzE6jwDXsnEs7PWQYH5vEvraL9" frameborder="0" allowfullscreen></iframe>
 
