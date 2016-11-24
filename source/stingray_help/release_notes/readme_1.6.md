@@ -139,9 +139,9 @@ Use the `stingray.Application.toggle_dev_only_warnings()` function to turn these
 
 ## Experimental features
 
-### Faster launching of projects in a browser
+### Projects launch faster in a browser
 
-Stingray now runs projects quickly in a web browser using WebGL. The launching process has been updated to load the content from a URL instead of packaging the compiled data to a separate folder and reading the data. The URL also displays the location of the content folder. See ~{ Run your project in a browser using WebGL }~. Also check out the updated settings if you ~{ Use Mozilla Firefox to run your project }~.
+Stingray now runs projects more quickly in a web browser using WebGL. The launching process has been updated to load the content from a URL instead of packaging the compiled data to a separate folder and reading the data. The URL also displays the location of the content folder. See ~{ Run your project in a browser using WebGL }~. Also check out the updated settings if you ~{ Use Mozilla Firefox to run your project }~.
 
 [Return to top](#top)
 
@@ -293,13 +293,15 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 	**Workaround:** None.
 
--	**GAME-19224 1.6 projects migrated from 1.5 won’t associate with the Wwise project**
+-	**GAME-19224 Projects migrated from Stingray 1.5 lose association with Wwise projects**
 
-	After migrating 1.5 projects, Wwise won’t open the Wwise project.
+	After you migrate a project created in Stingray 1.5, selecting **Window > Wwise Audio** to load the associated Wwise audio project stops working.
 
-	**Workaround:** To force Wwise to link to the Wwise project, add the following to the *.stingray_project*  file located at the root of your project.
-
-	Add the code between `description` and `migration` lines:
+	**Workaround:** 
+	
+	(Note: We recommend creating a backup of your project before modifying the *.stingray_project* file.)
+	
+	Add the following to the *.stingray_project* file located at the root of your project, between `description` and `migrations` lines:
 
 	~~~{sjson}
 	libraries = {
@@ -312,7 +314,7 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 -	**GAME-18474 iOS: Run Project does not work and terminates due to memory issues**
 
-	Templates can’t load on 1GB devices such as iPad Mini.
+	Templates can't load on 1GB devices such as the iPad Mini.
 
 	**Workaround:** Comment out `* = ["*"]` in *boot.package*. Note that this fix works only for basic and vehicle templates and not for character templates.
 
