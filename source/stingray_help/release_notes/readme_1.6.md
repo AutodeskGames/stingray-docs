@@ -118,6 +118,10 @@ You can now use Flow to control entities:
 
 Stingray projects now use the unique file extension *.stingray_project*, making it easy to find and open projects. Double-click the *.stingray_project* file to open the project in the Editor. Updated Help topics include: ~{ Open an existing project }~ and ~{ About the project structure }~.
 
+### Removed restrictions on periods in file and folder names
+
+In previous versions of Stingray, the `.` character had a special meanings when used in the names of resources and folders -- to denote resource *variants*. This meant that you weren't free to name your files and folders the way you wanted, and it could sometimes cause problems when importing source art files with periods in their names. All of these restrictions have been lifted; you are now free to use periods in resource names as much as you want.
+
 ### Simplified texture import
 
 Stingray includes new texture categories and templates such as Normal, Linear Greyscale, Albedo, Albedo Opacity and Roughness/Metallic/AO to help you categorize textures and apply texture settings. The newly added texture templates in the **Texture Manager** come with default compression settings to work on each supported platform. The textures imported in your project are now assigned the default compression settings. See ~{ Import a model with textures and materials }~.
@@ -333,6 +337,67 @@ For a complete list of all new, modified, and removed Flow nodes in this release
 To preserve the forward direction in imported assets, set the forward axis setting (`reverse_forward_axis`)   in *.stingray_project*  instead of *settings.ini*. See ~{  Best practices: preserving axis orientation }~.
 
 In projects that you migrate from earlier versions of Stingray, the forward axis setting is still read from *settings.ini*.
+
+### Localized resources and resource variants
+
+If you have an existing project that uses the old Stingray resource property system to denote different variants of your resources, you may need to do some additional customization in your *.stingray_project* file. The engine no longer automatically recognizes resources as being variants based on the `.` character in their resource names. Now, a new `data_compiler` setting in the *.stingray_project* file tells the data compiler exactly which suffixes it should treat as property names. This applies both for platform property names (like `.ps4` or `.ios`) and for language and content property names (like `.en`, `.ja` or `.lowres`). This gives you even more control over the property system, and eliminates restrictions on using periods in file and folder names.
+
+To set up the compiler so that resource suffixes work the same way they did previously for platforms, you'll need to make sure that your *.stingray_project* file contains a `data_compiler` block like the ones you'll find in the latest project templates:
+
+~~~{sjson}
+data_compiler = {
+	file_folder_extensions = [
+		".s2d"
+	]
+	resource_overrides = [
+		{
+			platforms = [
+				"win32"
+			]
+			suffix = ".win32"
+		}
+		{
+			platforms = [
+				"ps4"
+			]
+			suffix = ".ps4"
+		}
+		{
+			platforms = [
+				"xb1"
+			]
+			suffix = ".xb1"
+		}
+		{
+			platforms = [
+				"ios"
+			]
+			suffix = ".ios"
+		}
+		{
+			platforms = [
+				"android"
+			]
+			suffix = ".android"
+		}
+	]
+}
+~~~
+
+If you also use different versions of your resources for different languages, you'll have to also include your language suffixes:
+
+~~~{sjson}
+data_compiler = {
+	resource_overrides = [
+		{suffix = ".ja", flags = ["ja"]}
+		{suffix = ".fr", flags = ["fr"]}
+	]
+}
+~~~
+
+You'll also have to change the way that you identify which of these language flags should be active, by calling the new `stingray.Application.set_resource_override(flag_name, priority)` function.
+
+For complete details, see ~{ Localizing resources }~.
 
 ### Advance notice: moving to Visual Studio 2015
 
