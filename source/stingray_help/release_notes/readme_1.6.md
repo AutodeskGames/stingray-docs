@@ -31,6 +31,8 @@ New level sync workflows let you automatically rebuild your 3ds Max scenes in St
 
 ![](../images/wn_3ds_max_vr.jpg)
 
+>**Note:** The project used in the images above is courtesy of Virtual Resolution.
+
 ## Capture frames to disk
 
 You can now capture the active camera or viewport and save frames to disk in the OpenEXR file format. The new Capture Frames tool also supports capturing frames on a test engine. For more information, see ~{ Capture Frames Tool }~.
