@@ -27,22 +27,32 @@ Sections in this topic:
 
 * * *
 
-## Better interop with 3ds Max
+### Better interop with 3ds Max
 
 New level sync workflows let you automatically rebuild your 3ds Max scenes in Stingray. Once 3ds Max is linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray. Modifications you make to the assets in 3ds Max are then updated inside Stingray. This makes it easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools. This workflow also brings more Vray material properties into the Stingray shader, ensuring your Vray materials look and feel the same in Stingray as they do in 3ds Max. See ~{ Level Sync with Maya, Maya LT, or 3ds Max }~.
 
 
 ![](../images/sr-to-3ds.png)
 
-## Capture frames to disk
+### Capture frames to disk
 
 You can now capture the active camera or viewport and save frames to disk in the OpenEXR file format. The new Capture Frames tool also supports capturing frames on a test engine. For more information, see ~{ Capture Frames Tool }~.
 
-## Open SDK for engine plug-ins (alpha)
+### Open SDK for engine plug-ins (alpha)
 
 You can now write plug-ins for the Stingray engine in C without needing source code access! This greatly improves the ability for all customers to extend Stingray. You can hook the runtime engine in to other third-party libraries and middleware SDKs, support your own custom data types, write your own gameplay code in C, and more.
 
 For details on getting started, see the [Stingray SDK Help](http://www.autodesk.com/stingray-help?contextId=SDK_HOME).
+
+### Improvements and additions for editor plug-ins
+
+-	You can use the new `viewports` extension to incorporate an engine viewport into your plug-in's panels and views, with full control over what the engine in that viewport loads, and over how the user interacts with the viewport. [See here for details](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_extend_editor_plugin_extensions_viewports_html).
+
+-	You can add new contextual actions for the editor to show when users right-click an asset or a level object in an engine viewport. [See here for details](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_extend_editor_plugin_extensions_contextual_actions_html).
+
+-	You can now call out from the editor's JavaScript environment to C functions you provide in a *.dll* file. [See this overview](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_extend_editor_native_extensions_html).
+
+-	You can use the `views` extension to set up named views and panels, which you can then open from other extensions in your plug-in, or even from other plug-ins. [See here for details](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_extend_editor_plugin_extensions_views_and_dialogs_html).
 
 ### Procedural meshes in Lua
 
@@ -52,7 +62,7 @@ You can now use Lua to create new geometry on the fly as your project is running
 
 Here's [the sample code](../../lua_ref/exa_ex__snippets_proc__meshes.html) for the scene above to get you started.
 
-## Improved lightmap baker
+### Improved lightmap baker
 
 The revamped Stingray and the Beast lightmap bakers now reflect more meaningful baker settings. See ~{ About baking with the Stingray baker }~ and ~{ About baking with Beast }~ for the updated options.
 

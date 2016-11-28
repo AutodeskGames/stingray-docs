@@ -1,6 +1,12 @@
 # About the content lifecycle
 
-This topic provides a more in-depth description of the complete, end-to-end Stingray asset pipeline: all the stages a resource goes through from the time it is created up to the time it is loaded and used in the game at runtime.
+You'll probably notice a lot of *compiling* happening as you get started in Stingray. When you create a new project, you have to wait a bit while the editor does some compiling, and as you work in the editor you'll frequently see messages about resources being compiled.
+
+If this is your first time working with a game engine, this may sound mysterious -- what is all this compiling and why does it have to happen?
+
+The answer has to do with the way the different kinds of assets that make up a project move through different stages on their journey from their creation to the time they are loaded and used in the project at runtime.
+
+This page gives an in-depth look at how this *pipeline* works: how the parts of a game get created and built into the final experience.
 
 ## The big picture
 
@@ -8,13 +14,13 @@ This topic provides a more in-depth description of the complete, end-to-end Stin
 
 ## External assets
 
-Many of the pieces of content that you use in a game are originally created by texture artists, modelers, animators using external content creation tools such as Maya, Maya LT, or 3ds Max. At this "source art" stage, Stingray places no requirements whatsoever on file formats, where or how these assets are stored and shared. You can use whatever works for your organization.
+Many of the pieces of content that you use in a Stingray project are originally created by texture artists, modelers, animators using external content creation tools such as Maya, Maya LT, or 3ds Max. At this "source art" stage, Stingray places no requirements whatsoever on file formats, where or how these assets are stored and shared. You can use whatever works for your organization.
 
-Note however that for 3D assets imported through FBX files, the Stingray **Asset Browser** offers a shortcut that can open a source art file in the design application that originally created it. If you want to take advantage of this capability for your project, you may have some additional configuration to do. See ~{ Interop with Maya, Maya LT, or 3ds Max }~.
+(Note that for 3D assets imported through FBX files, the Stingray **Asset Browser** offers a shortcut that can open a source art file in the design application that originally created it. If you want to take advantage of this capability for your project, you may have some additional configuration to do. See ~{ Interop with Maya, Maya LT, or 3ds Max }~.)
 
 ## Importing and authoring data
 
-Eventually, in order for an external asset to get used in your game, you need to import it into a Stingray game project through one of the file formats that Stingray supports. Importing the asset typically creates a new data resource in the project's source directory. See also the topics under ~{ Importing assets }~.
+Eventually, in order for an external asset to get used in your game or interactive experience, you need to import it into a Stingray project through one of the file formats that Stingray supports. Importing the asset typically creates a new data resource in the project's source directory. See also the topics under ~{ Importing assets }~.
 
 Similarly, any assets that you author in the Stingray editing tools, such as levels, units, and shading environments, are also saved to your project source folder.
 
