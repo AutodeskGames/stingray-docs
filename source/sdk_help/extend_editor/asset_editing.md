@@ -1,54 +1,79 @@
-# Custom Asset Editing
+# Editing custom asset types
 
-Since Stingray V1.5 it is possible to define new types of assets and to automatically have the Property Editor generate editing UI for it. You will benefit from all the standard editing workflows: undo/redo, discard and creation from **Asset Browser**.
+If you need your plug-in to save data to resource files in the project, you can benefit from many of the standard editing features and tools the editor provides for working with other Stingray resources. For example, you can make your plug-in's resource files editable in the **Property Editor**, benefit from automatic undo/redo, etc.
 
-This makes defining new assets used **only** for editor purpose super easy (ex: scatter brush). Obviously, if you want to define a new type of asset that needs to be available on the runtime side of Stingray you will need to create a runtime plugin containing a compiler extension for it.
+To do this, you define a new *type* for your asset, using a custom SJSON format that describes the kinds of information that each instance of that asset can hold. You can then use the editor's built-in mechanisms to create and modify resources of your custom type. Your plug-in can work with the data in the resources, and let the editor worry about the mechanics of how the user creates, edits and saves instances of the resources.
 
-For information on how to define new assets type so they are properly displayed in the **Asset Browser** (ex: icons, categories) please refer to ~{Register a custom asset type}~.
+This makes it relatively easy for you to add new types of assets to the project that are used *only* by the editor to author other kinds of project data. For example, this mechanism is used to save data about scatter brushes to resource files -- data like what units the brush should scatter, at what frequency and what orientation. However, this information is only read by the editor in order to define how and where units get placed in the level while the brush is active. If you need your new type of asset to be available at runtime in the engine, you will need to extend the engine with a plugin that defines how it should compile your new asset type for runtime use. See also ~{ Extend the Engine }~.
 
-## Type file specification and mounting
+This page describes how you can make your custom SJSON resources re-use the editor's existing asset editing frameworks.
 
-To register a new type of asset and benefits from Property Editor editing capabilities, you need to create a `.type` file describing the data layout of that asset and ensure that `.type` file is in in a mapped folder. See ~{ Extend the Project Content }~ for more information on mapping a folder from your plug-in.
+-	To control the way users see and interact with your new asset types in the **Asset Browser**, see also ~{ Register a custom asset type }~.
 
-Here is an example on how it is done for `scatter.plugin`:
+-	To control the way the **Asset Preview** behaves when the user selects a resource of your custom type, see also ~{ Define previews for custom assets }~.
 
-~~~sjson
-resources = [
-	// This mount the scatter_type folder which contains the aptly named scatter_type.type file which describes the data model and editing requirements of a scatter brush.
-    {
-        path = "scatter_type"
-    }
-]
-~~~
+## Step 1. Create a type file
 
-### Registering a type file for editing
+The first step is to create a `.type` file for the data you need to save in your new resource files. This file defines the structure of your data, using a set of built-in types and other defined types as building blocks. For more information, see ~{ The Stingray Type System }~.
 
-When creating a `.type` file, you need to ensure the `extension` property is set to the file extension corresponding to your asset. This indicate to the Stingray type system that your `.type` file describes a new asset. See ~{ Stingray Type System }~ for a complete description of the type format.
-
-Here is how `scatter_brush.type` specifies its extension:
+In order to link the type you define to resource files that contain instances of the defined data structure, you must make sure that your type contains the `extension` field. For example, here is how the `scatter_brush.type` file links its type to the `.scatter_brush` extension:
 
 ~~~sjson
 export = "#scatter_brush"
-// This indicate to the type system that all file ending in .scatter_brush are custom assets.
+extension = "scatter_brush"
+types = {
+    scatter_brush = {
+		...
+	}
+~~~
+
+### Make the resources editable in the **Property Editor**
+
+If you want your new resource type to be editable in the **Property Editor**, you will also want to add an `editor` metadata block for the type exported by your `.type` file. In this block, add the `generic_selector` key. If the value of this key is `true`, the **Property Editor** will respond when the user selects a resource of your type in the **Asset Browser**, to show the data in that asset and allow the user to edit the data values.
+
+~~~sjson
+// from scatter_brush.type
+
+export = "#scatter_brush"
 extension = "scatter_brush"
 types = {
     scatter_brush = {
         ...
+        editor = {
+            label = "Scatter Brush"
+            // This specifies that .scatter_brush files should be editable using the Property Editor:
+            generic_selector = true
+            ...
+        }
     }
-}
+    ...
 ~~~
 
-## Creating new custom asset
+![create scatter brush](../images/scatter_brush_property_editing.png)
 
-There are 2 ways to ensure a Custom Asset is available for creation in the Asset Browser.
+## Step 2. Mount your type file
 
-#### Generic creator and selector
+You need to make sure your `.type` file is mounted in the project. You'd usually do this by putting the path to your type file in a `resources` extension. For more information on this, see ~{ Extend the Project Content }~.
 
-In a `.type` file, if you set the `generic_creator` property to true you will be able to right click in the **Asset Browser** and see an creation menu item for your asset type.
+## Step 3. Set up the way new assets get created
 
-![create scatter brush](../../images/scatter_brush_creation_menu.png)
+The editor can offer users the ability to create new resources of your custom type in the **Asset Browser**:
 
-Asset created using the `generic_creator` will be generated from the default values (or the default values of types) specified in the `.type` file.
+![create scatter brush](../images/scatter_brush_creation_menu.png)
+
+There are two different ways that you can set up the editor to do this:
+
+-	you can use a generic creation mechanism that relies on the default values set up in the `.type` file.
+
+-	you can use a `template` extension to create new copies of existing assets.
+
+### Generic creator
+
+If your type uses the generic creator, each time the user creates a new asset of your type in the **Asset Browser**, the new asset will use the default values configured for all the fields in the `.type` file. If a field in your type does not specify a default value, the editor will fall back on the default value of that field's base type.
+
+To use the generic creator, add the `generic_creator` key to your exported type's `editor` metadata section, and set its value to `true`.
+
+For example, the scatter brush uses this mechanism as follows:
 
 ~~~sjson
 // from scatter_brush.type
@@ -71,10 +96,10 @@ types = {
         }
         editor = {
             label = "Scatter Brush"
-            // This specifies that scatter brush should have a creation menu item.
+            // This specifies that scatter brush should have a creation menu item:
             generic_creator = true
 
-            // This specifies that the scatter_brush should be editable using the property editor.
+            // This specifies that .scatter_brush files should be editable using the Property Editor:
             generic_selector = true
             version = "0.1.0"
         }
@@ -82,15 +107,14 @@ types = {
     ...
 ~~~
 
-In the example above, notice how the editor block for the `scatter_brush` asset uses the `generic_selector` property. When this property is set to `true` it means selecting a scatter brush will allow the Property Editor modify it.
 
-![create scatter brush](../../images/scatter_brush_property_editing.png)
+### Template creation
 
-#### Template creation
+If you need new assets of your type to be created with a specific set of values that do NOT correspond to the default values in the `.type` file, you can set up a `template` extension for your plug-in. This adds the same asset creation menu option to the **Asset Browser** as the generic creator mechanism above, but it creates the new asset in a different way. This is typically by copying an existing resource that you provide with your plug-in. However, you could create the new asset programmatically in JavaScript if you prefer, by setting up the action run by your template extension to call a function you provide in a JavaScript module within your plug-in.
 
-If you need to create an asset with a specific set of values that do NOT corresponds to the default values in the `.type` file you can use the template system specified in ~{Define templates for new assets}~.
+For more information on the `templates` extension, see ~{ Define templates for new assets }~.
 
-As an example the capture_frames plugin uses the template system to instantiate new `capture_settings` asset:
+For example, the `capture_frames` plugin uses the template system to create new `.capture_settings` assets:
 
 ~~~sjson
 // From capture_frames.plugin
@@ -105,26 +129,28 @@ templates = [{
 	}]
 ~~~
 
-In its `.type` file, capture_settings doesn't use `generic_creator` (but still uses the Property Editor):
+If you use a template extension to create new assets, you should set the `generic_creator` key to `false` for your resource:
 
 ~~~sjson
 // Exerpt from capture_settings.type:
  editor = {
             label = "Capture Settings"
             generic_creator = false // No generic creator
-            generic_selector = true // Use Property editor
+            generic_selector = true // but do use Property Editor
             version = "1.0.0"
         ...
  }
 ~~~
 
-![create scatter brush](../../images/capture_settings_creation_menu.png)
+Note that the capture settings still have the `generic_selector` set, so those assets can be edited in the **Property Editor**.
 
-## Listening to changes on asset
+## Listen for changes to an asset
 
-It is possible to listen to changes happening in the Property editor when a Custom Asset is modified and to react to those changes. You need to listen to the `DataObjectsConsensusChanged` of the `objectEditingService`.
+Your plug-in can listen for changes that the user makes to your custom assets in the Property Editor. You can then respond to those changes immediately in the editor environment to provide instant feedback -- like updating the **Asset Preview** or the **Level Viewport** as the user drags a slider.
 
-See how `preview-blend-shapes.js` listen to changes on blend shapes to properly update the blend weights in the **Asset Preview**:
+To do this, your plug-in needs to listen for the `DataObjectsConsensusChanged` event emitted by the `object-editing-service`.
+
+For an example, see the `editor\plugins\blend_shapes\blend_shapes\preview-blend-shapes.js` file. Here, the script adds an event listener that handles changes to blend shapes, and responds by updating the blend weights shown in the **Asset Preview**:
 
 ~~~js
 // From preview-blend-shapes.js
@@ -148,20 +174,20 @@ setup: function (config, asset, viewportName) {
         }));
 ~~~
 
-A change descriptor has the following properties:
+When the event is emitted, it comes with an accompanying change descriptor that contains some information about the kind of modification the user made in the **Property Editor**. This descriptor is an object that has the following properties:
 
 ~~~js
 {
-	Type: string, // Can be either: ValueAdded, ValueRemoved, ValueChanged
-    PropertyPath: string, // Json property path modified in the Custom asset
-    Value: object, // Value set or added
-    AssetsModified: Array<string> // List of assets that were modified (in case of consensus editing.)
+	Type: string,                 // One of: ValueAdded, ValueRemoved, or ValueChanged
+    PropertyPath: string,         // JSON property path that was modified in the custom asset
+    Value: object,                // The value that was set or added
+    AssetsModified: Array<string> // The list of assets that were modified (in case of consensus editing)
 }
 ~~~
 
-## Fetching Custom Asset data
+## Fetch custom asset data
 
-You can use the `assetService` to query the Json value of a custom asset.
+You can use the `asset-service` to query the JSON value of a custom asset that the editor has loaded in memory from the project:
 
 ~~~js
 // From preview-blend-shapes.js
@@ -179,13 +205,25 @@ assetService.getManagedAsset(assetName + ".blend_shapes").then(function (dataObj
 });
 ~~~
 
-## Use cases
-Stingray editor ships with 3 different Custom assets described using `.type` file. These are good examples showcasing usage opf the Stingray Type Descriptors.
+You can take advantage of other editor services if you want to work with files of your custom asset type programmatically in your JavaScript code. Notably, see the `file-system-service` offers `readJSON()` and `writeJSON()` functions, which you can use to handle reading instances of your assets from their data files, and writing them back to files in the project folder.
+
+## Custom editor asset examples
+
+The Stingray editor ships with several custom asset types that are defined in `.type` files as described above. These are good working examples of how the built-in asset editing system can simplify creating and editing resources.
 
 ### Blend shapes
 
-- editor\plugins\blend_shapes\blend_shapes.plugin : selecting a `blend_shape` file will allow editing of properties and display the result using a custom preview behavior.
-- editor\plugins\blend_shapes\blend_shapes\blend_shapes.type : type file describing the data layout of a blend_shape file as well as which type of control to use for editing.
+The blend shapes plug-in defines the way users can work with and preview blend shapes in the editor. For background information about working with blend shapes in Stingray, see [the main Stingray Help](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_animation_blend_shapes_html).
+
+![blend shape preview](../images/blend_shape_preview_update.gif)
+
+Things to note about the blend shapes plug-in:
+
+-	*editor\plugins\blend_shapes\blend_shapes\blend_shapes.type*: The type file describes the data layout of a *.blend_shape* file, as well as which types of controls the **Property Editor** should show for editing its data.
+
+-	In *editor\plugins\blend_shapes\blend_shapes.plugin*: The plugin defines an `asset_type` extension to define the way the *.blend_shapes* resource is exposed in the **Asset Browser**, and a `preview` extension that defines a custom behavior for the **Asset Preview**.
+
+Note also that this editor extension is complemented by an engine extension, which handles blending between shapes at runtime.
 
 ~~~js
 // From blend_shape.type
@@ -197,7 +235,7 @@ types = {
         type = ":struct"
         fields = {
             blend_shape_meshes = {
-                type = ":value"  // :value means an arbritray Json value. The type system won't try to reason about it (or to validate it).
+                type = ":value"  // :value means an arbitrary JSON value. The type system won't try to reason about it (or to validate it).
             }
             blend_shape_editor_channels = {
                 type = ":value"
@@ -208,21 +246,25 @@ types = {
             generic_creator = false
             generic_selector = true
             version = "0.1.0"
-            control = "BlendShapes"  // Use custom blend-shape editor (property-blend-shape.js)
+            control = "BlendShapes"  // Use a custom blend-shape control in the Property Editor, defined in editor/core/components/properties/property-blend-shape.js.
         }
     }
 }
 ~~~
 
-![blend shape preview](../../images/blend_shape_preview_update.gif)
-
 ### Scatter brushes
-Scatter brushes are an editor only resource that encapsulate a list of units used to *paint/scatter* on anoter unit or a terrain.
 
-- editor\plugins\level_editor\scatter.plugin: defines where to find the scatter `.type` file as well as the scatter brush icons.
-- editor\plugins\level_editor\scatter_type\scatter_brush.type : define UI to edit a scatter brush.
+Scatter brushes are resources used only by the editor that encapsulate a list of units that should be painted or *scattered* on another unit or a terrain. For background information about working with scatter brushes in Stingray, see [the main Stingray Help](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_building_levels_scatter_tool_html)
 
-As a side node, the levelEditingService listens to changes on scatter brushes to reload the Lua scatter data model:
+![capture_settings](../images/scatter_brush_property_editing.png)
+
+Things to note about scatter brushes:
+
+-	*editor\plugins\level_editor\scatter.plugin*: The plug-in descriptor mounts the folder that contains the `scatter.type` file, and tells the **Asset Browser** where to look for its custom icon.
+
+-	*editor\plugins\level_editor\scatter_type\scatter_brush.type*: The type file defines the UI controls for editing the properties of a scatter brush.
+
+Note also that the `levelEditingService` listens to changes on scatter brushes to reload the Lua scatter data model, as described under [Listening for changes to an asset] above:
 
 ~~~js
 objectEditingService.on("DataObjectsConsensusChanged", function (args) {
@@ -240,13 +282,17 @@ objectEditingService.on("DataObjectsConsensusChanged", function (args) {
 }.bind(this));
 ~~~
 
-![capture_settings](../../images/scatter_brush_property_editing.png)
-
 ### Capture settings
-Capture Settings are an editor only resource that specify parameters needed to do a viewport capture and save the result as an `exr` stream of files. It showcases how a custom asset using the PRoperty Editor can act as a *specicalized editor*.
 
-- editor\plugins\capture_frames\capture_frames.plugin
-- editor\plugins\capture_frames\capture_frames\capture_settings.type : uses an Action button and special `clean/init` callbacks to be able to execute initialization code when a capture_settings are *selected/unselected*.
+Capture settings are resources used only by the editor that specify parameters for capturing a stream of images from the viewport and saving the result as a set of *.exr* files. This usage showcases how a custom asset type can make the **Property Editor** act like a specicalized editing tool. For background information about working with scatter brushes in Stingray, see [the main Stingray Help](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_lighting_rendering_capture_frames_tool_html).
+
+![capture_settings](../images/capture_settings_editing.png)
+
+Things to note about capture settings:
+
+-	*editor\plugins\capture_frames\capture_frames.plugin*: Note the use of a `templates` extension to specify the source for new *.capture_settings* resources that the user creates.
+-	*editor\plugins\capture_frames\capture_frames_actions.js*: Handles the capture action, and communicates with viewports to generate the output files.
+-	*editor\plugins\capture_frames\capture_frames\capture_settings.type*: Note the use of an **Action** control to trigger the action defined in the plug-in descriptor. In addition, note the special `clean` and `init` callbacks that run initialization code when a *.capture_settings* resource is selected or deselected.
 
 ~~~sjson
 // From capture_settings.type
@@ -293,7 +339,3 @@ types = {
     }
 }
 ~~~
-
-- editor\plugins\capture_frames\capture_frames_actions.js : handle capture action and communicate with viewports to generate exr files.
-
-![capture_settings](../../images/capture_settings_editing.png)

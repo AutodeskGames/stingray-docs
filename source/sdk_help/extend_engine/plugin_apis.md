@@ -6,11 +6,11 @@ TODO: a review of the most important items to looks at.
 
 ## The main plug-in API
 
-## Logging messages to the engine
-
 ## Controlling gameplay
 
 ## Manipulating the Lua environment
+
+## Logging messages to the engine
 
 ## Creating a custom resource type
 
@@ -18,4 +18,4 @@ TODO: a review of the most important items to looks at.
 
 ## Rendering data
 
-## Exposing an API to other plug-ins
+## The plug-in foundation

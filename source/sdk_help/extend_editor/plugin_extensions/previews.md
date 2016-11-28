@@ -68,6 +68,8 @@ return MyAssetPreviewBehavior
 
 For a list of all the functions you can use in your Lua preview extension module, see the base interface defined in the *asset_preview/preview-behaviors/preview-base.lua* file.
 
+Note that unlike your JavaScript modules, your Lua file must be in the project content. You will probably want to use a `resources` extension to mount its folder as part of the project. See ~{ Extend the Project Content }~.
+
 ## Configuration
 
 Each preview extension requires the following configuration parameters.

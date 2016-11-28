@@ -72,8 +72,6 @@ Every plug-in definition must have the following settings.
 >	The name to show for your plug-in in the **Plugin Manager**.
 >
 >	This name must be unique among all loaded plug-ins, so we recommend using something specific that is not likely to conflict with similar plug-ins made by other third-parties.
->
->	TODO:invalid characters! Scopes?
 
 `version`
 

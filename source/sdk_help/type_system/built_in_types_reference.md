@@ -7,7 +7,7 @@ This page details the types that come with Stingray out of the box, and the set 
 *	The `simple` trait means that the type describes a raw JSON value in an uncustomized form. Note that the type will lose the `simple` type trait if customized.
 *	The `virtual` trait means that the type is refined dynamically into a non-virtual type at runtime based on the data it holds.
 
-For background information about what types are and how to use them, see the ~{ Stingray Type System }~ topic.
+For background information about what types are and how to use them, see ~{ The Stingray Type System }~.
 
 >	**NOTE: Under Active Development!** Expect things to change as this system matures.
 

@@ -457,4 +457,4 @@ Basically it is a json file that specifies how a specific piece of Json should b
 
 ![font_importer_dialog](../../images/font_importer_dialog.png)
 
-The complete syntax of a type file can be found here: ~{ Stingray Type System }~.
+The complete syntax of a type file can be found here: ~{ The Stingray Type System }~.

@@ -6,6 +6,7 @@ You might do this if you want your plug-in to help the user create and modify di
 
 -	You might also want to accompany your custom asset type extension with a *template* extension, which can create new assets of your custom type. See ~{ Define templates for new assets }~.
 -	You also might want to set up a *preview* extension, which determines the behavior of the **Asset Preview** panel when the user selects an asset of your type in the **Asset Browser**. See ~{ Define previews for custom assets }~.
+-	If you can use SJSON for storing your custom asset data, you can take advantage of some of the built-in editing and asset creation features offered by the editor. See ~{ Editing custom asset types }~.
 
 ## Configuration
 

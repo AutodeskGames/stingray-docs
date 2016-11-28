@@ -37,7 +37,7 @@ New level sync workflows let you automatically rebuild your 3ds Max scenes in St
 
 You can now capture the active camera or viewport and save frames to disk in the OpenEXR file format. The new Capture Frames tool also supports capturing frames on a test engine. For more information, see ~{ Capture Frames Tool }~.
 
-### Open SDK for engine plug-ins (alpha)
+## Open SDK for engine plug-ins (alpha)
 
 You can now write plug-ins for the Stingray engine in C without needing source code access! This greatly improves the ability for all customers to extend Stingray. You can hook the runtime engine in to other third-party libraries and middleware SDKs, support your own custom data types, write your own gameplay code in C, and more.
 

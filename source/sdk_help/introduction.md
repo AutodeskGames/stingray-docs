@@ -22,7 +22,7 @@ Any customer can use the Stingray SDK to make these kinds of plug-ins. You don't
 
 1.	Make sure you take the time to understand how Stingray works. If you're new to Stingray, you'll want to start by creating some projects and getting used to creating content in the Stingray environment before you jump in to writing your plug-in.
 
-	You'll also need a good idea of how all the pieces of the Stingray ecosystem work together internally under the hood, so that you can plan out what your plug-in will need to do and how it will need to tie in to the overall system. See the ~{ System Overview }~ and ~{ All the Ways You can Extend Stingray }~.
+	You'll also need a good idea of how all the pieces of the Stingray ecosystem work together internally under the hood, so that you can plan out what your plug-in will need to do and how it will need to tie in to the overall system. See the ~{ System Overview }~ and ~{ All the Ways You Can Extend Stingray }~.
 
 2.	Get the ~{ Example Plug-ins }~. You'll want to have as many real working examples as you can, so we're working on fleshing out a set of plug-ins that show how to extend the editor and the engine in different ways.
 

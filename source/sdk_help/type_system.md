@@ -1,4 +1,4 @@
-# Stingray Type System
+# The Stingray Type System
 
 Stingray contains an internal data typing system that is based around `.type` files. These files, which are stored in SJSON in the project content, describe the properties and relationships between complex data types. The editing tools and the data compiler scan the project for type files, and use them to reason about the SJSON data file formats that make up the project content. This information can be used to customize user interfaces, determine which files are affected by a rename, and validate property values.
 
@@ -12,7 +12,7 @@ Type files are already used in a few places in Stingray:
 
 -	The `.component` files that the entity system uses to represent custom types of data components are based on the type system. For details, see [Create a custom component](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_using_entities_create_custom_component_html).
 
--	Some plug-ins use type files as a way to define their own data types, along with the way those data types get edited in the Stingray editor. See ~{ Custom Asset Editing }~ for a look at how we use `.type` files to describe how to edit `.scatter_brush`, `.blend_shape` and `.capture_settings` in the editor UI.
+-	Some plug-ins use type files as a way to define their own data types, and the way those data types get edited in the Stingray editor. See ~{ Editing custom asset types }~ for a look at how we use `.type` files to describe how to edit `.scatter_brush`, `.blend_shape` and `.capture_settings` in the editor UI.
 
 -	See also ~{ Create a new importer }~ to see how you can customize a new generic import dialog using a `.type` file.
 

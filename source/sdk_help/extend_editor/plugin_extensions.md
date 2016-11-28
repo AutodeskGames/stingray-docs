@@ -20,6 +20,10 @@ The editor's plug-in system defines a number of different kinds of extensions th
 
 -	`events` register your plug-in to listen for editor events with a given name, and to carry out an action or a set of actions when that event happens. See ~{ Respond to an editor event }~ for configuration instructions, and ~{ Emit and handle editor events }~ for more background about events.
 
+-	`views` give names to custom UI panels and dialogs that your plug-in adds to Stingray. You can then open these named views from other extensions in your plugin (e.g. from menu items), or even from other plug-ins. See ~{ Create a named panel or dialog }~.
+
+-	`viewports` help you integrate an engine viewport into your plug-in's views and panels, like the ones you see in the **Level Viewport** or the **Asset Preview**. See ~{ Create a custom engine viewport }~.
+
 Every plug-in needs to have at least one of these extensions. There is no limit to the number of extensions that a plug-in can have.
 
 ## Configuring extensions

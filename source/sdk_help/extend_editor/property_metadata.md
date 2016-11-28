@@ -1,10 +1,10 @@
 # Built-in metadata properties
 
-You can use the **Property Editor** to view and modify a wide range of different types of properties -- both simple types like strings, booleans, and numbers, and compound types like colors and rotations. You also have a lot of control over the way the **Property Editor** displays these values. Many property types can be represented using a variety of UI widgets -- like, a number could be edited using a text field, a slider, a spinner box, etc.; you can control display labels, tooltips, ordering, etc.
+You can use the editor's **Property Editor** panel to view and modify a wide range of different types of properties -- both simple types like strings, booleans, and numbers, and compound types like colors and rotations. You also have a lot of control over the way the **Property Editor** displays these values. Many property types can be represented using a variety of UI widgets -- like, a number could be edited using a text field, a slider, a spinner box, etc.; you can control display labels, tooltips, ordering, etc.
 
 To tell the **Property Editor** how it should visually represent the data it is editing, you can give your data some metadata. There are two main ways to do this:
 
--	If your data is described in a type file, you can use an `editor` block for each type in the data to describe how that type should be represented in the editor. See also ~{ Stingray Type System }~.
+-	If your data is described in a type file, you can use an `editor` block for each type in the data to describe how that type should be represented in the editor. See also ~{ The Stingray Type System }~.
 
 -	Or, you can use a compact notation that is expressed purely in JavaScript. See ~{ Use the Property Editor component in your UI }~.
 

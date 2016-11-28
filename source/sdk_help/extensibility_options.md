@@ -1,4 +1,4 @@
-# All the Ways You can Extend Stingray
+# All the Ways You Can Extend Stingray
 
 As introduced in the ~{ System Overview }~, you can make your custom plug-in hook in to the Stingray editor, the runtime engine, and the project content. Depending on what you want your plug-in to do, you may need to integrate with one, two, or all three of these components.
 
@@ -34,7 +34,7 @@ Engine plug-ins integrate into the runtime viewing and playback engine, typicall
 
 -	Engine plug-ins can also add new functions to the engine's Lua environment, so that the project's gameplay logic and/or editor plug-ins can call out to the C code of the engine plug-in to make stuff happen.
 
--	Engine plug-ins can also contain C implementations for custom Flow nodes. (Note that these C implementations also have to be accompanied in the project by data descriptions for the new nodes. See TODO:link.)
+-	Engine plug-ins can also contain C implementations for custom Flow nodes. (Note that these C implementations also have to be accompanied in the project by data descriptions for the new nodes. See ~{ Create Custom Flow Nodes }~.)
 
 For more information on how to extend the engine in a plug-in, see ~{ Extend the Engine }~.
 
@@ -52,7 +52,7 @@ Typically, when you're working on a single project, you don't bother to create y
 
 Here are a few kinds of project assets that you may find particularly useful for extending what Stingray can do:
 
--	Custom Flow nodes that you implement in Lua scripts. See TODO:link.
+-	Custom Flow nodes that you implement in Lua scripts. See ~{ Create Custom Flow Nodes }~.
 
 -	Custom shader nodes. Shader nodes are all defined in SJSON resources in the `core` folder. If you're comfortable with programming shaders, you can create your own custom shader nodes using the core nodes as models.
 
