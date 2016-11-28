@@ -29,7 +29,8 @@ Sections in this topic:
 
 ## Better interop with 3ds Max
 
-New level sync workflows let you automatically rebuild your 3ds Max scenes in Stingray. Once 3ds Max is linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray. Modifications you make to the assets in 3ds Max are then updated inside Stingray. This makes it easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools. See ~{ Level Sync with Maya, Maya LT, or 3ds Max }~.
+New level sync workflows let you automatically rebuild your 3ds Max scenes in Stingray. Once 3ds Max is linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray. Modifications you make to the assets in 3ds Max are then updated inside Stingray. This makes it easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools. This workflow also brings more Vray material properties into the Stingray shader, ensuring your Vray materials look and feel the same in Stingray as they do in 3ds Max. See ~{ Level Sync with Maya, Maya LT, or 3ds Max }~.
+
 
 ![](../images/sr-to-3ds.png)
 
@@ -43,9 +44,19 @@ You can now write plug-ins for the Stingray engine in C without needing source c
 
 For details on getting started, see the [Stingray SDK Help](http://www.autodesk.com/stingray-help?contextId=SDK_HOME).
 
+### Procedural meshes in Lua
+
+You can now use Lua to create new geometry on the fly as your project is running. You can create meshes, apply materials, and have the resulting objects be lit and shaded dynamically like any other object that you placed in the scene using the Stingray editor.
+
+![Procedural mesh example](../../lua_ref/procedural_meshes.gif)
+
+Here's [the sample code](../../lua_ref/exa_ex__snippets_proc__meshes.html) for the scene above to get you started.
+
 ## Improved lightmap baker
 
 The revamped Stingray and the Beast lightmap bakers now reflect more meaningful baker settings. See ~{ About baking with the Stingray baker }~ and ~{ About baking with Beast }~ for the updated options.
+
+## What's New in Rendering
 
 ### Light baking improvements
 
@@ -58,20 +69,12 @@ The following Improvements to light baking and post-processing effects (SSAO, SS
 - UV seam fixup now automatically runs as a post-processing effect when you bake lightmaps.
 - Improved interaction with a lightmapped level, such as material management and object manipulations, without losing the lightmap.
 
-## VR Improvements
+### VR Improvements
 
 - When running or testing your game using a VR app, the game image appears in your HMD (head mount display) and on your mirror window (your monitor). Set the new vr_mirror_mode setting in the settings.ini to mono (default) or stereo to control the display on the mirror window. See ~{ Stingray engine settings.ini file reference }~.
 - Instanced stereo rendering is now built in to the default renderer provided with Stingray, and all material and post effect shaders are now VR-enabled to implement this optimization. See ~{ VR in Stingray }~.
 - The VR Oculus Touch template now supports input from the Oculus Remote and Oculus Touch Controler. The template now ships with Oculus flow nodes. See ~{ Template projects}~.
 - The VR SDK Version has been upgraded to 1.7.0.0. See ~{ Supported platforms }~.
-
-### Procedural meshes in Lua
-
-You can now use Lua to create new geometry on the fly as your project is running. You can create meshes, apply materials, and have the resulting objects be lit and shaded dynamically like any other object that you placed in the scene using the Stingray editor.
-
-![Procedural mesh example](../../lua_ref/procedural_meshes.gif)
-
-Here's [the sample code](../../lua_ref/exa_ex__snippets_proc__meshes.html) for the scene above to get you started.
 
 ## Ready to learn Stingray?
 
@@ -120,6 +123,14 @@ Source customers can now toggle between DX11 and DX12 as the viewport renderer i
 ### FBX Version 2017.1
 
 This release of Stingray picks up the latest version of FBX (2017.1), which provides various security improvements.
+
+### Protect dev-only Lua functions
+
+Some functions in the Lua API are intended for use only during development, but not in your final release. For example, this is true for anything relating to debugging, using console connections with the editor, autoloading resources, performance monitoring, etc. Since these functions aren't available in the release build, trying to call one of them from your gameplay code crashes the engine.
+
+To avoid the possibility of letting any calls to these functions slip through the cracks when you release your game, you can now ask the development build of the engine to print a warning whenever one of these functions is called.
+
+Use the `stingray.Application.toggle_dev_only_warnings()` function to turn these warnings on and off. Then, before you release, check that you're not seeing any of these warnings turn up in your logs.
 
 ## Experimental features
 
