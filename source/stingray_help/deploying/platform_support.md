@@ -17,7 +17,7 @@ The Stingray engine only supports iOS devices compatible with Metal and OpenGL E
 | iPhone 6 and iPhone 6 Plus | Apple A8 GPU |
 | iPhone 5s | Apple A7 GPU |
 | iPad Air Wi-Fi<br>iPad Air Wi-Fi + Cellular | Apple A7 GPU |
-| iPad mini 2 Wi-Fi<br>iPad mini Wi-Fi + Cellular | Apple A7 GPU |
+| iPad mini 2 Wi-Fi<br>iPad mini 2 Wi-Fi + Cellular | Apple A7 GPU |
 
 ## iOS Version Compatibility
 
