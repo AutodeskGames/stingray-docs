@@ -30,7 +30,9 @@ Sections in this topic:
 New level sync workflows let you automatically rebuild your 3ds Max scenes in Stingray. Once 3ds Max is linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray. Modifications you make to the assets in 3ds Max are then updated inside Stingray. This makes it easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools. This workflow also brings more Vray material properties into the Stingray shader, ensuring your Vray materials look and feel the same in Stingray as they do in 3ds Max. See ~{ Level Sync with Maya, Maya LT, or 3ds Max }~.
 
 
-![](../images/sr-to-3ds.png)
+![](../images/wn_3ds_max_vr.jpg)
+
+>**Note:** The project used in the images above is courtesy of Virtual Resolution.
 
 ## Capture frames to disk
 
@@ -72,7 +74,7 @@ The following Improvements to light baking and post-processing effects (SSAO, SS
 
 - When running or testing your game using a VR app, the game image appears in your HMD (head mount display) and on your mirror window (your monitor). Set the new vr_mirror_mode setting in the settings.ini to mono (default) or stereo to control the display on the mirror window. See ~{ Stingray engine settings.ini file reference }~.
 - Instanced stereo rendering is now built in to the default renderer provided with Stingray, and all material and post effect shaders are now VR-enabled to implement this optimization. See ~{ VR in Stingray }~.
-- The VR Oculus Touch template now supports input from the Oculus Remote and Oculus Touch Controler. The template now ships with Oculus flow nodes. See ~{ Template projects}~.
+- The VR Oculus Touch template now supports input from the Oculus Remote and Oculus Touch Controller. The template now ships with Oculus flow nodes. See ~{ Template projects}~.
 - The VR SDK Version has been upgraded to 1.7.0.0. See ~{ Supported platforms }~.
 
 ## Ready to learn Stingray?
@@ -297,10 +299,10 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 	After you migrate a project created in Stingray 1.5, selecting **Window > Wwise Audio** to load the associated Wwise audio project stops working.
 
-	**Workaround:** 
-	
+	**Workaround:**
+
 	(Note: We recommend creating a backup of your project before modifying the *.stingray_project* file.)
-	
+
 	Add the following to the *.stingray_project* file located at the root of your project, between `description` and `migrations` lines:
 
 	~~~{sjson}
@@ -315,7 +317,7 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 -	**GAME-18474 Template projects won’t run on 1GB iOS devices**
 
 	Projects fail to run when you load one of the default Stingray template projects and deploy or connect to a 1GB iOS device, such as the iPad mini.
-	
+
 	**Workaround:** In the project *boot.package* (found in the settings.ini file), comment out `* = ["*"]`. Note that this fix works only for the basic and vehicle templates, and does not work for the character template.
 
 [Return to top](#top)
