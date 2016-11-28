@@ -2,7 +2,7 @@
 
 [![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
 
-Occluder boxes are gizmo units that let you occlude objects that are behind other objects and not render them. For example, when rendering the interior of an architectural scene, you can prevent objects behind a wall or room from being displayed and hide them by occluding. Occluder box supports occluding of shadow casting of light if the occluder is placed between the light source and the object. Occlusion culling can give you significant performance improvements at it lets you avoid rendering shadows and objects that give no visual impact to your final rendered frame, allowing you to spend hardware resources on rendering other more significant objects and effects.
+Occluder boxes are gizmo units that let you occlude objects that are behind other objects and not render them. For example, when rendering the interior of an architectural scene, you can prevent objects behind a wall or room from being displayed and hide them by occluding. Occluder box supports occluding of shadow casting of light if the occluder is placed between the light source and the object. Occlusion culling can give you significant performance improvements as it lets you avoid rendering shadows and objects that give no visual impact to your final rendered frame, allowing you to spend hardware resources on rendering other more significant objects and effects.
 
 Occlusion culling also occludes sections of terrain and particle effect systems and is a great tool to optimize rendering whenever time is spent rendering objects that are not seen in the viewport.
 
@@ -10,9 +10,9 @@ For occlusion culling, Stingray uses frustum culling and first performs sphere c
 
 You should consider placing occluder boxes with relation to larger occluding surfaces in your scene such as inside walls, inside ceilings and floors and inside larger buildings or blocking objects in your outdoor scenes. Always consider the viewpoint of your user and the lights inside your scene to place occluders in the most optimal way to avoid rendering objects that will not be seen. You can preview the occluder box behavior inside the level editor by turning off gizmos and observing the occlusion behavior.
 
-You can also use a regular unit mesh as an occluder by opening it in the ~{ Unit Editor }~ and enabling the Occluder option for the mesh in the Properties panel. Though you can turn units into occluders, manually placing occluder boxes is better, since in Stingray only objects fully covered by one of the sides of the bounding box of an occluder are occluded. Objects covered by two separate occluder sides but not fully covered by one single occluder side will still be rendered. Also, Stingray considers only the largest occuluders in a scene. If the scene has many small occluders, Stingray considers only a few and not all of them.
+You can also use a regular unit mesh as an occluder by opening it in the ~{ Unit Editor }~ and enabling the Occluder option for the mesh in the Properties panel. Though you can turn units into occluders, manually placing occluder boxes is better, since in Stingray only objects fully covered by one of the sides of the bounding box of an occluder are occluded. Objects covered by two separate occluder sides but not fully covered by one single occluder side will still be rendered. Also, Stingray considers only the largest occluders in a scene. If the scene has many small occluders, Stingray considers only a few and not all of them.
 
-## Create an occuluder box
+## Create an occluder box
 
 1. Do either of the following:
 

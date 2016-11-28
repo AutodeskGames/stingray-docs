@@ -297,10 +297,10 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 	After you migrate a project created in Stingray 1.5, selecting **Window > Wwise Audio** to load the associated Wwise audio project stops working.
 
-	**Workaround:** 
-	
+	**Workaround:**
+
 	(Note: We recommend creating a backup of your project before modifying the *.stingray_project* file.)
-	
+
 	Add the following to the *.stingray_project* file located at the root of your project, between `description` and `migrations` lines:
 
 	~~~{sjson}
@@ -315,8 +315,8 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 -	**GAME-18474 Template projects won’t run on 1GB iOS devices**
 
 	Projects fail to run when you load one of the default Stingray template projects and deploy or connect to a 1GB iOS device, such as the iPad mini.
-	
-	**Workaround:** In the project *boot.package* (found in the settings.ini file), comment out `* = ["*"]`. Note that this fix works only for the basic and vehicle templates, and does not work for the character template.
+
+	**Workaround:** In the project *boot.package* file, comment out `* = ["*"]`. Note that this fix works only for the basic and vehicle templates, and does not work for the character template.
 
 [Return to top](#top)
 
