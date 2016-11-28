@@ -29,10 +29,7 @@ Sections in this topic:
 
 New level sync workflows let you automatically rebuild your 3ds Max scenes in Stingray. Once 3ds Max is linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray. Modifications you make to the assets in 3ds Max are then updated inside Stingray. This makes it easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools. This workflow also brings more Vray material properties into the Stingray shader, ensuring your Vray materials look and feel the same in Stingray as they do in 3ds Max. See ~{ Level Sync with Maya, Maya LT, or 3ds Max }~.
 
-
 ![](../images/wn_3ds_max_vr.jpg)
-
->**Note:** The project used in the images above is courtesy of Virtual Resolution.
 
 ## Capture frames to disk
 
@@ -318,7 +315,7 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 	Projects fail to run when you load one of the default Stingray template projects and deploy or connect to a 1GB iOS device, such as the iPad mini.
 
-	**Workaround:** In the project *boot.package* (found in the settings.ini file), comment out `* = ["*"]`. Note that this fix works only for the basic and vehicle templates, and does not work for the character template.
+	**Workaround:** In the project *boot.package* file, comment out `* = ["*"]`. Note that this fix works only for the basic and vehicle templates, and does not work for the character template.
 
 [Return to top](#top)
 
