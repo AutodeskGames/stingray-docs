@@ -1,6 +1,5 @@
 release_notes
 getting_started
-video_tutorials
 importing_assets
 building_levels
 lighting_rendering
