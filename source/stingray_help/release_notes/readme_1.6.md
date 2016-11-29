@@ -3,8 +3,6 @@
 
 Stingray 1.6 (1.6.1011.0) focuses on delivering great workflows between 3ds Max and Stingray, making it easy to send scenes from Max and produce stunning real-time renders with Stingray. With the new Render to Frames tool, you can now capture high quality videos of your interactive projects and share online.
 
-> **Important**: We strongly recommend that you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
-
 Sections in this topic:
 
 -	[What's New](#whats-new)
@@ -31,12 +29,17 @@ Sections in this topic:
 
 New level sync workflows let you automatically rebuild your 3ds Max scenes in Stingray. Once 3ds Max is linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray. Modifications you make to the assets in 3ds Max are then updated inside Stingray. This makes it easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools. This workflow also brings more Vray material properties into the Stingray shader, ensuring your Vray materials look and feel the same in Stingray as they do in 3ds Max. See ~{ Level Sync with Maya, Maya LT, or 3ds Max }~.
 
+![](../images/wn_3ds_max_vr.jpg)
 
-![](../images/sr-to-3ds.png)
+>**Note:** The project used in the images above is courtesy of Virtual Resolution.
 
 ### Capture frames to disk
 
 You can now capture the active camera or viewport and save frames to disk in the OpenEXR file format. The new Capture Frames tool also supports capturing frames on a test engine. For more information, see ~{ Capture Frames Tool }~.
+
+<br>
+
+<iframe width="854" height="480" src="http://player.ooyala.com/iframe.html?pbid=6055f5a2061d4016b11ebf1fa8a7751e&amp;platform=html-fallback&amp;ec=Q1NXBzNzE6ojiKx7X1QOSxveoWLkHNsf" frameborder="0" allowfullscreen></iframe>
 
 ### Open SDK for engine plug-ins (alpha)
 
@@ -62,10 +65,6 @@ You can now use Lua to create new geometry on the fly as your project is running
 
 Here's [the sample code](../../lua_ref/exa_ex__snippets_proc__meshes.html) for the scene above to get you started.
 
-### Improved lightmap baker
-
-The revamped Stingray and the Beast lightmap bakers now reflect more meaningful baker settings. See ~{ About baking with the Stingray baker }~ and ~{ About baking with Beast }~ for the updated options.
-
 ## What's New in Rendering
 
 ### Light baking improvements
@@ -74,25 +73,28 @@ The following Improvements to light baking and post-processing effects (SSAO, SS
 
 - Ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps.
 - New shading environment properties help you control how to apply baked AO and SSAO to your final scene. You can also run SSAO in screen space or world space. See ~{ Shading Environment Properties }~.
-- A new screen space reflection algorithm reflects GGX and matches up with pre-convoluted IBL reflection probes.
+- A new screen space reflection algorithm allows for better refelection results.
 - Normalization of lightmap resolution is now based on the UV space area.
 - UV seam fixup now automatically runs as a post-processing effect when you bake lightmaps.
 - Improved interaction with a lightmapped level, such as material management and object manipulations, without losing the lightmap.
+- The Stingray lightmap baker interface now reflects more meaningful baker settings. See ~{ About baking with the Stingray baker }~ for the updated options.
 
 ### VR Improvements
 
 - When running or testing your game using a VR app, the game image appears in your HMD (head mount display) and on your mirror window (your monitor). Set the new vr_mirror_mode setting in the settings.ini to mono (default) or stereo to control the display on the mirror window. See ~{ Stingray engine settings.ini file reference }~.
 - Instanced stereo rendering is now built in to the default renderer provided with Stingray, and all material and post effect shaders are now VR-enabled to implement this optimization. See ~{ VR in Stingray }~.
-- The VR Oculus Touch template now supports input from the Oculus Remote and Oculus Touch Controler. The template now ships with Oculus flow nodes. See ~{ Template projects}~.
+- The VR Oculus Touch template now supports input from the Oculus Remote and Oculus Touch Controller. The template now ships with Oculus flow nodes. See ~{ Template projects}~.
 - The VR SDK Version has been upgraded to 1.7.0.0. See ~{ Supported platforms }~.
 
 ## Ready to learn Stingray?
 
-With Stingray 1.6, we aim to give you two things you need when learning anything new: more time, and some advice on where to start!
+With Stingray 1.6, we aim to give you two things you need when learning anything new: more time, and some advice on where to start.
 
-Hobbyists, enthusiasts, and early adopters can now run Stingray using a non-commercial Startup license. If the 30-day trial period didn't give you enough time, check out the [terms and conditions](http://www.autodesk.com/company/legal-notices-trademarks/terms-of-service-autodesk360-web-services/autodesk-web-services-entitlements/stingray-startup-license) to see if you're eligible for the non-commercial license. Updated steps to install using this license are included in the [Stingray Installation Supplement](http://help.autodesk.com/view/Stingray/ENU/?guid=GUID-2835E17D-888F-459E-A622-0CD8ED983A91) topic.
+Hobbyists, enthusiasts, and early adopters can now run Stingray using a Non-Commercial startup license. If the 30-day trial period didn't give you enough time, check out the [terms and conditions](http://www.autodesk.com/company/legal-notices-trademarks/terms-of-service-autodesk360-web-services/autodesk-web-services-entitlements/stingray-startup-license) to see if you're eligible for the Non-Commercial license. Updated steps to install using this license are included in the [Stingray Installation Supplement](http://help.autodesk.com/view/Stingray/ENU/?guid=GUID-2835E17D-888F-459E-A622-0CD8ED983A91) topic.
 
 In addition, if you're tired of searching for and watching tutorial videos, pop open the Stingray **Help** menu and select the brand new top-secret Stingray **Hands-on Training Mission**. We've added 5 quick, *interactive* tutorial lessons that take you through the Stingray basics, and get you well on your way to creating your own project. (Pssst - it's not really a secret. Let us know what you think!) We added a note about this in the ~{ Getting Started }~ topic.
+
+<br>
 
 <iframe width="854" height="480" src="http://player.ooyala.com/iframe.html?pbid=6055f5a2061d4016b11ebf1fa8a7751e&amp;platform=html-fallback&amp;ec=luNHlvNzE6jwDXsnEs7PWQYH5vEvraL9" frameborder="0" allowfullscreen></iframe>
 
@@ -126,6 +128,10 @@ In previous versions of Stingray, the `.` character had a special meanings when 
 
 Stingray includes new texture categories and templates such as Normal, Linear Greyscale, Albedo, Albedo Opacity and Roughness/Metallic/AO to help you categorize textures and apply texture settings. The newly added texture templates in the **Texture Manager** come with default compression settings to work on each supported platform. The textures imported in your project are now assigned the default compression settings. See ~{ Import a model with textures and materials }~.
 
+### Occluder boxes
+
+You can use occluder boxes from the **Create** menu to occlude objects and gain performance improvements by avoiding rendering shadows and objects that give no visual impact to your final rendered frame. For more information, see ~{ Create occluder boxes }~.
+
 ### Download new plug-ins
 
 Download new Stingray plug-ins and update existing ones using the **Get more plugins** selection in the **Plugin Manager**. Select any of the available plugins and click **Install** to download it. See ~{ Add and remove plug-ins using the Plugin Manager }~.
@@ -148,9 +154,9 @@ Use the `stingray.Application.toggle_dev_only_warnings()` function to turn these
 
 ## Experimental features
 
-### Faster launching of projects in a browser
+### Projects launch faster in a browser
 
-Stingray now runs projects quickly in a web browser using WebGL. The launching process has been updated to load the content from a URL instead of packaging the compiled data to a separate folder and reading the data. The URL also displays the location of the content folder. See ~{ Run your project in a browser using WebGL }~. Also check out the updated settings if you ~{ Use Mozilla Firefox to run your project }~.
+Stingray now runs projects more quickly in a web browser using WebGL. The launching process has been updated to load the content from a URL instead of packaging the compiled data to a separate folder and reading the data. The URL also displays the location of the content folder. See ~{ Run your project in a browser using WebGL }~. Also check out the updated settings if you ~{ Use Mozilla Firefox to run your project }~.
 
 [Return to top](#top)
 
@@ -252,7 +258,7 @@ Stingray now runs projects quickly in a web browser using WebGL. The launching p
 - GAME-17410 Baker: Fails to serialize global light baking properties
 - GAME-17244 Baker: Material fails sometimes for some objects
 - GAME-13000 Baker: Make sure baker doesn't pause when editor loses focus
-- GAME-12884 Light-baking data lost after changes are made in the Property Editor
+- GAME-12884 Light baking data lost after changes are made in the Property Editor
 - GAME-13975 Mesh loses Lightmap when applying a new material
 - GAME-17340 Creating a custom 'light base' (material resource) is broken
 - GAME-17644 Recursive shader_source includes causes crash
@@ -265,7 +271,7 @@ Stingray now runs projects quickly in a web browser using WebGL. The launching p
 - GAME-16978 Bad error messages in PS4 renderer
 - GAME-17227 Old PS4 shader does not work in V1.5
 - GAME-16935 Spotlight with scale applied can cause staircase effects with materials containing density
-- GAME-13222 Beta Lightmapper will pause if the UI is set to background
+- GAME-13222 Lightmapper will pause if the UI is set to background
 - GAME-17816 Shadow mesh lacks normal information
 - GAME-13322 Changing property on a material output node does not dirty flag the material resource
 - GAME-15534 VR: Test Level button launches viewport at 60fps instead of required 90fps
@@ -292,19 +298,48 @@ This section lists known limitations and workarounds for Stingray.
 
 Unless otherwise noted in the **What's Fixed** section, please be aware that this release contains the same **Known Limitations** described in the previous versions of Stingray Release Notes.
 
-> **Note**: We recommend you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
-
-- **GAME-18398 After opening a v1.5 project in Stingray v1.5, all existing v1.6 projects require migration**
-
-	After you launch Stingray 1.6 beta and create a project, if you then open Stingray 1.5 and work on your existing 1.5 projects, you'll be prompted to migrate your Stingray 1.6 projects the next time you work with Stingray 1.6 beta.
-
-	**Workaround:** Click Ok when prompted to migrate your 1.6 projects, even though migration isn't actually required.
-
 - **Projects built on previous VR templates will not work in Stingray 1.6**
 
 	Stingray 1.6 is a significant update for VR, and as a result projects built with the previous VR templates no longer work. You'll need to manually migrate assets from your previous VR projects into the updated VR templates. We apologize for this, but we hope the improvements we've made for VR help to ease the pain.
 
 	The Stingray renderer now implements instanced stereo rendering, which removes the need for the previous vr_renderer.render_config. In addition, we've added Flow nodes for SteamVR and Oculus to remove any tracking lag. Check out the What’s New section of the release notes for more details on the VR improvements.
+
+-	**GAME-18910 Deploying to any platform works in Development and Release configurations, but fails in Debug with engine runtime not being found**
+
+	**Workaround:** None.
+
+-	**GAME-19224 Projects migrated from Stingray 1.5 lose association with Wwise projects**
+
+	After you migrate a project created in Stingray 1.5, selecting **Window > Wwise Audio** to load the associated Wwise audio project stops working.
+
+	**Workaround:**
+
+	(Note: We recommend creating a backup of your project before modifying the *.stingray_project* file.)
+
+	Add the following to the *.stingray_project* file located at the root of your project, between `description` and `migrations` lines:
+
+	~~~{sjson}
+	libraries = {
+		wwise = {
+  	project_file = "YourProject.wproj"
+  	root_folder = "../YourProject_wwise"
+	}
+	}
+	~~~
+
+-	**GAME-18474 Template projects won’t run on 1GB iOS devices**
+
+	Projects fail to run when you load one of the default Stingray template projects and deploy or connect to a 1GB iOS device, such as the iPad mini.
+
+	**Workaround:** In the project *boot.package* file, comment out `* = ["*"]`. Note that this fix works only for the basic and vehicle templates, and does not work for the character template.
+	
+- 	**GAME-19295 Projects downloaded from the Online Examples tab in the Project Manager prompt you to migrate the project, and fail to load a default level**
+
+	If you download an example project from the **Online Examples** tab in the **Project Manager** when starting Stingray, you'll be prompted to migrate the project even though these projects are already migrated to work in Stingray 1.6. You can simply click **Yes** to let Stingray migrate the project again. 
+
+	Once the project loads, you'll need to manually open a level to work on. (Select **File > Open Level**.)
+
+	**Workaround:** Browse and download the same example projects from the [Gamedev web site](https://gamedev.autodesk.com/stingray/examples). When you open the project in Stingray, a default level launches automatically.
 
 [Return to top](#top)
 
