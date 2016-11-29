@@ -1,4 +1,4 @@
-# All the Ways You can Extend Stingray
+# All the Ways You Can Extend Stingray
 
 As introduced in the ~{ System Overview }~, you can make your custom plug-in hook in to the Stingray editor, the runtime engine, and the project content. Depending on what you want your plug-in to do, you may need to integrate with one, two, or all three of these components.
 
@@ -34,7 +34,7 @@ Engine plug-ins integrate into the runtime viewing and playback engine, typicall
 
 -	Engine plug-ins can also add new functions to the engine's Lua environment, so that the project's gameplay logic and/or editor plug-ins can call out to the C code of the engine plug-in to make stuff happen.
 
--	Engine plug-ins can also contain C implementations for custom Flow nodes. (Note that these C implementations also have to be accompanied in the project by data descriptions for the new nodes. See TODO:link.)
+-	Engine plug-ins can also contain C implementations for custom Flow nodes. (Note that these C implementations also have to be accompanied in the project by data descriptions for the new nodes. See ~{ Create Custom Flow Nodes }~.)
 
 For more information on how to extend the engine in a plug-in, see ~{ Extend the Engine }~.
 
@@ -52,7 +52,7 @@ Typically, when you're working on a single project, you don't bother to create y
 
 Here are a few kinds of project assets that you may find particularly useful for extending what Stingray can do:
 
--	Custom Flow nodes that you implement in Lua scripts. See TODO:link.
+-	Custom Flow nodes that you implement in Lua scripts. See ~{ Create Custom Flow Nodes }~.
 
 -	Custom shader nodes. Shader nodes are all defined in SJSON resources in the `core` folder. If you're comfortable with programming shaders, you can create your own custom shader nodes using the core nodes as models.
 
@@ -64,7 +64,7 @@ Here are a few kinds of project assets that you may find particularly useful for
 
 -	Lua code that integrates with other applications or web services *via* [HTTP requests](http://help.autodesk.com/view/Stingray/ENU/?guid=__lua_ref_ns_stingray_Http_html) and/or [websocket connections](http://help.autodesk.com/view/Stingray/ENU/?guid=__lua_ref_obj_stingray_WebSocket_html), using the Lua interfaces provided by the engine.
 
-For more information on how to set up a plug-in to expose new resources to the project, see ~{ Extend the project }~.
+For more information on how to set up a plug-in to expose new resources to the project, see ~{ Extend the Project Content }~.
 
 If you choose to *Show mapped folders* in the **Asset Browser**, you can see all the asset folders that have been mounted by all of your plug-ins:
 

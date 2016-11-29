@@ -12,7 +12,7 @@ You can think of Stingray as three main components working together: the **proje
 
 -	The **editor** is a Windows-only authoring tool that helps you create and set up your project content so that it looks and behaves the way you want it to when you run the project in the engine.
 
-You can create Stingray *plug-ins* that extend each of these three main components. For a complete discussion, see ~{ All the ways you can extend Stingray }~.
+You can create Stingray *plug-ins* that extend each of these three main components. For a complete discussion, see ~{ All the Ways You Can Extend Stingray }~.
 
 ## Under the hood
 

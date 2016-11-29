@@ -13,7 +13,7 @@ By themselves, the actions that you set up in the `actions` extension don't do a
 
 You can define and call actions in two different ways:
 
--	You can define an action in the `actions` extension, and give it a unique name. Then, you can invoke that action from other extensions in your plug-in by referring to it by name. For example, this configuration sets up an action with the name `print_message`, and calls that action when the user selects a new menu item added by the plug-in:
+-	You can define an action in the `actions` extension, and give it a unique name. Then, you can invoke that action from other extensions in your plug-in -- or even from other plug-ins! -- by referring to it by name. For example, this configuration sets up an action with the name `print_message`, and calls that action when the user selects a new menu item added by the plug-in:
 
 	~~~{sjson}
 	extensions = {
@@ -108,9 +108,11 @@ extensions = {
 
 `name`
 
->	Gives the action a name, which you will use to trigger this action from elsewhere in your plug-in.
+>	Gives the action a name, which you can use to trigger this action from elsewhere in your plug-in, or even from other plug-ins.
 >
 >	This parameter is required if you define your action inside the `actions` extension. It is only optional if you define your action inline within a different extension (like inside the `menus` extension, for example).
+>
+>	If you set a name for your action, it must be unique across *all* named actions set up for *all* installed plug-ins, not just your current plug-in. Only one plug-in can register an action with a given name. If another plug-in tries to use the same name, the editor will refuse to register the newer action. Consider adding a prefix related to your plug-in as a kind of namespace, to avoid the possibility of a naming collision with another action defined in a third-party plug-in.
 
 `type`
 

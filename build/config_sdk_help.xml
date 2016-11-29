@@ -25,7 +25,7 @@
 	</project>
 
 	<global>
-		<syntax_coloring include="\sdk_help\*" default_lang="lang-sjson">true</syntax_coloring>
+		<syntax_coloring include="\sdk_help\*,\custom_flow\*" default_lang="lang-sjson">true</syntax_coloring>
 		<search_filter id="concept" include_expression="sdk_help/.*\.htm">
 			<label lang="en">Search concept topics?</label>
 		</search_filter>
@@ -48,6 +48,7 @@
 		<insert_family_links include="\sdk_help\*"></insert_family_links>
 		<!-- find and replace variables with version numbers -->
 		<replace variable_file="variables.ini" include="*.html"></replace>
+		<replace include="*\_read_me.htm" pattern="_read_me.txt" replacement="Custom Flow node description format"></replace>
 	</global>
 
 	<merge id="images">
@@ -65,6 +66,16 @@
 		<merge_toc_config>
 			<source type="directory"></source>
 			<promote_first_topic>false</promote_first_topic>
+		</merge_toc_config>
+	</merge>
+
+	<merge id="custom_flow">
+		<source>%SR_ENGINE_DIR%\core\flow_nodes\_read_me.txt</source>
+		<apply_template>true</apply_template>
+		<wrap_filetypes>txt</wrap_filetypes>
+		<merge_toc_config>
+			<parent_filename>*\custom_flow_nodes.html</parent_filename>
+			<first_entry_title>Custom C Flow node description format</first_entry_title>
 		</merge_toc_config>
 	</merge>
 

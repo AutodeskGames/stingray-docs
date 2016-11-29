@@ -1,6 +1,6 @@
 # Define previews for custom assets
 
-You can use the `previews` extension to define the way the ~{ Asset Preview }~ panel behaves when the user selects an asset of a specific type in the ~{ Asset Browser }~. If your plug-in adds a new type of resource to Stingray, this is a helpful way to provide users working in the editor with some visual feedback to distinguish between different resources of the same type within the project.
+You can use the `previews` extension to define the way the **Asset Preview** panel behaves when the user selects an asset of a specific type in the **Asset Browser**. If your plug-in adds a new type of resource to Stingray, this is a helpful way to provide users working in the editor with some visual feedback to distinguish between different resources of the same type within the project.
 
 ## How it works
 
@@ -68,6 +68,8 @@ return MyAssetPreviewBehavior
 
 For a list of all the functions you can use in your Lua preview extension module, see the base interface defined in the *asset_preview/preview-behaviors/preview-base.lua* file.
 
+Note that unlike your JavaScript modules, your Lua file must be in the project content. You will probably want to use a `resources` extension to mount its folder as part of the project. See ~{ Extend the Project Content }~.
+
 ## Configuration
 
 Each preview extension requires the following configuration parameters.
@@ -114,7 +116,7 @@ extensions = {
 
 >	An array of all JavaScript and Lua modules that will define the behavior of the **Asset Preview** panel and its viewport when the user selects an asset of the given type in the **Asset Browser**. These file names must be specified relative to the location of your *.plugin* file. Required.
 >
->	Note that if you include a Lua module, that module must also be in a mounted resource path used by the editor. That means, the module must be in the project source directory, in the core resources folder, or in a folder that is identified by a *resource* extension that you have configured for this plug-in (or one set up by a different installed plug-in, like the standard *asset_preview* plug-in). If the Lua module is not present in one of these paths, the editor will be unable to load it into the engine. See also ~{ Make new resources available to the project }~.
+>	Note that if you include a Lua module, that module must also be in a mounted resource path used by the editor. That means, the module must be in the project source directory, in the core resources folder, or in a folder that is identified by a *resource* extension that you have configured for this plug-in (or one set up by a different installed plug-in, like the standard *asset_preview* plug-in). If the Lua module is not present in one of these paths, the editor will be unable to load it into the engine. See also ~{ Extend the Project Content }~.
 
 `config`
 
@@ -235,6 +237,6 @@ extensions = {
 
 ---
 Related topics:
--	~{ Register a custom asset type }~
+-	~{ Extend the Project Content }~
 
 ---

@@ -25,7 +25,7 @@ Sections in this topic:
 
 * * *
 
-## Better interop with 3ds Max
+### Better interop with 3ds Max
 
 New level sync workflows let you automatically rebuild your 3ds Max scenes in Stingray. Once 3ds Max is linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray. Modifications you make to the assets in 3ds Max are then updated inside Stingray. This makes it easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools. This workflow also brings more Vray material properties into the Stingray shader, ensuring your Vray materials look and feel the same in Stingray as they do in 3ds Max. See ~{ Level Sync with Maya, Maya LT, or 3ds Max }~.
 
@@ -33,7 +33,7 @@ New level sync workflows let you automatically rebuild your 3ds Max scenes in St
 
 >**Note:** The project used in the images above is courtesy of Virtual Resolution.
 
-## Capture frames to disk
+### Capture frames to disk
 
 You can now capture the active camera or viewport and save frames to disk in the OpenEXR file format. The new Capture Frames tool also supports capturing frames on a test engine. For more information, see ~{ Capture Frames Tool }~.
 
@@ -46,6 +46,16 @@ You can now capture the active camera or viewport and save frames to disk in the
 You can now write plug-ins for the Stingray engine in C without needing source code access! This greatly improves the ability for all customers to extend Stingray. You can hook the runtime engine in to other third-party libraries and middleware SDKs, support your own custom data types, write your own gameplay code in C, and more.
 
 For details on getting started, see the [Stingray SDK Help](http://www.autodesk.com/stingray-help?contextId=SDK_HOME).
+
+### Improvements and additions for editor plug-ins
+
+-	You can use the new `viewports` extension to incorporate an engine viewport into your plug-in's panels and views, with full control over what the engine in that viewport loads, and over how the user interacts with the viewport. [See here for details](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_extend_editor_plugin_extensions_viewports_html).
+
+-	You can add new contextual actions for the editor to show when users right-click an asset or a level object in an engine viewport. [See here for details](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_extend_editor_plugin_extensions_contextual_actions_html).
+
+-	You can now call out from the editor's JavaScript environment to C functions you provide in a *.dll* file. [See this overview](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_extend_editor_native_extensions_html).
+
+-	You can use the `views` extension to set up named views and panels, which you can then open from other extensions in your plug-in, or even from other plug-ins. [See here for details](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_extend_editor_plugin_extensions_views_and_dialogs_html).
 
 ### Procedural meshes in Lua
 
@@ -109,6 +119,10 @@ You can now use Flow to control entities:
 ### Stingray file extension
 
 Stingray projects now use the unique file extension *.stingray_project*, making it easy to find and open projects. Double-click the *.stingray_project* file to open the project in the Editor. Updated Help topics include: ~{ Open an existing project }~ and ~{ About the project structure }~.
+
+### Removed restrictions on periods in file and folder names
+
+In previous versions of Stingray, the `.` character had a special meanings when used in the names of resources and folders -- to denote resource *variants*. This meant that you weren't free to name your files and folders the way you wanted, and it could sometimes cause problems when importing source art files with periods in their names. All of these restrictions have been lifted; you are now free to use periods in resource names as much as you want.
 
 ### Simplified texture import
 
@@ -358,6 +372,67 @@ For a complete list of all new, modified, and removed Flow nodes in this release
 To preserve the forward direction in imported assets, set the forward axis setting (`reverse_forward_axis`)   in *.stingray_project*  instead of *settings.ini*. See ~{  Best practices: preserving axis orientation }~.
 
 In projects that you migrate from earlier versions of Stingray, the forward axis setting is still read from *settings.ini*.
+
+### Localized resources and resource variants
+
+If you have an existing project that uses the old Stingray resource property system to denote different variants of your resources, you may need to do some additional customization in your *.stingray_project* file. The engine no longer automatically recognizes resources as being variants based on the `.` character in their resource names. Now, a new `data_compiler` setting in the *.stingray_project* file tells the data compiler exactly which suffixes it should treat as property names. This applies both for platform property names (like `.ps4` or `.ios`) and for language and content property names (like `.en`, `.ja` or `.lowres`). This gives you even more control over the property system, and eliminates restrictions on using periods in file and folder names.
+
+To set up the compiler so that resource suffixes work the same way they did previously for platforms, you'll need to make sure that your *.stingray_project* file contains a `data_compiler` block like the ones you'll find in the latest project templates:
+
+~~~{sjson}
+data_compiler = {
+	file_folder_extensions = [
+		".s2d"
+	]
+	resource_overrides = [
+		{
+			platforms = [
+				"win32"
+			]
+			suffix = ".win32"
+		}
+		{
+			platforms = [
+				"ps4"
+			]
+			suffix = ".ps4"
+		}
+		{
+			platforms = [
+				"xb1"
+			]
+			suffix = ".xb1"
+		}
+		{
+			platforms = [
+				"ios"
+			]
+			suffix = ".ios"
+		}
+		{
+			platforms = [
+				"android"
+			]
+			suffix = ".android"
+		}
+	]
+}
+~~~
+
+If you also use different versions of your resources for different languages, you'll have to also include your language suffixes:
+
+~~~{sjson}
+data_compiler = {
+	resource_overrides = [
+		{suffix = ".ja", flags = ["ja"]}
+		{suffix = ".fr", flags = ["fr"]}
+	]
+}
+~~~
+
+You'll also have to change the way that you identify which of these language flags should be active, by calling the new `stingray.Application.set_resource_override(flag_name, priority)` function.
+
+For complete details, see ~{ Localizing resources }~.
 
 ### Advance notice: moving to Visual Studio 2015
 

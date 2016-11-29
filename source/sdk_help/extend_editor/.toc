@@ -1,10 +1,8 @@
 plugin_development_tips
-plugin_resource_format
 plugin_extensions
-native_extensions
-emit_respond_events
 services
-built_in_properties_reference
-built_in_types_reference
-type_files
+emit_respond_events
 asset_editing
+property_editor_usage
+property_metadata
+native_extensions

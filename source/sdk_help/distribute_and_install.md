@@ -18,7 +18,7 @@ Then, they need to use the Stingray editor's **Plugin Manager** to install and l
 
 Ideally, anything else that's necessary would happen automatically. However, depending on what your plug-in adds to Stingray, your user may have a few extra steps to do:
 
--	If your plug-in includes any *.dll* files that extend the runtime engine, your user must copy all of these to the engine's `plugins` folder. TODO:copy details
+-	If your plug-in includes any *.dll* files that extend the runtime engine, your user must copy all of these to the engine's plugins folder: *engine/<platform>/<config>/plugins*, under your Stingray installation directory. The engine has separte folders for different platforms (`win32` and `win64`), and for different configurations (most notably `dev` and `release`). If you distribute your plug-in with multiple *.dll* files for those different platforms and configs, each *.dll* has to go to its corresponding location.
 
 	Note that the user should not copy any *.dll* files that extend only the editor. They should stay at the location set for them in the *.plugin* file. See ~{ Call out to C code from JavaScript }~.
 

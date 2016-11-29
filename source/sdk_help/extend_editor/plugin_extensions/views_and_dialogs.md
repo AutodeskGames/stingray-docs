@@ -1,4 +1,4 @@
-# Views and Dialogs
+# Create a named panel or dialog
 
 Views extension allows a user to define named "views" (panel or dialog) that can be either registered to global menu or shown using the views module. Named views can even be shown from plugin who haven't registered the view as long as the view unique name is know in advance (ex: popping the color picker from any plugin).
 

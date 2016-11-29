@@ -67,8 +67,21 @@
 		<contextId include="*\status_bar.html" id="tools_status_bar"></contextId>
 		<contextId include="*\story_editor.html" id="tools_story_editor"></contextId>
 		<contextId include="*\asset_preview.html" id="tools_asset_preview"></contextId>
+		<contextId include="*\unit_editor.html" id="tools_unit_editor"></contextId>
+		<contextId include="*\project_manager.html" id="tools_project_manager"></contextId>
 		<contextId include="*\system_requirements.html" id="system_requirements"></contextId>
 		<contextId include="*\object_lifetimes.html" id="lua_userdata_binding"></contextId>
+		<!-- context IDs used by directed learning. -->
+		<contextId include="*\snap_objects.html" id="snap_objects"></contextId>
+		<contextId include="*\about_units_and_entities.html" id="units_and_entities"></contextId>
+		<contextId include="*\physics.html" id="physics_concepts"></contextId>
+		<contextId include="*\work_with_textures.html" id="work_with_textures"></contextId>
+		<contextId include="*\optimize_memory.html" id="optimize"></contextId>
+		<contextId include="*\platform_support.html" id="platform_support"></contextId>
+		<contextId include="*\engine_settings.html" id="engine_settings"></contextId>
+		<contextId include="*\animation_controllers.html" id="animation_controllers"></contextId>
+		<contextId include="*\tutorial_next_steps.html" id="tutorial_next_steps"></contextId>
+		<contextId include="*\content_lifecycle.html" id="tutorial_compile"></contextId>
 		<replace pattern="BEGIN_STANDALONE.*END_STANDALONE" replacement="" include="*.html"></replace>
 		<insert_family_links include="\stingray_help\*,\changelog\*"></insert_family_links>
 		<validate_todos>true</validate_todos>

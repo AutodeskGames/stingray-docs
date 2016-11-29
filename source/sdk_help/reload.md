@@ -28,7 +28,9 @@ If the engine finds a newer version of a *.dll* file in one of these hot reload 
 
 You could include this Lua call in your project's Lua scripts or in a content plug-in. However, since the path is usually dependent on a particular machine's filesystem and usually only needed during development while you're testing out your plug-in, you will probably find it more convenient to just run the function from the editor's **Status Bar** when you need to enable hot reloads for a given project. For details, see [this page](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_playtesting_send_commands_statusline_html).
 
-Note that you may need to do some extra work in your plug-in code to support hot reloading. The best way to make your plug-in handle hot reloading smoothly is to keep *all* of the state information required by your code in a single binary blob. Then, you can implement the `PluginApi.start_reload` and `PluginApi.finish_reload` functions in your plug-in to temporarily cache the blob of state data before the reload starts, and resume from that cached data after the new code has been loaded.
+**Note:** You may need to do some extra work in your plug-in code to support hot reloading, if your plug-in needs to retain any state information after it is reloaded. The best way to make your plug-in handle hot reloading smoothly is to keep *all* of the state information required by your code in a single binary blob. Then, you can implement the `PluginApi::start_reload` and `PluginApi::finish_reload` functions in your plug-in to temporarily cache the blob of state data before the reload starts, and resume from that cached data after the new code has been loaded.
+
+Also, as always, make sure that your plug-in shuts down cleanly and frees any memory that it allocates over its lifetime.
 
 ## Hot reload limitations
 

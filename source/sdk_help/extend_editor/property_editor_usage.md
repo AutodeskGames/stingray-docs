@@ -1,4 +1,4 @@
-#Property Editor Usage
+# Use the Property Editor component in your UI
 
 It is really easy to create new a Panel/Editor using the Stingray Editor SDK. This document will highlight how to create a panel containing 2 property editors: one will be setup using a `.type` file the onther one using pure javascript.
 
@@ -26,15 +26,15 @@ menus = [
 ]
 ```
 
-For more information on `.plugin` file see: ~{About plug-in definitions}~. Views definition can be found here: ~{Views and Dialogs}~. And menu customization can be found here: ~{Create a new menu item}~.
+For more information on `.plugin` file see: ~{ Define a Stingray Plug-in }~. Views definition can be found here: ~{ Create a named panel or dialog }~. And menu customization can be found here: ~{ Create a new menu item }~.
 
 ## Property Editor Panel
 
 ### Initialization
 
-Each javascript panel file file should begin with a `define` block that will specify which other javascript modules you want to include (see [RequireJs](http://requirejs.org/) for more information on require itself). You can also look at the last section in ~{# Tips for developing plug-ins}~ for more Stingray specific details on requiring files.
+Each javascript panel file file should begin with a `define` block that will specify which other javascript modules you want to include (see [RequireJs](http://requirejs.org/) for more information on require itself). You can also look at the last section in ~{ Tips for developing plug-ins}~ for more Stingray specific details on requiring files.
 
-```javascript
+```js
 // This is the list of all modules we depend on:
 define([
     'properties/mithril-property-ext',
@@ -51,7 +51,7 @@ define([
     'services/file-system-service'
 ],
 	/** This is the initialzation function of your module. Each required dependency gets injected
-    	in the same order it is included. Module starting with capital letter a generally Component 
+    	in the same order it is included. Module starting with capital letter a generally Component
         or class (that can be used with new). Module starting with a lowerCase are generally namespace
         containing functions and data.
     */
@@ -76,16 +76,16 @@ define([
     var editorContext = props.makeEditorContext(services);
 ```
 
-The section ~{# Use built-in editor services}~ contains more information on core Stingray services.
+The section ~{ Use built-in editor services}~ contains more information on core Stingray services.
 
 ### Property Editor using Type file
-We will first highlight how to create a property editor from a `.type` file. These files describe how to interpret JSON data (like Stingray Assets) and what type of properties should be used to modify this data. For more reference on `.type` file see ~{Stingray Type System}~.
+We will first highlight how to create a property editor from a `.type` file. These files describe how to interpret JSON data (like Stingray Assets) and what type of properties should be used to modify this data. For more reference on `.type` file see ~{ The Stingray Type System }~.
 
 #### Type description
 
 First thing we will do is specify a type descriptor for the data we want to display in the Property editor. Instead of relying on loading a `.type` file from disk, we will define it directly in javascript (in pure JSON):
 
-```javascript
+```js
 // Create type definition "inline". Alternatively, it could have been loaded from a .type file:
 var typeDefinition = {
     type: ':struct',
@@ -156,13 +156,13 @@ var typeDefinition = {
 
 This defines a type descriptor with 6 different properties. See that each field in the type descriptor is made out of 2 blocks:
 
-- The field type description which explains what is the JSON value corresponding to this field (see ~{Built-In Types Reference}~ for more information on types).
-- The editor block which specifies which property control should be used to modify this field and what are the parameters of this control. See ~{Built-In Properties Reference}~ for more information on the different property controls supported by Stingray.
+- The field type description which explains what is the JSON value corresponding to this field (see ~{ Built-in types reference }~ for more information on types).
+- The editor block which specifies which property control should be used to modify this field and what are the parameters of this control. See ~{ Built-in metadata properties }~ for more information on the different property controls supported by Stingray.
 
 #### Property Document setup
 In order to intialize a property editor from a type descriptor we use the `PropertyDocument` class. This class will allow us to customize the categories and to listen to event (i.e propertyChanged) happening while the JSON value is being modified.
 
-```javascript
+```js
 // Use the dataTypeService to create an initial value conforming to the type definition.
 var initialValue = dataTypeService.createDefaultValue(typeDefinition);
 
@@ -200,7 +200,7 @@ A property model is:
 
 In our panel, we have created a property model **generator** function:
 
-```javascript
+```js
 function genModel (value) {
 	// This returns a property model function that uses a closure to stores its value.
     return function (property, newValue) {
@@ -217,7 +217,7 @@ function genModel (value) {
 
 The Stingray property compact notation makes it easy to define properties. Here are the same properties that we used in the `.type` example above:
 
-```javascript
+```js
 // The compact notation allows easy configuration of a PropertyEditor using pure javascript:
 var compactNotationConfig = props.editor(editorContext, [
     props.category("My Data also!", {}, [
@@ -238,7 +238,7 @@ var compactNotationConfig = props.editor(editorContext, [
 ]);
 ```
 
-See ~{Built-In Properties Reference}~ for more information on the different property controls supported by Stingray compact notation.
+See ~{ Built-in metadata properties }~ for more information on the different property controls supported by Stingray compact notation.
 
 ### Create and mount a Mithril view
 All that is left is to create a view holding the 2 Property Editors. To do so, we use [Mithril](http://mithril.js.org/). Mithril is a super lightweight (less than 2000 lines of code) javascript library that make it easy to create dyanmic HTML that refreshes super fast when datas are modified. Everything can be done in pure Javascript (even the templating) allowing easy debugging.
@@ -249,7 +249,7 @@ We use 2 Mithril concepts:
 
 Here what our view code looks like:
 
-```javascript
+```js
 // Our app component
 var PropertyEditorUsageApp = {
     view: function () {
@@ -276,7 +276,7 @@ This is what our panel looks like!
 ![property editor](../images/property_editor_usage.png)
 
 And here is the complete source code of the Panel:
-```javascript
+```js
 define([
     'properties/mithril-property-ext',
     'properties/property-editor-utils',
