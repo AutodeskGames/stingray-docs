@@ -318,6 +318,14 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 	Projects fail to run when you load one of the default Stingray template projects and deploy or connect to a 1GB iOS device, such as the iPad mini.
 
 	**Workaround:** In the project *boot.package* file, comment out `* = ["*"]`. Note that this fix works only for the basic and vehicle templates, and does not work for the character template.
+	
+- 	**GAME-19295 Projects downloaded from the Online Examples tab in the Project Manager prompt you to migrate the project, and fail to load a default level**
+
+	If you download an example project from the **Online Examples** tab in the **Project Manager** when starting Stingray, you'll be prompted to migrate the project even though these projects are already migrated to work in Stingray 1.6. You can simply click **Yes** to let Stingray migrate the project again. 
+
+	Once the project loads, you'll need to manually open a level to work on. (Select **File > Open Level**.)
+
+	**Workaround:** Browse and download the same example projects from the [Gamedev web site](https://gamedev.autodesk.com/stingray/examples). When you open the project in Stingray, a default level launches automatically.
 
 [Return to top](#top)
 
