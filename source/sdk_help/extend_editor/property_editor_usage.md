@@ -26,7 +26,7 @@ menus = [
 ]
 ```
 
-For more information on `.plugin` file see: ~{ Define a Stingray Plug-in }~. Views definition can be found here: ~{ Views and Dialogs }~. And menu customization can be found here: ~{ Create a new menu item }~.
+For more information on `.plugin` file see: ~{ Define a Stingray Plug-in }~. Views definition can be found here: ~{ Create a named panel or dialog }~. And menu customization can be found here: ~{ Create a new menu item }~.
 
 ## Property Editor Panel
 
