@@ -56,7 +56,7 @@ Here are a few kinds of project assets that you may find particularly useful for
 
 -	Custom shader nodes. Shader nodes are all defined in SJSON resources in the `core` folder. If you're comfortable with programming shaders, you can create your own custom shader nodes using the core nodes as models.
 
--	Render config extensions. You can customize the rendering pipeline by inserting your own render passes and shader code at specific points in the process. This is an advanced feature that we're working on documenting fully; for an example, you can download the [volumetric clouds plugin](https://github.com/greje656/clouds) and check out its *.render_config_extension* file.
+-	Render config extensions. You can customize the rendering pipeline by inserting your own render passes and shader code at specific points in the process. This is an advanced feature that we're working on documenting fully; take a look at [this blog post](https://gamedev.autodesk.com/blogs/1/post/3437113321891064420) for some thoughts on the design. To see a working example, you can download the [volumetric clouds plugin](https://github.com/greje656/clouds) and check out its *.render_config_extension* file.
 
 -	Custom entity components. You can extend the entity system by creating your own custom types of data components. For details, see [this page](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_using_entities_create_custom_component_html).
 

@@ -1,27 +1,13 @@
 # Create a named panel or dialog
 
-Views extension allows a user to define named "views" (panel or dialog) that can be either registered to global menu or shown using the views module. Named views can even be shown from plugin who haven't registered the view as long as the view unique name is know in advance (ex: popping the color picker from any plugin).
+You can use the `views` extension to define a named view for your plug-in. This may be a dockable panel, or a modal dialog. You can then use the view's name to refer to it from elsewhere in your plug-in -- for example, to open it from a `menu` extension. You can even open a named view from another plug-in -- for example, you can pop the standard editor color picker dialog from your own plug-in, even though it is defined in its own separate plug-in.
 
-## Views module
-- **$stingray_install_dir\editor\core\extensions\views.js**: You can find Jsdoc on the different functions this module provide.
-- **$stingray_install_dir\editor\core\extensions\tests\view-extension-spec.js** : unit tests files with some use cases.
+## Configuration
 
-
-
-## Views extension format
+Each `views` extension accepts the following settings in the *.plugin* file:
 
 ~~~sjson
-// From stingray-editor.plugin
 views = [
-    {
-        type = "dialog"
-        name = "about"
-        path = "about"
-        title = "About"
-        width = 500
-        height = 600
-    }
-
     {
         name = "project-manager"
         type = "dialog"
@@ -30,72 +16,53 @@ views = [
         width = 910
         height = 600
     }
-
-    {
-        name = "plugin-manager"
-        type = "panel"
-        path = "plugin-manager"
-        title = "Plugin Manager"
-    }
 ]
 ~~~
 
 `name`
- > Unique name of the view. **Required**. This name must be unique among all views registered within Stingray. This will be used to specify which view to show.
+
+>	A unique name for the view. This name must be unique among all views registered by all Stingray plug-ins. You'll use this name to refer to your view when you want to open it from another extension or from JavaScript code in your plug-in. **Required**.
 
 `type`
- > Can be either **dialog** (generally modal), **panel** (tool window) or **window** (top level window). **Required**. Note that any registered **panel** will also be available in any of the `Tab Activator + Button`.
 
-![tab_activator](../../images/tab_activator_button.png)
+>	The type of the view. This can be any of the following: `dialog` (generally modal), `panel` (tool window), or `window` (a top-level window). **Required**.
+>
+>	Note that if you register your view as a panel, it will also be available through the + button in any tab bar:
+>
+>	![tab_activator](../../images/tab_activator_button.png)
 
 `path`
- > Relative path to the html file within the plugin that will be used to load the view. **Required**.
+
+>	The path and filename of an HTML file that the editor will load into the view. This path must be set relative to the location of your *.plugin* file. **Required**.
 
 `title`
- > Main title of the view. **Optional**.
+
+>	A title for the view, which the editor will show in the panel tab or the dialog title bar. **Optional**.
 
 `width`
- > Default initial width of the view (in pixel). ** Optional**.
+
+>	The default initial width of the view, in pixels. **Optional**.
 
 `height`
- > Default initial height of the view (in pixel). ** Optional**.
 
-## Registering menu
+>	The default initial height of the view, in pixels. **Optional**.
 
-A named view can easily be registered as a menu item. Most of the General tools available in the Stingray *Window menu* comes from registered named views.
+## Opening the view from a menu
+
+You can use a `menus` extension to create a new menu item in the Stingray editor that opens your named view. For details, see ~{ Create a new menu item }~, and use the `view` property to specify the name of the view you want to open.
+
+Most of the tools available under the **General** category in the Stingray **Window** menu come from named views that have been registered in a plug-in:
 
 ![window_menu](../../images/window_menu.png)
 
-To register a new menu bound to a view, you use a menu extension:
+## Opening the view from a global action
 
-~~~sjson
-// From stingray-editor.plugin
-menus = [
-    {
-        path = "Help/About"
-        view = "about"
-        order = 510
-        width = 600
-        height = 400
-    }
+The *stingray-editor.plugin* file sets up a global action named `open-view`. You can use this action in your plug-in to pop open a named view from anywhere that you can run an action.
 
-    {
-        path = "File/Project Manager"
-        order = 190
-        shortcut = "Alt+F7"
-        view = "project-manager"
-    }
-]
-~~~
-
-## Open view action
-In the stingray-editor.plugin file there is a global action called **open-view** that allows a user to pop open a view from within an action sequence:
-
-The contextual action extension allows a user to bind a sequence of action to a contextal menu:
+For example, the following contextual action extension adds a "Show Dependencies" menu item to the contextual menu any time the user right-clicks any asset, and that menu item results in the editor opening the view named `dependency`:
 
 ~~~sjson
 contextual_actions = [
-	// Basically right clicking on any asset should add the "Show dependency" to the contextual menu
     {
         type = "asset"
         label = "Show Dependencies"
@@ -105,7 +72,6 @@ contextual_actions = [
         }
 
         do = [
-        	// use the globally defined open-view to open the named view called "dependency".
             "open-view \"dependency\""
         ]
     }
@@ -114,10 +80,11 @@ contextual_actions = [
 
 ![show_dependencies](../../images/open_dependencies.png)
 
-## Opening panel
-Alternatively, from within javascript you can use the views module to open a panel:
+## Opening a dockable panel from JavaScript
 
-~~~js
+You can use the `extensions/views` module to open your panel from anywhere in your plug-in's JavaScript code:
+
+~~~{js}
 // From dependency-actions.js
 define([
     'app',
@@ -138,10 +105,11 @@ define([
 });
 ~~~
 
-## Opening modal dialog
-Using the views module, you an also open a modal dialog and get back its return value when the dialog is closed.
+## Opening a modal dialog from JavaScript
 
-~~~js
+Like dockable panels, you can use the `extensions/views` module to open your dialog from anywhere in your plug-in's JavaScript code, and to get back its return value when the user closes the dialog:
+
+~~~{js}
 // From asset-browser-controller.js
 function createNewFolder(uniqueDirectoryEntry) {
 	return hostService.openModalTextInputDialog("Enter new folder name",
@@ -150,7 +118,7 @@ function createNewFolder(uniqueDirectoryEntry) {
 
 ~~
 
-~~~js
+~~~{js}
 // From host-service.js
 define([
     'app',
@@ -177,18 +145,23 @@ define([
 });
 ~~~
 
-It is worth noting that when a custom dialog is opened, we inject a few useful API into the global window object to allow a user to manipulate the dialog more easily:
+### Global dialog helpers
+
+Whenever the editor opens a custom dialog, it injects a few useful variables and functions into the global `window` object. These may help you manipulate the dialog more easily from your plug-in code:
 
 `window.options`
-> The third parameter passed to the `views.openDialog` function. Allows a caller to pass a plain Json object to be retrieve back by the dialog.
+
+>	The third parameter that you pass to the `views.openDialog` function, if any. You can use this to pass a plain JSON object from the module that opens the dialog, and pick up the same object from the dialog controller.
 
 `window.accept(result)`
-> Function that will close the dialog passing back the `result` to the dialog invoker. Dialog will be considered valid.
+
+>	Closes the dialog, passing back the `result` to the module that opened the dialog. The dialog will be considered valid.
 
 `window.reject(result)`
-> Function that will close the dialog passing back the `result` to the dialog invoker. Dialog will be considered rejected or cancelled.
 
-~~~js
+>	Closes the dialog, passing back the `result` to the module that opened the dialog. The dialog will be considered rejected or cancelled.
+
+~~~{js}
 // From text-input-dialog.js
 
 // Fetch initial values from the `views.openDialog` options parameter:

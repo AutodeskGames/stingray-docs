@@ -34,7 +34,7 @@ extensions = {
 
 >	A number that indicates the placement or ordering of this item relative to the other items in the same menu. Lower numbers place the item closer to the top of the menu; higher numbers move it toward the bottom. Optional. If omitted, `0` is used, which puts the new item at the top of the menu.
 
-## Open a panel
+## Open a new panel
 
 To make a menu item that opens a new panel, set up your menu extension as follows.
 
@@ -72,6 +72,28 @@ extensions = {
 You can write the content of your HTML panel however you like. There are no particular restrictions.
 
 Stingray does ship with some default widgets and components. If you're comfortable with using a framework like [Angular.js](https://angularjs.org/) or [Mithril](http://mithril.js.org/) to separate the HTML UI view from the JavaScript controller logic, you may be able to take advantage of these components by modeling your HTML and JavaScript code on the standard plug-ins in the *editor/plugins* folder.
+
+## Open a named view
+
+As an alternative to setting up a panel as above, you can use the `view` setting to specify a named panel or dialog that you've set up in a `views` extension, or that another Stingray plug-in has registered in a `views` extension. See also ~{ Create a named panel or dialog }~.
+
+~~~{sjson}
+extensions = {
+	menus = [
+		{
+		    path = "Window/Custom Named View"
+			shortcut = "Ctrl+F8"
+			order = 200
+
+			view = "my-custom-named-view"
+		}
+	]
+}
+~~~
+
+`view`
+
+>	The unique name of the view you want to open, as registered with Stingray in its plug-in's `views` extension.
 
 ## Run an action
 
