@@ -1,15 +1,49 @@
 # Call out to C code from JavaScript
 
-Native extensions can be used to expose C/C++ functionalities to Javascript. Native extensions are DLLs that are loaded at runtime, and do not require any information inside the `.plugin` file. The editor provides apis for your extension to register functions either in *synchronous* mode or *asynchronous* mode, and several editor workflow apis.
+You can make your plug-in call out from the editor's JavaScript environment to run C code in a *.dll* file that you provide along with your plug-in. You define some functions in your C code, and use a set of APIs provided by the editor to expose those functions to the editor's JavaScript environment. When you invoke those functions from your plug-in's JavaScript code or from an action extension, your C function is automatically invoked.
+
+This can be useful anytime you need the editing environment to be able to run native code. For example, you might need to call out to another application or library to do some processing; you might want to take advantage of operating system functions that aren't exposed through the editor's JavaScript services; or if you need to do some processing that is especially CPU-intensive, you might want to implement that in C rather than in JavaScript.
+
+Unlike other editor extensions, you don't have to add anything into your *.plugin* file to set up a *.dll* extension. However, you do have to follow the instructions on this page to:
+
+1.	Write your C code,
+
+2.	Compile the code to a *.dll* file,
+
+3.	Tell the editor in your plug-in's JavaScript when you want to load and unload the library,
+
+4.	Call the exposed C functions from JavaScript.
 
 ## Synchronous vs Asynchronous
-The editor is built with Qt and uses [Cef](https://bitbucket.org/chromiumembedded/cef) to display HTML and run Javascript inside its widgets. Cef runs using multiple processes. The main process which handles window creation, painting and network access is called the *browser* process. Rendering and JavaScript execution occur in a separate process, called the *render* process. You don't have to know Cef to use create an extension as it is hidden inside the implementation of the api, but it is usefull to understand why we separate between synchronous and asynchronous.
 
-You can register functions to be used synchronously or asynchronously. Synchronous functions execute in the render process and are blocking calls. Asynchronous functions are executed in the browser process and do not block. They return a javascript `Promise` that can be used for synchronisation. Asynchronous functions are also usefull if you wish to use gui functionalities like creating new widget.
+The functions that you register in your plug-in can run either synchronously or asynchronously in the JavaScript environment.
 
-Bear in mind that in order to register functions in one mode or another, the extension has to be loaded in that specific mode through one of our apis. You can load your extension in both modes at the same time, but each instances will be loaded by different processes. We currently have no communication api to communicate between the extensions loaded by different processes.
+The editor uses the [Chromium Embedded Framework (CEF)](https://bitbucket.org/chromiumembedded/cef) to display HTML and run JavaScript inside its widgets. CEF runs multiple processes:
+
+-	The main process, which handles window creation, painting and network access, is called the *browser* process.
+
+-	Rendering and JavaScript execution occur in a separate process, called the *render* process.
+
+Synchronous functions run in the render process, and are blocking calls. Asynchronous functions run in the browser process, and do not block the process. They return a JavaScript `Promise` that can be used to synchronize future operations. Asynchronous functions are especially useful when you interact with the user interface, like creating a new widget. For a bit more on using promises and asynchronous JavaScript, see ~{ Tips for developing plug-ins }~.
+
+In order to register functions in either mode, your plug-in has to load your *.dll* using an editor API that is specific to that mode. You can load your extension using both modes at the same time, but each time the *.dll* will be loaded by a different process. There is currently no way for your plug-in to communicate between the two instances using the asynchronous and synchronous modes. That means that you'll probably find it better to choose either the synchronous or the asynchronous mode and stick with it for all the functions you register.
+
+## Editor and plug-in interactions
+
+The editor's C plug-in interface is based around a consistent pattern of interactions between the editor and the plug-in. All of these interactions are based on a shared set of API definitions. Each side queries the other to retrieve the APIs that the other side supports:
+
+-	The editor first queries the plug-in for its API by calling a predetermined `get_editor_plugin_api` function. The plug-in provides the editor with a struct that contains pointers to whatever functions the plug-in implements from their shared plug-in API definition.
+
+-	When the editor calls those functions defined by the plug-in, it passes along a `get_editor_api` function pointer of its own. The plug-in can call that function to query the editor in return, in order to retrieve APIs that expose editor services to the plug-in. The plug-in can then call functions in those returned APIs in order to make the editor perform the tasks it needs -- typically, to register a new function to the JavaScript environment.
+
+The following image summarizes this workflow:
+
+TODO: image
+
+This overall pattern is very similar to the way the runtime engine interacts with plug-ins that extend its runtime capabilities. See ~{ Extend the Engine }~.
 
 ## Native extension Apis
+
 In order to be loadable by the editor, your extension must expose one function that the editor uses to load it in synchronous mode or asynchronous mode : `__declspec(dllexport) void *get_editor_plugin_api(unsigned api)`. Here is what this function looks like in your `*.cpp` file :
 
 ~~~cpp
@@ -258,7 +292,7 @@ public:
 
 Here is an example showing how to load your extension and calling your functions from javascript :
 
-~~~js
+~~~{js}
 let path = 'path_to_your_dll'
 let id = stingray.loadNativeExtension(path);
 ...
@@ -421,7 +455,7 @@ public:
 
 Here is an example showing how to load your extension and calling your functions from javascript :
 
-~~~js
+~~~{js}
 let path = 'path_to_your_dll'
 let pluginAsyncId = null;
 stingray.loadAsyncExtension(path).then(function (id) {

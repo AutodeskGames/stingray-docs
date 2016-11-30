@@ -6,7 +6,7 @@ You can use the `views` extension to define a named view for your plug-in. This 
 
 Each `views` extension accepts the following settings in the *.plugin* file:
 
-~~~sjson
+~~~{sjson}
 views = [
     {
         name = "project-manager"
@@ -61,7 +61,7 @@ The *stingray-editor.plugin* file sets up a global action named `open-view`. You
 
 For example, the following contextual action extension adds a "Show Dependencies" menu item to the contextual menu any time the user right-clicks any asset, and that menu item results in the editor opening the view named `dependency`:
 
-~~~sjson
+~~~{sjson}
 contextual_actions = [
     {
         type = "asset"

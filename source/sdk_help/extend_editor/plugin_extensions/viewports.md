@@ -10,7 +10,7 @@ This extension is very similar to the `previews` extension that controls the **A
 
 Viewport extensions require the following parameters:
 
-~~~sjson
+~~~{sjson}
 extensions = {
     viewports = [
         {
@@ -235,7 +235,7 @@ The Lua counterpart of the JavaScript ViewportBehavior allows the user to intera
 
 A Lua ViewportBehavior can implement the following interface:
 
-~~~lua
+~~~{lua}
 // From core/editor_slave/stingray_editor/viewport_behavior.lua
 ViewportBehavior = interface {
     required = {

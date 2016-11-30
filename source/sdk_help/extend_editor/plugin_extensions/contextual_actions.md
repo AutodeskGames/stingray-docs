@@ -1,16 +1,16 @@
 # Add choices to contextual menus
 
-In several places in the Stingray editor, you can right-click on something in order to see a *contextual menu* that offers actions related to the selected item. For example, when you right-click an asset in the **Asset Browser**, or you right-click a unit in the **Level Viewport** or **Explorer**, you get a menu of actions that apply to that asset or level object.
+In several places in the Stingray editor, users can right-click on something to get a *contextual menu* that offers actions related to the selected item. For example, when you right-click an asset in the **Asset Browser**, or you right-click a unit in the **Level Viewport** or **Explorer**, you get a menu of actions that apply to that asset or level object.
 
 Your plug-in can use the `contextual_actions` extension to add new choices to the default set of options offered by these contextual menus.
 
-For each new contextual menu item you configure, you give the editor one or more actions that it should carry out, and one or more *predicates* that determine whether or not the item should be shown based on the current context. For example, a predicate might allow the menu item to be shown only when the selected item is a unit or a light.
+For each new contextual menu item you configure, you give the editor one or more actions that it should carry out, and one or more *predicates* that determine whether or not the editor should show the item based on the current context. For example, a predicate might tell the editor to show the menu item only when the selected item is a unit or a light.
 
 ## Configuration
 
 Every contextual action extension accepts the following configuration parameters.
 
-~~~sjson
+~~~{sjson}
 extensions = {
 	contextual_actions = [
 	    {
@@ -39,19 +39,19 @@ extensions = {
 
 `type`
 
->	Defines the type of items this action can apply to. This can currently be either `asset` or `level_object`. The action type acts as a global predicate for the contextual action. For example, when the **Asset Browser** needs to populate a contextual menu, it first collects all contextual actions whose type is `asset`, then checks their custom predicates. The **Explorer** panel does the same, but looks onyl for `level_object` actions. You can also define your own type. **Required**.
+>	Defines what kind of items this action can apply to. This can be either `asset` or `level_object`. The action type acts as a global predicate for the contextual action. For example, when the **Asset Browser** needs to populate a contextual menu, it first collects all contextual actions whose type is `asset`, then checks their custom predicates. The **Explorer** panel does the same, but looks only for `level_object` actions. You can also define your own type. **Required**.
 
 `when`
 
->	A predicate or an array of predicates that determine whether this action should be shown in the contextual menu. See below for examples of the different kinds of predicates you can configure. The kinds of predicates that are available can vary depending on the type of the contextual actions; for example, the `extension` predicate can only be used as a predicate for the `asset` type. **Optional**.
+>	A predicate or an array of predicates that determine whether the editor should show this action in the contextual menu. See below for examples of the different kinds of predicates you can configure. The kinds of predicates that are available can vary depending on the `type` set for the contextual actions: for example, only the `asset` type can use the `extension` predicate. **Optional**.
 
 `when_multi_select`
 
->	Like `when`, this specifies a predicate (or an array of predicates) that is only checked when *more than one* asset or level item is selected at the time the right-click menu is opened. **Optional**.
+>	Like `when`, this specifies a predicate (or an array of predicates), but this predicate is only checked when the user has selected *more than one* asset or level item at the time the editor opens the right-click menu. **Optional**.
 
 `do`
 
->	An action or an array of actions that your plug-in should carry out when the user selects this item in the contextual menu. Each of these action will be passed the "context" on which it should operate. For assets, this is the path of the asset within the project -- for example, `content/models/character.unit`. For level objects, this is a level object descriptor that is used by the `editor_slave` Lua code to keep track of the objects in the level. For more information on actions, see ~{ Register an action }~. **Required**.
+>	An action or an array of actions that your plug-in should carry out when the user selects this item in the contextual menu. The editor passes each of these actions the context on which it should operate. For assets, this is the path of the asset within the project -- for example, `content/models/character.unit`. For level objects, this is a level object descriptor that the `editor_slave` Lua code uses to keep track of the objects in the level. For more information on actions, see ~{ Register an action }~. **Required**.
 
 ## Single-asset predicates
 
@@ -59,11 +59,11 @@ For contextual actions that work on single assets, you have two ways of setting 
 
 ### Asset extension
 
-You can make your predicate allow the contextual action based on the extension of the selected asset. You can use the `extension` parameter to specify a string or an array of strings. If the file extension of the selected asset matches any of these strings, your contextual action will be allowed.
+You can make your predicate allow the contextual action based on the extension of the selected asset. You can use the `extension` parameter to specify a string or an array of strings. If the file extension of the selected asset matches any of these strings, the editor will show your contextual action.
 
-For example, this allows the contextual action to be shown when the user right-clicks a *.png* or *.jpg* file in the **Asset Browser**:
+For example, this allows the editor to show the contextual action when the user right-clicks a *.png* or *.jpg* file in the **Asset Browser**:
 
-~~~sjson
+~~~{sjson}
 {
     label = "Open in Paint"
     type = "asset"
@@ -87,7 +87,7 @@ For example, this allows the contextual action to be shown when the user right-c
 
 You can also use a wildcard character `*` to accept any file extensions:
 
-~~~sjson
+~~~{sjson}
 {
     type = "asset"
     label = "Open In Sublime"
@@ -110,11 +110,11 @@ You can also use a wildcard character `*` to accept any file extensions:
 
 ### Action predicate
 
-If you need to do some more in-depth custom processing to determine whether or not the contextual action should be allowed, rather than just checking the file extension, you can set up an action for your predicate, using the `predicate` key.
+If you need to do some more in-depth custom processing to determine whether or not to allow the contextual action, rather than just checking the file extension, you can set up an action for your predicate, using the `predicate` key.
 
-For example, this runs an `isReadOnly()` function that is defined inside the `module-actions` JavaScript module. If the action returns `true`, your menu item will be shown in the contextual menu.
+For example, the following configuration runs an `isReadOnly()` function, which is defined inside the `module-actions` JavaScript module. If the action returns `true`, the contextual menu shows the menu item.
 
-~~~sjson
+~~~{sjson}
 // In tests-actions.plugin
 {
     label = "Checkout"
@@ -139,7 +139,7 @@ For example, this runs an `isReadOnly()` function that is defined inside the `mo
 }
 ~~~
 
-~~~js
+~~~{js}
 // In module-actions.js
 
 define(['common/file-system-utils', 'services/file-system-service', 'services/project-service'], function (fileUtils, fileSystemService, assetService, projectService) {
@@ -150,7 +150,7 @@ define(['common/file-system-utils', 'services/file-system-service', 'services/pr
         isReadOnly: function (assetRelativePath) {
 
             // The API for invoking predicate actions is Promise based (thus asynchronous). The final Promise must return something
-            // "truthy" in order for the contextual action to be shown in the contextual menu.
+            // "truthy" in order for the contextual action to appear in the contextual menu.
         	return projectService.relativePathToAbsolute(assetRelativePath).then(function (absPath) {
             	return fileSystemService.isReadOnly(absPath);
             });
@@ -161,11 +161,11 @@ define(['common/file-system-utils', 'services/file-system-service', 'services/pr
 
 ## Multi-asset predicates
 
-If you want your contextual action to be shown when multiple assets are selected, setting up the `when` predicate is the same as handling single assets. However, you also need to set up the `when_multi_select` predicate to determine whether or not your contextual action should be allowed for multiple assets.
+If you want your contextual action to appear when multiple assets are selected, setting up the `when` predicate is the same as handling single assets. However, you also need to set up the `when_multi_select` predicate to determine whether or not your contextual action should be allowed for multiple assets.
 
-In addition, when the user triggers the contextual action, all of the selected assets are passed to the action as an array instead of as a single string. If you use the same function to handle both single selections and multiple selections, you will need to handle the two cases appropriately, as in the example below.
+In addition, when the user triggers the contextual action, the editor passes all of the selected assets to the action as an array instead of as a single string. If you use the same function to handle both single selections and multiple selections, you will need to handle the two cases appropriately, as in the example below.
 
-~~~sjson
+~~~{sjson}
 // Example in tests-actions.plugin
 {
     type = "asset"
@@ -193,7 +193,7 @@ In addition, when the user triggers the contextual action, all of the selected a
 }
 ~~~
 
-~~~js
+~~~{js}
 // In module-actions.js
 define(['common/file-system-utils', 'services/file-system-service', 'services/project-service'], function (fileUtils, fileSystemService, assetService, projectService) {
 
@@ -219,7 +219,7 @@ Setting a predicate for level objects is very similar to assets. However, instea
 
 For example, this predicate only accepts level objects in the "unit" category.
 
-~~~sjson
+~~~{sjson}
 // From asset-browser.plugin
 contextual_actions = [
     {
@@ -264,7 +264,7 @@ You can also use a wildcard character `*` to match all categories.
 
 Note that like extensions, you can also specify multiple categories as an array:
 
-~~~sjson
+~~~{sjson}
 {
     type = "level_object"
     label = "Reset position"
@@ -287,7 +287,7 @@ Note that like extensions, you can also specify multiple categories as an array:
 
 You can also write a custom predicate the same way you can for an asset:
 
-~~~sjson
+~~~{sjson}
 // In test-actions.plugin
 {
     type = "level_object"
@@ -313,7 +313,7 @@ You can also write a custom predicate the same way you can for an asset:
 }
 ~~~
 
-~~~js
+~~~{js}
 // In module-actions.js
 isDoor: function (levelObjectTreeNode) {
     // If the unit resource that corresponds to the level object is a door, allow the user to close it.
@@ -328,7 +328,7 @@ If you want your contextual action to be shown when multiple level objects are s
 
 In addition, when the user triggers the contextual action, all of the selected objects are passed to the action as an array instead of as a single string. If you use the same function to handle both single selections and multiple selections, you will need to handle the two cases appropriately.
 
-~~~sjson
+~~~{sjson}
 {
     type = "level_object"
     label = "Duplicate Objects"
@@ -353,7 +353,7 @@ In addition, when the user triggers the contextual action, all of the selected o
 }
 ~~~
 
-~~~js
+~~~{js}
 // from module-actions.js
 duplicateLevelObjects: function (levelObjects) {
 	if (!_.isArray(levelObjects)) {

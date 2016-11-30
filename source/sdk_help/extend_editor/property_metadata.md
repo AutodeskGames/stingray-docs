@@ -28,7 +28,7 @@ Property       |Type     |Default   |Description
 
 ### Type file example
 
-```sjson
+~~~{sjson}
 {
     type = ":number"
     min = 0
@@ -43,11 +43,11 @@ Property       |Type     |Default   |Description
         step = 10
     }
 }
-```
+~~~
 
 ### Compact notation example
 
-```js
+~~~{js}
 var numberProperty = props.slider("Health", m.prop(50), {
 	order: 140,
     suffix: "HP",
@@ -56,7 +56,7 @@ var numberProperty = props.slider("Health", m.prop(50), {
     max: 100,
     increment: 10
 })
-```
+~~~
 
 --------------------------------------------------------------------------------
 
@@ -72,7 +72,7 @@ The compact property editor notation in the following examples uses a [Mithril](
 
 This is a quick example of a property model function:
 
-```js
+~~~{js}
 var _propertyData = "This is my data";
 function propertyModel (property) {
 	if (arguments.length > 1) {
@@ -80,11 +80,11 @@ function propertyModel (property) {
     }
     return _propertyData;
 }
-```
+~~~
 
 Most examples below use the following function which **generates** a property model on the fly:
 
-```js
+~~~{js}
 function genModel (value) {
 	return function (property, newValue) {
     	if (arguments.length > 1) {
@@ -93,7 +93,7 @@ function genModel (value) {
     	return value;
     };
 }
-```
+~~~
 
 ### Action
 
@@ -111,7 +111,7 @@ Property|Type    |Default |Description
 
 #### Type file
 
-```sjson
+~~~{sjson}
 {
     type = ":string"
     editor = {
@@ -126,15 +126,15 @@ Property|Type    |Default |Description
         }
     }
 }
-```
+~~~
 
 #### Javascript
 
-```js
+~~~{js}
 var actionProperty = props.action("Action", function () {
                         console.log('Action is triggered!');
                     }, {iconName: "fa-star-o"}),
-```
+~~~
 
 ### Boolean
 
@@ -143,7 +143,7 @@ A checkbox control.
 ![import menu](../images/property_boolean.png)
 
 #### Type file
-```sjson
+~~~{sjson}
 {
     type = ":boolean"
     editor = {
@@ -152,13 +152,13 @@ A checkbox control.
         isReadOnly = true
     }
 }
-```
+~~~
 
 #### Javascript
 
-```js
+~~~{js}
 var actionProperty = props.bool("Boolean", genModel(true));
-```
+~~~
 
 ### Choice
 
@@ -175,7 +175,7 @@ Property       |Type     |Default   |Description
 
 #### Type file (Enum)
 
-```sjson
+~~~{sjson}
 Enum = {
     type = ":enum"
     value = ":string"
@@ -197,11 +197,11 @@ Enum = {
         }
     }
 }
-```
+~~~
 
 #### Type file (String)
 
-```sjson
+~~~{sjson}
 // This effectively creates a string that will use a Combobox control to select between
 // a specific list of string values.
 ChoiceString = {
@@ -217,11 +217,11 @@ ChoiceString = {
         }
     }
 }
-```
+~~~
 
 #### Javascript
 
-```js
+~~~{js}
 var options {
     'Beer': 1,
     'Scotch': 2,
@@ -230,7 +230,7 @@ var options {
 };
 
 var choiceProperty = props.choice("Tough choice", genModel(2), options, {defaultValueName: "Choose a drink"});
-```
+~~~
 
 ### Color
 
@@ -244,15 +244,15 @@ Clicking the swatch brings up a color picker dialog:
 
 #### Type file (String)
 
-```sjson
+~~~{sjson}
 Color = {
     type = "core/types/color"
 }
-```
+~~~
 
 #### Color base type definition
 
-```sjson
+~~~{sjson}
 // see core/types/color.type
 export = "#color"
 types = {
@@ -285,17 +285,17 @@ types = {
         max = 1
     }
 }
-```
+~~~
 
 #### Javascript
 
-```js
+~~~{js}
 // Simple color:
 var colorProperty = props.color("Color", genModel([1,1,1]));
 
 // HDR color:
 var hdrColorProperty = props.hdrColor("Color", genModel([1,1,1]), genModel(1));
-```
+~~~
 
 ### Number
 
@@ -318,7 +318,7 @@ Property       |Type     |Default   |Description
 
 #### Type file
 
-```sjson
+~~~{sjson}
 Number = {
     type = ":number"
     editor = {
@@ -331,17 +331,17 @@ Number = {
         priority = 4
     }
 }
-```
+~~~
 
 #### Javascript
 
-```js
+~~~{js}
 var numberProperty = props.number("A Numeric Value", genModel(42.111), {
 	increment: 0.5,
     min: -9,
     max: 56.9
 });
-```
+~~~
 
 ### Slider
 
@@ -360,7 +360,7 @@ Property       |Type     |Default   |Description
 
 #### Type file
 
-```sjson
+~~~{sjson}
 Number = {
     type = ":number"
     editor = {
@@ -373,13 +373,13 @@ Number = {
         priority = 4
     }
 }
-```
+~~~
 
 #### Javascript
 
-```js
+~~~{js}
 var sliderProperty = props.slider("Percentable", genModel(50), {min: 0, max: 100, increment: 1});
-```
+~~~
 
 ### String
 
@@ -393,7 +393,7 @@ Property       |Type     |Default   |Description
 `lineRows`|`number` |`0`  |If `isMultiline` is `true` you can specify the number of lines of the textbox (between 1 and 8).
 
 #### Type file
-```sjson
+~~~{sjson}
 SingleLine = {
     type = ":string"
     editor = {
@@ -409,17 +409,17 @@ MultiLine = {
         lineRows = 4
     }
 }
-```
+~~~
 
 #### Javascript
 
-```js
+~~~{js}
 var stringProperty = props.color("Color", genModel([1,1,1]));
 
 var colorModel = genModel([1,1,1]);
 var intensityModel = genModel(1);
 var hdrColorProperty = props.hdrColor("Color", colorModel, intensityModel);
-```
+~~~
 
 ### Path
 
@@ -437,7 +437,7 @@ Property       |Type     |Default   |Description
 
 #### Type file
 
-```sjson
+~~~{sjson}
 FilePath = {
     type = ":string"
     editor = {
@@ -455,14 +455,14 @@ DirPath = {
         browseTitle = "Select a folder"
     }
 }
-```
+~~~
 
 #### Javascript
 
-```js
+~~~{js}
 var fileProperty = props.file("File", genModel('c:/Pogram Files (x86)/Git/bin/git.exe'), "Pick an exec", "*.exe"),
 var dirProperty = props.directory("Folder", genModel('c:/Pogram Files (x86)/Git'), "Pick a folder"),
-```
+~~~
 
 ### Range
 A control that contains two numeric min and max value fields.
@@ -471,18 +471,18 @@ A control that contains two numeric min and max value fields.
 ![import menu](../images/property_range2.png)
 
 #### Type file
-```sjson
+~~~{sjson}
 Range = {
     type = "core/types/range"
 }
-```
+~~~
 
 #### Javascript
 
-```js
+~~~{js}
 var range1= props.range("Range [-100, 100]", "mini", genModel(25), 'maxi', genModel(75), {min: -100, max: 100, increment: 0.5}),
 var range2 = props.range("Read Only", "MIN", genModel(25), 'Max', genModel(75), {min: -100, max: 100, increment: 0.5, isReadOnly: true})
-```
+~~~
 
 ### Vector
 
@@ -492,15 +492,15 @@ A control that can be used to display a list of 2, 3 or 4 components -- but not 
 
 #### Type file
 
-```sjson
+~~~{sjson}
 Position = {
     type = "core/types/vector3"
 }
-```
+~~~
 
 #### Vector3 base type definition
 
-```sjson
+~~~{sjson}
 // see core/types/vector3.type
 export = "#vector3"
 types = {
@@ -514,18 +514,18 @@ types = {
         }
     }
 }
-```
+~~~
 
 #### Javascript
 
-```js
+~~~{js}
 
 var vec2 = props.vector2("Vector2", genModel([34, 78]), {min: -100, max: 100, increment: 0.5});
 
 var vec3 = props.vector3("Vector3", genModel([1,2,3]));
 
 var vec4 = props.vector4("Vector4", genModel([34, 78, 67, -90]));
-```
+~~~
 
 ### Rotation
 
@@ -535,15 +535,15 @@ A control that that uses as its data model a vector made up of three radian valu
 
 #### Type file
 
-```sjson
+~~~{sjson}
 Rotation = {
     type = "core/types/rotation"
 }
-```
+~~~
 
 #### Rotation base type definition
 
-```sjson
+~~~{sjson}
 // see core/types/rotation.type
 export = "#rotation"
 types = {
@@ -557,10 +557,10 @@ types = {
         }
     }
 }
-```
+~~~
 
 #### Javascript
 
-```js
+~~~{js}
 var rotation = props.rotation("Rotation", genModel(0, -1.52, 3.14));
-```
+~~~

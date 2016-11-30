@@ -42,31 +42,31 @@ The built-in types are the only parts of the type system that are hard-coded. In
 
 In its bare form, a type declaration is an SJSON object with a `type` key that refers to another known type. The object can optionally contain additional type-specific properties that customize the type, like `min` and `max` in this example:
 
-```sjson
+~~~{sjson}
 {
     type = ":number"
     min = 0
     max = 1
 }
-```
+~~~
 
 Since it is quite common for type declarations to not require customizations, you can use the name of the type as shorthand for an uncustomized type, without needing to use the `type = ` key. The following two type declarations are equivalent:
 
-```sjson
+~~~{sjson}
 {
 	type = ":number"
 }
-```
+~~~
 
-```sjson
+~~~{sjson}
 ":number"
-```
+~~~
 
 ## Type file format
 
 Let's look at a simple example - a type file that declares a 3D vector type that others can use.
 
-```sjson
+~~~{sjson}
 // core/types/vector3.type
 export = {
     type = ":struct"
@@ -76,7 +76,7 @@ export = {
         z = ":number"
     }
 }
-```
+~~~
 
 Here, the file `core/types/vector3.type` exports a type declaration that describes a simple struct made up of floating point values.
 
@@ -84,7 +84,7 @@ Under the hood, the entire object that contains the `type = ":struct"` property 
 
 The `:struct` type customizer emits a new type that represents our vector. We make this type definition available for use by other type files by assigning it to the `export` key in the `.type` file. Other `.type` files can now refer to our vector type by specifying the resource name of our `.type` file in their own type declarations. For example:
 
-```sjson
+~~~{sjson}
 // core/types/pose.type
 export = {
     type = ":struct"
@@ -101,7 +101,7 @@ export = {
         }
     }
 }
-```
+~~~
 
 Note that user-defined types can be further customized by overriding their properties using a nested dictionary. In the above type example, the `position` field uses an instance of our custom `core/types/vector3` type without customization. But, for the `scale` field, it overrides the `default` property of the `x`, `y` and `z` fields.
 
@@ -111,7 +111,7 @@ A type file can contain multiple type declarations. Only one of the types -- the
 
 In this scenario, the private type declarations need to be put below the root-level `types` key in the type file. You can then refer to these types from elsewhere in the type file by prefixing the type key with a hash character:
 
-```sjson
+~~~{sjson}
 // core/types/direction.type
 export = "#direction"
 types = {
@@ -129,7 +129,7 @@ types = {
         max = 1
     }
 }
-```
+~~~
 
 Here we declare type that we'll use to represent a direction, whose components are kept within the `[-1, 1]` range. The direction type refers to the private `#component` type for each of its `x`, `y` and `z` fields. The `export` property at the root level references the `#direction` type, which exposes it as `core/types/direction` (the name of our type file) to the rest of the world. Other type files can now refer to the direction type directly, but they *cannot* refer to the component type directly. They may *use* the component type as a constituent that makes up a direction, but they cannot re-use the private type on its own.
 
@@ -137,7 +137,7 @@ Here we declare type that we'll use to represent a direction, whose components a
 
 The primary use for type files is to describe the structure and semantics of other SJSON-based file formats. A type file can be associated with a particular resource type, which tells the editing tools how to interpret the information inside these files. To associate a type file with a resource type, set the `extension` property in the type file to the name of the resource type your file describes (that is, the extension used by those resource files):
 
-```sjson
+~~~{sjson}
 // core/types/unit.type
 extension = "unit"
 export = {
@@ -146,7 +146,7 @@ export = {
         ...
     }
 }
-```
+~~~
 
 ## Type metadata
 
@@ -156,7 +156,7 @@ All types have an optional `metadata` block that you can use to store data about
 
 In addition to the type `metadata` block, types can set editor-only metadata in an `editor` block. This is read by the Stingray editor, and controls the way the type is presented inside property editors, etc. For example, here we present a `:number` property using the built-in `adskPropertySlider` control. The editor metadata can contain `control`-specific properties such as a `step` setting for the slider.
 
-```sjson
+~~~{sjson}
 {
     type = ":number"
     min = 0
@@ -170,13 +170,13 @@ In addition to the type `metadata` block, types can set editor-only metadata in 
         step = 10
     }
 }
-```
+~~~
 
 In the future it will be possible to add game-specific widgets to your project, but for now we only support a limited set of built-in widgets. For a comprehensive list of controls and their available properties, see the ~{ Built-in metadata properties }~.
 
 Note that you can customize the `editor` metadata properties, just like any other property on a type. Therefore, it is possible to specify sensible defaults in a shared type file and then override its label and description as needed:
 
-```sjson
+~~~{sjson}
 {
     type = ":struct"
     fields = {
@@ -189,7 +189,7 @@ Note that you can customize the `editor` metadata properties, just like any othe
         }
     }
 }
-```
+~~~
 
 ## Type file properties reference
 
@@ -204,7 +204,7 @@ Property    |Type                    |Default|Description
 
 ### Example
 
-```sjson
+~~~{sjson}
 // core/types/unit.type
 {
     export = "#unit"
@@ -236,7 +236,7 @@ Property    |Type                    |Default|Description
         }
     }
 }
-```
+~~~
 
 ---
 Related topics:

@@ -28,7 +28,7 @@ For an example that demonstrates this resource management pipeline -- how to com
 
 ## Building and rendering procedural meshes
 
-Your plug-in can use the `MeshObjectApi` and the `RenderApi` together to build new meshes at runtime, and to render them in the scene. The new objects are shaded with dynamic lighting, exactly as if you had placed the objects into the scene in the Stingray editor.
+Your plug-in can use the `MeshObjectApi` and the `RenderBufferApi` together to build new meshes at runtime, and to render them in the scene. The new objects are shaded with dynamic lighting, exactly as if you had placed the objects into the scene in the Stingray editor.
 
 For a working example that shows how a plug-in can create and render meshes on the fly, see the `render_plugin/plugin.cpp` file in the engine plug-in examples. This plug-in programmatically creates a mesh shaped like the word Stingray, and deforms the mesh each frame to simulate a cloth effect:
 
@@ -46,9 +46,9 @@ It's often a good idea for your plug-in to send back some feedback to the user, 
 
 You'll need to retrieve the `LoggingApi` from the engine, and call its `error()`, `info()` or `warning()` methods. When you call these methods, you need to provide a `system` parameter -- the name of your plug-in, as you want it to appear to the user in the log message. For example:
 
-```
+~~~
 _logging_api->warning("My Custom Plugin", "Something may have gone wrong!");
-```
+~~~
 
 ![Warning message in the log](../images/logging_message.png)
 

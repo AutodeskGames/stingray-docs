@@ -18,7 +18,7 @@ The first step is to create a `.type` file for the data you need to save in your
 
 In order to link the type you define to resource files that contain instances of the defined data structure, you must make sure that your type contains the `extension` field. For example, here is how the `scatter_brush.type` file links its type to the `.scatter_brush` extension:
 
-~~~sjson
+~~~{sjson}
 export = "#scatter_brush"
 extension = "scatter_brush"
 types = {
@@ -31,7 +31,7 @@ types = {
 
 If you want your new resource type to be editable in the **Property Editor**, you will also want to add an `editor` metadata block for the type exported by your `.type` file. In this block, add the `generic_selector` key. If the value of this key is `true`, the **Property Editor** will respond when the user selects a resource of your type in the **Asset Browser**, to show the data in that asset and allow the user to edit the data values.
 
-~~~sjson
+~~~{sjson}
 // from scatter_brush.type
 
 export = "#scatter_brush"
@@ -75,7 +75,7 @@ To use the generic creator, add the `generic_creator` key to your exported type'
 
 For example, the scatter brush uses this mechanism as follows:
 
-~~~sjson
+~~~{sjson}
 // from scatter_brush.type
 
 export = "#scatter_brush"
@@ -116,7 +116,7 @@ For more information on the `templates` extension, see ~{ Define templates for n
 
 For example, the `capture_frames` plugin uses the template system to create new `.capture_settings` assets:
 
-~~~sjson
+~~~{sjson}
 // From capture_frames.plugin
 templates = [{
 		type = "asset"
@@ -131,7 +131,7 @@ templates = [{
 
 If you use a template extension to create new assets, you should set the `generic_creator` key to `false` for your resource:
 
-~~~sjson
+~~~{sjson}
 // Exerpt from capture_settings.type:
  editor = {
             label = "Capture Settings"
@@ -152,7 +152,7 @@ To do this, your plug-in needs to listen for the `DataObjectsConsensusChanged` e
 
 For an example, see the `editor\plugins\blend_shapes\blend_shapes\preview-blend-shapes.js` file. Here, the script adds an event listener that handles changes to blend shapes, and responds by updating the blend weights shown in the **Asset Preview**:
 
-~~~js
+~~~{js}
 // From preview-blend-shapes.js
 
 setup: function (config, asset, viewportName) {
@@ -176,7 +176,7 @@ setup: function (config, asset, viewportName) {
 
 When the event is emitted, it comes with an accompanying change descriptor that contains some information about the kind of modification the user made in the **Property Editor**. This descriptor is an object that has the following properties:
 
-~~~js
+~~~{js}
 {
 	Type: string,                 // One of: ValueAdded, ValueRemoved, or ValueChanged
     PropertyPath: string,         // JSON property path that was modified in the custom asset
@@ -189,7 +189,7 @@ When the event is emitted, it comes with an accompanying change descriptor that 
 
 You can use the `asset-service` to query the JSON value of a custom asset that the editor has loaded in memory from the project:
 
-~~~js
+~~~{js}
 // From preview-blend-shapes.js
 
 // Get the managed (in memory representation) of a particular blend shape.
@@ -225,7 +225,7 @@ Things to note about the blend shapes plug-in:
 
 Note also that this editor extension is complemented by an engine extension, which handles blending between shapes at runtime.
 
-~~~js
+~~~{js}
 // From blend_shape.type
 
 export = "#blend_shapes"
@@ -266,7 +266,7 @@ Things to note about scatter brushes:
 
 Note also that the `levelEditingService` listens to changes on scatter brushes to reload the Lua scatter data model, as described under [Listening for changes to an asset] above:
 
-~~~js
+~~~{js}
 objectEditingService.on("DataObjectsConsensusChanged", function (args) {
     if (this.SelectedToolName !== "scatter" ||
         !this.SelectedScatterBrush) {
@@ -294,7 +294,7 @@ Things to note about capture settings:
 -	*editor\plugins\capture_frames\capture_frames_actions.js*: Handles the capture action, and communicates with viewports to generate the output files.
 -	*editor\plugins\capture_frames\capture_frames\capture_settings.type*: Note the use of an **Action** control to trigger the action defined in the plug-in descriptor. In addition, note the special `clean` and `init` callbacks that run initialization code when a *.capture_settings* resource is selected or deselected.
 
-~~~sjson
+~~~{sjson}
 // From capture_settings.type
 export = "#capture_settings"
 extension = "capture_settings"

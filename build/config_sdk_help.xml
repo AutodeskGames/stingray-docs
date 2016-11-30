@@ -11,7 +11,7 @@
 			<post_to_AKN>false</post_to_AKN>
 			<post_to_AKN_beta>false</post_to_AKN_beta>
 			<redirect_to_help include="*">true</redirect_to_help>
-			<athena include="*\sdk_help\*"></athena>
+			<athena include="*\sdk_help\*,*\custom_flow\*"></athena>
 			<job-specification>
 				<!-- this forces the title in the AKN Publisher to show up in English. -->
 				<parameter name="documenttitle">Stingray SDK Help</parameter>
