@@ -20,4 +20,4 @@ Although Flow already contains a variety of built-in nodes for carrying out comm
 
 This approach is useful if you have code that needs to be called in response to a particular event during the lifespan of a game level or a game unit, or if you want to set up your level designers with the ability to call your custom scripts at a time of their choosing.
 
-For details, see ~{ Creating custom flow nodes }~ and ~{ Communicating between Flow and Lua }~.
+For details, see ~{ Create custom Flow nodes in Lua }~ and ~{ Communicating between Flow and Lua }~.

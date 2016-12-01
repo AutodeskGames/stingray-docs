@@ -8,9 +8,4 @@ What's next? Well, should you choose to accept it, we recommend you select **Hel
 
 ![](gifs/getting_started_gif.gif)
 
-You can also browse more topics in this Getting started section, watch some video tutorials, or jump right in. The first thing you'll need to do is create a project to contain all the files you'll use to build a game. See ~{ Set up a project }~.
-
----
-Related topics:
-- ~{ Getting Started Videos }~
----
+You can also browse more topics in this Getting started section, watch some [video tutorials](../tutorial_link/tutorials_on_area.html), or jump right in. The first thing you'll need to do is create a project to contain all the files you'll use to build a game. See ~{ Set up a project }~.

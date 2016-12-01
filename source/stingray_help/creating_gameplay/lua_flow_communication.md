@@ -12,7 +12,7 @@ You can define custom Flow nodes for your project that call out to functions tha
 -	Your Lua function can accept any number of input values from Flow, which are exposed as connection slots in the custom node.
 -	Your Lua function can return values to the Flow graph, which are also exposed as output slots in your custom node. You can hook up these output values to other Flow nodes in order to use the information computed by the Lua function immediately.
 
-For details on setting this up, see ~{ Creating custom flow nodes }~.
+For details on setting this up, see ~{ Create custom Flow nodes in Lua }~.
 
 ## Calling global Lua functions from Flow
 

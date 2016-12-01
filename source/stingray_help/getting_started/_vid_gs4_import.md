@@ -6,6 +6,5 @@ In this video, learn how to import your own 3D assets.
 
 ---
 Related topics:
-- '~{ Video tutorial: Importing static or animated assets }~'
 - ~{ Importing Assets }~
 ---
