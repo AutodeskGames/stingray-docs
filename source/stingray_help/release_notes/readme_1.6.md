@@ -92,6 +92,8 @@ With Stingray 1.6, we aim to give you two things you need when learning anything
 
 Hobbyists, enthusiasts, and early adopters can now run Stingray using a Non-Commercial startup license. If the 30-day trial period didn't give you enough time, check out the [terms and conditions](http://www.autodesk.com/company/legal-notices-trademarks/terms-of-service-autodesk360-web-services/autodesk-web-services-entitlements/stingray-startup-license) to see if you're eligible for the Non-Commercial license. Updated steps to install using this license are included in the [Stingray Installation Supplement](http://help.autodesk.com/view/Stingray/ENU/?guid=GUID-2835E17D-888F-459E-A622-0CD8ED983A91) topic.
 
+> **Note:** The Non-Commercial license is not available in all countries.
+
 In addition, if you're tired of searching for and watching tutorial videos, pop open the Stingray **Help** menu and select the brand new top-secret Stingray **Hands-on Training Mission**. We've added 5 quick, *interactive* tutorial lessons that take you through the Stingray basics, and get you well on your way to creating your own project. (Pssst - it's not really a secret. Let us know what you think!) We added a note about this in the ~{ Getting Started }~ topic.
 
 <br>
@@ -332,10 +334,10 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 	Projects fail to run when you load one of the default Stingray template projects and deploy or connect to a 1GB iOS device, such as the iPad mini.
 
 	**Workaround:** In the project *boot.package* file, comment out `* = ["*"]`. Note that this fix works only for the basic and vehicle templates, and does not work for the character template.
-	
+
 - 	**GAME-19295 Projects downloaded from the Online Examples tab in the Project Manager prompt you to migrate the project, and fail to load a default level**
 
-	If you download an example project from the **Online Examples** tab in the **Project Manager** when starting Stingray, you'll be prompted to migrate the project even though these projects are already migrated to work in Stingray 1.6. You can simply click **Yes** to let Stingray migrate the project again. 
+	If you download an example project from the **Online Examples** tab in the **Project Manager** when starting Stingray, you'll be prompted to migrate the project even though these projects are already migrated to work in Stingray 1.6. You can simply click **Yes** to let Stingray migrate the project again.
 
 	Once the project loads, you'll need to manually open a level to work on. (Select **File > Open Level**.)
 
