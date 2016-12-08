@@ -10,7 +10,7 @@ When you have one or more light sources selected in the viewport or the ~{ Explo
 
 ## Story Editor
 
-You can use the **Story Editor** to create a story that animates the properties of your light. You can key different properties over time in order to simulate different effects, like gradual changes in brightness, etc. When you play your story at runtime by triggering it in your Flow or Lua gameplay code, you'll see the lighting in your level adjust itself accordingly.
+You can use the **Story Editor** to create a story that animates the properties of your light. You can key different properties over time in order to simulate different effects, like gradual changes in brightness. When you play your story at runtime by triggering it in your Flow or Lua gameplay code, you'll see the lighting in your level adjust itself accordingly.
 
 See the ~{ Story Editor }~.
 
@@ -36,7 +36,7 @@ See the functions for the `stingray.Light` object in the Lua API reference.
 
 Flow offers a set of built-in nodes for getting and setting the properties of a light source. You can retrieve the light from the unit instance that contains the light you want to change, using the name set for the unit in the Stingray Editor. This may be the "light helper" unit if you created the light in Stingray, or your custom unit if you imported the light into Stingray through an  *.fbx* file.
 
-See the nodes in the **Light** category in the Flow API reference; for example, **Light > Get Light Color** / **Light > Set Light Color**, etc.
+See the nodes in the **Light** category in the Flow API reference; for example, **Light > Get Light Color** / **Light > Set Light Color**.
 
 For example:
 

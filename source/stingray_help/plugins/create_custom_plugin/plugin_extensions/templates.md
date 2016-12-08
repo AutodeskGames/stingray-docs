@@ -6,7 +6,7 @@ When a user clicks the ![Create asset icon](../../../images/icon_createAsset.png
 
 This may be particularly useful if you are adding a new asset type to the editor with an *asset_type* extension, since it provides users an easy way to create new assets of that custom type. For an example of this usage, see the Scaleform Studio plug-in under *editor/plugins/scaleform_studio*.
 
-You might also find it useful to hook into the asset creation menu for other reasons. For example, your plug-in might give users the ability to create standard Stingray assets that are already set up in a certain way, like a set of particle effects preset to simulate common effects like fire, rain, smoke, etc. In this case, your plug-in could give the user the ability to create a new asset from each of these pre-configured templates.
+You might also find it useful to hook into the asset creation menu for other reasons. For example, your plug-in might give users the ability to create standard Stingray assets that are already set up in a certain way, like a set of particle effects preset to simulate common effects like fire, rain, and smoke. In this case, your plug-in could give the user the ability to create a new asset from each of these pre-configured templates.
 
 ## Configuration
 

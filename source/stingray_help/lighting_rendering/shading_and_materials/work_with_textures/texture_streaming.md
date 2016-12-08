@@ -20,7 +20,7 @@ This can occur for several different reasons, for example:
 
 -	If the game needs to stream too many high-resolution textures at the same time. You may be able to address this problem by raising the buffer the system uses to load new texture data from disk (see memory settings below). If this problem always occurs in the same places in a level, you can alternatively try to disable streaming for some of the textures in that location so that fewer textures will need to be streamed.
 
--	If you have other data that needs to be loaded into the game from disk at the same time, such as streaming audio or video, background loading of other resource packages, etc.
+-	If you have other data that needs to be loaded into the game from disk at the same time, such as streaming audio or video, or background loading of other resource packages.
 
 -	If your project data is read from a slow physical medium such as a DVD or a slow hard disk, or the data is streamed over a network connection.
 
@@ -63,7 +63,7 @@ By default, textures you import into your project are not streamed. You need to 
 
 1.	For each texture, use the **Resident mip levels** control to set the number of mip levels that should be pre-loaded into memory and always available. This value represents the "worst-case scenario" for rendering: even if the texture streaming system has no room to load in any more detailed mip levels dynamically, the engine can still use the largest *resident* mip level.
 
-	The value of this setting counts up from the lowest-resolution mip level to the highest.  So, a value of `1` means that only the lowest-resolution mip level is always available, `2` means that only the two lowest-resolution mip levels are always available, etc. Note that at least one mip level is always loaded persistently, so setting this value below `1` has no effect.
+	The value of this setting counts up from the lowest-resolution mip level to the highest.  So, a value of `1` means that only the lowest-resolution mip level is always available, `2` means that only the two lowest-resolution mip levels are always available, and so on. Note that at least one mip level is always loaded persistently, so setting this value below `1` has no effect.
 
 	Note that resident mip levels do not take memory from the shared pool maintained by the texture streaming system. Resident mip levels are loaded into memory at the time their resource packages are loaded, along with any non-streamable textures and other types of resources in the same package.
 
@@ -85,9 +85,9 @@ For a complete list of all texture resources managed by the streamer, along with
 
 You can control the texture streaming system in your game by calling Lua functions in the `stingray.Renderer` API. For example, you can:
 
--	enable or disable streaming, by calling `stingray.Renderer.set_automatic_streaming()`,
--	control the mip levels requested for your textures, by calling `stingray.Renderer.set_texture_requested_mip_level()` or `stingray.Renderer.request_textures_to_highest_mip_level()`,
--	empty the pool of all loaded texture data by calling `stingray.Renderer.flush_streamed_textures()`,
--	override the size of the shared memory pool by calling `stingray.Renderer.override_texture_pool_size()`, etc.
+-	enable or disable streaming, by calling `stingray.Renderer.set_automatic_streaming()`
+-	control the mip levels requested for your textures, by calling `stingray.Renderer.set_texture_requested_mip_level()` or `stingray.Renderer.request_textures_to_highest_mip_level()`
+-	empty the pool of all loaded texture data by calling `stingray.Renderer.flush_streamed_textures()`
+-	override the size of the shared memory pool by calling `stingray.Renderer.override_texture_pool_size()`
 
 See the `stingray.Renderer` reference for details.

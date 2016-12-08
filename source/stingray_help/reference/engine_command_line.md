@@ -159,7 +159,7 @@ On PC where there can be many engine instances running simultaneously, the conso
 
 #### --wait-for-debugger
 
-Tells the engine to wait for a connection to the editor's lua debugger and after receiving all debugging information (breakpoints etc). This ensures that the debugger can fully initialized before running, this solution is more robust than --wait.
+Tells the engine to wait for a connection to the editor's Lua debugger and after receiving all debugging information (such as breakpoints). This ensures that the debugger can fully initialized before running, this solution is more robust than --wait.
 
 #### --wait *SECONDS*
 
@@ -378,4 +378,3 @@ Specifies that the engine main window should be created as a child window to the
 #### --no-raw-input
 
 Disables the use of raw WM_INPUT messages in the engine.
-

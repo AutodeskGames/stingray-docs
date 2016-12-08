@@ -4,11 +4,11 @@
 
 The editor's plug-in system defines a number of different kinds of extensions that you can use in your plug-in:
 
--	`menus` add new items to the main menus of the Stingray editor, like **File**, **Edit**, **Window**, etc. See ~{ Create a new menu item }~.
+-	`menus` add new items to the main menus of the Stingray editor, like **File**, **Edit**, **Window**. See ~{ Create a new menu item }~.
 
 -	`actions` define reusable commands or script blocks that you can refer to from other extensions in your plug-in. See ~{ Register an action }~.
 
--	`resources` let your plug-in add new content to the current project -- units, entities, materials, etc. See ~{ Make new resources available to the project }~.
+-	`resources` let your plug-in add new content to the current project -- like units, entities, materials. See ~{ Make new resources available to the project }~.
 
 -	`services` add new JavaScript worker services to the editor. Your plug-in (or other plug-ins) can require and use these services in exactly the same way as the standard Stingray editor services. See ~{ Register a custom service }~.
 

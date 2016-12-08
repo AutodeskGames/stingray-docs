@@ -12,7 +12,7 @@ When you make changes to your plug-in, you don't need to shut down and restart y
 
 ## Debugging and using the Developer Tools
 
-The Stingray editor's front-end HTML5 environment runs in the Chromium Embedded Framework (CEF). This means that you have access to the Chrome Developer Tools panel, which offers many essential development resources. You can use the DevTools to place breakpoints and debug your JavaScript code, explore the HTML of your panels, run JavaScript commands in a console, etc.
+The Stingray editor's front-end HTML5 environment runs in the Chromium Embedded Framework (CEF). This means that you have access to the Chrome Developer Tools panel, which offers many essential development resources. You can use the DevTools to place breakpoints and debug your JavaScript code, explore the HTML of your panels, and run JavaScript commands in a console.
 
 ![Chrome DevTools](../../images/chrome_devtools.png)
 

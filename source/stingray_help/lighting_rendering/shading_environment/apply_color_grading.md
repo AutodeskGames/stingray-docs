@@ -1,6 +1,6 @@
 # How to apply color grading to a level
 
-Color grading in Stingray is a post-processing operation that adjusts the colors of the image being rendered in the viewport each frame to fit into an output color space that you provide. You can use color grading to apply adjustments to color balance, brightness and contrast, hue, saturation, etc. across your whole level.
+Color grading in Stingray is a post-processing operation that adjusts the colors of the image being rendered in the viewport each frame to fit into an output color space that you provide. You can use color grading to apply adjustments to color balance, brightness and contrast, hue, and saturation across your whole level.
 
 You set the output color space as a texture resource in the shading environment. The steps on this page show how to produce a texture resource that defines an output color space. You'll start from a base "identity" color space that comes with Stingray, adjust its colors in Photoshop, and re-import the adjusted color space into a new texture resource.
 

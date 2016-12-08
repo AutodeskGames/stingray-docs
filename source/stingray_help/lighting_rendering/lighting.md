@@ -22,7 +22,7 @@ It's important to note that these lighting techniques are complementary to each 
 
 The game engine's rendering system sums up in real time all the *direct* illumination in the scene: all the light that bounces once off a surface and then straight to the camera. This direct illumination comes from light sources that you place in your level.
 
-All levels are set up by default with a directional light that simulates a distant light source, typically the sun or moon. You can also create other kinds of light sources and place them in your level. Usually these light sources simulate the light emitted by objects in the scene like lamps, spotlights, candles, torches, etc. See ~{ Light sources }~.
+All levels are set up by default with a directional light that simulates a distant light source, typically the sun or moon. You can also create other kinds of light sources and place them in your level. Usually these light sources simulate the light emitted by objects in the scene like lamps, spotlights, candles, and torches. See ~{ Light sources }~.
 
 Because direct lighting is calculated and rendered in real time during each frame of the game, it generates shadows that accurately reflect the placement and orientation of the objects and lights in your scene. For example, as this character moves around, it casts moving shadows on the ground and on nearby objects:
 
