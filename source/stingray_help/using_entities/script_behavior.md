@@ -1,16 +1,66 @@
-# Script an entity's behavior
+# Set up an entity's behavior using Flow or Lua
 
-Often, you need entities of a given type to behave in a certain way. For example, you might want all doors to be closed when spawned, but open when a player-controlled unit comes close enough, or in response to some other event.
+Often, you'll want all entities of a given type to behave the same way when you run your project -- that is, to respond with the same actions when certain events and conditions occur. For example, when a player-controlled unit comes close enough you might want doors to open up, lights to turn on, or enemies to become hostile.
 
-This is made easier by *script* components, which associate your entities with Lua modules in your project. When certain events occur in the lifetime of the entity, functions in your Lua module are automatically invoked to handle the events for the associated entities.
+This is made easier by using *script* components and *Flow* components, which associate your entities with Lua modules and Flow graphs in your project. Those Lua modules and Flow graphs can take care of responding to the events that happen over the lifetime of the entity, and carrying out the appropriate response for the entity to take.
 
-Script components are useful because they help you keep your entity's behavior relatively self-contained. This promotes re-usability and modularity. For example, instead of having to include a routine in your game's main update loop that checks the state of each door, you can encapsulate all of the door's dynamic runtime behavior inside a script component that gets invoked automatically. This keeps your main gameplay less cluttered with controllers for specific types of game objects, and allows you to more easily share behaviors between different entities (and across multiple projects).
+These components are useful because they help you keep your entity's behavior relatively self-contained. This makes your game easier to manage, and makes it easier to re-use your behaviors. For example, instead of having to include a Lua routine in your game's main update loop that checks the state of each door in the level, you can encapsulate all the dynamic runtime behavior for your doors inside a script component that gets invoked automatically. This keeps your main gameplay scripts and Flow graphs less cluttered with logic to handle for specific types of game objects, and allows you to more easily share behaviors between different entities (and across multiple projects).
 
-## Step 1. Write a behavior module in Lua
+## Set up a behavior in Flow
+
+Flow is a great choice for setting up an entity's behavior because it's a visual language that some people find easier to get started with, and faster for setting up prototypes.
+
+### Step 1. Create the Flow graph
+
+You'll need to create your entity's Flow graph in the External Flow Editor.
+
+1.	Launch the editor by choosing **Window > External Flow Editor** from the main menu.
+
+2.	Once you have the Flow editor open, start a new graph by choosing **File > New**.
+
+3.	Set up your new graph with the behavior you want for your entity.
+
+	The external Flow editor works exactly the same way as the Unit Flow editor, with the same controls for adding and removing nodes. In your graphs, you can use the same set of nodes that are available in Level Flow and Unit Flow. In addition, there are a few nodes that you'll find particularly useful for dealing with your entities. See the example below.
+
+4.	Save the graph by choosing **File > Save**. This will create a new *.flow_editor* resource in your project.
+
+Here's an example of a Flow graph for an entity that represents a door. This door uses a custom data component to keep track of whether or not it is locked. At each frame, if the door is unlocked and the camera is close enough, the door will automatically open by playing an animation on the unit owned by the entity.
+
+![Sample entity Flow graph](../images/entity_flow_example.png)
+
+This graph demonstrates a few useful things:
+
+-	how to use **Event > Entity Spawned** to trigger some logic in respons to the entity that owns this graph being spawned.
+
+-	how to use the **Set Component Property** and **Get Component Property** nodes to set and get data in a data component: in this case, a boolean value that indicates whether or not the door is open.
+
+-	how to use the **Entity > Get Entity World Position** node to retrieve the position of the entity from its transform component (if any).
+
+-	how to refer to the entity instance that owns this graph by using the special **My Entity** or **(me)** value in any node's entity variable.
+
+-	how to use the **Entity > Get Entity Unit** node to get the unit instance that has been assigned to the entity's unit component (if any).
+
+-	how the entity's Flow can trigger some logic in response to getting an **Event > External In Event**. You could trigger this event from a Level Flow graph, or by calling the `stingray.FlowComponent.trigger_flow_event()` Lua function. For more information on how to access and use that `FlowComponent` manager in your project's Lua code, see also ~{ Interact with entities during gameplay }~.
+
+### Step 2. Set up the Flow component
+
+To set up the Flow component for an entity in the editor:
+
+1.	Select your entity in the ~{ Asset Browser }~ or the ~{ Explorer panel }~.
+
+2.	In the ~{ Property Editor }~, add a new **Flow** component to the entity.
+
+3.	Set the **Flow** property of the new Flow component to point to the resource where you saved your Flow graph.
+
+## Set up a behavior in Lua
+
+Lua is a great choice for setting up an entity's behavior because you have access to more API functions than are exposed in Flow.
+
+### Step 1. Write a behavior module in Lua
 
 Most of the work involved in setting up a script behavior is to create your Lua module.
 
-### Get started
+#### Get started
 
 The best way to get started writing a behavior module for your own entities is to begin with the template that you'll find under *core/components/templates/script_component.template*. It gives you a good, mostly functional base to build your own behaviors on, and takes care of some of the trickier things for you.
 
@@ -20,7 +70,7 @@ The best way to get started writing a behavior module for your own entities is t
 
 3.	Finish implementing the functions in the template, or change them to suit your needs.
 
-### Requirements and base interface
+#### Requirements and base interface
 
 -	The only absolute requirement is that your module must return an object that contains a field called `component`. In turn, this `component` field must refer to an object that contains a `name` field.
 
@@ -36,21 +86,21 @@ For example, if you look at the template file, you'll see that the pre-written f
 
 Note that you don't have to `require` your script anywhere. The script component will automatically take care of loading it in to the Lua environment in the game.
 
-### More examples
+#### More examples
 
 You can also see some other working examples under *core/entities/vector_fields*. These script components set up wind effects that can blow particles around in the level. For more background on vector fields and how these script components are used, see also ~{ Set up vector field (wind) effects }~.
 
-## Step 2. Set up the script component
+### Step 2. Set up the script component
 
 To set up the script component for an entity in the editor:
 
 1.	Select your entity in the ~{ Asset Browser }~ or the ~{ Explorer panel }~.
 
-2.	In the ~{ Property Editor }~, add a new script component to the entity.
+2.	In the ~{ Property Editor }~, add a new **Script** component to the entity.
 
 3.	Set the **Script** property of the new script component to point to your Lua module.
 
-## Optional. Interact with the script component from Lua
+### Optional. Interact with the script behavior from Lua
 
 In your project's Lua code, you don't have direct access to the component object that you define in your module. However, you can interact with the component through the `stingray.ScriptComponent` manager API, which you retrieve by calling `stingray.EntityManager.script_component()`.
 

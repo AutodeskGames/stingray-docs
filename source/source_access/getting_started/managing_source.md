@@ -44,7 +44,7 @@ All Stingray repositories are already set up with the following branches:
 
 -   `release/1.X.0`: These branches come and go as we prepare for each successive public release. While a release branch is open, it typically receives only bug fixes for features that are already in. Newer features typically go into develop instead, so that they wind up in the succeeding public release.
 
-For the most part, the contents of this documentation on the web reflect the current state of the `master` branch.
+For the most part, the contents of this documentation on the web reflect the current state of the `master` branch. If you do choose to work with the `develop` branch, keep an eye on the `readme.md` file at the root of the repository for any updates to the required software and build processes.
 
 ## Forking the repositories
 

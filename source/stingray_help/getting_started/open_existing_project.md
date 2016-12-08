@@ -26,7 +26,7 @@ Sometimes, however, you may want to open an existing project that somebody else 
 	<br>
 	Stingray migrates the entity and level files, and opens your project in the Editor. After migration, your project can no longer be opened with older versions of Stingray.
 
-		> **Note:** During migration a .backup file, containing the file's original contents, is created for every migrated file.
+		> **Note:** During migration Stingray creates a .backup file containing the original contents of each migrated file. You can remove these files after successfully migrating your project.
 
 		>	**Note:** [![NEW](../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html) A .stingray_project file and a project.settings file are created for each project that you migrate from earlier versions of Stingray.
 

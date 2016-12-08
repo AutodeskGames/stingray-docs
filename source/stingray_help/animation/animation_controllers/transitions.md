@@ -1,5 +1,7 @@
 # Animation controller transitions
 
+![UPDATED](../../images/updated.png)
+
 A transition controls how the animation controller moves from one state to another: when the transition happens and how it is blended.
 
 <dd>
@@ -64,7 +66,7 @@ Just as with wait transitions, if a different transition happens before the beat
 
 This is useful to synchronize animations that are the inverse of each other, for example *climb up* and *climb down*.
 </dd>
-
+</dl>
 <dt>Beat</dt>
 
 <dd>If specified, the transition happens if the next beat in the animation is the specified beat. (Or the closest beat, if beat-closest is used.)
@@ -76,8 +78,6 @@ This can be used to take different transitions based on the same anim event.
 For example, a run state could transition either to a left jump or right jump depending on which foot is forward.
 
 </dd>
-
-</dl>
 </dd>
 
 ##Group transitions
@@ -91,3 +91,11 @@ To create a group transition, drag a transition between two group states.
 To convert the group transition to a simple transition, right-click and select **Convert to Simple Transition**.
 
 The editor automatically tries to match up nested states with the same names in the *From* state and the *To* state. If you have created more nested states since you created the transition, click **Update Auto-Mapping**.
+
+## Conditional transitions
+
+[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
+
+Conditional transitions let you control the flow of transitions in the state machine at runtime with an expression evaluation.  Use a TransitionSwitch node to transit from one state to another at runtime based on the evaluation of the TransitionSwitch node expression. 
+
+For example, you can use conditional transitions if you have a character having different movements depending on a layer seed set at runtime using C or LUA. See also ~{ Animation controller states }~.

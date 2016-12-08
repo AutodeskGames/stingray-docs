@@ -6,7 +6,7 @@ This topic provides an overview of the ways you can interact with entities in yo
 
 -	 You can set some kinds of component data values using Story. When you add an entity to an entity track in the Story Editor, you can right-click the track in order to add a new animation track for any numeric or boolean data value maintained by the entity's components. See also ~{ Story Editor }~.
 
--	 The entity system is not yet exposed to Flow, though you can expose any functions you need by defining custom Flow nodes (see ~{ Creating custom flow nodes }~).
+-	 The entity system is not yet exposed to Flow, though you can expose any functions you need by defining custom Flow nodes (see ~{ Create custom Flow nodes in Lua }~).
 
 ## Spawn and destroy an entity
 

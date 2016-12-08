@@ -49,7 +49,7 @@ We've added some new components for the entity system:
 
 -	The unit component, which associates a unit resource with the entity. Whenever the entity is spawned and unspawned, an instance of that unit is spawned and unspawned too.
 
--	The script component, which defines behaviors for their associated entities: actions that will be carried out when the entity is spawned and unspawned, and every frame during the main update loop. See ~{ Script an entity's behavior }~.
+-	The script component, which defines behaviors for their associated entities: actions that will be carried out when the entity is spawned and unspawned, and every frame during the main update loop. See ~{ Set up an entity's behavior using Flow or Lua }~.
 
 -	Vector field components, which simulate effects like wind in the level. See ~{ Set up vector field (wind) effects }~.
 
@@ -69,9 +69,7 @@ We've added some new components for the entity system:
 
 ![](../images/scatter_tool_scene.png)
 
-The new ~{ Scatter Tool }~ plug-in lets you scatter objects in the scene. Quickly build out your level by distributing lightweight units like grass, clumps of flowers, posters, or gas cans by painting with scatter brushes. Modify spawn behavior using the **Scatter Pools Settings**, which apply the selected settings to all of the scatter data in your project at once.
-
-Note: The **Scatter Tool** must be installed manually using the **Plugin Manager**.
+The new **Scatter Tool** plug-in lets you scatter objects in the scene. Quickly build out your level by distributing lightweight units like grass, clumps of flowers, posters, or gas cans by painting with scatter brushes. Modify spawn behavior using the **Scatter Pools Settings**, which apply the selected settings to all of the scatter data in your project at once. See ~{ Paint with the Scatter Tool }~.
 
 ### GearVR and Mini Renderer
 
@@ -129,15 +127,15 @@ To do this, use the new `stingray.Application.resource_package_from_url()` funct
 
 Custom plug-ins can now include:
 
--	*event* extensions, which respond to named events in the editor. See ~{ Respond to an editor event }~ and ~{ Emit and handle editor events }~.
--	*migration* extensions, which can upgrade project data from one version of your plug-in to another. See ~{ Migrate an older project }~.
--	*preview* extensions, which control the way the ~{ Asset Preview }~ behaves when a given type of resource is selected in the ~{ Asset Browser }~. See ~{ Define previews for custom assets }~.
--	*service* extensions, which add new custom services that your plug-in (or other plug-ins) can access just like the standard services built in to Stingray. See ~{ Register a custom service }~.
+-	*event* extensions, which respond to named events in the editor. See [Respond to an editor event](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_events_html) and [Emit and handle editor events](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_services_html).
+-	*migration* extensions, which can upgrade project data from one version of your plug-in to another. See [Migrate an older project](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_migrations_html).
+-	*preview* extensions, which control the way the ~{ Asset Preview }~ behaves when a given type of resource is selected in the ~{ Asset Browser }~. See [Define previews for custom assets](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_previews_html).
+-	*service* extensions, which add new custom services that your plug-in (or other plug-ins) can access just like the standard services built in to Stingray. See [Register a custom service](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_services_html).
 
 Plus:
 
--	action extensions can now trigger a named event, which you can respond to elsewhere in your plug-in. See ~{ Register an action }~.
--	menu extensions can now add separators and sub-menus. See ~{ Create a new menu item }~.
+-	action extensions can now trigger a named event, which you can respond to elsewhere in your plug-in. See [Register an action](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_actions_html).
+-	menu extensions can now add separators and sub-menus. See [Create a new menu item](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_menus_html).
 
 [Return to top](#top)
 

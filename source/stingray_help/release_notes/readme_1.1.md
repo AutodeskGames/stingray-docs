@@ -109,7 +109,6 @@ An updated version of the Character template project is available in the ~{ Proj
 ![](../images/wn_charTemplate.png)
 
 - ~{ Template projects }~
-- ~{ Video introduction to Character template project }~
 
 ## Support for additional Android devices
 

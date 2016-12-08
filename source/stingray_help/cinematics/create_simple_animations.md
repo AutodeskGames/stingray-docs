@@ -16,7 +16,7 @@
 
 4. Once you've set a few keyframes, use the playback controls in the **Story Editor** to watch your animation playback in the **Level Viewport**.
 
-5. Edit keys as needed, using either the curve editing view, or the key editing view. (Click ![](../images/icon_storyEd_wrench.png) to switch between view panels.)
+5. Edit keys as needed, using either the curve editing view, or the key editing view. (Click ![](../images/icon_storyEd_wrench.png) or ![](../images/icon_storyEd_keyEditor.png) to switch between view panels.)
 
 	> **Note:** When animating a property of a unit or entity, editing values in the **Property Editor** has no effect on keys in the **Story Editor**. When animating a unit transform (position, rotation, scale), you can use the **Property Editor** to edit animation values.
 

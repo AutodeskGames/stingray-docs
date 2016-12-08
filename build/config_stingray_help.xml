@@ -13,10 +13,15 @@
 			<post_to_AKN_beta>false</post_to_AKN_beta>
 			<redirect_to_help include="*">true</redirect_to_help>
 			<athena include="*\stingray_help\*"></athena>
+			<job-specification>
+				<!-- this forces the title in the AKN Publisher to show up in English. -->
+				<parameter name="documenttitle">Stingray Help</parameter>
+			</job-specification>
 		</AKN>
 		<language>%SR_DOC_LANG%</language>
 		<project_title>Stingray Help</project_title>
 		<project_title lang="ko">Stingray 도움말</project_title>
+		<project_title lang="ja">Stingray ヘルプ</project_title>
 		<export_for_localization>%SR_DOC_EXPORT_DIR%</export_for_localization>
 		<import_from_localization>%SR_DOC_IMPORT_DIR%</import_from_localization>
 	</project>
@@ -41,6 +46,11 @@
 		<!-- These no longer seem to work? -->
 		<meta name="topic-subtype" content="Lua reference" include="*\lua_ref\*.html"></meta>
 		<meta name="topic-subtype" content="Flow reference" include="*\flow_ref\*.html"></meta>
+		<!-- repair targets for the in-product getting started dialog -->
+		<meta name="topicid" content="__stingray_help_video_tutorials_vid_gettingStarted_vid_gs1_setupproj_html" include="*\_vid_gs1_setupproj.html"></meta>
+		<meta name="topicid" content="__stingray_help_video_tutorials_vid_gettingStarted_vid_gs2_UI_nav_html" include="*\_vid_gs2_UI_nav.html"></meta>
+		<meta name="topicid" content="__stingray_help_video_tutorials_vid_gettingStarted_vid_gs3_manip_html" include="*\_vid_gs3_manip.html"></meta>
+		<meta name="topicid" content="__stingray_help_video_tutorials_vid_gettingStarted_vid_gs4_import_html" include="*\_vid_gs4_import.html"></meta>
 		<!-- context IDs for CSH -->
 		<contextId include="*\level_viewport.html" id="tools_level_viewport"></contextId>
 		<contextId include="*\level_flow_editor.html" id="tools_level_flow_editor"></contextId>
@@ -62,8 +72,21 @@
 		<contextId include="*\status_bar.html" id="tools_status_bar"></contextId>
 		<contextId include="*\story_editor.html" id="tools_story_editor"></contextId>
 		<contextId include="*\asset_preview.html" id="tools_asset_preview"></contextId>
+		<contextId include="*\unit_editor.html" id="tools_unit_editor"></contextId>
+		<contextId include="*\project_manager.html" id="tools_project_manager"></contextId>
 		<contextId include="*\system_requirements.html" id="system_requirements"></contextId>
 		<contextId include="*\object_lifetimes.html" id="lua_userdata_binding"></contextId>
+		<!-- context IDs used by directed learning. -->
+		<contextId include="*\snap_objects.html" id="snap_objects"></contextId>
+		<contextId include="*\about_units_and_entities.html" id="units_and_entities"></contextId>
+		<contextId include="*\physics.html" id="physics_concepts"></contextId>
+		<contextId include="*\work_with_textures.html" id="work_with_textures"></contextId>
+		<contextId include="*\optimize_memory.html" id="optimize"></contextId>
+		<contextId include="*\platform_support.html" id="platform_support"></contextId>
+		<contextId include="*\engine_settings.html" id="engine_settings"></contextId>
+		<contextId include="*\animation_controllers.html" id="animation_controllers"></contextId>
+		<contextId include="*\tutorial_next_steps.html" id="tutorial_next_steps"></contextId>
+		<contextId include="*\content_lifecycle.html" id="tutorial_compile"></contextId>
 		<replace pattern="BEGIN_STANDALONE.*END_STANDALONE" replacement="" include="*.html"></replace>
 		<insert_family_links include="\stingray_help\*,\changelog\*"></insert_family_links>
 		<validate_todos>true</validate_todos>
@@ -98,8 +121,20 @@
 		</merge_toc_config>
 	</merge>
 
+	<merge id="tutorial_link">
+		<apply_template>false</apply_template>
+		<apply_cloudhelp>false</apply_cloudhelp>
+		<search_prefix></search_prefix>
+		<merge_search>false</merge_search>
+		<source>..\source\tutorial_link\*.html</source>
+		<merge_toc_config>
+			<source type="file">tutorials_on_area.html</source>
+			<parent_index>2</parent_index>
+		</merge_toc_config>
+	</merge>
+
 	<doxygen id="flow_ref">
-		<source>..\stingray\docs\output\flow_HTML</source>
+		<source>%SR_ENGINE_DIR%\docs\output\flow_HTML</source>
 		<link>true</link>
 		<link_xpath>//strong</link_xpath>
 		<language>lua</language>
@@ -108,12 +143,13 @@
 		<merge_toc_config>
 			<first_entry_title>Flow node reference</first_entry_title>
 			<first_entry_title lang="ko">흐름 노드 참조</first_entry_title>
+			<first_entry_title lang="ja">フロー ノード リファレンス</first_entry_title>
 			<promote_first_topic>false</promote_first_topic>
 		</merge_toc_config>
 	</doxygen>
 
 	<doxygen id="shaders_ref">
-		<source>..\stingray\docs\output\shaders_HTML</source>
+		<source>%SR_ENGINE_DIR%\docs\output\shaders_HTML</source>
 		<link>true</link>
 		<link_xpath>//strong</link_xpath>
 		<language>lua</language>
@@ -122,13 +158,14 @@
 		<merge_toc_config>
 			<first_entry_title>Shader node reference</first_entry_title>
 			<first_entry_title lang="ko">Stingray 셰이더 노드 참조</first_entry_title>
+			<first_entry_title lang="ja">シェーダ ノード リファレンス</first_entry_title>
 			<parent_filename>\lighting_rendering.html</parent_filename>
 			<promote_first_topic>false</promote_first_topic>
 		</merge_toc_config>
 	</doxygen>
 
 	<doxygen id="lua_ref">
-		<source>..\stingray\docs\output\lua_HTML</source>
+		<source>%SR_ENGINE_DIR%\docs\output\lua_HTML</source>
 		<link>true</link>
 		<language>lua</language>
 		<search_prefix></search_prefix>
@@ -136,6 +173,7 @@
 		<merge_toc_config>
 			<first_entry_title>Lua API reference</first_entry_title>
 			<first_entry_title lang="ko">Lua API 참조</first_entry_title>
+			<first_entry_title lang="ja">Lua API リファレンス</first_entry_title>
 			<promote_first_topic>false</promote_first_topic>
 		</merge_toc_config>
 	</doxygen>

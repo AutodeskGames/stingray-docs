@@ -2605,7 +2605,7 @@
             "connectionType":["scalar"],
             "slot_type":"in"
           }],
-        "Options":["Normals In","Material Type","Face Culling","Blend Mode","Instancing"],
+        "Options":["Normals In","Material Type","Face Culling","Blend Mode","Instancing","Shadows Casting"],
         "Outputs":[]
       }
     },

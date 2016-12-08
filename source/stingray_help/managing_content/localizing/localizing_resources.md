@@ -32,7 +32,7 @@ This type of override is extremely flexible and powerful, since it gives the scr
 
 The suffix override system creates automatic overrides based on resource suffixes. It is not as flexible as the scripted system, but it is more convenient, and since it is a static system it is understood by the bundling system.
 
-Suffix overrides are specified in the `settings.ini` file. A sample might look like this:
+Suffix overrides are specified in the *.stingray_project* file. A sample might look like this:
 
 ```
 data_compiler = {

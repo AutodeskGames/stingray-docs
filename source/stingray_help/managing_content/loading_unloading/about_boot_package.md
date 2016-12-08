@@ -26,7 +26,7 @@ It is generally recommended that the boot package also contain:
 
 -	Any *.script_flow_nodes* resources that define custom Flow nodes in your project, along with any Lua scripts that contain the callback functions those nodes rely on.
 
-	Loading these files in your boot package avoids the possibility of a flow graph for a character or a level accidentally trying to use a custom node that is not defined, or trying to invoke a Lua function that does not exist in the current Lua environment. See also ~{ Creating custom flow nodes }~.
+	Loading these files in your boot package avoids the possibility of a flow graph for a character or a level accidentally trying to use a custom node that is not defined, or trying to invoke a Lua function that does not exist in the current Lua environment. See also ~{ Create custom Flow nodes in Lua }~.
 
 -	All the other *.package* resources in your project.
 

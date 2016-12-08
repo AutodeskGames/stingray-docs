@@ -29,9 +29,9 @@ The debug name component is very similar to the data component, except that:
 
 This component is not exposed in the Stingray Editor, but you can set and get the name values from Lua using the `stingray.DebugNameComponent` manager, much like a data component.
 
-## Script component
+## Script and Flow components
 
-The script component offers a way to associate an entity with a *behavior*, which you implement in a Lua script module. See ~{ Script an entity's behavior }~.
+The script and flow components offers a way to associate an entity with a *behavior*, which you implement in a Lua script module or a Flow graph. See ~{ Set up an entity's behavior using Flow or Lua }~.
 
 ## Tag component
 

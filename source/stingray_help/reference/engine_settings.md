@@ -1,5 +1,7 @@
 # Stingray engine `settings.ini` file reference
 
+![UPDATED](../images/updated.png)
+
 <a name="top"></a>
 
 Every Stingray project needs to have a *settings.ini* file at the root of the project folder. This file contains a variety of settings that the engine uses to initialize its subsystems. It expresses the data using the SJSON format. See ~{ About the SJSON data format }~.
@@ -27,6 +29,7 @@ This topic describes all the settings that you can configure in this file in ord
 - [Log consoles](#log-consoles)
 - [Crash report](#crash-report)
 - [Steam settings](#steam-settings)
+-	[XB1 settings](#xb1-settings)
 
 ## Generic settings
 
@@ -180,6 +183,24 @@ render_settings = {
 	//lens_quality_enabled = true
 }
 ~~~
+
+`vr_supported = true`
+
+> Sets the renderer to support VR. This setting is only available in the VR templates.
+
+`vr_hmd_resolution = [2160, 1200]`
+
+> Specifies the Head Mount Display (HMD) resolution. This setting is only available in the VR templates.
+
+`vr_target_scale = 1.4`
+
+> Scale of the VR render target for super sampling. Reduces aliasing artifacts. This setting is only available in the VR templates.
+
+`vr_mirror_mode = mono`
+
+[![NEW](../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html)
+
+> Can be "mono" (default) or "stereo". When running or testing your game using a VR app, the game image appears in your HMD (head mount display) and on your mirror window (your monitor). The vr_mirror_mode property lets you control the display on the mirror window. This setting is only available in the VR templates.
 
 [Back to top](#top)
 
@@ -735,6 +756,29 @@ This can be used to turn off Steam support. The default is that Steam is enabled
 > * **top-right**
 > * **bottom-left**
 > * **bottom-right**
+
+[Back to top](#top)
+
+## XB1 settings
+
+The following settings define the XB1 APU heap allocation size.
+
+~~~{sjson}
+xb1 = {
+	//memory = {
+	//	apu_heap_size = 67108864
+	//	apu_heap_non_cached_size = 1048576
+	//}
+}
+~~~
+
+`apu_heap_size`
+
+>	Specifies the amount of cached heap memory allocated for XB1 APU.
+
+`apu_heap_non_cached_size`
+
+>	Specifies the amount of non-cached heap memory allocated for XB1 APU.
 
 [Back to top](#top)
 
