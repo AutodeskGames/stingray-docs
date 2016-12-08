@@ -26,7 +26,7 @@ The engine's plug-in interface is based around a consistent pattern of interacti
 
 The following image summarizes this workflow:
 
-![plug-in workflow](images/plugin_design.png)
+![plug-in workflow](images/engine_plugin_interaction.png)
 
 
 ## Getting started
@@ -35,7 +35,7 @@ These are the basic steps for getting a plug-in to integrate with the runtime en
 
 1.	Include the `plugin_api.h` file.
 
-	~~~cpp
+	~~~{cpp}
 	#include "engine_plugin_api/plugin_api.h"
 	~~~
 
@@ -43,20 +43,20 @@ These are the basic steps for getting a plug-in to integrate with the runtime en
 
 1.	Define a function with the following signature:
 
-	~~~cpp
+	~~~{cpp}
 	__declspec(dllexport) void *get_plugin_api(unsigned api_id)
 	~~~
 
 	The plug-in interface uses C rather than C++, to avoid [ABI incompatibilities](https://en.wikipedia.org/wiki/Application_binary_interface) between different versions of C++ and different compilers. If you want to compile your plug-in using C++, you can wrap your `get_plugin_api` function in an `extern C` block, like this:
 
-	~~~cpp
+	~~~{cpp}
 	extern "C" {
 		__declspec(dllexport) void *get_plugin_api(unsigned api)
 		{
 			...
 		}
 	}
-~~~
+	~~~
 
 	This avoids the function name becoming mangled in the compiled *.dll*.
 
@@ -64,7 +64,7 @@ These are the basic steps for getting a plug-in to integrate with the runtime en
 
 	The main plug-in API that you'll want to handle is identified by the `PLUGIN_API_ID`, which identifies the `PluginApi` struct. This example responds to the engine sending a `PLUGIN_API_ID` by setting up a `PluginApi` struct with a pointer to a custom implementation for the `setup_game()` function:
 
-	~~~cpp
+	~~~{cpp}
 	__declspec(dllexport) void *get_plugin_api(unsigned api_id)
 	{
 		if (api_id == PLUGIN_API_ID) {
@@ -86,7 +86,7 @@ These are the basic steps for getting a plug-in to integrate with the runtime en
 
 	For example, the simple plug-in uses this implementation of the `setup_game` function to request the `LuaApi` interface from the engine. It can then use any of the functions defined in that interface to interact with the engine's Lua environment -- in this case, exposing a new function that could be called by a project's Lua scripts as `stingray.SimplePlugin.test()`.
 
-	~~~cpp
+	~~~{cpp}
 	struct LuaApi *_lua;
 	static void setup_game(GetApiFunction get_engine_api)
 	{
