@@ -1,16 +1,24 @@
 # Dealing with localization hand-offs
 
-The Stingray Help is currently translated into Korean, and soon will be translated into Japanese. This directory contains some scripts that help with handing off the content to the localization team, and consuming the translated docs.
+The Stingray Help is currently translated into Korean and Japanese. This directory contains some scripts that help with handing off the content to the localization team, and consuming the translated docs.
 
 The process should be pretty push-button, as long as you have the regular requirements for building the docs installed. For details, see the [docs/readme.md](../../readme.md) file.
 
 ## Exporting content for localization
 
-When the content for a given release is ready, and you want to hand it off to localization, run the `export_for_localization.rb` script in this directory. This runs a regular build of the English docs, and writes out a "raw" export of the content for the localization team to work with. This raw export is written to:
+When the content for a given release is ready, and you want to hand it off to localization:
 
-`docs/output/stingray_help/export_for_localization`
+1. In your local stingray-docs/output folder, create empty folders named 'export_for_localization' in the following 3 locations:
+
+`stingray_help/export_for_localization`
 and
-`docs/output/developer_help/export_for_localization`
+`source_access_help/export_for_localization`
+and
+`sdk_help/export_for_localization`
+
+2. Run the `export_for_localization.rb` script in this directory. This runs a regular build of the English docs, and writes out a "raw" export of the content for the localization team to work with. (Into the folders you created in step 1.)
+
+3. Create .zip packages of the three `export_for_localization` folders you created, and send them to Loc.
 
 ## Importing translated content
 
