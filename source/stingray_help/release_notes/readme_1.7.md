@@ -110,4 +110,8 @@ If your project contains any API elements that have been modified or removed, yo
 
 For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
 
+### Visual Studio 2015
+
+Stingray now requires Visual Studio 2015 for rebuilding all components from source code. See ~{ Software requirements }~ for updated information.
+
 [Return to top](#top)
