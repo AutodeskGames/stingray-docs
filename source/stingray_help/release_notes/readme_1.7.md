@@ -27,20 +27,61 @@ Sections in this topic:
 
 * * *
 
-### Heading 1
+## Entity Editor
 
-Paragraph.
+A new editor lets you work more efficiently on entities.  
+This is also built as a plug-in example for developers who want to build something similar. 
 
-### Updated Capture Frames tool
+## Browse online assets in the Asset Browser
+New “Online Assets” folder in the Asset Browser. You can search, browse, find, and import assets directly from online using the AB. 
 
-Paragraph. For updated information, see ~{ Capture Frames Tool }~.
+## Improved Capture Frames Tool
 
+Now works through Story, and through Flow or Lua. 
+Start capturing and the test engine captures the current active Story. 
 
-## Experimental features
+New options in the UI let you select from all available cameras, and set specific resolution to capture. 
 
-## Other Benefits
+Note: A story can be set to be played in Ping-Pong Mode or in Loop. Capture Frames only works forward or reverse, but not ping pong.
 
-### Heading 1
+For updated information, see ~{ Capture Frames Tool }~.
+
+## Better texture import – auto compression
+
+When you import textures (by dragging and dropping or using the Import tool), Stingray now handles texture compression behind the scenes. You can still tweak the textures as required, but you no longer need to manually compress textures on import.
+
+## Google Daydream Android support
+
+We now support Daydream devices (Google Pixel phone) with our GoogleVR plug-in. See ~{ Supported platforms }~ for updated information.
+
+## what's new in Interop? 
+
+### Level Sync updates
+
+You can now sync your 3ds Maxscene to a Stingray level so that you can quickly use and evaluate Stingray with Max scenes.
+Tag assets, send layouts and assets to Stingray. 
+
+### Import .exr files as skydome images
+
+Stingray now supports importing .EXR files as skydome images
+
+## Support for Substance files
+
+(This is also built as a plug-in example for people who want to write import plug-ins.)
+
+## Smart Placement Tool
+
+TBC
+
+## What’s new in Rendering
+
+### Physical lights, lumen, and color temperature and hard set falloff
+
+“setup real-world room with materials and match into stingray.”
+
+## What’s New for plugin developers?
+
+### Data driven compression settings
 
 [Return to top](#top)
 
