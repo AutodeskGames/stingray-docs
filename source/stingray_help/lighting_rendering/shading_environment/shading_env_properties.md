@@ -301,7 +301,7 @@ The Vignette effect adds a grayscale overlay that darkens the corners of the vie
 
 ## Color Grading
 
-Color grading changes the color space of the rendered images produced by the Stingray renderer. The effect is to adjust the colors, hue, saturation, brightness, etc. of the game, based on a volume map texture that you provide.
+Color grading changes the color space of the rendered images produced by the Stingray renderer. The effect is to adjust things like the colors, hue, saturation, and brightness of the game, based on a volume map texture that you provide.
 
 For example, the following image boosts the contrast and shifts the colors toward blue.
 

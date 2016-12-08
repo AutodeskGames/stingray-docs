@@ -59,7 +59,7 @@ The unit's placement, rotation and scale in the 3D world are determined by its e
 
 Each entity can have only one unit component assigned to it, with one associated unit.
 
->	**Note:** eventually, we intend for entities to be capable of directly managing all of the things that units are currently responsible for in Stingray: meshes, scene graphs, physics actors, etc. While we extend the entity system with support for more and more different types of components, the unit component provides a practical way for entities to manage visible game objects in the short term.
+>	**Note:** Eventually, we intend for entities to be capable of directly managing all of the things that units are currently responsible for in Stingray: such as meshes, scene graphs, and physics actors. While we extend the entity system with support for more and more different types of components, the unit component provides a practical way for entities to manage visible game objects in the short term.
 
 ## Other components
 

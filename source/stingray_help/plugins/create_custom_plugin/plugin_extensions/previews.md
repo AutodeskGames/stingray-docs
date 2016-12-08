@@ -10,7 +10,7 @@ You can provide:
 
 -	an optional JavaScript module that is invoked when the user selects and de-selects an asset of the specified type. Use this module if you want to carry out actions in the editor's JavaScript environment in response to the change in selection.
 
--	an optional Lua module that defines the behavior of the engine running behind the viewport. For example, you can make the engine spawn new assets, respond to keypresses over the viewport, etc. In most cases, you will want to set up one of these modules in order to make the viewport display the visual representation of the selected asset.
+-	an optional Lua module that defines the behavior of the engine running behind the viewport. For example, you can make the engine spawn new assets, or respond to keypresses over the viewport. In most cases, you will want to set up one of these modules in order to make the viewport display the visual representation of the selected asset.
 
 ## Examples
 
@@ -24,7 +24,7 @@ The preview extension can be a little tricky to set up, since it involves settin
 
 ## Writing a JavaScript preview module
 
-If you choose to provide a JavaScript module for your preview extension, your module should return an object that implements whichever of the JavaScript preview extension functions you need for your plug-in -- for example, `setup()`, `clear()`, `title()`, etc.
+If you choose to provide a JavaScript module for your preview extension, your module should return an object that implements whichever of the JavaScript preview extension functions you need for your plug-in -- for example, `setup()`, `clear()`, `title()`.
 
 For example:
 
@@ -93,7 +93,7 @@ extensions = {
 
 `type`
 
->	The resource type (i.e. the file extension) that will be associated with this preview extension. Most Stingray resources (like *.unit*, *.material*, *.texture*, etc.) already have built-in preview behaviors, so this will typically be a new kind of resource that your plug-in adds to Stingray. Required.
+>	The resource type (i.e. the file extension) that will be associated with this preview extension. Most Stingray resources (like *.unit*, *.material*, *.texture*) already have built-in preview behaviors, so this will typically be a new kind of resource that your plug-in adds to Stingray. Required.
 
 `name`
 
@@ -226,11 +226,11 @@ extensions = {
 >	>
 >	>	`playbackSpeed`
 >	>
->	>	>	Controls the default setting of the ![Settings icon](../../../images/icon_gear.png) **> Playback Speed** menu item. This setting is a percentage expressed as a decimal number. A value of `1` indicates 100%, a value of `0.8` indicates 80%, a value of `1.5` indicates 150%, etc.
+>	>	>	Controls the default setting of the ![Settings icon](../../../images/icon_gear.png) **> Playback Speed** menu item. This setting is a percentage expressed as a decimal number. A value of `1` indicates 100%, a value of `0.8` indicates 80%, a value of `1.5` indicates 150%, and so on.
 >	>
 >	>	`skeletonBoneSize`
 >	>
->	>	>	Controls the default setting of the ![Settings icon](../../../images/icon_gear.png) **> Bone Size** menu item. This setting is a percentage expressed as a decimal number. A value of `1` indicates 100%, a value of `0.8` indicates 80%, a value of `1.5` indicates 150%, etc.
+>	>	>	Controls the default setting of the ![Settings icon](../../../images/icon_gear.png) **> Bone Size** menu item. This setting is a percentage expressed as a decimal number. A value of `1` indicates 100%, a value of `0.8` indicates 80%, a value of `1.5` indicates 150%.
 >	>
 
 ---

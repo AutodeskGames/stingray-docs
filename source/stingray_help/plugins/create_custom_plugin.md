@@ -18,7 +18,7 @@ Our goal is for the editor's plug-in system to be flexible enough to accommodate
 
 	For working illustrations of the concepts described in these docs, look at the set of plug-ins that are included in this release of Stingray. You'll find them under the *editor/plugins* folder in your Stingray installation folder.
 
-	Depending on what you want your plug-in to do, you may need to accompany your *.plugin* file at this point with other resources like HTML and JavaScript files, additional content resources, etc.
+	Depending on what you want your plug-in to do, you may need to accompany your *.plugin* file at this point with other resources like HTML and JavaScript files, or additional content resources.
 
 4.	Reload, test, and iterate.
 

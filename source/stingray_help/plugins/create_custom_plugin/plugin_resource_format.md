@@ -49,7 +49,7 @@ Every plug-in definition must have the following settings.
 
 `version`
 
->	A string that you can use to distinguish different versions of your plug-in that you release. Use the format `<major>.<minor>.<build>` format, where each value is an integer that you increase as you update your plug-in. For example, a version numbered `1.2.300` should precede versions numbered `1.2.305`, `1.3.0`, `2.0.0`, etc.
+>	A string that you can use to distinguish different versions of your plug-in that you release. Use the format `<major>.<minor>.<build>` format, where each value is an integer that you increase as you update your plug-in. For example, a version numbered `1.2.300` should precede versions numbered `1.2.305`, `1.3.0`, or `2.0.0`.
 
 ## Optional metadata
 

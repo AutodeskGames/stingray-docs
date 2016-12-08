@@ -54,7 +54,7 @@ You can set the file view to show only selected resource types. Click the Filter
 
 You can also use the configuration options ![ ](../../images/icon_config.png) to control what resources are shown in the tree view and the file view:
 
--	**Show all files** makes the file view show all files on disk, even those that are not project resource types. This exposes files like thumbnails, editor settings files, operating system files, etc.
+-	**Show all files** makes the file view show all files on disk, even those that are not project resource types. This exposes files like thumbnails, editor settings files, and operating system files.
 -	**Show mapped folders** makes the tree view and search include the core resources. See also ~{ Working with core resources }~.
 -	**Show file types** does not filter the view, but makes each resource show its file extension (i.e. its resource type).
 

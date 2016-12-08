@@ -69,7 +69,7 @@ Most of this structure should remain the same in your own component. The followi
 
 >   This section defines the data that your component will handle.
 >
->   Each field associates a name (e.g. `numeric_data` in the example above) with a description of the data stored in that field. This description includes the type of data that is stored in the field (i.e. strings, numbers, booleans, resource names, colors, etc.), default values, accepted values, and metadata about the field that instructs the Stingray Editor how to display it in the ~{ Property Editor }~ panel.
+>   Each field associates a name (e.g. `numeric_data` in the example above) with a description of the data stored in that field. This description includes the type of data that is stored in the field (such as strings, numbers, booleans, resource names, or colors), default values, accepted values, and metadata about the field that instructs the Stingray Editor how to display it in the ~{ Property Editor }~ panel.
 >
 >   These data descriptions (and the *.component* resource type itself) rely on an internal data typing system. In future releases, as the entity and type systems achieve greater stability and more general usefulness, we do intend to provide full details about how this type system works, what all of the built-in types are, and how you can even extend them to create your own custom data types.
 >

@@ -48,7 +48,7 @@ The biggest drawback of using light probes to bake reflections for your level is
 
 ## Screen space reflections
 
-Most game levels change in many different ways over time -- player characters, non-player characters and vehicles move around, particle effects start and stop, objects get created and destroyed, etc. To make these dynamic objects show up in reflective surfaces, you can add screen space reflections: a technique that "fakes" dynamic reflections as a post-effect after each frame is rendered.
+Most game levels change in many different ways over time -- player characters, non-player characters and vehicles move around, particle effects start and stop, objects get created and destroyed. To make these dynamic objects show up in reflective surfaces, you can add screen space reflections: a technique that "fakes" dynamic reflections as a post-effect after each frame is rendered.
 
 When Stingray renders a frame, it also creates a *depth buffer* -- a record of the distance from the camera to the various shaded surfaces in the frame. Using this depth information, the renderer can detect when a surface is reflecting something else that has already been rendered in the frame. It can then reflect that shaded object in the reflective surface.
 
