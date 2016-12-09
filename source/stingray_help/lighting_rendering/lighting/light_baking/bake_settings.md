@@ -1,7 +1,5 @@
 # Lightmap baking settings
 
-![UPDATED](../../../images/updated.png)
-
 The main settings that you'll use to control light baking are found in the **Bake Lightmaps** dialog box (**Window > Lighting > Bake Lightmaps**).
 
 There are also a few other settings to be aware of. Note that most of these settings apply both to Beast and to the Stingray baker.

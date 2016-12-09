@@ -1,7 +1,5 @@
 # Template projects
 
-![UPDATED](../../images/updated.png)
-
 The Stingray Editor ships with a few sample projects to help you get started. By default, template projects install in the **templates** folder in your **Stingray** directory. On a Windows OS templates are installed at the following location: `C:\Program Files\Autodesk\Stingray\<version>\editor\templates`. Templates are also available from the **Project Manager** every time you start Stingray or select **Templates** tab in the **Project Manager**.
 
 > ![](../../images/icon_video.png) You can find video walkthroughs of each template <a href="https://www.youtube.com/playlist?list=PLTjhBiJe1i2FMurxvbVZymn2vxC1S-WqU" target="blank">here.</a>
@@ -38,7 +36,7 @@ This template has a simple VR level with a floor plan to walk around in. Current
 
 Use an Oculus Rift for projects based on this template.
 
-[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html) The VR Oculus Touch template supports input from the Oculus Remote and Oculus Touch Controller.
+The VR Oculus Touch template supports input from the Oculus Remote and Oculus Touch Controller.
 
 > **Tip:** If the performance is lower for the VR Oculus Touch template projects, make sure that the editor is **not** set to **Update Mode > Always** in the viewport.
 

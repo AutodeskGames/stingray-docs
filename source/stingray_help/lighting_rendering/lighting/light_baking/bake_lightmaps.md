@@ -1,7 +1,5 @@
 # Bake lightmaps
 
-![UPDATED](../../../images/updated.png)
-
 Whether you want to use the Stingray baker or Beast to generate lightmaps for your level, the general procedure is the same:
 
 1.	Prepare the objects and lights in your level for baking.

@@ -1,7 +1,5 @@
 # Use Mozilla Firefox to run your project
 
-![UPDATED](../../images/updated.png)
-
 This page describes how to set up Firefox to ~{ Run your project in a browser using WebGL }~.
 
 ## Step 1. Get a compatible version
@@ -30,6 +28,6 @@ WebGL 2.0 is disabled by default, so you'll need to enable it in your browser se
 
 	![Firefox flags](../../images/experimental_webgl_firefox_flags.png)
 
-2. [![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html) Since data is read as a URL, change the following setting to `false` to allow reading from `file://url`:
+2. Since data is read as a URL, change the following setting to `false` to allow reading from `file://url`:
 
 	`security.fileuri.strict_origin_policy`

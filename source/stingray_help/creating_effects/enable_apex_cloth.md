@@ -1,7 +1,5 @@
 # Enable APEX Cloth
 
-![UPDATED](../images/updated.png)
-
 **To enable APEX cloth in a project**
 
 2. In the Stingray Editor, load a scene with a cloth simulation or import an FBX with APEX cloth.
@@ -14,7 +12,7 @@
 
 	You can also manually configure the cloth simulation budget using the attributes in the settings.ini file. See ~{ Stingray engine settings.ini file reference }~ for more information.
 
-5. [![NEW](../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html) Associate APEX cloth defintion to the unit's meshes.
+5. Associate APEX cloth defintion to the unit's meshes.
 
 	1. Open the selected object in the **Unit Editor**.
 	2. Select a mesh in the Unit Editor Outliner to bind to an APEX cloth.

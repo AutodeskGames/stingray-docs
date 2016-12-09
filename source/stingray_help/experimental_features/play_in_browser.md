@@ -1,7 +1,5 @@
 # Run your project in a browser using WebGL
 
-[![UPDATED](../images/updated.png "What else is new in v1.6?")](../release_notes/readme_1.6.html)
-
 If you've been waiting impatiently to see your Stingray projects up and running in a web browser, this experimental feature offers you a first glimpse of the possibilities.
 
 In this release, you can:
@@ -52,8 +50,6 @@ When you get the project successfully running in the browser, it looks something
 ![A project running in WebGL](../images/experimental_webgl_running.jpg)
 
 ## About the HTML5 (WebGL2) project output
-
-[![NEW](../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html)
 
 When you launch or deploy to the HTML5 (WebGL2) target, Stingray compiles your project's assets the same way it does for any other platform. It writes all the compiled resources to the `webgl` folder under your project `_data` folder and reads the data directly from here to display it as a URL.
 

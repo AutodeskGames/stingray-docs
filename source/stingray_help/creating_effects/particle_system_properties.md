@@ -130,8 +130,6 @@ Right-click a particle system in the **Property Editor** to add the following co
 
 ### Material
 
-[![UPDATED](../images/updated.png "What else is new in v1.3?")](../release_notes/readme_1_3.html)
-
 - Shadow Caster
 
 > **Note:** The following components previously available under the Material category are now deprecated, and listed under the (deprecated) category.
@@ -183,6 +181,6 @@ Right-click a particle system in the **Property Editor** to add the following co
 - Scale
 
 ### Visualizer
-- [![NEW](../images/new.png "What else is new in v1.3?")](../release_notes/readme_1_3.html) Billboard
+- Billboard
 - Light
 - Mesh

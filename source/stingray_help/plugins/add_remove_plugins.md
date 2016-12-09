@@ -1,7 +1,5 @@
 # Add and remove plug-ins using the Plugin Manager
 
-![UPDATED](../images/updated.png)
-
 -	**Window > Plugin Manager**
 
 The **Plugin Manager** panel lists each plug-in visible to the Stingray Editor, along with detailed information and activation status for each. You can use this panel to control which plug-ins are currently active in the Editor.
@@ -29,8 +27,6 @@ To load a plug-in that is already listed in the **Plugin Manager**, either:
 -	Or, select the plug-in in the list view and click the **Load** button at the bottom right.
 
 ## Download a plug-in
-
-[![NEW](../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html)
 
 To download a new Stingray plug-in not listed in the **Plugin Manager**, click **Get more plugins** at the bottom of the list view, then select any of the available plugins and click **Install**. Once downloaded, the plug-in is loaded in the **Plugin Manager**.
 
