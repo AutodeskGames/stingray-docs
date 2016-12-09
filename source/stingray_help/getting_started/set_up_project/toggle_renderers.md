@@ -1,7 +1,5 @@
 # Switch between DX11 and DX12
 
-[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
-
 You can now toggle between DX11 and DX12 in the Editor if your system supports both renderers.
 
 >**Note**: To add support for DX12 in your Stingray projects, compile the engine with `--use-d3d12` flag.

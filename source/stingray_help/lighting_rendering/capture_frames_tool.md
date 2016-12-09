@@ -1,7 +1,5 @@
 #Capture Frames Tool
 
-[![NEW](../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html)
-
 The **Capture Frames** Tool lets you render frames to disk. The following **Capture Settings** can be adjusted to control your output. See ~{ Capture frames to disk }~ for more information.
 
 > **Note:** The Capture Frames Tool is a plugin and must be loaded from the **Plugin Manager**.

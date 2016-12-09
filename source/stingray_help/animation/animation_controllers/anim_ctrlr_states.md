@@ -1,7 +1,5 @@
 # Animation controller states
 
-![UPDATED](../../images/updated.png)
-
 A state corresponds to something the character is doing. States can be things like walking, running, jumping, being idle. Each state is associated with a particular animation, or a mix of animations that play when the character is in that state. The character is in exactly one state at a time (per layer).
 
 In the state graph, states are represented by boxes and arrows that show the possible transitions between states. Transitions are triggered by anim events and the name of the anim event that triggers a particular transition is displayed along the transition arrow.
@@ -99,8 +97,6 @@ A transition from this shortcut is treated as a transition from the group. When 
 > **Warning:** Every time the transition is triggered, it can be taken every frame, even while it's blending. If using a shortcut from a group, make sure you're not sending the event every frame because it will transition/blend into itself over and over again.
 
 ## TransitionSwitch
-
-[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
 
 A transition node that lets you choose at runtime which will be the destination state for a transition. This choice depends on the runtime evaluation of an expression.
 

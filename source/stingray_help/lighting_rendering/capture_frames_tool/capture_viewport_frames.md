@@ -1,7 +1,5 @@
 # Capture frames to disk
 
-[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
-
 The **Capture Frames** Tool lets you render frames to disk.
 
 ## To capture viewport frames

@@ -1,7 +1,5 @@
 # VR in Stingray
 
-![UPDATED](../images/updated.png)
-
 The Stingray engine has all of the VR systems implemented in it for the Oculus Rift, the HTC Vive, and other mobile VR devices. Using the Stingray Editor, you can use these systems to build truly immersive experiences for VR in a simple and intuitive fashion.
 
 The following three features optimize general VR performance in Stingray.
@@ -31,7 +29,5 @@ The following three features optimize general VR performance in Stingray.
  Instanced Stereo Rendering is an optimization that makes it more efficient for Stingray to render stereoscopic images for VR headsets. It uses hardware accelerated geometry instancing to produce both the left and right eye version of the scene during a single rendering pass instead of two.
 
  Distinct eye transforms are stored in the constant buffer and stereo rendering is handled by the vertex shaders. Even instances use the left eye matrices and are shifted left, while odd instances use the right eye matrices and shifted right. The clip plane is dynamically adjusted to prevent spill over to opposite eyes.
-
- [![NEW](../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html)
 
  Instanced stereo rendering is built in to the default renderer provided with Stingray, and all material and post effect shaders are VR-enabled to implement this optimization.

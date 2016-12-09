@@ -1,7 +1,5 @@
 # Tag assets with Level Sync
 
-![UPDATED](../../images/updated.png)
-
 Tagging assigns a name and target folder for your asset(s), so your DCC knows where to export your files. Once Maya, Maya LT, or 3ds Max are linked to the Stingray editor, assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray.
 
 ## Manually tag your asset(s) with level sync

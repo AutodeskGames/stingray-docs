@@ -1,13 +1,11 @@
 # Best practices: preserving axis orientation
 
-![UPDATED](../../images/updated.png)
-
 Stingray uses Z Up as the orientation axis. If you export the FBX file with a different axis orientation such as Y (the default Up Axis for Maya and Maya LT), the model isn't oriented as expected in Stingray.
 
 Do the following in your Stingray project to have the model face the right direction:
 
 * Enable **Create an extra root by default on asset import** in File > Settings > Project Settings.
-* [![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html) Set `reverse-forward-axis = true`  in your .stingray_project file.
+* Set `reverse-forward-axis = true`  in your .stingray_project file.
 
   >This is the recommended setting. After an asset is imported, the setting is stored with the FBX file, and not read from *.stingray_project*.
 
