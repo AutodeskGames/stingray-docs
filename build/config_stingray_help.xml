@@ -87,6 +87,7 @@
 		<contextId include="*\animation_controllers.html" id="animation_controllers"></contextId>
 		<contextId include="*\tutorial_next_steps.html" id="tutorial_next_steps"></contextId>
 		<contextId include="*\content_lifecycle.html" id="tutorial_compile"></contextId>
+		<contextId include="*\link_to_dcc.html" id="interop_plugins"></contextId>
 		<replace pattern="BEGIN_STANDALONE.*END_STANDALONE" replacement="" include="*.html"></replace>
 		<insert_family_links include="\stingray_help\*,\changelog\*"></insert_family_links>
 		<validate_todos>true</validate_todos>
