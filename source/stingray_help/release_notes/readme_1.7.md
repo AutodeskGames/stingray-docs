@@ -30,17 +30,17 @@ Sections in this topic:
 ## Entity Editor
 
 A new editor lets you work more efficiently on entities.  
-This is also built as a plug-in example for developers who want to build something similar. 
+This is also built as a plug-in example for developers who want to build something similar.
 
 ## Browse online assets in the Asset Browser
-New “Online Assets” folder in the Asset Browser. You can search, browse, find, and import assets directly from online using the AB. 
+New “Online Assets” folder in the Asset Browser. You can search, browse, find, and import assets directly from online using the AB.
 
 ## Improved Capture Frames Tool
 
-Now works through Story, and through Flow or Lua. 
-Start capturing and the test engine captures the current active Story. 
+Now works through Story, and through Flow or Lua.
+Start capturing and the test engine captures the current active Story.
 
-New options in the UI let you select from all available cameras, and set specific resolution to capture. 
+New options in the UI let you select from all available cameras, and set specific resolution to capture.
 
 Note: A story can be set to be played in Ping-Pong Mode or in Loop. Capture Frames only works forward or reverse, but not ping pong.
 
@@ -48,18 +48,18 @@ For updated information, see ~{ Capture Frames Tool }~.
 
 ## Better texture import – auto compression
 
-When you import textures (by dragging and dropping or using the Import tool), Stingray now handles texture compression behind the scenes. You can still tweak the textures as required, but you no longer need to manually compress textures on import.
+Textures are now automatically compressed when you import them in Stingray.  Depending on the texture type, Stingray assigns the texture template and compression settings for the imported textures for each platform.  Texture compressions are set internally by matching the file suffixes to one of the suffixes defined in the texture templates or by analyzing the content of the file. You can still tweak the textures as required, but you no longer need to manually compress textures on import. For details, see ~{ Import textures}~ and ~{ Create a texture template }~.
 
 ## Google Daydream Android support
 
 We now support Daydream devices (Google Pixel phone) with our GoogleVR plug-in. See ~{ Supported platforms }~ for updated information.
 
-## what's new in Interop? 
+## what's new in Interop?
 
 ### Level Sync updates
 
 You can now sync your 3ds Maxscene to a Stingray level so that you can quickly use and evaluate Stingray with Max scenes.
-Tag assets, send layouts and assets to Stingray. 
+Tag assets, send layouts and assets to Stingray.
 
 ### Import .exr files as skydome images
 
@@ -125,7 +125,7 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 - **GAME-X Heading**
 
-	Paragraph. 
+	Paragraph.
 
 	**Workaround:** Placeholder.
 
