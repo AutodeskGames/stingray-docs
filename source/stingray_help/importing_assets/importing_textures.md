@@ -1,5 +1,7 @@
 # Import textures
 
+![UPDATED](../images/updated.png)
+
 > **Note:** When you import a properly configured FBX file, the associated materials and textures can be automatically imported. See also ~{ Import a model with textures and materials }~.
 
 For more information on supported file types, see ~{ Supported file formats }~.
@@ -10,7 +12,9 @@ For more information on supported file types, see ~{ Supported file formats }~.
 
 2.	Click **Import**, browse to select one or more image files, and click **Open**. Stingray will bring the selected image files into the project, and create a new *.texture* resource for each.
 
-3. To set up properties for a new texture, such as the compression and other processing that is applied to it when it is compiled for different target platforms, double-click it in the Asset Browser to open it in the ~{ Texture Manager }~.
+    [![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) The files are automatically assigned its matching texture template and compression settings for different target platforms. Stingray assigns texture compression during import by matching the file suffix to one of the suffixes in the texture templates. If Stingray can’t find a file suffix match or assigning texture templates by suffix is disabled in the **Project Settings**, it assigns the texture compression settings by pixel inspection of the image file.
+
+3. To set up additional properties for a new texture, double-click it in the Asset Browser to open it in the ~{ Texture Manager }~.
 
 ## Quick texture import
 
@@ -35,5 +39,6 @@ Related topics:
 - ~{ Texture Manager }~
 - ~{ Create a texture category }~
 - ~{ Create a texture template }~
+- ~{ Edit project settings }~
 
 ---
