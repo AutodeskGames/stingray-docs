@@ -36,11 +36,14 @@ This can help Stingray to resolve relative paths when you right-click in the **A
 
 [![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html)
 
-<dt>Disable texture template by suffix</dt>
-<dd>Turn on this option to disable assigning texture compression settings on import based on file name suffix.</dd>
+<dt>Texture template by material</dt>
+<dd>Enabled by default, turn off this option to disable assigning texture compression settings on import based on materials.</dd>
 
-<dt>Enable texture template by pixels</dt>
+<dt>Texture template by pixels</dt>
 <dd>Enabled by default, turn off this option to disable assigning texture compression settings on import based on pixel inspection.</dd>
+
+<dt>Texture template by suffix</dt>
+<dd>Enabled by default, turn off this option to disable assigning texture compression settings on import based on file name suffix.</dd>
 
 ---
 Related topics:

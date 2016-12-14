@@ -46,9 +46,9 @@ Note: A story can be set to be played in Ping-Pong Mode or in Loop. Capture Fram
 
 For updated information, see ~{ Capture Frames Tool }~.
 
-## Better texture import – auto compression
+## Better texture import – automatic compression
 
-Textures are now automatically compressed when you import them in Stingray.  Depending on the texture type, Stingray assigns the texture template and compression settings for the imported textures for each platform.  Texture compressions are set internally by matching the file suffixes to one of the suffixes defined in the texture templates or by analyzing the content of the file. You can still tweak the textures as required, but you no longer need to manually compress textures on import. For details, see ~{ Import textures}~ and ~{ Create a texture template }~.
+Textures are now automatically compressed when you import them in Stingray. Depending on the texture type, Stingray assigns the texture template and compression settings for the imported textures for each platform. Texture compressions are applied by texture file suffix match or by image analysis. You can still tweak the textures as required, but you no longer need to manually compress textures on import. For details, see ~{ Import textures}~ and ~{ Create a texture template }~.
 
 ## Google Daydream Android support
 
@@ -153,6 +153,6 @@ For a complete list of all new, modified, and removed Flow nodes in this release
 
 ### Visual Studio 2015
 
-Stingray now requires Visual Studio 2015 for rebuilding all components from source code. See ~{ Software requirements }~ for updated information.
+Stingray now requires Visual Studio 2015 for rebuilding all components from source code. See [Software requirements](http://help.autodesk.com/view/Stingray/ENU/?guid=__source_access_getting_started_software_requirements_html) for updated information.
 
 [Return to top](#top)
