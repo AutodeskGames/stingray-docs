@@ -17,7 +17,7 @@ Using beats, you can create a beat called left when the left foot is forward and
 
 3. In the options that appear, set the following:
 
-![Add Event options](../images/addBeatTrigger_options.png)
+  ![Add Event options](../images/addBeatTrigger_options.png)
 
 (All events that you add – you right-click to create the event type/marker type.)
 

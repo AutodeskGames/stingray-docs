@@ -33,4 +33,5 @@ In order to replicate the behavior that , you can compose a level flow graph tha
 	- Use flow with spawning.
 		<br>
 		![](../../images/blend_shape_spawn.png)
+		
 		This flow graph features a character as the blend shape with targets that each represent a different facial expression.
