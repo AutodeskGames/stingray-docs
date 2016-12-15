@@ -28,7 +28,7 @@ See the *.component* files under `core/stingray_renderer/shading_environment_com
 
 ## The *.component* structure
 
-The following block shows a sample *.component* resource. This example defines a data component that stores a single numeric data value.
+The following block shows a sample *.component* resource. This example defines a data component that stores two numeric data values.
 
 ~~~{sjson}
 export = "#component"
@@ -39,7 +39,17 @@ types = {
             "core/types/component" = true
         }
         fields = {
-           numeric_data = {
+           str_data = {
+                type = ":number"
+                default = 18
+                min = 1
+                max = 200
+                editor = {
+                    label = "Strength"
+                    step = 1
+                }
+            }
+           tough_data = {
                 type = ":number"
                 default = 10
                 min = 1
@@ -56,8 +66,9 @@ types = {
             icon = "signal"
         }
         metadata = {
+            name = "My Game Combat Stats"
             component = "data"
-            tags = ["custom_toughness"]
+            tags = ["custom_combat_stats"]
         }
     }
 }
@@ -69,7 +80,7 @@ Most of this structure should remain the same in your own component. The followi
 
 >   This section defines the data that your component will handle.
 >
->   Each field associates a name (e.g. `numeric_data` in the example above) with a description of the data stored in that field. This description includes the type of data that is stored in the field (i.e. strings, numbers, booleans, resource names, colors, etc.), default values, accepted values, and metadata about the field that instructs the Stingray Editor how to display it in the ~{ Property Editor }~ panel.
+>   Each field associates a name (e.g. `str_data` in the example above) with a description of the data stored in that field. This description includes the type of data that is stored in the field (i.e. strings, numbers, booleans, resource names, colors, etc.), default values, accepted values, and metadata about the field that instructs the Stingray Editor how to display it in the ~{ Property Editor }~ panel.
 >
 >   These data descriptions (and the *.component* resource type itself) rely on an internal data typing system. In future releases, as the entity and type systems achieve greater stability and more general usefulness, we do intend to provide full details about how this type system works, what all of the built-in types are, and how you can even extend them to create your own custom data types.
 >
@@ -94,6 +105,10 @@ Most of this structure should remain the same in your own component. The followi
 `metadata`
 
 >   This section provides metadata about your component.
+>
+>   `name`
+>
+>   >	The editor uses this name in the UI to identify your custom component type. Make sure this is unique among all kinds of components, otherwise users will have no way to distinguish which is which. A good way of avoiding collisions with other component names is to include your project name or plug-in name in your component name.
 >
 >   `component`
 >
