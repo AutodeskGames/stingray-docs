@@ -50,6 +50,10 @@ For updated information, see ~{ Capture Frames Tool }~.
 
 Textures are now automatically compressed when you import them in Stingray. Depending on the texture type, Stingray assigns the texture template and compression settings for the imported textures for each platform. Texture compressions are applied by texture file suffix match or by image analysis. You can still tweak the textures as required, but you no longer need to manually compress textures on import. For details, see ~{ Import textures}~ and ~{ Create a texture template }~.
 
+## Trim animation clips
+
+You can now edit the length of animation clips by trimming in the Anim Clip Editor or by modifying the trim values in the ~{ Animation clip properties }~. See ~{ Trim animation clips }~.
+
 ## Google Daydream Android support
 
 We now support Daydream devices (Google Pixel phone) with our GoogleVR plug-in. See ~{ Supported platforms }~ for updated information.
