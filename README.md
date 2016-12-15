@@ -48,6 +48,9 @@ However, if you want to specify the order that the topics are presented within a
 
 1.	Install [Ruby](https://www.ruby-lang.org/en/downloads/), if you don't have it already.
 
+2.	If you're building the main Stingray Help, which includes the reference docs, you'll need the MSBuild tools for Visual Studio 2015, available [here](
+https://www.microsoft.com/en-us/download/details.aspx?id=48159).
+
 2.	Make sure that you have fully cloned this repo *and* its submodules. You should have a `build/ixg-doc-tools` folder full of stuff, and a `stingray-engine` folder full of stuff.
 
 3.	Go to the `build` folder, and look for the Ruby scripts. You'll find three convenient `make_....rb` files for building the main help, the developer help, and the tutorials individually.
