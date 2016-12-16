@@ -12,6 +12,7 @@ The **Texture Manager** includes default texture templates such as
 -	Albedo template for textures without alpha channel.
 -	Roughness/Metallic/AO template for RMA textures.
 -	Lightmap template for lightmap textures.
+-	HDRI/Skydome template for skydome textures.
 
 [![NEW](../../../images/new.png "What else is new in v1.7?")](../../../release_notes/readme_1.7.html)
 
