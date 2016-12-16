@@ -2,7 +2,7 @@
 
 - **Window > Story Editor**
 
-The **Story Editor** is a tool for creating simple animation on objects/units and entities within a level. You can add units and entities to Story and animate their transforms and other parameters using keyframe animation. (You cannot use animation clips in Story.)
+The **Story Editor** is a tool for creating simple animation on objects/units and entities within a level. You can add units and entities to Story and animate their transforms and other parameters using keyframe animation. (You cannot use animation clips in Story.) See also ~{ Create simple animations with the Story Editor }~.
 
 This editor consists of the following main areas:
 
@@ -10,17 +10,17 @@ This editor consists of the following main areas:
 
 Refer to the sections below for more detail on each area.
 
-
 ##LIVE button
 
 ![](../images/icon_storyEd_LIVE.png)
 
-Enables Story mode, making the **Story Editor** live so you can start to add keyframe animation on selected objects.
+Click to toggle Story mode. When on, the **Story Editor** is "live" so you can start to add keyframe animation on selected objects.
 
-You can also select, move, delete, or modify key values when the **Story Editor** is not Live.
+	> **Important:** When Story mode is on, changing the position of the unit in the level has no effect. To edit the position of the unit in the level again, exit Story mode. (Click LIVE to toggle the mode on and off.)
+
+You can still select, move, delete, or modify key values when the **Story Editor** is not live.
 
   > **Note:** As you animate units in the **Story Editor**, the animation plays back only in the **Level Viewport**, it cannot playback on connected devices.
-
 
 ##Story controls
 
