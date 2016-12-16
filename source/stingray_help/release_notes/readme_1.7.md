@@ -37,14 +37,10 @@ New “Online Assets” folder in the Asset Browser. You can search, browse, fin
 
 ## Improved Capture Frames Tool
 
-Now works through Story, and through Flow or Lua.
-Start capturing and the test engine captures the current active Story.
+The **Capture Frames** Tool is now integrated into the **Story Editor** workflow, and can also be initiated through Flow or Lua. In the **Story Editor**, create a story and then click ![Capture Frames](../images/icon_capture_frame.png) to open the **Capture Frames** window. Start capturing and the test engine captures the currently active Story.
+New options in the **Capture Frames** window let you select from all available cameras, and set a specific resolution to capture.
 
-New options in the UI let you select from all available cameras, and set specific resolution to capture.
-
-Note: A story can be set to be played in Ping-Pong Mode or in Loop. Capture Frames only works forward or reverse, but not ping pong.
-
-For updated information, see ~{ Capture Frames Tool }~.
+>**Note:** A story can be set to be played in **Ping Pong** Mode or in **Loop**, but capture frames only works in forward or reverse, and not ping pong.
 
 ## Better texture import – automatic compression
 
@@ -58,12 +54,11 @@ You can now edit the length of animation clips by trimming in the Anim Clip Edit
 
 We now support Daydream devices (Google Pixel phone) with our GoogleVR plug-in. See ~{ Supported platforms }~ for updated information.
 
-## what's new in Interop?
+## What's new in Interop?
 
 ### Level Sync updates
 
-You can now sync your 3ds Maxscene to a Stingray level so that you can quickly use and evaluate Stingray with Max scenes.
-Tag assets, send layouts and assets to Stingray.
+A new option to update existing assets when using level sync is now in Maya. In the **Send Level** window (**Singray > Send Selected/Send All >** ![Option Box](../images/opt_box.png)), enable **Update Existing Assets**. When this option is enabled, If geometry is modified in Maya, then the modification gets pushed to Stingray on level sync.
 
 ### Import .exr files as skydome images
 
@@ -77,11 +72,20 @@ Stingray now supports importing .EXR files as skydome images
 
 TBC
 
-## What’s new in Rendering
+## What's new in Rendering
 
-### Physical lights, lumen, and color temperature and hard set falloff
+### Light baking improvements
 
-“setup real-world room with materials and match into stingray.”
+- You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session.
+- Click **Clear** in the **Light Baking** window to quickly delete lightmaps.  
+
+### VR improvements
+
+- The VR Oculus SDK has been upgraded to V1.10.1.0.
+
+##Texture Manager updates
+
+- A new **Category Filter** in the **Texture Manager** lets you filter out cubemaps from your list.
 
 ## What’s New for plugin developers?
 
