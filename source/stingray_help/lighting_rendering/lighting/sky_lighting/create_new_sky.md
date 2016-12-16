@@ -46,6 +46,10 @@ For best results:
 
 	After you import your image into a Stingray texture, make sure that you disable compression for the image in the ~{ Texture Manager }~.
 
+-	[![NEW](../../../images/new.png "What else is new in v1.7?")](../../../release_notes/readme_1.7.html) You can now import EXR files to use as skydome images. When imported, the files with `"hdri"`, `"skydome"` and `"_hdr"` suffix are set the appropriate texture compressions for the HDRI maps. The EXR files should be 32 bit HDRI images.
+
+	Browse and import environment skydome textures from Autodesk using the **Online Assets** folder in the Asset Browser.
+
 ## Fog
 
 If you enable fog for your level, you may want to blend in the fog color toward the horizon in order to enhance the effect of distance in your scene.

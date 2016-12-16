@@ -33,7 +33,8 @@ A new editor lets you work more efficiently on entities.
 This is also built as a plug-in example for developers who want to build something similar.
 
 ## Browse online assets in the Asset Browser
-New “Online Assets” folder in the Asset Browser. You can search, browse, find, and import assets directly from online using the AB.
+
+See the new **Online Assets** folder in the Asset Browser. You can browse, find and import assets directly from online to your project. Right-click an online asset and select **Import Asset** to download and import the asset package to the project folder.
 
 ## Improved Capture Frames Tool
 
@@ -60,9 +61,9 @@ We now support Daydream devices (Google Pixel phone) with our GoogleVR plug-in. 
 
 A new option to update existing assets when using level sync is now in Maya. In the **Send Level** window (**Singray > Send Selected/Send All >** ![Option Box](../images/opt_box.png)), enable **Update Existing Assets**. When this option is enabled, If geometry is modified in Maya, then the modification gets pushed to Stingray on level sync.
 
-### Import .exr files as skydome images
+### Import .EXR files as skydome images
 
-Stingray now supports importing .EXR files as skydome images
+Stingray now supports high definition range EXR files for image based lighting. Import (or drag and drop to Asset Browser) .EXR files to use as skydomes in your level.
 
 ## Support for Substance files
 
@@ -85,7 +86,8 @@ TBC
 
 ##Texture Manager updates
 
-- A new **Category Filter** in the **Texture Manager** lets you filter out cubemaps from your list.
+- A new **Cubemap Category Filter** in the **Texture Manager** lets you filter out cubemaps from your list.
+-	New **HDRI/Skydome** category filter and texture template for imported skydome images.
 
 ## What’s New for plugin developers?
 
