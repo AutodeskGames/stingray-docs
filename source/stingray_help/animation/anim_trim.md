@@ -13,10 +13,8 @@ To trim an animation,
 
       ![](../images/anim_clip_trim.png)
 
-      The **Asset Preview** now plays the trimmed clip.
-
 2. Save the animation clip.
-3. The animation clip editor still contains the full length of the animation, and you can restore the clip or retrim as desired.
+3. The **Asset Preview** now plays the trimmed clip. The animation clip editor still contains the full length of the animation, and you can restore the clip or retrim as desired.
 
 ---
 Related topics:
