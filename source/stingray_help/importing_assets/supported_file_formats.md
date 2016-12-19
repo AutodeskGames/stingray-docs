@@ -1,5 +1,7 @@
 #Supported file formats
 
+![UPDATED](../images/updated.png)
+
 ##Textures
 
 - PNG
