@@ -1,5 +1,7 @@
 # Supported platforms
 
+![UPDATED](../images/updated.png)
+
 Anyone can use Stingray to create games that run on Windows PC, iOS and Android. If you are licensed by Sony as a PlayStation 4 developer, or by Microsoft as an Xbox One developer, you can also create games for these consoles.
 
 This page describes the models of mobile devices Stingray supports. See also the other topics in this section for additional installation requirements for developing games for all of these target platforms.
@@ -48,10 +50,12 @@ Devices running older versions may or may not work as expected.
 
 ## Supported VR development kits
 
+![UPDATED](../images/updated.png)
+
 | HMD Device | Target Frame Rate | VR SDK Version |
 |------------|-------------------|-----|
-| Oculus Dk2 | 75 fps            | 1.7.0.0  |
-| Oculus Rift | 90 fps            | 1.7.0.0  |
+| Oculus Dk2 | 75 fps            | 1.10.0.0  |
+| Oculus Rift | 90 fps            | 1.10.0.0  |
 | HTC Vive       | 90 fps            | 1.0.0  |
 
 >**Note:** The Oculus Remote and Oculus Touch Controller are also supported.

@@ -38,8 +38,7 @@ See the new **Online Assets** folder in the Asset Browser. You can browse, find 
 
 ## Improved Capture Frames Tool
 
-The **Capture Frames** Tool is now integrated into the **Story Editor** workflow, and can also be initiated through Flow or Lua. In the **Story Editor**, create a story and then click ![Capture Frames](../images/icon_capture_frame.png) to open the **Capture Frames** window. Start capturing and the test engine captures the currently active Story.
-New options in the **Capture Frames** window let you select from all available cameras, and set a specific resolution to capture.
+The **Capture Frames** Tool is now integrated into the **Story Editor** workflow, and can also be initiated through Flow or Lua. New options in the **Capture Frames** window let you select from all available cameras, and set a specific resolution to capture. In the **Story Editor**, create a story and then click ![Capture Frames](../images/icon_capture_frame.png) to open the **Capture Frames** window. Start capturing and the test engine captures the currently active Story.
 
 >**Note:** A story can be set to be played in **Ping Pong** Mode or in **Loop**, but capture frames only works in forward or reverse, and not ping pong.
 
@@ -59,7 +58,7 @@ We now support Daydream devices (Google Pixel phone) with our GoogleVR plug-in. 
 
 ### Level Sync updates
 
-A new option to update existing assets when using level sync is now in Maya. In the **Send Level** window (**Singray > Send Selected/Send All >** ![Option Box](../images/opt_box.png)), enable **Update Existing Assets**. When this option is enabled, If geometry is modified in Maya, then the modification gets pushed to Stingray on level sync.
+You can now update existing assets when using level sync with Maya. When **Update Existing Assets** is enabled in the **Send Level** window (**Singray > Send Selected/Send All >** ![Option Box](../images/opt_box.png)), modifications to geometry in Maya get pushed to Stingray on level sync.
 
 ### Import .EXR files as skydome images
 
@@ -77,12 +76,12 @@ TBC
 
 ### Light baking improvements
 
-- You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session.
-- Click **Clear** in the **Light Baking** window to quickly delete lightmaps.  
+- You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See ~{ Bake lightmaps }~.
+- Click **Clear** in the **Light Baking** window to quickly delete and unmap all lightmaps on disk.  
 
 ### VR improvements
 
-- The VR Oculus SDK has been upgraded to V1.10.1.0.
+- The VR Oculus SDK has been upgraded to V1.10.1.0. See ~{ Supported platforms }~.
 
 ##Texture Manager updates
 
@@ -133,11 +132,11 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 > **Note**: We recommended you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
-- **GAME-X Heading**
+- **GAME-19871 Too easy to remove lightmaps, this needs a popup with a warning**
 
-	Paragraph.
+	The new **Clear** button in the **Light Baking** window deletes all lightmaps on disk and unmaps them. This is a powerful operation that requires a MessageBox asking if the user actually intended to perform this action.
 
-	**Workaround:** Placeholder.
+	**Workaround:** None.
 
 [Return to top](#top)
 
