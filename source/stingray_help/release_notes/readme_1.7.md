@@ -34,7 +34,7 @@ This is also built as a plug-in example for developers who want to build somethi
 
 ## Browse online assets in the Asset Browser
 
-See the new **Online Assets** folder in the Asset Browser. You can browse, find and import assets directly from online to your project. Right-click an online asset and select **Import Asset** to download and import the asset package to the project folder.
+See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse, find and import assets directly from online to your project. Right-click an online asset and select **Import Asset** to download and import the asset package to the project folder. Updated topic include: ~{ Download assets and example projects }~.
 
 ## Improved Capture Frames Tool
 
@@ -62,7 +62,7 @@ You can now update existing assets when using level sync with Maya. When **Updat
 
 ### Import .EXR files as skydome images
 
-Stingray now supports high definition range EXR files for image based lighting. Import (or drag and drop to Asset Browser) .EXR files to use as skydomes in your level.
+Stingray now supports high definition range EXR files for image based lighting. Import (or drag and drop to Asset Browser) .EXR files to use as skydomes in your level. Updated topics include: ~{ Supported file formats }~ and ~{ Create a skydome texture }~.
 
 ## Support for Substance files
 
