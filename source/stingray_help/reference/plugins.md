@@ -4,12 +4,6 @@ The Stingray runtime game engine and editing tools are designed to be extensible
 
 Stingray includes standard plug-ins for several middleware game technologies, both from Autodesk and from other companies:
 
-*	Autodesk Beast
-
-	Beast global illumination technology is implemented in Stingray to let you create natural lighting with little effort. Refer to the ~{ Lighting and rendering }~ section of the Stingray documentation for information on working with Beast.
-
-	For the latest Beast SDK documentation, visit <a href="http://www.autodesk.com/beast-sdkdoc-2015-enu" target="_blank">www.autodesk.com/beast-sdkdoc-2015-enu</a>.
-
 *	Autodesk Gameware Navigation
 
 	Autodesk Gameware Navigation is a middleware for Artificial Intelligence (AI) in 3D video games and simulations: it helps your game-controlled characters (NPCs) find and follow paths from place to place in the game world, avoiding collisions with each other and with other dynamic obstacles; and it provides spatial analysis tools for getting information about the game world. For help on using this technology in Stingray, refer to the section ~{ AI and pathfinding }~.

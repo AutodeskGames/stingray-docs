@@ -126,7 +126,7 @@
 
 ###LIGHTING AND SHADING
 
-(See **Create > Lighting**.)
+(See **Create > Light**.)
 
 **Shader Graph Editor**
 
@@ -136,7 +136,7 @@
 
 >See also ~{ Lighting and Rendering }~.
 
->**Bake Lightmaps** See ~{ Bake lightmaps }~.
+>**Light Baking** See ~{ Bake lightmaps }~.
 
 >**Clear Reflection Probes** See ~{ Reflections }~.
 
