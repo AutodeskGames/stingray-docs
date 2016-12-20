@@ -1,4 +1,4 @@
-# About baking with the Stingray baker
+# Baking with the Stingray baker
 
 The Stingray light baker is the light baking system built in to Stingray.
 

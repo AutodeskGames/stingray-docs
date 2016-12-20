@@ -19,7 +19,7 @@ The following properties display in the ~{ Property Editor }~ when you create or
 
 The material resource for the terrain.
 
-###Beast Lightmapping
+###Lightmap unit settings
 
 Enables or disables light mapping.
 

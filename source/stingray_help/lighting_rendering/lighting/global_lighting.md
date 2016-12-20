@@ -46,7 +46,7 @@ For example, in the image below, the reflection probe (the sphere on the right) 
 
 	-	Use the settings next to **Reflections Tint** to control the color and intensity of the specular reflections in your level.
 
-1.	Set up global radiance (currently used only by the Stingray and Beast light bakers):
+1.	Set up global radiance (currently used only by the Stingray light baker):
 
 	-	Set the **Global Radiance Map** to point to the `<probe_name>_radiance_bake` texture baked for your probe in the `<level_name>-cubemaps` folder.
 
