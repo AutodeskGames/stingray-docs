@@ -20,7 +20,7 @@ To generate lightmaps for your level, do the following:
 
 1.	In the **Light Baking** window, set the baking options.
 
-		> **Note:** Hover over the other options in this dialog box for descriptions of each attribute.
+	> **Note:** Hover over the other options in this dialog box for descriptions of each attribute.
 
 1.	[![NEW](../../../images/new.png "What else is new in v1.7?")](../../../release_notes/readme_1.7.html) Click **Bake** to bake your entire scene or **Bake Selection** to bake part of your scene.
 
