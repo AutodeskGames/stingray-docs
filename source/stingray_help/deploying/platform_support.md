@@ -54,8 +54,8 @@ Devices running older versions may or may not work as expected.
 
 | HMD Device | Target Frame Rate | VR SDK Version |
 |------------|-------------------|-----|
-| Oculus Dk2 | 75 fps            | 1.10.0.0  |
-| Oculus Rift | 90 fps            | 1.10.0.0  |
+| Oculus Dk2 | 75 fps            | 1.10.1.0  |
+| Oculus Rift | 90 fps            | 1.10.1.0  |
 | HTC Vive       | 90 fps            | 1.0.0  |
 
 >**Note:** The Oculus Remote and Oculus Touch Controller are also supported.
