@@ -46,6 +46,14 @@ The **Capture Frames** Tool is now integrated into the **Story Editor** workflow
 
 Textures are now automatically compressed when you import them in Stingray. Depending on the texture type, Stingray assigns the texture template and compression settings for the imported textures for each platform. Texture compressions are applied by texture file suffix match or by image analysis. You can still tweak the textures as required, but you no longer need to manually compress textures on import. For details, see ~{ Import textures}~ and ~{ Create a texture template }~.
 
+## Import font files
+
+You can now import font files to generate font resources to render text with sharp edges and preserve them when scaling. When you import font files, this generates the multi-channel signed distance field resources to display the font in your project.
+
+## Copy and paste keyframes in Story Editor
+
+Copy keyframes and paste them on the current time in the timeline or on the cursor position using either the hotkeys or by right click context menu in the **Story Editor**. You can also copy keys from multiple tracks and paste them on other tracks based on the order of track selection.
+
 ## Trim animation clips
 
 You can now edit the length of animation clips by trimming in the Anim Clip Editor or by modifying the trim values in the ~{ Animation clip properties }~. See ~{ Trim animation clips }~.
@@ -77,7 +85,8 @@ TBC
 ### Light baking improvements
 
 - You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See ~{ Bake lightmaps }~.
-- Click **Clear** in the **Light Baking** window to quickly delete and unmap all lightmaps on disk.  
+- Click **Clear** in the **Light Baking** window to quickly delete and unmap all lightmaps on disk.
+-	Beast is now deprecated, use Stingray light baker instead.  
 
 ### VR improvements
 
