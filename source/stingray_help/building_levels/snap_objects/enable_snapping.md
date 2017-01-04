@@ -6,7 +6,7 @@ You can use the Move tool to translate an object along the grid in increments. Y
 
 1. Do one of the following:
 	- In the ~{ Toolbar }~, click ![](../../images/icon_snap.png) (Hotkey: X).
-	- In the main menu, select **Edit > Snapping > Global Snap**.
+	- In the main menu, select **Edit > Snapping > Snapping Enabled**.
 
 **To enable or disable rotation snapping**
 

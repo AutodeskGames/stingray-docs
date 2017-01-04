@@ -2,7 +2,7 @@
 
 This topic describes how to set up a local revision of the Stingray source code on your computer with the libraries required to rebuild the engine and editing tools.
 
-Each revision of the Stingray source code depends on a specific set of base libraries. This includes libraries for middleware SDKs like HumanIK and Beast, digital content creation tools like 3ds Max and Maya, languages like Lua and GLSL, utilities like QT and LuaJIT, etc.
+Each revision of the Stingray source code depends on a specific set of base libraries. This includes libraries for middleware SDKs like HumanIK, digital content creation tools like 3ds Max and Maya, languages like Lua and GLSL, utilities like QT and LuaJIT, etc.
 
 Each time you get a new local revision of the source code, you should use one of the methods below to get the library versions that correspond to the revision you have checked out.
 

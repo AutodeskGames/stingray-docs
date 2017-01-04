@@ -14,6 +14,8 @@
 
 5. Edit keys as needed, using either the curve editing view, or the key editing view. (Click ![](../images/icon_storyEd_wrench.png) or ![](../images/icon_storyEd_keyEditor.png) to switch between view panels.)
 
+	>	[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Copy a key (or multiple keys) and paste in a track (or multiple tracks) using Ctrl + C, Ctrl + X, Ctrl + V hotkeys or right click context menu options. Use the time slider to drag to the position to paste in a track. The keys are pasted on multiple tracks in the order of tracks selected.
+
 When you're finished editing animation for the unit, click ![](../images/icon_storyEd_LIVE.png) again to disable the **Story Editor** and go back to editing your level.
 
 ## Important notes about working with the **Story Editor**
