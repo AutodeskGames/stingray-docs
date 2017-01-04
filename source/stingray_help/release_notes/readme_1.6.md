@@ -77,7 +77,7 @@ The following Improvements to light baking and post-processing effects (SSAO, SS
 - Normalization of lightmap resolution is now based on the UV space area.
 - UV seam fixup now automatically runs as a post-processing effect when you bake lightmaps.
 - Improved interaction with a lightmapped level, such as material management and object manipulations, without losing the lightmap.
-- The Stingray lightmap baker interface now reflects more meaningful baker settings. See ~{ About baking with the Stingray baker }~ for the updated options.
+- The Stingray lightmap baker interface now reflects more meaningful baker settings. See ~{ Baking with the Stingray baker }~ for the updated options.
 
 ### VR Improvements
 

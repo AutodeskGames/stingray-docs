@@ -130,7 +130,7 @@ When you bake the lighting for a level, you generate additional textures that yo
 
 Try using only dynamic lighting in conjunction with the global diffuse map provided by the shading environment. Doing this will let you eliminate the lightmap textures altogether. Or, you can restrict light baking to only some important objects in the scene, and leave others to use the global baked diffuse lighting. See ~{ Global environment lighting }~.
 
-If you must bake lightmaps in order to get the look you want, but you still need to lower the memory consumption of the textures, you can lower the *lightmap resolution* setting in the **Light Baking** dialog. This will make the generated textures smaller in size. See ~{ About baking with the Stingray baker }~.
+If you must bake lightmaps in order to get the look you want, but you still need to lower the memory consumption of the textures, you can lower the *lightmap resolution* setting in the **Light Baking** dialog. This will make the generated textures smaller in size. See ~{ Baking with the Stingray baker }~.
 
 After this step, you can control the texture compression and mip map generation settings for your lightmaps in the **Texture Manager** just like any other texture resources in your project. See [Optimize textures] above.
 
