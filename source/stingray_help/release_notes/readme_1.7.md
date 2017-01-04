@@ -27,11 +27,6 @@ Sections in this topic:
 
 * * *
 
-## Entity Editor
-
-A new editor lets you work more efficiently on entities.  
-This is also built as a plug-in example for developers who want to build something similar.
-
 ## Browse online assets in the Asset Browser
 
 See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse, find and import assets directly from online to your project. Right-click an online asset and select **Import Asset** to download and import the asset package to the project folder. Updated topic include: ~{ Download assets and example projects }~.

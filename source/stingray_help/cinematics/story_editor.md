@@ -16,7 +16,7 @@ Refer to the sections below for more detail on each area.
 
 Click to toggle Story mode. When on, the **Story Editor** is "live" so you can start to add keyframe animation on selected objects.
 
-	> **Important:** When Story mode is on, changing the position of the unit in the level has no effect. To edit the position of the unit in the level again, exit Story mode. (Click LIVE to toggle the mode on and off.)
+  > **Important:** When Story mode is on, changing the position of the unit in the level has no effect. To edit the position of the unit in the level again, exit Story mode. (Click LIVE to toggle the mode on and off.)
 
 You can still select, move, delete, or modify key values when the **Story Editor** is not live.
 
