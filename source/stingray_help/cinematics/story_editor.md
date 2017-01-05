@@ -42,6 +42,8 @@ The **Story Editor** toolbar includes the following:
 
 Use the playback controls to preview animations in the **Level Viewport**, as you edit the unit animation in the **Story Editor**.
 
+Use ![](../images/icon_story_forwardPlay.png) to play animation in forward direction and ![](../images/icon_story_reversePlay.png) to play in reverse direction.
+
 **Snap**
 
 ![](../images/icon_storyEd_snapping.png)
