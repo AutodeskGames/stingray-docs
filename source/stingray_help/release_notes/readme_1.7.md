@@ -52,7 +52,7 @@ Stingray 1.7 introduces our GoogleVR plug-in, which adds support for Google Card
 
 To support rendering your VR projects on these devices, the **Templates** tab in the **Project Manager** now includes two templates: VR Google and VR Gear.
 
-![](../images/wn_templates.png)
+![](../images/wn-templates.png)
 
 Use these templates to start building your VR projects for Google Daydream devices and GearVR devices.
 
