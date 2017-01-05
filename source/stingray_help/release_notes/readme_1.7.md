@@ -87,6 +87,14 @@ TBC
 
 - The VR Oculus SDK has been upgraded to V1.10.1.0. See ~{ Supported platforms }~.
 
+## Tesselation support
+
+You can now use tesselation for standard base node materials. Use the **Tesselation Factor** input on the base node to control the tesselation factor of a surface.
+
+## Negative scale support
+
+Stingray shaders now support negative scale.
+
 ##Texture Manager updates
 
 - A new **Cubemap Category Filter** in the **Texture Manager** lets you filter out cubemaps from your list.
