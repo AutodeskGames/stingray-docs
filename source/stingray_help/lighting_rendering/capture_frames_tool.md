@@ -1,8 +1,12 @@
 #Capture Frames Tool
 
-The **Capture Frames** Tool lets you render frames to disk. The following **Capture Settings** can be adjusted to control your output. See ~{ Capture frames to disk }~ for more information.
+![UPDATED](../images/updated.png)
 
-> **Note:** The Capture Frames Tool is a plugin and must be loaded from the **Plugin Manager**.
+The **Capture Frames** Tool lets you render frames to disk. The tool is integrated into the **Story Editor** workflow, and can also be initiated through Flow or Lua. For more information on using Flow, see
+
+The following **Capture Settings** can be adjusted to control your output. See ~{ Capture frames to disk }~ for more information.
+
+> **Note:** Click ![](../images/icon_capture_frame.png) in the **Story Editor** to open the **Capture Frames** window.
 
 ![](../images/capture_settings.png)
 
@@ -12,8 +16,19 @@ The **Capture Frames** Tool lets you render frames to disk. The following **Capt
 <dd>Lets you select the source to capture: your test engine or one of the editor viewports.</dd>
 </dl>
 
-##General
+##Capture Options
 <dl>
+
+<dt>Default Camera</dt>
+<dd>[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Lets you select the camera to capture. </dd>
+
+</dl>
+
+##Capture settings
+<dl>
+
+<dt>Settings File</dt>
+<dd>[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Lets you create a new settings file or open an existing file.</dd>
 
 <dt>Output Directory</dt>
 <dd>The directory where your output is saved.</dd>
@@ -30,12 +45,8 @@ The **Capture Frames** Tool lets you render frames to disk. The following **Capt
 
 > **Note:** The rendered OpenEXR frames uses ZIP compression by default.
 
-</dl>
-
-##Capture settings
-<dl>
 <dt>Frame Rate</dt>
 <dd>The frame rate that is used to simulate the game or editor playback while capturing.</dd>
 
-<dt>Render Frames to Disk</dt>
-<dd>Click **Start Capturing** or **Stop Capturing** to begin or end your capture.</dd>
+<dt>Resolution</dt>
+<dd>[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Lets you set a resolution for your capture. Select 1920 x 1080 (default), 1280 x 780, or enter a custom resolution.</dd>

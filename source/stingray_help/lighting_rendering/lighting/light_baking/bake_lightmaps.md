@@ -24,6 +24,8 @@ To generate lightmaps for your level, do the following:
 
 1.	[![NEW](../../../images/new.png "What else is new in v1.7?")](../../../release_notes/readme_1.7.html) Click **Bake** to bake your entire scene or **Bake Selection** to bake part of your scene.
 
+
+
 ## Bake results
 
 Stingray creates a new subfolder in the same folder as the current level's *.level* resource file, named `<level_name>-lightmaps`. In this folder, it saves a set of textures that contain the lighting for the bake targets in your scene. The number of lighmaps required is generated automatically, depending on the number of different bake targets in the scene.
@@ -31,6 +33,8 @@ Stingray creates a new subfolder in the same folder as the current level's *.lev
 Next to your level's resource file, Stingray also creates a *.baked_lighting* resource. This file records the lightmaps generated for your level, and which meshes each map is associated with.
 
 You don't have to do anything with the generated lightmap textures or the *.baked_lighting* file in order for the lightmaps to show up in your game; Stingray handles it automatically. However, you might want to use the ~{ Texture Manager }~ to configure the way the textures are processed and compressed when they are compiled for each platform. Baked lightmaps automatically get tagged with the `Lightmap` texture category, so you can easily find them in the **Texture Editor**.
+
+>**Tip:** [![NEW](../../../images/new.png "What else is new in v1.7?")](../../../release_notes/readme_1.7.html) To delete all baked lightmaps, click **Clear** (**Window > Lighting > Light Baking**). Lightmaps are removed and no longer appear in the `<level_name>-lightmaps` subfolder.
 
 ## Visualizing bake results
 

@@ -32,6 +32,7 @@ Sections in this topic:
 See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse, find and import assets directly from online to your project. Right-click an online asset and select **Import Asset** to download and import the asset package to the project folder. Updated topic include: ~{ Download assets and example projects }~.
 
 ## Improved Capture Frames Tool
+<a name="capture-frames"></a>
 
 The **Capture Frames** Tool is now integrated into the **Story Editor** workflow, and can also be initiated through Flow or Lua. New options in the **Capture Frames** window let you select from all available cameras, and set a specific resolution to capture. In the **Story Editor**, create a story and then click ![Capture Frames](../images/icon_capture_frame.png) to open the **Capture Frames** window. Start capturing and the test engine captures the currently active Story.
 
@@ -61,7 +62,7 @@ In previous versions of Stingray, you created and edited particle effects using 
 
 ## Better network workflows: Run multiple local game instances
 
-The **Connections** panel now lets you add multiple localhost PC targets, which means you can automatically start multiple targets with separate command lines on your local machine when you click **Run Project** ![](../images/icon_runProject.png). This makes it easier to debug and look at the console output for multiple targets using the editor engine instance dropdowns. See also ~{ Using the Connections panel }~. 
+The **Connections** panel now lets you add multiple localhost PC targets, which means you can automatically start multiple targets with separate command lines on your local machine when you click **Run Project** ![](../images/icon_runProject.png). This makes it easier to debug and look at the console output for multiple targets using the editor engine instance dropdowns. See also ~{ Using the Connections panel }~.
 
 ## Import font files
 
@@ -75,9 +76,11 @@ To import fonts:
 2. Browse to select a font and click **Open**.
 3. In the window that appears, enable the **Distance Field Options** check box, change any settings as required, then click **Import**.
 
-## Copy and paste keyframes in Story Editor
+## Story Editor improvements
 
-Copy keyframes and paste them on the current time in the timeline or on the cursor position using either the hotkeys or by right click context menu in the **Story Editor**. You can also copy keys from multiple tracks and paste them on other tracks based on the order of track selection.
+-	Copy keyframes and paste them on the current time in the timeline or on the cursor position using either the hotkeys or by right click context menu in the **Story Editor**. You can also copy keys from multiple tracks and paste them on other tracks based on the order of track selection. Updated topics include ~{ Create simple animations with the Story Editor }~ and ~{ Story Editor hotkeys }~.
+-	New reverse play icon ![](../images/icon_story_reversePlay.png) to play stories in reverse direction.
+- A Capture Frame Tool icon ![](../images/icon_capture_frame.png) to access Capture Frame Settings; a story must be created to enable this mode. See [Improved Capture Frames Tool](#capture-frames).
 
 ## Trim animation clips
 
@@ -136,6 +139,14 @@ Stingray now supports high definition range EXR files for image based lighting. 
 - You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See ~{ Bake lightmaps }~.
 - Click **Clear** in the **Light Baking** window to quickly delete and unmap all lightmaps on disk.
 -	Beast is now deprecated, use Stingray light baker instead.  
+
+## Tesselation support
+
+You can now use tesselation for standard base node materials. Use the **Tesselation Factor** input on the base node to control the tesselation factor of a surface.
+
+## Negative scale support
+
+Stingray shaders now support negative scale.
 
 ##Texture Manager updates
 
