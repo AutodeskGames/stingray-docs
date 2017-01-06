@@ -23,7 +23,7 @@ Sections in this topic:
 
 	If you're working on a project that you started in an earlier version of Stingray, this section lists the steps you may need to take in order to successfully upgrade to the latest version.
 
-	For example, with Stingray 1.7 we upgraded to Wwise version 2016.1.3, so you'll need to regenerate sound banks for your existing projects. 
+	For example, with Stingray 1.7 we upgraded to Wwise version 2016.1.3, so you'll need to regenerate sound banks for your existing projects.
 
 ## What's New
 
@@ -161,27 +161,60 @@ Stingray shaders now support negative scale.
 
 ### Animation
 
+- GAME-19634 Anim Clip Editor: Cannot rename a trigger or beat
+- GAME-19323 Anim Controller Editor: Improve error reporting for ShortcutState when target is another ShortcutState
+- GAME-18733 Anim Controller Editor: Performance improvements
+- GAME-15281 Anim Controller Editor: Prevent mouseover highlighting when the mouse is outside of Node view
+
 ### Asset Browser
+
+- GAME-19647 Opening materials from Asset Browser fails in some cases
 
 ### Entities
 
 ### Flow
 
+- GAME-19671 Nodes with unconnected or unsolvable inputs should reset output to a default value
+- Compare Objects node should not do memcmp on unit references
+
 ### General
+
+- GAME-20074 (All node editors) Pressing Esc while moving nodes should cancel the move
+- GAME-19328 Dragging a capture_settings asset into the viewport causes an error
+- GAME-19160 Shader Graph Editor: Confirmation buttons overlap input field in dialog box
+- GAME-19125 Hotkeys for tool switching (W, E, R) don't work when dragging an object
 
 ### Interop
 
-###Lua
+### Lua
 
-###Particles
+### Particles
 
 ### Platform-specific
+
+### Plug-ins
+
+- GAME-19331 Stingray Editor plugin can't be updated using the Plugin Manager
+
+### Project Manager
+
+- GAME-20150 Errors when adding/opening projects with read-only project files
+- GAME-19574 Pressing Esc doesn't close the Project Manager window when it's launched from the File menu or Alt-F7
+- GAME-18462 Can't rename downloaded projects
+- GAME-15240 Need an error when a directory is missing the root directory
+- GAME-11203 Project paths are reset when removing non-existent projects
 
 ### Rendering
 
 ### Scaleform Studio
 
 ### Script Editor
+
+- GAME-19141 Evaluate in Engine doesn't print to Log Console
+
+### Viewport
+
+- GAME-19845 Viewport seems to stall when navigating with WASD keys
 
 [Return to top](#top)
 
