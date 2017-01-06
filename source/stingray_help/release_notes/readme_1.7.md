@@ -23,6 +23,8 @@ Sections in this topic:
 
 	If you're working on a project that you started in an earlier version of Stingray, this section lists the steps you may need to take in order to successfully upgrade to the latest version.
 
+	For example, with Stingray 1.7 we upgraded to Wwise version 2016.1.3, so you'll need to regenerate sound banks for your existing projects. 
+
 ## What's New
 
 * * *
@@ -191,13 +193,25 @@ This section lists known limitations and workarounds for Stingray.
 
 Unless otherwise noted in the **What's Fixed** section, please be aware that this release contains the same **Known Limitations** described in the previous versions of Stingray Release Notes.
 
-> **Note**: We recommended you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
+> **Important**: We recommended you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
 - **GAME-19871 Too easy to remove lightmaps, this needs a popup with a warning**
 
-	The new **Clear** button in the **Light Baking** window deletes all lightmaps on disk and unmaps them. This is a powerful operation that requires a MessageBox asking if the user actually intended to perform this action.
+	The new **Clear** button in the **Light Baking** window deletes all lightmaps on disk and unmaps them.
 
-	**Workaround:** None.
+	**Workaround:** Unfortunately there's no workaround for this right now, so we wanted to warn you in advance. By the time we release 1.7, we'll have a pop-up to make sure you actually want to do this.
+
+	- **GAME-19936 Project compile appears to hang during UV unwrapping**
+
+	When opening a project that contains complex meshes, the project compilation process appears to hang during UV unwrapping.
+
+	**Workaround:** Prepare complex meshes prior to exporting by manually unwrapping UVs in your DCC tool.
+
+	- **GAME-19975 Stingray hangs and prevents any other window from coming to the forefront**
+
+	We don't have consistent repro steps for this one, so if you see it let us know. It seems to happen for some people when Alt + tabbing between windows.
+
+	**Workaround:** Close Stingray using Windows Task Manager. If Task Manager will not come to the forefront, you may need to right-click it in the taskbar to close it, and then restart the Task Manager.
 
 [Return to top](#top)
 
@@ -208,6 +222,24 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 The full installation guide for Autodesk products including Stingray is included in the Stingray online help, [here](http://www.autodesk.com/stingray-install-ENU "here").
 
 This section explains the improvements and fixes that require specific upgrade steps for users currently using a previous version of Stingray.
+
+### Wwise version update
+
+Stingray 1.7 is upgraded to use Wwise version 2016.1.3. If you have an existing project built in previous versions of Stingray, you'll need to manually regenerate sound banks in Stingray 1.7 after migrating your project. (If you notice several Wwise-related errors during compilation when you load an existing project in Stingray 1.7, this is why.)
+
+For new projects created with Stingray 1.7 templates, no extra action is required for the Wwise update.
+
+**To regenerate sound banks:**
+
+1. Load your existing project in Stingray and click Yes to migrate it for Stingray 1.7.
+
+> **Note**: We recommended that you always back up existing projects before migrating. During migration Stingray does create a .backup file containing the original contents of each migrated file, which you can delete after successfully migrating your project.
+
+2. Select **Window > Wwise Audio** to open the authoring tool.
+
+3. In Wwise, press F7 to switch to the Soundbank layout, then click **Regenerate sound banks**.
+
+(See also ~{ Generate sound banks }~.)
 
 ### Lua API changes
 
