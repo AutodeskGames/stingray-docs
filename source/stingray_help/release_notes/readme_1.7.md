@@ -193,7 +193,7 @@ This section lists known limitations and workarounds for Stingray.
 
 Unless otherwise noted in the **What's Fixed** section, please be aware that this release contains the same **Known Limitations** described in the previous versions of Stingray Release Notes.
 
-> **Important**: We recommended you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
+> **Important**: We recommend you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
 - **GAME-19871 Too easy to remove lightmaps, this needs a popup with a warning**
 
