@@ -169,8 +169,35 @@ Stingray shaders now support negative scale.
 ### Asset Browser
 
 - GAME-19647 Opening materials from Asset Browser fails in some cases
+- GAME-19393 Cannot import by dragging when the list view displays with a scrollbar
+
+### Audio/Wwise
+
+- GAME-19082 Selecting the default Wwise project in the Asset Browser causes "unhandled exception Error"
+
+### Content (Templates)
+
+- GAME-20096 VR HTC Vive template: baseballs have bad normal maps
+- GAME-19034 Two events triggered when pressing mouse or keyboard buttons on Steam VR template
+- GAME-18744 Character template debug menu not showing
+
+### Engine
+
+- GAME-19635 Crash when reverse playing simple animations
+- GAME-19607 Scale physics Actors when scaling a Unit with physics enabled
+GAME-19438 Wwise rare crash when sounds finish playing while other sounds start
+- GAME-18976 FlowData in plugin API does not match engine definition
+- GAME-18855 Fixed mixup between deferred and blocking termination calls when shutting down Wwise
+- GAME-18804 Mouse deltas not received when multiple windows are created
+- GAME-18721 HTML5 (WebGL2): Memory corruption while playing game
+- GAME-18710 Unspawn callbacks from scatter system have no unit reference
+- GAME-18354 A space in the 'SR_LIB_DIR' path causes build error
+- GAME-17767 Regular lua doesn't work with 32-bit windows
+- GAME-17396 Optimize WebGL performance
 
 ### Entities
+
+- GAME-19073	Reflection probe unit dependency not tracked correctly
 
 ### Flow
 
@@ -180,21 +207,44 @@ Stingray shaders now support negative scale.
 ### General
 
 - GAME-20074 (All node editors) Pressing Esc while moving nodes should cancel the move
+- GAME-13654 (All node editors) Double-clicking shouldn't trigger if the mouse is moved between clicks
 - GAME-19328 Dragging a capture_settings asset into the viewport causes an error
-- GAME-19160 Shader Graph Editor: Confirmation buttons overlap input field in dialog box
+- GAME-19160/GAME-19063 OK and Cancel buttons overlap input fields in some dialog boxes
 - GAME-19125 Hotkeys for tool switching (W, E, R) don't work when dragging an object
+- GAME-18222 Units created with Scatter Tool not visible in new level
+- GAME-16496 Project Manager: Switching to large icon view doesn't make icons larger
+- GAME-7740 Panning in the viewport by middle-dragging shouldn't activate the transformation manipulator of a selected unit
+- GAME-20269 Deployer: Package Project button disabled when no targets are selected in Connections panel
+- GAME-14091 Color picker: Color history section doesn't allow storing custom colors and behavior is erratic
+- GAME-14087 Color picker: Clicking the left-most tab the first time (Ring, RGB) doesn't work
+- GAME-13518 Color picker: RGB sliders are hard to drag
+- GAME-10014 Cursor appears when changing the camera navigation speed using the mouse wheel
+- GAME-19902	Navigation Lab - Run samples fails
+- GAME-20026 Level Editor: Can't cancel marquee selection by pressing Esc (to preserve the existing selection)
+- GAME-18890 Level Editor: Snap to Grid is dysfunctional
 
 ### Interop
 
-### Lua
+- GAME-19789 Importing .fbx into a core folder imports to wrong location
+- GAME-19346 Warning: "Performance: Skin influence count was raised..." does not indicate which meshes/materials have influence count problems
+- GAME-18828 File > Batch Import incorrectly includes .s2d images
+- GAME-18558 Vcache Optimizer warning log does not user inform user which content is causing the issue
+- GAME-16385 DCC link Maya plugin is not enabled after installation
 
 ### Particles
 
-### Platform-specific
+- GAME-18725 Can no longer create/edit particle variables when editing particles
+- GAME-15094 Particle graphs can end up not going from 0-1 over lifetime, specify multiple values at the same point in lifetime, and/or be misordered
+- GAME-14700 Property editor: caption for a Particle property graph node appears on wrong graph
+- GAME-14689 Particle: Undo of removal of billboard component is not reflected in the Asset Preview
+- GAME-14109 Particle color gradient not showing in the effect (particles render as white)
+- GAME-13754 For a new particle effect the property editor should show the system expanded, not collapsed
+- GAME-13753 Particle effect default settings should be more user-friendly (not just show a static square)
 
 ### Plug-ins
 
 - GAME-19331 Stingray Editor plugin can't be updated using the Plugin Manager
+- GAME-16471 Plugin information in the Plugin Manager doesn't refresh after being updated
 
 ### Project Manager
 
@@ -206,7 +256,46 @@ Stingray shaders now support negative scale.
 
 ### Rendering
 
+- GAME-19743 Negatively scaled objects look inverted on webGL
+- GAME-19013 TAA overblurry in VR
+- GAME-18992 Box lights not working in VR
+GAME-18973 VR: Crash when unloading a resource that has been linked to tracker
+- GAME-18972 SSR reprojection ghosting under camera roll
+- GAME-18971 Popping reflection probes on transparent surfaces
+- GAME-18967 Threshold too low on Oculus Touch Triggers
+- GAME-18915 Light flickers around edges of spotlight on Oculus
+- GAME-18840 GL: depth of field effect causes over lighting
+- GAME-18815 iOS: instance merger render command crash
+- GAME-18787 Android: Run Project of character-template project works on a Nexus 9 but fails on an Nvidia Shield
+- GAME-18763 Four viewports not rendering as expected
+- GAME-18586 SSAO jittering and flickering
+- GAME-18581 SSAO artifacts on cylindrical objects
+- GAME-18468 Crash in condition_language.cpp
+- GAME-18417 Lighting > AO shading mode is broken or deprecated
+- GAME-18410 Unit loses its light bake when reloaded
+- GAME-17978 Baking shader permutation should be kept when assigning materials using set material flow node
+- GAME-17751 Lightmap mesh settings "Receives" is broken
+- GAME-17663 Selection outlines doesn't work on PS4
+- GAME-16387 Stingray baker: objects may receive old lightmaps when canceling a bake
+- GAME-16313 No viable way to delete lightmaps
+- GAME-13751 Crash in renderer, due to sleep mode
+- GAME-12651 Shadow flickering
+- GAME-11318 Shadowmap bug with high FOV and short far range
+- GAME-10641 Drag and Drop Materials clear lightbakes on objects
+- GAME-19535 Unit Editor crashes when opening the color picker
+- GAME-16295	Connections to light maps are lost with Ctrl+F6 'restart engine'
+
 ### Scaleform Studio
+
+- GAME-19041 Problems with display and selection when dropdown menus are stacked close together
+- GAME-16456 For projects on WebGL, switching in and out of fullscreen mode breaks the UI
+- GAME-18891 Warning/error when importing a Scaleform project
+
+### Scatter Tool
+
+GAME-20392 After deleting a scatter brush trying to create a new one with the same name in the same folder does not work
+GAME-18224 Deleting scatter on a unit (non-terrain) deletes all scatter
+GAME-16594 Scatter doesn't follow the deformation of a terrain if the deformation occurs after painting the scatter
 
 ### Script Editor
 
