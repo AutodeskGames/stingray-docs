@@ -152,8 +152,8 @@ Stingray shaders now support negative scale.
 
 ##Texture Manager updates
 
-- A new **Cubemap Category Filter** in the **Texture Manager** lets you filter out cubemaps from your list.
--	New **HDRI/Skydome** category filter and texture template for imported skydome images.
+- New **Cubemap** and **HDRI/Skydome** category filters
+-	New texture template for imported skydome images
 
 [Return to top](#top)
 
