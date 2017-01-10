@@ -30,22 +30,32 @@ This template defaults back to core/appkit and loads minimal level with a simple
 
 This template is a simple vehicle level. It contains a driveable four-wheeled vehicle and the accompanying Lua script to set up the vehicle and the driving physics.
 
-## VR Oculus Touch
+## VR Template projects
 
-This template has a simple VR level with a floor plan to walk around in. Currently for Windows only. It also includes a basic script that lets you spawn a free camera and a walk around camera (again, swap the two by pressing F2), and Oculus flow nodes.
+Stingray includes the following templates for rendering in VR devices:
+
+<dl>
+<dt>VR Oculus Touch</dt>
+<dd>This template has a simple VR level with a floor plan to walk around in. Currently for Windows only. It also includes a basic script that lets you spawn a free camera and a walk around camera (again, swap the two by pressing F2), and Oculus flow nodes.
 
 Use an Oculus Rift for projects based on this template.
 
 The VR Oculus Touch template supports input from the Oculus Remote and Oculus Touch Controller.
 
-> **Tip:** If the performance is lower for the VR Oculus Touch template projects, make sure that the editor is **not** set to **Update Mode > Always** in the viewport.
+> **Tip:** If the performance is lower for the VR Oculus Touch template projects, make sure that the editor is **not** set to **Update Mode > Always** in the viewport.</dd>
 
-## VR HTC Vive
+<dt>VR HTC Vive</dt>
+<dd>This VR template project is set up to showcase the use of Flow in VR to accomplish various tasks and useful VR interactions. It is recommended to use a higher end machine as this was tested on higher end graphics cards.
 
-This VR template project is set up to showcase the use of Flow in VR to accomplish various tasks and useful VR interactions. It is recommended to use a higher end machine as this was tested on higher end graphics cards.
+Use a Steam VR device to visually interact with the scenes in this template.</dd>
 
-Use a Steam VR device to visually interact with the scenes in this template.
+<dt>[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html) VR Google</dt>
+<dd>This template demonstrates simple usage of the GoogleVR plug-in API for Cardboard and Daydream.</dd>
 
+<dt>[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html) VR Gear</dt>
+<dd>This template demonstrates simple usage of the GearVR plug-in API.</dd>
+
+</dl>
 ---
 Related topics:
 -	~{ About the project structure }~
