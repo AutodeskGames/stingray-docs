@@ -1,7 +1,7 @@
 # Stingray 1.7 Release Notes
 <a name="top"></a>
 
-Stingray 1.7 (1.7.X.0) ...
+Welcome to Stingray 1.7 (1.7.1103.0).
 
 > **Important**: We strongly recommend that you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
@@ -158,6 +158,8 @@ Stingray shaders now support negative scale.
 [Return to top](#top)
 
 ## What's Fixed
+
+* * *
 
 ### Animation
 
@@ -323,13 +325,13 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 	**Workaround:** Unfortunately there's no workaround for this right now, so we wanted to warn you in advance. By the time we release 1.7, we'll have a pop-up to make sure you actually want to do this.
 
-	- **GAME-19936 Project compile appears to hang during UV unwrapping**
+- **GAME-19936 Project compile appears to hang during UV unwrapping**
 
 	When opening a project that contains complex meshes, the project compilation process appears to hang during UV unwrapping.
 
 	**Workaround:** Prepare complex meshes prior to exporting by manually unwrapping UVs in your DCC tool.
 
-	- **GAME-19975 Stingray hangs and prevents any other window from coming to the forefront**
+- **GAME-19975 Stingray hangs and prevents any other window from coming to the forefront**
 
 	We don't have consistent repro steps for this one, so if you see it let us know. It seems to happen for some people when Alt + tabbing between windows.
 
