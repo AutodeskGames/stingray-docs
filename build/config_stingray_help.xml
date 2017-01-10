@@ -111,7 +111,7 @@
 	</merge>
 
 	<merge id="stingray_help">
-		<source convert_from="markdown" get_metadata="true">..\source\stingray_help\*.md</source>
+		<source convert_from="markdown" get_metadata="true" github_root="https://git.autodesk.com/gameware/stingray-docs/tree/master/source/stingray_help">..\source\stingray_help\*.md</source>
 		<source>..\source\stingray_help\*.png</source>
 		<source>..\source\stingray_help\*.jp*g</source>
 		<source>..\source\stingray_help\*.gif</source>
