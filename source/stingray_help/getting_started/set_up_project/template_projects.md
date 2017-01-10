@@ -49,10 +49,10 @@ The VR Oculus Touch template supports input from the Oculus Remote and Oculus To
 
 Use a Steam VR device to visually interact with the scenes in this template.</dd>
 
-<dt>VR Google</dt>
+<dt>[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html) VR Google</dt>
 <dd>This template demonstrates simple usage of the GoogleVR plug-in API for Cardboard and Daydream.</dd>
 
-<dt>VR Gear</dt>
+<dt>[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html) VR Gear</dt>
 <dd>This template demonstrates simple usage of the GearVR plug-in API.</dd>
 
 </dl>

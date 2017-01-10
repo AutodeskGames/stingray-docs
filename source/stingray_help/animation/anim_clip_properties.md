@@ -13,7 +13,7 @@ The following settings are available in the ~{ Property Editor }~ when you selec
 <dd>The size in bytes of the compiled clip.</dd>
 
 <dt>[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Trimming Start</dt>
-<dd>The new start time of the clip (in seconds).</dd>
+<dd>The new start time of the trimmed clip (in seconds).</dd>
 
 <dt>[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Trimming End</dt>
 <dd>The end time of the trimmed clip (in seconds).</dd>
@@ -38,7 +38,7 @@ This option lets you choose a base animation for previewing additive animations.
 <dt>Import Transform Curves </dt>
 <dd>When on, embeds the local transform curve in the runtime resource, so the curves are evaluated during playback. Turn off this option to disable transform curves during playback.</dd>
 
-<dt>Import Blend Shapes </dt>
+<dt>Import Blend Shapes Channel Curves </dt>
 <dd>When on, embeds the blend shapes channel curves in the runtime resource, so the curves are evaluated during playback. Turn off this option to disable blend shape curves during playback.</dd>
 
 <dt>Import Extra Curves</dt>
@@ -67,6 +67,15 @@ These settings let you change compression per clip to control accuracy. See also
 
 <dt>Scale Tolerance</dt>
 <dd>The variance allowed when curve-fitting the scale.</dd>
+
+<dt>Ignore Position</dt>
+<dd>When on, the position curves are omitted from the animation.</dd>
+
+<dt>Ignore Rotation</dt>
+<dd>When on, the rotation curves are omitted from the animation.</dd>
+
+<dt>Ignore Scales</dt>
+<dd>When on, the scale curves are omitted from the animation.</dd>
 </dl>
 
 ##Transform curves
