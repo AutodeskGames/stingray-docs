@@ -1,5 +1,7 @@
 # Requirements for Android game development
 
+![UPDATED](../../images/updated.png)
+
 In order to connect the Stingray Editor to an Android device, or to build and deploy your game for Android devices, you must install the requirements listed on this page on your Windows development machine.
 
 ## Java
@@ -18,12 +20,22 @@ The Android SDK also comes with the SDK Manager utility, which you use to manage
 
 Open your Android SDK installation directory in Windows Explorer, and run the `SDK Manager.exe` application.
 
-At a minimum, you must make sure that the SDK Manager has installed:
+![UPDATED](../../images/updated.png)
 
+Make sure that the SDK Manager has installed:
+
+- Android 7.1.1 SDK Platform (API 25)
+- Android 5.0 SDK platform (API 21)
+- Android SDK Tools 25.2.2
+- Android SDK Platform-tools 25
+- Android SDK Build-tools 25
+
+<!--
 -	`Android SDK Platform-tools`: **Rev. 23.0.1 or higher**
 -	`Android SDK Build-tools`: **Rev. 21.0.0 or higher -- see below**
 
 	>	**NOTE:** Install a version of the `Android SDK Build-tools` that is compatible with the version of the Android operating system that you have installed on your target device. For example, Android 6.0 requires at least Rev. 23, Android 5.11 requires at least Rev. 22. For more information on version compatibility, see the [Android SDK build tools release notes](https://developer.android.com/studio/releases/build-tools.html).
+-->
 
 ## Environment variables
 

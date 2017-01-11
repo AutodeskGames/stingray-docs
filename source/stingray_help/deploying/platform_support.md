@@ -60,6 +60,8 @@ Devices running older versions may or may not work as expected.
 
 >**Note:** The Oculus Remote and Oculus Touch Controller are also supported.
 
+>**Note:** Stingray also supports Google Cardboard for iOS and Android, and Google Daydream and Daydream controller for Android.
+
 ## Platform libraries
 
 Stingray is built with the following set of libraries for its target platforms. You may need this information for compatibility.
