@@ -10,25 +10,22 @@ You need both the Java Development Kit (JDK) and the Java Runtime Environment (J
 
 Stingray requires at least version 7, but we recommend using the latest update of version 8.
 
-You can download the JDK from the [Oracle Java SE site](http://www.oracle.com/technetwork/java/javase/overview/index.html). The JDK package contains a full version of the JRE, so you should not have to install the JRE separately.
+You can download the JDK from the [Oracle Java SE site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). The JDK package contains a full version of the JRE, so you should not have to install the JRE separately.
 
 ## Android SDK and tools
 
-If you don't already have the Android SDK installed on your computer, the easiest way to get it is to download and install the latest version of the Android Studio IDE from the [Android developer site](https://developer.android.com/sdk/index.html#Other). Make sure that you leave the **Android SDK** option checked during the installation, and take note of the install location -- you'll need it later.
-
-The Android SDK also comes with the SDK Manager utility, which you use to manage the versions of the various components that you have installed on your system.
-
-Open your Android SDK installation directory in Windows Explorer, and run the `SDK Manager.exe` application.
-
 ![UPDATED](../../images/updated.png)
 
-Make sure that the SDK Manager has installed:
+If you don't already have the Android SDK installed on your computer,
 
-- Android 7.1.1 SDK Platform (API 25)
-- Android 5.0 SDK platform (API 21)
-- Android SDK Tools 25.2.2
-- Android SDK Platform-tools 25
-- Android SDK Build-tools 25
+- Download the Android Standalone Tools: <https://dl.google.com/android/repository/tools_r25.2.3-windows.zip>
+- Unzip the package, run `tools/android.bat` to launch the Android SDK Manager
+- Install the following:
+    - Android 7.1.1 SDK Platform (API 25)
+    - Android 5.0 SDK platform (API 21)
+    - Android SDK Tools 25.2.2
+    - Android SDK Platform-tools 25
+    - Android SDK Build-tools 25
 
 ## Environment variables
 
@@ -36,7 +33,7 @@ After you install Java and the Android SDK:
 
 -	Make sure that the `JAVA_HOME` environment variable is set to point to the correct installation folder. For example, `C:\Program Files\Java\jdk1.8.0_80`.
 -	Make sure that the `ANDROID_HOME` environment variable is set to point to the correct installation folder. For example, `C:\Program Files (x86)\Android\android-sdk`.
--	Find the `adb.exe` tool in your Android SDK installation directory, and add its location to your `PATH` environment variable. This tool is typically found under `%ANDROID_HOME%\platform-tools`, but it may be in a different location on your system.
+-	Find the `adb.exe` tool in your Android SDK installation directory, and add its location to your `PATH` environment variable. This tool is typically found under `%ANDROID_HOME%\platform-tools`, but it may be in a different location on your system. For example, `D:\android\tools_r25.2.3-windows\platform-tools`.
 
 ## Default keystore for app signing
 
