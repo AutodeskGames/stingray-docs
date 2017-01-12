@@ -138,13 +138,14 @@ Stingray now supports high definition range EXR files for image based lighting. 
 
 ### Light baking improvements
 
-- You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See ~{ Bake lightmaps }~.
+- The light baker has been optimized to run faster on most scenes and hardware. See ~{ Baking with the Stingray baker}
+You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See ~{ Bake lightmaps }~.
 - Click **Clear** in the **Light Baking** window to quickly delete and unmap all lightmaps on disk.
 -	Beast is now deprecated, use Stingray light baker instead.
 
-## Tesselation support
+## Tessellation support
 
-You can now use tesselation for standard base node materials. Use the **Tesselation Factor** input on the base node to control the tesselation factor of a surface.
+Tessellation can now be activated using the standard base material node. Use the **Tesselation Factor** input on the base node to control the tesselation factor of your surface. A lower value results in a less tessellation.
 
 ## Negative scale support
 
