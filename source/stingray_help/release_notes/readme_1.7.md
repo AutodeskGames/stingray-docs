@@ -140,7 +140,7 @@ Stingray now supports high definition range EXR files for image based lighting. 
 
 - You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See ~{ Bake lightmaps }~.
 - Click **Clear** in the **Light Baking** window to quickly delete and unmap all lightmaps on disk.
--	Beast is now deprecated, use Stingray light baker instead.  
+-	Beast is now deprecated, use Stingray light baker instead.
 
 ## Tesselation support
 
@@ -371,11 +371,35 @@ For a complete list of all new, modified, and removed elements in the Lua API in
 
 If your project contains any API elements that have been modified or removed, you will need to adjust your code accordingly.
 
--	Note that with the changes to the resource localization system, `stingray.Application.set_resource_property_preference_order()` has been removed.
+A summary of the most important changes:
+
+-	All functions related to managing engine plug-ins have been brought together under a new `stingray.PluginManager` namespace. The old `stingray.Application.all_plugin_names()` and `stingray.Application.set_plugin_hot_reload_directory()` functions have been removed, and several more new functions added. See the `stingray.PluginManager` namespace for details.
+
+-	Use the new `Http.post()` function to send POST messages over HTTP.
+
+-	If you use custom script Flow nodes intended for use by entities, you can now use `Application.flow_callback_context_entity()` in your custom Flow node's callback function in order to get the entity evaluating that node.
+
+-	If you use Gameware Navigation in your projects, check the [version history](../../lua_ref/versions.html) for details on several changes, including exposing NavMesh generation to Lua.
+
+-	`Application.quit()` now accepts an optional exit value, which the application will return to the operating system when it shuts down.
 
 ### Flow node changes
 
+This version includes new nodes for controlling frame capture, triggering Level Flow events, getting more properties from lights and units, exchanging meshes and materials as external input and output variables, and more.
+
+-	The **Unit > Mesh Pick Raycast** conducts a raycast collision test against the meshes owned by a specific unit, and returns information that includes the material that was hit by the ray. Knowing which material is hit by a ray may be useful if you need to play different sounds (like footsteps or bullet impacts) or different particle effects depending on the material. **NOTE** however that this raycast does consume more CPU resources than a regular raycast, particularly for meshes with many triangles.
+
+-	Only one node has been modified: **Application > Quit** now accepts an optional exit value, which the application will return to the operating system when it shuts down.
+
 For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
+
+### Shader node changes
+
+-	The **Output > Standard Base** node now accepts inputs to control tessellation and world space displacement, and a new option that enables and disables hardware tessellation.
+
+-	In addition, you can use a new **Sampling > Domain Sample Texture** node in order to read input data from a texture when that data is needed in the *domain* stage of the shader -- for example, when providing values for the new tessellation factor and displacement inputs.
+
+For a complete list of all new, modified, and removed shader nodes in this release, see the [version history](../../shader_ref/versions.html).
 
 ### Visual Studio 2015
 
