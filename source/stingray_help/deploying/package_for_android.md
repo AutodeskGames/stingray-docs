@@ -41,6 +41,9 @@ These settings are common for all tabs. See ~{ Using the Deployer panel }~.
 
 <dt>Version</dt>
 <dd>The application version, in two-part notation.</dd>
+
+<dt>Android flavor</dt>
+<dd>Select from either the regular, Gear VR, or Google VR enabled Android engine.</dd>
 </dl>
 
 ### Icons settings

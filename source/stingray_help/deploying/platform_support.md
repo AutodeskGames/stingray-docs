@@ -58,7 +58,9 @@ Devices running older versions may or may not work as expected.
 | Oculus Rift | 90 fps            | 1.10.1.0  |
 | HTC Vive       | 90 fps            | 1.0.0  |
 
->**Note:** The Oculus Remote and Oculus Touch Controller are also supported.
+>**Note:** The Oculus Remote and Oculus Touch Controller are supported.
+
+>[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) **Note:** Stingray also supports Google Cardboard for iOS and Android, and Android Google Daydream with controller support.
 
 ## Platform libraries
 
