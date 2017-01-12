@@ -30,13 +30,6 @@ Make sure that the SDK Manager has installed:
 - Android SDK Platform-tools 25
 - Android SDK Build-tools 25
 
-<!--
--	`Android SDK Platform-tools`: **Rev. 23.0.1 or higher**
--	`Android SDK Build-tools`: **Rev. 21.0.0 or higher -- see below**
-
-	>	**NOTE:** Install a version of the `Android SDK Build-tools` that is compatible with the version of the Android operating system that you have installed on your target device. For example, Android 6.0 requires at least Rev. 23, Android 5.11 requires at least Rev. 22. For more information on version compatibility, see the [Android SDK build tools release notes](https://developer.android.com/studio/releases/build-tools.html).
--->
-
 ## Environment variables
 
 After you install Java and the Android SDK:
