@@ -1,10 +1,10 @@
 # Inspect blend shapes
 
-After importing a blend shape from your DCC into Stingray, you can take a closer look at its contents, and adjust the influence of its morph targets.
+After importing a blend shape from your DCC tool into Stingray, you can take a closer look at its contents, and adjust the influence of its morph targets.
 
 ## Inspect blend shapes
 
-1. Import your blend shape from your DCC. See ~{ Create and import blend shapes into Stingray }~.
+1. Import your blend shape from your DCC tool. See ~{ Create and import blend shapes into Stingray }~.
 	<br>
 	After importing, a new blend shape asset appears in the Asset Browser.
 

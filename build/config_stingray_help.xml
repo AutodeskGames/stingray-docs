@@ -58,7 +58,7 @@
 		<contextId include="*\object_panel.html" id="tools_object_panel"></contextId>
 		<contextId include="*\property_editor.html" id="tools_property_editor"></contextId>
 		<contextId include="*\connections.html" id="tools_connections"></contextId>
-		<contextId include="*\debugger_view.html" id="tools_debugger_view"></contextId>
+		<contextId include="*\script_debugger.html" id="tools_debugger_view"></contextId>
 		<contextId include="*\deployer.html" id="tools_deployer"></contextId>
 		<contextId include="*\asset_browser.html" id="tools_asset_browser"></contextId>
 		<contextId include="*\script_editor.html" id="tools_script_editor"></contextId>

@@ -130,7 +130,7 @@ When you bake lightmaps with the Stingray baker, you can now adjust:
 
 ## Updated DCC interop plug-ins
 
-This release includes an updated Stingray DCC Link plug-in to support Maya 2017 and Maya LT 2017, as well as the plug-in for 3ds Max 2017. For information on installing the plug-ins, see ~{ Setup the DCC plug-in }~.
+This release includes an updated Stingray DCC Link plug-in to support Maya 2017 and Maya LT 2017, as well as the plug-in for 3ds Max 2017. For information on installing the plug-ins, see ~{ Setup the DCC tool plug-in }~.
 
 ## Easier Wwise engine configuration
 
@@ -138,7 +138,7 @@ You now have more control over the memory usage and behavior of the integrated W
 
 ## Updated PhysX plug-in
 
-The PhysX plug-in installers for Maya 2017 and Maya LT 2017 that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.20602.11122. Click [PhysX Plugins Download]( http://www.autodesk.com/physx-plugins-download) to get the plug-ins for older versions of Maya. For related information, see ~{ Install the PhysX plug-in for your DCC }~.
+The PhysX plug-in installers for Maya 2017 and Maya LT 2017 that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.20602.11122. Click [PhysX Plugins Download]( http://www.autodesk.com/physx-plugins-download) to get the plug-ins for older versions of Maya. For related information, see ~{ Install the PhysX plug-in for your DCC tool }~.
 
 [Return to top](#top)
 

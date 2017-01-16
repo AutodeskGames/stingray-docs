@@ -27,7 +27,7 @@ Select **File > Settings > Editor Settings** to view and edit the following in t
 
 <dl>
 <dt>Maya Path</dt>
-<dd>The path to the location where Maya is installed. For more information, see ~{ Setup the DCC plug-in }~.</dd>
+<dd>The path to the location where Maya is installed. For more information, see ~{ Setup the DCC tool plug-in }~.</dd>
 
 <dt>Maya LT path</dt>
 <dd>The path to the location where Maya LT is installed.</dd>
@@ -36,7 +36,7 @@ Select **File > Settings > Editor Settings** to view and edit the following in t
 <dd>The path to the location where 3ds Max is installed.</dd>
 
 <dt>Autodesk Shared Materials path</dt>
-<dd>The path to the folder location containing materials shared between Stingray and DCC.</dd>
+<dd>The path to the folder location containing materials shared between Stingray and DCC tool.</dd>
 </dl>
 
 **DCC Link Interop**
@@ -46,7 +46,7 @@ Select **File > Settings > Editor Settings** to view and edit the following in t
 <dd>If selected, a user confirmation dialog appears for overwriting existing materials when sending material updates from Stingray to Maya. See ~{ Send materials to Maya, Maya LT, or 3ds Max }~.</dd>
 
 <dt>Send materials with unit</dt>
-<dd>If enabled, send material updates when units are sent to DCC using <b>Send to</b> option.</dd>
+<dd>If enabled, send material updates when units are sent to the DCC tool using <b>Send to</b> option.</dd>
 
 </dl>
 

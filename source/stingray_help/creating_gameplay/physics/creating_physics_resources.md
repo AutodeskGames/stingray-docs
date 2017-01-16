@@ -13,5 +13,5 @@ Regardless of what method you use, you'll be referring to the global physics set
 ---
 Related topics:
 -	~{ Unit Editor }~
--	~{ Install the PhysX plug-in for your DCC }~
+-	~{ Install the PhysX plug-in for your DCC tool }~
 ---
