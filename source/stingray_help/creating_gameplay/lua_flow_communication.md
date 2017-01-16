@@ -38,24 +38,26 @@ See the node description for additional details.
 
 Your Flow graphs and Lua scripts can set and read data values in a set of shared "external" variables. The level flow for each level and the unit flow for each unit maintain a separate set of these external variables.
 
-### Setting and retrieving external inputs and outputs in Lua
+>	Note that these "external" variables are not the same as the variables that you can get and set using the Flow nodes in the **Variable** category, which are only visible to other flow graphs. <!-- TODO: see also link to the flow variables topic -->
 
--	To set an external variable in a level flow graph or unit flow graph, call `stingray.Level.set_flow_variable()` or `stingray.Unit.set_flow_variable()`.
--	To read an external variable that has been set in a level flow or unit flow, call `stingray.Level.flow_variable()` or `stingray.Unit.flow_variable()`.
+### Passing data from Flow to Lua
 
-### Setting and retrieving external inputs and outputs in Flow
+-	To set an external variable in a level flow, unit flow or entity flow, use the nodes in the **External > Output** category. For example, use **External > Output > External Output Boolean** to set a true or false value.
 
--	To set an external variable in a level flow or unit flow, use the nodes in the **External > Output** category. For example, use **External > Output > External Output Boolean** to set a true or false value.
+-	To read an external variable that has been set in a flow graph, call `stingray.Level.flow_variable()`, `stingray.Unit.flow_variable()`, or `stingray.FlowComponent.flow_variable()`.
+
+### Passing data from Lua to Flow
+
+-	To set an external variable in a level flow graph, unit flow graph or entity flow graph from Lua, call `stingray.Level.set_flow_variable()`, `stingray.Unit.set_flow_variable()`, or `stingray.FlowComponent.set_flow_variable()`.
+
 -	To read an external variable that has been set by a Lua script, use the nodes in the **External > Input** category. For example, use **External > Input > External Input Boolean** to get a true or false value.
-
-Note that these "external" variables are not the same as the variables that you can get and set using the nodes in the **Variable** category. <!-- TODO: see also link to the flow variables topic -->
 
 ## Triggering a Flow event from Lua
 
 Your Lua code can fire events to your level flow or unit flow graphs at any time.
 
 -	To fire a level flow event from Lua, call `stingray.Level.trigger_event()`. Pass the level object and the name of the event.
--	To fire a unit flow event for a particular unit, call `stingray.Unit.flow_event()`. Pass the unit object and the name of the event.
+-	To fire a unit flow or entity flow event for a particular unit or entity instance, call `stingray.Unit.flow_event()` or `stingray.FlowComponent.flow_event()`. Pass the unit or entity object and the name of the event.
 -	To respond to the event in flow, use the **External > External In Event** node and set the Event Name value to the same name you used in the Lua call.
 
 For example, if you run the following Lua code:
