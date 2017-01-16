@@ -4,7 +4,7 @@ Level sync workflows let you automatically rebuild your 3ds Max scenes in Stingr
 
 ## Send selected assets from 3ds Max with level sync
 
-1. Establish a live editing link between Stingray and your DCC. See ~{ Send assets to a DCC }~.
+1. Establish a live editing link between Stingray and your DCC tool. See ~{ Send assets to a DCC tool }~.
 2. Tag the assets you want to send to Stingray. See ~{ Tag assets with Level Sync }~.
 3. In 3ds Max, select **Stingray > Level Send Selected**.
 
@@ -16,7 +16,7 @@ Level sync workflows let you automatically rebuild your 3ds Max scenes in Stingr
   The selected asset(s) is sent to Stingray and opens in the current scene.
 
 ## Send all assets from 3ds Max with level sync
-1. Establish a live editing link between Stingray and your DCC. See ~{ Send assets to a DCC }~.
+1. Establish a live editing link between Stingray and your DCC tool. See ~{ Send assets to a DCC tool }~.
 2. In 3ds Max, select **Stingray > Level Send All**.
 
   	![Level Send All](../../images/level_sync_send_all.png)

@@ -286,7 +286,7 @@ The `<PARAMETER>` settings for `show` and `hide` accept the following values: `w
 *	`debug_events <ON/OFF>`: determines whether or not connected physics events are debugged.
 *	`dump_metadata`: Sends a file that contains PhysX metadata to the **Log Console**.
 
-**Debugging in Debugger View**
+**Debugging in Script Debugger**
 
 *	`connect`: connects the game to the physics debugger listening on `localhost:5425`.
 *	`connect <HOST> <PORT>`: connects the game to the physics debugger listening on

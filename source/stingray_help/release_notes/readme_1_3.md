@@ -100,7 +100,7 @@ The Pool room example to shows off the physically-based rendering capabilities o
 
 ## Updated DCC interop plug-ins
 
-Updated the Stingray DCC Link plug-in to support Maya 2016 Extension 2, Maya LT 2016 Extension 3, and 3ds Max 2017. For information on installing the plug-ins, see ~{ Setup the DCC plug-in }~.
+Updated the Stingray DCC Link plug-in to support Maya 2016 Extension 2, Maya LT 2016 Extension 3, and 3ds Max 2017. For information on installing the plug-ins, see ~{ Setup the DCC tool plug-in }~.
 
 ## New FBX Import options
 
@@ -141,7 +141,7 @@ You can now view cloth simulation in the viewport. You must make changes directl
 
 ## Updated PhysX plug-in
 
-The PhysX plug-in installers for Maya, Maya LT, and 3ds Max that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.20222.00162a. This plug-in includes several improvements and bug fixes by Nvidia. For related information, see ~{ Install the PhysX plug-in for your DCC }~.
+The PhysX plug-in installers for Maya, Maya LT, and 3ds Max that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.20222.00162a. This plug-in includes several improvements and bug fixes by Nvidia. For related information, see ~{ Install the PhysX plug-in for your DCC tool }~.
 
 ## Launch data compilation in the Connections Panel
 

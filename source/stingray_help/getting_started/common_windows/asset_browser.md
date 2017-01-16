@@ -13,7 +13,7 @@ The **Asset Browser** is the main way to browse and import assets in your game p
 | Import content | Navigate to the folder where you want to import files, then click Import, or, right-click in the File view area to select **Import Asset**.  |
 | Create a new resource or folder | Navigate to the folder that you want to contain your new folder or asset. Right-click on the folder and select one of the **Create** options from the contextual menu, or click one of the **Create** icons shown between the tree view and the file view. |
 | Narrow asset types displayed in File view area  | Click the Filter icon ![ ](../../images/icon_filter.png) and enable only the types you want. |
-| Edit an original source scene in your DCC  | Right-click an asset and select **Open Source Asset**.  |
+| Edit an original source scene in your DCC tool | Right-click an asset and select **Open Source Asset**.  |
 | Refresh current window  | F5  |
 | Return to the last opened folder  | Backspace  |
 | Open selected asset in Windows Explorer  | Right-click the asset and select **Show in Explorer**.  |
