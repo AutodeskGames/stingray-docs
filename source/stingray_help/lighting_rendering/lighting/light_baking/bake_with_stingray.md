@@ -62,6 +62,7 @@ Note that you may need to set this value very high in order to see the effect.</
 <dt>Use Compute</dt>
 <dd>[![NEW](../../../images/new.png "What else is new in v1.7?")](../../../release_notes/readme_1.7.html)
 When enabled (default), the baker uses compute shaders, optimizing the performance of the baker on most scenes and hardware.
+
 >**Tip:** Disable **Use Compute** if you are running slower hardware.</dd>
 
 </dl>
