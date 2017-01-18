@@ -2,7 +2,7 @@
 
 ![UPDATED](../images/updated.png)
 
-The **Capture Frames** Tool lets you render frames to disk. The tool is integrated into the **Story Editor** workflow, and can also be initiated through Flow or Lua. For more information on using Flow, see
+The **Capture Frames** Tool lets you render frames to disk. The tool is integrated into the **Story Editor** workflow, and can also be initiated through Flow. For more information on using Flow, see the **Capture Frames** category in the [Stingray Flow Node Reference](../flow_ref/index.html)
 
 The following **Capture Settings** can be adjusted to control your output. See ~{ Capture frames to disk }~ for more information.
 
@@ -19,7 +19,7 @@ The following **Capture Settings** can be adjusted to control your output. See ~
 ##Capture Options
 <dl>
 
-<dt>Default Camera</dt>
+<dt>Camera</dt>
 <dd>[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Lets you select the camera to capture. </dd>
 
 </dl>

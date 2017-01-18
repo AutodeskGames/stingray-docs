@@ -10,8 +10,6 @@ To generate lightmaps for your level, do the following:
 
 	- For each light, set the **Baking** option in the **Property Editor** to determine whether or not the light's direct illumination should be included in the lightmap. See ~{ Lightmap baking settings }~.
 
-1.	If you have made any changes to your level, units or lights, save the current level before you bake to ensure all of your changes are reflected correctly in the lightmaps.
-
 1.	[![NEW](../../../images/new.png "What else is new in v1.7?")](../../../release_notes/readme_1.7.html) (Optional) If you want to bake a part of your scene, make a selection before you start your baking session.
 
 1.	Select **Window > Lighting > Light Baking** from the main menu. Stingray opens the **Light Baking** window.
