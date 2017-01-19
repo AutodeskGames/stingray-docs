@@ -22,7 +22,7 @@ If you don't already have the Android SDK installed on your computer,
 - Unzip the package, run `tools/android.bat` to launch the Android SDK Manager
 - Install the following:
     - Android 7.1.1 SDK Platform (API 25)
-    - Android 5.0 SDK platform (API 21)
+    - Android 5.0 SDK Platform (API 21)
     - Android SDK Tools 25.2.2
     - Android SDK Platform-tools 25
     - Android SDK Build-tools 25

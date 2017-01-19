@@ -1,5 +1,7 @@
 # Using the Connections panel
 
+![UPDATED](../../images/updated.png)
+
 - **Window > Deploy and Connect > Connections**
 
 You can use the **Connections** panel to configure remote devices as targets for the Stingray Editor. Once set up as a target, you can mirror the Stingray Editor viewport to the device or run your project on the device.
@@ -65,3 +67,11 @@ To run your project on the device in standalone mode:
 ## Connection status
 
 When you initiate a connection to a remote device to either mirror the viewport or run the project, you can see the current status of the data transfer between your computer and the remote devices in the ~{ Log Console }~.
+
+## Running multiple local game instances
+
+[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html)
+
+Add localhost targets with separate commandlines in Windows to automatically start multiple local game instances when you run the project.
+
+Press ![](../../images/icon_addTarget.png) multiple times, set all the target platforms to Windows and same IP address, and set different command line parameters. When you press the Run Project icon, the targets are launched with separate command lines and can have different game specific behavior. You can also debug and look at the console output for multiple targets using the editor engine instance dropdowns.
