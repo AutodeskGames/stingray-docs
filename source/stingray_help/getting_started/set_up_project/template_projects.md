@@ -32,7 +32,9 @@ This template is a simple vehicle level. It contains a driveable four-wheeled ve
 
 ## VR Template projects
 
-Stingray includes the following templates for rendering in VR devices:
+Stingray includes the following templates for rendering in VR devices. (See also: ~{ VR in Stingray }~.)
+
+> **Note:** All of the Stingray VR templates use the mini renderer by default. See ~{ VR content guidelines and the mini renderer }~ for more information.
 
 <dl>
 <dt>VR Oculus Touch</dt>
@@ -58,7 +60,7 @@ Use iOS devices, Android 7.x+ devices like Nexus 9 or a Daydream device like Pix
 </dd>
 
 <dt>[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html) VR Gear</dt>
-<dd>This template demonstrates simple usage of the GearVR plug-in API.</dd>
+<dd>This template demonstrates simple usage of the GearVR plug-in API. See ~{ Build a project for Gear VR }~ for more information.</dd>
 
 </dl>
 ---
