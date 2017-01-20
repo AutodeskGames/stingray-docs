@@ -151,7 +151,7 @@ Controls logging of Lua memory allocations.
 Accepts only one parameter:
 
 *	`trace`: traces Lua memory allocations made in the next frame, and
-	prints them to the **Log Console**.
+	prints them to the log console.
 
 # memory_resources
 
@@ -169,14 +169,10 @@ Requires one of the following parameters.
 *	`list <TYPE>`: includes detailed information about resources of the
 	specified type. For example, `memory_resources list unit`.
 
-![Memory resources "all" output](../images/command_memory_resources.png)
-
 # memory_tree
 
 Prints the current memory usage of the engine to the log, arranged in
 a hierarchical tree structure.
-
-![Memory tree output](../images/command_memory_tree.png)
 
 # network
 
@@ -281,12 +277,12 @@ The `<PARAMETER>` settings for `show` and `hide` accept the following values: `w
 `particle_system_bounds`, `particle_system_grid`, `particle_system_broadphase_bounds`,
 `particle_system_max_motion_distance`, `cull_box`
 
-**Debugging in the Log Console**
+**Debugging in the log console**
 
 *	`debug_events <ON/OFF>`: determines whether or not connected physics events are debugged.
-*	`dump_metadata`: Sends a file that contains PhysX metadata to the **Log Console**.
+*	`dump_metadata`: Sends a file that contains PhysX metadata to the log console.
 
-**Debugging in Script Debugger**
+**Debugging in visual debugger**
 
 *	`connect`: connects the game to the physics debugger listening on `localhost:5425`.
 *	`connect <HOST> <PORT>`: connects the game to the physics debugger listening on
@@ -299,8 +295,6 @@ Controls the built-in performance profiling system.
 
 Requires one of the following parameters:
 
-*	`start`: starts sending profiling data over the network.
-*	`stop`: stops sending profiling data over the network.
 *	`pause`: pauses the game in the profiler.
 *	`unpause`: resumes a paused game in the profiler.
 *	`stall <seconds>`: sets the threshold for stall warnings.
@@ -321,6 +315,7 @@ and you can specify multiple parameters in the same command line.
 *	`-editor-ini <RESOURCE>`: uses the specified resource as the initialization
 	file for the editor.
 *	`-force-unload true`: forces unloading all resources from memory.
+*	`-wait-for-debugger true`: waits for a connection to the editor's lua debugger.
 *	`-flag <NAME>=<VALUE>`: sets a configuration parameter for the rebooted game,
 	overriding the value set in the initialization file. The `<VALUE>` setting
 	may be `true`, `false`, or any numeric value.
@@ -343,10 +338,11 @@ Requires one of the following parameters.
 
 # statistics
 
-Prints a record of current statistics to the **Log Console**. For example:
+Prints a record of current statistics to the log console. For example:
 
 ~~~
 application.fps = 32.638138
+application.smoothed_fps = 49.530058
 lua.gc.total = 1008.000000
 lua.frame_alloc_count = 0.000000
 memory.default_allocator.size = 53.452225
@@ -388,3 +384,4 @@ Requires one of the following parameters.
 *	`draw_lifetime <LIFETIME>`: sets the length of time each drawn sample remains visible,
 	in seconds. Default value is `2`.
 *	`draw_length <LENGTH>`: sets the length of each drawn sample, in meters.
+
