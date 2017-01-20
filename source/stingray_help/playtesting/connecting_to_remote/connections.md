@@ -74,4 +74,4 @@ When you initiate a connection to a remote device to either mirror the viewport 
 
 Add localhost targets with separate commandlines in Windows to automatically start multiple local game instances when you run the project.
 
-Press ![](../../images/icon_addTarget.png) multiple times, set all the target platforms to Windows and same IP address, and set different command line parameters. When you press the Run Project icon, the targets are launched with separate command lines and can have different game specific behavior. You can also debug and look at the console output for multiple targets using the editor engine instance dropdowns.
+Press ![](../../images/icon_addTarget.png) multiple times, set all the target platforms to Windows and same IP address, and set different command line parameters. When you press the Run Project icon, the targets are launched with separate command lines and can have different game specific behavior. Note that two targets with the same name and same command line will only launch one runtime. You can also debug and look at the console output for multiple targets using the editor engine instance dropdowns.
