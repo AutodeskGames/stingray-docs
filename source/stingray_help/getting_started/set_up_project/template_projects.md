@@ -2,7 +2,7 @@
 
 The Stingray Editor ships with a few sample projects to help you get started. By default, template projects install in the **templates** folder in your **Stingray** directory. On a Windows OS templates are installed at the following location: `C:\Program Files\Autodesk\Stingray\<version>\editor\templates`. Templates are also available from the **Project Manager** every time you start Stingray or select **Templates** tab in the **Project Manager**.
 
-> ![](../../images/icon_video.png) You can find video walkthroughs of each template <a href="https://www.youtube.com/playlist?list=PLTjhBiJe1i2FMurxvbVZymn2vxC1S-WqU" target="blank">here.</a>
+> ![](../../images/icon_video.png) You can find video walkthroughs of the templates <a href="https://www.youtube.com/playlist?list=PLTjhBiJe1i2FMurxvbVZymn2vxC1S-WqU" target="blank">here.</a>
 
 ![](../../images/template_projects.png)
 
@@ -34,8 +34,6 @@ This template is a simple vehicle level. It contains a driveable four-wheeled ve
 
 Stingray includes the following templates for rendering in VR devices. (See also: ~{ VR in Stingray }~.)
 
-> **Note:** All of the Stingray VR templates use the mini renderer by default. See ~{ VR content guidelines and the mini renderer }~ for more information.
-
 <dl>
 <dt>VR Oculus Touch</dt>
 <dd>This template has a simple VR level with a floor plan to walk around in. Currently for Windows only. It also includes a basic script that lets you spawn a free camera and a walk around camera (again, swap the two by pressing F2), and Oculus flow nodes.
@@ -63,6 +61,9 @@ Use iOS devices, Android 7.x+ devices like Nexus 9 or a Daydream device like Pix
 <dd>This template demonstrates simple usage of the GearVR plug-in API. See ~{ Build a project for Gear VR }~ for more information.</dd>
 
 </dl>
+
+> **Note:** The VR templates for mobile devices use the Stingray ~{ Mini renderer }~ by default. See ~{ Optimize VR content for mobile devices }~ for tips on preparing your VR scenes.
+
 ---
 Related topics:
 -	~{ About the project structure }~
