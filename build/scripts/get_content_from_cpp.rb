@@ -11,22 +11,26 @@ TAG = "<!-- The following content is automatically generated. Do not edit by han
 def run_extractions()
 
 	# get the command line parameters for the engine executable.
+	in_file = "#{$script_dir}/../../source/stingray_help/reference/_engine_command_line.in"
 	markdown_file = "#{$script_dir}/../../source/stingray_help/reference/engine_command_line.md"
 	alphabetize = false
 	make_toc = false
 	should_join_lines = true
-	extract(markdown_file,
+	extract(in_file,
+			markdown_file,
 			alphabetize,
 			make_toc,
 			should_join_lines,
 			"#{$engine_dir}/runtime/application/application_options.cpp")
 
 	# get the console commands.
+	in_file = "#{$script_dir}/../../source/stingray_help/reference/_console_commands.in"
 	markdown_file = "#{$script_dir}/../../source/stingray_help/reference/console_commands.md"
 	alphabetize = true
 	make_toc = true
 	should_join_lines = false
-	extract(markdown_file,
+	extract(in_file,
+			markdown_file,
 			alphabetize,
 			make_toc,
 			should_join_lines,
@@ -41,9 +45,9 @@ def join_lines(block)
 end
 
 # source_files can be any number of files or glob patterns that contain markdown blocks to be extracted.
-def extract(markdown_file, alphabetize, make_toc, should_join_lines, *source_files)
+def extract(in_file, markdown_file, alphabetize, make_toc, should_join_lines, *source_files)
 
-	raise "#{markdown_file} not found." unless File.exist?(markdown_file)
+	raise "#{in_file} not found." unless File.exist?(in_file)
 
 	markdown_blocks = []
 
@@ -70,7 +74,7 @@ def extract(markdown_file, alphabetize, make_toc, should_join_lines, *source_fil
 	# sort all the blocks alphabetically, if needed.
 	markdown_blocks = markdown_blocks.sort if alphabetize
 
-	markdown = File.read(markdown_file)
+	markdown = File.read(in_file)
 
 	# paste the blocks into the target markdown file.
 	if markdown[/^#{TAG}.*/m] then
