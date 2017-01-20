@@ -56,7 +56,7 @@ To support rendering your VR projects on these devices, the **Templates** tab in
 
 ![](../images/wn-templates.png)
 
-Use these templates to start building your VR projects for Google Daydream devices and GearVR devices.
+Use these templates to start building your VR projects for Google Daydream devices and GearVR devices. See also ~{ Build a project for Gear VR }~.
 
 ## Particle Editor
 
