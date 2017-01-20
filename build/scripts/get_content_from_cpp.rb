@@ -49,9 +49,7 @@ def extract(markdown_file, alphabetize, make_toc, should_join_lines, *source_fil
 
 	# parse each source file.
 	source_files.each do |source_file|
-		puts(source_file)
 		Dir.glob(source_file)  {|thisfile|
-			puts(thisfile)
 			# record each block in the source file into an array of blocks.
 			last_was_doc_line = false
 			markdown_block = ''
