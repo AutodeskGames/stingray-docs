@@ -39,7 +39,7 @@
 	</merge>
 
 	<merge id="source_access">
-		<source convert_from="markdown">..\source\source_access\*.md</source>
+		<source convert_from="markdown" github_root="https://www.github.com/AutodeskGames/stingray-docs/tree/master/source/source_access">..\source\source_access\*.md</source>
 		<source>..\source\source_access\*.png</source>
 		<source>..\source\source_access\*.jp?g</source>
 		<source>..\source\source_access\*.gif</source>

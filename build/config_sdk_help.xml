@@ -57,7 +57,7 @@
 	</merge>
 
 	<merge id="sdk_help">
-		<source convert_from="markdown" github_root="https://git.autodesk.com/gameware/stingray-docs/tree/master/source/sdk_help">..\source\sdk_help\*.md</source>
+		<source convert_from="markdown" github_root="https://www.github.com/AutodeskGames/stingray-docs/tree/master/source/sdk_help">..\source\sdk_help\*.md</source>
 		<source>..\source\sdk_help\*.png</source>
 		<source>..\source\sdk_help\*.jp?g</source>
 		<source>..\source\sdk_help\*.gif</source>
