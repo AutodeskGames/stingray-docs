@@ -1,8 +1,8 @@
 # Lightmap baking settings
 
-The main settings that you'll use to control light baking are found in the **Bake Lightmaps** dialog box (**Window > Lighting > Bake Lightmaps**).
+The main settings that you'll use to control light baking are found in the **Light Baking** dialog box (**Window > Lighting > Light Baking**).
 
-There are also a few other settings to be aware of. Note that most of these settings apply both to Beast and to the Stingray baker.
+There are also a few other settings to be aware of.
 
 -	Properties per unit:
 
@@ -26,7 +26,7 @@ There are also a few other settings to be aware of. Note that most of these sett
 
 	-	Under the **Light** category, the **Baking** setting determines whether or not the light *only* contributes to the baked lightmaps. When set to "Direct & Indirect", the light will contribute to baked direct and indirect light, but will not contribute to real-time dynamic lighting at all. When set to "Indirect", the direct light will still be rendered in realtime.
 
-	-	Under the **Light** category, the **Indirect Intensity** setting adjusts how strongly the indirect light emitted by this light affects nearby surfaces. Used only by Beast, not by the Stingray baker.
+	-	Under the **Light** category, the **Indirect Intensity** setting adjusts how strongly the indirect light emitted by this light affects nearby surfaces.
 
 -	Global lighting settings in the shading environment. See ~{ Shading environment properties }~.
 

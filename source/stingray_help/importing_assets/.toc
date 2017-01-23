@@ -8,6 +8,7 @@ import_a_character
 import_anim_clips
 import_model_tex_mat
 importing_textures
+import_fonts
 batch_import
 level_of_detail
 level_sync

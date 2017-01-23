@@ -1,0 +1,2695 @@
+{
+  "node":{
+    "Constant > Constant Vector2":{
+      "display_name":"Constant > Constant Vector2",
+      "name":"Constant > Constant Vector2",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"XY",
+            "is_hidden":"False",
+            "connectionType":["float2"],
+            "slot_type":"in"
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Math > Sine":{
+      "display_name":"Math > Sine",
+      "name":"Math > Sine",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Angle",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The angle or set of angles that will be operated on."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The sine of the input channels."
+          }]
+      }
+    },
+    "Vertex Inputs > Binormal":{
+      "display_name":"Vertex Inputs > Binormal",
+      "name":"Vertex Inputs > Binormal",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Math > Dot Product":{
+      "display_name":"Math > Dot Product",
+      "name":"Math > Dot Product",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The first input vector."
+          },{
+            "is_editable":"True",
+            "name":"B",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The second input vector."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float",
+            "description":"The dot product."
+          }]
+      }
+    },
+    "Math > Ddy":{
+      "display_name":"Math > Ddy",
+      "name":"Math > Ddy",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The input value that will be operated on."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Input > Eye Vector":{
+      "display_name":"Input > Eye Vector",
+      "name":"Input > Eye Vector",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Sampling > Vertex Sample Texture":{
+      "display_name":"Sampling > Vertex Sample Texture",
+      "name":"Sampling > Vertex Sample Texture",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"UV",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"The UV coordinates to sample."
+          },{
+            "is_editable":"True",
+            "name":"Mip Level",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"Specifies which mipmap level to read from the texture. When\n\t\tomitted, this value is set to the highest mip level (0)."
+          }],
+        "Options":["Address mode","Encoding","Invert Green Channel","Filter mode"],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float4",
+            "description":"A linear RGBA value that represents the color value stored in the\n\t\ttexture at the specified UV coordinates; or, for normal maps, the\n\t\tnormal vector expressed in tangent space."
+          }]
+      }
+    },
+    "Input > Sun Direction":{
+      "display_name":"Input > Sun Direction",
+      "name":"Input > Sun Direction",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Utility > Flipbook":{
+      "display_name":"Utility > Flipbook",
+      "name":"Utility > Flipbook",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"FPS",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The number of times per second that the flipbook node should switch to a new\n\t\tsprite or grid cell in the source texture.\n\n\t\tDefault value: `5`"
+          },{
+            "is_editable":"True",
+            "name":"Time",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The current system time. Required. You can get this value from the\n\t\t[Input > Time] node."
+          },{
+            "is_editable":"True",
+            "name":"UV",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"Texture coordinates, typically output from a [Vertex Inputs > Texcoord] node.\n\t\tRequired."
+          },{
+            "is_editable":"True",
+            "name":"Sprite Rows",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The number of rows in the sprite sheet.\n\n\t\tDefault value: `2`"
+          },{
+            "is_editable":"True",
+            "name":"Sprite Columns",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The number of columns in the sprite sheet.\n\n\t\tDefault value: `2`"
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The UV coordinates to sample from the animated texture for this frame."
+          }]
+      }
+    },
+    "Animation > Vegetation Animation":{
+      "display_name":"Animation > Vegetation Animation",
+      "name":"Animation > Vegetation Animation",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Vertex Position",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector4"],
+            "description":"The position of the vertex being shaded, in world space. Required.\n\t\tYou can get this value from the [Vertex Inputs > Position] node, if\n\t\ttransform its value using [Transform > Object To World]."
+          },{
+            "is_editable":"True",
+            "name":"Vertex Color",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector4"],
+            "description":"RGBA values that determine the way the leaves bend at a detailed level.\n\t\tThese values are typically painted onto the vertices of the mesh by an\n\t\tartist working in a DCC tool like 3ds Max or Maya.\n\n\t\t-\tThe red channel determines the stiffness of the leaves' edges.\n\t\t-\tThe green channel determines per-leaf phase variation. By painting leaves\n\t\t\twith different intensities in this channel, you can avoid having all your\n\t\t\tleaves moving in the same direction at the same time.\n\t\t-\tThe blue channel determines overall stiffness of the leaves.\n\t\t-\tThe alpha channel is used for pre-computed ambient occlusion.\n\n\t\tRequired."
+          },{
+            "is_editable":"True",
+            "name":"World Normal",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The normal of the vertex being shaded, in world space. Required.\n\t\tYou can get this value from the [Vertex Inputs > World Normal] node."
+          },{
+            "is_editable":"True",
+            "name":"Time",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The current system time. Required. You can get this value from the\n\t\t[Input > Time] node."
+          },{
+            "is_editable":"True",
+            "name":"Speed",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The speed of the simulation.\n\n\t\tDefault value: `0.5`"
+          },{
+            "is_editable":"True",
+            "name":"Bend Amplitude/Frequency",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"The first value in this pair determines how far the leaves can bend. The\n\t\tsecond value determines how quickly the leaves return to their\n\t\toriginal positions.\n\n\t\tDefault value: `(0.3, 0.1)`"
+          },{
+            "is_editable":"True",
+            "name":"Detail Amplitude/Frequency",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"The first value in this pair determines how much the edges of the leaves\n\t\tcan bend. The second value determines how quickly the edges return\n\t\tto their original positions.\n\n\t\tDefault value: `(0.05, 0.5)`"
+          },{
+            "is_editable":"True",
+            "name":"Wind",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"A vector that represents the direction and force of the wind along the X\n\t\tand Y axes. The Z value is not used.\n\n\t\tDefault value: `(1.0, 1.0, 0.0)`"
+          },{
+            "is_editable":"True",
+            "name":"Bend Scale",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"Determines how much the vegetation is deformed along the wind direction.\n\n\t\tDefault value: `0.005`"
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float3",
+            "description":"The position offset calculated for the current frame. You can pass this\n\t\toutput value into the **Position Offset** input plug in the\n\t\t[Output > Standard Base] shader node."
+          }]
+      }
+    },
+    "Math > Add":{
+      "display_name":"Math > Add",
+      "name":"Math > Add",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The first input value."
+          },{
+            "is_editable":"True",
+            "name":"B",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The second input value."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The sum of the input channels."
+          }]
+      }
+    },
+    "Math > Power":{
+      "display_name":"Math > Power",
+      "name":"Math > Power",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Value",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The input value."
+          },{
+            "is_editable":"True",
+            "name":"Power",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The exponent value."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Transform > Object To World":{
+      "display_name":"Transform > Object To World",
+      "name":"Transform > Object To World",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Vector",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["float3"],
+            "description":"The input vector in object space."
+          }],
+        "Options":["Mode"],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Constant > Constant Vector4":{
+      "display_name":"Constant > Constant Vector4",
+      "name":"Constant > Constant Vector4",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"RGBA",
+            "is_hidden":"False",
+            "connectionType":["float4"],
+            "slot_type":"in"
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Math > Invert / One Minus":{
+      "display_name":"Math > Invert / One Minus",
+      "name":"Math > Invert / One Minus",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The input color that will be inverted."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The inverse of each channel in the input value."
+          }]
+      }
+    },
+    "Math > Ddx":{
+      "display_name":"Math > Ddx",
+      "name":"Math > Ddx",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The input value that will be operated on."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Math > Distance":{
+      "display_name":"Math > Distance",
+      "name":"Math > Distance",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2","vector3","vector4"],
+            "description":"The first input vector."
+          },{
+            "is_editable":"True",
+            "name":"B",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2","vector3","vector4"],
+            "description":"The second input vector."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float",
+            "description":"The distance from A to B."
+          }]
+      }
+    },
+    "Constant > Constant Scalar":{
+      "display_name":"Constant > Constant Scalar",
+      "name":"Constant > Constant Scalar",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "connectionType":["scalar"],
+            "slot_type":"in"
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Utility > Fresnel":{
+      "display_name":"Utility > Fresnel",
+      "name":"Utility > Fresnel",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Minimum",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"When the **Method** option is set to *Use Min/Max*, this setting defines the minimum\n\t\tvalue used in the calculation.\n\n\t\tDefault value: `0.8`.\n\n\t\tWhen the **Method** option is set to *Use Exponent*, this setting is not used."
+          },{
+            "is_editable":"True",
+            "name":"Maximum / Exponent",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"When the **Method** option is set to *Use Min/Max*, this setting defines the maximum\n\t\tvalue used in the calculation.\n\n\t\tWhen the **Method** option is set to *Use Exponent*, this setting specifies the exponent\n\t\tvalue used in the calculation.\n\n\t\tDefault value: `1`."
+          },{
+            "is_editable":"True",
+            "name":"Normal",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"Sets a custom surface normal for the calculation."
+          }],
+        "Options":["Method"],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float",
+            "description":"The result of the Fresnel calculation for the surface."
+          }]
+      }
+    },
+    "Math > Dither":{
+      "display_name":"Math > Dither",
+      "name":"Math > Dither",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Pixel Position",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"The absolute screen-space pixel position"
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float",
+            "description":"a dither value"
+          }]
+      }
+    },
+    "Math > Length":{
+      "display_name":"Math > Length",
+      "name":"Math > Length",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Vector",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2","vector3","vector4"],
+            "description":"The input vector."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float",
+            "description":"The length of the input vector."
+          }]
+      }
+    },
+    "Sampling > Sample Cube Texture":{
+      "display_name":"Sampling > Sample Cube Texture",
+      "name":"Sampling > Sample Cube Texture",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"UVW",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The UVW coordinates to sample."
+          },{
+            "is_editable":"True",
+            "name":"Mip Level",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"Specifies which mipmap level to read from the texture. When\n\t\tomitted, this value is determined internally based on the apparent size\n\t\tof the mesh being shaded."
+          }],
+        "Options":["Address mode","Encoding","Filter mode"],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float4",
+            "description":"A linear RGBA value that represents the color value stored in the\n\t\ttexture at the specified UVW coordinates; or, for normal maps, the\n\t\tnormal vector expressed in tangent space."
+          }]
+      }
+    },
+    "Orientation > Up Axis":{
+      "display_name":"Orientation > Up Axis",
+      "name":"Orientation > Up Axis",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float3",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Vertex Inputs > World Position":{
+      "display_name":"Vertex Inputs > World Position",
+      "name":"Vertex Inputs > World Position",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Math > Divide":{
+      "display_name":"Math > Divide",
+      "name":"Math > Divide",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The dividend."
+          },{
+            "is_editable":"True",
+            "name":"B",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The divisor."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The quotient, i.e. the result of dividing each channel in A by the\n\t\tcorresponding channel in B."
+          }]
+      }
+    },
+    "Math > Subtract":{
+      "display_name":"Math > Subtract",
+      "name":"Math > Subtract",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The first input value."
+          },{
+            "is_editable":"True",
+            "name":"B",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The second input value."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The result of subtracting each channel in *B* from the corresponding\n\t\tchannel in *A*."
+          }]
+      }
+    },
+    "Math > Ceil":{
+      "display_name":"Math > Ceil",
+      "name":"Math > Ceil",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The number or set of numbers that will be operated on."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The input channels, rounded up."
+          }]
+      }
+    },
+    "Vertex Inputs > Texcoord > Texcoord1":{
+      "display_name":"Vertex Inputs > Texcoord > Texcoord1",
+      "name":"Vertex Inputs > Texcoord > Texcoord1",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Math > Fractional (Decimal)":{
+      "display_name":"Math > Fractional (Decimal)",
+      "name":"Math > Fractional (Decimal)",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The number or set of numbers that will be operated on."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The decimal fraction of each channel in the input value."
+          }]
+      }
+    },
+    "Construct > Construct Vector4":{
+      "display_name":"Construct > Construct Vector4",
+      "name":"Construct > Construct Vector4",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"R",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The first input component."
+          },{
+            "is_editable":"True",
+            "name":"G",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The second input component."
+          },{
+            "is_editable":"True",
+            "name":"B",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The third input component."
+          },{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The fourth input component."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float4",
+            "description":"A vector array that combines the scalar inputs as: `(R, G, B, A)`."
+          }]
+      }
+    },
+    "Math > Absolute":{
+      "display_name":"Math > Absolute",
+      "name":"Math > Absolute",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The number or set of numbers that will be operated on."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The absolute value of the input channels."
+          }]
+      }
+    },
+    "Sampling > Sample Texture":{
+      "display_name":"Sampling > Sample Texture",
+      "name":"Sampling > Sample Texture",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"UV",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"The UV coordinates to sample."
+          },{
+            "is_editable":"True",
+            "name":"Mip Level",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"Specifies which mipmap level to read from the texture. When\n\t\tomitted, this value is determined internally based on the apparent size\n\t\tof the mesh being shaded."
+          }],
+        "Options":["Address mode","Encoding","Invert Green Channel","Filter mode"],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float4",
+            "description":"A linear RGBA value that represents the color value stored in the\n\t\ttexture at the specified UV coordinates; or, for normal maps, the\n\t\tnormal vector expressed in tangent space."
+          }]
+      }
+    },
+    "Math > Fmod":{
+      "display_name":"Math > Fmod",
+      "name":"Math > Fmod",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The dividend."
+          },{
+            "is_editable":"True",
+            "name":"B",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The divisor."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The remainder after dividing each channel in input A by the corresponding\n\t\tchannel in input B."
+          }]
+      }
+    },
+    "Sampling > Domain Sample Texture":{
+      "display_name":"Sampling > Domain Sample Texture",
+      "name":"Sampling > Domain Sample Texture",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"UV",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"The UV coordinates to sample."
+          },{
+            "is_editable":"True",
+            "name":"Mip Level",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"Specifies which mipmap level to read from the texture. When\n\t\tomitted, this value is set to the highest mip level (0)."
+          }],
+        "Options":["Address mode","Encoding","Invert Green Channel","Filter mode"],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float4",
+            "description":"A linear RGBA value that represents the color value stored in the\n\t\ttexture at the specified UV coordinates; or, for normal maps, the\n\t\tnormal vector expressed in tangent space."
+          }]
+      }
+    },
+    "Math > Square Root":{
+      "display_name":"Math > Square Root",
+      "name":"Math > Square Root",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The input value."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The square root of each channel in the input value."
+          }]
+      }
+    },
+    "Terrain > Terrain UV":{
+      "display_name":"Terrain > Terrain UV",
+      "name":"Terrain > Terrain UV",
+      "data":{
+        "deprecated":true,
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float2",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Utility > Bump":{
+      "display_name":"Utility > Bump",
+      "name":"Utility > Bump",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Position",
+            "is_hidden":"False",
+            "connectionType":["vector3"],
+            "slot_type":"in"
+          },{
+            "is_editable":"True",
+            "name":"Normal",
+            "is_hidden":"False",
+            "connectionType":["vector3"],
+            "slot_type":"in"
+          },{
+            "is_editable":"True",
+            "name":"Color",
+            "is_hidden":"False",
+            "connectionType":["vector3"],
+            "slot_type":"in"
+          },{
+            "is_editable":"True",
+            "name":"Scale",
+            "is_hidden":"False",
+            "connectionType":["scalar"],
+            "slot_type":"in"
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Input > Skydome Intensity":{
+      "display_name":"Input > Skydome Intensity",
+      "name":"Input > Skydome Intensity",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Input > Time":{
+      "display_name":"Input > Time",
+      "name":"Input > Time",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Output > Unlit Base":{
+      "display_name":"Output > Unlit Base",
+      "name":"Output > Unlit Base",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Position offset",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"An optional offset to apply to the position of the pixel being shaded,\n\t\tin world space."
+          },{
+            "is_editable":"True",
+            "name":"Base Color",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The RGB color of the pixel being shaded."
+          },{
+            "is_editable":"True",
+            "name":"Opacity",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The opacity of the pixel being shaded. Values closer to `0` are more transparent;\n\t\tvalues closer to `1` are more opaque. Note that the *Blend Mode* option must be\n\t\tset to *Transparent* in order for this value to be used."
+          }],
+        "Options":["Depth Testing","Layer","Face Culling","Blend Mode","Instancing","Disable Depth Writes","Camera Translation Lock","Project to Far Plane"],
+        "Outputs":[]
+      }
+    },
+    "Terrain > Terrain Height":{
+      "display_name":"Terrain > Terrain Height",
+      "name":"Terrain > Terrain Height",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Vertex Inputs > Texcoord > Texcoord2":{
+      "display_name":"Vertex Inputs > Texcoord > Texcoord2",
+      "name":"Vertex Inputs > Texcoord > Texcoord2",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Output > Terrain Base":{
+      "display_name":"Output > Terrain Base",
+      "name":"Output > Terrain Base",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Base Color",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The base RGB color of the terrain's surface."
+          },{
+            "is_editable":"True",
+            "name":"Normal",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The normal vector of the surface: i.e. the basis vector of tangent\n\t\tspace that is perpendicular to the surface."
+          },{
+            "is_editable":"True",
+            "name":"Metallic",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The \"shininess\" and reflectivity of the surface. Values closer to `0`\n\t\tproduce a duller surface; values closer to `1` produce a shinier and\n\t\tmore reflective surface."
+          },{
+            "is_editable":"True",
+            "name":"Roughness",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The amount of fine roughness on the surface. Values closer to `0` produce\n\t\ta more glossy finish; values closer to `1` produce a more matte finish."
+          },{
+            "is_editable":"True",
+            "name":"Ambient Occlusion",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The amount of ambient occlusion to apply to the pixel being shaded."
+          }],
+        "Options":["Normals In"],
+        "Outputs":[]
+      }
+    },
+    "Math > Cosine":{
+      "display_name":"Math > Cosine",
+      "name":"Math > Cosine",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Angle",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The angle or set of angles that will be operated on."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The cosine of the input channels."
+          }]
+      }
+    },
+    "Output > Reflection Probe Base":{
+      "display_name":"Output > Reflection Probe Base",
+      "name":"Output > Reflection Probe Base",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[]
+      }
+    },
+    "Output > Particle Base":{
+      "display_name":"Output > Particle Base",
+      "name":"Output > Particle Base",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Size",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"An optional size parameter that can be used to control the size\n\t\tof a billboard. Typically the user will feed the value from the node\n\t\t*Particles / Billboard Size*. Input value is in meters.\n\t\tDefault value: `1.0`"
+          },{
+            "is_editable":"True",
+            "name":"Pivot Point",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"An optional pivot point used to adjust the rotation origin of a billboard."
+          },{
+            "is_editable":"True",
+            "name":"Rotation",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"An optional rotation parameter that can be used to control the rotation\n\t\tof a billboard. Typically the user will feed the value from the node\n\t\t*Particles / Billboard Rotation*. Input value is an angle in radians.\n\t\tDefault value: `0.0`"
+          },{
+            "is_editable":"True",
+            "name":"Base Color",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"For a non-metallic surface this becomes the albedo RGB of the surface,\n\t\tfor metallic surfaces this becomes the specular RGB. Input value is an RGB color in\n\t\tlinear color space."
+          },{
+            "is_editable":"True",
+            "name":"Opacity",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"An optional opacity of the pixel being shaded. Values closer to `0` are more transparent;\n\t\tvalues closer to `1` are more opaque. Note that this value is used differently\n\t\tdepending on the value of the *Blend Mode* option.\n\n\t\tDefault value: `0.5`."
+          },{
+            "is_editable":"True",
+            "name":"Opacity Threshold",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"When the *Blend Mode* option is set to *Opaque (G-buffer)*, and a value is set for the\n\t\t*Opacity* input, this value sets the threshold at which the surface becomes\n\t\tvisible. When the opacity input value is below this threshold, the mesh is not\n\t\tshaded (fully transparent). When the opacity input value is above this\n\t\tthreshold, the mesh is fully opaque.\n\n\t\tDefault value: `0.5`."
+          },{
+            "is_editable":"True",
+            "name":"Normal",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"A directional vector perpendicular to the surface being shaded. Use this input\n\t\tto apply a normal map that contains small-scale details in the relief of the\n\t\tsurface. Note that this vector should either be in tangent space or world space depending\n\t\ton the value of *Normals In*"
+          },{
+            "is_editable":"True",
+            "name":"Metallic",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"Setting this to `1.0` makes the pixel reflect light as a conductor, or metallic surface.\n\t\tSetting this to `0.0` makes the pixel reflect light as a dielectric, like plastic.\n\t\tAnything in between blends between a dielectric and conductor. Note: This value affects how\n\t\t`Base Color` is interpreted.\n\n\t\tDefault value: `0`"
+          },{
+            "is_editable":"True",
+            "name":"Roughness",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The amount of roughness on the surface. Values closer to `0` produce\n\t\ta more glossy finish; values closer to `1` produce a more matte finish.\n\n\t\tDefault value: `0.5`"
+          },{
+            "is_editable":"True",
+            "name":"Emissive",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"An optional RGB color of light that the surface being shaded should emit into\n\t\tthe scene. Input value is an RGB color in linear color space."
+          },{
+            "is_editable":"True",
+            "name":"Ambient Occlusion",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"A scalar value that applies a faint shadowing effect, typically based on the\n\t\tpresence of other nearby objects. Values closer to `0` produce stronger\n\t\tshadowing; values closer to `1` produce less shadowing.\n\n\t\tDefault value: `1`"
+          },{
+            "is_editable":"True",
+            "name":"Density",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"For surfaces with *Matarial Type* set to *Translucent*, this value determines how\n\t\tmuch the surface scatters incoming light. Values closer to `0` produce more scatter\n\t\tand let through more light; values closer to `1` minimizes the light scatter.\n\n\t\tDefault value: `1`"
+          }],
+        "Options":["Blend Mode","Material Type","Normals In","Transparent Lighting"],
+        "Outputs":[]
+      }
+    },
+    "Output > Light Base":{
+      "display_name":"Output > Light Base",
+      "name":"Output > Light Base",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Light Color",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The color of the light that the dynamic light source using this material\n\t\tshould emit."
+          }],
+        "Options":[],
+        "Outputs":[]
+      }
+    },
+    "Math > If":{
+      "display_name":"Math > If",
+      "name":"Math > If",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The first number or set of numbers, which will be compared against *B*."
+          },{
+            "is_editable":"True",
+            "name":"B",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The second number or set of numbers, which will be compared against *A*."
+          },{
+            "is_editable":"True",
+            "name":"True",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The input value that this node will return if the comparison evaluates\n\t\tto *true*."
+          },{
+            "is_editable":"True",
+            "name":"False",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The input value that this node will return if the comparison evaluates\n\t\tto *false*."
+          }],
+        "Options":["Operator"],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"Either the **True** input or the **False** input, depending on the result\n\t\tof the comparison."
+          }]
+      }
+    },
+    "Orientation > Position":{
+      "display_name":"Orientation > Position",
+      "name":"Orientation > Position",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float3",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Output > Decal Base":{
+      "display_name":"Output > Decal Base",
+      "name":"Output > Decal Base",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Base Color",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"An RGB color or texture to project."
+          },{
+            "is_editable":"True",
+            "name":"Base Color Opacity",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"Determines the opacity of the RGB base color when blended on top\n\t\tof other intersecting meshes. `0` is fully transparent, `1` is\n\t\tfully opaque.\n\n\t\tDefault value: `1.0`"
+          },{
+            "is_editable":"True",
+            "name":"Normal",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"A normal map to project, to alter the apparent surface detail of the\n\t\tintersecting meshes."
+          },{
+            "is_editable":"True",
+            "name":"Normal Opacity",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"Determines the strength of the normal map when blended on top\n\t\tof other intersecting meshes. `0` makes the normal map have no\n\t\tapparent effect on the surfaces, `1` makes the normals affect the\n\t\tsurface at full strength.\n\n\t\tDefault value: `1.0`"
+          },{
+            "is_editable":"True",
+            "name":"Normal Threshold",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"This value allows you to selectively apply the decal to intersecting\n\t\tmeshes based on their surface normals. When the difference between\n\t\tthe normal of the surface and the orientation of the decal projector\n\t\tis below this threshold, the decal is not applied."
+          },{
+            "is_editable":"True",
+            "name":"Emissive",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"An RGB color that will be emitted from the surfaces being projected upon."
+          },{
+            "is_editable":"True",
+            "name":"Mask",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"A scalar value that works in conjunction with the **Mask Threshold** to\n\t\tdetermine whether the decal should be shown.\n\n\t\tNote that the the strength or opacity of the decal is controlled by the\n\t\t**Base Color Opacity** and **Normal Opacity** values. The mask controls\n\t\tonly the visibility of the decal."
+          },{
+            "is_editable":"True",
+            "name":"Mask Threshold",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"When the value of the **Mask** input is below this threshold, the decal\n\t\tis not applied.\n\n\t\tDefault value: `0.5`"
+          }],
+        "Options":["Tangent Basis From","Normals In","Instancing"],
+        "Outputs":[]
+      }
+    },
+    "Transform > World To Tangent Space":{
+      "display_name":"Transform > World To Tangent Space",
+      "name":"Transform > World To Tangent Space",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Vector",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["float3"],
+            "description":"The input vector in world space."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Transform > World To Object":{
+      "display_name":"Transform > World To Object",
+      "name":"Transform > World To Object",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Vector",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["float3"],
+            "description":"The input vector in world space."
+          }],
+        "Options":["Mode"],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Utility > HSV to RGB":{
+      "display_name":"Utility > HSV to RGB",
+      "name":"Utility > HSV to RGB",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"HSV",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The input HSV color."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The RGB equivalent of the input value."
+          }]
+      }
+    },
+    "Vertex Inputs > World Normal":{
+      "display_name":"Vertex Inputs > World Normal",
+      "name":"Vertex Inputs > World Normal",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Orientation > Right Axis":{
+      "display_name":"Orientation > Right Axis",
+      "name":"Orientation > Right Axis",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float3",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Vertex Inputs > Position":{
+      "display_name":"Vertex Inputs > Position",
+      "name":"Vertex Inputs > Position",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Vertex Inputs > Tangent":{
+      "display_name":"Vertex Inputs > Tangent",
+      "name":"Vertex Inputs > Tangent",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Construct > Construct Vector2":{
+      "display_name":"Construct > Construct Vector2",
+      "name":"Construct > Construct Vector2",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"X",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The first input component."
+          },{
+            "is_editable":"True",
+            "name":"Y",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The second input component."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float2",
+            "description":"A vector array that combines the scalar inputs as: `(X, Y)`."
+          }]
+      }
+    },
+    "Light > Light Color":{
+      "display_name":"Light > Light Color",
+      "name":"Light > Light Color",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Utility > Desaturation":{
+      "display_name":"Utility > Desaturation",
+      "name":"Utility > Desaturation",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Color",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The input color that will be desaturated."
+          },{
+            "is_editable":"True",
+            "name":"Amount",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The blend weight between the original input color and its fully grayscale equivalent.\n\t\tA value of `0` leaves the input color unaltered. A value of `1` (or higher)\n\t\tproduces a fully grayscale final result.\n\n\t\tDefault value: `1`."
+          },{
+            "is_editable":"True",
+            "name":"Luminance",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"Determines the brightness of each channel in the desaturated color. This allows you\n\t\tto compensate for the way the human eye perceives the relative lightness of different\n\t\tcolors.\n\n\t\tThis value is expressed as a coefficient for each color channel. To determine the\n\t\tgrayscale color, the value of each color channel is multiplied by the coefficient\n\t\tfor that channel, and the three channel values are added.\n\n\t\tFor example, setting a value of `(1, 0, 0)` makes red areas in the original image\n\t\tcome through as white, while blue and green areas come through as black.\n\n\t\tSome common luminance settings are:\n\n\t\t-\t`(0.3, 0.6, 0.1)` (the default value if this slot is not connected)\n\t\t-\t`(0.2126, 0.7152, 0.0722)` (the [BT 709](https://en.wikipedia.org/wiki/Rec._709) standard)\n\t\t-\t`(0.299, 0.587, 0.114)` (the [BT 601](https://en.wikipedia.org/wiki/Rec._601) standard)"
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The RGB values for the desaturated color."
+          }]
+      }
+    },
+    "Vertex Inputs > Texcoord > Texcoord4":{
+      "display_name":"Vertex Inputs > Texcoord > Texcoord4",
+      "name":"Vertex Inputs > Texcoord > Texcoord4",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Math > Linear Interpolate":{
+      "display_name":"Math > Linear Interpolate",
+      "name":"Math > Linear Interpolate",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The first input value."
+          },{
+            "is_editable":"True",
+            "name":"B",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The second input value."
+          },{
+            "is_editable":"True",
+            "name":"Weight",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"A value that determines how the two input values should\n\t\tbe combined in order to produce the result. Values closer to `0` make the\n\t\tresult closer to input *A*; values closer to `1` make the result closer\n\t\tto input *B*."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Vertex Inputs > Texcoord > Texcoord3":{
+      "display_name":"Vertex Inputs > Texcoord > Texcoord3",
+      "name":"Vertex Inputs > Texcoord > Texcoord3",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Vertex Inputs > Texcoord > Texcoord0":{
+      "display_name":"Vertex Inputs > Texcoord > Texcoord0",
+      "name":"Vertex Inputs > Texcoord > Texcoord0",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Math > Normalize":{
+      "display_name":"Math > Normalize",
+      "name":"Math > Normalize",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Vector",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2","vector3","vector4"],
+            "description":"The input vector that will be normalized."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The normalized input vector."
+          }]
+      }
+    },
+    "Terrain > Sample Blend Mask":{
+      "display_name":"Terrain > Sample Blend Mask",
+      "name":"Terrain > Sample Blend Mask",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"UV",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"The UV coordinates to sample."
+          }],
+        "Options":["Filter mode","Address mode"],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float4",
+            "description":"A linear RGBA value that represents the color value stored in the\n\t\tblend mask at the specified UV coordinates."
+          }]
+      }
+    },
+    "Utility > RGB to HSV":{
+      "display_name":"Utility > RGB to HSV",
+      "name":"Utility > RGB to HSV",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"RGB",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The input RGB color."
+          },{
+            "is_editable":"True",
+            "name":"Hue",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"An optional hue value that will be added to the value produced\n\t\tby the conversion in order to adjust the result."
+          },{
+            "is_editable":"True",
+            "name":"Saturation",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"An optional saturation factor that will be multiplied with\n\t\tthe value produced by the conversion in order to adjust the result."
+          },{
+            "is_editable":"True",
+            "name":"Brightness / Value",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"An optional brightness factor that will be multiplied\n\t\twith the value produced by the conversion in order to adjust the result."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The HSV equivalent of the input color, adjusted by the *Hue*, *Saturation*\n\t\tand *Brightness / Value* inputs if specified."
+          }]
+      }
+    },
+    "Transform > Tangent To World":{
+      "display_name":"Transform > Tangent To World",
+      "name":"Transform > Tangent To World",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Vector",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["float3"],
+            "description":"The input vector in world space."
+          }],
+        "Options":["Normalize Output"],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Math > Smoothstep":{
+      "display_name":"Math > Smoothstep",
+      "name":"Math > Smoothstep",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Max",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The first input value."
+          },{
+            "is_editable":"True",
+            "name":"Min",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The second input value."
+          },{
+            "is_editable":"True",
+            "name":"X",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"A value that determines how the two input values should\n\t\tbe combined in order to produce the result. Values closer to `0` make the\n\t\tresult closer to input *A*; values closer to `1` make the result closer\n\t\tto input *B*."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Input > Shell Length":{
+      "display_name":"Input > Shell Length",
+      "name":"Input > Shell Length",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float",
+            "description":"Outputs the shell length as calculated in the Position Offset (length of vertex offset)"
+          }]
+      }
+    },
+    "Input > Shell Layer":{
+      "display_name":"Input > Shell Layer",
+      "name":"Input > Shell Layer",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float",
+            "description":"A value between 0.0 (base of shell) and 1.0 (tip of shell) depending on what layer of the shells is being rendered."
+          }]
+      }
+    },
+    "Math > Maximum":{
+      "display_name":"Math > Maximum",
+      "name":"Math > Maximum",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The first input value."
+          },{
+            "is_editable":"True",
+            "name":"Max",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The second input value."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The larger of each channel in *A* and *B*."
+          }]
+      }
+    },
+    "Utility > Rotator":{
+      "display_name":"Utility > Rotator",
+      "name":"Utility > Rotator",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"UV",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"The input texture coordinates before being rotated."
+          },{
+            "is_editable":"True",
+            "name":"Time",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The current system time. Required. You can get this value from the\n\t\t[Input > Time] node."
+          },{
+            "is_editable":"True",
+            "name":"Pivot",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"The UV coordinates that should be the center of the rotation.\n\n\t\tDefault value: `0.5 0.5`"
+          },{
+            "is_editable":"True",
+            "name":"Speed",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The speed at which the texture should appear to rotate.\n\n\t\tDefault value: `0.1`"
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The input UV coordinates after being rotated."
+          }]
+      }
+    },
+    "Utility > Panner":{
+      "display_name":"Utility > Panner",
+      "name":"Utility > Panner",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"UV",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"The input texture coordinates before being panned."
+          },{
+            "is_editable":"True",
+            "name":"Time",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The current system time. Required. You can get this value from the\n\t\t[Input > Time] node."
+          },{
+            "is_editable":"True",
+            "name":"Speed U",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The speed at which the texture should appear to move along the U axis.\n\n\t\tDefault value: `0.33`"
+          },{
+            "is_editable":"True",
+            "name":"Speed V",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The speed at which the texture should appear to move along the V axis.\n\n\t\tDefault value: `0.33`"
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The input UV coordinates after being panned."
+          }]
+      }
+    },
+    "Terrain > Terrain Base Normal":{
+      "display_name":"Terrain > Terrain Base Normal",
+      "name":"Terrain > Terrain Base Normal",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float3",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Input > Pixel Position":{
+      "display_name":"Input > Pixel Position",
+      "name":"Input > Pixel Position",
+      "data":{
+        "Inputs":[],
+        "Options":["Use Pixel Coordinates"],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The screen coordinate of the shaded pixel in either normalized or pixel coordinates."
+          }]
+      }
+    },
+    "Particles > Billboard Size":{
+      "display_name":"Particles > Billboard Size",
+      "name":"Particles > Billboard Size",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float2",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Math > Refract":{
+      "display_name":"Math > Refract",
+      "name":"Math > Refract",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"In Vector",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2","vector3","vector4"],
+            "description":"The direction of the input ray."
+          },{
+            "is_editable":"True",
+            "name":"Normal",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2","vector3","vector4"],
+            "description":"The normal of the surface being hit by the ray."
+          },{
+            "is_editable":"True",
+            "name":"Index",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The index of refraction of the surface being hit. This controls the strength of\n\t\tthe refraction, or the deviation from the straight-line path through the surface."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The direction taken by the ray after refracting into the surface."
+          }]
+      }
+    },
+    "Math > Cross Product":{
+      "display_name":"Math > Cross Product",
+      "name":"Math > Cross Product",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The first input vector."
+          },{
+            "is_editable":"True",
+            "name":"B",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The second input vector."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The cross product."
+          }]
+      }
+    },
+    "Math > Reflect":{
+      "display_name":"Math > Reflect",
+      "name":"Math > Reflect",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Vector",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2","vector3","vector4"],
+            "description":"The direction of the input ray."
+          },{
+            "is_editable":"True",
+            "name":"Normal",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2","vector3","vector4"],
+            "description":"The normal of the surface being hit by the ray."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The direction taken by the ray after reflecting from the surface."
+          }]
+      }
+    },
+    "Particles > Billboard Position":{
+      "display_name":"Particles > Billboard Position",
+      "name":"Particles > Billboard Position",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float3",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Utility > Discard":{
+      "display_name":"Utility > Discard",
+      "name":"Utility > Discard",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Discard",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The value to test."
+          },{
+            "is_editable":"True",
+            "name":"Input",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The value we want to output if Discard is false."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Utility > Blend Normals":{
+      "display_name":"Utility > Blend Normals",
+      "name":"Utility > Blend Normals",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Base",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The first normal map to blend in."
+          },{
+            "is_editable":"True",
+            "name":"Detail",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The second normal map to blend in."
+          }],
+        "Options":["Method"],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The result of blending the two input normal maps together."
+          }]
+      }
+    },
+    "Utility > Depth Fade":{
+      "display_name":"Utility > Depth Fade",
+      "name":"Utility > Depth Fade",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Opacity",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The input opacity of the pixel being shaded. Values closer to `0` make the surface\n\t\tmore transparent; values closer to `1` make the surface more opaque.\n\n\t\tDefault value: `1.0`."
+          },{
+            "is_editable":"True",
+            "name":"Fade Distance",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The distance behind the pixel being shaded at which its opacity begins to apply,\n\t\texpressed in meters.\n\n\t\tDefault value: `1.0`."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float",
+            "description":"The adjusted opacity value of the surface."
+          }]
+      }
+    },
+    "Decal > Decal UV":{
+      "display_name":"Decal > Decal UV",
+      "name":"Decal > Decal UV",
+      "data":{
+        "deprecated":true,
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float2",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Math > Multiply":{
+      "display_name":"Math > Multiply",
+      "name":"Math > Multiply",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The multiplicand."
+          },{
+            "is_editable":"True",
+            "name":"B",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The multiplier."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The product, i.e. the result of multiplying each channel in A by the\n\t\tcorresponding channel in B."
+          }]
+      }
+    },
+    "Utility > Parallax / Bump Offset":{
+      "display_name":"Utility > Parallax / Bump Offset",
+      "name":"Utility > Parallax / Bump Offset",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"UV",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"The input UV that will be adjusted by the height value."
+          },{
+            "is_editable":"True",
+            "name":"Height",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The height of the pixel being shaded, usually drawn from a height map\n\t\tor bump map texture."
+          },{
+            "is_editable":"True",
+            "name":"Parallax Scale",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The amount of apparent deviation the heightmap causes in the surface.\n\n\t\tDefault value: `0.04`"
+          },{
+            "is_editable":"True",
+            "name":"Parallax Bias",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"A constant amount subtracted from the height in order to cause \"lower\" pixels to\n\t\tappear sunken below the surface plane. You will typically want this value to be\n\t\tabout half of the parallax scale value, so that the median of the low and high\n\t\tpoints will lie approximately on the level of the original mesh surface.\n\n\t\tDefault value: `0.02`"
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Particles > Billboard Rotation":{
+      "display_name":"Particles > Billboard Rotation",
+      "name":"Particles > Billboard Rotation",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Math > Minimum":{
+      "display_name":"Math > Minimum",
+      "name":"Math > Minimum",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The first input value."
+          },{
+            "is_editable":"True",
+            "name":"Min",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The second input value."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The lesser of each channel in *A* and *B*."
+          }]
+      }
+    },
+    "Math > Floor":{
+      "display_name":"Math > Floor",
+      "name":"Math > Floor",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"A",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The number or set of numbers that will be operated on."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The input channels, rounded down."
+          }]
+      }
+    },
+    "Input > Material Variable":{
+      "display_name":"Input > Material Variable",
+      "name":"Input > Material Variable",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The scalar or vector value of the variable."
+          }]
+      }
+    },
+    "Vertex Inputs > Color0":{
+      "display_name":"Vertex Inputs > Color0",
+      "name":"Vertex Inputs > Color0",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The RGBA color value for the pixel being shaded."
+          }]
+      }
+    },
+    "Utility > Option Switch":{
+      "display_name":"Utility > Option Switch",
+      "name":"Utility > Option Switch",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Enabled",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The output value to choose when the *Option* is set to *Enabled*."
+          },{
+            "is_editable":"True",
+            "name":"Disabled",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The output value to choose when the *Option* is set to *Disabled*."
+          }],
+        "Options":["Option"],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"Either the *Enabled* or *Disabled* input, depending on the *Option* value."
+          }]
+      }
+    },
+    "Input > Last Time":{
+      "display_name":"Input > Last Time",
+      "name":"Input > Last Time",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Light > Light Vector":{
+      "display_name":"Light > Light Vector",
+      "name":"Light > Light Vector",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float3",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Sampling > Sample Skydome Map":{
+      "display_name":"Sampling > Sample Skydome Map",
+      "name":"Sampling > Sample Skydome Map",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"UV",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector2"],
+            "description":"The UV coordinates to sample."
+          },{
+            "is_editable":"True",
+            "name":"Mip Level",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"Specifies which mipmap level to read from the texture. When\n\t\tomitted, this value is determined internally based on the apparent size\n\t\tof the mesh being shaded."
+          }],
+        "Options":["Address mode","Encoding","Filter mode"],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float4",
+            "description":"A linear RGBA value that represents the color value stored in the\n\t\tskydome at the specified UV coordinates."
+          }]
+      }
+    },
+    "Construct > Construct Vector3":{
+      "display_name":"Construct > Construct Vector3",
+      "name":"Construct > Construct Vector3",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"R",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The first input component."
+          },{
+            "is_editable":"True",
+            "name":"G",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The second input component."
+          },{
+            "is_editable":"True",
+            "name":"B",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The third input component."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float3",
+            "description":"A vector array that combines the scalar inputs as: `(R, G, B)`."
+          }]
+      }
+    },
+    "Orientation > Forward Axis":{
+      "display_name":"Orientation > Forward Axis",
+      "name":"Orientation > Forward Axis",
+      "data":{
+        "Inputs":[],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"float3",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Constant > Constant Vector3":{
+      "display_name":"Constant > Constant Vector3",
+      "name":"Constant > Constant Vector3",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"RGB",
+            "is_hidden":"False",
+            "connectionType":["float3"],
+            "slot_type":"in"
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The output value or values produced by this node."
+          }]
+      }
+    },
+    "Output > Standard Base":{
+      "display_name":"Output > Standard Base",
+      "name":"Output > Standard Base",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Position offset",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"An optional world-space offset to apply to the position of the pixel being\n\t\tshaded, changing the apparent placement of the object in the scene."
+          },{
+            "is_editable":"True",
+            "name":"Last Position offset",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"An optional last frame world-space offset to supply if a user is using the\n\t\tPosition Offset option to be able to calculate velocities to accuratly do\n\t\ttemporal based effects without artifacts."
+          },{
+            "is_editable":"True",
+            "name":"Base Color",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"The RGB color of the pixel being shaded."
+          },{
+            "is_editable":"True",
+            "name":"Opacity",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The opacity of the pixel being shaded. Values closer to `0` are more transparent;\n\t\tvalues closer to `1` are more opaque. Note that this value is used differently\n\t\tdepending on the value of the *Blend Mode* option.\n\n\t\tDefault value: `0.5`."
+          },{
+            "is_editable":"True",
+            "name":"Opacity Threshold",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"When the *Blend Mode* option is set to *Opaque*, and a value is set for the\n\t\t*Opacity* input, this value sets the threshold at which the mesh becomes\n\t\tvisible. When the opacity input value is below this threshold, the mesh is not\n\t\tshaded (fully transparent). When the opacity input value is above this\n\t\tthreshold, the mesh is fully opaque.\n\n\t\tRegardless of the *Blend Mode* setting, whenever there is both an emissive color\n\t\tand an opacity value set, this value sets the opacity threshold at which the\n\t\temissive effect becomes visible.\n\n\t\tDefault value: `0.5`."
+          },{
+            "is_editable":"True",
+            "name":"Normal",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"A directional vector perpendicular to the surface being shaded. Use this input\n\t\tto apply a normal map that contains small-scale details in the relief of the\n\t\tsurface."
+          },{
+            "is_editable":"True",
+            "name":"Metallic",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The \"shininess\" and reflectivity of the surface. Values closer to `0`\n\t\tproduce a duller surface; values closer to `1` produce a shinier and\n\t\tmore reflective surface.\n\n\t\tDefault value: `0`"
+          },{
+            "is_editable":"True",
+            "name":"Roughness",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"The amount of fine roughness on the surface. Values closer to `0` produce\n\t\ta more glossy finish; values closer to `1` produce a more matte finish.\n\n\t\tDefault value: `0.5`"
+          },{
+            "is_editable":"True",
+            "name":"Tessellation Factor",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"Optional parameter to control the tessellation factor used when the hardware\n\t\ttessellation option in the node properties is enabled. A lower value will result\n\t\tin a less tessellated mesh.\n\t\tNote. For the constant tessellation option, this value drives the constant\n\t\ttessellation of the surface. To implement adaptive tessellation, users should\n\t\tdrive this value based on the distance to the camera (the length of the eye vector).\n\n\t\tDefault value: '0.001'\n\t\tMin value: '0.001'\n\t\tMax value: '16'"
+          },{
+            "is_editable":"True",
+            "name":"World Displacement",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar","vector3"],
+            "description":"The distance to displace the tesselated vertices in meters. This value can be\n\t\teither a scalar value for height-based displacement or a vector3 value for\n\t\tvector based displacement."
+          },{
+            "is_editable":"True",
+            "name":"Emissive",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["vector3"],
+            "description":"An optional color of light that the surface being shaded should emit into\n\t\tthe scene."
+          },{
+            "is_editable":"True",
+            "name":"Ambient Occlusion",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"A scalar value that applies a faint shadowing effect, typically based on the\n\t\tpresence of other nearby objects. Values closer to `0` produce stronger\n\t\tshadowing; values closer to `1` produce less shadowing.\n\n\t\tDefault value: `1`"
+          },{
+            "is_editable":"True",
+            "name":"Refraction",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"For partially transparent surfaces, this value defines the refractivity of\n\t\tthe material: how much it bends the light that passes through it. Values\n\t\tcloser to `0` bend the light more strongly; values closer to `1` produces\n\t\tless deflection.\n\n\t\tDefault value: `1`"
+          },{
+            "is_editable":"True",
+            "name":"Density",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"For partially transparent surfaces, this value determines how much the mesh\n\t\tscatters incoming light. Values closer to `0` produce more scatter and more of\n\t\ta glowing effect; values closer to `1` minimize the scatter.\n\n\t\tDefault value: `1`"
+          },{
+            "is_editable":"True",
+            "name":"Clear Coat Roughness",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["scalar"],
+            "description":"When the material type is \"Clear Coat\" this input allows you to control the\n\t\troughness of the top clear coat layer\n\n\t\tDefault value: `0`"
+          },{
+            "is_editable":"True",
+            "name":"Cloth Falloff",
+            "is_hidden":"False",
+            "connectionType":["scalar"],
+            "slot_type":"in"
+          }],
+        "Options":["Normals In","Material Type","Face Culling","Blend Mode","Instancing","Shadows Casting","Hardware Tessellation"],
+        "Outputs":[]
+      }
+    },
+    "Math > Clamp":{
+      "display_name":"Math > Clamp",
+      "name":"Math > Clamp",
+      "data":{
+        "Inputs":[{
+            "is_editable":"True",
+            "name":"Value",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The number or set of numbers that will be clamped."
+          },{
+            "is_editable":"True",
+            "name":"Max",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The maximum permitted output value for each channel."
+          },{
+            "is_editable":"True",
+            "name":"Min",
+            "is_hidden":"False",
+            "slot_type":"in",
+            "connectionType":["auto"],
+            "description":"The minimum permitted output value for each channel."
+          }],
+        "Options":[],
+        "Outputs":[{
+            "slot_type":"out",
+            "name":"Out",
+            "is_hidden":"False",
+            "connectionType":"auto",
+            "description":"The result of clamping each input channel to the minimum and maximum."
+          }]
+      }
+    }
+  }
+}

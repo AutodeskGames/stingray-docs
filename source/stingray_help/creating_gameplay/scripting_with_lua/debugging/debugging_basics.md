@@ -18,18 +18,18 @@ Using a debugger to track down problems in your code typically follows three mai
 
 	You typically pause a game by setting markers called *breakpoints* at specific lines in your Lua scripts. Do this in the **Script Editor** by clicking in the left margin next to the line numbers or by pressing **F9**. When the game is running your Lua script and it reaches that line, it will automatically pause the game.
 
-	You can also pause a running game at any time by hitting the pause icon in the toolbar of the **Script Editor** or **Debugger View**.
+	You can also pause a running game at any time by hitting the pause icon in the toolbar of the **Script Editor** or **Script Debugger**.
 
 2.	**Inspect the code.**
 
-	While your game is broken, you can access information about the state of the Lua environment. You can check the values that are assigned to local variables in the **Debugger View**, or by hovering over them in the **Script Editor**.
+	While your game is broken, you can access information about the state of the Lua environment. You can check the values that are assigned to local variables in the **Script Debugger**, or by hovering over them in the **Script Editor**.
 
-	You can modify local variables in the **Debugger View**, and continue the game using the modified value. You can also modify your scripts in the **Script Editor** while paused, and reload them into the game. See also ~{ Reloading Lua code }~.
+	You can modify local variables in the **Script Debugger**, and continue the game using the modified value. You can also modify your scripts in the **Script Editor** while paused, and reload them into the game. See also ~{ Reloading Lua code }~.
 
 3.	**Advance.**
 
 	Once you have learned all you can from the state of the code at one break point, you have several options for getting to another break point. You can *step* line-by-line through the script, executing one line at a time and pausing after each. While stepping, you can choose whether you want to descend into . Alternatively, you can also *continue*, which resumes the regular flow of the game until the next breakpoint is hit or you pause the game again.
 
-	You can advance the code using the debugging controls in the toolbars of the **Script Editor** and the **Debugger View**. For details, see ~{ Using the Debugger View }~.
+	You can advance the code using the debugging controls in the toolbars of the **Script Editor** and the **Script Debugger**. For details, see ~{ Using the Script Debugger }~.
 
 If you have not been able to identify and fix your problem, make a new hypothesis and test again.

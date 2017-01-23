@@ -4,15 +4,15 @@ With the DCC Link plug-in installed, you can import Stingray Physically Based Sh
 
 **To import a Stingray PBS material to your Stingray project**
 
-1. In Stingray, establish a connection with Maya, Maya LT, or 3ds Max. See ~{ Send assets to a DCC }~.
+1. In Stingray, establish a connection with Maya, Maya LT, or 3ds Max. See ~{ Send assets to a DCC tool }~.
 
-2. In your DCC, create a new StingrayPBS shader. See ~{ ShaderFX shader graphs }~.
+2. In your DCC tool, create a new StingrayPBS shader. See ~{ ShaderFX shader graphs }~.
 
 3. In the **Attribute Editor** (Maya/Maya LT), or **Material Parameter Editor** (3ds Max) enter a path and a name for the material in the **Engine Resource** attribute.
 
 	For example, if you want the material, named myStingrayPBS, to be stored in the materials folder of the currently opened Stingray project, enter content/materials/myStingrayPBS in the **Engine Resource** attribute.
 
-	> **Note:** The name you enter in the DCC is also used as the material name in Stingray. For example, if you enter myStingrayPBS in the **Engine Resource** attribute, the material is called myStingrayPBS.material in Stingray.
+	> **Note:** The name you enter in the DCC tool is also used as the material name in Stingray. For example, if you enter myStingrayPBS in the **Engine Resource** attribute, the material is called myStingrayPBS.material in Stingray.
 
 4. Do one of the following to send the material:
 

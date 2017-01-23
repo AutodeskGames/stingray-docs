@@ -73,7 +73,7 @@ The new **Scatter Tool** plug-in lets you scatter objects in the scene. Quickly 
 
 ### GearVR and Mini Renderer
 
-For people trying to do VR on mobile devices (like GearVR), we’ve provided a new renderer. This is a forward renderer with a simplified material model that excludes all post effects to further improve the performance on lower spec platforms. See ~{ Mini Renderer }~.
+For people trying to do VR on mobile devices (like GearVR), we’ve provided a new renderer. This is a forward renderer with a simplified material model that excludes all post effects to further improve the performance on lower spec platforms. See ~{ Mini renderer }~.
 
 ## Other Benefits
 

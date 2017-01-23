@@ -4,7 +4,7 @@ With Stingray and Maya or Maya LT on the same system, you can import scenes dire
 
 **To import FBX assets to your Stingray project **
 
-1. Establish a connection with Maya LT. See ~{ Send assets to a DCC }~.
+1. Establish a connection with Maya LT. See ~{ Send assets to a DCC tool }~.
 2. With your model selected in Maya LT, select **File > Send to Stingray > All**.
 <br>
 ![](../../../images/couch_selected.png)

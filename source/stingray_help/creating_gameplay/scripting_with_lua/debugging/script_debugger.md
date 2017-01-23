@@ -1,10 +1,10 @@
-# Using the Debugger View
+# Using the Script Debugger
 
-- **Window > Debugger View**
+- **Window > Script Debugger**
 
-The **Debugger View** gives you controls and information for debugging Lua code that is running in an attached instance of the Stingray engine.
+The **Script Debugger** gives you controls and information for debugging Lua code that is running in an attached instance of the Stingray engine.
 
-![Debugger View overview](../../../images/debugger_view.png)
+![Script Debugger overview](../../../images/debugger_view.png)
 
 **Notes:**
 

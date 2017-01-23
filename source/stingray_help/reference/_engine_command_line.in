@@ -1,20 +1,3 @@
-<!--
-
-    IMPORTANT NOTE!
-
-    This document is partially generated (everything below the Parameters section).
-
-    You should not edit this part of the document directly, instead edit the source file:
-
-        application/application/application_options.cpp
-
-    And then run:
-
-        ruby update_engine_command_line_parameters.md
-
-    To update the parameter list.
--->
-
 # Stingray engine command-line reference
 
 The Stingray engine accepts all command-line parameters detailed on this page.
@@ -145,6 +128,18 @@ Tells the engine to perform initialization in forward mode. In this mode, the en
 
 Tells the engine to perform initialization in deferred mode. In this mode, part of the engine initialization is done in the update loop. This is the default on WebGL.
 
+#### --plugin-dir *DIRECTORY*
+
+Adds an additional directory to search for engine plugins. You can use multiple --plugin-dir arguments to add additional directories.
+
+The plugin directories supplied with this argument are automatically set to be hot-reloadable.If a new plugin is found in the directory `dir` that matches the name of an already loaded plugin and that plugin supports the hot reload interface, the plugin will be reloaded.
+
+Since the engine locks the DLLs it is using and the debugger can lock an arbitrary number of old .pdb files, you are recommended to add the following steps to your plugin's pre-build step:
+
+	rename ${plugin}.dll ${plugin}.dll.old rename ${plugin}.pdb ${plugin}.${timestamp}.pdb.old del *.old
+
+Renaming ensures that the engine can still continue to use the old DLL while the new one is being created. We need to add a timestamp when renaming the PDB, since the debugger will lock any PDB it has encountered. The final `del` command must be set up to tolerate failure -- it will fail on the DLLs and PDBs that are still in use, leaving them in place.
+
 ### Console
 
 #### --port *PORT*
@@ -159,7 +154,7 @@ On PC where there can be many engine instances running simultaneously, the conso
 
 #### --wait-for-debugger
 
-Tells the engine to wait for a connection to the editor's Lua debugger and after receiving all debugging information (such as breakpoints). This ensures that the debugger can fully initialized before running, this solution is more robust than --wait.
+Tells the engine to wait for a connection to the editor's lua debugger and after receiving all debugging information (breakpoints etc). This ensures that the debugger can fully initialized before running, this solution is more robust than --wait.
 
 #### --wait *SECONDS*
 
@@ -210,6 +205,10 @@ When this flag is enabled, the compiler will query the network for compiled data
 #### --strip-debug
 
 Tells the data compiler that debug information should be stripped from `.lua` files during compilation.
+
+#### --verify-deterministic
+
+Tells the data compiler to try to verify that compiles are deterministic, by compiling every resource twice and comparing the result.
 
 #### --map-source-dir *MAPPED_DIRECTORY* *ROOT*
 
@@ -289,7 +288,7 @@ You can specify multiple host arguments to look for a file server on multiple ad
 
 #### --secret *SECRET*
 
-A security option that prevents the file client to read arbitrary directories on the file server. In order to connect the client must specify a secret that matches the content of a `.stingray-asset-server-secret` file in the directory that is being served.
+A security option that prevents arbitrary clients from connecting to the asset server. To be able to connect the server and the client must be started with the same --secret argument. In addition, only directories that have a file called `.stingray-asset-server-directory` in them can be accessed. The content of the `.stingray-asset-server-directory` file does not matter.
 
 #### --no-file-cache
 
@@ -378,3 +377,4 @@ Specifies that the engine main window should be created as a child window to the
 #### --no-raw-input
 
 Disables the use of raw WM_INPUT messages in the engine.
+

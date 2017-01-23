@@ -63,3 +63,5 @@ In the Stingray Editor, a box light is shown by a white 3D bounding box. The whi
 ![Box light gizmo](../../images/light_source_box_gizmo.png)
 
 Box lights can be useful for simulating directional light that comes into a scene through a rectangular opening like a window or door.
+
+>**Note:** Box lights are not supported on platforms like Android and iOS.

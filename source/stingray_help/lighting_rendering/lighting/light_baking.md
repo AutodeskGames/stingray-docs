@@ -41,9 +41,7 @@ You may be able to work around this issue by reducing the memory size of your li
 
 Pre-calculating realistic global illumination takes time. To get very high-quality results on big scenes, it can take a very large amount of time -- sometimes many hours or even days each time you do a final bake. You have to factor this extra time into your level design and production workflow.
 
-If you use Beast to bake your lighting, you can take advantage of its live baking mode to get live previews of bake results in the Stingray Editor viewport while you are working on your lighting. See ~{ About baking with Beast }~. You can also reduce final baking times by distributing the calculations across multiple computers. See ~{ Distributed lightmap baking using Distribeast }~.
-
-The built-in Stingray light baker converges toward its final result by iterating through multiple passes, increasing the quality of the rendering each time. This lets you get preliminary results quickly, so you can reduce the number of times you need to bake.
+The built-in GPU-accelerated Stingray light baker converges toward its final result by iterating through multiple passes, increasing the quality of the rendering each time. This lets you get preliminary results quickly, so you can reduce the number of times you need to bake. See ~{ Bake lightmaps }~.
 
 ### Static objects and lights only
 
@@ -52,13 +50,3 @@ Because lightmaps are pre-computed, they are only effective for static lights sh
 Say that you bake the lighting for a scene in which you have a lamp set up to shine down on a desk that holds some books and papers. The lightmap textures for the objects will be brightly lit, and the lightmap texture for the desk will show a bright pool of light from the lamp, with shadows from the books and papers. During the game, if that lamp moves, the desk and the objects will still show that same pool of light in the same location as if the lamp were still in place. Conversely, if the books and papers move, they will still appear lit by the light, and the places where they had been on the desk will be shadowed.
 
 A typical way to deal with this is to bake only indirect light, and only for objects and lights that are relatively static. Direct lighting for all objects is often done in real time. That way, moving objects continue to receive dynamic shadows and use the indirect lighting from the baked global lighting, but stationary objects get their indirect lighting from the higher-quality lightmaps.
-
-## Light bakers in Stingray
-
-With Stingray, you have two different options for baking lightmaps:
-
--	A GPU-accelerated light baker built in to Stingray.
-
--	Autodesk Beast, a "middleware" technology for rendering and global illumination that has been production-proven in games with unique visual appeal, like *Mirror's Edge*.
-
-Although the two systems work in different ways internally, the process for using them in the Stingray Editor is very similar. See ~{ Bake lightmaps }~.

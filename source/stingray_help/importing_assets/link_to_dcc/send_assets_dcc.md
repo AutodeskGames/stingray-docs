@@ -1,22 +1,22 @@
-#Send assets to a DCC
+#Send assets to a DCC tool
 
-There are two ways to connect or send assets between Stingray and your DCC, depending on whether you want to establish a live link (seeing updates in Stingray as you edit the asset in your DCC), or whether you want to launch and edit the original source scene in your DCC.
+There are two ways to connect or send assets between Stingray and your DCC tool, depending on whether you want to establish a live link (seeing updates in Stingray as you edit the asset in your DCC tool), or whether you want to launch and edit the original source scene in your DCC.
 
-###To establish a live editing link between Stingray and your DCC:
+###To establish a live editing link between Stingray and your DCC tool:
 
-1. Right-click an asset in the **Asset Browser** and select **Send to ** > *Product Name*.
+1. Right-click an asset in the **Asset Browser** and select **Send to** > *Product Name*.
 
-	This launches the asset in your DCC of choice. A small green "Connected to Stingray" message displays near the bottom of the interface.
+	This launches the asset in your DCC tool of choice. A small green "Connected to Stingray" message displays near the bottom of the interface.
 
 2. Make any edits you want in the DCC tool.
 
 3. Click **Update** next to the "Connected to Stingray" message to send any updates to Stingray.
 
-###To edit the original source scene in your DCC:
+###To edit the original source scene in your DCC tool:
 
 1. Right-click an asset in the **Asset Browser** and select **Open Source Asset**.
 
-	Stingray detects where the original scene was created, and launches the appropriate DCC. You're prompted to manually select an application if Stingray can't determine the file origin.
+	Stingray detects where the original scene was created, and launches the appropriate DCC tool. You're prompted to manually select an application if Stingray can't determine the file origin.
 
 	>	**Note:** If you have both Maya and Maya LT installed, Stingray uses Maya to launch FBX files. Maya LT only launches if the original scene is an .mlt file.
 
@@ -27,6 +27,6 @@ There are two ways to connect or send assets between Stingray and your DCC, depe
 
 ---
 Related topics:
-- ~{ Connect DCC and Stingray viewports }~
-- ~{ Setup the DCC plug-in }~
+- ~{ Connect DCC tool and Stingray viewports }~
+- ~{ Setup the DCC tool plug-in }~
 ---

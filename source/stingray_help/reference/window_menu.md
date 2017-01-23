@@ -46,10 +46,6 @@
 
 >Launches the **Front End Tests** tool with a series of tests to verify whether all data service specifications are met.
 
-**Debugger View**
-
->Launches the **Debugger View**. See ~{ Using the Debugger View }~.
-
 **Dependency**
 
 >Launches the **Dependency** tool to check for file dependencies. <!-- TODO: Link to video tutorial when it's ready -->
@@ -94,6 +90,10 @@
 
 >Launches the ~{ Property Editor }~.
 
+**Script Debugger**
+
+>Launches the **Script Debugger**. See ~{ Using the Script Debugger }~.
+
 **Script Editor**
 
 >Launches the **Script Editor**. See ~{ Using the Script Editor }~.
@@ -126,7 +126,7 @@
 
 ###LIGHTING AND SHADING
 
-(See **Create > Lighting**.)
+(See **Create > Light**.)
 
 **Shader Graph Editor**
 
@@ -136,7 +136,7 @@
 
 >See also ~{ Lighting and Rendering }~.
 
->**Bake Lightmaps** See ~{ Bake lightmaps }~.
+>**Light Baking** See ~{ Bake lightmaps }~.
 
 >**Clear Reflection Probes** See ~{ Reflections }~.
 

@@ -1,5 +1,7 @@
 #Story Editor
 
+![UPDATED](/../images/updated.png)
+
 - **Window > Story Editor**
 
 The **Story Editor** is a tool for creating simple animation on objects/units and entities within a level. You can add units and entities to Story and animate their transforms and other parameters using keyframe animation. (You cannot use animation clips in Story.) See also ~{ Create simple animations with the Story Editor }~.
@@ -16,7 +18,7 @@ Refer to the sections below for more detail on each area.
 
 Click to toggle Story mode. When on, the **Story Editor** is "live" so you can start to add keyframe animation on selected objects.
 
-	> **Important:** When Story mode is on, changing the position of the unit in the level has no effect. To edit the position of the unit in the level again, exit Story mode. (Click LIVE to toggle the mode on and off.)
+  > **Important:** When Story mode is on, changing the position of the unit in the level has no effect. To edit the position of the unit in the level again, exit Story mode. (Click LIVE to toggle the mode on and off.)
 
 You can still select, move, delete, or modify key values when the **Story Editor** is not live.
 
@@ -41,6 +43,8 @@ The **Story Editor** toolbar includes the following:
 ![](../images/storyEd_playbackCtrls.png)
 
 Use the playback controls to preview animations in the **Level Viewport**, as you edit the unit animation in the **Story Editor**.
+
+Use ![](../images/icon_story_forwardPlay.png) to play animation in forward direction and ![](../images/icon_story_reversePlay.png) to play in reverse direction.
 
 **Snap**
 
@@ -68,18 +72,15 @@ Toggle the timeline to display seconds, or frames.
 
 Manually enter time and value for a selected keyframe.
 
-
 **Key & Tangent options**
 
 ![](../images/comp_storyEd_keyOptions.png)
-
 
 **Story Selection mask**
 
 ![](../images/icon_storyEd_selOnlyStory.png)
 
 Masks selection so that you can select only objects in the current story.
-
 
 **Onion skinning**
 
@@ -88,6 +89,12 @@ Masks selection so that you can select only objects in the current story.
 Toggles the display of ghosting on selected units. Right-click to specify whether to ghost **Everything**, or only **Selected units**.
 
 To access additional **Onion Skinning Settings** (including color) in the **Properties** panel, select a `StoryRoot` in the **Story Editor** tree view, or in the main **Explorer** panel.
+
+**Capture Frames Tool**
+
+[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html)
+
+Opens the ~{ Capture Frames Tool }~. See also ~{ Capture frames to disk }~.
 
 **Curve editor/Key editor**
 
@@ -104,6 +111,7 @@ Curve editing mode:
 Key editing mode:
 
 ![](../images/storyEd_keysPanel.png)
+
 
 
 ##Timeline

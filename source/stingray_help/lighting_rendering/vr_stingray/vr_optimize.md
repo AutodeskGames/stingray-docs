@@ -1,4 +1,4 @@
-#Optimize VR content
+# Optimize VR content
 
 When you start to optimize your VR content, it's a good idea to reduce or eliminate all non-essential rendering costs in order to get good baseline performance. Once everything renders at a consistent framerate for VR, you can start adding optional features one by one, making sure each additional feature does not adversely impact performance. Some of the typical problems you may encounter are covered in the following checklist:
 

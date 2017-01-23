@@ -1,5 +1,7 @@
 # Requirements for Android game development
 
+![UPDATED](../../images/updated.png)
+
 In order to connect the Stingray Editor to an Android device, or to build and deploy your game for Android devices, you must install the requirements listed on this page on your Windows development machine.
 
 ## Java
@@ -8,22 +10,22 @@ You need both the Java Development Kit (JDK) and the Java Runtime Environment (J
 
 Stingray requires at least version 7, but we recommend using the latest update of version 8.
 
-You can download the JDK from the [Oracle Java SE site](http://www.oracle.com/technetwork/java/javase/overview/index.html). The JDK package contains a full version of the JRE, so you should not have to install the JRE separately.
+You can download the JDK from the [Oracle Java SE site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). The JDK package contains a full version of the JRE, so you should not have to install the JRE separately.
 
 ## Android SDK and tools
 
-If you don't already have the Android SDK installed on your computer, the easiest way to get it is to download and install the latest version of the Android Studio IDE from the [Android developer site](https://developer.android.com/sdk/index.html#Other). Make sure that you leave the **Android SDK** option checked during the installation, and take note of the install location -- you'll need it later.
+![UPDATED](../../images/updated.png)
 
-The Android SDK also comes with the SDK Manager utility, which you use to manage the versions of the various components that you have installed on your system.
+If you don't already have the Android SDK installed on your computer,
 
-Open your Android SDK installation directory in Windows Explorer, and run the `SDK Manager.exe` application.
-
-At a minimum, you must make sure that the SDK Manager has installed:
-
--	`Android SDK Platform-tools`: **Rev. 23.0.1 or higher**
--	`Android SDK Build-tools`: **Rev. 21.0.0 or higher -- see below**
-
-	>	**NOTE:** Install a version of the `Android SDK Build-tools` that is compatible with the version of the Android operating system that you have installed on your target device. For example, Android 6.0 requires at least Rev. 23, Android 5.11 requires at least Rev. 22. For more information on version compatibility, see the [Android SDK build tools release notes](https://developer.android.com/studio/releases/build-tools.html).
+- Download the Android Standalone Tools: <https://dl.google.com/android/repository/tools_r25.2.3-windows.zip>
+- Unzip the package, run `tools/android.bat` to launch the Android SDK Manager
+- Install the following:
+    - Android 7.1.1 SDK Platform (API 25)
+    - Android 5.0 SDK Platform (API 21)
+    - Android SDK Tools 25.2.2
+    - Android SDK Platform-tools 25
+    - Android SDK Build-tools 25
 
 ## Environment variables
 
@@ -31,7 +33,7 @@ After you install Java and the Android SDK:
 
 -	Make sure that the `JAVA_HOME` environment variable is set to point to the correct installation folder. For example, `C:\Program Files\Java\jdk1.8.0_80`.
 -	Make sure that the `ANDROID_HOME` environment variable is set to point to the correct installation folder. For example, `C:\Program Files (x86)\Android\android-sdk`.
--	Find the `adb.exe` tool in your Android SDK installation directory, and add its location to your `PATH` environment variable. This tool is typically found under `%ANDROID_HOME%\platform-tools`, but it may be in a different location on your system.
+-	Find the `adb.exe` tool in your Android SDK installation directory, and add its location to your `PATH` environment variable. This tool is typically found under `%ANDROID_HOME%\platform-tools`, but it may be in a different location on your system. For example, `D:\android\tools_r25.2.3-windows\platform-tools`.
 
 ## Default keystore for app signing
 

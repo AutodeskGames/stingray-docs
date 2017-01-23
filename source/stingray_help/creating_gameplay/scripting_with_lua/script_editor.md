@@ -36,7 +36,7 @@ The **Script Editor** integrates both Lua documentation and Lua command auto-com
 
 ## Debugging tools
 
-This part of the toolbar contains the same debugging tools as the **Debugger View** panel. For details, see ~{ Using the Debugger View }~.
+This part of the toolbar contains the same debugging tools as the **Script Debugger**. For details, see ~{ Using the Script Debugger }~.
 
 ![Debug Tools](../../images/comp_debugger_toolbar.png)
 
@@ -53,5 +53,5 @@ This part of the toolbar contains the same debugging tools as the **Debugger Vie
 ---
 Related topics:
 -	~{ Debugging Lua }~
--	~{ Using the Debugger View }~
+-	~{ Using the Script Debugger }~
 ---

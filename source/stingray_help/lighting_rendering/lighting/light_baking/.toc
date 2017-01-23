@@ -2,4 +2,4 @@ lightmap_uvsetup
 bake_settings
 bake_lightmaps
 bake_with_stingray
-bake_with_beast
+
