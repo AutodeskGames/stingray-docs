@@ -11,7 +11,7 @@
 1. In the Shader Graph Editor, select the **Standard Base** node.
 1. In the **Property Editor**, enable **Hardware Tessellation**.
 
-	 ![](../../images/enable_hard_Tess.png)
+	 ![](../../images/enable_hard_tess.png)
 
-1. In the Shader Graph Editor, plug in values to the tessellation specific inputs. See ~{ Create or edit shader graphs }~.
+1. In the **Shader Graph Editor**, plug in values to the tessellation specific inputs. See ~{ Create or edit shader graphs }~.
 1. Assign the material to a mesh with some amount of existing tessellation.
