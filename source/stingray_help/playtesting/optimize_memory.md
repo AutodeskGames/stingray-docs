@@ -128,11 +128,17 @@ The engine reserves 16 MB of memory at startup for use by the texture streaming 
 
 When you bake the lighting for a level, you generate additional textures that your game needs to load. Although baking typically achieves higher quality rendering with lower CPU and GPU usage, this always comes at the cost of higher runtime memory requirements.
 
-Try using only dynamic lighting in conjunction with the global diffuse map provided by the shading environment. Doing this will let you eliminate the lightmap textures altogether. Or, you can restrict light baking to only some important objects in the scene, and leave others to use the global baked diffuse lighting. See ~{ Global environment lighting }~.
+If your lightmaps are taking up too much memory, you can try the following ideas:
 
-If you must bake lightmaps in order to get the look you want, but you still need to lower the memory consumption of the textures, you can lower the *lightmap resolution* setting in the **Light Baking** dialog. This will make the generated textures smaller in size. See ~{ Baking with the Stingray baker }~.
+-	Don't bake anything -- use only dynamic lighting, in conjunction with the global diffuse map provided by the shading environment. Doing this will let you eliminate the lightmap textures altogether. See ~{ Global environment lighting }~.
 
-After this step, you can control the texture compression and mip map generation settings for your lightmaps in the **Texture Manager** just like any other texture resources in your project. See [Optimize textures] above.
+-	Restrict light baking to only some important objects in the scene, and leave others to use dynamic direct lighting and the global baked diffuse lighting.
+
+-	Lower the *lightmap resolution* setting in the **Light Baking** dialog. This makes the generated textures smaller in size, at the cost of detail and sharpness. See ~{ Baking with the Stingray baker }~.
+
+	If you find that you can't get enough detail in the baked lighting when you reduce the lightmap resolution this way, you can try baking only indirect illumination but not direct light. The effect of lowering the resolution is typically less noticeable for indirect light, which tends to be blurry and low-frequency anyway.
+
+-	You can control the texture compression and mip map generation settings for your lightmaps in the **Texture Manager** just like any other texture resources in your project. See [Optimize textures] above.
 
 ## Optimize models
 
