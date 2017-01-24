@@ -54,3 +54,15 @@ If you have access to the source code for either or both the PlayStation 4 and X
 	~~~
 
 	This copies the submodule's repository locally to your computer, so that you can build the engine for that platform. You should now see some new files inside your `runtime/platforms/ps4` or `runtime/platforms/xb1` folders.
+
+## I'm getting submodule errors!
+
+When you clone or update your Stingray repository, your git client may report errors about updating submodules, or about being unable to access the `https://git.autodesk.com` repository. As long as these errors refer to the `stingray-internal` repository, or submodule repositories for consoles that you don't have access to, you can safely ignore these errors.
+
+To avoid getting these errors:
+
+-	Configure your Git client to not clone or update recursively. This means that when you clone or update the main `stingray` repository, your git client won't try to clone or update the missing repositories.
+
+-	If you need to update submodules, update only the one you need instead of updating *all* submodules in the main repository.
+
+	For example, instead of running `git submodule update`, which updates all submodules in the repository, use `git submodule update runtime/platforms/ps4` and `git submodule update runtime/platforms/xb1`.
