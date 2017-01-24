@@ -6,31 +6,31 @@ For reference information on all VR Flow nodes, go to the [Stingray Flow Node Re
 
 - Input nodes
 
-  Used for Button presses, touch input, or haptic feedback
+    Used for Button presses, touch input, or haptic feedback
 
 - Linking nodes
 
-  Used for attaching objects in your scene to the devices that are tracked by the VR system, like your controllers of HMD (Head Mounted Display)
+    Used for attaching objects in your scene to the devices that are tracked by the VR system, like your controllers of HMD (Head Mounted Display)
 
 - Device Poses nodes
 
-  Provide information about where your tracked deviced are located and how htey are orientated
+    Provide information about where your tracked devices are located and how they are oriented
 
 - Tracking Space nodes
 
-  Used for mapping the real-world tracking space defined by your VR system into the virtual environment of your project
+    Used for mapping the real-world tracking space defined by your VR system into the virtual environment of your project
 
 - Effect nodes
 
-  Let you create simple Fade In/Fade Out effects
+    Let you create simple Fade In/Fade Out effects
 
-   > **Note:** Effect nodes are only available in the Vive template.
+    > **Note:** Effect nodes are only available in the Vive template.
 
 Although there are a few discrepancies between the Oculus nodes and the Vive nodes, most of the essential functionalities remain the same. These nodes, in conjunction with the other default Flow nodes, cover all of the functionality necessary to implement any behavior you want for either device.
 
 ## SteamVR Flow node
 
-The following flow nodes are available when you load the VR HTC Vive template:
+The following Flow nodes are available when you load the VR HTC Vive template:
 
 ![VR Templates](../../images/vr_steamvr_nodes.png)
 
@@ -42,7 +42,7 @@ Some example links to the Flow reference:
 
 # Oculus Flow nodes
 
-The following flow nodes are available in the Oculus template:
+The following Flow nodes are available in the Oculus template:
 
 ![VR Templates](../../images/vr_occulus_nodes.png)
 
