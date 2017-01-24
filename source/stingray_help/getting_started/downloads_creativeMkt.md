@@ -12,7 +12,7 @@ Sample game projects that illustrate the potential of specific elements of Sting
 
 [![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html)
 
-Browse and import free online assets using the **Online Assets** folder in the ~{ Asset Browser }~. Right-click an asset and select **Import asset** to download and import the asset package to a category specific folder in your project.
+Browse and import free online assets using the **Online Assets** folder in the ~{ Asset Browser }~. Right-click an asset in the Asset Browser and select **Download Asset** to download and import the asset package to a category specific folder in your project.
 
 You can also select an asset and click the Download button in the **Property Editor** to download the asset.
 

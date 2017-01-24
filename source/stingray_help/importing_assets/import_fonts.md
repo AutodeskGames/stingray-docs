@@ -4,7 +4,7 @@
 
 You can import font files to generate font resources to render text with sharp edges and preserve them when scaling.
 
->**Note:** Fonts are imported using the **Distance Field Font Import** plug-in which is loaded automatically in the **Plugin Manager**.
+>**Note:** Fonts are imported using the **Distance Field Font Importer** plug-in which is loaded automatically in the **Plugin Manager**.
 
 >**Note:** MSDF (Multi-channel Signed Distance Field) does not work on all fonts, and will likely fail on more complex fonts.
 
@@ -16,4 +16,4 @@ You can import font files to generate font resources to render text with sharp e
 
   >Note: Hover over the options in this window for description. For some fonts, you may need to adjust the Character Width and Character Height settings to display with high resolution.
 
- On import, multi-channel signed distance field resources are generated for the font. You can use the fonts to display text using Lua or the experimental *Stingray GUI 2D Plugin* from the Plugin Manager.
+ On import, multi-channel signed distance field resources are generated for the font. You can use the fonts to display text using Lua.

@@ -70,9 +70,9 @@ When working with assets, you often need to replicate assets like materials and 
 
 ![](../../images/online_assets.png)
 
-Use the Online Assets tab in the Tree view to browse, search and find online assets.To download and import an asset to use in your project, do either of the following:
+Use the **Online Assets** tab in the Tree view to browse, search and find online assets.To download and import an asset to use in your project, do either of the following:
 
-  - Right-click an asset and select **Import asset**.
+  - Right-click an asset and select **Download Asset**, or click the **Download and install asset** icon ![](../../images/online_assets_download.png).
   - Select an asset and click the **Download** button in the **Property Editor**.
 
 Click the yellow icon ![](../../images/icon_status_bar_cancel_progress.png) to cancel downloading of the asset. The online assets are not listed in the Asset Browser if the Online Assets server is disconnected from the cloud services.
