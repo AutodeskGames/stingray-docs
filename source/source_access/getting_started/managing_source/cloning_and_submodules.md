@@ -57,9 +57,9 @@ If you have access to the source code for either or both the PlayStation 4 and X
 
 ## I'm getting submodule errors!
 
-When you clone or update your Stingray repository, your git client may report errors about updating submodules, or about being unable to access the `https://git.autodesk.com` repository. As long as these errors refer to the `stingray-internal` repository, or submodule repositories for consoles that you don't have access to, you can safely ignore these errors.
+When you clone or update your Stingray repository, your git client may report errors about updating submodules, or about being unable to access the `https://git.autodesk.com` repository. As long as these errors refer to the `stingray-internal` repository, or submodule repositories for consoles that you don't have access to, you can safely ignore these errors. They won't prevent you from getting any code that you need.
 
-To avoid getting these errors:
+To avoid seeing these errors in future:
 
 -	Configure your Git client to not clone or update recursively. This means that when you clone or update the main `stingray` repository, your git client won't try to clone or update the missing repositories.
 
