@@ -31,7 +31,7 @@ Sections in this topic:
 
 ## Browse online assets in the Asset Browser
 
-See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse, find and import assets directly from online to your project. Right-click an online asset and select **Import Asset** to download and import the asset package to the project folder. Updated topic include: ~{ Download assets and example projects }~.
+See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse, find and import assets directly from online to your project. Right-click an online asset and select **Download Asset** to download and install the asset package to a category specific folder in the project. Updated topic include: ~{ Download assets and example projects }~.
 
 ## Improved Capture Frames Tool
 <a name="capture-frames"></a>
@@ -77,6 +77,8 @@ To import fonts:
 1. Right-click in the **Asset Browser** and select **Import Asset** from the pop-up menu.
 2. Browse to select a font and click **Open**.
 3. In the window that appears, enable the **Distance Field Options** check box, change any settings as required, then click **Import**.
+
+See ~{ Import fonts }~.
 
 ## Story Editor improvements
 

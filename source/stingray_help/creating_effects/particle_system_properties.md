@@ -1,8 +1,8 @@
 # Particle system properties
 
-When you select a Particle Effect in the **Asset Browser**, the following properties display in the **Property Editor**.
+When you select a Particle Effect in the **Particle Editor**, the following properties display.
 
-Click Replay at any time to view the effect of your changes as you edit the properties of the particle effect system.
+[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Click Respawn ![](../images/icon_particle_respawn.png) at any time to view the effect of your changes as you edit the properties of the particle effect system.
 
 ##System properties:
 <dl>

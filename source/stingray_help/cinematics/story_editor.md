@@ -1,6 +1,6 @@
 #Story Editor
 
-![UPDATED](/../images/updated.png)
+![UPDATED](../images/updated.png)
 
 - **Window > Story Editor**
 
