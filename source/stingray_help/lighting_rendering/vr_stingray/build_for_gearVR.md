@@ -16,6 +16,8 @@ This topic provides an overview of the steps to successfully build and deploy a 
 5. In the pop-up that appears, specify the location of the osig file.
 6. Run the project.
 
+## Advanced: Faster iteration process (for customers with source access)
+
 After you deploy the project to your device, use the following process to iterate faster.
 
 1. Add your osig file to 'runtime\plugins\gearvr_plugin\resources\app\src\main\assets'.
