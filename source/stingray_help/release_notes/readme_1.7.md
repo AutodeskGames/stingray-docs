@@ -72,12 +72,6 @@ You can now import font files to generate font resources to render text with sha
 
   > **Note:** This feature is still under active development.
 
-To import fonts:
-
-1. Right-click in the **Asset Browser** and select **Import Asset** from the pop-up menu.
-2. Browse to select a font and click **Open**.
-3. In the window that appears, enable the **Distance Field Options** check box, change any settings as required, then click **Import**.
-
 See ~{ Import fonts }~.
 
 ## Story Editor improvements
