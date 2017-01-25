@@ -44,7 +44,11 @@ This has the benefit of making the construction of the TOC totally implicit, wit
 
 However, if you want to specify the order that the topics are presented within a folder, you can place a file named `.toc` in that folder. Each line in this file is read in order, and matched against the names of the topics and sub-folders in the directory. Matching topics are added to the TOC in order; matching directories open a new level of the TOC. Any topic files and directories that aren't matched are appended after the last entry in the `.toc` file using the logic described above.
 
-# Building the docs
+# Inside info
+
+The following sections are intended only for people with access to the internal version of this source repository.
+
+## Building the docs
 
 1.	Install [Ruby](https://www.ruby-lang.org/en/downloads/), if you don't have it already.
 
@@ -54,13 +58,13 @@ However, if you want to specify the order that the topics are presented within a
 
 By default, you'll get a local build, which is placed in the `output` folder.
 
-## Build settings
+### Build settings
 
 The build process for each chunk of the docs is controlled by an XML configuration file that lives next to the Ruby scripts. You can modify these files to change how the docs are generated and where they end up. For details, see the readme `.docx` file in the `build/ixg-doc-tools/tools` folder.
 
 Feel free to experiment with these settings in your local builds. However, we on the Stingray team would appreciate it if you refrain from posting your builds to the AKN cloud without checking with us, to avoid the possibility of accidentally overwriting something.
 
-# Reference docs
+## Reference docs
 
 The Stingray docs that are generated from the Markdown source in this repo are bundled with sets of *reference* documentation that are auto-generated from comments in the source code of the Stingray engine and editor.
 
@@ -70,7 +74,7 @@ This repo does contain some extra material used when building these references. 
 
 When you build the reference docs using the scripts in this docs repo, that material will get included in the built reference docs automatically.
 
-# Branching conventions
+## Branching conventions
 
 When generating the docs, it's really important to make sure that we keep the info in these Markdown files synchronized with the version of the engine & editor that they refer to. We need to make sure that we're pairing the right help topics with the matching technical docs. It's also important if we need to make an update to correct some errata in the currently public version of the help that we don't bundle in API docs for stuff that's still in develop in the engine and not yet released to the public.
 
@@ -88,7 +92,7 @@ In order to avoid confusion, we're adopting the following conventions for how we
 
 Submodules don't "advance" automatically; we have to specifically set them every so often when we need to change the commit of the engine repo that we want to pick up. We'll start by doing this once a sprint, and on-demand if needed for some reason.
 
-## Release workflow
+### Release workflow
 
 The overall release workflow is this:
 
