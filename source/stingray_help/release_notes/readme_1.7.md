@@ -106,17 +106,17 @@ In addition, new Flow nodes for entities let you get and set entity properties s
 
 New Flow nodes include:
 
-- Get Component Bool Property
-- Get Component Float Property
-- Get Component Quaternion Property
-- Get Component String Property
-- Set Component Vector Property
+- **Entity > Get Component Bool Property**
+- **Entity > Get Component Float Property**
+- **Entity > Get Component Quaternion Property**
+- **Entity > Get Component String Property**
+- **Entity > Set Component Vector Property**
 
-- Set Component Bool Property
-- Set Component Float Property
-- Set Component Quaternion Property
-- Set Component String Property
-- Set Component Vector Property
+- **Entity > Set Component Bool Property**
+- **Entity > Set Component Float Property**
+- **Entity > Set Component Quaternion Property**
+- **Entity > Set Component String Property**
+- **Entity > Set Component Vector Property**
 
   > For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
 
@@ -328,6 +328,10 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 	**Workaround:** Prepare complex meshes prior to exporting by manually unwrapping UVs in your DCC tool.
 
+- **GAME-20894 Holding Ctrl + V creates too many objects in Explorer panel**
+
+	**Workaround:** Press Ctrl + V quickly to paste a single instance of the copied object. 
+	
 - **GAME-19975 Stingray hangs and prevents any other window from coming to the forefront**
 
 	We don't have consistent repro steps for this one, so if you see it let us know. It seems to happen for some people when Alt + tabbing between windows.

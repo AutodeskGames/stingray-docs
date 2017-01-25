@@ -4,7 +4,7 @@ Autodesk® Stingray software is supported on the following 64-bit operating syst
 
 ## Operating system
 
-Microsoft® Windows® 7 (SP1) and Windows® 8.1
+Microsoft® Windows® 7 (SP1), Windows® 8.1, or Windows® 10
 
 ## Hardware
 
