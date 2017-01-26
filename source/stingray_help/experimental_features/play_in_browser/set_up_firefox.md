@@ -4,7 +4,7 @@ This page describes how to set up Firefox to ~{ Run your project in a browser us
 
 ## Step 1. Get a compatible version
 
-WebGL 2.0 is now supported in the official Firefox public release, for **64-bit** systems. You don't need to install a pre-release version. 
+WebGL 2.0 is now supported in the official Firefox public release. You don't need to install a pre-release version. 
 
 ## Step 2. Set up Firefox
 
