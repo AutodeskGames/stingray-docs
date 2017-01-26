@@ -2,25 +2,49 @@
 
 This repository hosts all the source files for the Stingray documentation.
 
-This readme is intended to orient internal Autodesk developers and customers to our help and docs systems.
+This readme is intended to orient internal Autodesk developers and external customers to our help and docs systems.
 
 # Viewing the docs
 
-If you want to read the docs, it's best to use the public docs site, at:
+If you just want to read the docs, it's best to use the public docs site, at:
 
 <http://www.autodesk.com/stingray-help>
 
-You'll have access there to all the Stingray material in its final format as viewed by customers, including the API references. Note though the on-line help is typically refreshed each time we push a new build out to customers, so it may be a bit behind the latest state of this repository (see [Branching conventions](#branching-conventions) below).
+You'll have access there to all the Stingray material in its final format as viewed by customers, including the API references. The content in this public site always corresponds to the last released version of Stingray, and typically matches the content of the `master` branch in this `stingray-docs` repository.
 
-The best way to find out if something is documented in the Stingray Help is to search the docs site above. If you can't find what you're looking for, refer to the next section.
+The best way to find out if something is documented in the Stingray Help for the current release is to search the site above.
 
 # Contributing to the docs
 
-Our help is a hybrid of multiple different sources and systems, packaged up together into a standard Autodesk presentation layer on the cloud.
+Our Stingray help is a hybrid of multiple different sources and systems, packaged up together into a standard Autodesk presentation layer on the cloud.
 
-Most of the doc is generated from source files that are kept in this Git repository. This includes the topics about workflows, Lua scripting help, documentation on writing plug-ins, reference information about file formats, etc. If you want to contribute to these parts of the docs, you can do so freely, the same way you would any source code.
+Most of the doc is generated from source files that are kept in this Git repository. This includes the topics about workflows, Lua scripting help, documentation on writing plug-ins, reference information about file formats, etc. If you want to contribute to the docs, this repository is your place to start!
 
-Source files for these parts of the doc are all maintained in the *source* folder. The organization of the files in this folder more or less matches the organization of the final TOC shown on the public docs site, so it should be pretty easy to figure out where to make your edits and additions. If you need help getting started, contact any member of the documentation team.
+## Internal and external repos
+
+This `stingray-docs` repo actually exists in two places:
+
+-	Internally within the Autodesk network, in an private enterprise instance of GitHub. This is where the Stingray team works day to day.
+
+-	On the public `github.com` site, visible to the world. This is a mirror of the internal repo that is automatically updated any time the internal repo gets a commit in its master branch.
+
+What this means is that when you submit a pull request to our public GitHub repo, we don't merge it straight in. We bring the changes into our internal repo, then the changes get pushed out automatically to the public mirror. When that's done, we close your pull request.
+
+## Using GitHub for external customers
+
+If you're not already familiar with using GitHub to contribute to open-source projects, there are lots of primers [like this one](https://guides.github.com/) out there on the Internet. There are also lots of tools that can help make it easier, like [Sourcetree](https://www.sourcetreeapp.com/), [GitKraken](https://www.gitkraken.com/), [GitHub Desktop](https://desktop.github.com/), etc.
+
+You submit modifications to us using *pull requests* -- the mechanism GitHub uses to exchange, review and accept changes to a repo from other users. Here's a couple of different ways you can go about proposing changes to us through a pull request:
+
+-	**An easy way, for small changes.** Each topic on the main help site has a green `Edit this page in GitHub!` button that takes you directly to the source for that topic in this repo. As long as you have a GitHub account, you can click the little pencil icon to edit the content right in your browser, and then click the **Propose File Changes** button at the bottom of the page. GitHub will automatically create a pull request for your change.
+
+-	**A more flexible way to make bigger changes.** First, you create your own *fork* of our repo under your own user account (just click the **Fork** button at the top of this page). Then, you can make changes in your fork freely, as much as you want. You can make your changes directly in the GitHub web client, or you can *clone* the fork to your computer, make your changes locally, *commit* the changes and *push* them back up to GitHub. Then, when your fork is the way you want it, you can use the GitHub web interface to start a pull request to merge the changes from your fork back to our repo.
+
+## Source organization
+
+Source files for these parts of the doc are all maintained in the *source* folder. The organization of the files in this folder more or less matches the organization of the final TOC shown on the public docs site, so it should be pretty easy to figure out where to make your edits and additions.
+
+**NOTE:** This repo also has a couple of *submodules* that point to other repositories. Currently these submodules are hidden away in our private GitHub cloud, so you can't access them. If you're working in the public mirror, you might occasionally run into errors when cloning or pulling from this repo, telling you that the submodules can't be found. Don't worry about it, that's expected! If the errors are getting in the way though, you might be able to avoid these errors by configuring your Git client not to *recurse* into submodules.
 
 ## File format
 
@@ -31,6 +55,8 @@ For details on what you can do in Pandoc-flavored markdown, see:
 <http://johnmacfarlane.net/pandoc/README.html#pandocs-markdown>.
 
 Many good text editors can give you previews of what the Markdown format will look like when transformed into HTML. Although the styles will be different from the styles in our final public help, a preview like this should give you a good enough idea of the structure and markup you're writing. (You can also run a doc build yourself to see the final format; see below.)
+
+As a general rule, if the GitHub preview looks good, you can be pretty sure that your content will be formatted correctly in the final build.
 
 ## Controlling the TOC
 
@@ -44,9 +70,21 @@ This has the benefit of making the construction of the TOC totally implicit, wit
 
 However, if you want to specify the order that the topics are presented within a folder, you can place a file named `.toc` in that folder. Each line in this file is read in order, and matched against the names of the topics and sub-folders in the directory. Matching topics are added to the TOC in order; matching directories open a new level of the TOC. Any topic files and directories that aren't matched are appended after the last entry in the `.toc` file using the logic described above.
 
+## Links to other topics
+
+You might notice that our topics use a funny syntax to refer to other topics -- like, they'll say `~{ Asset Browser }~`. Our doc build turns those automatically into links to the other topics, wherever they live in the `source` folder. This is nice because you don't have to mess around with relative paths to other files that might break if those target files move. You can use regular Markdown linking too, this is just a helpful shortcut.
+
+## Variables
+
+Sometimes, especially for software versions, you'll see places where the Markdown file has a placeholder string instead of a real value. This is done so that we can keep those things that change frequently in each release in one place, instead of having to hunt down all the references to them all over the docs. You can find the definitions for these variables inside the `build/variables.ini` file.
+
+# Talk to us!
+
+If this all sounds like a lot of work, and you'd rather just tell us about a problem or an omission that you see, please feel free to let us know. You can log an issue here in this repo, you can use the "Was this helpful?" box at the bottom of any topic in the help, or post on [the forums](http://www.autodesk.com/stingray-forums) about it (if you want to embarrass us in front of everybody). We read them all, I promise!
+
 # Inside info
 
-The following sections are intended only for people with access to the internal version of this source repository.
+The following sections are intended only for people with access to the internal version of this source repository. Our build tools are still private for the moment. And the content in the reference docs is pulled from comments in the engine source, so it's also private. (But if you spot an error or a problem in the reference docs, don't hesitate to tell us about it -- see above!)
 
 ## Building the docs
 
@@ -107,5 +145,3 @@ The overall release workflow is this:
 	-	we update the submodules for our `develop` and `release` branches to point to the most recent commits.
 
 -	When the release goes FCD and we want to publish the help, we merge our `release` branch into `master`, and update its submodule to point to the newest `master` of the Stingray engine.
-
-It sounds complicated, but it should be pretty flexible and easier than periodically doing big merges of all the engine code into doc branches, as we were doing when we were part of the same repo.
