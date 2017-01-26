@@ -18,13 +18,13 @@ You can start the Stingray engine application from a command-line prompt, and pr
 
 - --toolchain should point to the absolute path of your binaries directory.
 
-  For example, `C:\Program Files\Autodesk\Stingray\1.7.0`
+  	For example, `C:\Program Files\Autodesk\Stingray\1.7.0`
 
 - --project-root should point to the absolute path of your project's source data.
 
 	For example, `C:/Stingray_Projects/New_Project`
 
-- --level sh9uld point to the path of the level you want to bake.
+- --level should point to the path of the level you want to bake.
 
 	For example, `level content/levels/basic`
 

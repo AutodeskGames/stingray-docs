@@ -36,9 +36,8 @@ See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse,
 ## Improved Capture Frames Tool
 <a name="capture-frames"></a>
 
-The **Capture Frames** Tool is now integrated into the **Story Editor** workflow, and can also be initiated through Flow or Lua. New options in the **Capture Frames** window let you select from all available cameras, and set a specific resolution to capture. In the **Story Editor**, create a story and then click ![Capture Frames](../images/icon_capture_frame.png) to open the **Capture Frames** window. Modify the capture settings and click **Capture Frames** to start capturing the active Story.
+The **Capture Frames** Tool is now integrated into the **Story Editor** workflow, and can also be initiated through Flow. New options in the **Capture Frames** window let you select from all available cameras, and set a specific resolution to capture. In the **Story Editor**, create a story and then click ![Capture Frames](../images/icon_capture_frame.png) to open the **Capture Frames** window. Modify the capture settings and click **Capture Frames** to start capturing the active Story. For details, see ~{ Capture Frames Tool }~.
 
->**Note:** A story can be set to be played in **Ping Pong** Mode or in **Loop**, but capture frames only works in forward or reverse, and not ping pong.
 
 ## Better texture import with automatic compression
 
@@ -134,14 +133,15 @@ Stingray now supports high definition range EXR files for image based lighting. 
 
 ### Light baking improvements
 
-- The light baker is now more stable and has been optimized to run faster on most scenes and hardware. See ~{ Baking with the Stingray baker}~.
+- The light baker is now more stable and has been optimized to run faster on most scenes and hardware. See ~{ Baking with the Stingray baker }~.
 - You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See ~{ Bake lightmaps }~.
 - Click **Clear** in the **Light Baking** window to quickly delete and unmap all lightmaps on disk.
--	Beast is now deprecated. Use Stingray light baker instead.
+- You can now start the Stingray engine application from a command-line prompt, and provide parameters on the command line to trigger lightmap baking. For details, see ~{ Trigger lightmap baking from the command line }~.
+-	Beast is now deprecated. Use the Stingray light baker instead.
 
 ## Tessellation support
 
-Tessellation can now be activated using the standard base material node. Use the **Tesselation Factor** input on the base node to control the tesselation factor of your surface. A lower value results in a less tessellation.
+Tessellation can now be activated using the standard base material node. Use the **Tesselation Factor** input on the base node to control the tesselation factor of your surface. A lower value results in a less tessellation. See ~{ Create a tessellation material }~.
 
 ## Negative scale support
 
@@ -330,8 +330,8 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 - **GAME-20894 Holding Ctrl + V creates too many objects in Explorer panel**
 
-	**Workaround:** Press Ctrl + V quickly to paste a single instance of the copied object. 
-	
+	**Workaround:** Press Ctrl + V quickly to paste a single instance of the copied object.
+
 - **GAME-19975 Stingray hangs and prevents any other window from coming to the forefront**
 
 	We don't have consistent repro steps for this one, so if you see it let us know. It seems to happen for some people when Alt + tabbing between windows.
