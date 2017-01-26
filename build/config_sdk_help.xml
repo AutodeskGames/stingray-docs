@@ -19,7 +19,8 @@
 		</AKN>
 		<language>%SR_DOC_LANG%</language>
 		<project_title>Stingray SDK Help</project_title>
-		<project_title lang="ko">Stingray 개발자 도움말</project_title>
+		<project_title lang="ko">Stingray SDK 도움말</project_title>
+		<project_title lang="ja">Stingray SDK ヘルプ</project_title>
 		<export_for_localization>%SR_DOC_EXPORT_DIR%</export_for_localization>
 		<import_from_localization>%SR_DOC_IMPORT_DIR%</import_from_localization>
 	</project>

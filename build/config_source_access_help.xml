@@ -19,8 +19,8 @@
 		</AKN>
 		<language>%SR_DOC_LANG%</language>
 		<project_title>Stingray Source Access Help</project_title>
-		<project_title lang="ko">Stingray 개발자 도움말</project_title>
-		<project_title lang="ja">Stingray TODO:dev help title</project_title>
+		<project_title lang="ko">Stingray 소스 액세스 도움말</project_title>
+		<project_title lang="ja">Stingray ソース アクセス ヘルプ</project_title>
 		<export_for_localization>%SR_DOC_EXPORT_DIR%</export_for_localization>
 		<import_from_localization>%SR_DOC_IMPORT_DIR%</import_from_localization>
 	</project>
