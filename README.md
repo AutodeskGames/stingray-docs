@@ -14,6 +14,10 @@ You'll have access there to all the Stingray material in its final format as vie
 
 The best way to find out if something is documented in the Stingray Help for the current release is to search the site above.
 
+# Talk to us!
+
+If all the stuff below sounds like a lot of work, and you'd rather just *tell* us about a problem or an omission that you see, please don't be shy. You can log an issue here in this repo, you can write a comment in the "Was this helpful?" box at the bottom of any topic in the help, or you can post on [the forums](http://www.autodesk.com/stingray-forums) about it (if you want to embarrass us in front of everybody). We *do* read them all, promise!
+
 # Contributing to the docs
 
 Our Stingray help is a hybrid of multiple different sources and systems, packaged up together into a standard Autodesk presentation layer on the cloud.
@@ -74,13 +78,28 @@ However, if you want to specify the order that the topics are presented within a
 
 You might notice that our topics use a funny syntax to refer to other topics -- like, they'll say `~{ Asset Browser }~`. Our doc build turns those automatically into links to the other topics, wherever they live in the `source` folder. This is nice because you don't have to mess around with relative paths to other files that might break if those target files move. You can use regular Markdown linking too, this is just a helpful shortcut.
 
+## Related topics and page metadata
+
+At the bottom of each page on the help site, you'll usually find links to other pages. The links up to the parent topic in the TOC and the links to child pages are created automatically during the doc build, so you don't have to do anything for those.
+
+You can also create links to other pages manually, by putting them in a YAML metadata block, like this:
+
+~~~
+---
+Related topics:
+-	~{ Page Title }~
+---
+~~~
+
+You can put other kinds of metadata in the YAML block too. Currently our build handles:
+
+-	`Tags:` A list of keywords that the search indexer should point to this page, even if those terms don't appear in the page content. This is best used not for boosting the search rank for things that already appear in the page, but rather for adding synonyms or other words that people might use to search for the content on a page.
+
+Other kinds of metadata don't affect the resulting page in the docs.
+
 ## Variables
 
 Sometimes, especially for software versions, you'll see places where the Markdown file has a placeholder string instead of a real value. This is done so that we can keep those things that change frequently in each release in one place, instead of having to hunt down all the references to them all over the docs. You can find the definitions for these variables inside the `build/variables.ini` file.
-
-# Talk to us!
-
-If this all sounds like a lot of work, and you'd rather just tell us about a problem or an omission that you see, please feel free to let us know. You can log an issue here in this repo, you can use the "Was this helpful?" box at the bottom of any topic in the help, or post on [the forums](http://www.autodesk.com/stingray-forums) about it (if you want to embarrass us in front of everybody). We read them all, I promise!
 
 # Inside info
 
