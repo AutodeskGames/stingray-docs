@@ -45,11 +45,11 @@ The following properties display in the ~{ Property Editor }~ when you create or
 
 ###Physics
 
-<dt>Material</dt>
-<dd>Sets the material template for the trigger.</dd>
+<dt>Actor template</dt>
+<dd>Sets the type of actor for the trigger. For more information on physics actors, see ~{ Basic physics concepts }~.</dd>
 
 <dt>Shape Template</dt>
-<dd>Sets the type of actor for the trigger. For more information on physics actors, see ~{ Basic physics concepts }~.</dd>
+<dd>Sets the type of the trigger. If you set a trigger to "character_trigger", it will notify when a *character* enters and leaves the trigger volume.</dd>
 
 </dl>
 

@@ -35,15 +35,12 @@
 
 </dl>
 
-##	Physics
+##	Volume
 
 <dl>
 
-<dt>Material</dt>
-<dd>Sets the Material Template for the volume.</dd>
-
-<dt>Shape Template</dt>
-<dd>Sets the type of actor for the volume.</dd>
+<dt>Type</dt>
+<dd>Sets the Navigation volume type for tagging NavMesh. See "Generation tagvolumes" in ~{ Generate navigation mesh }~ for the volume types.</dd>
 
 </dl>
 
