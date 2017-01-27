@@ -45,7 +45,7 @@ The following properties display in the ~{ Property Editor }~ when you create or
 
 ###Physics
 
-<dt>Actor template</dt>
+<dt>Actor Template</dt>
 <dd>Sets the type of actor for the trigger. For more information on physics actors, see ~{ Basic physics concepts }~.</dd>
 
 <dt>Shape Template</dt>
