@@ -2,7 +2,7 @@ create_markers
 marker_properties
 create_primitives
 create_prototypes
-prototype properties
+prototype_properties
 create_splines
 create_triggers
 trigger_properties

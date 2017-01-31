@@ -80,33 +80,30 @@ Seedpoints are accessible using the ~{ Create panel }~:
 
 Multilevels Generation is useful if you have several levels loaded at the same time at runtime and you want your Bots to be able to move seamlessly from one level to another level. Each level needs a NavMesh generated at its runtime location, and each level must be generated with the same settings.
 
-To set up, enable, and generate multilevel NavMeshes, create `multilevels.gwnavgen_firstinit` file.  
-This file is used to intialize the multilevels NavMesh generation.  
-Each level listed will have its generation settings aligned with the first level generated with 'Use multilevels' checked, and their offset set as specified.  
-The offset must be the one corresponding at runtime.  
-This file is optional, it is also possible to setup the multilevels directly in the Navigation panel of the editor, by checking 'Use multilevels' for each level implied in the multilevels generation.
+To set up, enable, and generate multilevel NavMeshes, create `multilevels.gwnavgen_firstinit` file. This file is used to intialize the multilevels NavMesh generation. Each level listed will have its generation settings aligned with the first level generated with 'Use multilevels' checked, and their offset set as specified. The offset must be the one corresponding at runtime.  
+This file is optional; it is also possible to setup the multilevels directly in the Navigation panel of the editor, by checking 'Use multilevels' for each level implied in the multilevels generation.
 
-1. Create a valid sjson file called `multilevels.gwnavgen_firstinit` following the following format.
+1. Create a valid sjson file called `multilevels.gwnavgen_firstinit` with the following format.
 
-   ``` javascript
+    ``` javascript
       initial_levels_offset_list = {
         default = {
           level_resource_name_1 = [0,0,0]
           level_resource_name_2 = [10,0,0]
         }
       }
-   ```
+    ```
 
 2. In the Navigation options (**Window > Navigation**), enable **Use Multilevels generation**.
 
-3. Click **Generate**
+3. Click **Generate**.
 
-   A `multilevels.gwnavgen_settings` file will be created to share and sync the `gwnavgen_settings` files of level listed in `multilevels.gwnavgen_firstinit`.
+   	A `multilevels.gwnavgen_settings` file will be created to share and sync the `gwnavgen_settings` files of level listed in `multilevels.gwnavgen_firstinit`.
 
 4. Level offset can be modified in the Navigation panel.
 
-   **Note:** All the levels involved in the multilevels generation are displayed in the **Multilevels List**.
+   	**Note:** All the levels involved in the multilevels generation are displayed in the **Multilevels List**.
 
-   ![](../../images/multilevels_project_navgen_ui.png)
+    ![](../../images/multilevels_project_navgen_ui.png)
 
 >**Tip:** In order to iteratively generate Multilevel NavMeshes, **it’s a good idea to back up** `.GenIO`, and `.ClientInput` files in the `project_gwnav` folder to your source control (in addition to the `project` folder).

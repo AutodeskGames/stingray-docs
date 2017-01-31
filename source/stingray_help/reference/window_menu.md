@@ -82,6 +82,10 @@
 
 >Opens the ~{ Navigation options }~. See also ~{ Gameware Navigation }~.
 
+**Particle Editor**
+
+>Launches the **Particle Editor**. Use this to create particle effects. See ~{ Create and edit particle effects }~.
+
 **Plugin Manager**
 
 >Launches the **Plugin Manager**. See ~{ Customize the Stingray editor using Plug-ins }~.
