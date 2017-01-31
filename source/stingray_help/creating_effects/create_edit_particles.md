@@ -4,21 +4,22 @@
 
 > ![](../images/icon_video.png) For video tutorials on creating particle effects, see <a href="https://www.youtube.com/playlist?list=PLTjhBiJe1i2GoHq_WmjKKSU9ZWYV5tkJB" target="blank">Particle Effects in Stingray</a>.
 
-[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) The **Particle Editor** Tool lets you create new particles, modify them and preview the effects in the viewport within the tool. You can open and modify multiple particles at the same time, view History ![](../images/icon_partEd_history.png) of actions performed, and use the Respawn ![](../images/icon_particle_respawn.png) and Pause/Resume ![](../images/icon_partEd_pause.png) icons to respawn the particle effect and pause/resume the particle effects preview.
+[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) The **Particle Editor** Tool (**Window > Particle Editor**) lets you create new particles, modify them and preview the effects in the viewport within the tool. You can open and modify multiple particles at the same time, view History ![](../images/icon_partEd_history.png) of actions performed, and use the Respawn ![](../images/icon_particle_respawn.png) and Pause/Resume ![](../images/icon_partEd_pause.png) icons to respawn the particle effect and pause/resume the particle effects preview.
 
 **To create a particle effect:**
 
 1.	In the **Asset Browser**, navigate to your project /contents folder and create a new sub-folder for your particle effects.
 
-2.	 Right-click in file view area and select **Create > Particle Effect**, or click the **Create Asset** icon ![](../images/icon_createAsset.png) and select **Create Particle Effect**.
+2. Do any of the following:
 
-2.	Enter a name for the new particle effect.
+	-	[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) In the **Particle Editor**, click **New** ![](../images/icon_createAsset.png) to create a particle effect asset and then **Save** ![](../images/icon_save.png) to enter a name for the particle effect.
+
+	-	Right-click in file view area of the **Asset Browser** and select **Create > Particle Effect**, or click the **Create Asset** icon ![](../images/icon_createAsset.png) and select **Create Particle Effect**. Enter a name for the new particle effect.
+
 
 	A particle asset is created in the **Asset Browser**.
 
 	![](../images/create_particle.png)
-
-	[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) You can add new particles in the **Particle Editor**. Click **New** ![](../images/icon_createAsset.png) to create a particle effect asset and then **Save** ![](../images/icon_save.png) to enter a name for the particle effect.
 
 3.	[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Select the particle effect asset and either double-click or in the **Property Editor**, click **Open in Editor**. The particle effect asset launches in the **Particle Editor**.
 
