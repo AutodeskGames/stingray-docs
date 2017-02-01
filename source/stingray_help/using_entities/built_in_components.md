@@ -1,5 +1,7 @@
 # About built-in components
 
+[![UPDATED](../images/updated.png "What else is new in v1.7?")](../release_notes/readme_1.7.html)
+
 This page gives a brief overview of the different kinds of components that come built-in to Stingray, and what you can do with them in this release.
 
 ## About components and managers
@@ -35,9 +37,11 @@ The script and flow components offers a way to associate an entity with a *behav
 
 ## Tag component
 
+[![UPDATED](../images/updated.png "What else is new in v1.7?")](../release_notes/readme_1.7.html)
+
 The tag component helps you tell different kinds of entities apart. You can associate string ID tags with one or more different entities, and retrieve entities by tag.
 
-This component is not exposed in the Stingray Editor, but you can freely use the `stingray.TagComponent` API in Lua to assign and query tags.
+This component is exposed in the Stingray Editor, and you can also freely use the `stingray.TagComponent` API in Lua to assign and query tags.
 
 Each entity can have only one tag component assigned to it, but that tag component can handle any number of tags.
 
