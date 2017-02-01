@@ -97,7 +97,11 @@ An example Flow graph:
 
 ## Entity updates
 
-A new Tag component lets you associate a set of tags with an entity and quickly find all entities that have a certain tag. See also ~{ Using Entities in your Project }~.
+The Tag component is now exposed in the Stingray Editor, which lets you associate a set of tags with an entity and quickly find all entities that have a certain tag. See also:
+
+- ~{ Using Entities in your Project }~
+- ~{ About built-in components }~
+- ~{ Assign components to an entity }~
 
 ![](../images/wn_entity_tag.png)
 
