@@ -22,13 +22,19 @@ It can sometimes be useful to change an object from keyframed to dynamic and bac
 
 Keyframed actors *always* follow the animated movement. Whereas the path of a dynamic actor would be corrected in response to a collision, a keyframed actor will keep going along its animated path. The keyframed actor still registers the collision event, but its path isn't automatically corrected. When a keyframed actor collides with a dynamic actor, the dynamic actor always gets pushed out of the way. It behaves as if the keyframed actor was a dynamic actor with infinite mass.
 
-  > **Note:** Sometimes you want an object to be animated but still have collision and behave as a real physical object. For example, you want to animate a closing door, but not let it close with infinite force regardless of what is in the way. Instead you want the door to push objects that are in the way with a certain force and get stuck if it is blocked by a heavy object.
+> **Note:** Sometimes you want an object to be animated but still have collision and behave as a real physical object. For example, you want to animate a closing door, but not let it close with infinite force regardless of what is in the way. Instead you want the door to push objects that are in the way with a certain force and get stuck if it is blocked by a heavy object.
+>
+> Doing this requires translating the animations into physical forces that achieve the same movement but are understood by the physics system. That is not a trivial problem and there isn't always a clear-cut solution. How much force should the door apply? What happens if the animation is interrupted in the middle?
+>
+> The engine does not support this kind of translation. If you want to do physical animations, you have to do it by manually applying forces to objects from the script.
 
- Doing this requires translating the animations into physical forces that achieve the same movement but are understood by the physics system. That is not a trivial problem and there isn't always a clear-cut solution. How much force should the door apply? What happens if the animation is interrupted in the middle?
+Each physics actor has a shape that represents the space it takes up in the physics simulation. This shape can be a regular solid like a sphere, capsule or box, it can match a mesh associated with the actor, or it can be a convex volume that Stingray computes automatically from the mesh.
 
- The engine does not support this kind of translation. If you want to do physical animations, you have to do it by manually applying forces to objects from the script.
+- Static actors are (usually) best modeled with meshes. This gives the most accurate results in collision testing.
 
-Static actors are (usually) best modeled with meshes. Dynamic actors cannot use meshes, they must use spheres, capsules, boxes and convexes. Keyframed actors are best implemented as spheres, capsules, or boxes. Sometimes it is necessary to use meshes for keyframed actors.
+- Keyframed actors are best implemented as spheres, capsules, or boxes. Sometimes it is necessary to use meshes for keyframed actors.
+
+- Dynamic actors cannot use meshes at all. They must use spheres, capsules, boxes and convexes. If this doesn't give you enough fidelity to the shape of your object, you can try splitting your object into multiple smaller actors. For example, a chair might have a box-shaped actor that covers the seat and legs, and another thinner box that covers just the back.
 
 For example, if the gameplay involves precision shooting in the vicinity of a keyframed object, you may need to use a mesh to get collision that is as close as possible to the graphical geometry. In that case, the best option is to create a mesh that is only used for raycasting. The mesh should be setup so that it doesn't collide with any other physics objects.
 
