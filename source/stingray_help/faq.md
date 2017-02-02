@@ -49,7 +49,7 @@ Yes, eligible schools, teachers and students can obtain educational licenses. Pl
 
 Yes. Maya LT customers with an active Maintenance Subscription contract or Maya LT Desktop Subscription can use Stingray as a part of their Maya LT subscription,  using their Maya LT license. Stingray is included in the Maya LT installer.
 
-[![NEW](images/new.png "What else is new in v1.6?")](release_notes/readme_1.6.html) Some customers are eligible to run Stingray with a Non-Commercial license. Refer to the [terms and conditions](http://www.autodesk.com/company/legal-notices-trademarks/terms-of-service-autodesk360-web-services/autodesk-web-services-entitlements/stingray-startup-license) to find out if you're eligible, then follow the set up instructions in the [Stingray Installation Supplement](http://help.autodesk.com/view/Stingray/ENU/?guid=GUID-2835E17D-888F-459E-A622-0CD8ED983A91) topic.
+Some customers are eligible to run Stingray with a Non-Commercial license. Refer to the [terms and conditions](http://www.autodesk.com/company/legal-notices-trademarks/terms-of-service-autodesk360-web-services/autodesk-web-services-entitlements/stingray-startup-license) to find out if you're eligible, then follow the set up instructions in the [Stingray Installation Supplement](http://help.autodesk.com/view/Stingray/ENU/?guid=GUID-2835E17D-888F-459E-A622-0CD8ED983A91) topic.
 
 > **Note:** The Non-Commercial license is not available in all countries.
 
@@ -84,3 +84,11 @@ Stingray is a new game engine based on the core technology of the Bitsquid game 
 ##Is Stingray compatible with 3D assets created in non-Autodesk 3D animation tools? <a name="stingray-compatibility"></a>
 
 Yes. Stingray can accept assets from any 3D animation software that supports exporting of assets in the Autodesk® FBX® asset exchange format. However, for the most efficient workflows with the Stingray engine artists and game makers should use Autodesk 3D animation software. To learn more about the FBX format, visit the FBX product page at [www.autodesk.com/fbx](http://www.autodesk.com/fbx).
+
+##What support resources are available?
+
+The [Stingray forums](http://www.autodesk.com/stingray-forums) are a great place to get help with your day to day work in Stingray.
+
+For more information on purchasing advanced Autodesk Support packages that include 1-1 or phone support, check out the [Support Offerings Overview](http://www.autodesk.com/support-offerings/overview).
+
+Customers with Stingray source code access can use the ticketing system with their account on [Gamedev](https://gamedev.autodesk.com/tickets).

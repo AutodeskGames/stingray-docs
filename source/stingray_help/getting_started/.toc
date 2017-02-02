@@ -1,4 +1,5 @@
 what_is_stingray
+about_help
 interface_overview
 customize_layout
 basic_navigation
