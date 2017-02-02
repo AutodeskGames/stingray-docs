@@ -528,7 +528,7 @@ This section explains the improvements and fixes that require specific upgrade s
 
 The Android SDK version used by Stingray has not changed. However, we have updated the required version for the platform tools and build tools.
 
-See ~{ Requirements for Android game development }~ and make sure that you have installed a version of the platform tools that is compatible with Stingray, and a version of the build tools that is compatible with the version of Android used on your device.
+See ~{ Get started on Android }~ and make sure that you have installed a version of the platform tools that is compatible with Stingray, and a version of the build tools that is compatible with the version of Android used on your device.
 
 ### Xbox One XDK version
 

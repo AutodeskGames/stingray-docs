@@ -2,7 +2,7 @@
 
 To connect the Stingray Engine to a PlayStation 4:
 
-1.	Make sure you have followed all the steps under ~{ Requirements for PlayStation 4 game development }~ in order to prepare your development environment.
+1.	If you haven't done so already, follow the first-time setup instructions under ~{ Get started on PlayStation 4 }~.
 
 2.	In the Stingray Editor, use the **Connections** panel to set up a connection to the PlayStation 4 device, then mirror the Editor viewport or run your project.
 

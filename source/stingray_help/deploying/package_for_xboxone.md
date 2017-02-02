@@ -2,7 +2,7 @@
 
 To package a project for Xbox One:
 
-1.	If you haven't done so already, set up the ~{ Requirements for Xbox One game development }~ on your Windows computer.
+1.	If you haven't done so already, follow the first-time setup instructions under ~{ Get started on Xbox One }~.
 2.	In the Stingray Editor, open the **Deployer** panel to the Xbox tab and enter the required information. (See below.)
 3.	Click **Package Project for Xbox One**.
 

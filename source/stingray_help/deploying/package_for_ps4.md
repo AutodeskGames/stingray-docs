@@ -2,7 +2,7 @@
 
 To package a project for PlayStation 4:
 
-1.	If you haven't done so already, set up the ~{ Requirements for PlayStation 4 game development }~ on your Windows computer.
+1.	If you haven't done so already, follow the first-time setup instructions under ~{ Get started on PlayStation 4 }~.
 2.	In the Stingray Editor, open the **Deployer** panel to the PlayStation 4 tab and enter the required information. (See below.)
 3.	Click **Package Project for PlayStation 4**.
 

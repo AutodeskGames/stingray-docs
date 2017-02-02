@@ -2,7 +2,7 @@
 
 To package a project for Android:
 
-1.	If you haven't done so already, set up the ~{ Requirements for Android game development }~ on your Windows computer.
+1.	If you haven't done so already, follow the first-time setup instructions under ~{ Get started on Android }~.
 2.	In the Stingray Engine, open the **Deployer** panel to the Android tab and enter the required information. (See below.)
 3.	Click **Package Project for Android**.
 

@@ -32,7 +32,7 @@ This template is a simple vehicle level. It contains a driveable four-wheeled ve
 
 ## VR Template projects
 
-Stingray includes the following templates for rendering in VR devices. (See also: ~{ VR in Stingray }~.)
+Stingray includes the following templates for rendering in VR devices. (See also: ~{ Get started in VR }~.)
 
 <dl>
 <dt>VR Oculus Touch</dt>

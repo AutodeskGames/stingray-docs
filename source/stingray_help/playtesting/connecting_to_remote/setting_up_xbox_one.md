@@ -4,7 +4,7 @@ To set up your development environment so that you can connect the Stingray Engi
 
 To connect the Stingray Engine to an Xbox One:
 
-1.Make sure you have followed all the steps under ~{ Requirements for Xbox One game development }~ in order to prepare your development environment.
+1.	If you haven't done so already, follow the first-time setup instructions under ~{ Get started on Xbox One }~.
 
 2.	In the Stingray Editor, use the **Connections** panel to set up a connection to the Xbox One device, then mirror the Editor viewport or run your project.
 

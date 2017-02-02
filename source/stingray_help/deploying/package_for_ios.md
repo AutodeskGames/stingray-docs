@@ -2,7 +2,7 @@
 
 To package a project for iOS:
 
-1.	If you haven't done so already, set up the ~{ Requirements for iOS game development }~. This includes running the Stingray iOS re-signing server on a Mac OS X machine on your network, and generating the *.ipa* file for the Stingray engine.
+1.	If you haven't done so already, follow the first-time setup instructions under ~{ Get started on iOS }~. This includes running the Stingray iOS re-signing server on a Mac OS X machine on your network, and generating the *.ipa* file for the Stingray engine.
 2.	In the Stingray Editor, open the **Deployer** panel to the iOS tab and enter the required information. (See below.)
 3.	Click **Package Project for iOS**.
 

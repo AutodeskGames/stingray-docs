@@ -1,4 +1,4 @@
-# VR in Stingray
+# Get started in VR
 
 The Stingray Editor ships with a few sample projects to help you get started, including templates for HTC Vive, Oculus Rift and mobile VR devices. The best way to start a new VR project is to clone one of the VR templates instead of starting completely from scratch.
 

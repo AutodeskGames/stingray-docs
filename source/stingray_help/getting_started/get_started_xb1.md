@@ -1,4 +1,8 @@
-# Requirements for Xbox One game development
+# Get started on Xbox One
+
+TODO
+
+## First-time setup
 
 In order to connect the Stingray Editor to an Xbox One device, or to build and deploy your game for Xbox One, you must follow the steps listed on this page on your Windows development machine.
 

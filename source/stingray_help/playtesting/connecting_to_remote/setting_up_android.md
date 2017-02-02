@@ -2,7 +2,7 @@
 
 To connect the Stingray Engine to an Android device:
 
-1.	Make sure you have followed all the steps under ~{ Requirements for Android game development }~ in order to prepare your development environment.
+1.	If you haven't done so already, follow the first-time setup instructions under ~{ Get started on Android }~.
 
 2.	Plug your device in to a USB port on your Windows machine.
 

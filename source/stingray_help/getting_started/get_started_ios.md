@@ -1,8 +1,16 @@
-# Requirements for iOS game development
+# Get started on iOS
+
+TODO
+
+## Check the supported devices
+
+TODO
+
+## First-time setup
 
 In order to connect the Stingray Editor to an iOS device, or to build and deploy your game for iOS devices, you must follow the steps listed on this page on your Windows and Mac OS X development machines.
 
-## Set up and run the iOS Package Server
+### Set up and run the iOS Package Server
 
 The **Stingray iOS Packaging Server** lets you package and re-sign the Stingray engine and your iOS game from your Windows development machine.
 
@@ -47,7 +55,7 @@ You will need to install and run the server application on a Mac. For system req
 
 	>	**Tip:** Double-click a status message to view the full log data.
 
-## Generate IPA files for the Stingray engine
+### Generate IPA files for the Stingray engine
 
 Stingray does not ship with signed versions of the engine runtime ready to use on iOS. You need to generate *.ipa* files for the engine using your own signing certificate.
 
