@@ -1,4 +1,4 @@
-# Connecting to a remote device
+# Connect to a remote device
 
 If you plan to release your game on one or more non-Windows platforms, such as iOS devices, Android devices, or dedicated gaming consoles, you will frequently need to test out your project on those targets. For example, you will need to check the way your assets and levels are rendered, and to check that your gameplay is working as expected. However, it would be time-consuming to deploy a full standalone version of your game to the device or console each time you want to test a change.
 
@@ -20,6 +20,13 @@ Stingray offers two different lightweight mechanisms for testing your content on
 
 ## To connect to a remote device
 
-See the topics in this section for detailed instructions for each target platform.
+1.	You'll use the **Connections** panel to set up the editor to communicate with your device. See ~{ Using the Connections panel }~ for basic instructions on how to use this panel.
+
+2.	Follow any specific directions for your device type on the following pages:
+
+	-	~{ Get started on Android }~
+	-	~{ Get started on iOS }~
+	-	~{ Get started on PlayStation 4 }~
+	-	~{ Get Mstarted on Xbox One }~
 
 **Note:** you cannot currently connect to a remote Windows host for viewport mirroring or running the project.

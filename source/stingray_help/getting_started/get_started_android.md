@@ -1,14 +1,14 @@
 # Get started on Android
 
-TODO
+This page tells you everything you need to know in order to get started developing projects for Android. You'll need an Android device to follow along with.
 
 ## Check the supported devices
 
-TODO
+See the ~{ Supported platforms }~ page for details on the Android devices and OS versions that the Stingray engine can work with, and make sure your device is a good fit.
 
 ## First-time setup
 
-In order to connect the Stingray Editor to an Android device, or to build and deploy your game for Android devices, you have to set up the requirements listed on this page on your Windows development machine.
+You'll have to install and set up a few things on the Windows machine that you use to run the Stingray editor.
 
 ### Install Java
 
@@ -67,6 +67,115 @@ For details, check your device manufacturer's documentation or support site, or 
 
 After installing the pre-requisites and setting the environment variables listed above, restart your computer.
 
-## Mirroring
+## Connect the editor to the device
 
-## Deploying
+Connecting the editor to your device has two benefits:
+
+-	You can mirror the editor's viewport to the device while you're working on your project content, so that you have a live preview of what your changes look like on the device.
+
+-	You can easily run your project on the device to test your gameplay.
+
+For more background information, see ~{ Connect to a remote device }~.
+
+**To connect to an Android device:**
+
+1.	Plug your device in to a USB port on your Windows machine.
+
+1.	Enable USB debugging on the Android device. This is typically found in the device's Settings, under **Developer options**. Two examples:
+
+	![Developer options](../images/android_usb_debugging.png) ![Developer options](../images/android_usb_debugging_02.jpg)
+
+	If you do not see the **Developer options** on your device, you may need to enable them. Find the Android **Build number** in the device's settings, and tap the build number seven times.
+
+1.	In the Stingray Editor, use the **Connections** panel (**Windows > Deploy and Connect > Connections**) to set up a connection to the Android device:
+
+	![Connect to Android](../images/connect_android.png)
+
+	For details, see ~{ Using the Connections panel }~.
+
+	>	**Note:** In the *Address* field of the **Connections** panel, you must enter the IP address of your An device. You should be able to find this in your device's settings.
+
+When you connect to the device or run the project, the editor automatically installs the engine on the device over the USB connection, runs the engine on the device, then sends your project data to the engine.
+
+>	**Tip:** If you're unable to connect to your Android device, you may need to install ADB drivers specific to your device and try the procedure again.
+
+## Deploy the project for Android
+
+Deploying creates a standalone *.apk* bundle that you can try out on your device (and, eventually, distribute on the Google store). For background information, see ~{ Deploying and Building }~ and ~{ Using the Deployer panel }~.
+
+**To package a project for Android:**
+
+1.	In the Stingray Engine, open the **Deployer** panel (**Windows > Deploy and Connect > Deployer**) to the Android tab and enter the required information. (See below.)
+1.	Click **Package Project for Android**.
+
+Stingray creates an *.apk* file for your game, and copies it to the location on your computer that you specify in the **Destination** field.
+
+**After deploying from Stingray:**
+
+-	To copy your deployed game to a connected device for testing, use the `adb` utility. You can find this tool in your Android SDK installation folder, under the `/platform-tools/` sub-directory. Connect your device to the computer by USB, open a command prompt, and type:
+
+	`adb install <path-to-apk>`
+
+-	To distribute your game on the Google Play store, use the tools provided by Google. See the [Developer Console Help](https://support.google.com/googleplay/android-developer/answer/113469?hl=en) for more information on the Google Play Developer Console.
+
+### Android deployment settings
+
+![Android Deployer](../images/deployer_android.png)
+
+You can set the following options in the **Deployer** panel for Android devices.
+
+### Packaging settings
+
+These settings are common for all tabs. See ~{ Using the Deployer panel }~.
+
+### General settings
+
+<dl>
+<dt>Title</dt>
+<dd>The title of your project. This sets the name of the executable file for the application, and the product name for online stores.</dd>
+</dl>
+
+### Identity settings
+
+<dl>
+<dt>Identifier</dt>
+<dd>The unique process name of your application. It contains two parts separated by a dot.</dd>
+
+<dt>Version</dt>
+<dd>The application version, in two-part notation.</dd>
+
+<dt>Android flavor</dt>
+<dd>Select from either the regular, Gear VR, or Google VR enabled Android engine.</dd>
+</dl>
+
+### Icons settings
+
+Browse to select your game icon in PNG format. It can be any size, but we recommend a maximum of 512x512 pixels.
+
+### Keystore Signing settings
+
+Keystore signing is required in order to test the generated *.apk* file on a device or publish it on the store. If you do not enable the **Keystore Signing** section, the editor automatically uses the `debug.keystore` that is installed at the same time as the Android SDK at `%USERPROFILE%/.android/debug.keystore`.
+
+<dl>
+<dt>File</dt>
+<dd>The location of the custom keystore file.</dd>
+
+<dt>Password</dt>
+<dd>The keystore password.</dd>
+
+<dt>Alias</dt>
+<dd>Provide the keystore alias if required.</dd>
+
+<dt>Alias Password</dt>
+<dd>The alias password if required.</dd>
+
+</dd>
+</dl>
+
+For more information on keystore signing, see the [Android documentation](http://developer.android.com/tools/publishing/app-signing.html).
+
+## Keep your content optimized!
+
+Mobile devices don't have the same amount of memory and processor resources to throw at your project as your PC does. When you're making a project that you intend to be used on mobile platforms, it's really critical to pay close attention to the size of your resources and the overall demands that the project is putting on the device.
+
+For some helpful tips, see ~{ Optimize memory usage }~.

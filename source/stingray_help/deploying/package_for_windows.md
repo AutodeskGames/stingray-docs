@@ -1,4 +1,4 @@
-# Packaging a game for Windows
+# Package the project for Windows
 
 To package a project for Windows:
 
@@ -13,7 +13,7 @@ You can test or distribute your game by simply copying or zipping up this folder
 
 To run on Windows, the Stingray engine requires the **DirectX End-User Runtimes** from Microsoft.
 
-If you create an installer for your game, you will need to package these redistributable libraries into your installer. If not, your customer will have to download and install the runtimes.
+If you create an installer for your game, you will need to package these redistributable libraries into your installer. If not, your customer will have to download and install the runtimes if they don't already have them installed.
 
 You or your customers can download the required libraries from this link: <https://www.microsoft.com/en-us/download/details.aspx?id=8109>
 

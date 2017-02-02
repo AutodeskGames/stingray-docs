@@ -18,11 +18,11 @@ When the **Deployer** finishes, you may also need to use tools specific to the t
 
 For details on all the platform-specific settings required by the **Deployer** panel, see the other topics in this section:
 
--	~{ Packaging a game for Android }~
--	~{ Packaging a game for iOS }~
--	~{ Packaging a game for PlayStation 4 }~
--	~{ Packaging a game for Windows }~
--	~{ Packaging a game for Xbox One }~
+-	~{ Deploy for Windows }~
+-	~{ Get started on Android }~
+-	~{ Get started on iOS }~
+-	~{ Get started on PlayStation 4 }~
+-	~{ Get started on Xbox One }~
 
 ## Common settings
 

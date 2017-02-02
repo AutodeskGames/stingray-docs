@@ -39,15 +39,15 @@ Each connection you configure requires the following settings:
 ## Platform-specific settings
 
 <dl>
-<dt>Copy All Game Data to Device when Project is Run</dt>
+<dt>Compile and install bundled game data on run project</dt>
 <dd>For iOS and Android targets only. When this check box is selected, and you run your project on this device, your project data is saved on the device. The next time you start the Stingray engine app on the device, you can choose whether to wait for a connection from the Stingray Editor, or start up in an offline, standalone mode using the last set of project data saved to the device.</dd>
 </dl>
 
->	**Note**: In order to connect to a remote device for mirroring or running your project, you also need to do some additional setup tasks specific to each platform. See the other topics in this section for details.
+>	**Note**: In order to connect to a remote device for mirroring or running your project, you also need to do some additional setup tasks specific to each platform, like installing software requirements. See the page for your device under ~{ Getting Started }~.
 
 >	**Connecting to a remote PC is currently not supported.**
 
-## Mirroring the viewport
+## Mirror the viewport
 
 To make your device mirror the Stingray Editor viewport:
 
@@ -56,7 +56,7 @@ To make your device mirror the Stingray Editor viewport:
 
 Orbit in the viewport to trigger a refresh. As you make changes or adjust your view in the Stingray Editor, you'll see the changes instantly on the device. Stingray sends the view from the editor camera to the device, letting you see how everything looks when rendered by the platform-specific renderer.
 
-## Running the project
+## Run the project
 
 To run your project on the device in standalone mode:
 
@@ -68,10 +68,22 @@ To run your project on the device in standalone mode:
 
 When you initiate a connection to a remote device to either mirror the viewport or run the project, you can see the current status of the data transfer between your computer and the remote devices in the ~{ Log Console }~.
 
-## Running multiple local game instances
+## Run multiple local project instances
 
 [![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html)
 
-Add localhost targets with separate commandlines in Windows to automatically start multiple local game instances when you run the project.
+You can set up the **Connections** panel to launch multiple instances of the engine when you run the project.
 
-Press ![](../../images/icon_addTarget.png) multiple times, set all the target platforms to Windows and same IP address, and set different command line parameters. When you press the Run Project icon, the targets are launched with separate command lines and can have different game specific behavior. Note that two targets with the same name and same command line will only launch one runtime. You can also debug and look at the console output for multiple targets using the editor engine instance dropdowns.
+1.	Press ![](../../images/icon_addTarget.png) to add multiple new targets.
+
+2.	Set each target to use the Windows platform, with IP address `127.0.0.1`. Make sure the **Run Project** box is checked for each target.
+
+3.	Each target needs different command-line parameters. Two targets with the same name and same command line will only result in the engine launching once.
+
+	You can read these parameters in your project's Lua script and change the gameplay behavior based on their values. See the `stingray.Application.argv()` function.
+
+	For example, you could use `--server` and `--client` if you're testing a network setup. If you just want to open multiple windows without the parameters having any particular meaning, just add any strings as long as they're different for each target, like `--instance1` and `--instance2`.
+
+	You can also have a look at the ~{ Stingray engine command-line reference }~ for a list of all the command-line parameters that the engine understands. Many of them won't be useful to include in the connection setup, but you could use parameters like `--editor-ini` to make the different engines load their settings from different *.ini* files.
+
+While you have multiple instances of the project running, you may want to zero in on one particular instance when reading console output, sending Lua and console commands, debugging Lua, etc. The editor offers drop-down lists or filters that you can use to select the instance that you're interested in.
