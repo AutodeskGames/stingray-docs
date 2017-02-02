@@ -7,4 +7,5 @@ set_up_project
 open_existing_project
 downloads_creativeMkt
 common_windows
+about_help
 tutorial_next_steps
