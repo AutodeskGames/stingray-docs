@@ -1,5 +1,4 @@
 what_is_stingray
-about_help
 interface_overview
 customize_layout
 basic_navigation
@@ -8,4 +7,5 @@ set_up_project
 open_existing_project
 downloads_creativeMkt
 common_windows
+about_help
 tutorial_next_steps

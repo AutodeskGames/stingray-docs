@@ -16,6 +16,7 @@
 - [What platforms are supported by Stingray?](#what-platforms-are-supported-by-stingray)
 - [What is the difference between Stingray and the Bitsquid game engine?](#stingray-bitsquid)
 - [Is Stingray compatible with 3D assets created in non-Autodesk 3D animation tools?](#stingray-compatibility)
+- [What support resources are available?](#support-resources)
 
 ##What is Stingray?
 
@@ -85,10 +86,10 @@ Stingray is a new game engine based on the core technology of the Bitsquid game 
 
 Yes. Stingray can accept assets from any 3D animation software that supports exporting of assets in the Autodesk® FBX® asset exchange format. However, for the most efficient workflows with the Stingray engine artists and game makers should use Autodesk 3D animation software. To learn more about the FBX format, visit the FBX product page at [www.autodesk.com/fbx](http://www.autodesk.com/fbx).
 
-##What support resources are available?
+##What support resources are available? <a name="support-resources"></a>
 
-The [Stingray forums](http://www.autodesk.com/stingray-forums) are a great place to get help with your day to day work in Stingray.
+The [Stingray forums](http://www.autodesk.com/stingray-forums) are a great place to get help with your day to day work in Stingray. Customers share tips and answer each other's questions, and the Stingray development team members often jump in when we see an issue we can help with.
 
 For more information on purchasing advanced Autodesk Support packages that include 1-1 or phone support, check out the [Support Offerings Overview](http://www.autodesk.com/support-offerings/overview).
 
-Customers with Stingray source code access can use the ticketing system with their account on [Gamedev](https://gamedev.autodesk.com/tickets).
+Customers with Stingray source code access can use the ticketing system on the [Gamedev](https://gamedev.autodesk.com/tickets) site.
