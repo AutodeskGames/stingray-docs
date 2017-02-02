@@ -18,3 +18,4 @@ experimental_features
 plugins
 reference
 faq
+get_involved
