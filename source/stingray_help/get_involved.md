@@ -16,7 +16,7 @@ We also have evangelists, support people, QAs and developers checking out the fo
 
 Hopefully, you've already learned a lot by following along with the [Stingray tutorials on the AREA](http://area.autodesk.com/learning/stingray) -- our hub for the creative 3D community. (If not, then kick back with some videos, or follow along using the sample content and project downloads. Check back often, because we're posting new tutorials all the time on new and different use cases.)
 
-Before long, you'll be a Stingray pro -- looking to share your expertise and the cool stuff you're doing back to the community. Don't be shy, create your own tutorials on our site and get everyone's eyes on them!
+Before long, you'll be a Stingray pro -- looking to share your expertise and the cool stuff you're doing back to the community. Create your own tutorials and share what you know with everyone!
 
 Log in to the AREA using your Autodesk ID, head to the **LEARNING** hub, and look for the big blue **Submit your Tutorial** button on the top right:
 
@@ -24,7 +24,9 @@ Log in to the AREA using your Autodesk ID, head to the **LEARNING** hub, and loo
 
 ## Sell your content
 
-Millions of members use [Creative Market](http://creativemarket.com) to buy and sell artwork for their creative projects -- including 3D models, textures, and more. Why not open your own shop and join them? Making money while doing what you love -- what a concept! Take a look at the [perks](https://creativemarket.com/sell), and see for yourself what's in it for you.
+Millions of members use [Creative Market](http://creativemarket.com) to buy and sell artwork for their creative projects -- including 3D models, textures, and more. Why not open your own shop and join them? Make money while doing something you love.
+
+Take a look at the [perks](https://creativemarket.com/sell), and see for yourself what's in it for you.
 
 And don't forget: all Stingray users will be able to browse and find your stuff right inside the Stingray Editor, using the Creative Market plugin (choose **Window > Creative Market** from the main menu).
 
@@ -40,7 +42,7 @@ Our product managers read this feedback site closely, so it's the best place to 
 
 ## Write a plugin
 
-You don't even have to wait for us to get off our duffs and put in that new killer feature you want -- you can roll up your sleeves and get your hands dirty with our plug-in SDK. Extend the editor with new tools and workflows, extend the runtime engine with new behaviors and new data types, or just package up Stingray assets into reusable, redistributable modules.
+You don't even have to wait for us to put in that killer feature you want -- you can roll up your sleeves and get your hands dirty with our plug-in SDK. Extend the editor with new tools and workflows, extend the runtime engine with new behaviors and new data types, or just package up Stingray assets into reusable, redistributable modules.
 
 Check out the [SDK Help](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=SDK_HOME) and the [sample repository](https://github.com/AutodeskGames/stingray-plugin-api-samples) to get started.
 
