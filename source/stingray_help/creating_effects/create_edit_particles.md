@@ -2,7 +2,7 @@
 
 ![UPDATED](../images/updated.png)
 
-> ![](../images/icon_video.png) For video tutorials on creating particle effects, see <a href="https://www.youtube.com/playlist?list=PLTjhBiJe1i2GoHq_WmjKKSU9ZWYV5tkJB" target="blank">Particle Effects in Stingray</a>.
+> ![](../images/icon_video.png) For video tutorials on creating particle effects, see <a href="http://area.autodesk.com/learning/creating-particle-effects-in-stingray" target="blank">Particle Effects in Stingray</a>.
 
 [![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) The **Particle Editor** Tool (**Window > Particle Editor**) lets you create new particles, modify them and preview the effects in the viewport within the tool. You can open and modify multiple particles at the same time, view History ![](../images/icon_partEd_history.png) of actions performed, and use the Respawn ![](../images/icon_particle_respawn.png) and Pause/Resume ![](../images/icon_partEd_pause.png) icons to respawn the particle effect and pause/resume the particle effects preview.
 
@@ -61,9 +61,9 @@ The default particle system is called System1, and you can add and remove contro
 
 - Right-click the system root and select the component you want to add.
 
-**To remove controllers from a system: **
+**To remove controllers from a system:**
 
-Right-click and select **Remove Controller**.
+-	Right-click and select **Remove Controller**.
 
 > **Tip:** When working with particle effects, click the gear icon ![](../images/icon_assetPreview.png) in the **Asset Preview** of the **Particle Editor** and select **Update Mode > Always**.
 

@@ -10,7 +10,7 @@ Once you've finished the **Help > Hands-on Training Mission**, you'll have a pre
 
 	These docs include a full [Lua API reference](../../lua_ref/index.html) that you'll use a lot to browse and understand the different objects and functions you can use.
 
--	Particle effects are fun to play with, and really useful for simulating all kinds of dynamic effects like rain, snow, moving fog, fire and smoke, etc. Try creating one and playing around with its parameters. For docs, see ~{ Create and edit particle effects }~, or [follow along with this tutorial](https://www.youtube.com/playlist?list=PLTjhBiJe1i2GoHq_WmjKKSU9ZWYV5tkJB)!
+-	Particle effects are fun to play with, and really useful for simulating all kinds of dynamic effects like rain, snow, moving fog, fire and smoke, etc. Try creating one and playing around with its parameters. For docs, see ~{ Create and edit particle effects }~, or [follow along with this tutorial](http://area.autodesk.com/learning/creating-particle-effects-in-stingray)!
 
 -	In addition to bringing models in from modeling tools like 3ds Max and Maya, you can sculpt and paint your own models, called *terrains*, right in the Stingray editor. These terrains are usually used for large-scale landscape and ground surfaces. See the ~{ Terrain tool }~.
 
