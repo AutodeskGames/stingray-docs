@@ -1,6 +1,6 @@
 # Install the PhysX plug-in for your DCC tool
 
-Included with your Stingray install, you'll find the NVIDIA PhysX plug-ins for Maya and Maya LT. For the latest Stingray, the PhysX plug-in version is now 3.3.20602.11122, and the PhysX library/SDK used is 3.3.4.
+![UPDATED](../../images/updated.png) Included with your Stingray install, you'll find the NVIDIA PhysX plug-ins for Maya and Maya LT. For the latest Stingray, the PhysX plug-in version is now 3.3.21117.04582, and the PhysX library/SDK used is 3.3.4.
 
 When installed and loaded, the PhysX plug-in adds a PhysX menu to the main menu bar in your DCC tool, giving you easy access to tools and documentation for creating PhysX ragdolls, rigid bodies, and constraints.
 

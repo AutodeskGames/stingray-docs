@@ -2,7 +2,7 @@
 
 Cameras in Stingray are your way of viewing your game world. Because they are necessary to see your world at all, they are one of the most essential parts of Stingray. Every game has at least one camera but often games will have many.
 
-> ![](../images/icon_video.png) For video tutorials on controlling game cameras, check out <a href="https://www.youtube.com/playlist?list=PLTjhBiJe1i2EDCDy1o6dJtZUGo6gahVMV" target="blank">Controlling Game Cameras in Stingray</a>.
+> ![](../images/icon_video.png) For video tutorials on controlling game cameras, check out <a href="http://area.autodesk.com/learning/series/controlling-game-cameras-in-stingray" target="blank">Controlling Game Cameras in Stingray</a>.
 
 ## Switching cameras
 

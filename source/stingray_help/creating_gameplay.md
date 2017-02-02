@@ -2,4 +2,4 @@
 
 With Stingray, you can set up interactive gameplay using Flow visual programming, and Lua scripting. Topics in this section introduce you to both.
 
-> ![](images/icon_CreativeMarket.png) To check out a simple top-down space shooter game implemented in Flow, download the 'Flow Space Shooter' game kit from <a href="http://www.autodesk.com/stingray-creativemarket-samples" target="blank">Creative Market</a>. You can also download 'Traffic Game', which lets you drive your taxi across the map and pick up passengers before the timer runs out.
+> ![](images/icon_CreativeMarket.png) To check out a simple top-down space shooter game implemented in Flow, download the 'Flow Space Shooter' game kit from <a href="http://www.autodesk.com/stingray-creativemarket-samples" target="blank">Creative Market</a>.

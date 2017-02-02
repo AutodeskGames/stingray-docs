@@ -2,7 +2,7 @@
 
 The Stingray Editor ships with a few sample projects to help you get started. By default, template projects install in the **templates** folder in your **Stingray** directory. On a Windows OS templates are installed at the following location: `C:\Program Files\Autodesk\Stingray\<version>\editor\templates`. Templates are also available from the **Project Manager** every time you start Stingray or select **Templates** tab in the **Project Manager**.
 
-> ![](../../images/icon_video.png) You can find video walkthroughs of the templates <a href="https://www.youtube.com/playlist?list=PLTjhBiJe1i2FMurxvbVZymn2vxC1S-WqU" target="blank">here.</a>
+> ![](../../images/icon_video.png) You can find video walkthroughs of the templates <a href="http://area.autodesk.com/learning/series/introduction-to-stingray-template-projects" target="blank">here.</a>
 
 ![](../../images/template_projects.png)
 

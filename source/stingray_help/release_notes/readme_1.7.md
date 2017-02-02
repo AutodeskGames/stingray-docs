@@ -85,7 +85,7 @@ You can now edit the length of animation clips by trimming in the Anim Clip Edit
 
 ## Visual mesh raycasting
 
-Stingray 1.7 provides new functionality that lets you lets you check for intersections with visual meshes within a specified Unit.
+Stingray 1.7 provides new functionality that lets you check for intersections with visual meshes within a specified Unit.
 
 For complete documentation, refer to the Lua documentation (stingray.Unit.mesh_pick_raycast) and the [Flow node documentation](../../flow_ref/index.html) (**Unit > Mesh Pick Raycast**).
 
@@ -132,6 +132,10 @@ You can now update existing assets when using level sync with Maya. When **Updat
 ### Import .EXR files as skydome images
 
 Stingray now supports high definition range EXR files for image based lighting. Import (or drag and drop to Asset Browser) .EXR files to use as skydomes in your level. Updated topics include: ~{ Supported file formats }~ and ~{ Create a skydome texture }~.
+
+### Updated PhysX plug-in
+
+The PhysX plug-in installers for Maya 2017 and Maya LT 2017 that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.21117.04582. For related information, see ~{ Install the PhysX plug-in for your DCC tool }~.
 
 ## What's new in Rendering
 
