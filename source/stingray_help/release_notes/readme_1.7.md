@@ -123,6 +123,10 @@ New Flow nodes include:
 
   > For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
 
+## More granular asset overrides
+
+If your project contains a folder whose name matches another folder already mounted by the engine or by another plug-in, such as the `core` folder, the project now merges the contents of your project's folder on top of the existing folder. This makes it easier to override selected core resources, such as Appkit script files, without having to copy the entire core folder into your project.
+
 ## What's new in Interop?
 
 ### Level Sync updates
