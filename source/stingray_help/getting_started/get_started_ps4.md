@@ -2,7 +2,7 @@
 
 This page tells you everything you need to know in order to get started developing projects for PlayStation 4. You'll need to be a registered PlayStation 4 developer with Sony already, and you'll need a devkit to follow along with.
 
-## First-time setup
+## Step 1. First-time setup
 
 In order to connect the Stingray Editor to a PlayStation 4 device, or to build and deploy your game for PlayStation 4, you must follow the steps listed on this page on your Windows development machine.
 
@@ -26,7 +26,7 @@ You can get the SDK using the SDK Manager utility, available to registered devel
 
 The editor does not require the SDK in order to deploy or package your game, although you may need it in order to prepare your final distribution.
 
-## Connect the editor to the device
+## Step 2. Connect the editor to the device
 
 Connecting the editor to your device has two benefits:
 
@@ -62,7 +62,7 @@ We recommend the following troubleshooting steps:
 
 - Check that your IP settings are correct both in the **Deployer** and on the device.
 
-## Deploy the project for PlayStation 4
+## Step 3. Deploy the project for PlayStation 4
 
 Deploying creates a standalone bundle that you can try out on your PlayStation 4 (and, eventually, distribute). For background information, see ~{ Deploying and Building }~ and ~{ Using the Deployer panel }~.
 

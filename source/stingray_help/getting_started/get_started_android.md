@@ -2,11 +2,11 @@
 
 This page tells you everything you need to know in order to get started developing projects for Android. You'll need an Android device to follow along with.
 
-## Check the supported devices
+## Step 1. Check the supported devices
 
 See the ~{ Supported platforms }~ page for details on the Android devices and OS versions that the Stingray engine can work with, and make sure your device is a good fit.
 
-## First-time setup
+## Step 2. First-time setup
 
 You'll have to install and set up a few things on the Windows machine that you use to run the Stingray editor.
 
@@ -67,7 +67,7 @@ For details, check your device manufacturer's documentation or support site, or 
 
 After installing the pre-requisites and setting the environment variables listed above, restart your computer.
 
-## Connect the editor to the device
+## Step 3. Connect the editor to the device
 
 Connecting the editor to your device has two benefits:
 
@@ -99,7 +99,7 @@ When you connect to the device or run the project, the editor automatically inst
 
 >	**Tip:** If you're unable to connect to your Android device, you may need to install ADB drivers specific to your device and try the procedure again.
 
-## Deploy the project for Android
+## Step 4. Deploy the project for Android
 
 Deploying creates a standalone *.apk* bundle that you can try out on your device (and, eventually, distribute on the Google store). For background information, see ~{ Deploying and Building }~ and ~{ Using the Deployer panel }~.
 
@@ -174,7 +174,7 @@ Keystore signing is required in order to test the generated *.apk* file on a dev
 
 For more information on keystore signing, see the [Android documentation](http://developer.android.com/tools/publishing/app-signing.html).
 
-## Keep your content optimized!
+## Step 5. Keep your content optimized!
 
 Mobile devices don't have the same amount of memory and processor resources to throw at your project as your PC does. When you're making a project that you intend to be used on mobile platforms, it's really critical to pay close attention to the size of your resources and the overall demands that the project is putting on the device.
 

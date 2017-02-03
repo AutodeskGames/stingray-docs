@@ -27,6 +27,6 @@ Stingray offers two different lightweight mechanisms for testing your content on
 	-	~{ Get started on Android }~
 	-	~{ Get started on iOS }~
 	-	~{ Get started on PlayStation 4 }~
-	-	~{ Get Mstarted on Xbox One }~
+	-	~{ Get started on Xbox One }~
 
 **Note:** you cannot currently connect to a remote Windows host for viewport mirroring or running the project.

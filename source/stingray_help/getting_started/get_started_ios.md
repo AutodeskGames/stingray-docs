@@ -2,11 +2,11 @@
 
 This page tells you everything you need to know in order to get started developing projects for iOS. You'll need an iPhone or iPad to follow along with.
 
-## Check the supported devices
+## Step 1. Check the supported devices
 
 See the ~{ Supported platforms }~ page for details on the iOS devices and OS versions that the Stingray engine can work with, and make sure your device is a good fit.
 
-## First-time setup
+## Step 2. First-time setup
 
 In order to connect the Stingray Editor to an iOS device, or to build and deploy your game for iOS devices, you must follow the steps listed on this page on your Windows and Mac OS X development machines.
 
@@ -75,7 +75,7 @@ To generate the engine *.ipa* files:
 
 Once the *.ipa* file for the engine is available, the **Deployer** panel is updated to show all of the options you can set when you deploy a full standalone build of your game. See [Deploy the project for iOS] below.
 
-## Connect the editor to the device
+## Step 3. Connect the editor to the device
 
 Connecting the editor to your device has two benefits:
 
@@ -113,7 +113,7 @@ For more background information, see ~{ Connect to a remote device }~.
 
 >	**Note:** The engine app on the device must be in this waiting state in order for the Stingray Editor to initiate a connection. That means that each time you want to run your project or mirror your viewport, you have to close and restart the engine on the device.
 
-## Deploy the project for iOS
+## Step 4. Deploy the project for iOS
 
 Deploying creates a standalone *.ipa* bundle that you can try out on your device (and, eventually, distribute on the iTunes store). For background information, see ~{ Deploying and Building }~ and ~{ Using the Deployer panel }~.
 
@@ -166,7 +166,7 @@ Icons used for your app. If you leave them empty, the **Deployer** uses the defa
 
 The Launch images (splash screens) used for your app. If you leave them empty, the **Deployer** uses a default Autodesk Stingray image. When you are ready to release your game, you'll need to specify an icon for each listed size.
 
-## Keep your content optimized!
+## Step 5. Keep your content optimized!
 
 Mobile devices don't have the same amount of memory and processor resources to throw at your project as your PC does. When you're making a project that you intend to be used on mobile platforms, it's really critical to pay close attention to the size of your resources and the overall demands that the project is putting on the device.
 

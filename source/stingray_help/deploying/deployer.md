@@ -18,7 +18,7 @@ When the **Deployer** finishes, you may also need to use tools specific to the t
 
 For details on all the platform-specific settings required by the **Deployer** panel, see the other topics in this section:
 
--	~{ Deploy for Windows }~
+-	~{ Package the project for Windows }~
 -	~{ Get started on Android }~
 -	~{ Get started on iOS }~
 -	~{ Get started on PlayStation 4 }~

@@ -28,7 +28,7 @@ After you deploy the project to your device, use the following process to iterat
 
 To connect:
 
-1. Connect your devices via USB. (See also ~{ Connect to an Android device }~.)
+1. Connect your devices via USB. (See also ~{ Get started on Android }~.)
 2. Enter "adb tcpip 5555" and then "adb connect".
 3. Unplug your device from the USB and use as usual.
 
@@ -37,7 +37,6 @@ Related topics:
 - ~{ Template projects }~
 - ~{ Mini renderer }~
 - ~{ Optimize VR content for mobile devices }~
-- ~{ Deploy for Android }~
 - ~{ Using the Connections panel }~
-- ~{ Connect to an Android device }~
+- ~{ Get started on Android }~
 ---

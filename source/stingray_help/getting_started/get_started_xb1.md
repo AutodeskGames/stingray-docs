@@ -2,7 +2,7 @@
 
 This page tells you everything you need to know in order to get started developing projects for Xbox One. You'll need to be a registered Xbox One developer with Microsoft already, and you'll need an Xbox One in developer mode to follow along with.
 
-## First-time setup
+## Step 1. First-time setup
 
 In order to connect the Stingray Editor to an Xbox One device, or to build and deploy your game for Xbox One, you must follow the steps listed on this page on your Windows development machine.
 
@@ -22,7 +22,7 @@ On your Windows development machine, install the XDK: the Xbox One platform libr
 
 You can download the SDK from the Microsoft Game Developer Network Portal, available to registered developers at <https://developer.xboxlive.com/>.
 
-## Connect the editor to the device
+## Step 2. Connect the editor to the device
 
 Connecting the editor to your device has two benefits:
 
@@ -44,7 +44,7 @@ For details, see ~{ Using the Connections panel }~.
 
 When you connect the Stingray Editor to the Xbox One device, the Stingray Editor automatically sends the engine to the device over the network, runs the engine on the device, then sends your project data to the engine.
 
-## Deploy the project for Xbox One
+## Step 3. Deploy the project for Xbox One
 
 Deploying creates a standalone bundle that you can try out on your Xbox One (and, eventually, distribute). For background information, see ~{ Deploying and Building }~ and ~{ Using the Deployer panel }~.
 
