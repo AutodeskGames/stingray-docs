@@ -374,6 +374,26 @@ For new projects created with Stingray 1.7 templates, no extra action is require
 
 (See also ~{ Generate sound banks }~.)
 
+### Auto-loading removed from templates
+
+In previous releases, the *boot.package* file in the template projects used a `* = [*]` wildcard pattern to match all types of resources in the project. This made sure that all content you put in a project (and all content in the core resources) would always be compiled, bundled, and loaded into the project at runtime, no matter where in the project that content was located. The downside is that as a project grows, it might lead to crashes when the engine tries to load more resources than it can fit in the available memory -- especially on mobile platforms.
+
+We've now modified the *boot.package* in the template projects to disable this all-inclusive wildcard.
+
+-	This change will affect any new projects you create from a template in 1.7.
+
+-	If you create a project from one of the newer templates, and you see errors about missing resources when you run your project, the cause is likely due to your resource not being included in the *boot.package* file.
+
+-	This change will *not* affect any projects that you've already created in previous versions of Stingray. They'll still work the same way they do now.
+
+-	Each template project is set up to load all of the default resources it needs.
+
+-	When you add new content of your own, you should check that your content will be picked up by the resource specifications in the *boot.package*. As long as you add levels under `content/levels`, your levels and all of the other resources those levels depend on should be bundled correctly. However, be careful about any content that you spawn dynamically in Lua.
+
+-	You can go back to the old auto-loading method by removing the two slashes `//` at the start of the line `//* = [*]` at the top of the *boot.package* file in any template project.
+
+For more background information, see ~{ Loading and unloading content at runtime }~ and ~{ Defining resource packages }~.
+
 ### Lua API changes
 
 For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](../../lua_ref/versions.html).
