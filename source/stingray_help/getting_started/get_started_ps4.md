@@ -4,7 +4,7 @@ This page tells you everything you need to know in order to get started developi
 
 ## Step 1. First-time setup
 
-In order to connect the Stingray Editor to a PlayStation 4 device, or to build and deploy your game for PlayStation 4, you must follow the steps listed on this page on your Windows development machine.
+You'll have to install and set up a few things on the Windows machine that you use to run the Stingray editor.
 
 ### Install the Stingray PlayStation 4 distribution
 
@@ -14,7 +14,7 @@ Registered PlayStation 4 developers can download the distribution from the Autod
 
 If you need to register for an account, or if you need to add PlayStation 4 access rights to your existing account, you can do so through the site.
 
-Once you have the distribution *.zip* file on your computer, unzip it into your Stingray installation folder so that the contents of its `engine` folder are copied on top of the `engine` folder that is already there in your installation folder
+Once you have the distribution *.zip* file on your computer, unzip it into your Stingray installation folder. The contents of its `engine` folder should be merged into the `engine` folder that is already present in your installation folder.
 
 ### Install the PlayStation 4 platform SDK
 

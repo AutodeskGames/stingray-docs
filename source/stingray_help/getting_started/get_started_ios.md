@@ -8,7 +8,7 @@ See the ~{ Supported platforms }~ page for details on the iOS devices and OS ver
 
 ## Step 2. First-time setup
 
-In order to connect the Stingray Editor to an iOS device, or to build and deploy your game for iOS devices, you must follow the steps listed on this page on your Windows and Mac OS X development machines.
+You'll have to install and set up a few things on the Windows machine that you use to run the Stingray editor, and your Mac OS X development machine.
 
 ### Set up and run the iOS Package Server
 
