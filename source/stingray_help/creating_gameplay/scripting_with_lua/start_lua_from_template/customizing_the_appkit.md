@@ -4,7 +4,7 @@ If you want to use the Appkit in your game, but you want to customize some speci
 
 ## Option 1. Copying the Appkit into your project
 
-You can copy the Appkit scripts and other resources into a `core/appkit` folder within your project's source folder, and change the copies freely. You can take all of the Appkit, or only selected files. Any resources you copy in to the project will override the default versions of those resources.
+You can copy the Appkit scripts and other resources into a `core/appkit` folder within your project's source folder, and change the copies freely. You can take all of the Appkit, or only selected files. Any resources you copy into the project will override the default versions of those resources.
 
 Autodesk generally recommends using this approach whenever possible.
 
@@ -42,7 +42,7 @@ You can change the Appkit script files in place within your Stingray installatio
 
 ## Option 3. Overriding the Appkit in your project code
 
-In your project's Lua scripts, you can re-define selected Lua objects and functions defined in the Appkit scripts.
+In your project's Lua scripts, you can redefine selected Lua objects and functions defined in the Appkit scripts.
 
 For a code example, see the [Overriding the SimpleProject](using_simpleproject.html#overriding-the-simpleproject) section in the topic ~{ Using the SimpleProject }~. You can use this same approach to override the behavior of any other function, variable or object in the Appkit.
 
