@@ -6,8 +6,6 @@ While you are developing your game, you will frequently need to add and remove c
 
 You can use the `*` character as a wildcard in your package definitions. When you load the package into the game, all resources that match the specified string get loaded.
 
-The template projects supplied with Stingray all use this approach to add all resources in the game project into the boot package.
-
 See also ~{ Defining resource packages }~.
 
 ## Using auto-load mode

@@ -60,8 +60,6 @@ This snippet causes all resources of all types to be loaded into memory when thi
 
 Putting this line in the boot package is a useful way of getting up and running quickly, without worrying about how your resources are distributed into packages. However, as your game grows, loading everything at once will produce slower and slower boot times, and will eventually cause the game to run out of memory (especially on platforms with less available memory, like mobile phones).
 
-The template projects provided with Stingray use this approach.
-
 ## Special keys
 
 In addition to lists of resources, your package files can also contain the following special keys. Each key can appear no more than once in each package file.

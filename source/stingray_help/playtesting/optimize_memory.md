@@ -51,22 +51,23 @@ There are several console commands you can use to get information about the memo
 
 For details on sending commands from the Stingray Editor to a running game, see ~{ Send Commands from the Status Bar }~. For more detail about the commands themselves, see ~{ Console commands }~.
 
-## Remove unused resources, or disable auto-loading
+## Remove unused resources from the boot package or the project
 
-By default, the Stingray template projects are set up with a boot package that loads **all** resources in the project into memory when the game starts. If your game crashes on startup, particularly when testing on mobile devices with low available memory, the most likely cause is that the boot package is trying to load in too many resources. Often, game projects end up with lots of clutter: old, unused resources that aren't actually needed at all, but still take up space in memory.
+If your game crashes on startup, particularly when testing on mobile devices with low available memory, the most likely cause is that the boot package is trying to load in too many resources.
 
-If your project is still using the default boot package from a template, a quick way to reduce your runtime memory usage is to simply delete from your project folder any extra resources that you're not using in the game.
-
-Alternatively, you can remove the auto-load line from the top of the boot package:
+If your boot package is using wildcards to decide what resources it should contain, it may be that some of the resources it's loading aren't actually necessary. This is particularly likely if you're using the following line to load *all* resources of *all* types that are in the project.
 
 ~~~{sjson}
-// WILL AUTOLOAD ALL CONTENT AND SCRIPTS. PLEASE REMOVE TO CONTROL CONTENT LOADING
 * = ["*"]
 ~~~
 
-and identify in the boot package only the specific resources that you want your game to load. See also ~{ About the boot package }~ and ~{ Defining resource packages }~.
+If your project has old copies of assets or test levels hanging around that match your wildcards but that aren't needed at runtime, you can save memory by simply deleting these unnecessary resources from the project.
 
-## Use resource packages
+Alternatively, if you want to keep the older copies, you could remove the auto-loading line from the boot package and re-configure the boot package to exclude the unwanted resources.
+
+See also ~{ About the boot package }~ and ~{ Defining resource packages }~.
+
+## Use multiple resource packages
 
 The most powerful and flexible option that you have for controlling your game's memory usage is to divide your project's resources into multiple separate packages, and to stream these packages in and out of memory dynamically during the game when they are needed.
 

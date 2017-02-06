@@ -1,6 +1,6 @@
 # Working with core resources
 
-In addition to the resources that you import and create in the source folder, each Stingray project inherits a pre-set collection of "core" resources. These core resources are installed with Stingray, and are kept in the `core` folder within your Stingray installation directory. When you compile a game project, the Stingray engine automatically picks up the content from the core folder, compiles the files, and adds them to your project's compiled data.
+In addition to the resources that you import and create in the source folder, each Stingray project inherits a preset collection of "core" resources. These core resources are installed with Stingray, and are kept in the `core` folder within your Stingray installation directory. When you compile a game project, the Stingray engine automatically picks up the content from the core folder, compiles the files, and adds them to your project's compiled data.
 
 Otherwise, the game engine treats core resources just like any other data resources in your project. If you want to use any of them in your game at runtime, you need to make sure that they are included in your package definitions. This is typically done in your boot package.
 
