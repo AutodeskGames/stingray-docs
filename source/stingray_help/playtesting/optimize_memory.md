@@ -55,15 +55,15 @@ For details on sending commands from the Stingray Editor to a running game, see 
 
 If your game crashes on startup, particularly when testing on mobile devices with low available memory, the most likely cause is that the boot package is trying to load in too many resources.
 
-If your boot package is using wildcards to decide what resources it should contain, it may be that some of the resources it is loading aren't actually necessary. This is particularly likely if you're using the following line to load *all* resources of *all* types that are in the project.
+If your boot package is using wildcards to decide what resources it should contain, it may be that some of the resources it's loading aren't actually necessary. This is particularly likely if you're using the following line to load *all* resources of *all* types that are in the project.
 
 ~~~{sjson}
 * = ["*"]
 ~~~
 
-If your project has old copies of assets or test levels hanging around that are no longer needed at runtime, you might be able to save memory by simply deleting these unnecessary resources from the project.
+If your project has old copies of assets or test levels hanging around that match your wildcards but that aren't needed at runtime, you can save memory by simply deleting these unnecessary resources from the project.
 
-Alternatively, if you want to keep the older copies around in the project, you could remove the auto-loading line from the boot package and re-configure the boot package to exclude the unwanted resources.
+Alternatively, if you want to keep the older copies, you could remove the auto-loading line from the boot package and re-configure the boot package to exclude the unwanted resources.
 
 See also ~{ About the boot package }~ and ~{ Defining resource packages }~.
 

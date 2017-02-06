@@ -58,7 +58,7 @@ Each project source file contains the following files: `EditorSettings.config`, 
 
 A resource file with the `.package` extension specifies a resource package: a chunk of related resources that will be stored, loaded and unloaded together in the final builds of the game.
 
-When you start a new project based on a template provided with Stingray, your project is pre-set (in its `settings.ini` file) to load this `boot.package` file at startup. This package file determines which resources in the project get loaded into the engine when you run or deploy the project.
+When you start a new project based on a template provided with Stingray, your project is preset (in its `settings.ini` file) to load this `boot.package` file at startup. This package file determines which resources in the project get loaded into the engine when you run or deploy the project.
 
 By default, this package includes all the resources that you see in the project. As you add more content to the project, you'll have to make sure that your new content is also covered by the boot package. See ~{ Defining resource packages }~ for details on how to add things to the package file.
 
