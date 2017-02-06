@@ -157,7 +157,7 @@ Stingray is a complex system, with a lot of interactions between different compo
 
 You can use the `platforms` and `dependencies` properties to identify exactly what other platforms, plug-ins and versions your plug-in needs.
 
->	**NOTE:** The dependencies you specify are not currently enforced. However, we encourage you to start including them now. Not only will this give you less to do later when Stingray starts to enforce the versioning, but it can also be helpful in general to identify exactly what your plug-in really depends on.
+>	**NOTE:** The only dependency that is currently enforced by the editor is the dependency on the base `Stingray` app. The editor does not yet handle platform dependencies or dependencies on other plug-ins. However, we encourage you to start including them now. Not only will this give you less to do later when Stingray starts to enforce the versioning, but it can also be helpful in general to identify exactly what your plug-in really depends on.
 
 `platforms`
 
@@ -167,4 +167,6 @@ You can use the `platforms` and `dependencies` properties to identify exactly wh
 
 >	An array of items that lists which other Stingray plug-ins your plug-in depends on, and which versions of those other plug-ins must be installed. The key of each item must match the `name` key of another Stingray plug-in. Like each plug-in's own `version` property (described above), the value of each key should be a [semver](http://semver.org/) tag that denotes the compatible versions of that plug-in.
 >
->	For example, `"stingray" >= "1.5"` means that the base Stingray app must be at least version 1.5 in order to successfully load the plug-in. Or, if your plug-in makes use of a new feature introduced by the new `script_editor` plug-in in version 1.6 of Stingray, you might also add `"Script Editor" >= "1.1.0"`. Note that for plug-in dependencies, the version number is the version of the *plug-in* as listed in that plug-in's *.plugin* descriptor file, not the version of Stingray that contains the version of the plug-in you want to match.
+>	For example, `"stingray" >= "1.5"` means that the base Stingray app must be at least version 1.5 in order to successfully load the plug-in.
+>
+>	In future, if your plug-in makes use of a new feature introduced by the `script-editor` plug-in in version 1.8 of Stingray, you might also add `"Script Editor" >= "1.8.0"`. Note that for plug-in dependencies, the version number will be the version of the *plug-in* as listed in that plug-in's *.plugin* descriptor file, not the version of Stingray that contains the version of the plug-in you want to match.
