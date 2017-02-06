@@ -4,6 +4,8 @@ This topic lists the third-party software that you must install in order to rebu
 
 >	**NOTE:** You only need Visual Studio and the rest of the requirements on this page in order to rebuild the engine and editing tools from source code. You don't need it to run a version of Stingray that you install on your computer, or to make a game using Flow and Lua.
 
+The requirements listed here apply to the 1.7 release, which you will find in the `master` branch of the Stingray source code repository. If you use the `develop` branch, check the `readme.md` file at the root of the repository for any updates that might have been made since the release.
+
 ## Version requirement summary
 
 This table provides an at-a-glance summary of **only** the tools that require specific versions, for quick reference. See the sections below for more details and for additional tools.
