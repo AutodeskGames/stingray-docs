@@ -66,21 +66,31 @@ We use Visual Studio SR_DOC_VISUAL_STUDIO_VERSION to compile code on Windows.
 
 Note that the free Express version is **not** sufficient.
 
-You may be able to use later versions of Visual Studio to build for some target platforms. However, when compiling against the Xbox One XDK, only **2012 update 5** is supported.
+### Windows SDK
 
->	**NOTE:** The `develop` branch has now changed over to Visual Studio 2015! If you use the `develop` branch, check the `readme.md` file at the root of the repository for the latest requirements used in that branch.
+You need version **10.0.10586.0** or greater of the Windows SDK. Download it here:
 
-### QT Add-in for Visual Studio 2012
+<https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>
 
-The Stingray editor uses QT for its main window. In order to re-build the Stingray editor, you will need to install the QT Add-in for Visual Studio 2012. You need version **SR_DOC_QT_ADDIN_VERSION**. Download it from this link:
+If the most recent Windows SDK fails to install, you can manually install version 10.0.10586.0: <https://developer.microsoft.com/en-us/windows/downloads/sdk-archive>
 
-<http://SR_DOC_QT_DOWNLOAD_URL>
+### Microsoft .NET SDK
 
-### Microsoft Expression Blend SDK
+Download and install Microsoft .NET SDK **4.6.2**:
 
-In order to re-build the legacy Bitsquid authoring tools, you will need the Microsoft Expression Blend SDK for .NET 4.0. You can download it here:
+<http://go.microsoft.com/fwlink/?LinkId=780617>
 
-<http://www.microsoft.com/en-us/download/details.aspx?id=10801>
+### Node.js and npm
+
+Download and install the latest version of Node.js and npm:
+
+<https://nodejs.org/en/>
+
+### DirectX runtime
+
+You'll need the DirectX End-User Runtime (June 2010). Download and install here:
+
+<http://www.microsoft.com/en-us/download/confirmation.aspx?id=8109>
 
 ## Windows development machines, for Android support
 
@@ -97,6 +107,8 @@ You can download it here:
 To get to this download link, you must register for a free membership in the NVIDIA GameWorks developer program.
 
 Before you run the installer, make sure that no older Tegra Android Development Pack installers from NVIDIA NSight are present in the same folder. This avoids the possibility of accidentally installing versions of the software that are incompatible with the versions required by Stingray.
+
+Note that in order to deploy or connect to Android, you'll also need a few other requirements. See the [Get started on Android](http://help.autodesk.com/view/Stingray/ENU/?contextId=get_started_android) page.
 
 ## Windows development machines, for PlayStation 4 support
 
