@@ -8,4 +8,4 @@ The other texture is a material map, which you can use to texturize the terrain.
 
 ![](../images/terrain_assetbrwser.png)
 
-> **NOTE:** Terrains are currently supported only when running your project on Windows, PlayStation 4 or Xbox One. They are not supported in Android or iOS.
+> **NOTE:** Terrains are currently supported only when running your project on Windows, PlayStation 4, or Xbox One. They are not supported on Android or iOS.
