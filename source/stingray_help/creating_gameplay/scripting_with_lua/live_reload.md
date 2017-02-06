@@ -16,7 +16,7 @@ See also ~{ Reloading resources }~.
 
 ## Special considerations
 
-When the engine reloads a Lua file, it simply re-runs the whole file. This re-evaluates all definitions and re-defines all variables and functions. This can sometimes have some unexpected side effects.
+When the engine reloads a Lua file, it simply re-runs the whole file. This reevaluates all definitions and redefines all variables and functions. This can sometimes have some unexpected side effects.
 
 ### Initializations
 
@@ -28,7 +28,7 @@ This same consideration applies to other kinds of object initialization as well.
 
 ### Redefining cached global tables
 
-When you create a new table variable, Lua uses a *reference* to make that variable point to the table. If you make a second variable equal to the first, the second variable stores the same reference. If you then re-define the first variable afterward to point to a new table, the second variable will continue to point to the *original* table.
+When you create a new table variable, Lua uses a *reference* to make that variable point to the table. If you make a second variable equal to the first, the second variable stores the same reference. If you then redefine the first variable afterward to point to a new table, the second variable will continue to point to the *original* table.
 
 For example, suppose that you are using the Appkit in your project, and you have a `project.lua` script that contains the following code:
 

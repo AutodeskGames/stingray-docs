@@ -4,7 +4,7 @@ If you want to use the Appkit in your game, but you want to customize some speci
 
 ## Option 1. Copying the Appkit into your project
 
-You can copy Appkit scripts and other resources into your project's source folder, and change the copies freely. You can take all of the Appkit, or only selected files.
+You can copy the Appkit scripts and other resources into a `core/appkit` folder within your project's source folder, and change the copies freely. You can take all of the Appkit, or only selected files. Any resources you copy into the project will override the default versions of those resources.
 
 Autodesk generally recommends using this approach whenever possible.
 
@@ -14,7 +14,7 @@ Autodesk generally recommends using this approach whenever possible.
 
 -	Your changes remain isolated from the product installation folder, so your game will use the same code regardless of what version of Stingray you use.
 
-	On the other hand, this means that when you upgrade to a new version of Stingray you will not benefit immediately from any additions, improvements or bug fixes that are made to the Appkit in the new version. You would need to merge the new Appkit code into your project's modified scripts.
+	On the other hand, this means that when you upgrade to a new version of Stingray you might not benefit immediately from any additions, improvements or bug fixes that are made to the Appkit in the new version. You would need to merge the new Appkit code into your project's modified scripts.
 
 -	Distributing your project for use by other people remains easy, since everything you need to share is contained in your project source folder.
 
@@ -24,13 +24,9 @@ Autodesk generally recommends using this approach whenever possible.
 
 **To use this approach:**
 
-1.	Copy the `core/appkit` folder from your Stingray installation folder into your project, or take just the files you want to modify.
+Copy the `core/appkit` folder from your Stingray installation folder into your project, or take just the files you want to modify.
 
-	Make sure that any files you copy use the same path within your project's resources as they did previously within the installation directory. For example, a file named *core/appkit/lua/player_util.lua* within the core resources should still be found at *core/appkit/lua/player_util.lua* relative to the root of your project's source folder.
-
-2.	Update your *.package* resources if necessary to include the Lua files in their new locations in your project folder.
-
-	You can also exclude the original Lua files located in the core resources from your package. See ~{ Defining resource packages }~.
+Make sure that any files you copy use the same path within your project's resources as they did previously within the installation directory. For example, a file named *core/appkit/lua/player_util.lua* within the core resources should still be found at *core/appkit/lua/player_util.lua* relative to the root of your project's source folder.
 
 ## Option 2. Modifying the Appkit core resources
 
@@ -46,7 +42,7 @@ You can change the Appkit script files in place within your Stingray installatio
 
 ## Option 3. Overriding the Appkit in your project code
 
-In your project's Lua scripts, you can re-define selected Lua objects and functions defined in the Appkit scripts.
+In your project's Lua scripts, you can redefine selected Lua objects and functions defined in the Appkit scripts.
 
 For a code example, see the [Overriding the SimpleProject](using_simpleproject.html#overriding-the-simpleproject) section in the topic ~{ Using the SimpleProject }~. You can use this same approach to override the behavior of any other function, variable or object in the Appkit.
 
