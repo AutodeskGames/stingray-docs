@@ -12,7 +12,7 @@ The editor's plug-in system defines a number of different kinds of extensions th
 
 -	`asset_types` tell the **Asset Browser** how to handle new types of data files in the project -- that is, files whose extensions don't match any known asset types. See ~{ Register a custom asset type }~.
 
--	`templates` tell the editor what to do when the user creates a new kind of custom asset. See ~{ Define templates for new assets }~.
+-	`templates` identify pre-made assets or projects that you provide with your plug-in, which the editor can use to create new assets and projects. See ~{ Define templates for new assets }~.
 
 -	`previews` control the way the **Asset Preview** behaves when the user selects a given type of resource in the **Asset Browser**. See ~{ Define previews for custom assets }~.
 
