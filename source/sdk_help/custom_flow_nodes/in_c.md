@@ -18,7 +18,7 @@ We'll look at these three things separately over the next sections, but keep in 
 
 ## Examples
 
-The best place to look for an end-to-end example that illustrates everything involved in writing a custom Flow node is under the `engine_plugins\flow_nodes_sample_plugin` folder in the sample plug-in repository on GitHub. This example defines several different Flow nodes that show different capabilities of the system:
+The best place to look for an end-to-end example that illustrates everything involved in writing a custom Flow node is under the `samples\flow_nodes_sample_plugin` folder in the sample plug-in repository on GitHub. This example defines several different Flow nodes that show different capabilities of the system:
 
 -	The `sample_flow_node` provides a basic example of picking up input values, setting output values, and triggering output events. It also shows how your node can maintain state information across multiple evaluations -- in this case, a `max_run_count` counter that ticks down each time the node is evaluated.
 
