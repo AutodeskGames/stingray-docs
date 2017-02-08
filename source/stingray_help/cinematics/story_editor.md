@@ -40,7 +40,7 @@ The **Story Editor** toolbar includes the following:
 
 | Controls |  Description |
 |----------| -------------|
-| **Playback Controls** ![](../images/storyEd_playbackCtrls.png) | Use the playback controls to preview animations in the **Level Viewport**, as you edit the unit animation in the **Story Editor**. Use ![](../images/icon_story_forwardPlay.png) to play animation in forward direction and ![](../images/icon_story_reversePlay.png) to play in reverse direction.<br> ![](../images/updated.png)  **Playback Control Mode**<br>The Story Editor has the following playback modes to let you control the way stories play.<br> **None ![](../images/storyEd_loopmode_none.png) :** The animation stops at the end of the timeline range. <br> **Loop ![](../images/storyEd_loopmode.png):**  The animation continues playing in the start/end of timeline range <br>**Ping Pong ![](../images/storyEd_pingmode.png):** The animation continues playing in a ping pong manner in the start/end of timeline range. At the end of the timeline range, the animation plays in the backward direction and continues in the forward direction at the start of the timeline range. <br> By default, unit animations play in None mode. To set to loop or ping pong mode, select ![](../images/storyEd_loopmode_none.png), right-click to select **Loop** or **Ping-Pong**.  <br> For a unit track, the **Pre Infinite** and **Post Infinite** settings (right-click the unit’s individual transform or other properties) define the animation curve behavior before the first and last keys of the track in the active timeline range. You can extend the timeline playback range to make animations play longer in None mode with the pre and post infinity settings such as extrapolate curves or offset loop curves. To set the playback range, modify the story loop range value using `stingray.StoryTeller.set_loop_range()` function in Lua or **Level > Level Story** node in Flow or select a `StoryRoot` in the Story Editor tree view or **Explorer** panel and modify the **Story Settings** start and end time. |
+| **Playback Controls** ![](../images/storyEd_playbackCtrls.png) | Use the playback controls to preview animations in the **Level Viewport**, as you edit the unit animation in the **Story Editor**. Use ![](../images/icon_story_forwardPlay.png) to play animation in forward direction and ![](../images/icon_story_reversePlay.png) to play in reverse direction.<br> To change the [playback mode](#playback), select ![](../images/storyEd_loopmode_none.png), right-click to select **Loop** or **Ping Pong**.  |
 | **Snap** ![](../images/icon_storyEd_snapping.png) | Enables snapping to frames or seconds in the timeline.|
 | **Autokey** ![](../images/icon_storyEd_autokey.png) | When on, after you keyframe an object once, the object is automatically keyframed every time you manipulate it in the **Level Viewport**. |
 | **Time mode** ![](../images/icon_storyEd_timeMode.png)![](../images/icon_storyEd_timeModeframes.png) | Toggle the timeline to display seconds, or frames. |
@@ -51,6 +51,24 @@ The **Story Editor** toolbar includes the following:
 | [![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html)  **Capture Frames Tool** | Opens the ~{ Capture Frames Tool }~. See also ~{ Capture frames to disk }~. |
 | **Curve editor/Key editor** ![](../images/icon_storyEd_wrench.png) | Use the curve icon in the toolbar to switch between the different editing views in this area. <br>Curve editing mode: ![](../images/storyEd_curvePanel.png) <br> **Tip:** Select keys on the same curve and enter a value in the edit key field on the toolbar to edit multiple keys at once. <br> Key editing mode: ![](../images/storyEd_keysPanel.png) |
 
+**Controlling story playback**
+<a name="playback"></a>
+
+![UPDATED](../images/updated.png)
+
+The Story Editor offers the following playback modes, which control what happens when the story reaches the end of its playback range.
+
+-  **None ![](../images/storyEd_loopmode_none.png) :** The animation stops at the end of the timeline range.
+- **Loop ![](../images/storyEd_loopmode.png):**  The animation restarts from the beginning each time it reaches the end of the playback range.
+- **Ping Pong ![](../images/storyEd_pingmode.png):** The animation switches playback direction each time it reaches one end of the playback range. It plays forward until it reaches the end of the playback range, then plays the animation in reverse until it reaches the start of the playback range, and switches direction to repeat the cycle.
+
+By default, unit animations play in **None** mode.
+
+For a unit track, the **Pre Infinite** and **Post Infinite** settings (right-click the unit’s individual transform or other properties) define the animation curve behavior before the first key and after the last key of the track in the active timeline range. You can use these settings to make animations play longer in **None** mode, and to control the way curves are handled outside the playback range. To set the playback range,
+
+- Drag the black sliders in the Story Editor timeline to a new time.
+- Modify the story loop range value using `stingray.StoryTeller.set_loop_range()` function in Lua or **Level > Level Story** node in Flow.
+- Select a `StoryRoot` in the Story Editor tree view or **Explorer** panel and modify the **Story Settings** start and end time.
 
 ##Timeline
 

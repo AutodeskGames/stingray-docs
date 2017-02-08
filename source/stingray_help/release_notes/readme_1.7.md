@@ -77,7 +77,7 @@ See ~{ Import fonts }~.
 
 -	Copy keyframes and paste them on the current time in the timeline or on the cursor position using either the hotkeys or by right click context menu in the **Story Editor**. You can also copy keys from multiple tracks and paste them on other tracks based on the order of track selection. Updated topics include ~{ Create simple animations with the Story Editor }~ and ~{ Story Editor hotkeys }~.
 -	New reverse play icon ![](../images/icon_story_reversePlay.png) to play stories in reverse direction.
--	Stories now stop playing at the end of the playback range in None mode. See ~{ Story Editor }~.
+-	Stories now stop playing at the end of the playback range in *None* playback mode. See ~{ Story Editor }~.
 - A Capture Frame Tool icon ![](../images/icon_capture_frame.png) to access Capture Frame Settings; a story must be created to enable this mode. See [Improved Capture Frames Tool](#capture-frames).
 
 ## Trim animation clips
