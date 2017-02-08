@@ -323,8 +323,8 @@ ios = {
 >	For a list of the special tags you can use in this path, see [Special file and path name variables].
 
 ~~~{sjson}
-`android = {`
-	//local_console_log = "%OBBPATH%/log.txt"
+android = {
+	local_console_log = "%OBBPATH%/log.txt"
 }
 ~~~
 
@@ -334,12 +334,12 @@ ios = {
 
 `<platform>.save_dir`
 
->	Specifies a directory for the Lua `SaveSystem` interface to write and read its data files. `<platform>` can be `ios`, `android`, `win32`, and so on.
+>	Specifies a directory for the Lua `SaveSystem` interface to write and read its data files on Windows and iOS. `<platform>` can be `ios` or `win32`. (On Android and PlayStation 4, save paths are not configurable.)
 >
 >	For a list of the special tags you can use in this path, see [Special file and path name variables].
 
 ~~~{sjson}
-`ios = {`
+ios =
 	save_dir = "%SAVEDATA%/empty"
 }
 ~~~
