@@ -77,6 +77,7 @@ See ~{ Import fonts }~.
 
 -	Copy keyframes and paste them on the current time in the timeline or on the cursor position using either the hotkeys or by right click context menu in the **Story Editor**. You can also copy keys from multiple tracks and paste them on other tracks based on the order of track selection. Updated topics include ~{ Create simple animations with the Story Editor }~ and ~{ Story Editor hotkeys }~.
 -	New reverse play icon ![](../images/icon_story_reversePlay.png) to play stories in reverse direction.
+-	Stories now stop playing at the end of the playback range in None mode. See ~{ Story Editor }~.
 - A Capture Frame Tool icon ![](../images/icon_capture_frame.png) to access Capture Frame Settings; a story must be created to enable this mode. See [Improved Capture Frames Tool](#capture-frames).
 
 ## Trim animation clips
@@ -151,15 +152,15 @@ The PhysX plug-in installers for Maya 2017 and Maya LT 2017 that ship with Sting
 - You can now start the Stingray engine application from a command-line prompt, and provide parameters on the command line to trigger lightmap baking. For details, see ~{ Trigger lightmap baking from the command line }~.
 -	Beast is now deprecated. Use the Stingray light baker instead.
 
-## Tessellation support
+### Tessellation support
 
 Tessellation can now be activated using the standard base material node. Use the **Tesselation Factor** input on the base node to control the tesselation factor of your surface. A lower value results in a less tessellation. See ~{ Create a tessellation material }~.
 
-## Negative scale support
+### Negative scale support
 
 Stingray shaders now support negative scale.
 
-##Texture Manager updates
+### Texture Manager updates
 
 - New **Cubemap** and **HDRI/Skydome** category filters
 -	New texture template for imported skydome images
