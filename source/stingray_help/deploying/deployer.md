@@ -8,7 +8,7 @@ You can use the **Deployer** panel to create final, standalone packages of your 
 
 Basic usage is the same across all target platforms:
 
-1.	Ensure that you have set up any pre-requisites required for your target platform. See the page for your target platform under ~{ Supported platforms }~.
+1.	Ensure that you have set up any prerequisites required for your target platform. See the page for your target platform under ~{ Supported platforms }~.
 
 2.	You provide the settings requested by the **Deployer** panel.
 
@@ -18,11 +18,11 @@ When the **Deployer** finishes, you may also need to use tools specific to the t
 
 For details on all the platform-specific settings required by the **Deployer** panel, see the other topics in this section:
 
--	~{ Packaging a game for Android }~
--	~{ Packaging a game for iOS }~
--	~{ Packaging a game for PlayStation 4 }~
--	~{ Packaging a game for Windows }~
--	~{ Packaging a game for Xbox One }~
+-	~{ Package the project for Windows }~
+-	~{ Get started on Android }~
+-	~{ Get started on iOS }~
+-	~{ Get started on PlayStation 4 }~
+-	~{ Get started on Xbox One }~
 
 ## Common settings
 

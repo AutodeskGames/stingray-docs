@@ -2,9 +2,11 @@
 
 ![UPDATED](../images/updated.png)
 
-Anyone can use Stingray to create games that run on Windows PC, iOS and Android. If you are licensed by Sony as a PlayStation 4 developer, or by Microsoft as an Xbox One developer, you can also create games for these consoles.
+Anyone can use Stingray to create projects that run on Windows PC, iOS, and Android. If you're licensed by Sony as a PlayStation 4 developer, or by Microsoft as an Xbox One developer, you can also create projects for these consoles.
 
-This page describes the models of mobile devices Stingray supports. See also the other topics in this section for additional installation requirements for developing games for all of these target platforms.
+This page describes the models of mobile and VR devices that Stingray supports.
+
+>	**NOTE:** This page describes the requirements for playing back a project that you've already created and deployed using the Stingray editor. For the requirements you need in order to run the Stingray editor and create the project content, see ~{ System Requirements }~.
 
 ## iOS Device Compatibility
 

@@ -156,4 +156,4 @@ See also ~{ Deploying and Building }~.
 
 **Connections**
 
->Opens the **Connections** panel. See ~{ Connecting to a remote device }~.
+>Opens the **Connections** panel. See ~{ Connect to a remote device }~.

@@ -42,4 +42,4 @@ See also ~{ Using the Deployer panel }~.
 
 Occasionally, you may need to launch the engine application directly. In this case, the configuration you'll want to choose depends on what you are trying to accomplish. That said, it's generally safest to use `development` unless you know that you need a version that you can debug, or a version that has all the final optimizations of the `release` configuration.
 
-For example, in order to connect the Stingray editor to an instance of the engine that is running on an iOS device, you need to copy the iOS version of the engine over to the device and launch it. In this case, you'd almost always want to use the `development` configuration of the engine. See also ~{ Setting up remote connections for iOS }~.
+For example, in order to connect the Stingray editor to an instance of the engine that is running on an iOS device, you need to copy the iOS version of the engine over to the device and launch it. In this case, you'd almost always want to use the `development` configuration of the engine. See also ~{ Get started on iOS }~.
