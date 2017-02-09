@@ -35,8 +35,9 @@ See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse,
 
 ## Improved Capture Frames Tool
 <a name="capture-frames"></a>
+![](../images/capture_frames_rn.png)
 
-The **Capture Frames** Tool is now integrated into the **Story Editor** workflow, and can also be initiated through Flow. New options in the **Capture Frames** window let you select from all available cameras, and set a specific resolution to capture. In the **Story Editor**, create a story and then click ![Capture Frames](../images/icon_capture_frame.png) to open the **Capture Frames** window. Modify the capture settings and click **Capture Frames** to start capturing the active Story. For details, see ~{ Capture Frames Tool }~.
+The **Capture Frames** Tool is now a standalone tool connected to the **Story Editor**. Simply create a story and click ![Capture Frames](../images/icon_capture_frame.png) to adjust your **Caputre Settings**. New settings include support for different cameras and resolutions, and options to save and reuse your settings. Capturing can also be initiated through new Capture Flow Nodes. For details, see ~{ Capture Frames Tool }~.
 
 
 ## Better texture import with automatic compression
@@ -149,8 +150,8 @@ The PhysX plug-in installers for Maya 2017 and Maya LT 2017 that ship with Sting
 - The light baker is now more stable and has been optimized to run faster on most scenes and hardware. See ~{ Baking with the Stingray baker }~.
 - You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See ~{ Bake lightmaps }~.
 - Click **Clear** in the **Light Baking** window to quickly delete and unmap all lightmaps on disk.
-- You can now start the Stingray engine application from a command-line prompt, and provide parameters on the command line to trigger lightmap baking. For details, see ~{ Trigger lightmap baking from the command line }~.
--	Beast is now deprecated. Use the Stingray light baker instead.
+- You can now start a standalone baking session using a command-line prompt. For details, see ~{ Trigger lightmap baking from the command line }~.
+-	Beast is now deprecated.
 
 ### Tessellation support
 
