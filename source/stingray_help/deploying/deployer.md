@@ -8,7 +8,7 @@ You can use the **Deployer** panel to create final, standalone packages of your 
 
 Basic usage is the same across all target platforms:
 
-1.	Ensure that you have set up any pre-requisites required for your target platform. See the page for your target platform under ~{ Supported platforms }~.
+1.	Ensure that you have set up any prerequisites required for your target platform. See the page for your target platform under ~{ Supported platforms }~.
 
 2.	You provide the settings requested by the **Deployer** panel.
 

@@ -1,6 +1,6 @@
 # Get started on Android
 
-This page tells you everything you need to know in order to get started developing projects for Android. You'll need an Android device to follow along with.
+This page tells you everything you need to know in order to get started developing projects for Android. You'll need an Android device to follow along.
 
 ## Step 1. Check the supported devices
 
@@ -47,7 +47,7 @@ When you deploy a project to a standalone *.apk* application, Stingray needs to 
 
 Look for the default keystore at this location: `C:\Users\<username>\.android\debug.keystore`.
 
-If the `debug.keystore` file is not present on your system, you will have to create it manually. Run the following command at a command prompt:
+If the `debug.keystore` file is not present on your system, run the following command at a command prompt to create it manually:
 
 ~~~{nohighlight}
 > "%JAVA_HOME%\bin\keytool.exe" -genkey -v -keystore "%USERPROFILE%/.android/debug.keystore" -storepass android -alias androiddebugkey -keypass android -dname "CN=Android Debug,O=Android,C=US" -validity 10000 -keyalg RSA
@@ -65,7 +65,7 @@ For details, check your device manufacturer's documentation or support site, or 
 
 ### Restart
 
-After installing the pre-requisites and setting the environment variables listed above, restart your computer.
+After installing the prerequisites and setting the environment variables listed above, restart your computer.
 
 ## Step 3. Connect the editor to the device
 
@@ -85,7 +85,7 @@ For more background information, see ~{ Connect to a remote device }~.
 
 	![Developer options](../images/android_usb_debugging.png) ![Developer options](../images/android_usb_debugging_02.jpg)
 
-	If you do not see the **Developer options** on your device, you may need to enable them. Find the Android **Build number** in the device's settings, and tap the build number seven times.
+	If you don't see the **Developer options** on your device, you may need to enable them. Find the Android **Build number** in the device's settings, and tap the build number seven times.
 
 1.	In the Stingray Editor, use the **Connections** panel (**Windows > Deploy and Connect > Connections**) to set up a connection to the Android device:
 
@@ -93,7 +93,7 @@ For more background information, see ~{ Connect to a remote device }~.
 
 	For details, see ~{ Using the Connections panel }~.
 
-	>	**Note:** In the *Address* field of the **Connections** panel, you must enter the IP address of your An device. You should be able to find this in your device's settings.
+	>	**Note:** In the *Address* field of the **Connections** panel, you must enter the IP address of your Android device. You can find this in your device's settings.
 
 When you connect to the device or run the project, the editor automatically installs the engine on the device over the USB connection, runs the engine on the device, then sends your project data to the engine.
 
@@ -145,16 +145,16 @@ These settings are common for all tabs. See ~{ Using the Deployer panel }~.
 <dd>The application version, in two-part notation.</dd>
 
 <dt>Android flavor</dt>
-<dd>Select from either the regular, Gear VR, or Google VR enabled Android engine.</dd>
+<dd>There are three different builds of the Stingray engine for Android: a regular build, a build that plays content on Gear VR devices, and a build that plays content on Google VR devices. Use this control to choose which of these engine flavors are included in your package.</dd>
 </dl>
 
 ### Icons settings
 
-Browse to select your game icon in PNG format. It can be any size, but we recommend a maximum of 512x512 pixels.
+Browse to select your game icon in PNG format. It can be any size, but we recommend a maximum of 512x512 pixels. If you leave this empty, the **Deployer** uses the default icon for Autodesk Stingray.
 
 ### Keystore Signing settings
 
-Keystore signing is required in order to test the generated *.apk* file on a device or publish it on the store. If you do not enable the **Keystore Signing** section, the editor automatically uses the `debug.keystore` that is installed at the same time as the Android SDK at `%USERPROFILE%/.android/debug.keystore`.
+Keystore signing is required in order to test the generated *.apk* file on a device or publish it on the store. If you don't enable the **Keystore Signing** section, the editor automatically uses the `debug.keystore` that is installed at the same time as the Android SDK at `%USERPROFILE%/.android/debug.keystore`.
 
 <dl>
 <dt>File</dt>

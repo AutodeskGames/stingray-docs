@@ -1,6 +1,6 @@
 # Connect to a remote device
 
-If you plan to release your game on one or more non-Windows platforms, such as iOS devices, Android devices, or dedicated gaming consoles, you will frequently need to test out your project on those targets. For example, you will need to check the way your assets and levels are rendered, and to check that your gameplay is working as expected. However, it would be time-consuming to deploy a full standalone version of your game to the device or console each time you want to test a change.
+If you plan to release your game on one or more non-Windows platforms, such as iOS devices, Android devices, or dedicated gaming consoles, you'll want to test out your project on those targets frequently. For example, you'll need to check the way your assets and levels are rendered, and to check that your gameplay is working as expected. However, it would be time-consuming to deploy a full standalone version of your game to the device or console each time you want to test a change.
 
 Stingray offers two different lightweight mechanisms for testing your content on your target devices without needing to go through the full cycle of building and deploying the game. In both of these scenarios, the Stingray engine is installed by itself on the target device, and the Stingray Editor sends your project data over the network or USB connection to the device.
 

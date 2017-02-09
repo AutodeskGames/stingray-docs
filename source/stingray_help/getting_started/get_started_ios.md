@@ -1,6 +1,6 @@
 # Get started on iOS
 
-This page tells you everything you need to know in order to get started developing projects for iOS. You'll need an iPhone or iPad to follow along with.
+This page tells you everything you need to know in order to get started developing projects for iOS. You'll need an iPhone or iPad to follow along.
 
 ## Step 1. Check the supported devices
 
@@ -42,12 +42,12 @@ You will need to install and run the server application on a Mac. For system req
 	> **Note:** If you're not using an Enterprise provision profile (which lets you install on any device), make sure that you have added the devices you plan to use for testing to this provision profile. If you used Xcode to develop on this device previously, it is automatically added.</dd>
 
 	<dt>Entitlements</dt>
-	<dd>*[Optional]* You can set the entitlements file, if desired. If not, it will be automatically generated. You can generally leave this setting blank.</dd>
+	<dd>*[Optional]* You can set the entitlements file, if desired. If you don't, it is generated automatically. You can generally leave this setting blank.</dd>
 	</dl>
 
 5.	Start the server by pressing the play button. (At any time, press the stop button to stop the server.)
 
-	When the server starts, you'll see the IP address that you will need to enter in order to generate the IPA for the Stingray engine, and in order to package your game for iOS.
+	When the server starts, you'll see the IP address that you need to enter in order to generate the IPA for the Stingray engine, and in order to package your game for iOS (see the sections below).
 
 	You will also see a list of all requests coming in from Stingray Editor applications running on your network:
 
@@ -57,7 +57,7 @@ You will need to install and run the server application on a Mac. For system req
 
 ### Generate IPA files for the Stingray engine
 
-Stingray does not ship with signed versions of the engine runtime ready to use on iOS. You need to generate *.ipa* files for the engine using your own signing certificate.
+Stingray doesn't ship with signed versions of the engine runtime ready to use on iOS. You need to generate *.ipa* files for the engine using your own signing certificate.
 
 To generate the engine *.ipa* files:
 
@@ -73,7 +73,7 @@ To generate the engine *.ipa* files:
 
 	The file is created and saved in your Windows user directory, typically under `AppData\Local\Autodesk\Stingray\engine\ios\<configuration>`.
 
-Once the *.ipa* file for the engine is available, the **Deployer** panel is updated to show all of the options you can set when you deploy a full standalone build of your game. See [Deploy the project for iOS] below.
+Once the *.ipa* file for the engine is available, the **Deployer** panel shows all of the options you can set when you deploy a full standalone build of your game. See [Deploy the project for iOS] below.
 
 ## Step 3. Connect the editor to the device
 
@@ -93,15 +93,15 @@ For more background information, see ~{ Connect to a remote device }~.
 
 	a)	Add the Stingray engine to your iTunes app library. You can either drag and drop it to the **My Apps** area, or select **Add File to Library...** from the main menu.
 
-	b)	Sync your device. The engine app should be copied over to the device.
+	b)	Sync your device. iTunes copies the engine app over to the device.
 
-	Always use the **development** version of the engine for this step. The editor will not be able to connect to the **release** version.
+	Always use the **development** version of the engine for this step. The editor can't connect to the **release** version.
 
 1.	Start the engine on the device.
 
 	**NOTE:** The first time you run the Stingray engine on your iOS device, you will probably need to configure iOS to *trust* it. For details, see [this page](https://support.apple.com/en-us/HT204460) from Apple about how to trust a new app developer in your iOS settings.
 
-	Once the app has started, it will wait for an incoming connection from the Stingray Editor, showing the following information:
+	When the app starts up, it shows the following information while it waits for an incoming connection from the Stingray Editor:
 
 	![](../images/connecting-ip.png)
 

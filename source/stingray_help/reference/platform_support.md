@@ -2,7 +2,7 @@
 
 ![UPDATED](../images/updated.png)
 
-Anyone can use Stingray to create projects that run on Windows PC, iOS and Android. If you are licensed by Sony as a PlayStation 4 developer, or by Microsoft as an Xbox One developer, you can also create projects for these consoles.
+Anyone can use Stingray to create projects that run on Windows PC, iOS, and Android. If you're licensed by Sony as a PlayStation 4 developer, or by Microsoft as an Xbox One developer, you can also create projects for these consoles.
 
 This page describes the models of mobile and VR devices that Stingray supports.
 

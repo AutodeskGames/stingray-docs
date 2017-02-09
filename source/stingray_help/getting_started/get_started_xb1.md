@@ -1,6 +1,6 @@
 # Get started on Xbox One
 
-This page tells you everything you need to know in order to get started developing projects for Xbox One. You'll need to be a registered Xbox One developer with Microsoft already, and you'll need an Xbox One in developer mode to follow along with.
+This page tells you everything you need to know in order to get started developing projects for Xbox One. You'll need to be a registered Xbox One developer with Microsoft already, and you'll need an Xbox One in developer mode to follow along.
 
 ## Step 1. First-time setup
 
@@ -14,7 +14,7 @@ Registered Xbox One developers can download the distribution from the Autodesk G
 
 If you need to register for an account, or if you need to add Xbox One access rights to your account, you can do so through the site.
 
-Once you have the distribution *.zip* file on your computer, unzip it into your Stingray installation folder. The contents of its `engine` folder should be merged into the `engine` folder that is already present in your installation folder.
+Once you have the distribution *.zip* file on your computer, unzip it into your Stingray installation folder. Make sure that the contents of its `engine` folder are merged into the `engine` folder that is already present in your installation folder.
 
 ### Install the Xbox One platform SDK
 

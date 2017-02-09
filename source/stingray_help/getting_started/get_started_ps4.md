@@ -1,6 +1,6 @@
 # Get started on PlayStation 4
 
-This page tells you everything you need to know in order to get started developing projects for PlayStation 4. You'll need to be a registered PlayStation 4 developer with Sony already, and you'll need a devkit to follow along with.
+This page tells you everything you need to know in order to get started developing projects for PlayStation 4. You'll need to be a registered PlayStation 4 developer with Sony already, and you'll need a devkit to follow along.
 
 ## Step 1. First-time setup
 
@@ -14,11 +14,11 @@ Registered PlayStation 4 developers can download the distribution from the Autod
 
 If you need to register for an account, or if you need to add PlayStation 4 access rights to your existing account, you can do so through the site.
 
-Once you have the distribution *.zip* file on your computer, unzip it into your Stingray installation folder. The contents of its `engine` folder should be merged into the `engine` folder that is already present in your installation folder.
+Once you have the distribution *.zip* file on your computer, unzip it into your Stingray installation folder. Make sure that the contents of its `engine` folder are merged into the `engine` folder that is already present in your installation folder.
 
 ### Install the PlayStation 4 platform SDK
 
-If you want to connect your Windows development machine to your PlayStation 4 for mirroring or running your project, you will need to install the PlayStation 4 platform SDK.
+If you want to connect your Windows development machine to your PlayStation 4 for mirroring or running your project, you need to install the PlayStation 4 platform SDK.
 
 You need **version SR_DOC_PS4_SDK_VERSION**. Other versions may or may not be compatible.
 
