@@ -23,7 +23,7 @@ Use any of the following methods:
 -	From the main menu, select **Edit > Level Testing > Run Project**.
 -	Click the ![Run](../images/icon_playGame.png) icon next in the Level Viewport panel or the Connections panel.
 
-See also ~{ Connecting to a remote device }~.
+See also ~{ Connect to a remote device }~.
 
 ## ![Link](../images/icon_linkConsole.png) Mirroring the viewport to a remote device
 
@@ -31,7 +31,7 @@ You can run the Stingray engine by itself on a console or mobile platform, and c
 
 In effect, this mode is not really a playtest, since you are not running your gameplay code on the target platform. However, you can see the way your assets and materials will look on the various targets. This is a convenient way to compare the look of your game on multiple platforms at the same time.
 
-See also ~{ Connecting to a remote device }~.
+See also ~{ Connect to a remote device }~.
 
 ## Deploy and Launch
 

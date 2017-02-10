@@ -35,8 +35,9 @@ See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse,
 
 ## Improved Capture Frames Tool
 <a name="capture-frames"></a>
+![](../images/capture_frames_rn.png)
 
-The **Capture Frames** Tool is now integrated into the **Story Editor** workflow, and can also be initiated through Flow. New options in the **Capture Frames** window let you select from all available cameras, and set a specific resolution to capture. In the **Story Editor**, create a story and then click ![Capture Frames](../images/icon_capture_frame.png) to open the **Capture Frames** window. Modify the capture settings and click **Capture Frames** to start capturing the active Story. For details, see ~{ Capture Frames Tool }~.
+The **Capture Frames** Tool is now a standalone tool connected to the **Story Editor**. Simply create a story and click ![Capture Frames](../images/icon_capture_frame.png) to adjust your **Caputre Settings**. New settings include support for different cameras and resolutions, and options to save and reuse your settings. Capturing can also be initiated through new Capture Flow Nodes. For details, see ~{ Capture Frames Tool }~.
 
 
 ## Better texture import with automatic compression
@@ -77,6 +78,7 @@ See ~{ Import fonts }~.
 
 -	Copy keyframes and paste them on the current time in the timeline or on the cursor position using either the hotkeys or by right click context menu in the **Story Editor**. You can also copy keys from multiple tracks and paste them on other tracks based on the order of track selection. Updated topics include ~{ Create simple animations with the Story Editor }~ and ~{ Story Editor hotkeys }~.
 -	New reverse play icon ![](../images/icon_story_reversePlay.png) to play stories in reverse direction.
+-	Stories now stop playing at the end of the playback range in *None* playback mode. See ~{ Story Editor }~.
 - A Capture Frame Tool icon ![](../images/icon_capture_frame.png) to access Capture Frame Settings; a story must be created to enable this mode. See [Improved Capture Frames Tool](#capture-frames).
 
 ## Trim animation clips
@@ -123,6 +125,10 @@ New Flow nodes include:
 
   > For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
 
+## More granular asset overrides
+
+If your project contains a folder whose name matches another folder already mounted by the engine or by another plug-in, such as the `core` folder, the project now merges the contents of your project's folder on top of the existing folder. This makes it easier to override selected core resources, such as Appkit script files, without having to copy the entire core folder into your project.
+
 ## What's new in Interop?
 
 ### Level Sync updates
@@ -144,18 +150,18 @@ The PhysX plug-in installers for Maya 2017 and Maya LT 2017 that ship with Sting
 - The light baker is now more stable and has been optimized to run faster on most scenes and hardware. See ~{ Baking with the Stingray baker }~.
 - You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See ~{ Bake lightmaps }~.
 - Click **Clear** in the **Light Baking** window to quickly delete and unmap all lightmaps on disk.
-- You can now start the Stingray engine application from a command-line prompt, and provide parameters on the command line to trigger lightmap baking. For details, see ~{ Trigger lightmap baking from the command line }~.
--	Beast is now deprecated. Use the Stingray light baker instead.
+- You can now start a standalone baking session using a command-line prompt. For details, see ~{ Trigger lightmap baking from the command line }~.
+-	Beast is now deprecated.
 
-## Tessellation support
+### Tessellation support
 
 Tessellation can now be activated using the standard base material node. Use the **Tesselation Factor** input on the base node to control the tesselation factor of your surface. A lower value results in a less tessellation. See ~{ Create a tessellation material }~.
 
-## Negative scale support
+### Negative scale support
 
 Stingray shaders now support negative scale.
 
-##Texture Manager updates
+### Texture Manager updates
 
 - New **Cubemap** and **HDRI/Skydome** category filters
 -	New texture template for imported skydome images
@@ -373,6 +379,26 @@ For new projects created with Stingray 1.7 templates, no extra action is require
 3. In Wwise, press F7 to switch to the Soundbank layout, then click **Regenerate sound banks**.
 
 (See also ~{ Generate sound banks }~.)
+
+### Auto-loading removed from templates
+
+In previous releases, the *boot.package* file in the template projects used a `* = [*]` wildcard pattern to match all types of resources in the project. This made sure that all content you put in a project (and all content in the core resources) would always be compiled, bundled, and loaded into the project at runtime, no matter where in the project that content was located. The downside was that as a project grew, it sometimes led to crashes when the engine tried to load more resources than it could fit in the available memory -- especially on mobile platforms.
+
+We've now modified the *boot.package* in the template projects to disable this all-inclusive wildcard.
+
+-	This change affects any new projects you create from a template in 1.7.
+
+-	If you create a project from one of the newer templates and you see errors about missing resources when you run your project, the cause is likely due to your resource not being included in the *boot.package* file.
+
+-	This change *doesn't* affect any projects that you've already created in previous versions of Stingray. They'll still work the same way they do now.
+
+-	Each template project is set up to load all of the default resources it needs.
+
+-	When you add new content of your own, check that your content will be picked up by the resource specifications in the *boot.package*. The template boot packages load all levels that are saved under *content/levels*, so as long as you save your own levels there, those levels and all the resources they depend on will be bundled correctly. However, be careful about any content that you spawn dynamically in Lua.
+
+-	You can go back to the old auto-loading method by removing the two slashes `//` at the start of the line `//* = [*]` at the top of the *boot.package* file in any template project.
+
+For more background information, see ~{ Loading and unloading content at runtime }~ and ~{ Defining resource packages }~.
 
 ### Lua API changes
 

@@ -69,9 +69,9 @@ SimpleProject.extension_project = MyOtherLuaObject
 
 ## Overriding the SimpleProject
 
-If you want to customize the behavior of the SimpleProject beyond what it permits through its configuration parameters and extension functions, you can re-define any of the SimpleProject functions in your own code.
+If you want to customize the behavior of the SimpleProject beyond what it permits through its configuration parameters and extension functions, you can redefine any of the SimpleProject functions in your own code.
 
-For example, the default update function for the SimpleProject updates the Appkit first in every frame, which also updates the Stingray game world and advances the physics simulation. It calls your project's `update()` function afterward. Say that you want to break this update loop into separate pre-update and post-update functions that do separate things before and after each game world update. You can re-define the `SimpleProject.update()` function in your `project.lua` file as follows:
+For example, the default update function for the SimpleProject updates the Appkit first in every frame, which also updates the Stingray game world and advances the physics simulation. It calls your project's `update()` function afterward. Say that you want to break this update loop into separate pre-update and post-update functions that do separate things before and after each game world update. You can redefine the `SimpleProject.update()` function in your `project.lua` file as follows:
 
 ~~~{lua}
 function SimpleProject.update(dt)
@@ -95,7 +95,7 @@ function SimpleProject.update(dt)
 end
 ~~~
 
-Note that when you re-define an existing function in this way, the old implementation is lost.
+Note that when you redefine an existing function in this way, the old implementation is lost.
 
 Another way you could handle this is to cache the existing function implementation under another name, and call it from your new code. For example:
 

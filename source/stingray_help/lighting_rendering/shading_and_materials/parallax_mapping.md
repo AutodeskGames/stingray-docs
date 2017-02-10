@@ -18,34 +18,34 @@ Parallax mapping in Stingray is quite easy to set up using the Parallax node in 
 
 To begin, you want to drive the parallax and height map from the texture coordinate.
 
-![](../../images/parallax_requirements.png)
+![](../../images/parallax_requirements.PNG)
 
 Next, add some basic controls by adding scalar material variables.
 
-![](../../images/parallax_controls.png)
+![](../../images/parallax_controls.PNG)
 
 Now that the Parallax node is properly fed, add Sample Textures (Texture Maps) with the Parallax adjusted texture coordinates.
 
-![](../../images/Parallax_Textures.png)
+![](../../images/Parallax_Textures.PNG)
 
 Lastly we add in the Standard Base and attach everything up.
 
-![](../../images/ParallaxBasic.png)
+![](../../images/ParallaxBasic.PNG)
 
 ## Adding more flexibility and accuracy to the shader
 
 In order to ensure your red channel is equal to your green and blue channel, add a desaturation node with an Amount of 1 and a luminosity of .5 .5 .5.
 
-![](../../images/Parallax_Desaturate.png)
+![](../../images/Parallax_Desaturate.PNG)
 
 Then add a multiplier to the height map with a scalar adjustment. This lets you drive the height map with greater or lesser contrast for additional control over the parallax inputs.
 
-![](../../images/Parallax_Multiply.png)
+![](../../images/Parallax_Multiply.PNG)
 
 In final form, this is how your shader should look.
 
-![](../../images/parallax_shader.png)
+![](../../images/parallax_shader.PNG)
 
 In use, the shader should have controls and output like the following image.  Note the properties window where you now have inputs for the separate textures (BaseColor, Normal, RMA, and Height) and adjustment controls for Height, P Scale, and P Bias.
 
-![](../../images/Parallax_Properties.png)
+![](../../images/Parallax_Properties.PNG)

@@ -76,6 +76,7 @@
 		<contextId include="*\project_manager.html" id="tools_project_manager"></contextId>
 		<contextId include="*\system_requirements.html" id="system_requirements"></contextId>
 		<contextId include="*\object_lifetimes.html" id="lua_userdata_binding"></contextId>
+		<contextId include="*\get_started_android.html" id="get_started_android"></contextId>
 		<!-- context IDs used by directed learning. -->
 		<contextId include="*\snap_objects.html" id="snap_objects"></contextId>
 		<contextId include="*\about_units_and_entities.html" id="units_and_entities"></contextId>
@@ -114,7 +115,7 @@
 		<source convert_from="markdown"
 			get_metadata="true"
 			github_root_public="https://www.github.com/AutodeskGames/stingray-docs/tree/master/source/stingray_help"
-			github_root_internal="https://git.autodesk.com/gameware/stingray-docs/tree/master/source/stingray_help"
+			github_root_internal="https://git.autodesk.com/gameware/stingray-docs/tree/release/1.7.0/source/stingray_help"
 			>..\source\stingray_help\*.md</source>
 		<source>..\source\stingray_help\*.png</source>
 		<source>..\source\stingray_help\*.jp*g</source>

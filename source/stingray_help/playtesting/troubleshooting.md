@@ -8,9 +8,9 @@ For strategies you can use to get a better idea of what's going on in a running 
 
 If your game crashes without sending any errors to the ~{ Log Console }~, you are probably running out of memory on your target platform. This is particularly likely if the crashes occur when running on iOS or Android, but not when testing on a Windows PC.
 
-If the crash occurs at startup, the cause is usually that the game's boot package is attempting to load too many resources into memory. This sometimes happens with the Stingray template projects, since the default boot package loads all resources in the project into memory.
+If the crash occurs at startup, the cause is usually that the boot package is attempting to load too many resources into memory. This is likely to happen eventually if your boot package uses wildcards to load in all resources of certain types.
 
-For help, see the list of techniques under ~{ Optimize memory usage }~.
+For help, see the list of techniques under ~{ Optimize memory usage }~, and consider setting up multiple resource packages that your project can load and unload dynamically. See ~{ Loading and unloading packages }~.
 
 ## Fatal error when testing levels
 
