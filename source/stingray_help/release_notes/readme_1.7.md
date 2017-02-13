@@ -425,6 +425,8 @@ A summary of the most important changes:
 
 -	`Application.quit()` now accepts an optional exit value, which the application will return to the operating system when it shuts down.
 
+-	The setting names accepted by `Unit.set_animation_bone_mode()` and returned by `Unit.animation_bone_mode()` have been renamed to begin with `delta_`, like the ones accepted and returned by `Unit.set_animation_root_mode()` and `Unit.animation_root_mode()`.
+
 ### Flow node changes
 
 This version includes new nodes for controlling frame capture, triggering Level Flow events, getting more properties from lights and units, exchanging meshes and materials as external input and output variables, and more.
