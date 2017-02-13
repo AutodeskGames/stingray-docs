@@ -240,6 +240,6 @@ Property    |Type                    |Default|Description
 
 ---
 Related topics:
--	~{ Built-In Types Reference }~
--	~{ Built-In Properties Reference }~
+-	~{ Built-in types reference }~
+-	~{ Built-in metadata properties }~
 ---

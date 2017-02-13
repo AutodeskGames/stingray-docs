@@ -8,9 +8,9 @@ This section provides some tips on getting started extending the engine with you
 
 -	The most important resource for working on engine plug-ins is the repository of example plug-ins. If you don't already have these examples, see ~{ Example Plug-ins }~.
 
-	Start by looking at the `engine_plugins/simple_plugin` example. It's a very minimal plug-in that shows the basic skeleton of an interaction between the engine and a plug-in, like the one described in the following sections.
+	Start by looking at the `samples/simple_plugin` example. It's a very minimal plug-in that shows the basic skeleton of an interaction between the engine and a plug-in, like the one described in the following sections.
 
-	Then move on to the `engine_plugins/bigger_plugin`, which shows how you can create a new resource type, define how that resource gets compiled into runtime data, and set up Lua functions for the project to access the data in that resource at runtime.
+	Then move on to the `samples/bigger_plugin`, which shows how you can create a new resource type, define how that resource gets compiled into runtime data, and set up Lua functions for the project to access the data in that resource at runtime.
 
 -	You'll need the SDK header files. You can find them under `stingray_sdk` in the example repository, or under `plugin_sdk` in your Stingray installation folder.
 

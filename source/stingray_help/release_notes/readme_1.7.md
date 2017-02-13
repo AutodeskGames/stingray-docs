@@ -128,6 +128,12 @@ New Flow nodes include:
 
 If your project contains a folder whose name matches another folder already mounted by the engine or by another plug-in, such as the `core` folder, the project now merges the contents of your project's folder on top of the existing folder. This makes it easier to override selected core resources, such as Appkit script files, without having to copy the entire core folder into your project.
 
+## What's new in the SDK?
+
+-	Plug-ins can now provide template projects, which are listed on the **Templates** tab of the ~{ Project Manager }~, just like the template projects that ship with Stingray. See [the help for the templates extension](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_extend_editor_plugin_extensions_templates_html).
+
+-	We've made some fixes and improvements in the hot-reloading system for engine plug-ins. If you had trouble getting hot reloading to work in the past, try [the new instructions](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_reload_html).
+
 ## What's new in Interop?
 
 ### Level Sync updates
