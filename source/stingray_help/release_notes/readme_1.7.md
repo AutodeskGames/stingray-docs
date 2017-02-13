@@ -86,7 +86,7 @@ You can now edit the length of animation clips by trimming in the Anim Clip Edit
 
 ## Visual mesh raycasting
 
-Stingray 1.7 provides new functionality that lets you check for intersections with visual meshes within a specified Unit. You can use this mesh pick raycast to get visual mesh information from a surface, such as which material within a mesh gets hit. (If you don't actually need that level of information, use the standard phyiscs raycast instead.) 
+Stingray 1.7 provides new functionality that lets you check for intersections with visual meshes within a specified Unit. You can use this mesh pick raycast to get visual mesh information from a surface, such as which material within a mesh gets hit. (If you don't actually need that level of information, use the standard phyiscs raycast instead.)
 
 For complete documentation, refer to the Lua documentation `stingray.Unit.mesh_pick_raycast()` and the [Flow node documentation](../../flow_ref/index.html) (**Unit > Mesh Pick Raycast**).
 
@@ -432,6 +432,8 @@ For a complete list of all new, modified, and removed Flow nodes in this release
 -	The **Output > Standard Base** node now accepts inputs to control tessellation and world space displacement, and a new option that enables and disables hardware tessellation.
 
 -	In addition, you can use a new **Sampling > Domain Sample Texture** node in order to read input data from a texture when that data is needed in the *domain* stage of the shader -- for example, when providing values for the new tessellation factor and displacement inputs.
+
+- Values entered for **Sprite Columns** and **Sprite Rows** in the **Utility > Flipbook** node are now output correctly on the sprite sheet.
 
 For a complete list of all new, modified, and removed shader nodes in this release, see the [version history](../../shader_ref/versions.html).
 
