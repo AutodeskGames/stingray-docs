@@ -33,6 +33,8 @@ Sections in this topic:
 
 See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse, find and import assets directly from online to your project. Right-click an online asset and select **Download Asset** to download and install the asset package to a category specific folder in the project. Updated topic include: ~{ Download assets and example projects }~.
 
+![](../images/online_assets_rn.png)
+
 ## Improved Capture Frames Tool
 <a name="capture-frames"></a>
 ![](../images/capture_frames_rn.png)
@@ -86,7 +88,7 @@ You can now edit the length of animation clips by trimming in the Anim Clip Edit
 
 ## Visual mesh raycasting
 
-Stingray 1.7 provides new functionality that lets you check for intersections with visual meshes within a specified Unit. You can use this mesh pick raycast to get visual mesh information from a surface, such as which material within a mesh gets hit. (If you don't actually need that level of information, use the standard phyiscs raycast instead.)
+Stingray 1.7 provides new functionality that lets you check for intersections with visual meshes within a specified Unit. You can use this mesh pick raycast to get visual mesh information from a surface, such as which material within a mesh gets hit. (If you don't actually need that level of information, use the standard physics raycast instead.)
 
 For complete documentation, refer to the Lua documentation `stingray.Unit.mesh_pick_raycast()` and the [Flow node documentation](../../flow_ref/index.html) (**Unit > Mesh Pick Raycast**).
 
