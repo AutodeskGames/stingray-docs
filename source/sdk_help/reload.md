@@ -20,17 +20,54 @@ If you're currently testing your level or running your project, just refreshing 
 
 ## Reload an engine plug-in
 
-While the engine is running, the *.dll* files that it has loaded are locked and read-only. You can't replace or delete the files with newer versions. However, you can give the engine a folder that you want it to scan for newer versions of its installed plug-ins.
+The engine can automatically hot-reload updated versions of *.dll* plug-ins. When the engine detects a newer version of a plug-in that it has already loaded, *and* that plug-in implements the hot-reload functions in the `PluginApi`, the engine will automatically unload the old version of the *.dll* and load in the new version.
 
-Call the `stingray.Application.set_plugin_hot_reload_directory()` function, and pass it the absolute path to the folder on your computer.
+Follow all the steps below to set up your plug-in and your build process to be compatible with hot reloading.
 
-If the engine finds a newer version of a *.dll* file in one of these hot reload folders that matches a plug-in currently loaded in the engine, it copies the *.dll* from the hot reload folder into its plugins folder to overwrite the older version. Typically, you would set the hot reload folder to whatever folder you compile your plug-in binaries to. That way, any time you rebuild in Visual Studio, your plug-in will automatically be refreshed in the engine.
+### Step 1. Implement the hot reload interface in your plug-in
 
-You could include this Lua call in your project's Lua scripts or in a content plug-in. However, since the path is usually dependent on a particular machine's filesystem and usually only needed during development while you're testing out your plug-in, you will probably find it more convenient to just run the function from the editor's **Status Bar** when you need to enable hot reloads for a given project. For details, see [this page](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_playtesting_send_commands_statusline_html).
+When the engine loads the updated version of your plug-in, it always starts with a clean slate. Anything that was computed or stored by the old version of the plug-in is lost during the reload process. However, in many cases, plug-ins rely on stored data that they can't simply recompute after the reload -- like the current state of the plug-in, or records of the units they have spawned in the game world.
 
-**Note:** You may need to do some extra work in your plug-in code to support hot reloading, if your plug-in needs to retain any state information after it is reloaded. The best way to make your plug-in handle hot reloading smoothly is to keep *all* of the state information required by your code in a single binary blob. Then, you can implement the `PluginApi::start_reload` and `PluginApi::finish_reload` functions in your plug-in to temporarily cache the blob of state data before the reload starts, and resume from that cached data after the new code has been loaded.
+Therefore, the engine offers an interface that plug-ins can use to cache this kind of state information, preserving it when the plug-in is unloaded and passing it along to the updated version of the plug-in after the reload.
 
-Also, as always, make sure that your plug-in shuts down cleanly and frees any memory that it allocates over its lifetime.
+The `PluginApi` defines two functions that your plug-in must implement:
+
+-	`PluginApi::start_reload()`: The engine calls this function immediately before unloading the current version of your plug-in. It is expected to return a pointer to a single block of memory that contains whatever state information needs to be preserved. It is up to you to allocate this block and pack it with whatever data you need in order for your plug-in to resume where it left off.
+
+	If your plug-in does not need to maintain any state information -- for example, if it simply exposes some new self-contained functions to Lua or implements some Flow nodes -- you can simply return `NULL` from `start_reload()`.
+
+-	`PluginApi::finish_reload()`: The engine calls this function immediately after loading the updated version of your plug-in. It receives the pointer returned by `start_reload`, so that it can unpack the memory block and re-initialize its state based on the contents stored by `start_reload`. It will typically then de-allocate the block, since it will not be needed until the next reload.
+
+	In addition, note that the engine passes this function the `get_engine_api` function so that your plug-in can re-acquire any engine APIs that it needs. If your plug-in saves pointers to engine APIs in its `setup_game()` function, as is done in the sample plug-ins, you will want to move those initializations to a separate function (called, say, `init_apis()`), and then invoke that function from both `setup_game()` and `finish_reload()`.
+
+### Step 2. Build to a hot reload directory
+
+You need to configure your plug-in build process so that your compiled *.dll* file is placed in a folder that the engine scans for updated plug-ins.
+
+By default, the engine scans only the `plugins` sub-folder under the location of its executable file.
+
+You can scan additional folders in either of two ways:
+
+-	From Lua, by calling `stingray.PluginManager.add_hot_reload_directory()`. You could include this Lua call in your project's Lua scripts or in a content plug-in. However, since the path is usually dependent on a particular machine's filesystem and usually only needed during development while you're testing out your plug-in, you will probably find it more convenient to just run the function from the editor's **Status Bar** when you need to enable hot reloads for a given project. For details, see [this page](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_playtesting_send_commands_statusline_html).
+
+-	By passing the `--plugin-dir <folder_name>` parameter on the command line when you start the engine. If you're testing your project by launching it from the editor, you can configure this command line in the **Connections** panel. For details, see [this page](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_playtesting_connecting_to_remote_connections_html). This command line will be used any time you use Run Project to launch your project. The command line used when you Test Level is not currently configurable.
+
+### Step 3. Configure pre-build steps
+
+While the engine has a *.dll* file loaded, that file is locked. It cannot be removed or overwritten. This means that compiling or copying your plug-in *.dll* into your hot reload directory will fail if an earlier version of that plug-in is already present.
+
+However, a loaded *.dll* file *can* be renamed. So, you can make the reloading process smooth by setting up pre-build steps for your plug-in to move the existing *.dll* file (and its *.pdb* file, if present) out of the way before adding the new one.
+
+For example:
+
+~~~{nohighlight}
+del *.old
+rename ${plugin}.dll ${plugin}.dll.old
+rename ${plugin}.pdb ${plugin}.${timestamp}.pdb.old
+del *.old
+~~~
+
+Note that the Visual Studio debugger keeps all its *.pdb* files locked until you shut it down. If you have the debugger connected to the engine when you reload your plug-in, you cannot remove or overwrite any *.pdb* files that are still in use. Therefore, when you rename them in the pre-build step so that your build can create the new *.pdb* file, use a timestamp to make sure that you rename the old file to something unique.
 
 ## Hot reload limitations
 

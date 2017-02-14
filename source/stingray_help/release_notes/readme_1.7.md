@@ -29,7 +29,9 @@ Sections in this topic:
 
 * * *
 
-## What's new in VR: Google Daydream support, plus new VR templates
+## What's new in VR
+
+### Google Daydream support, plus new VR templates
 
 - Support for Gear VR, Google Daydream Android devices, plus Google Cardboard (iOS and Android)
 - New VR project templates to support rendering on those devices
@@ -47,6 +49,8 @@ Use these templates to start building your VR projects for Google Daydream devic
 
 See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse, find and import assets directly from online to your project. Right-click an online asset and select **Download Asset** to download and install the asset package to a category specific folder in the project. Updated topic include: ~{ Download assets and example projects }~.
 
+![](../images/online_assets_rn.png)
+
 ## Improved Capture Frames Tool
 <a name="capture-frames"></a>
 ![](../images/capture_frames_rn.png)
@@ -60,6 +64,8 @@ Textures are now automatically compressed when you import them in Stingray. Depe
 ## Particle Editor
 
 In previous versions of Stingray, you created and edited particle effects using the **Asset Browser**, **Property Editor**, and **Asset Preview**. With Stingray 1.7, we're pleased to give you a standalone **Particle Editor** that streamlines the workflow for particle artists. Select **Window > Particle Editor** from the main menu, or double-click an existing particle effect in the **Asset Browser** to launch the new tool.
+
+![](../gifs/wn_particle_editor.gif)
 
 ## Better network workflows: Run multiple local game instances
 
@@ -140,7 +146,13 @@ Stingray 1.7 integrates Wwise version 2016.1.3, which includes various new featu
 
 If you have an existing project built in previous versions of Stingray, the sound banks are automatically regenerated when you load/migrate the project into Stingray 1.7. Depending on how much audio your project has, please note that the regeneration process can take a long time.
 
-**Important:** In order for Stingray to migrate existing sound banks correctly, make sure the wwise project is available and writable. If you experience any issues with the automatic migration, you can also manually regenerate the sound banks. (See ~{ Generate sound banks~~.)
+**Important:** In order for Stingray to migrate existing sound banks correctly, make sure the wwise project is available and writable. If you experience any issues with the automatic migration, you can also manually regenerate the sound banks. (See ~{Generate sound banks}~.)
+
+## What's new in the SDK?
+
+-	Plug-ins can now provide template projects, which are listed on the **Templates** tab of the ~{ Project Manager }~, just like the template projects that ship with Stingray. See [the help for the templates extension](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_extend_editor_plugin_extensions_templates_html).
+
+-	We've made some fixes and improvements in the hot-reloading system for engine plug-ins. If you had trouble getting hot reloading to work in the past, try [the new instructions](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_reload_html).
 
 ## What's new in Interop?
 
@@ -405,6 +417,8 @@ A summary of the most important changes:
 
 -	`Application.quit()` now accepts an optional exit value, which the application will return to the operating system when it shuts down.
 
+-	The setting names accepted by `Unit.set_animation_bone_mode()` and returned by `Unit.animation_bone_mode()` have been renamed to begin with `delta_`, like the ones accepted and returned by `Unit.set_animation_root_mode()` and `Unit.animation_root_mode()`.
+
 ### Flow node changes
 
 This version includes new nodes for controlling frame capture, triggering Level Flow events, getting more properties from lights and units, exchanging meshes and materials as external input and output variables, and more.
@@ -420,6 +434,8 @@ For a complete list of all new, modified, and removed Flow nodes in this release
 -	The **Output > Standard Base** node now accepts inputs to control tessellation and world space displacement, and a new option that enables and disables hardware tessellation.
 
 -	In addition, you can use a new **Sampling > Domain Sample Texture** node in order to read input data from a texture when that data is needed in the *domain* stage of the shader -- for example, when providing values for the new tessellation factor and displacement inputs.
+
+- Values entered for **Sprite Columns** and **Sprite Rows** in the **Utility > Flipbook** node are now output correctly on the sprite sheet.
 
 For a complete list of all new, modified, and removed shader nodes in this release, see the [version history](../../shader_ref/versions.html).
 

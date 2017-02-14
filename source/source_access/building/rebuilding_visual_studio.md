@@ -24,14 +24,3 @@ If you configure the Visual Studio solution for the Stingray engine with a globa
 13>Render_DX11.lib(D3D1x_HAL.obj) : error LNK2001: unresolved external symbol IID_ID3DUserDefinedAnnotation
 13>C:\Stingray\b\toolchain\engine\win64\debug\plugins\scaleformstudio_pluginw64_debug.dll : fatal error LNK1120: 1 unresolved external
 ~~~
-
-## Setting up Visual Studio for the Stingray Editor
-
-If you want to build the Stingray Editor solution from within Visual Studio, you will need to set up Visual Studio to use the version of QT found in your Stingray library directory:
-
-1.	From within Visual Studio, select **QT5 > QT Options** from the main menu.
-2.	In the **QT Options** window, click **Add...**
-3.	In the **Add New QT Version** window:
-	-	Set the version name to `qt5.4.1-windows-x64-msvc2012-opengl`.
-	-	Set the path to the `qt5.4.1-windows-x64-msvc2012-opengl` subdirectory within your Stingray library directory. Click **OK**.
-4.	If you have multiple QT versions set up, make your new version the default by selecting it in the "Default QT/Win version" list. Click **OK.**
