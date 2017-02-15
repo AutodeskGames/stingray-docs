@@ -63,7 +63,7 @@ Textures are now automatically compressed when you import them in Stingray. Depe
 
 ## Particle Editor
 
-In previous versions of Stingray, you created and edited particle effects using the **Asset Browser**, **Property Editor**, and **Asset Preview**. With Stingray 1.7, we're pleased to give you a standalone **Particle Editor** that streamlines the workflow for particle artists. Select **Window > Particle Editor** from the main menu, or double-click an existing particle effect in the **Asset Browser** to launch the new tool.
+In previous versions of Stingray, you created and edited particle effects using the **Asset Browser**, **Property Editor**, and **Asset Preview**. With Stingray 1.7, we're pleased to give you a standalone **Particle Editor** that streamlines the workflow for particle artists. Select **Window > Particle Editor** from the main menu, or double-click an existing particle effect in the **Asset Browser** to launch the new tool. For more information, see ~{ Create and edit particle effects }~.
 
 ![](../gifs/wn_particle_editor.gif)
 
@@ -184,7 +184,7 @@ Tessellation can now be activated using the standard base material node. Use the
 
 ### Negative scale support
 
-Stingray shaders now support negative scale.
+Stingray shaders now support negative scale. See ~{ Assign a material to an object }~.
 
 ### Texture Manager updates
 
