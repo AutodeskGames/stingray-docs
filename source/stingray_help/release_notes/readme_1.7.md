@@ -29,6 +29,22 @@ Sections in this topic:
 
 * * *
 
+## What's new in VR
+
+### Google Daydream support, plus new VR templates
+
+- Support for Gear VR, Google Daydream Android devices, plus Google Cardboard (iOS and Android)
+- New VR project templates to support rendering on those devices
+- The VR Oculus SDK has been upgraded to V1.10.1.0. See ~{ Supported platforms }~.
+
+Stingray 1.7 introduces our GoogleVR plug-in, which adds support for Google Cardboard on iOS, as well as Google Daydream devices and controllers. Google Cardboard for Android is also supported on Daydream devices.
+
+To support rendering your VR projects on these devices, the **Templates** tab in the **Project Manager** now includes two templates: VR Google and VR Gear.
+
+![](../images/wn-templates.png)
+
+Use these templates to start building your VR projects for Google Daydream devices and GearVR devices. See also ~{ Build a project for Gear VR }~.
+
 ## Browse online assets in the Asset Browser
 
 See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse, find and import assets directly from online to your project. Right-click an online asset and select **Download Asset** to download and install the asset package to a category specific folder in the project. Updated topic include: ~{ Download assets and example projects }~.
@@ -45,20 +61,6 @@ The **Capture Frames** Tool is now a standalone tool connected to the **Story Ed
 
 Textures are now automatically compressed when you import them in Stingray. Depending on the texture type, Stingray assigns the texture template and compression settings for the imported textures for each platform. Texture compressions are applied by texture file suffix match or by image analysis. You can still tweak the textures as required, but you no longer need to manually compress textures on import. For details, see ~{ Import textures}~ and ~{ Create a texture template }~.
 
-## What's new in VR: Google Daydream support, plus new VR templates
-
-- Support for Gear VR, Google Daydream Android devices, plus Google Cardboard (iOS and Android)
-- New VR project templates to support rendering on those devices
-- The VR Oculus SDK has been upgraded to V1.10.1.0. See ~{ Supported platforms }~.
-
-Stingray 1.7 introduces our GoogleVR plug-in, which adds support for Google Cardboard on iOS, as well as Google Daydream devices and controllers. Google Cardboard for Android is also supported on Daydream devices.
-
-To support rendering your VR projects on these devices, the **Templates** tab in the **Project Manager** now includes two templates: VR Google and VR Gear.
-
-![](../images/wn-templates.png)
-
-Use these templates to start building your VR projects for Google Daydream devices and GearVR devices. See also ~{ Build a project for Gear VR }~.
-
 ## Particle Editor
 
 In previous versions of Stingray, you created and edited particle effects using the **Asset Browser**, **Property Editor**, and **Asset Preview**. With Stingray 1.7, we're pleased to give you a standalone **Particle Editor** that streamlines the workflow for particle artists. Select **Window > Particle Editor** from the main menu, or double-click an existing particle effect in the **Asset Browser** to launch the new tool.
@@ -68,6 +70,12 @@ In previous versions of Stingray, you created and edited particle effects using 
 ## Better network workflows: Run multiple local game instances
 
 The **Connections** panel now lets you add multiple localhost PC targets, which means you can automatically start multiple targets with separate command lines on your local machine when you click **Run Project** ![](../images/icon_runProject.png). This makes it easier to debug and look at the console output for multiple targets using the editor engine instance dropdowns. See also ~{ Using the Connections panel }~.
+
+## Edit this page in Github!
+
+At the bottom of most pages in the Stingray Help, you'll now see a green button that invites you to visit the topic source file in GitHub, make any changes you want, and submit a PR to us. With your help we want to make the Stingray Help better and better. If you're feeling inspired, check out ~{ Get Involved! }~ for more ways to contribute to the Stingray community.
+
+![](../images/edit-on-github.png)
 
 ## Import font files
 
@@ -90,7 +98,7 @@ You can now edit the length of animation clips by trimming in the Anim Clip Edit
 
 ## Visual mesh raycasting
 
-Stingray 1.7 provides new functionality that lets you check for intersections with visual meshes within a specified Unit. You can use this mesh pick raycast to get visual mesh information from a surface, such as which material within a mesh gets hit. (If you don't actually need that level of information, use the standard physics raycast instead.)
+Stingray 1.7 provides new functionality that lets you check for intersections with visual meshes within a specified Unit. You can use this mesh pick raycast to get visual mesh information from a surface, such as which material within a mesh gets hit. (If you don't actually need that level of information, use the standard phyiscs raycast instead.)
 
 For complete documentation, refer to the Lua documentation `stingray.Unit.mesh_pick_raycast()` and the [Flow node documentation](../../flow_ref/index.html) (**Unit > Mesh Pick Raycast**).
 
@@ -131,6 +139,14 @@ New Flow nodes include:
 ## More granular asset overrides
 
 If your project contains a folder whose name matches another folder already mounted by the engine or by another plug-in, such as the `core` folder, the project now merges the contents of your project's folder on top of the existing folder. This makes it easier to override selected core resources, such as Appkit script files, without having to copy the entire core folder into your project.
+
+## Updated version of Wwise Audio
+
+Stingray 1.7 integrates Wwise version 2016.1.3, which includes various new features and bug fixes.
+
+If you have an existing project built in previous versions of Stingray, the sound banks are automatically regenerated when you load/migrate the project into Stingray 1.7. Depending on how much audio your project has, please note that the regeneration process can take a long time.
+
+**Important:** In order for Stingray to migrate existing sound banks correctly, make sure the wwise project is available and writable. If you experience any issues with the automatic migration, you can also manually regenerate the sound banks. (See ~{Generate sound banks}~.)
 
 ## What's new in the SDK?
 
@@ -337,29 +353,21 @@ This section lists known limitations and workarounds for Stingray.
 
 Unless otherwise noted in the **What's Fixed** section, please be aware that this release contains the same **Known Limitations** described in the previous versions of Stingray Release Notes.
 
-> **Important**: We recommend you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
-
-- **GAME-19871 Too easy to remove lightmaps, this needs a popup with a warning**
-
-	The new **Clear** button in the **Light Baking** window deletes all lightmaps on disk and unmaps them.
-
-	**Workaround:** Unfortunately there's no workaround for this right now, so we wanted to warn you in advance. By the time we release 1.7, we'll have a pop-up to make sure you actually want to do this.
-
 - **GAME-19936 Project compile appears to hang during UV unwrapping**
 
 	When opening a project that contains complex meshes, the project compilation process appears to hang during UV unwrapping.
 
 	**Workaround:** Prepare complex meshes prior to exporting by manually unwrapping UVs in your DCC tool.
 
-- **GAME-20894 Holding Ctrl + V creates too many objects in Explorer panel**
+- **GAME-20689 Remote sync from Wwise editor can't connect to Stingray on Android**
 
-	**Workaround:** Press Ctrl + V quickly to paste a single instance of the copied object.
+	When you try to connect to an instance of the Stingray engine running on an Android device using the **Remote** sync feature in the Wwise Editor, the connection to the device fails. In some cases, the engine on the device crashes. There is currently no workaround for this issue.
 
-- **GAME-19975 Stingray hangs and prevents any other window from coming to the forefront**
+- **GAME-20834 Level Sync from 3ds Max (using 'Level Send All') stalls at the end of the import process**
 
-	We don't have consistent repro steps for this one, so if you see it let us know. It seems to happen for some people when Alt + tabbing between windows.
+	The first time you send assets between 3ds Max and Stingray using **Stingray > Level Send All** (in 3ds Max), the import operation stalls if **Update textures** is on.  
 
-	**Workaround:** Close Stingray using Windows Task Manager. If Task Manager will not come to the forefront, you may need to right-click it in the taskbar to close it, and then restart the Task Manager.
+	**Workaround:** Turn off **Update textures** the first time you send assets with **Level Send All**. On subsequent level sync operations, you can then use **Level Send Selected** or **Level Send All** with **Update textures** on as required.
 
 [Return to top](#top)
 
@@ -370,24 +378,6 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 The full installation guide for Autodesk products including Stingray is included in the Stingray online help, [here](http://www.autodesk.com/stingray-install-ENU "here").
 
 This section explains the improvements and fixes that require specific upgrade steps for users currently using a previous version of Stingray.
-
-### Wwise version update
-
-Stingray 1.7 is upgraded to use Wwise version 2016.1.3. If you have an existing project built in previous versions of Stingray, you'll need to manually regenerate sound banks in Stingray 1.7 after migrating your project. (If you notice several Wwise-related errors during compilation when you load an existing project in Stingray 1.7, this is why.)
-
-For new projects created with Stingray 1.7 templates, no extra action is required for the Wwise update.
-
-**To regenerate sound banks:**
-
-1. Load your existing project in Stingray and click Yes to migrate it for Stingray 1.7.
-
-> **Note**: We recommended that you always back up existing projects before migrating. During migration Stingray does create a .backup file containing the original contents of each migrated file, which you can delete after successfully migrating your project.
-
-2. Select **Window > Wwise Audio** to open the authoring tool.
-
-3. In Wwise, press F7 to switch to the Soundbank layout, then click **Regenerate sound banks**.
-
-(See also ~{ Generate sound banks }~.)
 
 ### Auto-loading removed from templates
 
