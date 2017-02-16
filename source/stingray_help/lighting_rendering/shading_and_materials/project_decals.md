@@ -97,7 +97,7 @@ You can make any unit into a decal projector by setting it to use a material who
 
 If you often need to project the same textures in many places, you may find it convenient to set up your own custom decal helper unit instead of using the default one.
 
-One easy way to do this is to open the base decal box unit in the **Unit Editor**, and re-save it with a different resource name. You can even pre-set it to use the material you want to project so that you have less tweaking to do when you spawn the unit in your level.
+One easy way to do this is to open the base decal box unit in the **Unit Editor**, and re-save it with a different resource name. You can even preset it to use the material you want to project so that you have less tweaking to do when you spawn the unit in your level.
 
 ## Spawn decal projectors dynamically
 

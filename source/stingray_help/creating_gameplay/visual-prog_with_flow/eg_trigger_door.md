@@ -2,7 +2,7 @@
 
 Triggers are simple game objects that let you trigger events when other objects come in contact with them. This workflow explains how to animate a door opening when the player gets close to it.
 
-> ![](../../images/icon_video.png) You can also find a video tutorial that demonstrates this workflow [here](https://www.youtube.com/watch?v=qb2U1fIR09g).
+> ![](../../images/icon_video.png) You can also find a video tutorial that demonstrates this workflow [here](http://area.autodesk.com/learning/trigger-a-door-opening).
 
 ##Step 1. Set up the door
 

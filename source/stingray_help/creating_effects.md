@@ -4,7 +4,7 @@ Creating beautiful and lasting impressions of your game or architectural scene o
 
 You can use particle effects to create an entire array of effects including but not limited to explosions, waterfalls, mist and smoke.
 
-> ![](images/icon_video.png) You can find a series of tutorial videos, including a link to download sample files <a href="https://www.youtube.com/playlist?list=PLTjhBiJe1i2GoHq_WmjKKSU9ZWYV5tkJB" target="blank">here.</a>
+> ![](images/icon_video.png) You can find a series of tutorial videos, including a link to download sample files <a href="http://area.autodesk.com/learning/creating-particle-effects-in-stingray" target="blank">here.</a>
 
 The shading environment settings let you create other types of global effects in your scene, including:
 

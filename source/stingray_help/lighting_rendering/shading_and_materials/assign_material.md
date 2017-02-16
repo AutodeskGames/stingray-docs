@@ -1,10 +1,14 @@
 #Assign a material to an object
 
+![UPDATED](../../images/updated.png)
+
 Materials for meshes are assigned in the unit itself. When you place instances of the unit in a level, they inherit the material you have specified in the parent unit. You can assign different materials either to the parent unit for the entire project, or to individual instances of that unit within a level.
 
 For example, your project uses a wooden box unit and you place multiple instances of that unit throughout your project levels. If you decide to tweak the color of the wood material, you can edit the material for the parent box unit, and the change is automatically applied to all instances of the box in your project.
 
 If however you decide you need the same box, only metal, you can select any single instance of the wooden box and override the material properties for that box to make it into a metal box.
+
+[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html) All stingray materials support negatively scaled objects.
 
 ## Assign a material to a unit for the entire project
 

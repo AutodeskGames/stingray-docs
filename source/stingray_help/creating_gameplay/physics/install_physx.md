@@ -1,10 +1,10 @@
-# Install the PhysX plug-in for your DCC
+# Install the PhysX plug-in for your DCC tool
 
-Included with your Stingray install, you'll find the NVIDIA PhysX plug-ins for Maya and Maya LT. For the latest Stingray, the PhysX plug-in version is now 3.3.20602.11122, and the PhysX library/SDK used is 3.3.4.
+![UPDATED](../../images/updated.png) Included with your Stingray install, you'll find the NVIDIA PhysX plug-ins for Maya and Maya LT. For the latest Stingray, the PhysX plug-in version is now 3.3.21117.04582, and the PhysX library/SDK used is 3.3.4.
 
-When installed and loaded, the PhysX plug-in adds a PhysX menu to the main menu bar in your DCC, giving you easy access to tools and documentation for creating PhysX ragdolls, rigid bodies, and constraints.
+When installed and loaded, the PhysX plug-in adds a PhysX menu to the main menu bar in your DCC tool, giving you easy access to tools and documentation for creating PhysX ragdolls, rigid bodies, and constraints.
 
-To install the PhysX plug-in for your DCC:
+To install the PhysX plug-in for your DCC tool:
 
 1. Double-click the `NVIDIA_PhysX_For_<Product>_<Version>.msi` located here within your Stingray install directory: `\Program Files\Autodesk\Stingray\<*version*>\extras`
 
@@ -30,4 +30,4 @@ Note that the **Axis Orientation** is also an important consideration during exp
 
 Stingray uses SI base units, so mass values are in kg, densities are in kg/m3, and the default density value (water) is 1000.
 
-PhysX actors created with the NVidia PhysX plug-in for your DCC and exported to Stingray use grams as the base weight unit. In order to align with the units of mass expected in Stingray, these actors are converted to kg at runtime.
+PhysX actors created with the NVidia PhysX plug-in for your DCC tool and exported to Stingray use grams as the base weight unit. In order to align with the units of mass expected in Stingray, these actors are converted to kg at runtime.

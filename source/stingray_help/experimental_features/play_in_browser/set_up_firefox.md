@@ -4,16 +4,7 @@ This page describes how to set up Firefox to ~{ Run your project in a browser us
 
 ## Step 1. Get a compatible version
 
-WebGL 2.0 is supported as of Firefox **Version 49** or later, for **64-bit** systems.
-
-Download and install either of the following pre-release versions:
-
--	[Firefox Nightly](https://nightly.mozilla.org/)
--	[Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/channel/#developer)
-
-The [Firefox Beta](https://www.mozilla.org/en-US/firefox/channel/#beta) and official [Firefox public release](https://www.mozilla.org/en-US/firefox/new/) are currently version 49, but should be updated over time. This [Release calendar](https://wiki.mozilla.org/RapidRelease/Calendar) gives an indication of the expected timelines for the latest official release.
-
-For more about the differences between all of these versions, see the [Mozilla wiki](https://wiki.mozilla.org/Release_Management/Release_Process). (Note that what's called *Aurora* on this page is now called the *Developer Edition*.)
+WebGL 2.0 is now supported in the official Firefox public release. You don't need to install a pre-release version. 
 
 ## Step 2. Set up Firefox
 

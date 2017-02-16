@@ -5,7 +5,7 @@ As you work on individual levels, you'll likely test the level experience freque
 When you have a few levels ready to test, or as your project starts to come together, you can start to test the entire project on your PC using Run Project ![](../../images/icon_runProject.png).
 
 
-If you plan to release your game on additional platforms such as mobile devices, you'll want to test the game on those platforms too. You can do this by setting them up in the **Connections** panel. For details on how to do this, see the topics under ~{ Connecting to a remote device }~.
+If you plan to release your game on additional platforms such as mobile devices, you'll want to test the game on those platforms too. You can do this by setting them up in the **Connections** panel. For details on how to do this, see the topics under ~{ Connect to a remote device }~.
 
 
 The first time you connect to a project on a new target platform, it takes some time to compile the project data. This can be a lengthy process if the project is big. But don't worry, you only have to do this once. Once the initial file has completed, you only have to recompile the data that has actually changed, so future compiles will run much faster.

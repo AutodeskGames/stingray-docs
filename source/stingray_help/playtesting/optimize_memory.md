@@ -51,22 +51,23 @@ There are several console commands you can use to get information about the memo
 
 For details on sending commands from the Stingray Editor to a running game, see ~{ Send Commands from the Status Bar }~. For more detail about the commands themselves, see ~{ Console commands }~.
 
-## Remove unused resources, or disable auto-loading
+## Remove unused resources from the boot package or the project
 
-By default, the Stingray template projects are set up with a boot package that loads **all** resources in the project into memory when the game starts. If your game crashes on startup, particularly when testing on mobile devices with low available memory, the most likely cause is that the boot package is trying to load in too many resources. Often, game projects end up with lots of clutter: old, unused resources that aren't actually needed at all, but still take up space in memory.
+If your game crashes on startup, particularly when testing on mobile devices with low available memory, the most likely cause is that the boot package is trying to load in too many resources.
 
-If your project is still using the default boot package from a template, a quick way to reduce your runtime memory usage is to simply delete from your project folder any extra resources that you're not using in the game.
-
-Alternatively, you can remove the auto-load line from the top of the boot package:
+If your boot package is using wildcards to decide what resources it should contain, it may be that some of the resources it's loading aren't actually necessary. This is particularly likely if you're using the following line to load *all* resources of *all* types that are in the project.
 
 ~~~{sjson}
-// WILL AUTOLOAD ALL CONTENT AND SCRIPTS. PLEASE REMOVE TO CONTROL CONTENT LOADING
 * = ["*"]
 ~~~
 
-and identify in the boot package only the specific resources that you want your game to load. See also ~{ About the boot package }~ and ~{ Defining resource packages }~.
+If your project has old copies of assets or test levels hanging around that match your wildcards but that aren't needed at runtime, you can save memory by simply deleting these unnecessary resources from the project.
 
-## Use resource packages
+Alternatively, if you want to keep the older copies, you could remove the auto-loading line from the boot package and re-configure the boot package to exclude the unwanted resources.
+
+See also ~{ About the boot package }~ and ~{ Defining resource packages }~.
+
+## Use multiple resource packages
 
 The most powerful and flexible option that you have for controlling your game's memory usage is to divide your project's resources into multiple separate packages, and to stream these packages in and out of memory dynamically during the game when they are needed.
 
@@ -100,7 +101,7 @@ Note that for streaming compressed textures, the pixel sizes need to be multiple
 
 You can use the Stingray **Texture Manager** to control the way Stingray compiles your textures for each different target platform.
 
--	The most important setting to adjust is the **Output Format**, which defines the kind of compression that is applied to your texture. By default, Stingray does not compress your textures at all when compiling. This means that the images look as sharp and clear in the game as they do when viewed at full size in image editing tools like Photoshop. However, it also means that they take up the maximum possible space in memory.
+-	The most important setting to adjust is the **Output Format**, which defines the kind of compression that is applied to your texture.
 
 	By applying a compression algorithm like PVR for iOS, or DXT5 for other platforms, you can often lower the in-game memory consumption of your textures dramatically at the cost of introducing some compression artifacts into the images.
 
@@ -128,11 +129,17 @@ The engine reserves 16 MB of memory at startup for use by the texture streaming 
 
 When you bake the lighting for a level, you generate additional textures that your game needs to load. Although baking typically achieves higher quality rendering with lower CPU and GPU usage, this always comes at the cost of higher runtime memory requirements.
 
-Try using only dynamic lighting in conjunction with the global diffuse map provided by the shading environment. Doing this will let you eliminate the lightmap textures altogether. Or, you can restrict light baking to only some important objects in the scene, and leave others to use the global baked diffuse lighting.<!-- TODO:link to global lighting topic -->
+If your lightmaps are taking up too much memory, you can try the following ideas:
 
-If you must bake lightmaps in order to get the look you want, but you still need to lower the memory consumption of the textures, you can lower the *lightmap texel scale* setting in the **Bake Lightmaps** dialog. This will make the generated textures smaller in size. You can do this for both the Beast and Stingray bakers. <!-- TODO:link to baking topic -->
+-	Don't bake anything -- use only dynamic lighting, in conjunction with the global diffuse map provided by the shading environment. Doing this will let you eliminate the lightmap textures altogether. See ~{ Global environment lighting }~.
 
-After this step, you can control the texture compression and mip map generation settings for your lightmaps in the **Texture Manager** just like any other texture resources in your project. See [Optimize textures] above.
+-	Restrict light baking to only some important objects in the scene, and leave others to use dynamic direct lighting and the global baked diffuse lighting.
+
+-	Lower the *lightmap resolution* setting in the **Light Baking** dialog. This makes the generated textures smaller in size, at the cost of detail and sharpness. See ~{ Baking with the Stingray baker }~.
+
+	If you find that you can't get enough detail in the baked lighting when you reduce the lightmap resolution this way, you can try baking only indirect illumination but not direct light. The effect of lowering the resolution is typically less noticeable for indirect light, which tends to be blurry and low-frequency anyway.
+
+-	You can control the texture compression and mip map generation settings for your lightmaps in the **Texture Manager** just like any other texture resources in your project. See [Optimize textures] above.
 
 ## Optimize models
 

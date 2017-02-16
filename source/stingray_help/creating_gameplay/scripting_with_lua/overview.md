@@ -10,7 +10,7 @@ If you have code that you want to be run periodically every frame, or when the g
 
 You can do this in a *boot script* -- a script file that the game engine loads on startup. For details, see ~{ Starting Lua from scratch: using a custom boot script }~.
 
-The Lua Appkit, which is provided in the `core` Stingray resources and which is used by default in all the Stingray template projects, is already set up with a boot script that runs some helpful code for managing the game. You can extend or override these default modules with your your own code. For details, see ~{ Starting Lua from a template: using the Appkit }~.
+The Lua Appkit, which is provided in the `core` Stingray resources and which is used by default in all the Stingray template projects, is already set up with a boot script that runs some helpful code for managing the game. You can extend or override these default modules with your own code. For details, see ~{ Starting Lua from a template: using the Appkit }~.
 
 ## In response to Flow
 

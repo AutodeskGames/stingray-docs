@@ -21,7 +21,7 @@ Click the Lua/Command toggle to switch modes in the Status bar. Set the mode acc
 
 Enter Lua code or console commands in this area.
 
-As you type, the input line auto-completes based on the objects and functions in the Lua API, or the set of pre-defined commands provided by the engine. Press `Tab` to accept an auto-complete suggestion.
+As you type, the input line auto-completes based on the objects and functions in the Lua API, or the set of predefined commands provided by the engine. Press `Tab` to accept an auto-complete suggestion.
 
 You can then edit the suggestion, and press `Enter` when ready to send the command. To scroll through all suggestions for your current input, press `Tab` or `Shift`+`Tab`.
 

@@ -1,9 +1,10 @@
-﻿#Create a trigger
+﻿# Create a trigger
 
-Triggers are simple game objects that let you trigger events when other objects come in contact with them.
+Triggers (or trigger volumes) are simple game objects that let you trigger events when other objects come in contact with them.
 
-You can think of triggers as switches. When something enters or exits the trigger volume, the switch is activated and an action occurs.  You can access triggers using flow nodes or Lua scripts.
+Triggers are used for gameplay interaction in levels, and you can think of triggers as switches. When something enters or exits the trigger volume, the switch is activated and an action occurs. You can access triggers using flow nodes or Lua scripts.
 
+> ![](../../images/icon_video.png) For video tutorials that illustrate how you can use trigger objects, check out <a href="http://area.autodesk.com/learning/trigger-a-door-opening" target="blank">Trigger a door opening</a> or <a href="http://area.autodesk.com/learning/triggering-sound-and-particle-effects" target="blank">Trigger audio and particle effects</a>.
 
 1. Open the **Create** window (**Window > Create**).
 
@@ -16,8 +17,6 @@ You can think of triggers as switches. When something enters or exits the trigge
 4. Release to commit the base.
 
 5. Drag up or down to set the height.
-
-> ![](../../images/icon_video.png) For video tutorials that illustrate how you can use trigger objects, check out <a href="https://www.youtube.com/watch?v=qb2U1fIR09g" target="blank">Trigger a door opening</a> or <a href="https://www.youtube.com/watch?v=My2zA9oaZFo" target="blank">Trigger audio and particle effects</a>.
 
 ---
 Related topics:

@@ -6,7 +6,7 @@ This page describes how to set up Chrome to ~{ Run your project in a browser usi
 
 WebGL 2.0 is supported as of Chrome **Version 52** or later, for **64-bit** systems.
 
-The official [Chrome stable public release](https://www.google.com/chrome/browser/?platform=win64) is now on Version 52.
+See the Google Chrome [wiki page](https://en.wikipedia.org/wiki/Google_Chrome) for the official [Chrome stable public release](https://www.google.com/chrome/browser/?platform=win64) version.
 
 ## Step 2. Set up Chrome
 

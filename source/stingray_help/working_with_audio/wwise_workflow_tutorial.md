@@ -2,7 +2,7 @@
 
 This tutorial provides a brief step by step example of the basic Wwise Stingray workflow.
 
-> ![](../images/icon_video.png) You can also find a longer video tutorial on how to trigger audio and particle effects [here](https://www.youtube.com/watch?v=My2zA9oaZFo).
+> ![](../images/icon_video.png) You can also find a longer video tutorial on how to trigger audio and particle effects [here](http://area.autodesk.com/learning/triggering-sound-and-particle-effects).
 
 ## Step 1. Make new project
 

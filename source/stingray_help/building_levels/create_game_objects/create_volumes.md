@@ -1,5 +1,7 @@
 #Create a volume
 
+Volumes in Stingray are used for Navigation and tagging the NavMesh on generation. For more details, see "Tagging the NavMesh at generation time" in ~{ Generate navigation mesh }~. You can also use volumes for non-interactive interactions such as to detect entering certain areas in rooms etc.
+
 1. Do either of the following:
 
 	- From the main menu bar, select **Create > Volume**.
@@ -27,7 +29,3 @@
 3. Do any of the following:
  	- Shift-click to add volume point.
  	- Click and drag to move volume points.
-
-
-
-

@@ -19,13 +19,14 @@
 		</AKN>
 		<language>%SR_DOC_LANG%</language>
 		<project_title>Stingray SDK Help</project_title>
-		<project_title lang="ko">Stingray 개발자 도움말</project_title>
+		<project_title lang="ko">Stingray SDK 도움말</project_title>
+		<project_title lang="ja">Stingray SDK ヘルプ</project_title>
 		<export_for_localization>%SR_DOC_EXPORT_DIR%</export_for_localization>
 		<import_from_localization>%SR_DOC_IMPORT_DIR%</import_from_localization>
 	</project>
 
 	<global>
-		<syntax_coloring include="\sdk_help\*,\custom_flow\*" default_lang="lang-sjson">true</syntax_coloring>
+		<syntax_coloring include="\sdk_help\*,\custom_flow\*,\editor_c\*,\engine_c\*" default_lang="lang-sjson">true</syntax_coloring>
 		<search_filter id="concept" include_expression="sdk_help/.*\.htm">
 			<label lang="en">Search concept topics?</label>
 		</search_filter>
@@ -48,7 +49,11 @@
 		<insert_family_links include="\sdk_help\*"></insert_family_links>
 		<!-- find and replace variables with version numbers -->
 		<replace variable_file="variables.ini" include="*.html"></replace>
-		<replace include="*\_read_me.htm" pattern="_read_me.txt" replacement="Custom Flow node description format"></replace>
+		<replace include="*\_read_me.htm" pattern="_read_me.txt">
+			<label lang="en">Custom Flow node description format</label>
+			<label lang="ko">사용자 정의 C 흐름 노드 설명 형식</label>
+			<label lang="ja">カスタム C フロー ノードの記述形式</label>
+		</replace>
 	</global>
 
 	<merge id="images">
@@ -57,7 +62,11 @@
 	</merge>
 
 	<merge id="sdk_help">
-		<source convert_from="markdown">..\source\sdk_help\*.md</source>
+		<source convert_from="markdown"
+			get_metadata="true"
+			github_root_public="https://www.github.com/AutodeskGames/stingray-docs/tree/master/source/sdk_help"
+			github_root_internal="https://git.autodesk.com/gameware/stingray-docs/tree/master/source/sdk_help"
+		>..\source\sdk_help\*.md</source>
 		<source>..\source\sdk_help\*.png</source>
 		<source>..\source\sdk_help\*.jp?g</source>
 		<source>..\source\sdk_help\*.gif</source>
@@ -76,6 +85,8 @@
 		<merge_toc_config>
 			<parent_filename>*\custom_flow_nodes.html</parent_filename>
 			<first_entry_title>Custom C Flow node description format</first_entry_title>
+			<first_entry_title lang="ko">사용자 정의 C 흐름 노드 설명 형식</first_entry_title>
+			<first_entry_title lang="ja">カスタム C フロー ノードの記述形式</first_entry_title>
 		</merge_toc_config>
 	</merge>
 
@@ -86,6 +97,8 @@
 			<source type="iframe">index.html</source>
 			<parent_filename>*\extend_editor.html</parent_filename>
 			<first_entry_title>Editor JavaScript API Reference</first_entry_title>
+			<first_entry_title lang="ko">Editor JavaScript API Reference</first_entry_title>
+			<first_entry_title lang="ja">Editor JavaScript API Reference</first_entry_title>
 			<promote_first_topic>false</promote_first_topic>
 		</merge_toc_config>
 	</merge>
@@ -93,9 +106,10 @@
 	<doxygen id="editor_c">
 		<merge_toc_config>
 			<first_entry_title>Editor C API Reference</first_entry_title>
+			<first_entry_title lang="ko">편집기 C API 참조 문서</first_entry_title>
+			<first_entry_title lang="ja">エディタ C API リファレンス ドキュメント</first_entry_title>
 			<parent_filename>*\extend_editor.html</parent_filename>
 		</merge_toc_config>
-		<include_input_dir>%SR_ENGINE_DIR%\docs\source\editor_c</include_input_dir>
 		<include_input_dir>%SR_ENGINE_DIR%\editor\stingray_editor\sdk</include_input_dir>
 		<include_examples make_pages="true" include="editor_native_code\*" exclude="*.vcxproj">%SR_ENGINE_DIR%\tests\plugin_tests</include_examples>
 		<show_topics>false</show_topics>
@@ -107,10 +121,10 @@
 		<tag name="EXTRACT_ALL">YES</tag>
 		<tag name="HIDE_UNDOC_CLASSES">NO</tag>
 		<tag name="HIDE_UNDOC_MEMBERS">NO</tag>
-		<tag name="EXTRACT_PRIVATE">NO</tag>
+		<tag name="EXTRACT_PRIVATE">YES</tag>
 		<tag name="EXTRACT_STATIC">YES</tag>
 		<tag name="EXTRACT_LOCAL_CLASSES">YES</tag>
-		<tag name="EXTRACT_LOCAL_METHODS">NO</tag>
+		<tag name="EXTRACT_LOCAL_METHODS">YES</tag>
 		<tag name="INTERNAL_DOCS">YES</tag>
 		<tag name="HIDE_SCOPE_NAMES">NO</tag>
 		<tag name="SORT_MEMBER_DOCS">NO</tag>
@@ -131,14 +145,16 @@
 							"_FUNCTIONAL_=1"</tag>
 		<tag name="ALWAYS_DETAILED_SEC">NO</tag>
 		<tag name="REPEAT_BRIEF">NO</tag>
+		<run_adoc_from_xml index_file="%SR_ENGINE_DIR%\docs\source\editor_c\mainpage.md">true</run_adoc_from_xml>
 	</doxygen>
 
 	<doxygen id="engine_c">
 		<merge_toc_config>
 			<first_entry_title>Engine C API Reference</first_entry_title>
+			<first_entry_title lang="ko">엔진 C API 참조 문서</first_entry_title>
+			<first_entry_title lang="ja">エンジン C API リファレンス ドキュメント</first_entry_title>
 			<parent_filename>*\extend_engine.html</parent_filename>
 		</merge_toc_config>
-		<include_input_dir>%SR_ENGINE_DIR%\docs\source\engine_c</include_input_dir>
 		<include_input_dir>%SR_ENGINE_DIR%\runtime\sdk</include_input_dir>
 		<include_examples make_pages="true" include=
 			"simple_plugin\*.c,bigger_plugin\*.cpp,flow_nodes_sample_plugin\*.cpp,flow_nodes_sample_plugin\*.h,render_plugin\*.cpp"
@@ -149,22 +165,23 @@
 		<tag name="OPTIMIZE_OUTPUT_FOR_C">YES</tag>
 		<tag name="JAVADOC_AUTOBRIEF">YES</tag>	
 		<tag name="RECURSIVE">YES</tag>
-		<tag name="EXTRACT_ALL">NO</tag>
+		<tag name="EXTRACT_ALL">YES</tag>
 		<tag name="HIDE_UNDOC_CLASSES">NO</tag>
 		<tag name="HIDE_UNDOC_MEMBERS">NO</tag>
 		<tag name="WARN_IF_UNDOCUMENTED">NO</tag>
-		<tag name="EXTRACT_PRIVATE">NO</tag>
+		<tag name="EXTRACT_PRIVATE">YES</tag>
 		<tag name="EXTRACT_STATIC">YES</tag>
 		<tag name="EXTRACT_LOCAL_CLASSES">YES</tag>
-		<tag name="EXTRACT_LOCAL_METHODS">NO</tag>
+		<tag name="EXTRACT_LOCAL_METHODS">YES</tag>
 		<tag name="EXTRACT_ANON_NSPACES">YES</tag>
 		<tag name="INTERNAL_DOCS">YES</tag>
-		<tag name="ALWAYS_DETAILED_SEC">NO</tag>
+		<tag name="ALWAYS_DETAILED_SEC">YES</tag>
 		<tag name="REPEAT_BRIEF">YES</tag>
 		<tag name="DISTRIBUTE_GROUP_DOC">YES</tag>
 		<tag name="HIDE_SCOPE_NAMES">NO</tag>
-		<tag name="SORT_MEMBER_DOCS">YES</tag>
-		<tag name="SORT_MEMBERS_CTORS_1ST">YES</tag>
+		<tag name="SORT_BRIEF_DOCS">NO</tag>
+		<tag name="SORT_MEMBER_DOCS">NO</tag>
+		<tag name="SORT_MEMBERS_CTORS_1ST">NO</tag>
 		<tag name="GENERATE_DEPRECATEDLIST">YES</tag>
 		<tag name="GENERATE_TODOLIST">NO</tag>
 		<tag name="SHOW_USED_FILES">YES</tag>
@@ -178,6 +195,8 @@
 		<tag name="EXPAND_ONLY_PREDEF">NO</tag>
 		<tag name="ENABLE_PREPROCESSING">YES</tag>
 		<tag name="PREDEFINED"></tag>
+		<tag name="SUBGROUPING">NO</tag>
+		<run_adoc_from_xml index_file="%SR_ENGINE_DIR%\docs\source\engine_c\mainpage.md">true</run_adoc_from_xml>
 	</doxygen>
 
 </ADE_HTML_2_1_tools_Config>

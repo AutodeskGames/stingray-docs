@@ -1,4 +1,4 @@
-#Create simple animations with the **Story Editor**
+# Create simple animations with the **Story Editor**
 
 1. Select the unit (or units) you want to animate and click ![](../images/icon_storyEd_addNew.png) in the ~{ Story Editor }~. Click *Yes* when prompted on whether you want to add the units to a story.
 
@@ -8,21 +8,22 @@
 
 2. Click ![](../images/icon_storyEd_LIVE.png) to enable editing for the unit.
 
-	  > **Note:** You can also select, move, delete, or modify key values when the **Story Editor** is not Live.
-
 3. Scrub to the frame or time you want in the **Story Editor** timeline, manipulate the object in the **Level Viewport**, then press S or click  ![](../images/icon_storyEd_addkey.png) to set a keyframe.
-
-	> **Note:** As you animate units in the **Story Editor**, the animation plays back only in the **Level Viewport**, it cannot playback on connected devices.
 
 4. Once you've set a few keyframes, use the playback controls in the **Story Editor** to watch your animation playback in the **Level Viewport**.
 
 5. Edit keys as needed, using either the curve editing view, or the key editing view. (Click ![](../images/icon_storyEd_wrench.png) or ![](../images/icon_storyEd_keyEditor.png) to switch between view panels.)
 
-	> **Note:** When animating a property of a unit or entity, editing values in the **Property Editor** has no effect on keys in the **Story Editor**. When animating a unit transform (position, rotation, scale), you can use the **Property Editor** to edit animation values.
-
+	>	[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Copy a key (or multiple keys) and paste in a track (or multiple tracks) using Ctrl + C, Ctrl + X, Ctrl + V hotkeys or right click context menu options. Use the time slider to drag to the position to paste in a track. The keys are pasted on multiple tracks in the order of tracks selected.
 
 When you're finished editing animation for the unit, click ![](../images/icon_storyEd_LIVE.png) again to disable the **Story Editor** and go back to editing your level.
 
+## Important notes about working with the **Story Editor**
+
+- You can still select, move, delete, or modify key values when the **Story Editor** is not Live.
+- When **Story Editor** is live, changing the position of the unit in the level has no effect. To edit the position of the unit in the level again, exit Story mode. (Click LIVE to toggle the mode on and off.)
+- As you animate units in the **Story Editor**, the animation plays back only in the **Level Viewport**, it cannot playback on connected devices.
+- When animating a property of a unit or entity, editing values in the **Property Editor** has no effect on keys in the **Story Editor**. When animating a unit transform (position, rotation, scale), you can use the **Property Editor** to edit animation values.
 
 ---
 Related topics:

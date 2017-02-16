@@ -4,19 +4,19 @@ Autodesk® Stingray software is supported on the following 64-bit operating syst
 
 ## Operating system
 
-Microsoft® Windows® 7 (SP1) and Windows® 8.1
+Microsoft® Windows® 7 (SP1), Windows 8.1, or Windows 10
 
 ## Hardware
 
 - 64-bit Intel® or AMD® multi-core processor; Intel Core i5 or higher recommended.
-- Microsoft® DirectX® 11 compatible video card.
+- Microsoft DirectX® 11 compatible video card.
 - 8 GB of RAM or higher
 - 4 GB of free disk space for install
 - Three-button mouse
 
 ## Deployment platforms
 
-Stingray enables developers to deploy projects to Microsoft® Windows 7® and Windows 8®, Apple® iOS, Google® Android®, Sony® PlayStation® 4, and Microsoft® Xbox One®.
+Stingray enables developers to deploy projects to Microsoft Windows 7, Windows 8, Windows 10, Apple® iOS, Google® Android®, Sony® PlayStation® 4, and Microsoft Xbox One®.
 
 See ~{ Supported platforms }~ for additional details on target game platforms, compatible devices and VR SDK kits.
 

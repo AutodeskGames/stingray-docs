@@ -4,7 +4,7 @@ The Stingray Editor contains an integrated debugging system for the Lua code tha
 
 The integrated debugging system works when you test your game in the Stingray Editor, and when you use the Run Project command to run the game from the Stingray Editor.
 
-For details on using this system, see ~{ Debugging basics }~ and ~{ Using the Debugger View }~.
+For details on using this system, see ~{ Debugging basics }~ and ~{ Using the Script Debugger }~.
 
 If you are interested in other ways to get information like variable values from the in-game Lua environment, see ~{ Ways to get runtime feedback }~. This topic describes how to use Lua `print` statements and functions in the Stingray runtime Lua API to send messages to the **Log Console** panel.
 

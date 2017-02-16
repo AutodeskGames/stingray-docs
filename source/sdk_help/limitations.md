@@ -20,7 +20,7 @@ For now, there's no guarantee that a plug-in you write for this version of Sting
 
 Along the same lines as above, a Stingray plug-in may have certain dependencies in order to function. It may require a specific version of the engine or editor, it may require a specific version of some different plug-in to be installed and available, it may only work on certain platforms, etc.
 
-We propose a way for your plug-in to tell Stingray about these dependencies in its *.plugin* file, but we don't yet enforce the dependencies you set there.
+We propose a way for your plug-in to tell Stingray about these dependencies in its *.plugin* file. However, the editor currently only validates that the base Stingray app meets the version required by the plug-in. It does not validate the platform or the presence other plug-ins.
 
 ## Windows only
 

@@ -1,0 +1,3 @@
+customize_layout
+basic_navigation
+hotkeys

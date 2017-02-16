@@ -23,11 +23,24 @@ This topic describes all the settings that you can configure in this file in ord
 - [Script data](#script-data)
 - [Network settings](#network-settings)
 - [User settings](#user-settings)
-- [Save directory](#save-directory)
 - [Log consoles](#log-consoles)
 - [Crash report](#crash-report)
 - [Steam settings](#steam-settings)
 -	[XB1 settings](#xb1-settings)
+
+## Special file and path name variables
+
+When you set a path and/or filename as the value of a setting in this file, you can include the following variables in the path. Stingray automatically expands them to appropriate values for the current user, platform and time.
+
+*	**%APPDATA%**: The folder reserved for storing data related to the current user. (Available on Windows and iOS)
+*	**%HOSTNAME%**: The name of the computer. (Available on Windows only)
+*	**%DATE% or %UTCDATE%**: The local or UTC date, in the form YYYY-MM-DD.
+*	**%TIME% or %UTCTIME%**: The local or UTC time, in the form HH.MM.SS.
+*	**%RANDOM%**: Eight random letters.
+*	**%SESSION%**: A random hexadecimal string that identifies this play session. This could be used to match different logs from the same play session.
+*	**%SAVEDATA%**: The engine's data storage directory on iOS.
+*	**%OBBPATH%**: The engine's data storage directory on Android.
+*	**%STEAMUSER%**: The current Steam user's application data directory. Available only when Steam is enabled and the application can find a valid app ID. If Steam is enabled but no Steam user is logged in, this falls back to **%APPDATA%**.
 
 ## Generic settings
 
@@ -134,14 +147,9 @@ win32 = {
 
 `crash_dump_path = "%APPDATA%\\Company\\Project\\dumps\\dump-%UTCDATE%-%UTCTIME%-%RANDOM%.dmp"`
 
-> This sets the file where to store the crash dump. If omitted, the dumps will be written to the current directory with the name "dump-%UTCDATE%-%UTCTIME%.dmp". The following special tags can be used:
+> This sets the path and filename where the engine saves crash dumps. If omitted, it writes the dumps to the current directory, with the name `dump-%UTCDATE%-%UTCTIME%.dmp`.
 >
-> * **%APPDATA%**: The folder for user storage in Windows.
-> * **%HOSTNAME%**: The name of the computer.
-> * **%DATE% or %UTCDATE%**: The local or UTC date on the form YYYY-MM-DD.
-> * **%TIME% or %UTCTIME%**: The local or UTC time on the form HH.MM.SS.
-> * **%RANDOM%**: Eight random letters.
-> * **%SESSION%**: Random hexadecimal string identifying this play session. This can be used to match different logs from same play session.
+>	For a list of the special tags you can use in this path, see [Special file and path name variables].
 >
 > In release builds using Steam, the dumps are always stored in the steamapps directory where the game is stored.
 
@@ -310,11 +318,13 @@ ios = {
 
 `<platform>.local_console_log`
 
-> Specifies a file name where console logs will be stored. `<platform>` can be `ios`, `android`, `windows`, and so on.
+>	Specifies a file name where console logs will be stored. `<platform>` can be `ios`, `android`, `win32`, and so on.
+>
+>	For a list of the special tags you can use in this path, see [Special file and path name variables].
 
 ~~~{sjson}
-`android = {`
-	//local_console_log = "%OBBPATH%/log.txt"
+android = {
+	local_console_log = "%OBBPATH%/log.txt"
 }
 ~~~
 
@@ -324,10 +334,12 @@ ios = {
 
 `<platform>.save_dir`
 
-> Specifies a directory where save files will be stored.
+>	Specifies a directory for the Lua `SaveSystem` interface to write and read its data files on Windows and iOS. `<platform>` can be `ios` or `win32`. (On Android and PlayStation 4, save paths are not configurable.)
+>
+>	For a list of the special tags you can use in this path, see [Special file and path name variables].
 
 ~~~{sjson}
-`ios = {`
+ios =
 	save_dir = "%SAVEDATA%/empty"
 }
 ~~~
@@ -607,11 +619,8 @@ scope = {
 
 `script_data = {}`
 
-> This block contains custom information that can be obtained from the script using Application.settings().
->
-> If you use the rakefile from the source repository (`rakefile.rb)` to package your content, it will automatically inject a *content_revision* field into this data block that contains the source control revision number of the data that is being built. (Currently the rakefile can handle Mercurial, Subversion and Perforce repositories).
->
-> If you package your data in some other way than using the rakefile, you have to insert the *content_revision* number yourself, if you want it.
+> Use this block to set custom information that your project's Lua script can read by calling `Application.settings()`.
+
 
 [Back to top](#top)
 
@@ -639,16 +648,9 @@ network = {
 
 `log = "%APPDATA%\\Company\\Project\\network_logs\\network-%UTCDATE%-%UTCTIME%-%RANDOM%.ndp"`
 
-> This setting is only available in development builds. This will enable writing all network communication data to a file to analyze it later. The following special tags can be used:
-
+> This setting is only available in development builds. It causes the engine to write all network communication data to a file so that you can analyze it later.
 >
-> * **%APPDATA%**: The folder for user storage in Windows.
-> * **%STEAMUSER%**: The folder for user storage in Steam, if enabled.
-> * **%HOSTNAME%**: The name of the computer.
-> * **%DATE% or %UTCDATE%**: The local or UTC date on the form YYYY-MM-DD.
-> * **%TIME% or %UTCTIME%**: The local or UTC time on the form HH.MM.SS.
-> * **%RANDOM%**: Eight random letters.
-> * **%SESSION%**: Random hexadecimal string identifying this play session. This will be the same for all network dumps. This can be used to match different logs from same play session.
+>	For a list of the special tags you can use in this path, see [Special file and path name variables].
 
 [Back to top](#top)
 
@@ -656,34 +658,9 @@ network = {
 
 `user_settings = "%APPDATA%\\Company\\Project\\user_settings.config"`
 
-> This is the file where user settings will be stored. The following special tags
-can be used:
-
+>	Sets the file where user settings will be stored.
 >
-> * **%APPDATA%**: The folder for user storage in Windows.
-> * **%STEAMUSER%**: The folder for user storage in Steam, if enabled.
-> * **%HOSTNAME%**: The name of the computer.
-> * **%DATE% or %UTCDATE%**: The local or UTC date on the form YYYY-MM-DD.
-> * **%TIME% or %UTCTIME%**: The local or UTC time on the form HH.MM.SS.
-> * **%RANDOM%**: Eight random letters.
-> * **%SESSION%**: Random hexadecimal string identifying this play session. This can be used to match different logs from same play session.
-
-[Back to top](#top)
-
-## Save directory
-
-`save_dir = "%APPDATA%\\Company\\Project"`
-
-> This is the directory where savegames will end up in if you are using SaveSystem. The following special tags can be used:
-
->
-> * **%APPDATA%**: The folder for user storage in Windows.
-> * **%STEAMUSER%**: The folder for user storage in Steam, if enabled.
-> * **%HOSTNAME%**: The name of the computer.
-> * **%DATE% or %UTCDATE%**: The local or UTC date on the form YYYY-MM-DD.
-> * **%TIME% or %UTCTIME%**: The local or UTC time on the form HH.MM.SS.
-> * **%RANDOM%**: Eight random letters.
-> * **%SESSION%**: Random hexadecimal string identifying this play session. This can be used to match different logs from same play session.
+>	For a list of the special tags you can use in this path, see [Special file and path name variables].
 
 [Back to top](#top)
 
@@ -691,27 +668,15 @@ can be used:
 
 `local_console_log = "%APPDATA%\\Stingray\\network-test\\console_%RANDOM%.txt"`
 
-This is optional and specifies a file where to store a console log in. The following special tags can be used:
-
+>	Specifies a path and filename where the engine will save its console logs. Optional.
 >
-> * **%APPDATA%**: The folder for user storage in Windows.
-> * **%HOSTNAME%**: The name of the computer.
-> * **%DATE% or %UTCDATE%**: The local or UTC date on the form YYYY-MM-DD.
-> * **%TIME% or %UTCTIME%**: The local or UTC time on the form HH.MM.SS.
-> * **%RANDOM%**: Eight random letters.
-> * **%SESSION%**: Random hexadecimal string identifying this play session. This can be used to match different logs from same play session.
+>	For a list of the special tags you can use in this path, see [Special file and path name variables].
 
 `remote_console_log = "\\\\dc01\\public\\temp\%HOSTNAME%\%UTCDATE%-%UTCTIME%.txt"`
 
-> This is optional and specifies a file where to copy the full console log when the game stops. The following special tags can be used:
-
+>	Specifies a path and filename where the engine will copy its full console log when the project quits. Optional.
 >
-> * **%APPDATA%**: The folder for user storage in Windows.
-> * **%HOSTNAME%**: The name of the computer.
-> * **%DATE%**: The local or UTC date on the form YYYY-MM-DD.
-> * **%TIME%**: The local or UTC time on the form HH.MM.SS.
-> * **%RANDOM%**: Eight random letters.
-> * **%SESSION%**: Random hexadecimal string identifying this play session. This can be used to match different logs from same play session.
+>	For a list of the special tags you can use in this path, see [Special file and path name variables].
 
 [Back to top](#top)
 
@@ -719,14 +684,9 @@ This is optional and specifies a file where to store a console log in. The follo
 
 `crash_report = "%APPDATA%\\Company\\Project\\crash_reports\\crash-%UTCDATE%-%UTCTIME%-%RANDOM%.txt"`
 
-> This is optional and specifies a file where a crash report will be written in the event of a fatal error. These can help debug problems after the game has been released. Currently, crash reports are only supported for release builds running under Windows. The following special tags can be used:
+>	Specifies a path and filename where the engine will write a crash report in the event of a fatal error. These can help debug problems after the game has been released. Currently, crash reports are only supported for release builds running under Windows.
 >
-> * **%APPDATA%**: The folder for user storage in Windows.
-> * **%HOSTNAME%**: The name of the computer.
-> * **%DATE% or %UTCDATE%**: The local or UTC date on the form YYYY-MM-DD.
-> * **%TIME% or %UTCTIME%**: The local or UTC time on the form HH.MM.SS.
-> * **%RANDOM%**: Eight random letters.
-> * **%SESSION%**: Random hexadecimal string identifying this play session. This can be used to match different logs from same play session.
+>	For a list of the special tags you can use in this path, see [Special file and path name variables].
 
 [Back to top](#top)
 

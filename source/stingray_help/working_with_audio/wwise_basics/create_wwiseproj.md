@@ -1,6 +1,6 @@
 # Create or open a Wwise project
 
-> ![](../../images/icon_video.png) You can also find a video tutorial on setting up your audio project [here](https://www.youtube.com/watch?v=oxwq-9XM-K4).
+> ![](../../images/icon_video.png) You can also find a video tutorial on setting up your audio project [here](http://area.autodesk.com/learning/set-up-an-audio-project).
 
 When creating a new Stingray project you can do so in two different ways.
 By creating a completely new 'blank' Stingray project or by using one of

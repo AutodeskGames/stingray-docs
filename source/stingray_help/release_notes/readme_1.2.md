@@ -216,7 +216,7 @@ This release of Stingray picks up the latest version of FBX (2016.1.2), which pr
 
 ##Updated PhysX plug-in
 
-The PhysX plug-in installers for Maya, Maya LT, and 3ds Max that ship with Stingray are now updated to install the latest version of the PhysX plug-in. This plug-in includes several improvements and bug fixes by Nvidia. For related information, see ~{ Install the PhysX plug-in for your DCC }~.
+The PhysX plug-in installers for Maya, Maya LT, and 3ds Max that ship with Stingray are now updated to install the latest version of the PhysX plug-in. This plug-in includes several improvements and bug fixes by Nvidia. For related information, see ~{ Install the PhysX plug-in for your DCC tool }~.
 
 ##Improved accessibility to Stingray help resources
 
@@ -528,7 +528,7 @@ This section explains the improvements and fixes that require specific upgrade s
 
 The Android SDK version used by Stingray has not changed. However, we have updated the required version for the platform tools and build tools.
 
-See ~{ Requirements for Android game development }~ and make sure that you have installed a version of the platform tools that is compatible with Stingray, and a version of the build tools that is compatible with the version of Android used on your device.
+See ~{ Get started on Android }~ and make sure that you have installed a version of the platform tools that is compatible with Stingray, and a version of the build tools that is compatible with the version of Android used on your device.
 
 ### Xbox One XDK version
 

@@ -1,15 +1,11 @@
 create_markers
-create_primitives
 marker_properties
+create_primitives
 create_prototypes
-prototype properties
+prototype_properties
 create_splines
 create_triggers
 trigger_properties
 create_volumes
 volume_properties
-terrain_tool
-create_terrain
-import_heightMap
-terrain_properties
 object_panel
