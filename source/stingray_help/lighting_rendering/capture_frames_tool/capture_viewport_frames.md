@@ -2,7 +2,7 @@
 
 ![UPDATED](../../images/updated.png)
 
-The **Capture Frames** Tool lets you render frames to disk. The tool is integrated into the **Story Editor** workflow, and can also be initiated through Flow. For more information on using Flow, see the **Capture Frames** category in the [Stingray Flow Node Reference](../flow_ref/index.html).
+The **Capture Frames** Tool lets you render frames to disk. The tool is integrated into the **Story Editor** workflow, and can also be initiated through Flow. For more information on using Flow, see the **Capture Frames** category in the [Stingray Flow Node Reference](../../../flow_ref/index.html).
 
 ## To capture frames
 

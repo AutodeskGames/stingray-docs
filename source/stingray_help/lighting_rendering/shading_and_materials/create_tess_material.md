@@ -17,6 +17,6 @@ Tessellation adds more triangles to your mesh. Adding tessellation to your mater
 
 4. In the **Shader Graph Editor**, plug in values to the tessellation specific inputs. See ~{ Create or edit shader graphs }~.
 
-	>**Tip:** You must use the **Domain Sample Texture** sampler node instead of the **Sample Texture** sampler node to drive the tessellation inputs. For more information on these nodes, see the **Sampling** category in the [Stingray Shader Node Reference](../../shaders_ref/index.html).
+	>**Tip:** You must use the **Domain Sample Texture** sampler node instead of the **Sample Texture** sampler node to drive the tessellation inputs. For more information on these nodes, see the **Sampling** category in the [Stingray Shader Node Reference](../../../shaders_ref/index.html).
 
 5. Assign the material to a mesh with some amount of existing tessellation.
