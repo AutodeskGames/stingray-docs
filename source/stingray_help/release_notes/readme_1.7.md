@@ -53,7 +53,7 @@ See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse,
 <a name="capture-frames"></a>
 ![](../images/capture_frames_rn.png)
 
-The **Capture Frames** Tool is now a standalone tool connected to the **Story Editor**. Simply create a story and click ![Capture Frames](../images/icon_capture_frame.png) to adjust your **Caputre Settings**. New settings include support for different cameras and resolutions, and options to save and reuse your settings. Capturing can also be initiated through new Capture Flow Nodes. For details, see ~{ Capture Frames Tool }~.
+The **Capture Frames** Tool is now a standalone tool connected to the **Story Editor**. Simply create a story and click ![Capture Frames](../images/icon_capture_frame.png) to adjust your **Capture Settings**. New settings include support for different cameras and resolutions, and options to save and reuse your settings. Capturing can also be initiated through new Capture Flow Nodes. For details, see ~{ Capture Frames Tool }~.
 
 ## Better texture import with automatic compression
 
@@ -165,6 +165,8 @@ Stingray now supports high definition range EXR files for image based lighting. 
 The PhysX plug-in installers for Maya 2017 and Maya LT 2017 that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.21117.04582. For related information, see ~{ Install the PhysX plug-in for your DCC tool }~.
 
 ## What's new in Rendering
+
+![](../images/rendering_rn.png)
 
 ### Light baking improvements
 

@@ -12,10 +12,6 @@ The following **Capture Settings** can be adjusted to control your output. See ~
 
 <dl>
 
-<dt>Capture Source</dt>
-<dd>Lets you select the source to capture: your test engine or one of the editor viewports.</dd>
-</dl>
-
 ## Capture Options
 <dl>
 
