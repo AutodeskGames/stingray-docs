@@ -236,6 +236,7 @@ Stingray shaders now support negative scale. See ~{ Assign a material to an obje
 - GAME-18437 VR Oculus template: Can't press Esc to close 'Run project' window
 - GAME-18428 Creative Market: Browsing through assets gets broken after viewing an asset
 - GAME-18047 Deploying Basic template to Android device takes excessive time
+- GAME-20498 Teleporter raycast in VR Vive and VR Oculus templates behaves badly when there is no collision
 
 ### Documentation and Learning
 
