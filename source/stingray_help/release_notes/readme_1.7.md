@@ -544,7 +544,7 @@ For a complete list of all new, modified, and removed Flow nodes in this release
 
 - Values entered for **Sprite Columns** and **Sprite Rows** in the **Utility > Flipbook** node are now output correctly on the sprite sheet.
 
-For a complete list of all new, modified, and removed shader nodes in this release, see the [version history](../../shader_ref/versions.html).
+For a complete list of all new, modified, and removed shader nodes in this release, see the [version history](../../shaders_ref/versions.html).
 
 ### Visual Studio 2015
 
