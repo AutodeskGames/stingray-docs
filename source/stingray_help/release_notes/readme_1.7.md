@@ -1,7 +1,11 @@
 # Stingray 1.7 Release Notes
 <a name="top"></a>
 
-Welcome to Stingray 1.7 (1.7.1177.0).
+Welcome to Stingray 1.7 (1.7.1177.0). This release contains fixes and enhancements to several areas of Stingray, including an improved texture import process, rendering workflows, and interop with Maya. You'll also find a brand new **Particle Editor** which consolidates the particle editing workflow into a single, streamlined window, as well as improvements in the **Capture Frames** and **Story Editor** tools.
+
+This update also provides two new project templates designed to help you build VR projects for mobile, and adds support for Google Cardboard on iOS, Google Daydream devices and controllers, and Google Cardboard for Android on Daydream devices. 
+ 
+In addition, we've made it easier to find and download example content for your projects with the new **Online Assets** tab in the **Asset Browser**, which lets you build up a scene in minutes. Refer to the [What's New](#whats-new) section below for details on these features and more.
 
 Sections in this topic:
 
