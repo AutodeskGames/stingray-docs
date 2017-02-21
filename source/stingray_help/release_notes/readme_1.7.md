@@ -50,6 +50,7 @@ See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse,
 ![](../images/online_assets_rn.png)
 
 ## Improved Capture Frames Tool
+
 <a name="capture-frames"></a>
 ![](../images/capture_frames_rn.png)
 
@@ -64,6 +65,31 @@ Textures are now automatically compressed when you import them in Stingray. Depe
 In previous versions of Stingray, you created and edited particle effects using the **Asset Browser**, **Property Editor**, and **Asset Preview**. With Stingray 1.7, we're pleased to give you a standalone **Particle Editor** that streamlines the workflow for particle artists. Select **Window > Particle Editor** from the main menu, or double-click an existing particle effect in the **Asset Browser** to launch the new tool. For more information, see ~{ Create and edit particle effects }~.
 
 ![](../gifs/wn_particle_editor.gif)
+
+## What's new in Rendering
+
+![](../images/rendering_rn.png)
+
+### Light baking improvements
+
+- The light baker is now more stable and has been optimized to run faster on most scenes and hardware. See ~{ Baking with the Stingray baker }~.
+- You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See ~{ Bake lightmaps }~.
+- Click **Clear** in the **Light Baking** window to quickly delete and unmap all lightmaps on disk.
+- You can now start a standalone baking session using a command-line prompt. For details, see ~{ Trigger lightmap baking from the command line }~.
+-	Beast is now deprecated.
+
+### Tessellation support
+
+Tessellation can now be activated using the standard base material node. Use the **Tesselation Factor** input on the base node to control the tesselation factor of your surface. A lower value results in a less tessellation. See ~{ Create a tessellation material }~.
+
+### Negative scale support
+
+Stingray shaders now support negative scale. See ~{ Assign a material to an object }~.
+
+### Texture Manager updates
+
+- New **Cubemap** and **HDRI/Skydome** category filters
+- New texture template for imported skydome images
 
 ## Better network workflows: Run multiple local game instances
 
@@ -163,31 +189,6 @@ Stingray now supports high definition range EXR files for image based lighting. 
 ### Updated PhysX plug-in
 
 The PhysX plug-in installers for Maya 2017 and Maya LT 2017 that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.21117.04582. For related information, see ~{ Install the PhysX plug-in for your DCC tool }~.
-
-## What's new in Rendering
-
-![](../images/rendering_rn.png)
-
-### Light baking improvements
-
-- The light baker is now more stable and has been optimized to run faster on most scenes and hardware. See ~{ Baking with the Stingray baker }~.
-- You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See ~{ Bake lightmaps }~.
-- Click **Clear** in the **Light Baking** window to quickly delete and unmap all lightmaps on disk.
-- You can now start a standalone baking session using a command-line prompt. For details, see ~{ Trigger lightmap baking from the command line }~.
--	Beast is now deprecated.
-
-### Tessellation support
-
-Tessellation can now be activated using the standard base material node. Use the **Tesselation Factor** input on the base node to control the tesselation factor of your surface. A lower value results in a less tessellation. See ~{ Create a tessellation material }~.
-
-### Negative scale support
-
-Stingray shaders now support negative scale. See ~{ Assign a material to an object }~.
-
-### Texture Manager updates
-
-- New **Cubemap** and **HDRI/Skydome** category filters
--	New texture template for imported skydome images
 
 [Return to top](#top)
 
@@ -475,6 +476,10 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 	The first time you send assets between 3ds Max and Stingray using **Stingray > Level Send All** (in 3ds Max), the import operation stalls if **Update textures** is on.  
 
 	**Workaround:** Turn off **Update textures** the first time you send assets with **Level Send All**. On subsequent level sync operations, you can then use **Level Send Selected** or **Level Send All** with **Update textures** on as required.
+
+- **GAME-21615: First frames rendered by Capture Frames tool are not part of the animation in the story**
+
+	**Workaround:** Let the Capture Frames tool run a few frames longer to make sure all animation is captured.
 
 [Return to top](#top)
 
