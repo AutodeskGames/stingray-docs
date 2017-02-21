@@ -3,9 +3,9 @@
 
 Welcome to Stingray 1.7 (1.7.1177.0). This release contains fixes and enhancements to several areas of Stingray, including an improved texture import process, rendering workflows, and interop with Maya. You'll also find a brand new **Particle Editor** which consolidates the particle editing workflow into a single, streamlined window, as well as improvements in the **Capture Frames** and **Story Editor** tools.
 
-This update also provides two new project templates designed to help you build VR projects for mobile, and adds support for Google Cardboard on iOS, Google Daydream devices and controllers, and Google Cardboard for Android on Daydream devices. 
- 
-In addition, we've made it easier to find and download example content for your projects with the new **Online Assets** tab in the **Asset Browser**, which lets you build up a scene in minutes. Refer to the [What's New](#whats-new) section below for details on these features and more.
+This update also provides two new project templates designed to help you build VR projects for mobile, and adds support for Google Cardboard on iOS, Google Daydream devices and controllers, and Google Cardboard for Android on Daydream devices.
+
+In addition, we've made it easier to find and download example content with the new **Online Assets** tab in the **Asset Browser**, which lets you build a scene in minutes. Refer to the [What's New](#whats-new) section below for details on these features and more.
 
 Sections in this topic:
 
@@ -25,11 +25,19 @@ Sections in this topic:
 
 	If you're working on a project that you started in an earlier version of Stingray, this section lists the steps you may need to take in order to successfully upgrade to the latest version.
 
-	For example, with Stingray 1.7 we upgraded to Wwise version 2016.1.3, so you'll need to regenerate sound banks for your existing projects.
-
 ## What's New
 
 * * *
+
+## Better texture import with automatic compression
+
+Textures are now automatically compressed when you import them in Stingray. Depending on the texture type, Stingray assigns the texture template and compression settings for the imported textures for each platform. Texture compressions are applied by texture file suffix match or by image analysis. You can still tweak the textures as required, but you no longer need to manually compress textures on import. For details, see ~{ Import textures}~ and ~{ Create a texture template }~.
+
+## Particle Editor
+
+In previous versions of Stingray, you created and edited particle effects using the **Asset Browser**, **Property Editor**, and **Asset Preview**. With Stingray 1.7, we're pleased to give you a standalone **Particle Editor** that streamlines the workflow for particle artists. Select **Window > Particle Editor** from the main menu, or double-click an existing particle effect in the **Asset Browser** to launch the new tool. For more information, see ~{ Create and edit particle effects }~.
+
+![](../gifs/wn_particle_editor.gif)
 
 ## What's new in VR
 
@@ -52,23 +60,6 @@ Use these templates to start building your VR projects for Google Daydream devic
 See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse, find and import assets directly from online to your project. Right-click an online asset and select **Download Asset** to download and install the asset package to a category specific folder in the project. Updated topic include: ~{ Download assets and example projects }~.
 
 ![](../images/online_assets_rn.png)
-
-## Improved Capture Frames Tool
-
-<a name="capture-frames"></a>
-![](../images/capture_frames_rn.png)
-
-The **Capture Frames** Tool is now a standalone tool connected to the **Story Editor**. Simply create a story and click ![Capture Frames](../images/icon_capture_frame.png) to adjust your **Capture Settings**. New settings include support for different cameras and resolutions, and options to save and reuse your settings. Capturing can also be initiated through new Capture Flow Nodes. For details, see ~{ Capture Frames Tool }~.
-
-## Better texture import with automatic compression
-
-Textures are now automatically compressed when you import them in Stingray. Depending on the texture type, Stingray assigns the texture template and compression settings for the imported textures for each platform. Texture compressions are applied by texture file suffix match or by image analysis. You can still tweak the textures as required, but you no longer need to manually compress textures on import. For details, see ~{ Import textures}~ and ~{ Create a texture template }~.
-
-## Particle Editor
-
-In previous versions of Stingray, you created and edited particle effects using the **Asset Browser**, **Property Editor**, and **Asset Preview**. With Stingray 1.7, we're pleased to give you a standalone **Particle Editor** that streamlines the workflow for particle artists. Select **Window > Particle Editor** from the main menu, or double-click an existing particle effect in the **Asset Browser** to launch the new tool. For more information, see ~{ Create and edit particle effects }~.
-
-![](../gifs/wn_particle_editor.gif)
 
 ## What's new in Rendering
 
@@ -95,6 +86,21 @@ Stingray shaders now support negative scale. See ~{ Assign a material to an obje
 - New **Cubemap** and **HDRI/Skydome** category filters
 - New texture template for imported skydome images
 
+## Improved Capture Frames Tool
+
+<a name="capture-frames"></a>
+![](../images/capture_frames_rn.png)
+
+The **Capture Frames** Tool is now a standalone tool connected to the **Story Editor**. Simply create a story and click ![Capture Frames](../images/icon_capture_frame.png) to adjust your **Capture Settings**. New settings include support for different cameras and resolutions, and options to save and reuse your settings. Capturing can also be initiated through new Capture Flow Nodes. For details, see ~{ Capture Frames Tool }~.
+
+## More Story Editor improvements
+
+-	Copy keyframes and paste them on the current time in the timeline or on the cursor position using either the hotkeys or by right click context menu in the **Story Editor**. You can also copy keys from multiple tracks and paste them on other tracks based on the order of track selection. Updated topics include ~{ Create simple animations with the Story Editor }~ and ~{ Story Editor hotkeys }~.
+-	New reverse play icon ![](../images/icon_story_reversePlay.png) to play stories in reverse direction.
+-	Stories now stop playing at the end of the playback range in *None* playback mode. See ~{ Story Editor }~.
+- A Capture Frame Tool icon ![](../images/icon_capture_frame.png) to access Capture Frame Settings; a story must be created to enable this mode. See [Improved Capture Frames Tool](#capture-frames).
+
+
 ## Better network workflows: Run multiple local game instances
 
 The **Connections** panel now lets you add multiple localhost PC targets, which means you can automatically start multiple targets with separate command lines on your local machine when you click **Run Project** ![](../images/icon_runProject.png). This makes it easier to debug and look at the console output for multiple targets using the editor engine instance dropdowns. See also ~{ Using the Connections panel }~.
@@ -110,13 +116,6 @@ At the bottom of most pages in the Stingray Help, you'll now see a green button 
 You can now import font files to generate font resources to render text with sharp edges and preserve them when scaling. When you import font files, this generates the multi-channel signed distance field resources to display the font in your project. This feature is enabled by the *Distance Field Font Importer* plug-in, which is automatically enabled in the **Plugin Manager**. (See ~{ Add and remove plug-ins using the Plugin Manager }~.)
 
 See ~{ Import fonts }~.
-
-## Story Editor improvements
-
--	Copy keyframes and paste them on the current time in the timeline or on the cursor position using either the hotkeys or by right click context menu in the **Story Editor**. You can also copy keys from multiple tracks and paste them on other tracks based on the order of track selection. Updated topics include ~{ Create simple animations with the Story Editor }~ and ~{ Story Editor hotkeys }~.
--	New reverse play icon ![](../images/icon_story_reversePlay.png) to play stories in reverse direction.
--	Stories now stop playing at the end of the playback range in *None* playback mode. See ~{ Story Editor }~.
-- A Capture Frame Tool icon ![](../images/icon_capture_frame.png) to access Capture Frame Settings; a story must be created to enable this mode. See [Improved Capture Frames Tool](#capture-frames).
 
 ## Trim animation clips
 
