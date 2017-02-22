@@ -8,18 +8,20 @@ Level sync lets you link and export entire scenes built in Maya, Maya LT, or 3ds
 
 ## Send selected assets from Maya or Maya LT with level sync
 
-1. Establish a live editing link between Stingray and your DCC. See ~{ Send assets to a DCC }~.
+1. Establish a live editing link between Stingray and your DCC tool. See ~{ Send assets to a DCC tool }~.
 2. Tag the assets you want to send to Stingray. See ~{ Tag assets with Level Sync }~.
-3. In your DCC, select **Stingray > Send Selected > ![](../../images/opt_box.png)**.
+3. In your DCC tool, select **Stingray > Send Selected > ![](../../images/opt_box.png)**.
 4. (Optional) In the **Send Level** window that appears, turn on **Send Missing Assets** to ensure assets that are missing from the project are included in the export.
 5. Click **Apply and Close**
 <br>
   The selected asset(s) is sent to Stingray and opens in the current scene.
 
+  >**Note:** [![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html) After level-syncing your assets, you can still make updates to your assets in Maya or Maya LT and send them to Stingray. Turn on **Update Existing Assets** in the **Send Level** window before sending your scene.
+
 ## Send all assets from Maya or Maya LT with level sync
-1. Establish a live editing link between Stingray and your DCC. See ~{ Send assets to a DCC }~.
+1. Establish a live editing link between Stingray and your DCC tool. See ~{ Send assets to a DCC tool }~.
 2. Tag the assets you want to send to Stingray. See ~{ Tag assets with Level Sync }~.
-3. In your DCC, select **Stingray > Send All > ![](../../images/opt_box.png)**.
+3. In your DCC tool, select **Stingray > Send All > ![](../../images/opt_box.png)**.
 4. (Optional) In the **Send Level** window that appears, turn on **Send Missing Assets** to ensure assets that are missing from the project are included in the export.
 5. Click **Apply and Close**
 <br>

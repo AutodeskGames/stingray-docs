@@ -1,7 +1,5 @@
 # Shading environment properties
 
-![UPDATED](../../images/updated.png)
-
 This page describes the properties that are available in the Property Editor panel when you select the shading environment for a level.
 
 ## Global Lighting
@@ -118,13 +116,13 @@ The Stingray Editor viewport also offers a visualization mode that can be helpfu
 <dd>Turns screen space ambient occlusion on and off.</dd>
 
 <dt>Half-Res</dt>
-<dd>[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html) When enabled (default), runs SSAO at half-resolution. Running the effect at a reduced resolution lets you gain performance without sacrificing visuals, optimizing your results.</dd>
+<dd>When enabled (default), runs SSAO at half-resolution. Running the effect at a reduced resolution lets you gain performance without sacrificing visuals, optimizing your results.</dd>
 
 <dt>Quality</dt>
 <dd>Controls how many samples are used to calculate the shadow. Lower values produce a more blocky shadow, but are faster to calculate. Larger values produce smoother and softer shadowing, but require more processing.</dd>
 
 <dt>World Space Radius</dt>
-<dd>[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html) When enabled, calculates the radius of the ambient occlusion hemisphere in world units. When disabled, screen units are used.
+<dd>When enabled, calculates the radius of the ambient occlusion hemisphere in world units. When disabled, screen units are used.
 
 ![World space radius](../../images/ssao_world_space_ex.jpg)
 
@@ -143,23 +141,22 @@ In the following example, the camera is zoomed in on objects. Screen space radiu
 <dd>The rate at which the shadows fade from maximum opacity to minimum opacity. Lower values produce a more sudden fade; larger values produce a smoother gradient spread over a greater percentage of the shadow radius.</dd>
 
 <dt>Angle Bias</dt>
-<dd>[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
-**Angle Bias** prevents self occlusion in your scene.  In the following example, the self intersection issues are fixed by increasing Angle Bias to 0.2.
+<dd>**Angle Bias** prevents self occlusion in your scene.  In the following example, the self intersection issues are fixed by increasing Angle Bias to 0.2.
 
 ![Angle Bias](../../images/ssao_angle_bias.jpg)
  </dd>
 
 <dt>Reflection Occlusion Intensity</dt>
-<dd>[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html) Controls the amount of baked data that is used where occlusion is high. Modify this value if the reflection is removing too much of the contact shadows in your scene.</dd>
+<dd>Controls the amount of baked data that is used where occlusion is high. Modify this value if the reflection is removing too much of the contact shadows in your scene.</dd>
 
 <dt>Reflection Occlusion Falloff</dt>
-<dd>[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html) Scales the contribution from the baked AO, offering more artistic control. Modify this value if the reflection is removing too much of the contact shadows in your scene. In the following example, Reflection Occlusion Falloff was increased, and AO vizualization mode is used to illustrate the results.
+<dd>Scales the contribution from the baked AO, offering more artistic control. Modify this value if the reflection is removing too much of the contact shadows in your scene. In the following example, Reflection Occlusion Falloff was increased, and AO vizualization mode is used to illustrate the results.
 
 ![Reflection Occlusion Falloff](../../images/ssao_occlusion_falloff_ao.jpg)
 </dd>
 
 <dt>Baked Diffuse Intensity</dt>
-<dd>[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html) Controls the intensity of ambient data. Modify this value if you want more contribution to the diffuse lighting from your light baked AO.
+<dd>Controls the intensity of ambient data. Modify this value if you want more contribution to the diffuse lighting from your light baked AO.
 
 ![Baked Diffuse Intensity](../../images/ssao_baked_diffuse_intensity.jpg)
 </dd>
@@ -338,7 +335,7 @@ The Vignette effect adds a grayscale overlay that darkens the corners of the vie
 
 ## Color Grading
 
-Color grading changes the color space of the rendered images produced by the Stingray renderer. The effect is to adjust the colors, hue, saturation, brightness, etc. of the game, based on a volume map texture that you provide.
+Color grading changes the color space of the rendered images produced by the Stingray renderer. The effect is to adjust things like the colors, hue, saturation, and brightness of the game, based on a volume map texture that you provide.
 
 For example, the following image boosts the contrast and shifts the colors toward blue.
 

@@ -66,7 +66,7 @@ For example, an animation clip recorded on a flat ground can be warped to play b
 
 	You can control HumanIK using HumanIK flow nodes. Both level flow graphs and unit flow graphs are supported.
 
-	You can enable HumanIK in the level flow graph, when the **Event > Level Loaded** event gets triggered. up
+	You can enable HumanIK in the level flow graph, when the **Event > Level Loaded** event gets triggered.
 
 2. Equip your character with all constraints it might use during its lifetime - in this case, the floor contact related constraints (the Full Body Plant and the Legs Plant constraints).
 

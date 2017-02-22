@@ -1,6 +1,6 @@
 # View animated blend shape targets in Stingray
 
-After you create blend shapes in your DCC and import them in to Stingray, any animated target shapes you added to your base object in your DCC are not automatically visible. You can use animation controllers or flow to setup your animation in Stingray.
+After you create blend shapes in your DCC tool and import them in to Stingray, any animated target shapes you added to your base object in your DCC tool are not automatically visible. You can use animation controllers or flow to setup your animation in Stingray.
 
 ## View the animated targets in Stingray using animation controllers
 
@@ -33,4 +33,5 @@ In order to replicate the behavior that , you can compose a level flow graph tha
 	- Use flow with spawning.
 		<br>
 		![](../../images/blend_shape_spawn.png)
+
 		This flow graph features a character as the blend shape with targets that each represent a different facial expression.

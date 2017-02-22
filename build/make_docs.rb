@@ -145,6 +145,8 @@ def build()
 		ENV["SR_DOC_DIR"] = ""
 		ENV["SR_DOCTOOLS_DIR"] = ""
 		# Generate the main help and bundle it
+		puts "Getting latest command docs..."
+		system("ruby", "#{$script_dir}/scripts/get_content_from_cpp.rb")
 		puts "Generating and bundling the full Stingray help..."
 		ENV["SR_ENGINE_DIR"] = "#{$engine_dir}".gsub("/","\\")
 		system("#{$doctools_dir}/tools/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_stingray_help.xml")

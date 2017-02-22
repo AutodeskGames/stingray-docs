@@ -8,7 +8,7 @@ Select the shading environment entity in the ~{ Explorer panel }~ and change its
 
 ## Story Editor
 
-You can use the **Story Editor** to create a story that animates the properties of your level's shading environment. You can key different properties over time in order to simulate different scenarios or effects like changing times of day, changing locations, etc. When you play your story at runtime by triggering it in your Flow or Lua gameplay code, you'll see your shading environment adjust itself accordingly.
+You can use the **Story Editor** to create a story that animates the properties of your level's shading environment. You can key different properties over time in order to simulate different scenarios or effects like changing times of day, or changing locations. When you play your story at runtime by triggering it in your Flow or Lua gameplay code, you'll see your shading environment adjust itself accordingly.
 
 See ~{ Animate a shading environment with the Story Editor }~.
 

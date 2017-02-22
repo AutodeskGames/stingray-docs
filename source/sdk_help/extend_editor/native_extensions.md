@@ -10,7 +10,7 @@ Unlike other editor extensions, you don't have to add anything into your *.plugi
 
 -	The example plug-in repository contains an example that uses a *.dll* to extend the editor. If you don't already have these examples, see ~{ Example Plug-ins }~.
 
-	The one you'll want to look at is under `editor_plugins/editor_native_code`.
+	The one you'll want to look at is under `samples/editor_native_code`.
 
 -	You'll need the SDK header files. You can find them under `stingray_sdk` in the example repository, or under `plugin_sdk/editor_plugin_api` in your Stingray installation folder.
 

@@ -1,8 +1,10 @@
 #Story Editor
 
+![UPDATED](../images/updated.png)
+
 - **Window > Story Editor**
 
-The **Story Editor** is a tool for creating simple animation on objects/units and entities within a level. You can add units and entities to Story and animate their transforms and other parameters using keyframe animation. (You cannot use animation clips in Story.)
+The **Story Editor** is a tool for creating simple animation on objects/units and entities within a level. You can add units and entities to Story and animate their transforms and other parameters using keyframe animation. (You cannot use animation clips in Story.) See also ~{ Create simple animations with the Story Editor }~.
 
 This editor consists of the following main areas:
 
@@ -10,17 +12,17 @@ This editor consists of the following main areas:
 
 Refer to the sections below for more detail on each area.
 
-
 ##LIVE button
 
 ![](../images/icon_storyEd_LIVE.png)
 
-Enables Story mode, making the **Story Editor** live so you can start to add keyframe animation on selected objects.
+Click to toggle Story mode. When on, the **Story Editor** is "live" so you can start to add keyframe animation on selected objects.
 
-You can also select, move, delete, or modify key values when the **Story Editor** is not Live.
+  > **Important:** When Story mode is on, changing the position of the unit in the level has no effect. To edit the position of the unit in the level again, exit Story mode. (Click LIVE to toggle the mode on and off.)
+
+You can still select, move, delete, or modify key values when the **Story Editor** is not live.
 
   > **Note:** As you animate units in the **Story Editor**, the animation plays back only in the **Level Viewport**, it cannot playback on connected devices.
-
 
 ##Story controls
 
@@ -36,75 +38,37 @@ When working on multiple stories within a level, use the Current Story drop-down
 
 The **Story Editor** toolbar includes the following:
 
-**Playback Controls**
+| Controls |  Description |
+|----------| -------------|
+| **Playback Controls** ![](../images/storyEd_playbackCtrls.png) | Use the playback controls to preview animations in the **Level Viewport**, as you edit the unit animation in the **Story Editor**. Use ![](../images/icon_story_forwardPlay.png) to play animation in forward direction and ![](../images/icon_story_reversePlay.png) to play in reverse direction.<br> To change the [playback mode](#playback), select ![](../images/storyEd_loopmode_none.png), right-click to select **Loop** or **Ping Pong**.  |
+| **Snap** ![](../images/icon_storyEd_snapping.png) | Enables snapping to frames or seconds in the timeline.|
+| **Autokey** ![](../images/icon_storyEd_autokey.png) | When on, after you keyframe an object once, the object is automatically keyframed every time you manipulate it in the **Level Viewport**. |
+| **Time mode** ![](../images/icon_storyEd_timeMode.png)![](../images/icon_storyEd_timeModeframes.png) | Toggle the timeline to display seconds, or frames. |
+| **Edit key fields** ![](../images/storyEd_keyFields.png) | Manually enter time and value for a selected keyframe.|
+| **Key & Tangent options** ![](../images/comp_storyEd_keyOptions.png) | Use the key and tangent options to add or remove keyframes and tangent modes. |
+| **Story Selection mask** ![](../images/icon_storyEd_selOnlyStory.png) | Masks selection so that you can select only objects in the current story.|
+| **Onion skinning** ![](../images/icon_storyEd_onionskin.png) | Toggles the display of ghosting on selected units. Right-click to specify whether to ghost **Everything**, or only **Selected units**. To access additional **Onion Skinning Settings** (including color) in the **Properties** panel, select a `StoryRoot` in the **Story Editor** tree view, or in the main **Explorer** panel. |
+| [![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html)  **Capture Frames Tool** | Opens the ~{ Capture Frames Tool }~. See also ~{ Capture frames to disk }~. |
+| **Curve editor/Key editor** ![](../images/icon_storyEd_wrench.png) | Use the curve icon in the toolbar to switch between the different editing views in this area. <br>Curve editing mode: ![](../images/storyEd_curvePanel.png) <br> **Tip:** Select keys on the same curve and enter a value in the edit key field on the toolbar to edit multiple keys at once. <br> Key editing mode: ![](../images/storyEd_keysPanel.png) |
 
-![](../images/storyEd_playbackCtrls.png)
+**Controlling story playback**
+<a name="playback"></a>
 
-Use the playback controls to preview animations in the **Level Viewport**, as you edit the unit animation in the **Story Editor**.
+![UPDATED](../images/updated.png)
 
-**Snap**
+The Story Editor offers the following playback modes, which control what happens when the story reaches the end of its playback range.
 
-![](../images/icon_storyEd_snapping.png)
+-  **None ![](../images/storyEd_loopmode_none.png) :** The animation stops at the end of the timeline range.
+- **Loop ![](../images/storyEd_loopmode.png):**  The animation restarts from the beginning each time it reaches the end of the playback range.
+- **Ping Pong ![](../images/storyEd_pingmode.png):** The animation switches playback direction each time it reaches one end of the playback range. It plays forward until it reaches the end of the playback range, then plays the animation in reverse until it reaches the start of the playback range, and switches direction to repeat the cycle.
 
-Enables snapping to frames or seconds in the timeline.
+By default, unit animations play in **None** mode.
 
+For a unit track, the **Pre Infinite** and **Post Infinite** settings (right-click the unit’s individual transform or other properties) define the animation curve behavior before the first key and after the last key of the track in the active timeline range. You can use these settings to make animations play longer in **None** mode, and to control the way curves are handled outside the playback range. To set the playback range,
 
-**Autokey**
-
-![](../images/icon_storyEd_autokey.png)
-
-When on, after you keyframe an object once, the object is automatically keyframed every time you manipulate it in the **Level Viewport**.
-<br>
-
-**Time mode**
-
-![](../images/icon_storyEd_timeMode.png)![](../images/icon_storyEd_timeModeframes.png)
-
-Toggle the timeline to display seconds, or frames.
-
-**Edit key fields**
-
-![](../images/storyEd_keyFields.png)
-
-Manually enter time and value for a selected keyframe.
-
-
-**Key & Tangent options**
-
-![](../images/comp_storyEd_keyOptions.png)
-
-
-**Story Selection mask**
-
-![](../images/icon_storyEd_selOnlyStory.png)
-
-Masks selection so that you can select only objects in the current story.
-
-
-**Onion skinning**
-
-![](../images/icon_storyEd_onionskin.png)
-
-Toggles the display of ghosting on selected units. Right-click to specify whether to ghost **Everything**, or only **Selected units**.
-
-To access additional **Onion Skinning Settings** (including color) in the **Properties** panel, select a `StoryRoot` in the **Story Editor** tree view, or in the main **Explorer** panel.
-
-**Curve editor/Key editor**
-
-![](../images/icon_storyEd_wrench.png)
-
-Use the curve icon in the toolbar to switch between the different editing views in this area.
-
-Curve editing mode:
-
-![](../images/storyEd_curvePanel.png)
-
-   > **Tip:** Select keys on the same curve and enter a value in the edit key field on the toolbar to edit multiple keys at once.
-
-Key editing mode:
-
-![](../images/storyEd_keysPanel.png)
-
+- Drag the black sliders in the Story Editor timeline to a new time.
+- Modify the story loop range value using `stingray.StoryTeller.set_loop_range()` function in Lua or **Level > Level Story** node in Flow.
+- Select a `StoryRoot` in the Story Editor tree view or **Explorer** panel and modify the **Story Settings** start and end time.
 
 ##Timeline
 

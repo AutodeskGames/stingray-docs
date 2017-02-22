@@ -1,8 +1,8 @@
 # Particle system properties
 
-When you select a Particle Effect in the **Asset Browser**, the following properties display in the **Property Editor**.
+When you select a Particle Effect in the **Particle Editor**, the following properties display.
 
-Click Replay at any time to view the effect of your changes as you edit the properties of the particle effect system.
+[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Click Respawn ![](../images/icon_particle_respawn.png) at any time to view the effect of your changes as you edit the properties of the particle effect system.
 
 ##System properties:
 <dl>
@@ -130,8 +130,6 @@ Right-click a particle system in the **Property Editor** to add the following co
 
 ### Material
 
-[![UPDATED](../images/updated.png "What else is new in v1.3?")](../release_notes/readme_1_3.html)
-
 - Shadow Caster
 
 > **Note:** The following components previously available under the Material category are now deprecated, and listed under the (deprecated) category.
@@ -183,6 +181,6 @@ Right-click a particle system in the **Property Editor** to add the following co
 - Scale
 
 ### Visualizer
-- [![NEW](../images/new.png "What else is new in v1.3?")](../release_notes/readme_1_3.html) Billboard
+- Billboard
 - Light
 - Mesh

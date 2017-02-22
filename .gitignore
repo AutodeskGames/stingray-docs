@@ -2,3 +2,9 @@ build/archives/
 build/logs/
 build/temp*/
 output/
+
+# these two files are updated automatically during the build with content
+# that we extract from the engine source code.
+
+source/stingray_help/reference/console_commands.md
+source/stingray_help/reference/engine_command_line.md

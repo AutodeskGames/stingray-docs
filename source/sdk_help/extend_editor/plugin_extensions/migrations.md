@@ -48,11 +48,28 @@ extensions = {
 
 `version`
 
->	A plug-in version number that is compared against the last version number saved in the project for your plug-in. See [How it works] above. Optional, but if omitted, the migration patch will only ever be applied.
+>	A plug-in version number that is compared against the last version number saved in the project for your plug-in. See [How it works] above. Optional. If omitted, the migration patch will only be applied if no other migration patches have ever been recorded for this plug-in with the current project.
 
 `do`
 
 >	An action or an array of actions that the editor will carry out if it determines from the `id` and `version` settings that the project needs to be migrated. Each action can be either the name of an action that you have already set up in the `actions` extension, or an inline action definition. For more information, see ~{ Register an action }~. Required.
+>
+>	Your action should produce a string value. This value will be saved in the project settings along with this ID, to indicate the result of this plug-in migration.
+>
+>	-	If your action points to a function that is defined in a script module, your function can simply return the string you want to save.
+>
+>	-	If your action is defined inline in your plugin, you can return the string as follows:
+>
+>		~~~{js}
+>		{
+>			name = "migration_action_1"
+>			type = "js"
+>			script = """
+>				// ... do migration tasks here
+>				"the string to be saved"
+>			"""
+>		}
+>		~~~
 
 `rollback`
 

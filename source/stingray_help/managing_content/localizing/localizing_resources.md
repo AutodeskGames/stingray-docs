@@ -88,4 +88,4 @@ For simplicity, multiple suffixes on a resource are not supported. At most one s
 
 ## Game authoring with localized resources
 
-While you are working on your game, always refer to the most generic version of your resources. If you explicitly put `big_white_rock.ps4` units in a level, then that resource will be used on all platforms. To get the override resolution, you should put `big_white_rock` units in the level and they will be automatically remapped to `big_white_rock.ps4`, `big_white_rock.xb1`, etc based on your override settings.
+While you are working on your game, always refer to the most generic version of your resources. If you explicitly put `big_white_rock.ps4` units in a level, then that resource will be used on all platforms. To get the override resolution, you should put `big_white_rock` units in the level and they will be automatically remapped to `big_white_rock.ps4`, `big_white_rock.xb1`, based on your override settings.

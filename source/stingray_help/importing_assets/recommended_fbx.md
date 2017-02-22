@@ -61,7 +61,7 @@ Under **Units**:
 
 - **Units** is set to **Automatic**
 
-> **Note:** There is a known limitation related to units when exporting PhysX data from Maya or Maya LT. See ~{ Install the PhysX plug-in for your DCC }~.
+> **Note:** There is a known limitation related to units when exporting PhysX data from Maya or Maya LT. See ~{ Install the PhysX plug-in for your DCC tool }~.
 
 Under **Connections**:
 

@@ -6,7 +6,7 @@ The topics in this section describe how to control the way the surfaces of your 
 
 Assets that contain modeled 3D meshes usually also contain some information about how those meshes are supposed to be rendered, or *shaded*. The terminology involved sometimes differs between different tools and applications, but the principles are more or less the same.
 
-Each mesh usually has one or more *materials* assigned to its faces. Each one of these materials is a collection of settings that define specific aspects of the way that surface should look. This includes things like what color the surface is, how smooth or rough it is, etc. So one material might make a model look like it's made of wood, and another material might make a model look like shiny red metal.
+Each mesh usually has one or more *materials* assigned to its faces. Each one of these materials is a collection of settings that define specific aspects of the way that surface should look. This includes things like what color the surface is, how smooth or rough it is, and so on. So one material might make a model look like it's made of wood, and another material might make a model look like shiny red metal.
 
 Materials may also use *textures* to vary their characteristics over the surface. A texture is essentially a two-dimensional color image that is wrapped around the 3D model when it is rendered. The way that the 2D color image is applied to the faces of the 3D model is defined by a *UV set* that accompanies the mesh: a mapping between the vertices of the 3D mesh and the two-dimensional image space (UV space).
 

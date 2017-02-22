@@ -58,7 +58,7 @@
 		<contextId include="*\object_panel.html" id="tools_object_panel"></contextId>
 		<contextId include="*\property_editor.html" id="tools_property_editor"></contextId>
 		<contextId include="*\connections.html" id="tools_connections"></contextId>
-		<contextId include="*\debugger_view.html" id="tools_debugger_view"></contextId>
+		<contextId include="*\script_debugger.html" id="tools_debugger_view"></contextId>
 		<contextId include="*\deployer.html" id="tools_deployer"></contextId>
 		<contextId include="*\asset_browser.html" id="tools_asset_browser"></contextId>
 		<contextId include="*\script_editor.html" id="tools_script_editor"></contextId>
@@ -76,6 +76,7 @@
 		<contextId include="*\project_manager.html" id="tools_project_manager"></contextId>
 		<contextId include="*\system_requirements.html" id="system_requirements"></contextId>
 		<contextId include="*\object_lifetimes.html" id="lua_userdata_binding"></contextId>
+		<contextId include="*\get_started_android.html" id="get_started_android"></contextId>
 		<!-- context IDs used by directed learning. -->
 		<contextId include="*\snap_objects.html" id="snap_objects"></contextId>
 		<contextId include="*\about_units_and_entities.html" id="units_and_entities"></contextId>
@@ -87,6 +88,8 @@
 		<contextId include="*\animation_controllers.html" id="animation_controllers"></contextId>
 		<contextId include="*\tutorial_next_steps.html" id="tutorial_next_steps"></contextId>
 		<contextId include="*\content_lifecycle.html" id="tutorial_compile"></contextId>
+		<contextId include="*\link_to_dcc.html" id="interop_plugins"></contextId>
+		<contextId include="*\about_engine_configs.html" id="engine_configs"></contextId>
 		<replace pattern="BEGIN_STANDALONE.*END_STANDALONE" replacement="" include="*.html"></replace>
 		<insert_family_links include="\stingray_help\*,\changelog\*"></insert_family_links>
 		<validate_todos>true</validate_todos>
@@ -109,7 +112,11 @@
 	</merge>
 
 	<merge id="stingray_help">
-		<source convert_from="markdown" get_metadata="true">..\source\stingray_help\*.md</source>
+		<source convert_from="markdown"
+			get_metadata="true"
+			github_root_public="https://www.github.com/AutodeskGames/stingray-docs/tree/master/source/stingray_help"
+			github_root_internal="https://git.autodesk.com/gameware/stingray-docs/tree/release/1.7.0/source/stingray_help"
+			>..\source\stingray_help\*.md</source>
 		<source>..\source\stingray_help\*.png</source>
 		<source>..\source\stingray_help\*.jp*g</source>
 		<source>..\source\stingray_help\*.gif</source>

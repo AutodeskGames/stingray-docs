@@ -1,12 +1,10 @@
 # About the project structure
 
-[![UPDATED](../../images/updated.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
-
 This topic provides a basic explanation of how Stingray projects are organized.
 
 ## Project directories: source and compiled data
 
-[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html) When you create a new project, Stingray creates a folder with the same name as your project in the location you specify on disk. This top level <projectname> folder contains a set of project folders:  `<projectname>`,`<projectname>_data` and `<projectname>_wwise` .
+When you create a new project, Stingray creates a folder with the same name as your project in the location you specify on disk. This top level <projectname> folder contains a set of project folders:  `<projectname>`,`<projectname>_data` and `<projectname>_wwise` .
 
 Think of the `<projectname>` folder under the top level folder as the source folder for your project, containing all the files you'll work with to build your game: exported models, textures, scripts, and so on. All Stingray tools and editors read and write to this source directory.
 
@@ -14,7 +12,7 @@ The second folder, `<projectname>_data`, contains your source data compiled into
 
 Stingray creates a third folder, `<projectname>_wwise>`, which is set up for authoring audio content using Wwise. (See ~{ Working with audio }~  ).
 
-[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html) Stingray also creates a Stingray project file with a `stingray_project` extension, which contains project information including the Stingray version, the default template and level loaded, Wwise project settings and migration settings.
+Stingray also creates a Stingray project file with a `stingray_project` extension, which contains project information including the Stingray version, the default template and level loaded, Wwise project settings and migration settings.
 
 If you want to share your project with someone else, or if you want to check your project in to a version control system such as Git or SVN, you typically only need to worry about the source directory and the `_wwise` directory. Since the compiled data is always regenerated from the source directory, you don't need to redistribute it or check it into a source control system. See also ~{ Work with a version control system }~.
 
@@ -60,9 +58,11 @@ Each project source file contains the following files: `EditorSettings.config`, 
 
 A resource file with the `.package` extension specifies a resource package: a chunk of related resources that will be stored, loaded and unloaded together in the final builds of the game.
 
-When you start a new project based on a template provided with Stingray, your project is pre-set (in its `settings.ini` file) to load this `boot.package` file at startup, which automatically loads all resources in the project.
+When you start a new project based on a template provided with Stingray, your project is preset (in its `settings.ini` file) to load this `boot.package` file at startup. This package file determines which resources in the project get loaded into the engine when you run or deploy the project.
 
-As you add more content to your game, you will eventually want to divide your game content into multiple packages that you load and unload on demand. For details, see ~{ Managing content and resources }~.
+By default, this package includes all the resources that you see in the project. As you add more content to the project, you'll have to make sure that your new content is also covered by the boot package. See ~{ Defining resource packages }~ for details on how to add things to the package file.
+
+Eventually you will probably want to divide your game content into multiple packages, which you load and unload on demand. For details, see ~{ Managing content and resources }~.
 
 ### EditorSettings.config
 
@@ -79,6 +79,5 @@ This file provides a variety of user-editable settings that control the operatio
 For details on all the settings that you can provide in this file, see ~{ Stingray engine settings.ini file reference }~.
 
 ### project.settings
-[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
 
 This file is created when you migrate a project from earlier versions of Stingray and records the project settings for the migrated project.

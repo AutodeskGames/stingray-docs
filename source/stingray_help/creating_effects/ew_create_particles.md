@@ -18,18 +18,22 @@
 
 Particle systems are simply a group of commands that guide each particle from birth to death.  To begin, lets take a look at the default system.
 
-1.	Select the particle effect asset to view its properties in the **Property Editor**, then select System1.
+1.	Select the particle effect asset and double-click to view its properties in the **Particle Editor**, then select System1.
 	The general properties of this system display.
 
-2. Select the **Emitter:Rate** component to view those properties.
+3.	Since we only need an Emitter and  Size component for the particle effect to work properly, right-click **Billboard Visualizer** and select **Remove Controller**.
+
+	The System now has only three components **Emitter:Rate**, **Size**, and **Color**.
+
+4. Select the **Emitter:Rate** component to view those properties.
 
 	![](../images/emitter_rate.png)
 
 	For now the default properties are fine.
 
-3. Select the **Size** component, change the Min value to 1, and the Max value to 2.
+5. Select the **Size** component, change the Min value to 1, and the Max value to 2.
 
-4. In the ~{ Asset Preview }~ window, click the gear icon ![](../images/icon_assetPreview.png)  and select **Update Mode > Always**.
+6. In the ~{ Asset Preview }~ window, click the gear icon ![](../images/icon_assetPreview.png)  and select **Update Mode > Always**.
 	(This is best when working with particle effects.)
 
 	Right now the system is rapidly creating particles, but since they have no motion we only see a single square pixel. In the next steps, you'll add more components to make the effect more interesting.
@@ -98,9 +102,8 @@ Particle systems are simply a group of commands that guide each particle from bi
 
 ##Step 5: Save the effect
 
-In the **Asset Browser**, right-click the effect and select **Save**.
+In the **Particle Editor**, click the Save icon ![](../images/icon_save.png) .
 
-![](../images/particle_save.png)
 
 ##Step 6: Place the effect in your level
 

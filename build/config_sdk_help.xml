@@ -26,7 +26,7 @@
 	</project>
 
 	<global>
-		<syntax_coloring include="\sdk_help\*,\custom_flow\*" default_lang="lang-sjson">true</syntax_coloring>
+		<syntax_coloring include="\sdk_help\*,\custom_flow\*,\editor_c\*,\engine_c\*" default_lang="lang-sjson">true</syntax_coloring>
 		<search_filter id="concept" include_expression="sdk_help/.*\.htm">
 			<label lang="en">Search concept topics?</label>
 		</search_filter>
@@ -62,7 +62,11 @@
 	</merge>
 
 	<merge id="sdk_help">
-		<source convert_from="markdown">..\source\sdk_help\*.md</source>
+		<source convert_from="markdown"
+			get_metadata="true"
+			github_root_public="https://www.github.com/AutodeskGames/stingray-docs/tree/master/source/sdk_help"
+			github_root_internal="https://git.autodesk.com/gameware/stingray-docs/tree/master/source/sdk_help"
+		>..\source\sdk_help\*.md</source>
 		<source>..\source\sdk_help\*.png</source>
 		<source>..\source\sdk_help\*.jp?g</source>
 		<source>..\source\sdk_help\*.gif</source>
@@ -106,7 +110,6 @@
 			<first_entry_title lang="ja">エディタ C API リファレンス ドキュメント</first_entry_title>
 			<parent_filename>*\extend_editor.html</parent_filename>
 		</merge_toc_config>
-		<include_input_dir>%SR_ENGINE_DIR%\docs\source\editor_c</include_input_dir>
 		<include_input_dir>%SR_ENGINE_DIR%\editor\stingray_editor\sdk</include_input_dir>
 		<include_examples make_pages="true" include="editor_native_code\*" exclude="*.vcxproj">%SR_ENGINE_DIR%\tests\plugin_tests</include_examples>
 		<show_topics>false</show_topics>
@@ -118,10 +121,10 @@
 		<tag name="EXTRACT_ALL">YES</tag>
 		<tag name="HIDE_UNDOC_CLASSES">NO</tag>
 		<tag name="HIDE_UNDOC_MEMBERS">NO</tag>
-		<tag name="EXTRACT_PRIVATE">NO</tag>
+		<tag name="EXTRACT_PRIVATE">YES</tag>
 		<tag name="EXTRACT_STATIC">YES</tag>
 		<tag name="EXTRACT_LOCAL_CLASSES">YES</tag>
-		<tag name="EXTRACT_LOCAL_METHODS">NO</tag>
+		<tag name="EXTRACT_LOCAL_METHODS">YES</tag>
 		<tag name="INTERNAL_DOCS">YES</tag>
 		<tag name="HIDE_SCOPE_NAMES">NO</tag>
 		<tag name="SORT_MEMBER_DOCS">NO</tag>
@@ -142,6 +145,7 @@
 							"_FUNCTIONAL_=1"</tag>
 		<tag name="ALWAYS_DETAILED_SEC">NO</tag>
 		<tag name="REPEAT_BRIEF">NO</tag>
+		<run_adoc_from_xml index_file="%SR_ENGINE_DIR%\docs\source\editor_c\mainpage.md">true</run_adoc_from_xml>
 	</doxygen>
 
 	<doxygen id="engine_c">
@@ -151,7 +155,6 @@
 			<first_entry_title lang="ja">エンジン C API リファレンス ドキュメント</first_entry_title>
 			<parent_filename>*\extend_engine.html</parent_filename>
 		</merge_toc_config>
-		<include_input_dir>%SR_ENGINE_DIR%\docs\source\engine_c</include_input_dir>
 		<include_input_dir>%SR_ENGINE_DIR%\runtime\sdk</include_input_dir>
 		<include_examples make_pages="true" include=
 			"simple_plugin\*.c,bigger_plugin\*.cpp,flow_nodes_sample_plugin\*.cpp,flow_nodes_sample_plugin\*.h,render_plugin\*.cpp"
@@ -162,22 +165,23 @@
 		<tag name="OPTIMIZE_OUTPUT_FOR_C">YES</tag>
 		<tag name="JAVADOC_AUTOBRIEF">YES</tag>	
 		<tag name="RECURSIVE">YES</tag>
-		<tag name="EXTRACT_ALL">NO</tag>
+		<tag name="EXTRACT_ALL">YES</tag>
 		<tag name="HIDE_UNDOC_CLASSES">NO</tag>
 		<tag name="HIDE_UNDOC_MEMBERS">NO</tag>
 		<tag name="WARN_IF_UNDOCUMENTED">NO</tag>
-		<tag name="EXTRACT_PRIVATE">NO</tag>
+		<tag name="EXTRACT_PRIVATE">YES</tag>
 		<tag name="EXTRACT_STATIC">YES</tag>
 		<tag name="EXTRACT_LOCAL_CLASSES">YES</tag>
-		<tag name="EXTRACT_LOCAL_METHODS">NO</tag>
+		<tag name="EXTRACT_LOCAL_METHODS">YES</tag>
 		<tag name="EXTRACT_ANON_NSPACES">YES</tag>
 		<tag name="INTERNAL_DOCS">YES</tag>
-		<tag name="ALWAYS_DETAILED_SEC">NO</tag>
+		<tag name="ALWAYS_DETAILED_SEC">YES</tag>
 		<tag name="REPEAT_BRIEF">YES</tag>
 		<tag name="DISTRIBUTE_GROUP_DOC">YES</tag>
 		<tag name="HIDE_SCOPE_NAMES">NO</tag>
-		<tag name="SORT_MEMBER_DOCS">YES</tag>
-		<tag name="SORT_MEMBERS_CTORS_1ST">YES</tag>
+		<tag name="SORT_BRIEF_DOCS">NO</tag>
+		<tag name="SORT_MEMBER_DOCS">NO</tag>
+		<tag name="SORT_MEMBERS_CTORS_1ST">NO</tag>
 		<tag name="GENERATE_DEPRECATEDLIST">YES</tag>
 		<tag name="GENERATE_TODOLIST">NO</tag>
 		<tag name="SHOW_USED_FILES">YES</tag>
@@ -191,6 +195,8 @@
 		<tag name="EXPAND_ONLY_PREDEF">NO</tag>
 		<tag name="ENABLE_PREPROCESSING">YES</tag>
 		<tag name="PREDEFINED"></tag>
+		<tag name="SUBGROUPING">NO</tag>
+		<run_adoc_from_xml index_file="%SR_ENGINE_DIR%\docs\source\engine_c\mainpage.md">true</run_adoc_from_xml>
 	</doxygen>
 
 </ADE_HTML_2_1_tools_Config>

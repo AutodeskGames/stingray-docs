@@ -32,7 +32,7 @@ Make sure that your reflection probe is located in a place where it captures as 
 
 ## Baking
 
-If you choose to bake the lighting for your level instead of using global lighting, you can also make your skydome contribute light into the baked lightmaps. Both the Beast and Stingray light bakers offer an option in the **Bake Lightmaps** dialog for controlling the intensity of the skydome. See also the topics under ~{ Light baking }~.
+If you choose to bake the lighting for your level instead of using global lighting, you can also make your skydome contribute light into the baked lightmaps. The Stingray light baker offers an option in the **Light Baking** dialog for controlling the intensity of the skydome. See also the topics under ~{ Light baking }~.
 
 ## Combining the sky, the sun, and the global lighting
 
@@ -42,7 +42,7 @@ Some principles to follow:
 
 -	Align the orientation of the main directional light with the placement of the sun or moon in the sky texture, so that the light rays appear to be coming from the right direction. This makes the shadows cast by the directional light appear more realistic in context.
 
--	Set the color of your main directional light to match the context provided by your sky texture. For example, your sky texture might have a bright yellow sun, a silvery moon, an orange sunset, etc. You will likely want to tint the color of your main directional light to match the apparent source of the light within your sky texture.
+-	Set the color of your main directional light to match the context provided by your sky texture. For example, your sky texture might have a bright yellow sun, a silvery moon, or an orange sunset. You will likely want to tint the color of your main directional light to match the apparent source of the light within your sky texture.
 
 -	Adjust the relative intensity of your main directional light and your global indirect lighting to match how bright you want your day to be and how much indirect scattering of light you want to simulate. For example, in a cloudless scene, you might make your directional light intensity relatively strong compared to your global lighting, in order to strengthen the appearance of direct sunlight and to make the shadows very distinct. However, with an overcast sky, you might lower the intensity of the directional light and boost the global environment light, in order to simulate more indirect bouncing of the light around the scene.
 

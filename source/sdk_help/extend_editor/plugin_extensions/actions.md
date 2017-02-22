@@ -298,7 +298,7 @@ For more information about events, see also ~{ Emit and handle editor events }~.
 
 ## Pass parameters to an action
 
-Any time you invoke an action from another extension (such as from a custom menu or asset type) you can pass parameters to the action. In your action configuration settings, you can refer to those parameters using the variables `$1`, `$2`, `$3`, etc.
+Any time you invoke an action from another extension (such as from a custom menu or asset type) you can pass parameters to the action. In your action configuration settings, you can refer to those parameters using the variables `$1`, `$2`, `$3`, and so on.
 
 For example, say that you define a custom asset type for a new kind of data file that you want your plug-in should recognize. When a user double-clicks one of these assets in the Asset Browser, the following setup invokes the action named `open-in-default-editor`, and passes it the filename of the asset the user clicked. The action uses that parameter to open that asset in the default application associated with its file type.
 

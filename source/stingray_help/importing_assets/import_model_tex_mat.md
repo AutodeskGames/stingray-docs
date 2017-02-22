@@ -1,7 +1,5 @@
 # Import a model with textures and materials
 
-[![UPDATED](../images/updated.png "What else is new in v1.6?")](../release_notes/readme_1.6.html)
-
 With a properly configured FBX file, you can automatically import a model with its texture resources applied.
 
 > **Note:** You can also export scenes or selected objects and their materials directly into Stingray using Maya or Maya LT. See ~{ Interop with Maya, Maya LT, or 3ds Max }~.
@@ -36,7 +34,7 @@ With a properly configured FBX file, you can automatically import a model with i
 
 	On import, any materials associated with the imported objects are placed in a separate folder in the Stingray directory.
 
-	[![NEW](../images/new.png "What else is new in v1.6?")](../release_notes/readme_1.6.html) The imported textures are assigned texture templates with default compression and other processing settings for compilation on different target platforms. For example, imported normal map textures are assigned the normal texture template.
+	The imported textures are assigned texture templates with default compression and other processing settings for compilation on different target platforms. For example, imported normal map textures are assigned the normal texture template.
 
 	![](../images/stingray_couch_assets.png)
 

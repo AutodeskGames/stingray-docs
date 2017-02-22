@@ -12,5 +12,6 @@ animation_sampling
 animation_compression
 previewing_animation
 animation_perf
+anim_trim
 script_interface
 HumanIK

@@ -10,13 +10,13 @@ The goal of the entity system is to be flexible and open enough to model just ab
 
 Under the hood, a few core Stingray features and workflows are already built around entities. For example, anytime you create a new level, it comes with an entity that handles the rendering settings used by ~{ The Shading environment and post effects }~.
 
-You can also use the entity system directly to set up your own kinds of game objects. In this release, you will find it mainly useful for creating entities that store arbitrary data values: numeric, boolean, strings, resource names, 3D coordinates, colors, etc.
+You can also use the entity system directly to set up your own kinds of game objects. In this release, you will find it mainly useful for creating entities that store arbitrary data values: numeric, boolean, strings, resource names, 3D coordinates, colors.
 
 ## Entities are *modular*
 
 Every entity is essentially a container that holds various different kinds of *components*.
 
-Each component has a single, distinct job. This might be storing some kind of data, managing a 3D mesh, maintaining a hierarchy of other nested entities, responding to events by running Lua code or Flow graphs, etc.
+Each component has a single, distinct job. This might be things like storing some kind of data, managing a 3D mesh, maintaining a hierarchy of other nested entities, responding to events by running Lua code or Flow graphs.
 
 You assemble an entity by putting different kinds of components together and setting them up with their own data (e.g. different property values, different meshes, different behaviors). In this way, you can *compose* your own unique kinds of entities that contain just the components and behaviors you need.
 

@@ -1,5 +1,7 @@
 ﻿# Asset Browser
 
+![UPDATED](../../images/updated.png)
+
 - **Window > Asset Browser**
 
 The **Asset Browser** is the main way to browse and import assets in your game project. It includes two main view panels, the folder or tree view, and the file view. Both areas include several controls that let you browse or search for assets efficiently.
@@ -11,7 +13,7 @@ The **Asset Browser** is the main way to browse and import assets in your game p
 | Import content | Navigate to the folder where you want to import files, then click Import, or, right-click in the File view area to select **Import Asset**.  |
 | Create a new resource or folder | Navigate to the folder that you want to contain your new folder or asset. Right-click on the folder and select one of the **Create** options from the contextual menu, or click one of the **Create** icons shown between the tree view and the file view. |
 | Narrow asset types displayed in File view area  | Click the Filter icon ![ ](../../images/icon_filter.png) and enable only the types you want. |
-| Edit an original source scene in your DCC  | Right-click an asset and select **Open Source Asset**.  |
+| Edit an original source scene in your DCC tool | Right-click an asset and select **Open Source Asset**.  |
 | Refresh current window  | F5  |
 | Return to the last opened folder  | Backspace  |
 | Open selected asset in Windows Explorer  | Right-click the asset and select **Show in Explorer**.  |
@@ -54,13 +56,26 @@ You can set the file view to show only selected resource types. Click the Filter
 
 You can also use the configuration options ![ ](../../images/icon_config.png) to control what resources are shown in the tree view and the file view:
 
--	**Show all files** makes the file view show all files on disk, even those that are not project resource types. This exposes files like thumbnails, editor settings files, operating system files, etc.
+-	**Show all files** makes the file view show all files on disk, even those that are not project resource types. This exposes files like thumbnails, editor settings files, and operating system files.
 -	**Show mapped folders** makes the tree view and search include the core resources. See also ~{ Working with core resources }~.
 -	**Show file types** does not filter the view, but makes each resource show its file extension (i.e. its resource type).
 
 ## Duplicating assets
 
 When working with assets, you often need to replicate assets like materials and animation clips to try out different variations. To do so, right-click the asset in the **Asset Browser**, select **Duplicate** and assign a name for the asset. This creates a duplicate asset which you can edit independently of the original asset. You can also duplicate folders in the Tree view making it easy to organize and customize your assets.
+
+## Accessing online assets
+
+[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html)
+
+![](../../images/online_assets.png)
+
+Use the **Online Assets** tab in the Tree view to browse, search and find online assets.To download and import an asset to use in your project, do any of the following:
+
+  - Right-click an asset and select **Download Asset**, or click the **Download and install asset** icon ![](../../images/online_assets_download.png).
+  - Select an asset and click the **Download** button in the **Property Editor**.
+
+Click the yellow icon ![](../../images/icon_status_bar_cancel_progress.png) to cancel downloading of the asset. The online assets are not listed in the Asset Browser if the Online Assets server is disconnected from the cloud services.
 
 ---
 Related topics:

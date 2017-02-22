@@ -1,5 +1,7 @@
 #Edit project settings
 
+![UPDATED](../../images/updated.png)
+
 Select **File > Settings > Project Settings** to view and edit the following in the ~{ Property Editor }~.
 
 <dl>
@@ -31,6 +33,17 @@ This can help Stingray to resolve relative paths when you right-click in the **A
 
 <dt>Create an extra root by default on asset import</dt>
 <dd>This option is enabled by default, and turning it off is not recommended. </dd>
+
+[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html)
+
+<dt>Texture template by material</dt>
+<dd>Enabled by default, turn off this option to disable assigning texture compression settings on import based on materials.</dd>
+
+<dt>Texture template by pixels</dt>
+<dd>Enabled by default, turn off this option to disable assigning texture compression settings on import based on pixel inspection.</dd>
+
+<dt>Texture template by suffix</dt>
+<dd>Enabled by default, turn off this option to disable assigning texture compression settings on import based on file name suffix.</dd>
 
 ---
 Related topics:

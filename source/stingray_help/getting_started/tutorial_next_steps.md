@@ -10,7 +10,7 @@ Once you've finished the **Help > Hands-on Training Mission**, you'll have a pre
 
 	These docs include a full [Lua API reference](../../lua_ref/index.html) that you'll use a lot to browse and understand the different objects and functions you can use.
 
--	Particle effects are fun to play with, and really useful for simulating all kinds of dynamic effects like rain, snow, moving fog, fire and smoke, etc. Try creating one and playing around with its parameters. For docs, see ~{ Create and edit particle effects }~, or [follow along with this tutorial](https://www.youtube.com/playlist?list=PLTjhBiJe1i2GoHq_WmjKKSU9ZWYV5tkJB)!
+-	Particle effects are fun to play with, and really useful for simulating all kinds of dynamic effects like rain, snow, moving fog, fire and smoke, etc. Try creating one and playing around with its parameters. For docs, see ~{ Create and edit particle effects }~, or [follow along with this tutorial](http://area.autodesk.com/learning/creating-particle-effects-in-stingray)!
 
 -	In addition to bringing models in from modeling tools like 3ds Max and Maya, you can sculpt and paint your own models, called *terrains*, right in the Stingray editor. These terrains are usually used for large-scale landscape and ground surfaces. See the ~{ Terrain tool }~.
 
@@ -20,7 +20,7 @@ Once you've finished the **Help > Hands-on Training Mission**, you'll have a pre
 
 	This is actually great material for all users to know, as we envision the entity system being used for more and more different things as time goes on, eventually replacing units.
 
--	Got an iOS or Android device that you want to try out with Stingray? Have a look under the ~{ Supported platforms }~ for more information about requirements and pre-requisites for your platform. Once you've installed everything you need and made sure your device is compatible with Stingray, you can see ~{ Connecting to a remote device }~ for details on mirroring your editor viewport on the device and testing out builds. You can also try making a standalone build and running it on your device -- see ~{ Deploying and Building }~.
+-	Got an iOS or Android device that you want to try out with Stingray? Check the ~{ Get started on Android }~ and ~{ Get started on iOS }~ pages to see what you'll need to install and set up. Afterward, you'll be ready to connect the editor to your device so that you can mirror the editor's viewport, run your project on the device, and deploy a full build.
 
 -	Every project has a *settings.ini* file that offers a ton of options about how the editor and all of its subsystems work. You can poke around in here to see what you can do. For more info on all the settings, see [this reference page](../reference/engine_settings.html).
 

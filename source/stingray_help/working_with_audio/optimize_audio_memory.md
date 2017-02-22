@@ -1,6 +1,6 @@
 # Optimize audio memory usage
 
-The following sections describe some strategies that you can use to keep the runtime memory requirements for your game's audio as low as possible. Which techniques you choose can depend on many factors including the kind of game you are making, how many sounds there are in your game, what platforms you are targeting, etc.
+The following sections describe some strategies that you can use to keep the runtime memory requirements for your game's audio as low as possible. Which techniques you choose can depend on many factors including the kind of game you are making, how many sounds there are in your game, and what platforms you are targeting.
 
 See also the topics [in the Wwise help](https://www.audiokinetic.com/library/2015.1_5418/?source=Help&id=managing_memory_in_wwise) about managing memory within the Wwise engine.
 
@@ -86,4 +86,4 @@ One useful piece of advice is to build up long sounds by combining short clips t
 
 For example, if you need an ambient city sound, you could record a single clip several minutes in length, and loop it. However, you can achieve a similar effect by recording several shorter clips, setting them to play in random sequence, and cross-fading between them. This creates a seamless, never-ending ambient sound that is constantly changing.
 
-Similarly, you can use these containers to assemble different kinds of weapon sounds from a library of small samples. For example, you could make different kinds of machine gun bursts by combining small clips of single-shots with different delays between them, sharing recoil or reloading sounds between different weapons, etc.
+Similarly, you can use these containers to assemble different kinds of weapon sounds from a library of small samples. For example, you could make different kinds of machine gun bursts by combining small clips of single-shots with different delays between them, sharing recoil, or reloading sounds between different weapons.

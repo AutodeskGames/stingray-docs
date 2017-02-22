@@ -8,6 +8,8 @@ Double-click a clip in the **Asset Browser** to load it in the editor.
 
 ![Anim Clip Editor](../images/anim_clip_editor.png)
 
+>**Note:** You can trim animation clips in the timeline of the clip editor.
+
 <dl>
 
 <dt>Event type</dt>
@@ -23,7 +25,9 @@ Double-click a clip in the **Asset Browser** to load it in the editor.
 <dd>Enter an exact frame value (or time in seconds depending on the toggle option) where you want the beat or flow event to occur. (By default the value is set to the frame where you right-click.)</dd>
 
 </dl>
+
 ---
 Related topics:
 - ~{Add beats and flow events to animation clips}~
+- ~{Trim animation clips}~
 ---

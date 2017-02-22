@@ -1,7 +1,5 @@
 # Animation controller transitions
 
-![UPDATED](../../images/updated.png)
-
 A transition controls how the animation controller moves from one state to another: when the transition happens and how it is blended.
 
 <dd>
@@ -93,8 +91,6 @@ To convert the group transition to a simple transition, right-click and select *
 The editor automatically tries to match up nested states with the same names in the *From* state and the *To* state. If you have created more nested states since you created the transition, click **Update Auto-Mapping**.
 
 ## Conditional transitions
-
-[![NEW](../../images/new.png "What else is new in v1.6?")](../../release_notes/readme_1.6.html)
 
 Conditional transitions let you control the flow of transitions in the state machine at runtime with an expression evaluation.  Use a TransitionSwitch node to transit from one state to another at runtime based on the evaluation of the TransitionSwitch node expression. 
 

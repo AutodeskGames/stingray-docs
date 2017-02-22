@@ -21,7 +21,7 @@ See also:
 
 ## Step 1. Get ready in Maya <a name="step1"></a>
 
-1. Download and install the PhysX plugin for Maya. See ~{ Install the PhysX plug-in for your DCC }~.
+1. Download and install the PhysX plugin for Maya. See ~{ Install the PhysX plug-in for your DCC tool }~.
 
 2. In Maya, load the plug-in using the **Plug-in Manager** (**Windows > Settings/Preferences > Plug-in Manager**).<br>The PhysX menu displays in the main menu bar when the plug-in is loaded.
 

@@ -1,5 +1,7 @@
 # Texture Manager
 
+![UPDATED](../../../images/updated.png)
+
 - **Window > Texture Manager**
 
 Use the **Texture Manager** to import textures and manage texture settings.
@@ -14,7 +16,8 @@ You can edit the following settings:
  </dd>
 
  <dt>Category</dt>
- <dd>Can be used for organizing textures. Note that this only changes the category for the chosen platform. The most common case is to have the same category for a texture across all platforms, so make sure to select the correct platforms before changing the category. The category can also be used for dropping mip steps at runtime.</dd>
+ ![UPDATED](../../../images/updated.png)
+ <dd>Can be used for organizing textures. You can filter your textures by **Cubemap**, **Lightmap**, **Albedo**, **Albedo Opacity**, **HDRI/Skydome**, or **Linear Greyscale**. Note that this only changes the category for the chosen platform. The most common case is to have the same category for a texture across all platforms, so make sure to select the correct platforms before changing the category. The category can also be used for dropping mip steps at runtime.</dd>
 
  <dt>Apply Processing</dt>
  <dd>When off, the **Input Image** passes through data compilation without any processing or mip step generation. This means that none of the options below the **Apply Processing** option have any effect. This is useful for exotic textures.</dd>

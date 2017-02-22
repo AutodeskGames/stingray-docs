@@ -2,29 +2,31 @@
 
 ![UPDATED](../../../images/updated.png)
 
-Whether you want to use the Stingray baker or Beast to generate lightmaps for your level, the general procedure is the same:
+To generate lightmaps for your level, do the following:
 
-1.	Prepare the objects and lights in your level for baking.
+1.	Prepare the objects and lights in your level for baking:
 
-	All bake targets need to be set up with secondary UV sets, either in their *.fbx* files or generated automatically by Stingray.
+	- All bake targets need to be set up with secondary UV sets, either in their *.fbx* files or generated automatically by Stingray. See ~{ Unwrap UVs for light baking }~.
 
-	For each light, set the **Baking** option to determine whether or not the light's direct illumination should be included in the lightmap.
+	- For each light, set the **Baking** option in the **Property Editor** to determine whether or not the light's direct illumination should be included in the lightmap. See ~{ Lightmap baking settings }~.
 
-	See ~{ Unwrap UVs for light baking }~ and ~{ Lightmap baking settings }~.
+	>**Note:** Stingray baker does not support box lights.
 
-1.	If you have made any changes to your level, units or lights, save the current level before you bake in order to make sure that all of your changes are reflected correctly in the lightmaps. (**File > Save Level**).
+1.	If you have made any changes to your level, units or lights, save the current level before you bake to ensure all of your changes are reflected correctly in the lightmaps.
 
-1.	Select **Window > Lighting > Bake Lightmaps** from the main menu. Stingray opens the **Bake Lightmaps** window.
+1.	[![NEW](../../../images/new.png "What else is new in v1.7?")](../../../release_notes/readme_1.7.html) (Optional) If you want to bake a part of your scene, make a selection before you start your baking session.
 
-	![Beast settings](../../../images/bake_lightmaps_beast.png) ![Stingray settings](../../../images/bake_lightmaps_stingray.png)
+1.	Select **Window > Lighting > Light Baking** from the main menu. Stingray opens the **Light Baking** window.
 
-1.	In the **Bake Lightmaps** window, set the baking options you want.
+	![Stingray settings](../../../images/bake_lightmaps_stingray.png)
 
-	The key option is the **Baker** setting, which controls whether your lightmaps will be baked by the Stingray baker or by Beast. See ~{ About baking with the Stingray baker }~  and ~{ About baking with Beast }~.
+1.	In the **Light Baking** window, set the baking options.
 
 	> **Note:** Hover over the other options in this dialog box for descriptions of each attribute.
 
-1.	Click **Bake** to start your baking session.
+1.	[![NEW](../../../images/new.png "What else is new in v1.7?")](../../../release_notes/readme_1.7.html) Click **Bake** to bake your entire scene or **Bake Selection** to bake part of your scene.
+
+
 
 ## Bake results
 
@@ -33,6 +35,8 @@ Stingray creates a new subfolder in the same folder as the current level's *.lev
 Next to your level's resource file, Stingray also creates a *.baked_lighting* resource. This file records the lightmaps generated for your level, and which meshes each map is associated with.
 
 You don't have to do anything with the generated lightmap textures or the *.baked_lighting* file in order for the lightmaps to show up in your game; Stingray handles it automatically. However, you might want to use the ~{ Texture Manager }~ to configure the way the textures are processed and compressed when they are compiled for each platform. Baked lightmaps automatically get tagged with the `Lightmap` texture category, so you can easily find them in the **Texture Editor**.
+
+>**Tip:** [![NEW](../../../images/new.png "What else is new in v1.7?")](../../../release_notes/readme_1.7.html) To delete all baked lightmaps, click **Clear** (**Window > Lighting > Light Baking**). Lightmaps are removed and no longer appear in the `<level_name>-lightmaps` subfolder.
 
 ## Visualizing bake results
 

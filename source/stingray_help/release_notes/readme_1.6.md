@@ -77,12 +77,12 @@ The following Improvements to light baking and post-processing effects (SSAO, SS
 - Normalization of lightmap resolution is now based on the UV space area.
 - UV seam fixup now automatically runs as a post-processing effect when you bake lightmaps.
 - Improved interaction with a lightmapped level, such as material management and object manipulations, without losing the lightmap.
-- The Stingray lightmap baker interface now reflects more meaningful baker settings. See ~{ About baking with the Stingray baker }~ for the updated options.
+- The Stingray lightmap baker interface now reflects more meaningful baker settings. See ~{ Baking with the Stingray baker }~ for the updated options.
 
 ### VR Improvements
 
 - When running or testing your game using a VR app, the game image appears in your HMD (head mount display) and on your mirror window (your monitor). Set the new vr_mirror_mode setting in the settings.ini to mono (default) or stereo to control the display on the mirror window. See ~{ Stingray engine settings.ini file reference }~.
-- Instanced stereo rendering is now built in to the default renderer provided with Stingray, and all material and post effect shaders are now VR-enabled to implement this optimization. See ~{ VR in Stingray }~.
+- Instanced stereo rendering is now built in to the default renderer provided with Stingray, and all material and post effect shaders are now VR-enabled to implement this optimization. See ~{ Get started in VR }~.
 - The VR Oculus Touch template now supports input from the Oculus Remote and Oculus Touch Controller. The template now ships with Oculus flow nodes. See ~{ Template projects}~.
 - The VR SDK Version has been upgraded to 1.7.0.0. See ~{ Supported platforms }~.
 

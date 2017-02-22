@@ -1,16 +1,16 @@
 # Use built-in editor services
 
-The Stingray editor includes several JavaScript *services* that provide helpful functions for interacting with project data, the Stingray engine, the operating system, etc. Most of the standard features built in to the Stingray editor rely on these services to carry out the editing tasks requested by the user in the UI. You can also take advantage of these same services in your custom plug-in.
+The Stingray editor includes several JavaScript *services* that provide helpful functions for interacting with project data, the Stingray engine, and the operating system. Most of the standard features built in to the Stingray editor rely on these services to carry out the editing tasks requested by the user in the UI. You can also take advantage of these same services in your custom plug-in.
 
 ## Standard services
 
 You'll find all the editor's standard services in the JavaScript modules under *editor/core/js/services*. For example, a few that you may find particularly useful:
 
--	The *asset-service* offers functions for managing assets, including saving, moving, renaming, handling dependencies, etc.
+-	The *asset-service* offers functions for managing assets, including saving, moving, renaming, and handling dependencies.
 
--	The *engine-service* helps you interact directly with instances of the Stingray engine: both the one that the editor runs internally, and any other remotely connected engines. For example, you can use the `sendToEditors()` function to send Lua scripts to be run in the engine's Lua environment, request resource compilation, receive events, etc.
+-	The *engine-service* helps you interact directly with instances of the Stingray engine: both the one that the editor runs internally, and any other remotely connected engines. For example, you can use the `sendToEditors()` function to send Lua scripts to be run in the engine's Lua environment, request resource compilation, or receive events.
 
--	The *file-system-service* helps you interact with the local file system where your project is mounted. You can list files, read and write SJSON data, check that paths exist, etc.
+-	The *file-system-service* helps you interact with the local file system where your project is mounted. You can do things like list files, read and write SJSON data, and check that paths exist.
 
 -	The *host-service* interacts with the operating system to provide support for the clipboard, and standard windows for things like opening and saving files.
 
