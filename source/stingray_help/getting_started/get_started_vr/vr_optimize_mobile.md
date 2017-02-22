@@ -20,7 +20,7 @@ Along with using the ~{ Mini renderer }~, keep the following guidelines in mind 
   - Avoid using any 1-bit alpha masking
   - Keep transparent materials to a minimum
   - Keep anisotropic texture filtering to a minimum
-  - Keep your shader graphs as simple as possible. Avoid using materials based on the "standard" Stingray material -- although this standard material offers many properties and customization options that make it easy to use, it is not optimized for fast performance on the GPU. For best performance, create your own graphs with a minimum of branching and logic.
+  - Keep your shader graphs as simple as possible. Avoid using materials based on the "standard" Stingray material. Although this standard material offers many properties and customization options that make it easy to use, it is not optimized for fast performance on the GPU. For best performance, create your own graphs with a minimum of branching and logic.
 
   Textures:
 
