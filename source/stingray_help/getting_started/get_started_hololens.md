@@ -47,9 +47,9 @@ It may take a few minutes for the project to start appropriately on the device.
 When deploying to a HoloLens headset the data already on the device is not always cleaned up properly. It´s a good idea to enable "Remove Non-Layout Files from Device" on the project debug properties page in Visual Studio if you have any issues.
 
 ### Deploying through Device Portal ###
-Installing the app package on the HoloLens through the Device Portal is now supported. This allows you to share an app package with someone who doesn't have access to Visual Studio.
+You can create a complete appx package in Visual Studio that you can install through the Device Portal. This allows you to share an app package with someone who doesn't have access to Visual Studio.
 
-If you want to create a package with data you need to follow the steps under _Add project data to package_.
+If you want to create a package with data you need to first follow the steps under _Add project data to package_.
 
 * Create an app package with the "Create App Packages" wizard in Visual Studio. You can follow the instructions under the _Create an app package_ title on this page: [Packaging UWP apps](https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps)
 
@@ -79,9 +79,7 @@ For more background information, see ~{ Connect to a remote device }~.
 4. You must close the message dialog window on the device manually when connecting for the editor. The window will not close automatically and while it is visible it hides the 3D content rendered by the engine.
 
 
-
-
 ### Developer good to know
 The Stingray console output is available on the _Logging_ page in the Device Portal under the `Microsoft-Windows-Diagnostics-LoggingChannel` provider.
 
-When debugging useful information can be available under other providers as well. For crashes we have found useful information in the `Microsoft-Windows-WindowsErrorReporting`, `-ProcessStateManager` and `-ProcessExitMonitor` providers.
+Useful information for debugging can be available under various different providers. We have found useful information in the `Microsoft-Windows-WindowsErrorReporting`, `-ProcessStateManager` and `-ProcessExitMonitor` providers.
