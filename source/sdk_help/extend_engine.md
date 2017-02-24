@@ -14,7 +14,7 @@ This section provides some tips on getting started extending the engine with you
 
 -	You'll need the SDK header files. You can find them under `stingray_sdk` in the example repository, or under `plugin_sdk` in your Stingray installation folder.
 
--	The [reference documentation](engine_c/index.html) contains a browsable companion to the APIs defined in the SDK header files.
+-	The [reference documentation](../engine_c/index.html) contains a browsable companion to the APIs defined in the SDK header files.
 
 ## Engine and plug-in interactions
 
