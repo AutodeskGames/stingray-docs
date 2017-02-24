@@ -1,7 +1,5 @@
 # Supported platforms
 
-![UPDATED](../images/updated.png)
-
 Anyone can use Stingray to create projects that run on Windows PC, iOS, and Android. If you're licensed by Sony as a PlayStation 4 developer, or by Microsoft as an Xbox One developer, you can also create projects for these consoles.
 
 This page describes the models of mobile and VR devices that Stingray supports.
@@ -52,8 +50,6 @@ Devices running older versions may or may not work as expected.
 
 ## Supported VR development kits
 
-![UPDATED](../images/updated.png)
-
 | HMD Device | Target Frame Rate | VR SDK Version |
 |------------|-------------------|-----|
 | Oculus Dk2 | 75 fps            | 1.10.1.0  |
@@ -62,7 +58,7 @@ Devices running older versions may or may not work as expected.
 
 >**Note:** The Oculus Remote and Oculus Touch Controller are supported.
 
->[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) **Note:** Stingray also supports Google Cardboard for iOS and Android, and Android Google Daydream with controller support.
+>**Note:** Stingray also supports Google Cardboard for iOS and Android, and Android Google Daydream with controller support.
 
 ## Platform libraries
 

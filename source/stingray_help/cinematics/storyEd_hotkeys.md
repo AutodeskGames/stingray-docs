@@ -1,7 +1,5 @@
 ﻿#Story Editor hotkeys
 
-![UPDATED](../images/updated.png)
-
 |  Keyframe hotkeys    |
 |----------------------------|-----------------|
 | Set Key on full transform | S |
@@ -10,13 +8,11 @@
 | Set Key on Scale | Shift + R             |
 | Edit tangents (Force locked or broken) | Shift/Ctrl             |
 | Delete key | Delete            |
-| [![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Cut selected keys | Ctrl + X |
-| [![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Copy selected keys | Ctrl + C |
-| [![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Paste selected keys | Ctrl + V |
-
+| Cut selected keys | Ctrl + X |
+| Copy selected keys | Ctrl + C |
+| Paste selected keys | Ctrl + V |
 
 <br>
-
 
 |  Navigation hotkeys    |
 |----------------------------|-----------------|

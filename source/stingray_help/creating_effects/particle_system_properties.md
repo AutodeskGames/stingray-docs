@@ -2,7 +2,7 @@
 
 When you select a Particle Effect in the **Particle Editor**, the following properties display.
 
-[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Click Respawn ![](../images/icon_particle_respawn.png) at any time to view the effect of your changes as you edit the properties of the particle effect system.
+ Click Respawn ![](../images/icon_particle_respawn.png) at any time to view the effect of your changes as you edit the properties of the particle effect system.
 
 ##System properties:
 <dl>

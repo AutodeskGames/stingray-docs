@@ -1,7 +1,5 @@
 # Trim animation clips
 
-[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html)
-
 You can trim animation clips in the ~{ Anim Clip Editor }~ to edit the length of the animation frames.
 
 To trim an animation,

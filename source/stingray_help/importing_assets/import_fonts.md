@@ -1,7 +1,5 @@
 # Import fonts
 
-[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html)
-
 You can import font files to generate font resources to render text with sharp edges and preserve them when scaling.
 
 >**Note:** Fonts are imported using the **Distance Field Font Importer** plug-in which is loaded automatically in the **Plugin Manager**.

@@ -20,8 +20,6 @@ You can download the JDK from the [Oracle Java SE site](http://www.oracle.com/te
 
 ### Install the Android SDK and tools
 
-![UPDATED](../images/updated.png)
-
 If you don't already have the Android SDK installed on your computer,
 
 1.	Download the Android Standalone Tools: <https://dl.google.com/android/repository/tools_r25.2.3-windows.zip>

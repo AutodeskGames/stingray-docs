@@ -27,6 +27,19 @@ Sections in this topic:
 
 * * *
 
+### Particle Editor updates
+
+-	You can copy and paste particle effect systems and controllers. Select a system or controller, and either right-click to select Copy (and Paste) or use the Ctrl + C, Ctrl + V hotkeys to copy and paste the systems.
+
+-	You can also drag and drop the systems around to reorder the effects in a particle.
+
+-	A particle material exists when you create a new particle effect.
+
+### Asset Browser improvements
+
+Searching for online assets now indicates the number of results next to the Online Assets in the tree view of the Asset Browser. You can clear the Search results by clicking the Clear icon in the Search field.
+
+You can also locate an online asset installed in your project using a new option **Locate in Project** from the Online Assets view. Select an installed asset (indicated with a green checkmark) and either right-click and select **Locate in Project** or click the icon.
 
 
 [Return to top](#top)
@@ -49,7 +62,7 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 - **GAME-X Heading**
 
-	Paragraph. 
+	Paragraph.
 
 	**Workaround:** Placeholder.
 
