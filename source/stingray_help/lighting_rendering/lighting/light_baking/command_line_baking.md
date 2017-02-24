@@ -1,7 +1,5 @@
 # Trigger lightmap baking from the command line
 
-[![NEW](../../../images/new.png "What else is new in v1.7?")](../../../release_notes/readme_1.7.html)
-
 You can start the Stingray engine application from a command-line prompt, and provide parameters on the command line to trigger lightmap baking.
 
 ## To trigger lightmap baking from the command line

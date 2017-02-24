@@ -1,10 +1,8 @@
 # Create and edit particle effects
 
-![UPDATED](../images/updated.png)
-
 > ![](../images/icon_video.png) For video tutorials on creating particle effects, see <a href="http://area.autodesk.com/learning/creating-particle-effects-in-stingray" target="blank">Particle Effects in Stingray</a>.
 
-[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) The **Particle Editor** Tool (**Window > Particle Editor**) lets you create new particles, modify them and preview the effects in the viewport within the tool. You can open and modify multiple particles at the same time, view History ![](../images/icon_partEd_history.png) of actions performed, and use the Respawn ![](../images/icon_particle_respawn.png) and Pause/Resume ![](../images/icon_partEd_pause.png) icons to respawn the particle effect and pause/resume the particle effects preview.
+The **Particle Editor** Tool (**Window > Particle Editor**) lets you create new particles, modify them and preview the effects in the viewport within the tool. You can open and modify multiple particles at the same time, view History ![](../images/icon_partEd_history.png) of actions performed, and use the Respawn ![](../images/icon_particle_respawn.png) and Pause/Resume ![](../images/icon_partEd_pause.png) icons to respawn the particle effect and pause/resume the particle effects preview.
 
 **To create a particle effect:**
 
@@ -12,7 +10,7 @@
 
 2. Do any of the following:
 
-	-	[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) In the **Particle Editor**, click **New** ![](../images/icon_createAsset.png) to create a particle effect asset and then **Save** ![](../images/icon_save.png) to enter a name for the particle effect.
+	-	In the **Particle Editor**, click **New** ![](../images/icon_createAsset.png) to create a particle effect asset and then **Save** ![](../images/icon_save.png) to enter a name for the particle effect.
 
 	-	Right-click in file view area of the **Asset Browser** and select **Create > Particle Effect**, or click the **Create Asset** icon ![](../images/icon_createAsset.png) and select **Create Particle Effect**. Enter a name for the new particle effect.
 
@@ -21,7 +19,7 @@
 
 	![](../images/create_particle.png)
 
-3.	[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Select the particle effect asset and either double-click or in the **Property Editor**, click **Open in Editor**. The particle effect asset launches in the **Particle Editor**.
+3.	Select the particle effect asset and either double-click or in the **Property Editor**, click **Open in Editor**. The particle effect asset launches in the **Particle Editor**.
 
 	You now have a particle effect asset, and you can start to modify its properties to determine what the effect looks like.
 
@@ -31,7 +29,7 @@ The main way you'll work with particles is by modifying the properties of the pa
 
 The default particle system is called System1, and you can add and remove controllers to any system to customize the particle effect. Each particle effect can have multiple systems, and each system can have multiple controllers.
 
-1. [![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Select a particle effect asset in the **Asset Browser** and double-click to open it in the **Particle Editor**. You can also open a particle effect asset using the Open icon ![](../images/icon_scriptEd_Open.png) in the **Particle Editor**.
+1. Select a particle effect asset in the **Asset Browser** and double-click to open it in the **Particle Editor**. You can also open a particle effect asset using the Open icon ![](../images/icon_scriptEd_Open.png) in the **Particle Editor**.
 
 	The particle system properties is displayed in the **Particle Editor**.
 

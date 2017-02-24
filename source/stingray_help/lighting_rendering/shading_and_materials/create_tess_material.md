@@ -1,7 +1,5 @@
 # Create a tessellation material
 
-[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html)
-
 Tessellation adds more triangles to your mesh. Adding tessellation to your material can create a more realistic effect on your mesh.
 
 1. Do the following to create a new empty material for customization:

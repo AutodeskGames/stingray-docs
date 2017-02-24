@@ -1,7 +1,5 @@
 # Create a texture template
 
-![UPDATED](../../../images/updated.png)
-
 A texture template is a file in your project that typically contains the texture resource settings and compression formats of the texture on different platforms and enables an improved import workflow.
 
 The **Texture Manager** includes default texture templates such as
@@ -13,8 +11,6 @@ The **Texture Manager** includes default texture templates such as
 -	Roughness/Metallic/AO template for RMA textures.
 -	Lightmap template for lightmap textures.
 -	HDRI/Skydome template for skydome textures.
-
-[![NEW](../../../images/new.png "What else is new in v1.7?")](../../../release_notes/readme_1.7.html)
 
 In addition to the texture settings, you will find suffixes denoting the texture types defined in the texture templates. These are used to assign the texture templates to the textures you import by matching the file suffix to the suffix defined in one of the templates. See below for the file suffixes defined in the core texture templates:
 

@@ -1,7 +1,5 @@
 ﻿# Asset Browser
 
-![UPDATED](../../images/updated.png)
-
 - **Window > Asset Browser**
 
 The **Asset Browser** is the main way to browse and import assets in your game project. It includes two main view panels, the folder or tree view, and the file view. Both areas include several controls that let you browse or search for assets efficiently.
@@ -65,8 +63,6 @@ You can also use the configuration options ![ ](../../images/icon_config.png) to
 When working with assets, you often need to replicate assets like materials and animation clips to try out different variations. To do so, right-click the asset in the **Asset Browser**, select **Duplicate** and assign a name for the asset. This creates a duplicate asset which you can edit independently of the original asset. You can also duplicate folders in the Tree view making it easy to organize and customize your assets.
 
 ## Accessing online assets
-
-[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html)
 
 ![](../../images/online_assets.png)
 

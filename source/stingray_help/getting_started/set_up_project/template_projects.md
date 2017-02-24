@@ -49,7 +49,7 @@ The VR Oculus Touch template supports input from the Oculus Remote and Oculus To
 
 Use a Steam VR device to visually interact with the scenes in this template.</dd>
 
-<dt>[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html) VR Google</dt>
+<dt>VR Google</dt>
 <dd>This template demonstrates simple usage of the GoogleVR plug-in API for Cardboard and Daydream.
 
 This template supports Google Cardboard for iOS and Android, and Google Daydream with Daydream controller support for Android devices.
@@ -57,7 +57,7 @@ This template supports Google Cardboard for iOS and Android, and Google Daydream
 Use iOS devices, Android 7.x+ devices like Nexus 9 or a Daydream device like Pixel with this template.
 </dd>
 
-<dt>[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html) VR Gear</dt>
+<dt>VR Gear</dt>
 <dd>This template demonstrates simple usage of the GearVR plug-in API. See ~{ Build a project for Gear VR }~ for more information.</dd>
 
 </dl>

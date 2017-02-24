@@ -1,7 +1,5 @@
 # Animation clip properties
 
-![UPDATED](../images/updated.png)
-
 The following settings are available in the ~{ Property Editor }~ when you select an animation clip in the **Asset Browser**.
 
 ##Animation
@@ -9,13 +7,13 @@ The following settings are available in the ~{ Property Editor }~ when you selec
 <dt>Untrimmed Duration</dt>
 <dd>Displays the length of the original clip (in seconds).</dd>
 
-<dt>[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Compiled size</dt>
+<dt>Compiled size</dt>
 <dd>The size in bytes of the compiled clip.</dd>
 
-<dt>[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Trimming Start</dt>
+<dt>Trimming Start</dt>
 <dd>The new start time of the trimmed clip (in seconds).</dd>
 
-<dt>[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Trimming End</dt>
+<dt>Trimming End</dt>
 <dd>The end time of the trimmed clip (in seconds).</dd>
 
 <dt>Is Additive Anim</dt>

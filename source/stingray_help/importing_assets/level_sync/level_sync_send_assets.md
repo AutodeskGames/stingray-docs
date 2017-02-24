@@ -1,7 +1,5 @@
 # Send assets from Maya and Maya LT with Level Sync
 
-![UPDATED](../../images/updated.png)
-
 Level sync lets you link and export entire scenes built in Maya, Maya LT, or 3ds Max directly to Stingray. Once Maya or Maya LT are linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray.
 
 > **Note:** Currently, level sync only supports scenes from Maya and Maya LT that use the Y-up world coordinate system.
@@ -16,7 +14,7 @@ Level sync lets you link and export entire scenes built in Maya, Maya LT, or 3ds
 <br>
   The selected asset(s) is sent to Stingray and opens in the current scene.
 
-  >**Note:** [![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html) After level-syncing your assets, you can still make updates to your assets in Maya or Maya LT and send them to Stingray. Turn on **Update Existing Assets** in the **Send Level** window before sending your scene.
+  >**Note:** After level-syncing your assets, you can still make updates to your assets in Maya or Maya LT and send them to Stingray. Turn on **Update Existing Assets** in the **Send Level** window before sending your scene.
 
 ## Send all assets from Maya or Maya LT with level sync
 1. Establish a live editing link between Stingray and your DCC tool. See ~{ Send assets to a DCC tool }~.
