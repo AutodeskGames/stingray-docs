@@ -494,6 +494,14 @@ The full installation guide for Autodesk products including Stingray is included
 
 This section explains the improvements and fixes that require specific upgrade steps for users currently using a previous version of Stingray.
 
+### Migrating projects from versions earlier than Stingray 1.6
+ 
+When you load a project created in the previous release of Stingray, the current release automatically migrates the data from your earlier project to work in the new version of Stingray. This means that projects created in Stingray 1.6 are migrated seamlessly to work in Stingray 1.7.
+ 
+As of Stingray 1.6, all projects get created with a .stingray_project file extension, and that project file is now required in the **Project Manager** to open the project in Stingray 1.7. This change means that projects created in versions of Stingray previous to 1.6 can't be opened directly in Stingray 1.7.
+ 
+To open legacy projects in Stingray 1.7, you'll need to open the project using Stingray 1.6 first. This creates a .stingray_project file and performs any other data conversion required. You can then open the project in Stingray 1.7.
+
 ### Auto-loading removed from templates
 
 In previous releases, the *boot.package* file in the template projects used a `* = [*]` wildcard pattern to match all types of resources in the project. This made sure that all content you put in a project (and all content in the core resources) would always be compiled, bundled, and loaded into the project at runtime, no matter where in the project that content was located. The downside was that as a project grew, it sometimes led to crashes when the engine tried to load more resources than it could fit in the available memory -- especially on mobile platforms.
