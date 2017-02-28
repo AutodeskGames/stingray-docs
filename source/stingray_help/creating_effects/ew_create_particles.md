@@ -8,11 +8,11 @@
 
 3.	Enter 'sparks' as the name for the new particle effect.
 
-	A particle asset is created in the **Asset Browser**.
+	A particle asset is created in the **Asset Browser**. A particle material is also created for the particle effect in the Asset Browser.
 
 	![](../images/create_particle.png)
 
-	You now have your first particle effect asset.  Now, lets make it do something.
+	You now have your first particle effect asset. Now, lets make it do something.
 
 ##Step 2. Modify properties of the particle system
 

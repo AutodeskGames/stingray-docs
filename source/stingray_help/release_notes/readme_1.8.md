@@ -31,16 +31,36 @@ Sections in this topic:
 
 -	You can copy and paste particle effect systems and controllers. Select a system or controller, and either right-click to select Copy (and Paste) or use the Ctrl + C, Ctrl + V hotkeys to copy and paste the systems.
 
--	You can also drag and drop the systems around to reorder the effects in a particle.
+-	Drag and drop the systems around to reorder the effects in a particle.
 
--	A particle material exists when you create a new particle effect.
+-	A particle material exists when you create a new particle effect. See ~{ Create and edit particle effects }~.
 
 ### Asset Browser improvements
 
-Searching for online assets now indicates the number of results next to the Online Assets in the tree view of the Asset Browser. You can clear the Search results by clicking the Clear icon in the Search field.
+Searching for online assets indicates the number of results next to the **Online Assets** in the tree view of the **Asset Browser**. You can clear the *Search* results by clicking the Clear icon in the Search field.
 
-You can also locate an online asset installed in your project using a new option **Locate in Project** from the Online Assets view. Select an installed asset (indicated with a green checkmark) and either right-click and select **Locate in Project** or click the icon.
+![](../images/online_assets_locate.png)
 
+You can also locate an online asset installed in your project using a new option **Locate in Project** from the **Online Assets** view. Select an installed asset (indicated with a green checkmark) and either click the ![](../images/icon_asset_browser_locate.png) icon or right-click and select **Locate in Project**. See ~{ Asset Browser }~.
+
+### Stingray resource files
+
+You can use the Script Editor to open and edit Stingray resource files like
+
+-	 Render Configuration (.render_config)
+-	 Shader Node (.shader_node)
+-	Shader (.shader),  
+-	Shading Environment Mapping (.shading_environment_mapping),
+-	Entity Component (.component),
+-	Stingray Create Panel Object (.object_creator_item),
+-	Physics Properties (.physics_properties ),
+-	Network Config (.network_config),
+-	Surface Properties (.surface_properties), and
+-	Stingray Type Description(.type) files.
+
+### Texture Manager
+
+Check out the revamped Texture Manager with improved texture loading and filtering.
 
 [Return to top](#top)
 
