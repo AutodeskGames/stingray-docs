@@ -1,5 +1,7 @@
 # Create and edit particle effects
 
+![UPDATED](../images/updated.png)
+
 > ![](../images/icon_video.png) For video tutorials on creating particle effects, see <a href="http://area.autodesk.com/learning/creating-particle-effects-in-stingray" target="blank">Particle Effects in Stingray</a>.
 
 The **Particle Editor** Tool (**Window > Particle Editor**) lets you create new particles, modify them and preview the effects in the viewport within the tool. You can open and modify multiple particles at the same time, view History ![](../images/icon_partEd_history.png) of actions performed, and use the Respawn ![](../images/icon_particle_respawn.png) and Pause/Resume ![](../images/icon_partEd_pause.png) icons to respawn the particle effect and pause/resume the particle effects preview.
@@ -15,7 +17,7 @@ The **Particle Editor** Tool (**Window > Particle Editor**) lets you create new 
 	-	Right-click in file view area of the **Asset Browser** and select **Create > Particle Effect**, or click the **Create Asset** icon ![](../images/icon_createAsset.png) and select **Create Particle Effect**. Enter a name for the new particle effect.
 
 
-	A particle asset is created in the **Asset Browser**.
+	A particle asset and a particle material is created in the **Asset Browser**.
 
 	![](../images/create_particle.png)
 
@@ -25,7 +27,7 @@ The **Particle Editor** Tool (**Window > Particle Editor**) lets you create new 
 
 **To edit a particle effect:**
 
-The main way you'll work with particles is by modifying the properties of the particle system.  Particle systems are simply a group of commands that guide each of your particles from their birth to their death.
+The main way you'll work with particles is by modifying the properties of the particle system. Particle systems are simply a group of commands that guide each of your particles from their birth to their death.
 
 The default particle system is called System1, and you can add and remove controllers to any system to customize the particle effect. Each particle effect can have multiple systems, and each system can have multiple controllers.
 
@@ -45,9 +47,17 @@ The default particle system is called System1, and you can add and remove contro
 
 3. See the components of System 1.
 
-	By default, this system contains Emitter:Rate, Size, Color, and Billboard Visualizer components. For your particle effect to work properly you only need an **Emitter:Rate** and a **Size** component.
+	By default, this system contains Emitter:Rate, Size, Color, and Billboard Visualizer components. [![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)The Billboard Visualizer uses the custom particle material created for the particle effect. Replace this material with a material graph (containing a Particle Base shader node) of your choice.
 
-6. Select each component to view the properties available for editing.
+	[![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)
+
+	>**Note:** If you delete the Billboard Visualizer component, the particle effect won’t display. You can use a non-rendering particle system to act as a trail spawner for other particle systems.
+
+4. Select each component to view the properties available for editing.
+
+[![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)
+
+>**Tip:** Reorder the particle effects by dragging and dropping the systems in your particle effect, and copy and paste the controllers and systems using the right-click **Copy**, **Paste** context menu options or hotkeys (Ctrl + C, Ctrl + V).
 
 **To add additional systems to a particle effect:**
 
