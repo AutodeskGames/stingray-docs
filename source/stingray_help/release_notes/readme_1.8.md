@@ -27,7 +27,7 @@ Sections in this topic:
 
 * * *
 
-### Particle Editor updates
+## Particle Editor updates
 
 -	You can copy and paste particle effect systems and controllers. Select a system or controller, and either right-click to select Copy (and Paste) or use the Ctrl + C, Ctrl + V hotkeys to copy and paste the systems.
 
@@ -35,12 +35,43 @@ Sections in this topic:
 
 -	A particle material exists when you create a new particle effect.
 
-### Asset Browser improvements
+See ~{ Create and edit particle effects }.
+
+## Asset Browser improvements
 
 Searching for online assets now indicates the number of results next to the Online Assets in the tree view of the Asset Browser. You can clear the Search results by clicking the Clear icon in the Search field.
 
 You can also locate an online asset installed in your project using a new option **Locate in Project** from the Online Assets view. Select an installed asset (indicated with a green checkmark) and either right-click and select **Locate in Project** or click the icon.
 
+- ~{ Asset Browser }~
+
+## Capture Frames Tool updates
+
+You can now specify the length of time/frames you want to capture from the settings panel.
+(Previously, you had to do what?)
+
+- ~{ Capture Frames Tool }~
+- ~{ Capture frames to disk }~
+
+## Google VR updates
+
+- Easy way to change the cardboard settings
+
+## Physically-based light parameters
+
+## Light baker improvements
+
+## Interop: Updated DCC link plug-in for 3ds Max
+
+## What's New in documentation?
+
+- Press F1 to open Stingray Help while using the Editor
+- Better filters to refine Search results
+
+## What's New for developers?
+
+- Finer control on the data compiler so you can compile only specific assets
+- Boot script hook
 
 [Return to top](#top)
 
