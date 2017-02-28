@@ -1,5 +1,7 @@
 ﻿# Asset Browser
 
+![UPDATED](../../images/updated.png)
+
 - **Window > Asset Browser**
 
 The **Asset Browser** is the main way to browse and import assets in your game project. It includes two main view panels, the folder or tree view, and the file view. Both areas include several controls that let you browse or search for assets efficiently.
@@ -72,6 +74,12 @@ Use the **Online Assets** tab in the Tree view to browse, search and find online
   - Select an asset and click the **Download** button in the **Property Editor**.
 
 Click the yellow icon ![](../../images/icon_status_bar_cancel_progress.png) to cancel downloading of the asset. The online assets are not listed in the Asset Browser if the Online Assets server is disconnected from the cloud services.
+
+[![NEW](../../images/new.png "What else is new in v1.8?")](../../release_notes/readme_1.8.html)
+
+Use the Search field to search for an online asset. The number of matching assets are listed next to the Online Assets tab.
+
+  >**Tip**: To view or locate a downloaded asset in your project, select an installed asset (indicated with a green checkmark) and either click ![](../../images/icon_asset_browser_locate.png) or right-click and select **Locate in Project**.
 
 ---
 Related topics:
