@@ -47,8 +47,7 @@ You can also locate an online asset installed in your project using a new option
 
 ## Capture Frames Tool updates
 
-You can now specify the length of time/frames you want to capture from the settings panel.
-(Previously, you had to do what?)
+You can now define the capture range in your story using the Capture Frames Tool. Instead of recapturing your entire story after making a fix, specify the capture range in frames or seconds, and then quickly recapture.
 
 - ~{ Capture Frames Tool }~
 - ~{ Capture frames to disk }~
@@ -63,7 +62,11 @@ Check out the revamped **Texture Manager** with improved texture loading and fil
 
 ## Physically-based light parameters
 
+Physically based light parameters have been exposed through entities. The **Temperature** parameter controls the light color and **Lumens** controls the light intensity. Adjusting these parameters gives your scene more relevant lighting, like light falloffs that occur with real lights.
+
 ## Light baker improvements
+
+A new non-interactive light baking mode has been added to the Stingray baker to better control memory consumption. Instead of baking everything in the scene and showing the progress, this new mode bakes one object in the scene completely and then outputs the lightmap, saving memory in the process. Disable **Interactive** baking in the **Light Baking** window to turn on this mode. Non-interactive baking is also the default baking mode when you launch a baking session from the command line. See ~{ Trigger lightmap baking from the command line }~.
 
 ## Interop: Updated DCC link plug-in for 3ds Max
 
