@@ -1,7 +1,11 @@
 # Stingray 1.7 Release Notes
 <a name="top"></a>
 
-Welcome to Stingray 1.7 (1.7.1177.0).
+Welcome to Stingray 1.7 (1.7.1177.0). This release contains fixes and enhancements to several areas of Stingray, including an improved texture import process, rendering workflows, and interop with Maya. You'll also find a brand new **Particle Editor** which consolidates the particle editing workflow into a single, streamlined window, as well as improvements in the **Capture Frames** and **Story Editor** tools.
+
+This update also provides two new project templates designed to help you build VR projects for mobile, and adds support for Google Cardboard on iOS, Google Daydream devices and controllers, and Google Cardboard for Android on Daydream devices.
+
+In addition, we've made it easier to find and download example content with the new **Online Assets** tab in the **Asset Browser**, which lets you build a scene in minutes. Refer to the [What's New](#whats-new) section below for details on these features and more.
 
 Sections in this topic:
 
@@ -21,11 +25,19 @@ Sections in this topic:
 
 	If you're working on a project that you started in an earlier version of Stingray, this section lists the steps you may need to take in order to successfully upgrade to the latest version.
 
-	For example, with Stingray 1.7 we upgraded to Wwise version 2016.1.3, so you'll need to regenerate sound banks for your existing projects.
-
 ## What's New
 
 * * *
+
+## Better texture import with automatic compression
+
+Textures are now automatically compressed when you import them in Stingray. Depending on the texture type, Stingray assigns the texture template and compression settings for the imported textures for each platform. Texture compressions are applied by texture file suffix match or by image analysis. You can still tweak the textures as required, but you no longer need to manually compress textures on import. For details, see ~{ Import textures}~ and ~{ Create a texture template }~.
+
+## Particle Editor
+
+In previous versions of Stingray, you created and edited particle effects using the **Asset Browser**, **Property Editor**, and **Asset Preview**. With Stingray 1.7, we're pleased to give you a standalone **Particle Editor** that streamlines the workflow for particle artists. Select **Window > Particle Editor** from the main menu, or double-click an existing particle effect in the **Asset Browser** to launch the new tool. For more information, see ~{ Create and edit particle effects }~.
+
+![](../gifs/wn_particle_editor.gif)
 
 ## What's new in VR
 
@@ -49,21 +61,45 @@ See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse,
 
 ![](../images/online_assets_rn.png)
 
+## What's new in Rendering
+
+![](../images/rendering_rn.png)
+
+### Light baking improvements
+
+- The light baker is now more stable and has been optimized to run faster on most scenes and hardware. See ~{ Baking with the Stingray baker }~.
+- You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See ~{ Bake lightmaps }~.
+- Click **Clear** in the **Light Baking** window to quickly delete and unmap all lightmaps on disk.
+- You can now start a standalone baking session using a command-line prompt. For details, see ~{ Trigger lightmap baking from the command line }~.
+-	Beast is now deprecated.
+
+### Tessellation support
+
+Tessellation can now be activated using the standard base material node. Use the **Tesselation Factor** input on the base node to control the tesselation factor of your surface. A lower value results in a less tessellation. See ~{ Create a tessellation material }~.
+
+### Negative scale support
+
+Stingray shaders now support negative scale. See ~{ Assign a material to an object }~.
+
+### Texture Manager updates
+
+- New **Cubemap** and **HDRI/Skydome** category filters
+- New texture template for imported skydome images
+
 ## Improved Capture Frames Tool
+
 <a name="capture-frames"></a>
 ![](../images/capture_frames_rn.png)
 
 The **Capture Frames** Tool is now a standalone tool connected to the **Story Editor**. Simply create a story and click ![Capture Frames](../images/icon_capture_frame.png) to adjust your **Capture Settings**. New settings include support for different cameras and resolutions, and options to save and reuse your settings. Capturing can also be initiated through new Capture Flow Nodes. For details, see ~{ Capture Frames Tool }~.
 
-## Better texture import with automatic compression
+## More Story Editor improvements
 
-Textures are now automatically compressed when you import them in Stingray. Depending on the texture type, Stingray assigns the texture template and compression settings for the imported textures for each platform. Texture compressions are applied by texture file suffix match or by image analysis. You can still tweak the textures as required, but you no longer need to manually compress textures on import. For details, see ~{ Import textures}~ and ~{ Create a texture template }~.
+-	Copy keyframes and paste them on the current time in the timeline or on the cursor position using either the hotkeys or by right click context menu in the **Story Editor**. You can also copy keys from multiple tracks and paste them on other tracks based on the order of track selection. Updated topics include ~{ Create simple animations with the Story Editor }~ and ~{ Story Editor hotkeys }~.
+-	New reverse play icon ![](../images/icon_story_reversePlay.png) to play stories in reverse direction.
+-	Stories now stop playing at the end of the playback range in *None* playback mode. See ~{ Story Editor }~.
+- A Capture Frame Tool icon ![](../images/icon_capture_frame.png) to access Capture Frame Settings; a story must be created to enable this mode. See [Improved Capture Frames Tool](#capture-frames).
 
-## Particle Editor
-
-In previous versions of Stingray, you created and edited particle effects using the **Asset Browser**, **Property Editor**, and **Asset Preview**. With Stingray 1.7, we're pleased to give you a standalone **Particle Editor** that streamlines the workflow for particle artists. Select **Window > Particle Editor** from the main menu, or double-click an existing particle effect in the **Asset Browser** to launch the new tool. For more information, see ~{ Create and edit particle effects }~.
-
-![](../gifs/wn_particle_editor.gif)
 
 ## Better network workflows: Run multiple local game instances
 
@@ -80,13 +116,6 @@ At the bottom of most pages in the Stingray Help, you'll now see a green button 
 You can now import font files to generate font resources to render text with sharp edges and preserve them when scaling. When you import font files, this generates the multi-channel signed distance field resources to display the font in your project. This feature is enabled by the *Distance Field Font Importer* plug-in, which is automatically enabled in the **Plugin Manager**. (See ~{ Add and remove plug-ins using the Plugin Manager }~.)
 
 See ~{ Import fonts }~.
-
-## Story Editor improvements
-
--	Copy keyframes and paste them on the current time in the timeline or on the cursor position using either the hotkeys or by right click context menu in the **Story Editor**. You can also copy keys from multiple tracks and paste them on other tracks based on the order of track selection. Updated topics include ~{ Create simple animations with the Story Editor }~ and ~{ Story Editor hotkeys }~.
--	New reverse play icon ![](../images/icon_story_reversePlay.png) to play stories in reverse direction.
--	Stories now stop playing at the end of the playback range in *None* playback mode. See ~{ Story Editor }~.
-- A Capture Frame Tool icon ![](../images/icon_capture_frame.png) to access Capture Frame Settings; a story must be created to enable this mode. See [Improved Capture Frames Tool](#capture-frames).
 
 ## Trim animation clips
 
@@ -164,31 +193,6 @@ Stingray now supports high definition range EXR files for image based lighting. 
 
 The PhysX plug-in installers for Maya 2017 and Maya LT 2017 that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.21117.04582. For related information, see ~{ Install the PhysX plug-in for your DCC tool }~.
 
-## What's new in Rendering
-
-![](../images/rendering_rn.png)
-
-### Light baking improvements
-
-- The light baker is now more stable and has been optimized to run faster on most scenes and hardware. See ~{ Baking with the Stingray baker }~.
-- You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See ~{ Bake lightmaps }~.
-- Click **Clear** in the **Light Baking** window to quickly delete and unmap all lightmaps on disk.
-- You can now start a standalone baking session using a command-line prompt. For details, see ~{ Trigger lightmap baking from the command line }~.
--	Beast is now deprecated.
-
-### Tessellation support
-
-Tessellation can now be activated using the standard base material node. Use the **Tesselation Factor** input on the base node to control the tesselation factor of your surface. A lower value results in a less tessellation. See ~{ Create a tessellation material }~.
-
-### Negative scale support
-
-Stingray shaders now support negative scale. See ~{ Assign a material to an object }~.
-
-### Texture Manager updates
-
-- New **Cubemap** and **HDRI/Skydome** category filters
--	New texture template for imported skydome images
-
 [Return to top](#top)
 
 ## What's Fixed
@@ -236,6 +240,7 @@ Stingray shaders now support negative scale. See ~{ Assign a material to an obje
 - GAME-18437 VR Oculus template: Can't press Esc to close 'Run project' window
 - GAME-18428 Creative Market: Browsing through assets gets broken after viewing an asset
 - GAME-18047 Deploying Basic template to Android device takes excessive time
+- GAME-20498 Teleporter raycast in VR Vive and VR Oculus templates behaves badly when there is no collision
 
 ### Documentation and Learning
 
@@ -475,6 +480,10 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 	**Workaround:** Turn off **Update textures** the first time you send assets with **Level Send All**. On subsequent level sync operations, you can then use **Level Send Selected** or **Level Send All** with **Update textures** on as required.
 
+- **GAME-21615: First frames rendered by Capture Frames tool are not part of the animation in the story**
+
+	**Workaround:** Let the Capture Frames tool run a few frames longer to make sure all animation is captured.
+
 [Return to top](#top)
 
 ## Upgrade Requirements
@@ -484,6 +493,14 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 The full installation guide for Autodesk products including Stingray is included in the Stingray online help, [here](http://www.autodesk.com/stingray-install-ENU "here").
 
 This section explains the improvements and fixes that require specific upgrade steps for users currently using a previous version of Stingray.
+
+### Migrating projects from versions earlier than Stingray 1.6
+ 
+When you load a project created in the previous release of Stingray, the current release automatically migrates the data from your earlier project to work in the new version of Stingray. This means that projects created in Stingray 1.6 are migrated seamlessly to work in Stingray 1.7.
+ 
+As of Stingray 1.6, all projects get created with a .stingray_project file extension, and that project file is now required in the **Project Manager** to open the project in Stingray 1.7. This change means that projects created in versions of Stingray previous to 1.6 can't be opened directly in Stingray 1.7.
+ 
+To open legacy projects in Stingray 1.7, you'll need to open the project using Stingray 1.6 first. This creates a .stingray_project file and performs any other data conversion required. You can then open the project in Stingray 1.7.
 
 ### Auto-loading removed from templates
 
@@ -543,7 +560,7 @@ For a complete list of all new, modified, and removed Flow nodes in this release
 
 - Values entered for **Sprite Columns** and **Sprite Rows** in the **Utility > Flipbook** node are now output correctly on the sprite sheet.
 
-For a complete list of all new, modified, and removed shader nodes in this release, see the [version history](../../shader_ref/versions.html).
+For a complete list of all new, modified, and removed shader nodes in this release, see the [version history](../../shaders_ref/versions.html).
 
 ### Visual Studio 2015
 

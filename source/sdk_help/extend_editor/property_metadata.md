@@ -62,7 +62,7 @@ var numberProperty = props.slider("Health", m.prop(50), {
 
 ## Built-in control widgets
 
-The following sections describe the differen values you can use for the `control` or `displayType` metadata field. Each one defines a different kind of built-in widget for viewing and interacting with the value of the corresponding type -- like sliders, textfields, checkboxes, etc.
+The following sections describe the different values you can use for the `control` or `displayType` metadata field. Each one defines a different kind of built-in widget for viewing and interacting with the value of the corresponding type -- like sliders, textfields, checkboxes, etc.
 
 ![import menu](../images/all_properties.png)
 
