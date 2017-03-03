@@ -33,9 +33,9 @@ Sections in this topic:
 
 -	Drag and drop the systems around to reorder the effects in a particle.
 
--	A particle material exists when you create a new particle effect. See ~{ Create and edit particle effects }~.
+-	A particle material exists when you create a new particle effect.
 
-See ~{ Create and edit particle effects }.
+See ~{ Create and edit particle effects }~.
 
 ## Asset Browser improvements
 

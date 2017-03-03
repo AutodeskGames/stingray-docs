@@ -8,32 +8,31 @@ The **Particle Editor** Tool (**Window > Particle Editor**) lets you create new 
 
 **To create a particle effect:**
 
+1.	Select **Window > Particle Editor** to launch the **Particle Editor**, which creates a temporary untitled particle effect.
+2.	Modify the properties of an effect.
+3.	Click **Save** ![](../images/icon_save.png) to assign a name and save it to the desired location in your project. This creates a particle effect and its related particle material.
+4.	To create another particle effect, click **New** ![](../images/icon_createAsset.png) to open a new tab with an untitled particle effect in the **Particle Editor**.
+
+You can also use the right-click menu option in the **Asset Browser** to create a new particle effect:
+
 1.	In the **Asset Browser**, navigate to your project /contents folder and create a new sub-folder for your particle effects.
 
-2. Do any of the following:
+2. Right-click in file view area of the Asset Browser, select **Create > Particle Effect**, and enter a name for the new particle effect.
 
-	-	In the **Particle Editor**, click **New** ![](../images/icon_createAsset.png) to create a particle effect asset and then **Save** ![](../images/icon_save.png) to enter a name for the particle effect.
-
-	-	Right-click in file view area of the **Asset Browser** and select **Create > Particle Effect**, or click the **Create Asset** icon ![](../images/icon_createAsset.png) and select **Create Particle Effect**. Enter a name for the new particle effect.
-
-
-	A particle asset and a particle material is created in the **Asset Browser**.
-
-	![](../images/create_particle.png)
-
+	A particle asset and a particle material are created in the Asset Browser.
 3.	Select the particle effect asset and either double-click or in the **Property Editor**, click **Open in Editor**. The particle effect asset launches in the **Particle Editor**.
 
-	You now have a particle effect asset, and you can start to modify its properties to determine what the effect looks like.
+	![](../images/create_particle.png)
 
 **To edit a particle effect:**
 
 The main way you'll work with particles is by modifying the properties of the particle system. Particle systems are simply a group of commands that guide each of your particles from their birth to their death.
 
-The default particle system is called System1, and you can add and remove controllers to any system to customize the particle effect. Each particle effect can have multiple systems, and each system can have multiple controllers.
+The default particle system is called System 1, and you can add and remove controllers to any system to customize the particle effect. Each particle effect can have multiple systems, and each system can have multiple controllers.
 
 1. Select a particle effect asset in the **Asset Browser** and double-click to open it in the **Particle Editor**. You can also open a particle effect asset using the Open icon ![](../images/icon_scriptEd_Open.png) in the **Particle Editor**.
 
-	The particle system properties is displayed in the **Particle Editor**.
+	The particle system properties are displayed in the **Particle Editor**.
 
 	![](../images/particle_properties.png)
 
@@ -47,7 +46,7 @@ The default particle system is called System1, and you can add and remove contro
 
 3. See the components of System 1.
 
-	By default, this system contains Emitter:Rate, Size, Color, and Billboard Visualizer components. [![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)The Billboard Visualizer uses the custom particle material created for the particle effect. Replace this material with a material graph (containing a Particle Base shader node) of your choice.
+	By default, this system contains Emitter:Rate, Size, Color, Velocity:Box and Billboard Visualizer components. [![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)The Billboard Visualizer uses the custom particle material created for the particle effect. Replace this material with a material graph (containing a Particle Base shader node) of your choice.
 
 	[![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)
 
