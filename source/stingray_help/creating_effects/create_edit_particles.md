@@ -6,25 +6,33 @@
 
 The **Particle Editor** Tool (**Window > Particle Editor**) lets you create new particles, modify them and preview the effects in the viewport within the tool. You can open and modify multiple particles at the same time, view History ![](../images/icon_partEd_history.png) of actions performed, and use the Respawn ![](../images/icon_particle_respawn.png) and Pause/Resume ![](../images/icon_partEd_pause.png) icons to respawn the particle effect and pause/resume the particle effects preview.
 
-**To create a particle effect:**
+## Create a particle effect
 
-1.	Select **Window > Particle Editor** to launch the **Particle Editor**, which creates a temporary untitled particle effect.
-2.	Modify the properties of an effect.
-3.	Click **Save** ![](../images/icon_save.png) to assign a name and save it to the desired location in your project. This creates a particle effect and its related particle material.
-4.	To create another particle effect, click **New** ![](../images/icon_createAsset.png) to open a new tab with an untitled particle effect in the **Particle Editor**.
+1.	Select **Window > Particle Editor** to launch the **Particle Editor**.
 
-You can also use the right-click menu option in the **Asset Browser** to create a new particle effect:
+    The **Particle Editor** opens with a default, untitled particle effect ready for you to modify.
+2.	Modify the default particle effect by editing its properties.(See ~{ Particle system properties }~.)
+3.	Click **Save** ![](../images/icon_save.png) to assign a name and save the effect to the desired location in your project.
 
-1.	In the **Asset Browser**, navigate to your project /contents folder and create a new sub-folder for your particle effects.
+	This creates both a particle effect system, and a related particle material.
 
-2. Right-click in file view area of the Asset Browser, select **Create > Particle Effect**, and enter a name for the new particle effect.
+**Other ways to create particle effects:**
 
-	A particle asset and a particle material are created in the Asset Browser.
-3.	Select the particle effect asset and either double-click or in the **Property Editor**, click **Open in Editor**. The particle effect asset launches in the **Particle Editor**.
+-	To create another particle effect, click **New** ![](../images/icon_createAsset.png) to open a new tab with an untitled particle effect in the **Particle Editor**.
 
-	![](../images/create_particle.png)
+-	You can also use the right-click menu option in the **Asset Browser** to create a new particle effect:
 
-**To edit a particle effect:**
+	1.	In the **Asset Browser**, navigate to your project /contents folder and create a new sub-folder for your particle effects.
+
+	2. Right-click in file view area of the Asset Browser, select **Create > Particle Effect**, and enter a name for the new particle effect.
+
+		A particle asset and a particle material are created in the Asset Browser.
+
+	3. Select the particle effect asset and either double-click or in the **Property Editor**, click **Open in Editor**. The particle effect asset launches in the **Particle Editor**.
+
+		![](../images/create_particle.png)
+
+## Edit a particle effect
 
 The main way you'll work with particles is by modifying the properties of the particle system. Particle systems are simply a group of commands that guide each of your particles from their birth to their death.
 
@@ -58,17 +66,17 @@ The default particle system is called System 1, and you can add and remove contr
 
 >**Tip:** Reorder the particle effects by dragging and dropping the systems in your particle effect, and copy and paste the controllers and systems using the right-click **Copy**, **Paste** context menu options or hotkeys (Ctrl + C, Ctrl + V).
 
-**To add additional systems to a particle effect:**
+## Add additional systems to a particle effect
 
 -	Right-click the particle system (System 1) and select Add System.
 
 	![](../images/particle_add_system.png)
 
-**To add controllers to a system:**
+## Add controllers to a system
 
 - Right-click the system root and select the component you want to add.
 
-**To remove controllers from a system:**
+## Remove controllers from a system
 
 -	Right-click and select **Remove Controller**.
 

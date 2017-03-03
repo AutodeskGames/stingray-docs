@@ -2,7 +2,7 @@
 
 ##Step 1. Create the first particle effect
 
-1.	Open **Particle Editor** (**Window > Particle Editor**), which creates a temporary particle effect.
+1.	Open **Particle Editor** (**Window > Particle Editor**), which creates a default particle effect for you to start with.
 2.	Click **Save** ![](../images/icon_save.png) to name and save the particle effect.
 
 ##Step 2. Modify component properties of the particle system
@@ -19,15 +19,15 @@ Particle systems are simply a group of commands that guide each particle from bi
 
 	> **Tip:** Increase the width of the **Property Editor** to see greater detail of the property graph.
 
-4. In the ~{ Asset Preview }~ window, click the gear icon ![](../images/icon_assetPreview.png)  and select **Update Mode > Always**.
+4. In the ~{ Asset Preview }~ area of the **Particle Editor**, click the gear icon ![](../images/icon_assetPreview.png)  and select **Update Mode > Always**.
 	(This is best when working with particle effects.)
 
-5. Select **Velocity:Box**, which randomizes the effect with some box motion.
+5. Select **Velocity:Box**, which makes the effect spawn particles within a box shape.
 6. Adjust the **Veloctiy:Box** properties to make the Minimum Z values 0.
 
 	![](../images/velocity_box_props.png)
 
-	This makes the particle effect spawn particles in the upward direction.
+	This makes the particle effect spawn particles in an upward direction.
 
 7. Select the **Color** component.
 
@@ -55,16 +55,13 @@ Particle systems are simply a group of commands that guide each particle from bi
 
 ##Step 3. Add components to customize the effect
 
-1. Right-click on the system and select **Rotation > Spin**.
+1. Right-click the system and select **Rotation > Spin**.
 
 	In the viewport, you can see your particle effect spinning around.
 
-2. Right-click the system, select **Copy** and then again right-click to select **Paste**.
-
-	This creates a copy of the system in the editor.
-
-3.	Rename the newly created System 1 to System 2.
-4.	Change the color of the System 2 from light blue to red.
+2. Right-click to copy, then paste the system.
+3. Rename the newly created System 1 to System 2.
+4. Change the color of the System 2 from light blue to red.
 
 	The particles now look similar to the following in the viewport:
 
