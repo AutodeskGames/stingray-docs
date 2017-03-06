@@ -101,9 +101,10 @@ You can use the **Script Editor** to open and edit Stingray resource files like
 
 ### Previous known limitations: 
 
-These were late-breaking issues that affected Stingray 1.7 as known limitations. We fixed them in Stingray 1.8!
+These were late-breaking issues that affected Stingray 1.7 as known limitations. They really bugged us and we're extra happy to tell you we fixed them in Stingray 1.8.
 
 - GAME-21615: First frames rendered by Capture Frames tool are not part of the animation in the story
+- GAME-20834: Level Sync from 3ds Max (using 'Level Send All') stalls at the end of the import process
 
 [Return to top](#top)
 
