@@ -99,7 +99,11 @@ You can use the **Script Editor** to open and edit Stingray resource files like
 
 ## What's Fixed
 
+### Previous known limitations: 
 
+These were late-breaking issues that affected Stingray 1.7 as known limitations. We fixed them in Stingray 1.8!
+
+- GAME-21615: First frames rendered by Capture Frames tool are not part of the animation in the story
 
 [Return to top](#top)
 
