@@ -1,5 +1,7 @@
 # Capture Frames Tool
 
+![UPDATED](../images/updated.png)
+
 The **Capture Frames** Tool lets you render frames to disk. The tool is integrated into the **Story Editor** workflow, and can also be initiated through Flow. For more information on using Flow, see the **Capture Frames** category in the [Stingray Flow Node Reference](../../flow_ref/index.html).
 
 The following **Capture Settings** can be adjusted to control your output. See ~{ Capture frames to disk }~ for more information.
@@ -15,6 +17,12 @@ The following **Capture Settings** can be adjusted to control your output. See ~
 
 <dt>Camera</dt>
 <dd>Lets you select the camera to capture. </dd>
+
+<dt>Capture Range</dt>
+[![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)
+<dd>Lets you set a custom range for the camera to capture. You can select **Custom Range - Seconds** or **Custom Range - Frames**. To capture the entire story, select **Use Story Timeline**.
+
+  >**Tip:** Instead of recapturing your entire story after making a fix, specify a **Capture Range**, and then quickly recapture only those details that need updating. </dd>
 
 </dl>
 

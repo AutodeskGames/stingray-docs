@@ -1,6 +1,10 @@
 # Trigger lightmap baking from the command line
 
+![UPDATED](../../../images/updated.png)
+
 You can start the Stingray engine application from a command-line prompt, and provide parameters on the command line to trigger lightmap baking.
+
+>**Note:** [![NEW](../../../images/new.png "What else is new in v1.8?")](../../../release_notes/readme_1.8.html) Non-interactive baking is the default baking mode when you launch a baking session from the command line. See ~{ Baking with the Stingray baker }~.
 
 ## To trigger lightmap baking from the command line
 

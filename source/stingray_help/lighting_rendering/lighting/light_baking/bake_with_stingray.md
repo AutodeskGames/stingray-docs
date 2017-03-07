@@ -1,5 +1,7 @@
 # Baking with the Stingray baker
 
+![UPDATED](../../../images/updated.png)
+
 The Stingray light baker is the light baking system built in to Stingray.
 
 ## What does it bake?
@@ -61,6 +63,14 @@ Note that you may need to set this value very high in order to see the effect.</
 <dd>When enabled (default), the baker uses compute shaders, optimizing the performance of the baker on most scenes and hardware.
 
 >**Tip:** Disable **Use Compute** if you are running slower hardware.</dd>
+
+<dt>Interactive</dt>
+[![NEW](../../../images/new.png "What else is new in v1.8?")](../../../release_notes/readme_1.8.html)
+
+Disable Interactive baking to better control your memory consumption while baking. Instead of baking everything in the scene and showing the progress, Non-interactive baking bakes one object in the scene completely and then outputs the lightmap, saving memory in the process.
+
+>**Note:** Non-interactive baking is the default baking mode when you launch a baking session from the command line. See ~{ Trigger lightmap baking from the command line }~.
+<dd>
 
 </dl>
 
