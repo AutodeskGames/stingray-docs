@@ -230,12 +230,14 @@ For example:
 A `resource` type is a reference to another file in the project. It tells the data compiler that there is a relationship between this file and the referenced file.
 
 References are represented as dictionaries with two special keys: `$resource_name` and `$resource_type`. Both are expected to be string values. Resource names are project-relative forward-slash-separated file paths without the file extension, such as `"core/units/camera"`. Resource types are just file extensions without the leading dot. So a reference to the default camera unit looks like this in JSON files:
+
 ~~~
 {
     "$resource_name" = "core/units/camera"
     "$resource_type" = "unit"
 }
 ~~~
+
 Some kinds of references might support multiple resource types. To cope with this, the `extension` property can specify an array of file extensions or a single extension as a string.
 
 Property   |Type                         |Default|Description
@@ -343,6 +345,7 @@ JSON value|Resulting case key
 ### Example: switching on `:type`
 
 For example, say that due to an oversight, we have a data structure in our project that contains a field that can either be an array or a dictionary. In order to handle both variants, we declare our field as a `:switch` type that will switch on the `":type"` of the value.
+
 ~~~
 {
     type = ":switch"
@@ -367,6 +370,7 @@ For example, say that due to an oversight, we have a data structure in our proje
     }
 }
 ~~~
+
 ### Example: switching on `:value`
 
 In this example our data can contain two kinds of lights, `"omni"` or `"spot"`, with differing properties. Assuming the JSON value we're looking at is a dictionary, we examine the value associated with the `"light_type"` key. If it is `"spot"`, we treat the dictionary as a `:struct` with `range` and `angle` fields. If the `"light_type"` is `"omni"` we treat it as having just a `radius` field instead. Since the `default` case is `"omni"`, new instances of our type will be omni lights. We will also assume it is an omni light if we're unable to access or match the `"light_type"` key to any of the keys in the `cases` dictionary.
