@@ -16,25 +16,14 @@ Otherwise, the difference between these configurations comes down to a tradeoff 
 
 >	The `dev` or `development` configuration is the one you'll use the most while you're actively working on your project. It's almost as fast and optimized as `release`, but it offers many features that are crucial during your development phase, like two-way communications with the Editor. In addition, this configuration is somewhat more forgiving than `release`: you can deploy your project even if it contains compilation warnings.
 
-`Debug`
-
->	The `debug` configuration is mostly useful only for developers, in case they need to attach an external debugger like Visual Studio to trace function calls and data values in the C++ code that runs inside the engine. However, since it runs much more slowly than the `development` or `release` configurations, it is not generally a good idea to use it when you're working on designing or deploying your project.
-
-## When you open a project in the Stingray Editor
-
-When you open a project in the ~{ Project Manager }~ panel, you can choose which engine configuration you want the Stingray Editor to use for editing your project.
-
--	You will almost always want to leave this on the `Dev 64bit` setting. Choose `Dev 32bit` only if you are running on a 32-bit machine.
--	The `debug` options are too slow for general usage, and are only offered for the rare cases where it's necessary for a developer to debug the engine code running inside the editor.
--	`Release` is not offered as a choice, since the Editor needs to be able to communicate with its internal engine.
+**Note:** Developers with source access can also build Stingray with a third configuration, `debug`, which lets you attach an external debugger like Visual Studio to trace function calls and data values in the C++ code that runs inside the engine. See ~{ About Stingray build configurations }~.
 
 ## When you deploy your project
 
-When you use the **Deployer** panel to create a standalone build of your project for a target platform, you can choose which engine configuration will be used for your deployment.
+When you use the **Deployer** panel to create a standalone build of your project for a target platform, you can choose which engine configuration to use for your deployment.
 
 -	Try to use the `release` option whenever possible.
 -	Use `development` if your project has content warnings that prevent you from using `release`, but you still need to make a build you can test on its own or distribute within your organization.
--	Don't use `debug` unless you really need to attach a debugger to your deployed project.
 
 See also ~{ Using the Deployer panel }~.
 
