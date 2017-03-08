@@ -140,6 +140,8 @@ For a complete list of all new, modified, and removed elements in the Lua API in
 
 If your project contains any API elements that have been modified or removed, you will need to adjust your code accordingly.
 
+-	The setting names accepted by `Unit.set_animation_bone_mode()` and returned by `Unit.animation_bone_mode()` have been renamed to remove the `delta_` prefix. This better describes the effect of each setting.
+
 ### Flow node changes
 
 For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
