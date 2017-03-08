@@ -57,7 +57,7 @@ To create a new template:
 [![NEW](../../../images/new.png "What else is new in v1.8?")](../../../release_notes/readme_1.8.html)
 
 1. Select one (and only one) texture in the **Texture Manager**.
-2. click Create Category icon ![](../../../images/icon_createAsset.png).
+2. Click *Create Template* icon ![](../../../images/icon_createAsset.png).
 
 	The window that appears shows how the actual template file will look internally, what settings it will contain for each platform, and what settings they have in common.
 
