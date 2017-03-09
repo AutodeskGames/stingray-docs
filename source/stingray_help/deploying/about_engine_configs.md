@@ -16,7 +16,7 @@ Otherwise, the difference between these configurations comes down to a tradeoff 
 
 >	The `dev` or `development` configuration is the one you'll use the most while you're actively working on your project. It's almost as fast and optimized as `release`, but it offers many features that are crucial during your development phase, like two-way communications with the Editor. In addition, this configuration is somewhat more forgiving than `release`: you can deploy your project even if it contains compilation warnings.
 
-**Note:** Developers with source access can also build Stingray with a third configuration, `debug`, which lets you attach an external debugger like Visual Studio to trace function calls and data values in the C++ code that runs inside the engine. See ~{ About Stingray build configurations }~.
+**Note:** Developers with source access can also build Stingray with a third configuration, `debug`, which lets you attach an external debugger like Visual Studio to trace function calls and data values in the C++ code that runs inside the engine. See [About Stingray build configurations](http://help.autodesk.com/view/Stingray/ENU/?guid=__source_access_building_build_modes_html).
 
 ## When you deploy your project
 
