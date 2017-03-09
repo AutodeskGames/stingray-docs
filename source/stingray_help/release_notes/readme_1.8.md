@@ -95,11 +95,15 @@ You can use the **Script Editor** to open and edit Stingray resource files like
 - Finer control on the data compiler so you can compile only specific assets
 - Boot script hook
 
+## What else is new?
+
+- Motion Blur is now disabled in the default shading environment. (See ~{ Shading environment properties }~.) You can turn Motion Blur on if you want to create a slightly blurred effect when the camera is moving.
+
 [Return to top](#top)
 
 ## What's Fixed
 
-### Previous known limitations: 
+### Previous known limitations:
 
 These were late-breaking issues that affected Stingray 1.7 as known limitations. They really bugged us and we're extra happy to tell you we fixed them in Stingray 1.8.
 
