@@ -1,10 +1,14 @@
 # Using the Script Editor
 
+![UPDATED](../../images/updated.png)
+
 - **Window > Script Editor**
 
 The **Script Editor** helps you create and edit Lua scripts for your game in the Stingray Editor.
 
-> **Tip:** You can also open and edit other kinds of text files in the **Script Editor**, including *.ini* files, *.package* files, and other kinds of Stingray data resources that use the SJSON format.
+[![NEW](../../images/new.png "What else is new in v1.8?")](../../release_notes/readme_1.8.html)
+
+You can also open and edit other kinds of text files in the **Script Editor**, including *.ini* files, *.package* files, and other kinds of Stingray data resources that use the SJSON format like *.shading_environment_mapping*, *.component*,*.render_config*,*.physics_properties*, *.type* files.
 
 ![Script Editor Overview](../../images/comp_script_editor.png)
 

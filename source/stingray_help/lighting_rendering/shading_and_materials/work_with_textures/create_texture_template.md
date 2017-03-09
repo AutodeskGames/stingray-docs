@@ -1,5 +1,7 @@
 # Create a texture template
 
+![UPDATED](../../../images/updated.png)
+
 A texture template is a file in your project that typically contains the texture resource settings and compression formats of the texture on different platforms and enables an improved import workflow.
 
 The **Texture Manager** includes default texture templates such as
@@ -52,8 +54,10 @@ You can create texture templates to quickly configure imported textures without 
 
 To create a new template:
 
+[![NEW](../../../images/new.png "What else is new in v1.8?")](../../../release_notes/readme_1.8.html)
+
 1. Select one (and only one) texture in the **Texture Manager**.
-2. Select **File > Save Settings As Template**.
+2. Click *Create Template* icon ![](../../../images/icon_createAsset.png).
 
 	The window that appears shows how the actual template file will look internally, what settings it will contain for each platform, and what settings they have in common.
 
@@ -61,9 +65,7 @@ To create a new template:
 
 3. Click **OK** to save this as a new texture template.
 
-4. In the **Save As** dialog box, ensure that you save the texture template within your project and give it a good name, since the interface name is based on this file name.
-
-Once saved, your texture template is available within the **Quick Texture Import** window. See ~{ Import textures }~.
+4. In the dialog box that appears, ensure that you save the texture template within your project and give it a good name, since the interface name is based on this file name.
 
 ---
 Related topics:

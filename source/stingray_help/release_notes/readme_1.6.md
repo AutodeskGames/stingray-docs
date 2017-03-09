@@ -140,7 +140,7 @@ Download new Stingray plug-ins and update existing ones using the **Get more plu
 
 ### Switch between DX11 and DX12 when rendering
 
-Source customers can now toggle between DX11 and DX12 as the viewport renderer in the Editor (**Edit > Engine > Renderer**). Note that this option is available only if you compile the engine with `--use-d3d12` flag, provided your engine supports DX12. See ~{ Switch between DX11 and DX12 }~.
+Source customers can now toggle between DX11 and DX12 as the viewport renderer in the Editor (**Edit > Engine > Renderer**). Note that this option is available only if you compile the engine with `--use-d3d12` flag, provided your engine supports DX12. See [Switch between DX11 and DX12](http://help.autodesk.com/view/Stingray/ENU/?guid=__source_access_building_toggle_renderers_html).
 
 ### FBX Version 2017.1
 
