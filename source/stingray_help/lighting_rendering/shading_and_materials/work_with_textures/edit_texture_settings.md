@@ -14,7 +14,7 @@
 
 5. Edit the texture settings. (Refer to ~{ Texture Manager }~ for more details on the settings available.)
 
-6. When you are pleased with your changes, click Save icon![](../../../images/icon_save.png) or do **Ctrl + S**. This saves and recompiles your textures.
+6. Click Save icon![](../../../images/icon_save.png) or press **Ctrl + S**. This saves and recompiles your textures.
 
 ---
 Related topics:
