@@ -28,5 +28,4 @@ There are two ways to connect or send assets between Stingray and your DCC tool,
 ---
 Related topics:
 - ~{ Connect DCC tool and Stingray viewports }~
-- ~{ Setup the DCC tool plug-in }~
 ---

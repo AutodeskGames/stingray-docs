@@ -130,7 +130,7 @@ When you bake lightmaps with the Stingray baker, you can now adjust:
 
 ## Updated DCC interop plug-ins
 
-This release includes an updated Stingray DCC Link plug-in to support Maya 2017 and Maya LT 2017, as well as the plug-in for 3ds Max 2017. For information on installing the plug-ins, see ~{ Setup the DCC tool plug-in }~.
+This release includes an updated Stingray DCC Link plug-in to support Maya 2017 and Maya LT 2017, as well as the plug-in for 3ds Max 2017. For information on the plug-ins, see ~{ Interop with Maya, Maya LT, or 3ds Max }~.
 
 ## Easier Wwise engine configuration
 
