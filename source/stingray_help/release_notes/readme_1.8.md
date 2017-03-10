@@ -70,7 +70,7 @@ A new non-interactive light baking mode has been added to the Stingray baker to 
 
 ## Interop: Updated DCC link plug-in for 3ds Max 2018
 
-This release of Stingray ships with an updated Stingray DCC Link plug-in to support 3ds Max 2018 and 3ds Max 2017. See ~{ DCC tool plug-in }~.
+This release of Stingray ships with an updated Stingray DCC Link plug-in to support 3ds Max 2018 and 3ds Max 2017. See ~{ Interop with Maya, Maya LT, or 3ds Max }~.
 
 ## What's New in documentation?
 
@@ -81,15 +81,15 @@ This release of Stingray ships with an updated Stingray DCC Link plug-in to supp
 
 You can use the **Script Editor** to open and edit Stingray resource files like
 
--	 Render Configuration (.render_config),
--	 Shader Node (.shader_node),
--	Shader (.shader),  
--	Shading Environment Mapping (.shading_environment_mapping),
--	Entity Component (.component),
--	Stingray Create Panel Object (.object_creator_item),
--	Physics Properties (.physics_properties ),
--	Network Config (.network_config),
--	Surface Properties (.surface_properties), and
+-	 Render Configuration (.render_config)
+-	 Shader Node (.shader_node)
+-	Shader (.shader)
+-	Shading Environment Mapping (.shading_environment_mapping)
+-	Entity Component (.component)
+-	Stingray Create Panel Object (.object_creator_item)
+-	Physics Properties (.physics_properties )
+-	Network Config (.network_config)
+-	Surface Properties (.surface_properties) and
 -	Stingray Type Description(.type) files.
 
 ## What's New for developers?
