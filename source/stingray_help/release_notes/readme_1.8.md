@@ -68,7 +68,9 @@ Physically based light parameters have been exposed through entities. The **Temp
 
 A new non-interactive light baking mode has been added to the Stingray baker to better control memory consumption. Instead of baking everything in the scene and showing the progress, this new mode bakes one object in the scene completely and then outputs the lightmap, saving memory in the process. Disable **Interactive** baking in the **Light Baking** window to turn on this mode. Non-interactive baking is also the default baking mode when you launch a baking session from the command line. See ~{ Trigger lightmap baking from the command line }~.
 
-## Interop: Updated DCC link plug-in for 3ds Max
+## Interop: Updated DCC link plug-in for 3ds Max 2018
+
+This release of Stingray ships with an updated Stingray DCC Link plug-in to support 3ds Max 2018 and 3ds Max 2017. See ~{ DCC tool plug-in }~.
 
 ## What's New in documentation?
 
@@ -79,8 +81,8 @@ A new non-interactive light baking mode has been added to the Stingray baker to 
 
 You can use the **Script Editor** to open and edit Stingray resource files like
 
--	 Render Configuration (.render_config)
--	 Shader Node (.shader_node)
+-	 Render Configuration (.render_config),
+-	 Shader Node (.shader_node),
 -	Shader (.shader),  
 -	Shading Environment Mapping (.shading_environment_mapping),
 -	Entity Component (.component),

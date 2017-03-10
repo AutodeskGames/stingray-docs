@@ -1,19 +1,19 @@
-#Setup the DCC tool plug-in
+#DCC tool plug-in
 
-To allow your DCC tool to discover the link to Stingray, install the DCC Link plug-in included with your Stingray install, and then point Stingray to the DCC application.
+Stingray automatically installs the DCC Link plug-in to support the DCC tools in your `C:\ProgramData\Autodesk\ApplicationPlugins` directory.
 
-###Install the DCC tool plug-in
+For example, the 3ds Max plug-in installs here:
+`C:\ProgramData\Autodesk\ApplicationPlugins\StingrayDCCLink_Max2018.bundle\Contents\plugins`
+
+If your DCC tool fails to discover the link to Stingray, verify the DCC Link plug-in included with Stingray is installed, and then point Stingray to the DCC application.
+
+### (Optional) Install the DCC tool plug-in
 
 1. Double-click the StingrayDCCLink.msi located here within your Stingray install directory: `\Program Files\Autodesk\Stingray\<*version*>\extras`
 
 2. Click **Install Now**.
 
 	The plug-in installer runs, and a 'Success' message displays when the install is complete.
-
-	When installed correctly, you can find the plug-ins in your C:\ProgramData\Autodesk\ApplicationPlugins directory.
-
-	For example, the 3ds Max plug-in installs here:
-	C:\ProgramData\Autodesk\ApplicationPlugins\StingrayDCCLink_Max2017.bundle\Contents\plugins
 
 3. Do any of the following:
 
