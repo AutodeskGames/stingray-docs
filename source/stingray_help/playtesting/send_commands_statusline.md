@@ -10,7 +10,7 @@ For example, you can execute a command that draws a performance HUD in the game 
 2. Specify where you want to send commands:
      - **Editor Engine**: The instance of the editor running on your local PC.
      - **Test Engine**: Available when you test a level.
-     - *`<`localhost`>`*: When you have multiple local instances of your project set up through the **Connections** panel, you can select those here. (Names that display here depend on what you set up in the **Connections** panel, **localhost** is just the default name given to the first instance.)
+     - *\<localhost\>*: When you have multiple local instances of your project set up through the **Connections** panel, you can select those here. (Names that display here depend on what you set up in the **Connections** panel, **localhost** is just the default name given to the first instance.)
 3. Enter the command and any required parameters in the command line field, and press Enter.
 4. (Optional) Open the ~{ Log Console }~ to view any output from the command.
 
