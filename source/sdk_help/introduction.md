@@ -28,9 +28,9 @@ Any customer can use the Stingray SDK to make these kinds of plug-ins. You don't
 
 3.	Create a new empty folder for your plug-in. You'll put all the files your plug-in needs in here.
 
-	In this folder, you'll have to create a new *.plugin* file to describe your plug-in. This descriptor contains metadata about your plug-in, and a set of *extensions* that define what the plug-in should do when it's loaded. An easy way to get started is to copy the minimal description from the ~{ Define a Stingray Plug-in }~ page, or copy one from a sample plug-in.
+	In this folder, you'll have to create a new *.stingray_plugin* file to describe your plug-in. This descriptor contains metadata about your plug-in, and a set of *extensions* that define what the plug-in should do when it's loaded. An easy way to get started is to copy the minimal description from the ~{ Define a Stingray Plug-in }~ page, or copy one from a sample plug-in.
 
-3.	Install and load your plug-in into the editor and/or the engine, so that you can test it out as you work. You'll need to use the editor's **Plugin Manager** to find and load your *.plugin* file. You'll also need to manually copy any *.dll* files that you build for the engine into the `engine/<platform>/<config>/plugins` folder inside your Stingray installation folder.
+3.	Install and load your plug-in into the editor and/or the engine, so that you can test it out as you work. You'll need to use the editor's **Plugin Manager** to find and load your *.stingray_plugin* file. You'll also need to manually copy any *.dll* files that you build for the engine into the `engine/<platform>/<config>/plugins` folder inside your Stingray installation folder.
 
 	For details on installing plug-ins in the editor, see [this page](http://www.autodesk.com/stingray-help?contextId=install_plugins).
 

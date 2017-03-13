@@ -31,7 +31,7 @@ extensions = {
 
 `module`
 
->	A JavaScript module that contains the API functions listed by the `api` key. The path is relative to the location of your *.plugin* file.
+>	A JavaScript module that contains the API functions listed by the `api` key. The path is relative to the location of your *.stingray_plugin* file.
 
 `api`
 

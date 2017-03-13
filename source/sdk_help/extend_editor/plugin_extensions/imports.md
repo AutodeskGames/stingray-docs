@@ -18,10 +18,10 @@ Once your importer is in place, users are able to import your custom file type u
 
 ## Configuration
 
-You configure an `imports` extension in your *.plugin* descriptor file as follows:
+You configure an `imports` extension in your *.stingray_plugin* descriptor file as follows:
 
 ~~~{sjson}
-// The editor/plugins/asset_browser/asset-browser.plugin file defines different importers:
+// The editor/plugins/asset_browser/asset-browser.stingray_plugin file defines different importers:
 imports = [
     {
         types = ["fbx", "bsi"]
@@ -90,7 +90,7 @@ imports = [
 
 ## FBX importer
 
-The Stingray **Asset Browser** plug-in contains import extensions for several different file types. You can find all their definitions in *editor/plugins/asset_browser/asset-browser.plugin*.
+The Stingray **Asset Browser** plug-in contains import extensions for several different file types. You can find all their definitions in *editor/plugins/asset_browser/asset-browser.stingray_plugin*.
 
 Let's look at the *.fbx* file importer to see how it works. Here is its configuration:
 
@@ -211,10 +211,10 @@ Each file type can be handled by multiple different import extensions. The engin
 
 For example, here is an importer that extends the asset browser's default *.fbx* importer to list in the console all of the assets that were created during the import.
 
-Here's the extension definition in the *.plugin* file:
+Here's the extension definition in the *.stingray_plugin* file:
 
 ~~~{sjson}
-// From asset-browser.plugin
+// From asset-browser.stingray_plugin
 {
     types = ["fbx"] // Another importer for Fbx
     label = "Fbx Log"
@@ -247,7 +247,7 @@ fbxImportLog: function (options, previousResult, assets, directory, flags) {
 Stingray also supports a font importer that makes use of the generic import dialog.
 
 ~~~{sjson}
-// From font-importer.plugin:
+// From font-importer.stingray_plugin:
 imports = [
     {
         types = ["ttf" "ttc" "otf" "otc" "cff" "woff" "fnt" "pfa" "pfb" "pfr"]

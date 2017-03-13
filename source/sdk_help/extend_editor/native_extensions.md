@@ -4,7 +4,7 @@ You can make your plug-in call out from the editor's JavaScript environment to r
 
 This can be useful anytime you need the editing environment to be able to run native code. For example, you might need to call out to another application or library to do some processing; you might want to take advantage of operating system functions that aren't exposed through the editor's JavaScript services; or if you need to do some processing that is especially CPU-intensive, you might want to implement that in C rather than in JavaScript.
 
-Unlike other editor extensions, you don't have to add anything into your *.plugin* file to set up a *.dll* extension. However, you do have to follow the instructions on this page to write your C code, compile to a *.dll* file, tell the editor in your plug-in's JavaScript when you want to load and unload the library, and finally call the exposed C functions from JavaScript.
+Unlike other editor extensions, you don't have to add anything into your *.stingray_plugin* file to set up a *.dll* extension. However, you do have to follow the instructions on this page to write your C code, compile to a *.dll* file, tell the editor in your plug-in's JavaScript when you want to load and unload the library, and finally call the exposed C functions from JavaScript.
 
 ## More resources
 
@@ -84,7 +84,7 @@ These are the basic steps for writing a *.dll* that extends the editor, and gett
 		{
 			if (api == EDITOR_PLUGIN_SYNC_API_ID) {
 		        static struct EditorPluginSyncApi editor_api = {nullptr};
-		        editor_api.plugin_loaded = &PLUGIN_NAMESPACE::EditorTestPlugin::plugin_loaded;
+		        editor_api.stingray_plugin_loaded = &PLUGIN_NAMESPACE::EditorTestPlugin::plugin_loaded;
 		        editor_api.get_name = &PLUGIN_NAMESPACE::EditorTestPlugin::get_name;
 		        editor_api.get_version= &PLUGIN_NAMESPACE::EditorTestPlugin::get_version;
 		        editor_api.shutdown = &PLUGIN_NAMESPACE::EditorTestPlugin::shutdown;
@@ -120,7 +120,7 @@ Then, when you want to register synchronous functions with the editor, you have 
 
 In all cases, the APIs behave the same way:
 
--	You register a function by calling `register_native_function()`, passing a namespace and function name that determine how the function should be exposed to JavaScript. We recommend using your plugin name as the namespace, to reduce the chances of trying to register a function that has already been registered by another plug-in.
+-	You register a function by calling `register_native_function()`, passing a namespace and function name that determine how the function should be exposed to JavaScript. We recommend using your plug-in name as the namespace, to reduce the chances of trying to register a function that has already been registered by another plug-in.
 
 	You'd typically do this in your implementation of `EditorPluginSyncApi::plugin_loaded()`, which is called when the *.dll* is loaded from JavaScript.
 
@@ -132,7 +132,7 @@ On the JavaScript side:
 
 -	To load your *.dll* into the editor, call `stingray.loadNativeExtension()`. Pass this function the absolute path to your *.dll* file on disk. The function returns an identifier that you'll use later to unload the plug-in.
 
-	**Tip:** you can use the `getPlugin()` function from the `services/plugin-service` module to retrieve info about your plugin. The `$dir` member of the returned object gives you the directory of the plug-in's `.plugin` file, so you can construct the path assuming that you know the relative path from your *.plugin* file to your *.dll*.
+	**Tip:** you can use the `getPlugin()` function from the `services/plugin-service` module to retrieve info about your plug-in. The `$dir` member of the returned object gives you the directory of the plug-in's `.stingray_plugin` file, so you can construct the path assuming that you know the relative path from your *.stingray_plugin* file to your *.dll*.
 
 -	To invoke a registered function from JavaScript, you call it as `window.namespace.name()`, using the namespace and function name that you used to register it from C.
 
@@ -146,7 +146,7 @@ Then, to register asynchronous functions with the editor, you use the `EditorAsy
 
 -	You register a function by calling either `register_async_function()`. This makes your asynchronous function run in the CEF browser process. Alternatively, if you want it to run in the GUI thread of the Qt application, use `register_async_gui_function()` instead. This might be useful if your C function will be providing some UI components and you want to keep them responsive.
 
-	Whichever function you call, you need to pass a unique name for your function that you'll use later to identify it in your JavaScript code. We recommend including your plugin name somewhere in the name, to reduce the chances of trying to register a function that has already been registered by another plug-in. Since this identifier is just a string, it can contain characters that you wouldn't be able to use when naming a synchronous function, like `.`. For example, you could register your function as `plugin-name.function-name`
+	Whichever function you call, you need to pass a unique name for your function that you'll use later to identify it in your JavaScript code. We recommend including your plug-in name somewhere in the name, to reduce the chances of trying to register a function that has already been registered by another plug-in. Since this identifier is just a string, it can contain characters that you wouldn't be able to use when naming a synchronous function, like `.`. For example, you could register your function as `plugin-name.function-name`
 
 	You'd typically do this in your implementation of `EditorPluginSyncApi::plugin_loaded()`, which is called when the *.dll* is loaded from JavaScript.
 
@@ -158,7 +158,7 @@ On the JavaScript side:
 
 -	To load your *.dll* into the editor, call `stingray.loadAsyncExtension()`. Pass this function the absolute path to your *.dll* file on disk. The function returns a Promise, which resolves to an identifier that you'll use later to unload the plug-in.
 
-	**Tip:** you can use the `getPlugin()` function from the `services/plugin-service` module to retrieve info about your plugin. The `$dir` member of the returned object gives you the directory of the plug-in's `.plugin` file, so you can construct the path assuming that you know the relative path from your *.plugin* file to your *.dll*.
+	**Tip:** you can use the `getPlugin()` function from the `services/plugin-service` module to retrieve info about your plug-in. The `$dir` member of the returned object gives you the directory of the plug-in's `.stingray_plugin` file, so you can construct the path assuming that you know the relative path from your *.stingray_plugin* file to your *.dll*.
 
 -	To invoke a registered async function from JavaScript, you call `stingray.hostExecute()`, passing the identifier that you used to register the function from C. The return value is a Promise that resolves to whatever object your C function returned, if any.
 

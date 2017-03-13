@@ -115,7 +115,7 @@ If you need to do some more in-depth custom processing to determine whether or n
 For example, the following configuration runs an `isReadOnly()` function, which is defined inside the `module-actions` JavaScript module. If the action returns `true`, the contextual menu shows the menu item.
 
 ~~~{sjson}
-// In tests-actions.plugin
+// In tests-actions.stingray_plugin
 {
     label = "Checkout"
     type = "asset"
@@ -166,7 +166,7 @@ If you want your contextual action to appear when multiple assets are selected, 
 In addition, when the user triggers the contextual action, the editor passes all of the selected assets to the action as an array instead of as a single string. If you use the same function to handle both single selections and multiple selections, you will need to handle the two cases appropriately, as in the example below.
 
 ~~~{sjson}
-// Example in tests-actions.plugin
+// Example in tests-actions.stingray_plugin
 {
     type = "asset"
     label = "Duplicate"
@@ -220,7 +220,7 @@ Setting a predicate for level objects is very similar to assets. However, instea
 For example, this predicate only accepts level objects in the "unit" category.
 
 ~~~{sjson}
-// From asset-browser.plugin
+// From asset-browser.stingray_plugin
 contextual_actions = [
     {
         type = "level_object"
@@ -288,7 +288,7 @@ Note that like extensions, you can also specify multiple categories as an array:
 You can also write a custom predicate the same way you can for an asset:
 
 ~~~{sjson}
-// In test-actions.plugin
+// In test-actions.stingray_plugin
 {
     type = "level_object"
     label = "Close door"
