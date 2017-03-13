@@ -4,8 +4,8 @@ This topic describes how to build the Stingray engine and editing tools from a l
 
 ## Pre-requisites
 
--	You must have installed all the tools described in ~{ Software requirements }~.
 -	You must have an up-to-date local copy of the source code for all platforms you need. That means the main `stingray` repository, as well as the submodules for any private console platforms that you have access to.
+-	You must have installed all the tools described in the `readme.md` file for your branch of the Stingray source repository.
 -	You must have the `SR_LIB_DIR` environment variable set up to point to your Stingray library directory. See ~{ Library dependencies }~.
 
 ## Things to know about the build system
