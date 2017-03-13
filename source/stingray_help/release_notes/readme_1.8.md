@@ -94,8 +94,21 @@ You can use the **Script Editor** to open and edit Stingray resource files like
 
 ## What's New for developers?
 
-- Finer control on the data compiler so you can compile only specific assets
-- Boot script hook
+### Plug-in quick-start repository
+
+If you haven't seen it yet, check out the new public [stingray-plugin](https://github.com/AutodeskGames/stingray-plugin) repo on GitHub! It contains everything you need to quickly get started making a new plug-in that extends Stingray -- including Visual Studio projects and build tools for extending the engine and editor using C/C++.
+
+While you're there, a must-read is [this detailed tutorial](https://github.com/AutodeskGames/stingray-plugin/wiki/How-to-create-a-cool-plugin) that walks you through all the steps involved in using the plugin repository as a basis for creating and packaging a full-featured plug-in that hooks into the engine and editor.
+
+### *.stingray_plugin* files
+
+We've decided to standardize on *stingray_plugin* as the preferred extension for our plug-in descriptor file format. If you've written or installed any *.plugin* files, don't worry -- we'll still recognize *.plugin* for backward-compatibility. But for future development, we now recommend using *.stingray_plugin* instead.
+
+### Supply Lua code on the command line
+
+The engine executable now accepts a `--lua <code snippet>` command-line parameter. If you include this parameter, the engine automatically runs the code snippet that you specify on the command line within its Lua environment. It runs your code after it calls the `init()` function from the project's Lua boot script, but before it calls `update()` for the first time.
+
+This can be useful when you launch multiple instances of the engine from the **Connections** panel, in order to make each one behave in a different way.
 
 ## What else is new?
 
