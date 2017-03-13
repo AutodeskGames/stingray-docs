@@ -26,6 +26,8 @@ While you're working in the Stingray Editor, you can turn the HUDs on in your ed
 
 Click **View > Performance Hud** in the viewport's visualization settings, and select the HUD you're interested in.
 
+To debug or view performance statistics of a deployed package, use the **External Console** application and connect to **localhost** instead of the default IP address.
+
 ## Print to screen from Flow
 
 If you are using the Appkit, you have access to the **Debug > Print To Screen** Flow node. When this node is evaluated, it prints text that you specify to the screen in game. The Flow system does not currently have a runtime debugger, but you can use this node to find out the current state of your variables and to detect what paths your graph evaluation follows.

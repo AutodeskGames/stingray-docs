@@ -56,6 +56,9 @@ You can now define the capture range in your story using the Capture Frames Tool
 
 Check out the revamped **Texture Manager** with improved texture loading and filtering.
 
+-	~{ Create a texture template }~
+-	~{ Create a texture category }~
+
 ## Google VR updates
 
 - Easy way to change the cardboard settings

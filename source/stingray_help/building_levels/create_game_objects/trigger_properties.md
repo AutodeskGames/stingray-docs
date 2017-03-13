@@ -38,9 +38,6 @@ The following properties display in the ~{ Property Editor }~ when you create or
 <dt>W/D/H</dt>
 <dd>Sets the width, depth and height of the trigger.</dd>
 
-<dt>Visible</dt>
-<dd>Toggles whether the trigger renders. </dd>
-
 </dl>
 
 ###Physics

@@ -24,6 +24,8 @@ You can also retrieve brief descriptions of the commands by typing the `help` co
 
 If you need to send console commands to a standalone game that is not connected to the Stingray Editor, such as a game that you launched using **Run Project**, use the **External Console** application. From the main menu, select **Window > External Console** (Hotkey: **Alt + 2**).
 
+Connect to **localhost** in the **External Console** application when you want to debug or view performance statistics of a deployed package.
+
 ---
 Related topics:
 -	~{ Log Console }~
