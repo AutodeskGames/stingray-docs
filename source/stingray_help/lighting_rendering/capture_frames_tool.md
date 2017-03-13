@@ -20,9 +20,12 @@ The following **Capture Settings** can be adjusted to control your output. See ~
 
 <dt>Capture Range</dt>
 [![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)
-<dd>Lets you set a custom range for the camera to capture. You can select **Custom Range - Seconds** or **Custom Range - Frames**. To capture the entire story, select **Use Story Timeline**.
+<dd>Lets you set a custom range for the camera to capture. Instead of recapturing your entire story after making a change to your animation, specify a **Capture Range**, and then quickly recapture only those details that need updating. You can select **Custom Range - Seconds** or **Custom Range - Frames**. To capture the entire story, select **Use Story Timeline**.
 
-  >**Tip:** Instead of recapturing your entire story after making a fix, specify a **Capture Range**, and then quickly recapture only those details that need updating. </dd>
+When setting a range, it is important to remember that your story starts at frame 0. The naming convention for the output EXR files is the same whether you are capturing in frames or seconds. For example, if you want to recapture from frame 3 to frame 8 of your story, File Name_3.exr to File Name_8.exr are output to the selected **Output Directory**, overwriting the existing files.
+
+You can also capture negative frames, which use following naming convention; *<File Name>_-1.exr*, *<File Name>_-2.exr*, etc.; and are output as still frames.
+</dd>
 
 </dl>
 

@@ -67,7 +67,7 @@ Note that you may need to set this value very high in order to see the effect.</
 <dt>Interactive</dt>
 [![NEW](../../../images/new.png "What else is new in v1.8?")](../../../release_notes/readme_1.8.html)
 
-Disable Interactive baking to better control your memory consumption while baking. Instead of baking everything in the scene and showing the progress, Non-interactive baking bakes one object in the scene completely and then outputs the lightmap, saving memory in the process.
+Disable **Interactive** baking to better control your memory consumption while baking. Instead of baking everything in the scene and showing the progress, non-interactive baking bakes one object in the scene completely and then outputs the lightmap, saving memory in the process. Both modes produce the same lightmaps.
 
 >**Note:** Non-interactive baking is the default baking mode when you launch a baking session from the command line. See ~{ Trigger lightmap baking from the command line }~.
 <dd>
