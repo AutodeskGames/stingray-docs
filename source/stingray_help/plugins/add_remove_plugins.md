@@ -35,7 +35,7 @@ To download a new Stingray plug-in not listed in the **Plugin Manager**, click *
 If you want to load a new plug-in that you have on your computer but that is not already listed in the **Plugin Manager**, you can install it using either of the following methods:
 
 -	Place the plug-in, along with any other files it requires, into one of the default search folders listed below. Press **F5** to refresh the list.
--	Or, to add a plug-in from any other folder on your computer, click the **Add Plugin** button (top left) and browse to the location of the *.plugin* file.
+-	Or, to add a plug-in from any other folder on your computer, click the **Add Plugin** button (top left) and browse to the location of the plug-in's *.stingray_plugin* file.
 
 The new plug-in is added to the **Plugin Manager**, but it isn't immediately loaded. See [Load a plug-in] above.
 

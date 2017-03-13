@@ -8,7 +8,7 @@ This page shows two different ways that you can re-use the Stingray editor's **P
 
 ## The plug-in definition
 
-The first thing to do in order to add a new panel to the plug-in is to define the panel in your `.plugin` file. Here we're using the `views` and `menus` extensions:
+The first thing to do in order to add a new panel to the plug-in is to define the panel in your `.stingray_plugin` file. Here we're using the `views` and `menus` extensions:
 
 ~~~{sjson}
  views = [

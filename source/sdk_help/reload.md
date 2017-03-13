@@ -2,11 +2,11 @@
 
 While you're working on your plug-in, you'll often need to reload it into Stingray in order to test out your latest changes.
 
-You could always shut down your session in the engine and the editor, recopy any files that you want to change (for example, recopy engine *.dll* files into the engine's plug-ins folder) and restart everything. But this is unnecessarily cumbersome and time-consuming. Fortunately, in most cases you can *hot-reload* your plugins, updating the editor and the engine to use your latest content without needing to shut them down.
+You could always shut down your session in the engine and the editor, recopy any files that you want to change (for example, recopy engine *.dll* files into the engine's plug-ins folder) and restart everything. But this is unnecessarily cumbersome and time-consuming. Fortunately, in most cases you can *hot-reload* your plug-ins, updating the editor and the engine to use your latest content without needing to shut them down.
 
 ## Reload an editor plug-in
 
-*	Press **F5** in the editor. This makes the editor re-scan all its plug-in folders and re-load all plug-ins from the latest version of their .*plugin* descriptor files.
+*	Press **F5** in the editor. This makes the editor re-scan all its plug-in folders and re-load all plug-ins from the latest version of their *.stingray_plugin* descriptor files.
 
 *	If your plug-in has added HTML panels or JavaScript modules to the editor, you may also need to press **Alt+F3** to reboot the entire JavaScript environment from scratch. This will re-initialize any script modules and HTML views that your plug-in provides, so that you see your latest changes.
 

@@ -27,7 +27,7 @@ extensions = {
 
 `engine`
 
->	The path and file name of the Lua file that controls the behavior of the engine running within the viewport, relative to the location of the *.plugin* descriptor file. This file should typically override some of the functions exposed in *core/editor_slave/stingray_editor/viewport_behavior.lua*. **Required**.
+>	The path and file name of the Lua file that controls the behavior of the engine running within the viewport, relative to the location of the *.stingray_plugin* descriptor file. This file should typically override some of the functions exposed in *core/editor_slave/stingray_editor/viewport_behavior.lua*. **Required**.
 >
 >	Note that your Lua file must be in the project content. You will probably want to use a `resources` extension to mount its folder as part of the project. See ~{ Extend the Project Content }~.
 
@@ -39,7 +39,7 @@ extensions = {
 
 The following sections use a new particle editor plug-in as an example. You can find its files under: *editor/plugins/particle-editor* within your Stingray installation directory. This example uses an engine viewport to preview a selected particle system, keeping the preview in sync with the changes that the user makes to the particle settings.
 
-(We're still working on this plug-in, so it isn't yet enabled by default in this release. If you want to try it out in the editor, you'll have to go into its *.plugin* file and remove the comments at the start on the `menus` and `views` extensions.)
+(We're still working on this plug-in, so it isn't yet enabled by default in this release. If you want to try it out in the editor, you'll have to go into its *.stingray_plugin* file and remove the comments at the start on the `menus` and `views` extensions.)
 
 ## Viewport interaction overview
 

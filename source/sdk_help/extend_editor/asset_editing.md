@@ -4,7 +4,7 @@ If you need your plug-in to save data to resource files in the project, you can 
 
 To do this, you define a new *type* for your asset, using a custom SJSON format that describes the kinds of information that each instance of that asset can hold. You can then use the editor's built-in mechanisms to create and modify resources of your custom type. Your plug-in can work with the data in the resources, and let the editor worry about the mechanics of how the user creates, edits and saves instances of the resources.
 
-This makes it relatively easy for you to add new types of assets to the project that are used *only* by the editor to author other kinds of project data. For example, this mechanism is used to save data about scatter brushes to resource files -- data like what units the brush should scatter, at what frequency and what orientation. However, this information is only read by the editor in order to define how and where units get placed in the level while the brush is active. If you need your new type of asset to be available at runtime in the engine, you will need to extend the engine with a plugin that defines how it should compile your new asset type for runtime use. See also ~{ Extend the Engine }~.
+This makes it relatively easy for you to add new types of assets to the project that are used *only* by the editor to author other kinds of project data. For example, this mechanism is used to save data about scatter brushes to resource files -- data like what units the brush should scatter, at what frequency and what orientation. However, this information is only read by the editor in order to define how and where units get placed in the level while the brush is active. If you need your new type of asset to be available at runtime in the engine, you will need to extend the engine with a plug-in that defines how it should compile your new asset type for runtime use. See also ~{ Extend the Engine }~.
 
 This page describes how you can make your custom SJSON resources re-use the editor's existing asset editing frameworks.
 
@@ -117,7 +117,7 @@ For more information on the `templates` extension, see ~{ Define templates for n
 For example, the `capture_frames` plugin uses the template system to create new `.capture_settings` assets:
 
 ~~~{sjson}
-// From capture_frames.plugin
+// From capture_frames.stingray_plugin
 templates = [{
 		type = "asset"
 		name = "Capture Settings"
@@ -221,7 +221,7 @@ Things to note about the blend shapes plug-in:
 
 -	*editor\plugins\blend_shapes\blend_shapes\blend_shapes.type*: The type file describes the data layout of a *.blend_shape* file, as well as which types of controls the **Property Editor** should show for editing its data.
 
--	In *editor\plugins\blend_shapes\blend_shapes.plugin*: The plugin defines an `asset_type` extension to define the way the *.blend_shapes* resource is exposed in the **Asset Browser**, and a `preview` extension that defines a custom behavior for the **Asset Preview**.
+-	In *editor\plugins\blend_shapes\blend_shapes.stingray_plugin*: The plug-in defines an `asset_type` extension to define the way the *.blend_shapes* resource is exposed in the **Asset Browser**, and a `preview` extension that defines a custom behavior for the **Asset Preview**.
 
 Note also that this editor extension is complemented by an engine extension, which handles blending between shapes at runtime.
 
@@ -260,7 +260,7 @@ Scatter brushes are resources used only by the editor that encapsulate a list of
 
 Things to note about scatter brushes:
 
--	*editor\plugins\level_editor\scatter.plugin*: The plug-in descriptor mounts the folder that contains the `scatter.type` file, and tells the **Asset Browser** where to look for its custom icon.
+-	*editor\plugins\level_editor\scatter.stingray_plugin*: The plug-in descriptor mounts the folder that contains the `scatter.type` file, and tells the **Asset Browser** where to look for its custom icon.
 
 -	*editor\plugins\level_editor\scatter_type\scatter_brush.type*: The type file defines the UI controls for editing the properties of a scatter brush.
 
@@ -290,7 +290,7 @@ Capture settings are resources used only by the editor that specify parameters f
 
 Things to note about capture settings:
 
--	*editor\plugins\capture_frames\capture_frames.plugin*: Note the use of a `templates` extension to specify the source for new *.capture_settings* resources that the user creates.
+-	*editor\plugins\capture_frames\capture_frames.stingray_plugin*: Note the use of a `templates` extension to specify the source for new *.capture_settings* resources that the user creates.
 -	*editor\plugins\capture_frames\capture_frames_actions.js*: Handles the capture action, and communicates with viewports to generate the output files.
 -	*editor\plugins\capture_frames\capture_frames\capture_settings.type*: Note the use of an **Action** control to trigger the action defined in the plug-in descriptor. In addition, note the special `clean` and `init` callbacks that run initialization code when a *.capture_settings* resource is selected or deselected.
 
