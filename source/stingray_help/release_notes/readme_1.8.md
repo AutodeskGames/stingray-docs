@@ -74,7 +74,6 @@ This release of Stingray ships with an updated Stingray DCC Link plug-in to supp
 ## What's New in documentation?
 
 - Press F1 to open Stingray Help while using the Editor
-- Better filters to refine Search results (Coming Soon)
 
 ## Stingray resource files
 
@@ -185,12 +184,6 @@ These were late-breaking issues that affected Stingray 1.7 as known limitations.
 - GAME-14959 Option "Update Wwise Project Settings" provided no feedback when selected
 - GAME-20852 Projects created in 1.4 and 1.5 were missing extensions causing loading issues
 
-## Content
-
-- GAME-21151 HumanIK Example project: pressing 'x' for X-rays shows green/white rigs that seem to be in the wrong space/orientation
-- GAME-20043 SimpleProject.on_level_shutdown_post_flow() does not get called on exiting from Test Level or Run Project
-- GAME-21107 Android: Run Project of GearVR on localhost (Windows) gives an access violation
-
 ## Deployer/Connections
 
 - GAME-20476 Show the commands used to launch slaved devices in the log.
@@ -280,7 +273,6 @@ These were late-breaking issues that affected Stingray 1.7 as known limitations.
 - GAME-18827 Preview of particle systems breaks when two Asset Preview windows open
 - GAME-13760 On creating a new Particle Effect, its material is not seen in the Asset Browser
 
-
 ## Plugins
 
 - GAME-22056 Plugin Dependencies are not activated when installed
@@ -312,7 +304,7 @@ These were late-breaking issues that affected Stingray 1.7 as known limitations.
 - GAME-22243 Jitter on Sky in VR projects
 - GAME-21615 Capture Frames Tool: missing first frames from Story
 - GAME-21492 Terrain crashes on Oculus VR
-- GAME-20538 Unsafe thread access to _swap_chain_render_targets in render_device.cpp
+- GAME-20538 Unsafe thread access to `_swap_chain_render_targets` in render_device.cpp
 - GAME-20474 Baked lighting doesn't work on PS4
 - GAME-19955 Discarding largest mip steps crashes the Editor Engine
 - GAME-19404 Android: yellow artifacts on nVidia shield
