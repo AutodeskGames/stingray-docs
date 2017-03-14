@@ -117,7 +117,7 @@ This can be useful when you launch multiple instances of the engine from the **C
 
 ## What's Fixed
 
-### Previous known limitations:
+## Previous known limitations:
 
 These were late-breaking issues that affected Stingray 1.7 as known limitations. They really bugged us and we're extra happy to tell you we fixed them in Stingray 1.8.
 
@@ -330,6 +330,10 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 > **Note**: We recommended you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
+- **GAME-19426 iOS cardboard VR view only renders on part of the screen on iPhone 7 Plus**
+
+	We changed the rendering backend in Stingray 1.8 to Metal instead of OpenGL on iOS. We use the googlevr SDK to implement iOS Cardboard support and this means it has been temporarily disabled, because this SDK does not include support for Metal out of the box. For details, see [this known issues link](https://developers.google.com/vr/ios/release-notes).
+	
 - **GAME-22297 Thumbnails display as solid grey in the Asset Browser**
 
 	**Workaround:** Right-click to reload the problematic panels.
