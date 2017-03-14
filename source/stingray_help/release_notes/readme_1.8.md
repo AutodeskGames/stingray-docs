@@ -94,7 +94,7 @@ You can use the **Script Editor** to open and edit Stingray resource files like
 
 ## What's New for developers?
 
-### Plug-in quick-start repository
+### Quick-start plug-in repository
 
 If you haven't seen it yet, check out the new public [stingray-plugin](https://github.com/AutodeskGames/stingray-plugin) repo on GitHub! It contains everything you need to quickly get started making a new plug-in that extends Stingray -- including Visual Studio projects and build tools for extending the engine and editor using C/C++.
 
