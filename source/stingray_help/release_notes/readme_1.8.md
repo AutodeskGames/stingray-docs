@@ -59,10 +59,6 @@ Check out the revamped **Texture Manager** with improved texture loading and fil
 -	~{ Create a texture template }~
 -	~{ Create a texture category }~
 
-## Google VR updates
-
-- Easy way to change the cardboard settings
-
 ## Physically-based light parameters
 
 Physically based light parameters have been exposed through entities. The **Temperature** parameter controls the light color and **Lumens** controls the light intensity. Adjusting these parameters gives your scene more relevant lighting, like light falloffs that occur with real lights.
@@ -78,7 +74,7 @@ This release of Stingray ships with an updated Stingray DCC Link plug-in to supp
 ## What's New in documentation?
 
 - Press F1 to open Stingray Help while using the Editor
-- Better filters to refine Search results
+- Better filters to refine Search results (Coming Soon)
 
 ## Stingray resource files
 
