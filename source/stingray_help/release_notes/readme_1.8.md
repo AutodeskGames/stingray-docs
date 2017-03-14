@@ -102,7 +102,7 @@ While you're there, a must-read is [this detailed tutorial](https://github.com/A
 
 ### *.stingray_plugin* files
 
-We've decided to standardize on *stingray_plugin* as the preferred extension for our plug-in descriptor file format. If you've written or installed any *.plugin* files, don't worry -- we'll still recognize *.plugin* for backward-compatibility. But for future development, we now recommend using *.stingray_plugin* instead.
+We've decided to standardize on *stingray_plugin* as the preferred extension for our plug-in descriptor file format. Don't worry if you've already written or installed any *.plugin* files, we'll still recognize *.plugin* for backward-compatibility. But for future development, we now recommend using *.stingray_plugin* instead.
 
 ### Supply Lua code on the command line
 
