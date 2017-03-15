@@ -1,7 +1,7 @@
 # Stingray 1.8 Release Notes
 <a name="top"></a>
 
-Welcome to the Stingray 1.8 (1.8.X.0) beta release. 
+Welcome to the Stingray 1.8 (1.8.X.0) beta release.
 
 > **Important**: We strongly recommend that you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
@@ -58,10 +58,6 @@ Check out the revamped **Texture Manager** with improved texture loading and fil
 
 -	~{ Create a texture template }~
 -	~{ Create a texture category }~
-
-## Physically-based light parameters
-
-Physically based light parameters have been exposed through entities. The **Temperature** parameter controls the light color and **Lumens** controls the light intensity. Adjusting these parameters gives your scene more relevant lighting, like light falloffs that occur with real lights.
 
 ## Light baker improvements
 
@@ -226,7 +222,7 @@ These were late-breaking issues that affected Stingray 1.7 as known limitations.
 - GAME-21194 Flow Editor does not support position with lowercase {x, y}
 - GAME-19107 The flow group box gets stuck to the mouse pointer when attempting to rename a flow group
 - GAME-21215 Level Flow Editor error when opening a new project "Editor / Level Flow Editor: TypeError: Cannot read property 'SetSelection' of null"
-- GAME-10032 Numeric input fields accept non-numeric character input 
+- GAME-10032 Numeric input fields accept non-numeric character input
 - GAME-21481 Link Unit node's "Child Node" and "Parent Node" slots no longer allow picking from a list
 - GAME-20932 Cursor shape when over a node output port often remains the move or the pointing hand shape
 - GAME-20929 Cursor shape should change to a pen when over input/output pins and when drawing connections
@@ -325,7 +321,7 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 - **GAME-19426 iOS cardboard VR view only renders on part of the screen on iPhone 7 Plus**
 
 	We changed the rendering backend in Stingray 1.8 to Metal instead of OpenGL on iOS. We use the googlevr SDK to implement iOS Cardboard support and this means it has been temporarily disabled, because this SDK does not include support for Metal out of the box. For details, see [this known issues link](https://developers.google.com/vr/ios/release-notes).
-	
+
 - **GAME-22297 Thumbnails display as solid grey in the Asset Browser**
 
 	**Workaround:** Right-click to reload the problematic panels.
