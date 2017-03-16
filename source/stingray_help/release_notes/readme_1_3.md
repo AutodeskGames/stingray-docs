@@ -98,6 +98,8 @@ The Pool room example to shows off the physically-based rendering capabilities o
 
 > ![](../images/icon_CreativeMarket.png) Look for the <a href="http://www.autodesk.com/stingray-creativemarket" target="blank">Creative Market</a> icon throughout the Stingray Help, where you'll find links to download projects, examples, and game kits designed to help you learn Stingray.
 
+**NOTE from the future:** As of release 1.8, online projects are now available through the [Autodesk Gamedev portal](https://gamedev.autodesk.com/stingray/plugins?category=586fed650af2de001bffaa6f), along with other free assets and environments!
+
 ## Updated DCC interop plug-ins
 
 Updated the Stingray DCC Link plug-in to support Maya 2016 Extension 2, Maya LT 2016 Extension 3, and 3ds Max 2017. For information on installing the plug-ins, see ~{ Setup the DCC tool plug-in }~.

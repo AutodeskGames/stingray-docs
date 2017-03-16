@@ -1,4 +1,4 @@
-﻿# HumanIK character setup
+# HumanIK character setup
 
 To take advantage of HumanIK in Stingray, each game character needs to have a valid HumanIK skeleton definition.
 
@@ -10,4 +10,8 @@ After importing the character to Stingray, you can confirm that HumanIK detected
 
 > **Tip:** You can also test or debug the character structure by enabling XRay mode, using Lua or Flow. In XRay mode, when you test the level (press F8), you can view character rigs exactly as HumanIK sees and evaluates them.
 
-To experiment with a sample project that includes characterized HumanIK characters, you can download the sample HumanIK project from [Creative Market](http://www.autodesk.com/stingray-creativemarket-samples).
+<table class="not-ruled"><tr><td>
+![HumanIK sample project](../../images/project_example_humanik.png)
+</td><td>
+Want to play around with some fully set up HumanIK characters? Open the sample HumanIK project from the **Online Projects** tab of the **Project Manager**, or [download the project here](https://gamedev.autodesk.com/stingray/plugins/humanik-project_example)!
+</td></tr></table>

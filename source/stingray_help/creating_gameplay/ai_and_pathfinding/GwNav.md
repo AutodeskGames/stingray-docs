@@ -8,7 +8,11 @@ The Gameware Navigation plug-in adds the following capabilities to Stingray:
 *	You can spawn bots in your game at runtime, and make them find and follow paths from place to place in the level.
 *	In your Lua or Flow code, you can conduct high-performance spatial queries against the navigation data, and use the results to drive gameplay.
 
-> ![](../../images/icon_CreativeMarket.png) The best way to learn about Navigation in Stingray is to get your hands on the 'Gameware Navigation Example' project, available on <a href="http://www.autodesk.com/stingray-creativemarket-samples" target="blank">Creative Market.</a>
+<table class="not-ruled"><tr><td>
+![Navigation sample project](../../images/project_example_navigation.png)
+</td><td>
+The best way to learn about Navigation in Stingray is to get your hands on the example projects for Flow and Lua. Open them from the **Online Projects** tab of the **Project Manager**, or [download the projects here](http://www.autodesk.com/stingray-online-projects)!
+</td></tr></table>
 
 ## For more information
 
