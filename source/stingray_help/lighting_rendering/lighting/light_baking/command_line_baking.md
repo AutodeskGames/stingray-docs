@@ -20,8 +20,8 @@ You can start the Stingray engine application from a command-line prompt, and pr
 
 - --toolchain should point to the absolute path of your binaries directory.
 
-  	For example, `C:\Program Files\Autodesk\Stingray\1.7.0`
-
+  	For example, if you build your Stingray engine from source, and your root checkout of Stingray is `C:\work\stingray`, your binaries directory is located here: `C:\work\stingray\stingray\build\binaries`.
+		
 - --project-root should point to the absolute path of your project's source data.
 
 	For example, `C:/Stingray_Projects/New_Project`
