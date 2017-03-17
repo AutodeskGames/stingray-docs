@@ -53,6 +53,9 @@ These options specify how to generate the NavMesh.
  <br/>**Note** that terrains (heightfield physics actors) are always consumed regardless of `Consume Mesh` value, though script data exclusion still applies.
 </dd>
 
+<dt>Excluded Physics Actor Shape Template</dt>
+<dd>When `Physics Actor` is selcted to consume meshes, the NavMesh generation will consume all static actors except if their shape template is listed into `Excluded Physics Actor Shape Template` field (a comma-separated list)</dd>
+
 <dt>Terrain Sampling</dt>
 <dd>Terrain sampling size in meters. If set to 0, the sampling consumes the heightfield as-is.</dd>
 
