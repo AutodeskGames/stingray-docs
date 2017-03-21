@@ -86,6 +86,12 @@ You can use the **Script Editor** to open and edit Stingray resource files like
 -	Surface Properties (.surface_properties) and
 -	Stingray Type Description(.type) files.
 
+## Experimental features
+
+### HoloLens
+
+Initial support for the HoloLens platform has been added. For more information, see ~{ Get started on HoloLens }~.
+
 ## What's New for developers?
 
 ### Quick-start plug-in repository
