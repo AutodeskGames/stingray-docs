@@ -30,7 +30,7 @@ For example, an animation clip recorded on a flat ground can be warped to play b
 
 	Import an FBX file containing your character animation clip. In the Import FBX options, turn off other options except for Animations and select the target skeleton created earlier for the character.
 
-	Most Autodesk content creation software (3ds Max, Maya, Maya LT, MotionBuilder) comes with some generic motion capture clips, or you can also download clips from Creative Market. These clips usually already contain characterized skeletons, including foot markers.
+	Most Autodesk content creation software (3ds Max, Maya, Maya LT, MotionBuilder) comes with some generic motion capture clips, or you can purchase clips from [Creative Market](https://creativemarket.com/search/3d/animation/). These clips usually already contain characterized skeletons, including foot markers.
 
 2.	~{ Set up an animation controller }~ for the motion capture clip.
 

@@ -4,7 +4,7 @@ The Stingray Editor keeps track of the projects you create and work on. You can 
 
 You can also double-click a Stingray project file (`.stingray_project`) to open the project in the Stingray Editor, provided no other projects are running at the moment.
 
-Sometimes, however, you may want to open an existing project that somebody else has created, but that doesn't yet show up in your **Project Manager**. For example, this will happen if you want to open a game kit that you download from Creative Market. See also ~{ Download assets and example projects }~.
+Sometimes, however, you may want to open an existing project that somebody else has created, but that doesn't yet show up in your **Project Manager**. For example, this will happen if you want to open a game kit that you download from [the Gamedev portal](http://www.autodesk.com/stingray-online-projects). See also ~{ Download assets and example projects }~.
 
 **To open an existing project for the first time:**
 

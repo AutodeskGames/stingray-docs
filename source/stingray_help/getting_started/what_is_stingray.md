@@ -20,7 +20,7 @@ To get started, try any of the following:
 - Bring in your own assets.
 	- ~{ Import an FBX file }~
 	- ~{ Interop with Maya, Maya LT, or 3ds Max }~
-- Explore and download other content directly from the ~{ Project Manager }~, or on [Creative Market](http://www.autodesk.com/stingray-creativemarket).
+- Explore and download other content directly from the ~{ Project Manager }~, [the Gamedev portal](https://gamedev.autodesk.com/stingray/plugins), or [Creative Market](https://creativemarket.com/apps/stingray).
 - Visit our [community forums](http://www.autodesk.com/stingray-forums)
  to interact with other designers and game makers.
 
