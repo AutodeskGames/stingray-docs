@@ -52,10 +52,13 @@ New terrain **Sculpting Tools** display in the **Property Editor**, and you can 
 
   > **Note:** With terrains if you do a frame all (A) or frame selection (F) the view does not focus the entire terrain, instead it shifts toward a different position based on camera rotation.
 
-##Export a sculpted mesh as a height map
+  > **Note:** Avoid creating very dense terrains, since performance lags could occur when highly tessellated terrains are used with complex rigid bodies. You can reduce the density of the terrain by reducing the size of the heightmap and mask textures.
+
+**Export a sculpted mesh as a height map**
+
 You can export the sculpted terrain mesh as a .dds or .raw file. In the **Property Editor**, under Height Map, click **Export** and enter a name and the file type to save the terrain mesh.
 
-To edit the material for the terrain:
+**To edit the material for the terrain:**
 
 1. Select the associated material in the **Asset Browser**.
   The **Property Editor** displays properties of the 'terrain_basic' material.
