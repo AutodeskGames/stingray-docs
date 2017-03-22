@@ -1,5 +1,7 @@
 # Get started on HoloLens
 
+[![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)
+
 >**Note: The HoloLens platform is still in development and work on the deployment and editor workflows is ongoing. This page is subject to change.**
 
 ## Step 1. Building for HoloLens
@@ -15,11 +17,11 @@ When working on HoloLens you can do one of the following:
 - Add your project data to Visual Studio and deploy it to the device together with the engine executable.
 - Deploy the executable without data and then connect the editor to the device. This is similar to the workflow that's available for iOS. See ~{ Get started on iOS }~.
 
-A WIP Project for HoloLens testing purposes can be found [here](https://autodesk.box.com/s/xeulzh1f8grwy4t3mmus410jldxlc4w8). (updated **1/27/2017**)
+A WIP Project for HoloLens testing purposes can be found [here](https://autodesk.box.com/s/xeulzh1f8grwy4t3mmus410jldxlc4w8).
 
 ### Bundle project data ###
 
->**Important:** You must enable experimental editor features (**File > Settings > Editor Settings > Enable experimental editor features**) before you can compile data for UWP/HoloLens in the editor. For more information, see ~{ About Experimental Features }~.
+>**Important:** You must enable experimental editor features (**File > Settings > Editor > Settings** and turn on **Enable experimental editor features** in the **Property Editor**) before you can compile data for UWP/HoloLens in the editor. For more information, see ~{ About Experimental Features }~.
 
 To compile and bundle the data:
 
@@ -39,7 +41,7 @@ If you want to create an app package with data you need to add the compiled and 
 
 Alternatively you can add the files to Visual Studio manually:
 
-1. Open the uwp32 Visual Studio solution (build/engine/uwp32/stingray_engine_uwp32.sln)
+1. Open the uwp32 Visual Studio solution (`build/engine/uwp32/stingray_engine_uwp32.sln`)
 2. Add the bundled game data to the "main_uwp" Visual Studio project, and set each item as "Content" by selecting all of them, right-clicking and going into Properties.
 
 ### Deploying through Visual Studio ###
@@ -48,7 +50,7 @@ There are multiple ways you can deploy through Visual Studio:
 
 * If you have the HoloLens Emulator, select "HoloLens Emulator" as Target and run the project.
 * If you have the HoloLens connected by USB, select "Device" as Target and run the project.
-* Or, to deploy over the network, you can select "Remote Machine" as Target and set the HoloLens IP as the Machine Name on the project debug properties page.
+* To deploy over the network, you can select "Remote Machine" as Target and set the HoloLens IP as the Machine Name on the project debug properties page.
 
 It may take a few minutes for the project to start appropriately on the device.
 
@@ -58,11 +60,12 @@ It may take a few minutes for the project to start appropriately on the device.
 
 You can create a complete appx package in Visual Studio that you can install through the Device Portal. This allows you to share an app package with someone who doesn't have access to Visual Studio.
 
-If you want to create a package with data you need to first follow the steps under _Add project data to package_.
+If you want to create a package with data you need to first follow the steps in the _Add project data to package_ section listed above.
 
 1. Create an app package with the "Create App Packages" wizard in Visual Studio. You can follow the instructions under the _Create an app package_ title on this page: [Packaging UWP apps](https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps)
 
     Select "No" when asked if you want to build a package for uploading to the Windows Store. Skip the validation step at the end of the wizard.
+    
 2.  When the Package is generated you can install it through the HoloLens Device Portal. See this page for information on how to use the Device Portal: [Using the Windows Device Portal](https://developer.microsoft.com/en-us/windows/holographic/using_the_windows_device_portal)
 
 ## Step 3. Connect the editor to the device
@@ -79,16 +82,16 @@ For more background information, see ~{ Connect to a remote device }~.
 
 	![](../images/connecting-hololens.jpg)
 
-3.	In the Stingray Editor, use the **Connections** panel (**Window > Deploy and Connect > Connections**) to set up the connection to the IP address for the device, then run project.
+3.	In the Stingray Editor, use the **Connections** panel (**Window > Deploy and Connect > Connections**) to set up the connection to the IP address for the device, then run the project.
 
 	For details, see ~{ Using the Connections panel }~.
 
-    >	**Note:** The engine app on the device must be in this waiting state in order for the Stingray Editor to initiate a connection. That means that each time you want to run your project or mirror your viewport, you have to close and restart the engine on the device.
+    >	**Note:** The engine app on the device must be in this waiting state in order for the Stingray Editor to initiate a connection. Each time you want to run your project or mirror your viewport, you have to close and restart the engine on the device.
 
-4. You must close the message dialog window on the device manually when connecting for the editor. The window will not close automatically and while it is visible it hides the 3D content rendered by the engine.
+4. Close the message dialog window on the device manually when connecting to the editor. The window does not close automatically, and while it is visible it hides the 3D content rendered by the engine.
 
 
 ### Developer Tips
 The Stingray console output is available on the _Logging_ page in the Device Portal under the `Microsoft-Windows-Diagnostics-LoggingChannel` provider.
 
-Useful information for debugging can be available under various different providers. We have found useful information in the `Microsoft-Windows-WindowsErrorReporting`, `-ProcessStateManager` and `-ProcessExitMonitor` providers.
+Useful information for debugging is available from various different providers. We have found useful information in the `Microsoft-Windows-WindowsErrorReporting`, `-ProcessStateManager` and `-ProcessExitMonitor` providers.
