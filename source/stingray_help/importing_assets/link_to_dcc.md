@@ -30,7 +30,7 @@ If your DCC tool fails to discover the link to Stingray, you can try the followi
 3. Do any of the following:
 
 	 - In Maya and Maya LT, enable the stingray_link.mll plug-in using the Plug-in Manager (**Window > Settings/Preferences > Plug-in Manager**).
-	 - In 3ds Max, point to the plug-in install location by selecting **Customize > Configure System Paths**, and adding the install path to '3rd Party Plugins'.
+	 - In 3ds Max, add the install path `C:\ProgramData\Autodesk\ApplicationPlugins\StingrayDCCLink_Max2018.bundle\Contents\plugins` to **Customize > Configure System Paths > 3rd Party Plugins**.
 
 **Point Stingray to where you have the DCC tool installed:**
 
