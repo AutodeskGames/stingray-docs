@@ -101,4 +101,52 @@ These are the basic steps for getting a plug-in to integrate with the runtime en
 
 	You must target the `x64` platform. Also, dynamically linked plug-ins are currently supported only on Windows; see ~{ Alpha SDK Limitations }~.
 
+1.	Get the engine to load your *.dll*. See [Loading the plug-in DLL] below.
+
 Once you have this basic level of integration set up between the engine and your plug-in, you can take it farther by exploring what other functions you can implement from the main `PluginApi` interface, and what other service APIs the engine provides for plug-ins. See ~{ Useful engine plug-in interfaces }~.
+
+## Loading the plug-in DLL
+
+The easiest way to get the engine to load your plug-in *.dll* automatically is to set up a `runtime_libraries` extension in your *.stingray_plugin* description file. While your plug-in is loaded in the editor, any engine instances that you launch through the editor (using Test Level or Run Project) will automatically load the corresponding config of your plug-in.
+
+>	**NOTE:** The `runtime_libraries` extension does not yet package your *.dll* files into deployed standalone builds that you create through the **Deployer** panel. When you deploy, you'll still have to manually copy your *.dll* file to the *plugins* directory within the build output folder, or add your plug-in to a manifest file that identifies files that need to be copied automatically during deployment. See ~{ Distribute and Install a Plug-in }~ for more details.
+
+This extension accepts the following parameters:
+
+~~~sjson
+runtime_libraries = [
+	{
+		name = "my_engine_plugin"
+		paths = {
+			win32 = {
+				dev = "binaries/engine/win64/dev/my_engine_plugin_w64_dev.dll"
+				debug = "binaries/engine/win64/debug/my_engine_plugin_w64_debug.dll"
+				release = "binaries/engine/win64/release/my_engine_plugin_w64_release.dll"
+			}
+		}
+	}
+~~~
+
+`name`
+
+>	A descriptive name that identifies this set of libraries. This name should match the name that your plug-in returns in its implementation of `PluginApi::get_name()`.
+
+`paths`
+
+>	Provides the paths to your libraries for each target platform and each different engine build configuration that it supports. When the editor starts an engine on a target platform that matches one of the keys in this list, and that engine's build configuration matches one of the keys set for that platform, the editor configures the engine to load the *.dll* file that corresponds to that configuration.
+
+If your plug-in needs to load multiple *.dll* files for some reason, you can include multiple objects in the `runtime_libraries` list.
+
+### Other ways to load a plug-in
+
+On platforms that support dynamic plug-ins (currently Windows only), the engine keeps a list of folders that it checks at startup for *.dll* files. Your plug-in *.dll* has to be in one of these folders in order for the engine to load it automatically.
+
+-	By default, the list of plug-in folders contains only the `plugins` folder under the engine executable. You can simply copy your plug-in's *.dll* file to this location.
+
+-	You can add paths to this list by passing the `--plugin-dir <folder>` command-line parameter when you start the engine. See [the command-line reference](http://help.autodesk.com/view/Stingray/ENU/?contextId=engine_command_line).
+
+-	You can load (and unload) plug-ins dynamically from other paths at runtime:
+
+	-	In Lua, use the functions in the [`PluginManager`](http://help.autodesk.com/view/Stingray/ENU/?contextId=lua_ref_ns_stingray_PluginManager) API, such as `PluginManager.load_plugin()` and `PluginManager.load_relative_plugin()`.
+
+	-	In C/C++, if you have a loaded plug-in that needs to load another plug-in dynamically, use `PluginManagerApi::load_relative_plugin()`.
