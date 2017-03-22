@@ -1,6 +1,6 @@
 # Get started on HoloLens
 
->**Note: The HoloLens platform is still in development and work on the deoployment and editor workflows is ongoing. This page is subject to change.**
+>**Note: The HoloLens platform is still in development and work on the deployment and editor workflows is ongoing. This page is subject to change.**
 
 ## Step 1. Building for HoloLens
 
@@ -19,7 +19,7 @@ A WIP Project for HoloLens testing purposes can be found [here](https://autodesk
 
 ### Bundle project data ###
 
->**Important:** You must enable experimental editor features (**File > Settings > Editor > Settings > Enable experimental editor features**) before you can compile data for UWP/HoloLens in the editor. For more information, see ~{ About Experimental Features }~.
+>**Important:** You must enable experimental editor features (**File > Settings > Editor Settings > Enable experimental editor features**) before you can compile data for UWP/HoloLens in the editor. For more information, see ~{ About Experimental Features }~.
 
 To compile and bundle the data:
 
@@ -34,6 +34,7 @@ If you want to create an app package with data you need to add the compiled and 
 1. Create a folder called `assets` in the source repo root dir. (The same folder that make.rb is in.)
 2. Copy the bundled data into this folder.
 3. Re-run make.rb.
+
   >**Tip:** You can run it with `--no-build` to only generate the solution files.
 
 Alternatively you can add the files to Visual Studio manually:
