@@ -362,4 +362,10 @@ If your project contains any API elements that have been modified or removed, yo
 
 For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
 
+### C plug-in API changes
+
+-	The `FlowNodeApi` functions now require numeric ID values to identify Flow node and event names, instead of `const char*`. You can generate these IDs from strings using the `IdString32()` class in the `stingray_plugin_foundation`. For more, see [About resource names and IDs](http://help.autodesk.com/view/Stingray/ENU/?contextId=resource_ids) in the SDK Help.
+
+-	The editor's `ConfigDataApi` has changed to better align with the `DynamicConfigValue` class in the `stingray_plugin_foundation`. If you have written any editor plug-ins that use this API to exchange data between the editor and the plug-in, you will have to refactor your code to match the new API.
+
 [Return to top](#top)
