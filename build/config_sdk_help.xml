@@ -42,6 +42,7 @@
 		<contextId include="*\sdk_help\introduction.html" id="SDK_HOME"></contextId>
 		<contextId include="*\sdk_help\extend_editor.html" id="SDK_EDITOR_C_PLUGIN"></contextId>
 		<contextId include="*\sdk_help\extend_engine.html" id="SDK_ENGINE_PLUGIN"></contextId>
+		<contextId include="*\sdk_help\about_resource_ids.html" id="resource_ids"></contextId>
 		<meta name="indexterm" content="plugin" include="*"></meta>
 		<meta name="indexterm" content="plug-in" include="*"></meta>
 		<meta name="topic-type" content="concept" include="*\sdk_help\*"></meta>
