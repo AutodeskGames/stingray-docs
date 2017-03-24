@@ -1,8 +1,8 @@
 # Supported platforms
 
-Anyone can use Stingray to create projects that run on Windows PC, iOS, and Android. If you're licensed by Sony as a PlayStation 4 developer, or by Microsoft as an Xbox One developer, you can also create projects for these consoles.
+Anyone can use Stingray to create projects that run on Windows PC, iOS, Android, or in a web browser. If you're licensed by Sony as a PlayStation 4 developer, or by Microsoft as an Xbox One developer, you can also create projects for these consoles.
 
-This page describes the models of mobile and VR devices that Stingray supports.
+This page describes the models of mobile and VR devices and the web browsers that Stingray supports for deploying your projects.
 
 >	**NOTE:** This page describes the requirements for playing back a project that you've already created and deployed using the Stingray editor. For the requirements you need in order to run the Stingray editor and create the project content, see ~{ System Requirements }~.
 
@@ -59,6 +59,12 @@ Devices running older versions may or may not work as expected.
 >**Note:** The Oculus Remote and Oculus Touch Controller are supported.
 
 >**Note:** Stingray also supports Google Cardboard for iOS and Android, and Android Google Daydream with controller support.
+
+## Supported web browsers
+
+If you plan to run your project in a browser, Stingray requires WebAssembly and WebGL 2.0 (including OpenGL ES 3.0 and GLSL 3.00), which are currently supported by Google Chrome (Version 57) and Mozilla Firefox (Version 52). (Both of these browsers support WebAssembly 1.0 and WebGL 2.0 by default, with no extra configuration required.)
+
+See also ~{ Get started with web deployment }~.
 
 ## Platform libraries
 

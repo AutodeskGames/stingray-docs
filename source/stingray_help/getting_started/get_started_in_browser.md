@@ -1,6 +1,8 @@
-# Run your project in a browser using WebGL
+# Get started with web deployment
 
-If you've been waiting impatiently to see your Stingray projects up and running in a web browser, this experimental feature offers you a first glimpse of the possibilities.
+![](../images/updated.png)
+
+These pages tell you everything you need to know in order to get started developing projects that will run in a web browser.
 
 In this release, you can:
 
@@ -14,34 +16,27 @@ You can't yet:
 
 In addition, you may notice that not all of the rendering settings offered by the shading environment are available yet when the project is running in the browser. We're still working on making more of these high-quality effects work under WebGL.
 
-## Get started
+## Step 1. Install a supported browser
 
-1.	Install and set up a supported browser.
+Stingray requires WebAssembly and WebGL 2.0 (including OpenGL ES 3.0 and GLSL 3.00), which are currently supported by Google Chrome (Version 57) and Mozilla Firefox (Version 52).
 
-	Stingray requires WebGL 2.0 (including OpenGL ES 3.0 and GLSL 3.00), which is currently supported by Google Chrome (Version 52) and Mozilla Firefox (Version 49).
+## Step 2. Deploy the project to web
 
-	Follow the instructions under ~{ Use Google Chrome to run your project }~ or ~{ Use Mozilla Firefox to run your project }~.
+To launch your project in a browser from the Stingray editor, you'll use the the **Connections** panel to set up a new web target for each browser you want to use. (See also ~{ Using the Connections panel }~.)
 
-1.	If you're using Chrome, launch it now from the shortcut you created. The Stingray editor will open your project in a new tab if the browser is already open, but can't start it up with the required command-line parameter.
+1. In the **Connections** panel (**Window > Deploy and Connect > Connections**), specify a name to identify the connection.
 
-1.	Start the Stingray editor, and enable its experimental features. See ~{ About Experimental Features }~.
+1. Set the **Platform** option to **Web**.
 
-	If you have the **Connections** or **Deployer** panels open already, you'll have to close and re-open them (or restart the Stingray editor) so that the new setting can take effect.
+1. Set the **Browser Path** to point to the *.exe* file for your installation of Firefox or Chrome.
 
-1.	To launch your project in a browser from the Stingray editor, open the **Connections** panel and set up a new HTML5 (WebGL) target for each browser you want to target.
+1. Leave the **Command Line** blank. For web connections, this defines extra parameters that are sent to the launched HTML page in the URL search string. These command-line parameters will be passed to the URL as GET parameters, which are then read by the engine and honored just like any platforms. If you want to customize the HTML page, enter the parameters here. Note that parameters that won’t make sense in the context of a web page might not yield the intended results.
 
-	-	Set a name to identify the connection.
-	-	Set the **Platform** option to **HTML5 (WebGL2)**.
-	-	Set the **Browser Path** to point to the *.exe* file for your installation of Firefox or Chrome. If you have multiple versions of these browsers installed, make sure that this setting points to the version that you have already set up to use WebGL 2.0.
-	-	Leave the **Command Line** blank. For WebGL connections, this defines extra parameters that are sent to the launched HTML page in the URL search string. These command-line parameters will be passed to the URL as GET parameters, which are then read by the engine and honored just like any platforms. If you want to customize the HTML page, enter the parameters here. Note that parameters that won’t make sense in the context of a web page might not yield the intended results.
+	![Web connection](../images/web_connection.png)
 
-	![WebGL connection](../images/experimental_webgl_connection.png)
+1.	To deploy the project to disk, open the **Deployer** panel to the **HTML5** tab. Set up the requested fields, and click **Package Project for Web**.
 
-	See also ~{ Using the Connections panel }~.
-
-1.	To deploy the project to disk, open the **Deployer** panel to the **HTML5** tab. Set up the requested fields, and click **Package Project for HTML5 (WebGL2)**.
-
-	![WebGL deployment](../images/experimental_webgl_deployer.png)
+	![WebGL deployment](../images/web_deployer.png)
 
 	See also ~{ Using the Deployer panel }~.
 
@@ -49,11 +44,11 @@ When you get the project successfully running in the browser, it looks something
 
 ![A project running in WebGL](../images/experimental_webgl_running.jpg)
 
-## About the HTML5 (WebGL2) project output
+## About the web project output
 
-When you launch or deploy to the HTML5 (WebGL2) target, Stingray compiles your project's assets the same way it does for any other platform. It writes all the compiled resources to the `webgl` folder under your project `_data` folder and reads the data directly from here to display it as a URL.
+When you launch or deploy to the web target, Stingray compiles your project's assets the same way it does for any other platform. It writes all the compiled resources to the `web` folder under your project `_data` folder and reads the data directly from here to display it as a URL.
 
-Deploying the project to the HTML5 (WebGL2) target copies the `webgl` directory to the final location you set in the **Deployer** panel.  This folder will also contain:
+Deploying the project to the web target copies the `web` directory to the final location you set in the **Deployer** panel.  This folder will also contain:
 
 -	A set of *.js* files that are essentially the result of compiling the game engine's runtime code into JavaScript.
 
@@ -68,6 +63,8 @@ Starting up a Stingray project in the browser is a multi-step process. This sequ
 1.	**Downloading**. In this step, your browser loads into memory all of the engine JavaScript and the compiled data that makes up your project.
 
 	If you're running from a copy of the project on disk, like when you launch from the **Connections** panel, this step will probably be virtually instantaneous. However, if you're connected remotely to a project hosted on a web server, this may take some time, depending on the size of your project.
+
+	![](../images/new.png) In order to save time downloading the same content the next time you load the page, Stingray stores the downloaded content in your browser's IndexedDB local storage. (This can speed things up especially if you're running the project on a remote server.) You may find that you need to clear this cache from your browser if you're not seeing updates to your content as expected.
 
 1.	**Preparing**. This compiles the downloaded JavaScript code.
 
@@ -87,32 +84,20 @@ Starting up a Stingray project in the browser is a multi-step process. This sequ
 
 If your project doesn't run in the browser:
 
--	Double-check that you have followed *all* the steps indicated for your browser under ~{ Use Google Chrome to run your project }~ and ~{ Use Mozilla Firefox to run your project }~, including setting all the required configuration flags.
-
 -	If you have a problem launching from the **Connections** panel, double-check that your **Browser path** points to a supported version of your browser.
 
 -	Press **F12** to open the Firefox or Chrome developer tools.
 
 	The **Console** tab in the developer tools lists any JavaScript errors the browser encountered when trying to open the project. It also lists any messages that your game project writes to the log. This can sometimes be helpful in diagnosing where a problem occurs.
 
-	Here are some of the errors we've heard about, and how to fix them:
+- Here are some of the errors we've heard about, and how to fix them:
 
-	- (Chrome)
-
-		**Error:** “Cross origin requests are only supported for HTTP”
-
-		**Solution:** Make sure you launched Chrome with the --allow-file-access-from-files flag, or start a web server to host the content.
-
-	- (Any browser)
-
-		**Error:** “Invalid typed array range”
-
+	- **Error:** “Invalid typed array range”
 		**Solution:** Too much memory was required to even open the page. (We request 1GB up front before running engine.) This happens frequently with 32bit browsers, use a 64bit browser instead.
 
-		**Error:** “Cannot enlarge memory”
-
+	- **Error:** “Cannot enlarge memory”
 		**Solution:** Project is allocating more than the maximum memory permitted (currently 1GB). Reduce your project memory footprint.
 
 -	If you're launching the project from a web server, you may need to specify the [MIME type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) the server should use for the *.mem* file generated by the packaging process. Use the `text/html` MIME type. See the documentation for your web server for details on how to set this up.
 
--	Let us know about it [on the forum](http://www.autodesk.com/stingray-forums).
+-	Have you run into a different problem? Let us know about it [on the forum](http://www.autodesk.com/stingray-forums).
