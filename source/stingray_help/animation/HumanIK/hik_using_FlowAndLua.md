@@ -1,6 +1,6 @@
 # Using HumanIK through Flow or Lua
 
-Visually programming HumanIK with Flow is the easiest way to use HumanIK. In the HumanIK sample project available on [Creative Market](http://www.autodesk.com/stingray-creativemarket-samples), everything is demonstrated using Flow.
+Visually programming HumanIK with Flow is the easiest way to use HumanIK. In the HumanIK sample project, everything is demonstrated using Flow.
 
 All HumanIK Flow nodes are grouped together in the Flow menu (right-click in the Flow Editor), and you can check out the sample project to start experimenting. You can also refer to 'HumanIK' in the [Stingray Flow Node Reference](../../../flow_ref/index.html) to browse the node descriptions.
 
