@@ -42,7 +42,7 @@
 		<source convert_from="markdown"
 			get_metadata="true"
 			github_root_public="https://www.github.com/AutodeskGames/stingray-docs/tree/master/source/source_access"
-			github_root_internal="https://git.autodesk.com/gameware/stingray-docs/tree/master/source/source_access"
+			github_root_internal="https://git.autodesk.com/gameware/stingray-docs/tree/develop/source/source_access"
 			>..\source\source_access\*.md</source>
 		<source>..\source\source_access\*.png</source>
 		<source>..\source\source_access\*.jp?g</source>
