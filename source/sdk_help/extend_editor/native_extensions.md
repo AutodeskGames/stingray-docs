@@ -94,11 +94,11 @@ These are the basic steps for writing a *.dll* that extends the editor, and gett
 		}
 		~~~
 
-		You'll need to implement those functions in your plug-in -- like `plugin_loaded()`, `get_name()`, `get_version()`, and `shutdown()` in the example above. The editor uses the struct you return to call the functions you've defined.
+		You'll need to implement those functions in your plug-in -- like `plugin_loaded()`, `get_name()`, `get_version()`, and `shutdown()` in the example above. The editor uses the struct you return to call the functions you've defined. For now, your implementations can be empty, but this will be your chance to define what your plug-in will do in response to editor events.
 
 1.	So far, you've set up the editor to call out to your plug-in at specific times -- when your *.dll* is loaded and unloaded.
 
-	When the editor calls your plug-in's implementation of the `plugin_loaded()` and `shutdown()` functions, it passes a `get_editor_api` function that you can use to request any service APIs you need from the editor. In each call, you pass a value from the `EditorApiId` enumeration to tell the editor which interface you want. Once you have one of these editor APIs, your plug-in can call its functions to register and unregister C functions so that they can be invoked from JavaScript. Typically, your plug-in will register these functions in `plugin_loaded()` and unregister them in `shutdown()`.
+	When the editor calls your plug-in's implementation of the `plugin_loaded()` and `shutdown()` functions, it passes a `get_editor_api` function that you can use in your function code to request any service APIs you need from the editor. In each call to `get_editor_api`, you pass a value from the `EditorApiId` enumeration to tell the editor which interface you want. Once you have one of these editor APIs, your plug-in can then call its functions to register and unregister C functions so that those C functions can be invoked from JavaScript. Typically, your plug-in will register these functions in `plugin_loaded()` and unregister them in `shutdown()`.
 
 	The exact editor service APIs you need to retrieve, and the functions your plug-in should use in order to register and unregister functions, are different depending on whether you want to register synchronous or asynchronous functions. See the sections below for details.
 
@@ -182,15 +182,15 @@ stingray.unloadAsyncExtension(pluginAsyncId).then(function () {
 
 ## Exchanging data between JavaScript and C
 
-To pass data back and forth between JavaScript and your *.dll*, we use `ConfigData`: a JSON-like recursive data structure defined in C that holds essentially the same kinds of data types as JSON.
+To pass data back and forth between JavaScript and your *.dll*, we use a `ConfigValue`: a JSON-like recursive data structure defined in C that holds essentially the same kinds of data types as JSON.
 
-When you call a registered function from JavaScript, and you pass some parameters in the function call, the editor passes those parameters along to the registered C function as `ConfigData` objects. Similarly, your C function can pass data back to JavaScript by creating a new a `ConfigData`, storing its return values in the structure, and returning it. Your JavaScript code can then read the values from the object returned to it by the editor.
+When you call a registered function from JavaScript, and you pass some parameters in the function call, the editor passes those parameters along to the registered C function as `ConfigValue` objects. Similarly, your C function can pass data back to JavaScript by creating a new `ConfigValue`, storing its return values in the structure, and returning it. Your JavaScript code can then read the values from the object returned to it by the editor.
 
->	NOTE: In synchronous mode, each parameters you pass to your function in JavaScript is passed to the C function as a separate `ConfigData`. If you pass three parameters to your function, you will receive three `ConfigData` objects. However, in asynchronous mode, the C function always receives one `ConfigData` that contains the same object you pass to `stingray.hostExecute`.
+>	NOTE: In synchronous mode, each parameters you pass to your function in JavaScript is passed to the C function as a separate `ConfigValue`. If you pass three parameters to your function, you will receive three `ConfigValue` objects. However, in asynchronous mode, the C function always receives one `ConfigValue` that contains the same object you pass to `stingray.hostExecute`.
 
-To read input data and encode return values in a `ConfigData`, your C function uses the `ConfigDataApi`. You can retrieve this API from the editor by calling the `get_editor_plugin` function with the API ID `CONFIGDATA_API_ID`.
+To read input data and encode return values in a `ConfigValue`, your C function uses the `ConfigDataApi`. You can retrieve this API from the editor by calling the `get_editor_plugin` function with the API ID `CONFIGDATA_API_ID`.
 
-The `ConfigData` structure supports these different types :
+The `ConfigValue` structure supports these different types :
 
  - `CD_TYPE_NULL` : represents a `null` value.
  - `CD_TYPE_UNDEFINED` : represents an `undefined` value.
@@ -200,25 +200,9 @@ The `ConfigData` structure supports these different types :
  - `CD_TYPE_STRING` : represents a `string` value.
  - `CD_TYPE_ARRAY` : represents an `array` of any of the supported types.
  - `CD_TYPE_OBJECT` : represents an `object` that contains any of the supported types.
- - `CD_TYPE_HANDLE` : represents a user-defined handle to a resource that lives only inside your *.dll*. You should not access or modify this handle in your JavaScript code. It is only useful if you need to pass a resource handle between functions. The function to add a handle to a `ConfigData` also supports a deallocator, which is called when the JavaScript object that holds the handle is deallocated. **Warning**: This data type is only supported in synchronous mode.
+ - `CD_TYPE_HANDLE` : represents a user-defined handle to a resource that lives only inside your *.dll*. You should not access or modify this handle in your JavaScript code. It is only useful if you need to pass a resource handle between functions. The function to add a handle to a `ConfigValue` also supports a deallocator, which is called when the JavaScript object that holds the handle is deallocated. **Warning**: This data type is only supported in synchronous mode.
 
-When you create a `ConfigData`, you have to pass your own allocator function. This makes sure that wherever it is deleted, it is always done with the same resource allocator. For example, here is an example of a simple allocator function:
-
-~~~{c}
-void *EditorTestPlugin::config_data_reallocator(void *ud, void *ptr, int osize, int nsize, const char *file, int line)
-{
-    if (nsize == 0) {
-        free(ptr);
-        return nullptr;
-    }
-    auto *nptr = realloc(ptr, nsize);
-    return nptr;
-}
-~~~
-
-Many of the different functions provided by the `ConfigDataApi` rely on a special type of object called `cd_loc`. This represents the location of the data that you are either reading or writing within the overall `ConfigData` object.
-
-For an example of how to use the `ConfigDataApi` to read values from one object and copy them to another, see the `EditorTestPlugin::test()` and `copy_config_data_value()` functions, in the `editor_native_code/src/editor_native_plugin.cpp` example.
+For an example of how to use the `ConfigDataApi` to read values from a `ConfigValue` object, and how to construct a new `ConfigValue` object to pass return values back to the JavaScript layer, see the `EditorTestPlugin::test()` and `copy_config_data_value()` functions in the `editor_native_code/src/editor_native_plugin.cpp` example.
 
 ## Other C APIs
 
