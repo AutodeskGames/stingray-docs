@@ -111,13 +111,21 @@ The following parameters are all optional. They are used only for display purpos
 
 >	Specifies an image file for the editor's **Plugin Manager** to display for your plug-in. The path should be relative to the location of your *.stingray_plugin* file. Optional; the default is to use a file called `thumbnail.png` if it is present.
 
+`keywords`
+
+>	An array of strings that describe what your plug-in does. The editor uses these to filter different kinds of assets that it finds online:
+>
+>	-	`plugin` identifies a plug-in that shows up in the *Get More Plugins* list of the **Plugin Manager**.
+>	-	`project-example` identifies a sample project that shows up in the **Online Projects** tab of the **Project Manager**.
+>	-	`project-template` identifies an online template project that shows up in the **Templates** tab of the **Project Manager**.
+>	-	`asset-package` identifies an asset or a set of assets that shows up in the *Online Assets* folder of the **Asset Browser**.
+>
+
+>	**NOTE:** These keywords are currently useful only for packages shared by Autodesk through [the Gamedev portal](https://gamedev.autodesk.com/stingray/plugins). Customers can't yet share packages through this repository, but we still recommend setting the appropriate keywords now. That way your plug-ins will be ready to upload when you do get access.
+
 ## Optional descriptive metadata for future use
 
 The following parameters are all optional. They are intended for future use, but we do recommend including them now even if they have no immediate use.
-
-`keywords`
-
->	An array of strings that describe what your plug-in does. These may be used in future to help people find your plug-in.
 
 `license`
 

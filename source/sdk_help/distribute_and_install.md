@@ -10,6 +10,8 @@ Get your *.stingray_plugin* file, along with all the other files your plug-in de
 
 There are no requirements on how you should do this -- you could post a zip for download on the web or on your organization's intranet, you could share the files on [GitHub](http://www.github.com/), you could make an installer, you could send a zip by e-mail, post it on [the Area](http://area.autodesk.com/), charge money for it on [Creative Market](https://creativemarket.com/), whatever works for you.
 
+>	**NOTE:** We're working on opening up the [Gamedev portal](https://gamedev.autodesk.com/stingray/plugins) for third-party developers to post their Stingray plug-ins, sample projects and custom assets. This is where the editor finds all the online content it offers in the **Project Manager**, **Plugin Manager** and **Asset Browser**. We're not quite done yet, but stay tuned and we'll let you know when it's ready.
+
 ## What your plug-in user has to do
 
 First of all, your end-user has to get your plug-in files through whatever means you've chosen to distribute them, and put them somewhere locally on the machine where they have Stingray installed.
@@ -18,21 +20,15 @@ Then, they need to use the Stingray editor's **Plugin Manager** to install and l
 
 Ideally, anything else that's necessary would happen automatically. However, depending on what your plug-in adds to Stingray, your user may have a few extra steps to do:
 
--	If your plug-in includes any *.dll* files that extend the runtime engine, your user must copy all of these to the engine's plugins folder: `engine/<platform>/<config>/plugins`, under your Stingray installation directory. The engine has separate folders for different platforms (`win32` and `win64`), and for different configurations (most notably `dev` and `release`). If you distribute your plug-in with multiple *.dll* files for those different platforms and configs, each *.dll* has to go to its corresponding location.
+-	**If your plug-in includes *.dll* files that the engine needs to load at runtime**: By default, when a user deploys a standalone build of their project, only the plug-in *.dll* files that ship with Stingray get copied to the final output folder. Your user will need to manually make the deployment process include the *.dll* files from your plug-in. They can either:
 
-	Note that the user should not copy any *.dll* files that extend only the editor. They should stay at the location set for them in the *.stingray_plugin* file. See ~{ Call out to C code from JavaScript }~.
-
-	Keeping this straight can be confusing for the person installing the plug-in, so you may need to tell them exactly which *.dll* files need to go where. (If you choose to write an installer for your plug-in, this is a good step to automate.)
-
--	By default, when the user deploys a standalone build of their project, only the plug-in *.dll* files that ship with Stingray get copied to the final output folder. To make the deployment process include your plug-in *.dll* files, your user will have to either:
-
- 	a)	copy them manually to the output folder after the deployment is done, or
+ 	a)	copy the *.dll* files manually to the output folder after the deployment is done, or
 
 	b)	modify the `engine/<platform>/<config>/package.manifest` file, which tells the deployer what files to ship with the project. They must add the relative path and filename of the *.dll* to the list of files in this manifest along with the other plug-in entries, and save the changes.
 
--	By default, the template projects that come with Stingray load all resources in the project at startup. If your user has set up a custom system for streaming resources in and out of memory dynamically using resource packages, and if your plug-in adds content that needs to be present in the game at runtime, the user may need to add your plug-in content to their resource packages in order to make sure that your content gets loaded.
+-	**If your plug-in adds content that needs to be present in the game at runtime:** The user may need to add your plug-in content to their resource packages in order to make sure that your content gets loaded. They can add this to their *boot.package* file, or to another package that they load on-demand in the game. For more, see [the Stingray help about resource packages](http://help.autodesk.com/view/Stingray/ENU/?contextId=loading_unloading).
 
--	If your plug-in needs to add any Lua scripts to the project content, those scripts won't get loaded by default into the project's Lua environment at runtime. Your user will have to adjust their project's Lua code in order to `require` those added script files. So, for example, if your plug-in contains some custom Flow nodes that are implemented in accompanying Lua scripts, the user needs to `require` those scripts from within their own gameplay code in order for the Flow nodes to work.
+-	**If your plug-in needs to add any Lua scripts to the project content:** Your plug-in's scripts won't get loaded by default into the project's Lua environment at runtime. Your user will have to adjust their project's Lua code in order to `require` those added script files. So, for example, if your plug-in contains some custom Flow nodes that are implemented in accompanying Lua scripts, the user needs to `require` those scripts from within their own gameplay code in order for the Flow nodes to work.
 
 	Another way to get around this might be to create a *.dll* file that extends the runtime engine to load the necessary Lua files when the engine starts up the project (see the `lib_loadfile()` function in the engine's `LuaApi`).
 

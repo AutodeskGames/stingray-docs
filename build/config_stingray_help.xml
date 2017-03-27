@@ -90,6 +90,10 @@
 		<contextId include="*\content_lifecycle.html" id="tutorial_compile"></contextId>
 		<contextId include="*\link_to_dcc.html" id="interop_plugins"></contextId>
 		<contextId include="*\about_engine_configs.html" id="engine_configs"></contextId>
+		<!-- context IDs used by other docs -->
+		<contextId include="*\loading_unloading.html" id="loading_unloading"></contextId>
+		<contextId include="*\engine_command_line.html" id="engine_command_line"></contextId>
+
 		<replace pattern="BEGIN_STANDALONE.*END_STANDALONE" replacement="" include="*.html"></replace>
 		<insert_family_links include="\stingray_help\*,\changelog\*"></insert_family_links>
 		<validate_todos>true</validate_todos>

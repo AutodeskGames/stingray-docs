@@ -47,16 +47,19 @@ Note that the names of the functions that are exposed on the module below match 
 define([], function () {
     "use strict";
 
-    var exports = {
-        get_greeting: function () {
+    function MyService() {
+
+        this.get_greeting = function () {
             return "Hello world!";
-        },
-		alert_message: function (message) {
+        };
+
+		this.alert_message = function (message) {
             alert(message);
-        }
+        };
+
     };
 
-    return exports;
+    return new MyService();
 });
 ~~~
 

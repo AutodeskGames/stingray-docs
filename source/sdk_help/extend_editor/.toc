@@ -1,5 +1,4 @@
 plugin_development_tips
-plugin_extensions
 services
 emit_respond_events
 asset_editing

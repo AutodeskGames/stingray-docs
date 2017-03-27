@@ -104,6 +104,14 @@ While you're there, a must-read is [this detailed tutorial](https://github.com/A
 
 We've decided to standardize on *stingray_plugin* as the preferred extension for our plug-in descriptor file format. Don't worry if you've already written or installed any *.plugin* files, we'll still recognize *.plugin* for backward-compatibility. But for future development, we now recommend using *.stingray_plugin* instead.
 
+### `runtime_libraries` extension
+
+If you write a Stingray plug-in that extends the runtime engine with a *.dll* file, you don't have to copy your *.dll* into your engine's *plugins* folder anymore!
+
+Use the new `runtime_libraries` extension to set up the path to the *.dll* file inside your *.stingray_project* file. While your plug-in is loaded in the editor, any engine instances that you spawn from the editor (using Test Level or Run Project) will automatically load your library.
+
+See [this example config](https://github.com/AutodeskGames/stingray-plugin/blob/master/plugin/example.stingray_plugin) in the new base plugin repository, or read about it [in the SDK Help](http://help.autodesk.com/view/Stingray/ENU/?contextId=SDK_ENGINE_PLUGIN).
+
 ### Supply Lua code on the command line
 
 The engine executable now accepts a `--lua <code snippet>` command-line parameter. If you include this parameter, the engine automatically runs the code snippet that you specify on the command line within its Lua environment. It runs your code after it calls the `init()` function from the project's Lua boot script, but before it calls `update()` for the first time.
@@ -353,5 +361,11 @@ If your project contains any API elements that have been modified or removed, yo
 ### Flow node changes
 
 For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
+
+### C plug-in API changes
+
+-	The `FlowNodeApi` functions now require numeric ID values to identify Flow node and event names, instead of `const char*`. You can generate these IDs from strings using the `IdString32()` class in the `stingray_plugin_foundation`. For more, see [About resource names and IDs](http://help.autodesk.com/view/Stingray/ENU/?contextId=resource_ids) in the SDK Help.
+
+-	The editor's `ConfigDataApi` has changed to better align with the `DynamicConfigValue` class in the `stingray_plugin_foundation`. If you have written any editor plug-ins that use this API to exchange data between the editor and the plug-in, you will have to refactor your code to match the new API.
 
 [Return to top](#top)
