@@ -10,7 +10,7 @@ Note that, while you're free to use these experimental features as you see fit, 
 
 A few reasons why we might tag something as experimental:
 
--	It might rely on third-party technology that is still in development, like the way our WebGL platform depends on bleeding-edge browsers with custom settings.
+-	It might rely on third-party technology that is still in development.
 -	It might not be stable and thoroughly tested up to our usual standards, or it might cause unexpected interactions with other plugins and components.
 -	We might want to validate a new idea or direction with customers.
 -	We might expect to make significant changes to the feature in the near future, so we're not ready for it to be widely adopted in real productions yet.

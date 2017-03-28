@@ -158,7 +158,7 @@ Use the `stingray.Application.toggle_dev_only_warnings()` function to turn these
 
 ### Projects launch faster in a browser
 
-Stingray now runs projects more quickly in a web browser using WebGL. The launching process has been updated to load the content from a URL instead of packaging the compiled data to a separate folder and reading the data. The URL also displays the location of the content folder. See ~{ Run your project in a browser using WebGL }~. Also check out the updated settings if you ~{ Use Mozilla Firefox to run your project }~.
+Stingray now runs projects more quickly in a web browser using WebGL. The launching process has been updated to load the content from a URL instead of packaging the compiled data to a separate folder and reading the data. The URL also displays the location of the content folder.
 
 [Return to top](#top)
 

@@ -4,7 +4,7 @@
 
 - **Window > Deploy and Connect > Connections**
 
-You can use the **Connections** panel to configure remote devices as targets for the Stingray Editor. Once set up as a target, you can mirror the Stingray Editor viewport to the device or run your project on the device.
+You can use the **Connections** panel to configure remote devices and web browsers as targets for the Stingray Editor. Once set up as a target, you can run your project on the device or in the browser, and for devices you can also mirror the Stingray Editor viewport to the device. (Mirroring the Stingray viewport to a browser is not currently supported.)
 
 ![Connections Panel Overview](../../images/comp_connections_panel.png)
 
@@ -21,16 +21,16 @@ Each connection you configure requires the following settings:
 
 <dl>
 <dt>Name</dt>
-<dd>A descriptive name for the target device. This name is used in the Stingray Editor and **External Console** to refer to the device.</dd>
+<dd>A descriptive name for the target device or browser. This name is used in the Stingray Editor and **External Console** to refer to the device or browser.</dd>
 
 <dt>Platform</dt>
-<dd>Specifies the type of device represented by this connection.</dd>
+<dd>Specifies the type of device or browser represented by this connection.</dd>
 
 <dt>Address</dt>
-<dd>The IP address or network resource name of the target device. You **must** set this value to the correct address for your device, regardless of which platform you target.</dd>
+<dd>The IP address or network resource name of the target device. You **must** set this value to the correct address for your device, regardless of which platform you target. (Not required for web targets.)</dd>
 
 <dt>Command Line</dt>
-<dd>Any text that you enter in this control will be passed to the Stingray engine on the command line when the engine is launched on the target device. You can use this option to control certain aspects of the engine's operation.</dd>
+<dd>Any text that you enter in this control will be passed to the Stingray engine on the command line when the engine is launched on that target. You can use this option to control certain aspects of the engine's operation.</dd>
 <dd>For example, you could use the `--ini` setting to boot the engine from a different *settings.ini* file in order to test different configurations, or use the `--hold` option to make the engine pause on startup until a debugger attaches to the process.</dd>
 <dd>For a list of all the parameters the engine accepts from the command line, see ~{ Stingray engine command-line reference }~.</dd>
 
@@ -38,14 +38,18 @@ Each connection you configure requires the following settings:
 
 ## Platform-specific settings
 
-<dl>
-<dt>Compile and install bundled game data on run project</dt>
-<dd>For iOS and Android targets only. When this check box is selected, and you run your project on this device, your project data is saved on the device. The next time you start the Stingray engine app on the device, you can choose whether to wait for a connection from the Stingray Editor, or start up in an offline, standalone mode using the last set of project data saved to the device.</dd>
-</dl>
-
 >	**Note**: In order to connect to a remote device for mirroring or running your project, you also need to do some additional setup tasks specific to each platform, like installing software requirements. See the page for your device under ~{ Getting Started }~.
 
 >	**Connecting to a remote PC is currently not supported.**
+
+<dl>
+<dt>Compile and install bundled game data on run project</dt>
+<dd>For iOS and Android targets only. When this check box is selected, and you run your project on this device, your project data is saved on the device. The next time you start the Stingray engine app on the device, you can choose whether to wait for a connection from the Stingray Editor, or start up in an offline, standalone mode using the last set of project data saved to the device.</dd>
+
+<dt>Browser Path</dt>
+<dd>For web targets only. Must point to the *.exe* file for your installation of Firefox or Chrome. (See also ~{ Supported platforms }~.)</dd>
+
+</dl>
 
 ## Mirror the viewport
 
@@ -69,8 +73,6 @@ To run your project on the device in standalone mode:
 When you initiate a connection to a remote device to either mirror the viewport or run the project, you can see the current status of the data transfer between your computer and the remote devices in the ~{ Log Console }~.
 
 ## Run multiple local project instances
-
-[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html)
 
 You can set up the **Connections** panel to launch multiple instances of the engine when you run the project.
 
