@@ -9,7 +9,7 @@
 -	TIF/TIFF
 -	EXR
 - DDS
-	For more information, see ~{ DDS texture file settings for Stingray }~.
+	For more information, see ~{ Recommended texture compression settings }~.
 
 - Terrain height maps (see - ~{ Import a height map for terrain }~)
 
