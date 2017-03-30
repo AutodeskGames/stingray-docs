@@ -1,8 +1,11 @@
 # Texture Manager
 
 - **Window > Texture Manager**
+- **Window > Texture Manager Legacy**
 
 Use the **Texture Manager** to import textures and manage texture settings.
+
+>	**Note:** Stingray ships with two versions of the **Texture Manager** tool. We recommend using **Window > Texture Manager** -- this is the version of the tool that you'll see when you double-click a texture in the editor. While we're perfecting this new version of the tool, we temporarily still ship the old "legacy" standalone application too, just in case.
 
 In the **Texture Manager** you'll create a texture-resource, which refers to an input image file. The texture-resource settings define how the file is handled by the data compiler, for example if the texture should be compressed.
 
