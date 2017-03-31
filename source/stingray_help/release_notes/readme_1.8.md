@@ -67,6 +67,24 @@ A new non-interactive light baking mode has been added to the Stingray baker to 
 
 This release of Stingray ships with an updated Stingray DCC Link plug-in to support 3ds Max 2018 and 3ds Max 2017. See ~{ Interop with Maya, Maya LT, or 3ds Max }~.
 
+## Appkit loading screens
+
+We've had many requests from customers who want to know how to start off their project with a simple splash screen while the bulk of their content loads in the background. So we've added support for loading screens to the Appkit!
+
+When you start a new project based on one of the Stingray templates that uses the Appkit, you'll notice that each time you run the project you now start with a "Powered by Autodesk Stingray" loading screen. You can customize this splash screen to show your own logos, or whatever works for your project.
+
+See ~{ Work with the Appkit loading screen }~ for more information.
+
+## Appkit project script
+
+You can now configure the name of the Lua script that the Appkit loads at startup. In your *settings.ini* file, find or create a `script_data` object, and add a `project_script` setting. For example:
+
+~~~{sjson}
+script_data = {
+	project_script = "scripts/lua/my_project/boot_script"
+}
+~~~
+
 ## What's New in documentation?
 
 - Press F1 to open Stingray Help while using the Editor

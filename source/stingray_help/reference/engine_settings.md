@@ -617,10 +617,15 @@ scope = {
 
 ## Script data
 
-`script_data = {}`
+Use the `script_data` block to set custom information that your project's Lua script can read by calling `Application.settings()`.
 
-> Use this block to set custom information that your project's Lua script can read by calling `Application.settings()`.
+`script_data = {
+	project_script = "path/to/appkit/project/boot/script"
+}`
 
+`project_script`
+
+>	If you are using the Appkit, you can use this setting to specify the name of the *.lua* script that the Appkit should load at startup. This setting is optional; if you omit it, the Appkit will look for a `script/lua/project.lua` file. Note that like most resource settings, you don't need to add the *.lua* extension at the end of the resource name.
 
 [Back to top](#top)
 
