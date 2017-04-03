@@ -12,6 +12,10 @@ If the crash occurs at startup, the cause is usually that the boot package is at
 
 For help, see the list of techniques under ~{ Optimize memory usage }~, and consider setting up multiple resource packages that your project can load and unload dynamically. See ~{ Loading and unloading packages }~.
 
+## Objects and materials are missing when running the project, but they show in Test Level
+
+You may need to add your resources to your *boot.package* file, or to another package that you load into memory yourself during the course of the project. For details on how package loading works, see the topics under ~{ Loading and unloading content at runtime }~.
+
 ## Fatal error when testing levels
 
 Shut down Stingray and delete the `editor.config` file. You can find this file at `C:\Users\<user name>\AppData\Local\Autodesk\Stingray\Settings\editor.config`. When you restart, the problem should be corrected.

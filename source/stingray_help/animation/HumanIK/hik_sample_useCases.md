@@ -1,8 +1,12 @@
 # HumanIK sample project and common use cases
 
-HumanIK can help you accomplish all common IK tasks you need in a game. Grabbing	an object on the ground, opening a door, aiming a weapon, looking at 	somebody.
+HumanIK can help you accomplish any inverse kinematic animation that you need in a project: for example, you can make a character grab an object on the ground, open a door, aim a weapon, or look other characters and points of interest in the scene.
 
-> ![](../../images/icon_CreativeMarket.png) The best way to learn about HumanIK in Stingray is to get your hands on the 'HumanIK Example' project, available on <a href="http://www.autodesk.com/stingray-creativemarket-samples" target="blank">Creative Market.</a>
+<table class="not-ruled"><tr><td>
+![HumanIK sample project](../../images/project_example_humanik.png)
+</td><td>
+The best way to learn about HumanIK in Stingray is to get your hands on the HumanIK example project. Open the sample HumanIK project from the **Online Projects** tab of the **Project Manager**, or [download the project here](https://gamedev.autodesk.com/stingray/plugins/humanik-project_example)!
+</td></tr></table>
 
 The sample project illustrates some of the most common use cases, including:
 

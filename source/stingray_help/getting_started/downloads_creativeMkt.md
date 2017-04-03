@@ -14,11 +14,9 @@ You can also select an asset and click the Download button in the **Property Edi
 
 ## Purchase assets from Creative Market
 
-You will find some of the free sample projects and other [game kits](https://creativemarket.com/apps/stingray/gamekits) that provide real working examples of games built in Stingray in [Creative Market](http://www.autodesk.com/stingray-creativemarket-samples). You can purchase a variety of 3D assets created by the community for use in your games, or sell your own creations.
+Visit the [Creative Market](http://www.autodesk.com/stingray-creativemarket-samples) store to purchase a variety of 3D assets created by the community for use in your games, or to sell your own creations.
 
-[ ![Stingray game kits](../images/cm_game_kits.png) ](https://creativemarket.com/apps/stingray/gamekits)
-
-You can access and purchase Creative Market assets for your project using the **Creative Market** panel in Stingray (**Window > Creative Market**).
+You can browse these assets inside the Stingray editor, using the **Creative Market** panel (**Window > Creative Market**).
 
 ![](../images/cm_windowpanel.png)
 
