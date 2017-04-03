@@ -2,9 +2,6 @@
 
 Autodesk Scaleform Studio is an editor and a runtime that enables you to create rich, interactive 2.5D user interfaces and graphics for use with Stingray.  Scaleform Studio supports bitmaps, text and vector graphics, so that users can create animated UI menu screens, in-game HUDs and other 2D graphics for use with Stingray.
 
-For complete information about working in the Scaleform Studio Editor, visit the <a href="http://www.autodesk.com/scaleformstudio-help" target="_blank">Scaleform Studio Help</a>. This online help system is also available from the Help menu in the Scaleform Studio editor.
-
-
 The Scaleform Studio plug-in provides the following capabilities to Stingray:
 
 * Enable the creation of animated UI screens, HUDs, common game UIs with available set of pre-built UI components such as buttons, sliders, scrolling list and so on.
@@ -15,3 +12,6 @@ The Scaleform Studio plug-in provides the following capabilities to Stingray:
 * Edit and debug scripts attached to objects using the Lua editor.
 * Compatible with all platforms supported by the Stingray engine.
 
+> ![](images/icon_CreativeMarket.png) Download the 'Advanced Scaleform Example' project from <a href="http://www.autodesk.com/stingray-creativemarket-examples" target="blank">Creative Market</a> to see an advanced menu setup created with Scaleform Studio.
+
+For complete information about working in the Scaleform Studio Editor, visit the [Scaleform Studio Help](http://www.autodesk.com/scaleformstudio-help). (Also available from the **Help** menu in the Scaleform Studio editor.)

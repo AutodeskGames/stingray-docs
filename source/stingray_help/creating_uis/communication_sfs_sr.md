@@ -13,7 +13,7 @@ The Scaleform Studio plug-in also provides `scaleform.Stingray.send_message` for
 
 	You can send other event types using `scaleform.Stage.dispatch_event`, but the plug-in also provides direct support for many of these events with `scaleform.Stingray.send_message`, such as Keyboard, Mouse, or Touch.
 
-	For a complete list of event types in Scaleform Studio, refer to the Lua reference documentation <a href="http://www.autodesk.com/scaleformstudio-help?guid=__lua_ref_enu_scaleform_EventTypes_html" target="_blank">here</a>.
+	For a complete list of event types in Scaleform Studio, refer to the Lua reference documentation [here](http://www.autodesk.com/scaleformstudio-help?guid=__lua_ref_enu_scaleform_EventTypes_html).
 
 * `scaleform.Stage.dispatch_event` processes the event immediately.
 * `scaleform.Stingray.send_message` buffers until the next `Update` is called to advance the Scaleform Studio project (s2dproj).
