@@ -187,6 +187,7 @@ These were late-breaking issues that affected Stingray 1.7 as known limitations.
 - GAME-19428 3D Text Label: opacity doesn't seem to be having any effect
 - GAME-22178 Unhandled exception when prompted to save an untitled script file
 - GAME-19158 ADP dialog gets behind the Editor at launch
+-	GAME-21151 HumanIK Example project: pressing 'x' for X-rays shows green/white rigs that seem to be in the wrong space/orientation
 
 ## Audio/Wwise
 
@@ -336,9 +337,15 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 	We changed the rendering backend in Stingray 1.8 to Metal instead of OpenGL on iOS. We use the googlevr SDK to implement iOS Cardboard support and this means it has been temporarily disabled, because this SDK does not include support for Metal out of the box. For details, see [this known issues link](https://developers.google.com/vr/ios/release-notes).
 
-- **GAME-22297 Thumbnails display as solid grey in the Asset Browser**
+-	**GAME- 22249 Missing Scaleform UIs from all templates when running games on iOS**
 
-	**Workaround:** Right-click to reload the problematic panels.
+	**Workaround:** None.
+
+-	**GAME-22069 Baked reflection probe don't function properly when using mini-renderer**
+
+	Reflection probe cubemaps are not generated properly when using mini-renderer, and the reflections look faded in VR template projects.
+
+	**Workaround:** Modify your project's *settings.ini* file to use the default renderer, and generate the cubemaps. Close the project, switch back to mini_renderer in *settings.ini* and then re-open the project.
 
 [Return to top](#top)
 
@@ -350,6 +357,10 @@ The full installation guide for Autodesk products including Stingray is included
 
 This section explains the improvements and fixes that require specific upgrade steps for users currently using a previous version of Stingray.
 
+### Wwise updates
+
+The Wwise exporter tool has been updated to finish generating sound banks before compilation by the Stingray editor. The sound banks are automatically regenerated when you load/migrate projects into Stingray 1.8, provided your Wwise project is writable. In case you encounter any error, reload the project or update the Wwise settings file (**File > Settings > Update Wwise Project Settings**).
+
 ### Lua API changes
 
 For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](../../lua_ref/versions.html).
@@ -357,6 +368,8 @@ For a complete list of all new, modified, and removed elements in the Lua API in
 If your project contains any API elements that have been modified or removed, you will need to adjust your code accordingly.
 
 -	The setting names accepted by `Unit.set_animation_bone_mode()` and returned by `Unit.animation_bone_mode()` have been renamed to remove the `delta_` prefix. This better describes the effect of each setting.
+
+-	Use `Oculus.set_tracking_space()`and `SteamVR.set_tracking_space()` to track space scaling without scaling the world in VRs. This fixes issues with the scaled effects like fog, shadows affecting the world space and the functions `Oculus.set_tracking_space_pose()` and `SteamVR.set_tracking_space_pose()` are now deprecated. Note that when you scale the tracking space, you need to manually resize the controllers using `Unit.set_local_scale()`.
 
 ### Flow node changes
 
