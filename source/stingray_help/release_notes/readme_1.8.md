@@ -122,6 +122,8 @@ This can be useful when you launch multiple instances of the engine from the **C
 
 - Motion Blur is now disabled in the default shading environment. (See ~{ Shading environment properties }~.) You can turn Motion Blur on if you want to create a slightly blurred effect when the camera is moving.
 
+- The `SaveSystem` in Lua and the `SaveSystemCApi` in C can now save and load `IdString32` and `IdString64` objects. In Lua, you can also save and load `IdString32Box` and `IdString64Box` objects.
+
 [Return to top](#top)
 
 ## What's Fixed
