@@ -1,6 +1,6 @@
 # Interop with Maya, Maya LT, or 3ds Max
 
->**Note:** Interop with Stingray is supported as of Extension 1 for Maya 2016, Maya LT 2016, and 3ds Max 2016.
+>**Note:** Interop with Stingray is supported as of Extension 1 for Maya 2016, Maya LT 2016, and 3ds Max 2016. Releases prior to those are not supported.
 
 Stingray includes an interop plug-in to support linking to your **DCC** (digital content creation) tool.
 
