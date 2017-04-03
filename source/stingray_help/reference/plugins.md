@@ -20,7 +20,7 @@ Stingray includes standard plug-ins for several middleware game technologies, bo
 
 	Scaleform Studio is an editor and a runtime that enables you to create rich, interactive 2.5D user interfaces and graphics for use with Stingray. Scaleform Studio supports bitmaps, text and vector graphics, letting you create animated menu screens, in-game HUDs, and other 2D graphics for use with Stingray.
 
-	For more information about Scaleform Studio, see the latest documentation <a href="http://www.autodesk.com/scaleformstudio-help" target="_blank">here</a>. This online help system is also available from the Help menu in the Scaleform Studio.
+	For more information about Scaleform Studio, see the latest documentation [here](http://www.autodesk.com/scaleformstudio-help). This online help system is also available from the Help menu in the Scaleform Studio.
 
 *	WWise
 
