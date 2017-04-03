@@ -140,7 +140,7 @@ These settings are common for all tabs. See ~{ Using the Deployer panel }~.
 <dd>The unique process name of your application. It contains two parts separated by a dot.</dd>
 
 <dt>Version Code</dt>
-<dd>An internal version number used by the Google store to distinguish between version upgrades.</dd>
+<dd>An internal version number used by Google store to distinguish between version upgrades.</dd>
 
 <dt>Version Name</dt>
 <dd>The version number, in two-part notation, that is displayed in your application, for example 1.25.</dd>
