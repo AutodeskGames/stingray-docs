@@ -71,6 +71,12 @@ This release of Stingray ships with an updated Stingray DCC Link plug-in to supp
 
 - Press F1 to open Stingray Help while using the Editor
 
+## What's New in VR?
+
+### Toggle VR mode
+
+New functionality has been exposed from the GoogleVR API in the **GoogleVR** template.  You can now enter or exit VR mode at runtime using Lua. This supports hybrid applications that can run with or without VR.  Simply invoke the project’s Lua function, Project.shutdown(), to switch from VR stereo display to non-VR display, and then invoke Project.on_init_complete() to return to VR mode. 
+
 ## Stingray resource files
 
 You can use the **Script Editor** to open and edit Stingray resource files like
