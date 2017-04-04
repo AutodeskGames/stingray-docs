@@ -12,7 +12,9 @@ Unlike other editor extensions, you don't have to add anything into your *.sting
 
 	The one you'll want to look at is under `samples/editor_native_code`.
 
--	You'll need the SDK header files. You can find them under `stingray_sdk` in the example repository, or under `plugin_sdk/editor_plugin_api` in your Stingray installation folder.
+-	We really recommend basing your plug-in on the [stingray-plugin repository](https://github.com/AutodeskGames/stingray-plugin). It's already set up with everything you'll need to compile your code to a *.dll* using Visual Studio 2015, which will make it way easier for you to get started.
+
+-	You'll need the SDK header files. You can find them under `stingray_sdk` in the example repository, or under `plugin_sdk/editor_plugin_api` in your Stingray installation folder. (If you use the [stingray-plugin repository](https://github.com/AutodeskGames/stingray-plugin) repo, it'll fetch these headers for you automatically so you won't have to worry about it.)
 
 -	The [reference documentation](editor_c/index.html) contains a browsable companion to the APIs defined in the SDK header files.
 

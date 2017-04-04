@@ -12,7 +12,9 @@ This section provides some tips on getting started extending the engine with you
 
 	Then move on to the `samples/bigger_plugin`, which shows how you can create a new resource type, define how that resource gets compiled into runtime data, and set up Lua functions for the project to access the data in that resource at runtime.
 
--	You'll need the SDK header files. You can find them under `stingray_sdk` in the example repository, or under `plugin_sdk` in your Stingray installation folder.
+-	We really recommend basing your plug-in on the [stingray-plugin repository](https://github.com/AutodeskGames/stingray-plugin). It's already set up with everything you'll need to compile your code to a *.dll* using Visual Studio 2015, which will make it way easier for you to get started.
+
+-	You'll need the SDK header files. You can find them under `stingray_sdk` in the example repository, or under `plugin_sdk` in your Stingray installation folder. (If you use the [stingray-plugin repository](https://github.com/AutodeskGames/stingray-plugin) repo, it'll fetch these headers for you automatically so you won't have to worry about it.)
 
 -	The [reference documentation](../engine_c/index.html) contains a browsable companion to the APIs defined in the SDK header files.
 
