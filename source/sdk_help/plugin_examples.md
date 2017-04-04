@@ -2,6 +2,16 @@
 
 If a picture is worth a thousand words, a working code example is worth millions. And when it comes to Stingray plug-ins, you have a lot of examples to learn from.
 
+## The stingray-plugin repo
+
+The [stingray-plugin](https://github.com/AutodeskGames/stingray-plugin/) repository on GitHub is a great place to get started writing your own plug-ins. You'll find a framework all set up for you with some basic demo content, and all the tools you'll need to build libraries that extend the engine and the editor in C or C++.
+
+![The plug-in repository](images/examples_plugin_repo.png)
+
+For details on how to use this repository, see its main [README.md](https://github.com/AutodeskGames/stingray-plugin/blob/master/README.md) file.
+
+You'll also learn a ton by following along with the demo tutorial in [the repository wiki](https://github.com/AutodeskGames/stingray-plugin/wiki/How-to-create-a-cool-plugin). This walks you step-by-step through the process -- you'll use the plugin repo to build up a full-featured plug-in that extends all the parts of the Stingray environment: the project content, the editor, and the runtime engine.
+
 ## Examples that come with Stingray
 
 Most of the editing tools and panels in the Stingray editor are implemented as plug-ins. They show you concrete working examples of dozens of ways to extend the editor with new interfaces and workflows, and to extend the project with new content.
