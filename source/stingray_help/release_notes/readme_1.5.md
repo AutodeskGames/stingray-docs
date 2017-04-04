@@ -43,6 +43,9 @@ These tools are implemented as a plug-in that takes full advantage of the extend
 
 A new tab in the Project Manager makes it easy to get sample projects from Creative Market. Download example projects and game projects using the new **Online Examples** tab. See ~{ Download assets and example projects }~.
 
+**NOTE from the future:** As of release 1.8, online projects are now available through the [Autodesk Gamedev portal](https://gamedev.autodesk.com/stingray/plugins?category=586fed650af2de001bffaa6f), along with other free assets and environments!
+
+
 ### New entity components
 
 We've added some new components for the entity system:
