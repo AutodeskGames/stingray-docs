@@ -47,7 +47,7 @@ Each connection you configure requires the following settings:
 <dd>For iOS and Android targets only. When this check box is selected, and you run your project on this device, your project data is saved on the device. The next time you start the Stingray engine app on the device, you can choose whether to wait for a connection from the Stingray Editor, or start up in an offline, standalone mode using the last set of project data saved to the device.</dd>
 
 <dt>Browser Path</dt>
-<dd>For web targets only. Must point to the *.exe* file for your installation of Firefox or Chrome. (See also ~{ Supported platforms }~.)</dd>
+<dd>For web targets only. Must point to the *.exe* of your target web browser, and is automatically populated with your system default web browser application. (See also ~{ Supported platforms }~.)</dd>
 
 </dl>
 

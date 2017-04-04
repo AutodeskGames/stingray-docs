@@ -31,7 +31,7 @@ To launch your project in a browser from the Stingray editor, you'll use the **C
 
 1. Set the **Platform** option to **Web**.
 
-1. The **Browser Path** should point to the *.exe* file for your default browser. If it is not Chrome or Firefox, you will need to browse your file system to locate the *.exe* of the browser you which to use.
+1. The **Browser Path** points to the *.exe* file for your default web browser. If it's not a supported web browser (see the list above), you'll need to browse your file system to select the *.exe* of the supported web browser you want to use.
 
 1. Leave the **Command Line** blank. For web connections, this defines extra parameters that are sent to the launched HTML page in the URL search string. These command-line parameters will be passed to the URL as GET parameters, which are then read by the engine and honored just like any platforms. If you want to customize the HTML page, enter the parameters here. Note that parameters that won’t make sense in the context of a web page might not yield the intended results.
 
@@ -53,7 +53,7 @@ To deploy your project to disk (for packaging purposes), you'll use the **Deploy
 
 ## About the web project output
 
-Whether you are running project from Stingray editor, or deploying to disk, the same engine binaries will be used for both tasks. However, in the case of deployment, the project data will additionally be bundled, just like other platforms. After deploying, looking into the final deployment folder specified in the **Deployer** panel, you will find:
+Whether you are running the project from the Stingray editor or deploying to disk, the same engine binaries will be used for both tasks. However, in the case of deployment, the project data will additionally be bundled, just like other platforms. After deploying, looking into the final deployment folder specified in the **Deployer** panel, you will find:
 
 -	A *.wasm* and a *.js* file that are essentially the result of compiling the engine's runtime into WebAssembly, with some JavaScript glue.
 
@@ -79,19 +79,19 @@ Starting up a Stingray project in the browser is a multi-step process. This sequ
 
 	The first time you run a project in the browser, all files will not exist in the browser's IndexedDB local storage, so they will all be downloaded from the remote.
 
-	On subsequent launches, most (if not all) files should be found in your IndexedDB local storage, essentially eliminating any downloads from the remote, greatly speeding up this step. Note that every browser impose different limits on the IndexedDB local storage, so it is entirely possible some larger files or project fails to properly persist in the IndexedDB local storage.
+	On subsequent launches, most (if not all) files should be found in your IndexedDB local storage, essentially eliminating any downloads from the remote, greatly speeding up this step. Note that every browser imposes different limits on the IndexedDB local storage, so it is entirely possible some larger files or projects may fail to properly persist in the IndexedDB local storage.
 
 1.	**Loading resources**. In this step, the engine is running and actually loading your project's resources into memory.
 
 	The time this step takes to complete depends on the amount of content in your project, and what kinds of resources you're loading.
 
-	For example, materials tend to take a long time to load up, so projects with many materials will have a longer wait here. This is because shaders making up these materials need to be compiled at run-time on this platform, but subsequent runs usually go faster when browsers have shader cache features built-in.
+	For example, materials tend to take a long time to load up, so projects with many materials will have a longer wait here. This is because shaders making up these materials need to be compiled at run-time on this platform, but subsequent runs usually go faster when browsers have shader cache features built in.
 
 ## Troubleshooting tips
 
 If your project doesn't run in the browser:
 
--	Make sure you are using a browser that support **both** WebAssembly and WebGL 2.0 as specified above.
+-	Make sure you are using a browser that supports **both** WebAssembly and WebGL 2.0 as specified above.
 
 -	If you have a problem launching from the **Connections** panel, double-check that your **Browser path** points to the *.exe* of your browser and not any other files.
 
@@ -102,9 +102,9 @@ If your project doesn't run in the browser:
 - Here are some of the errors we've heard about, and how to fix them:
 
 	- **Error:** "Failed to create WebGL 2.0 context"
-		**Solution:** Generally this means either your browser does not support WebGL 2.0, or the feature is disabled in its configuration, or your video card driver might be out-dated, or your device has more than one graphic adapter and the wrong one is used by the browser. In any case, you can always try other web site to confirm whether WebGL 2.0 works or not on your computer.
+		**Solution:** Generally this means either your web browser does not support WebGL 2.0, the feature is disabled in its configuration, your video card driver is out-of-date, or your device has more than one graphic adapter and the wrong one is being used by the web browser. In any case, you can always try other web sites to confirm whether WebGL 2.0 works on your computer.
 
 	- **Error:** "Out of memory"
-		**Solution:** Too much memory was requested by your project. This happens much more frequently with 32bit browsers, try a 64bit browser instead. Also keep in mind reducing the memory footprint of your project by using texture compression and other techniques always help as well.
+		**Solution:** Too much memory was requested by your project. This happens much more frequently with 32-bit browsers, try a 64-bit web browser instead. Also keep in mind reducing the memory footprint of your project by using texture compression and other techniques always helps as well.
 
 -	Have you run into a different problem? Let us know about it [on the forum](http://www.autodesk.com/stingray-forums).
