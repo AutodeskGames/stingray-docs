@@ -1,9 +1,7 @@
 # Stingray 1.8 Release Notes
 <a name="top"></a>
 
-Welcome to the Stingray 1.8 (1.8.X.0) beta release.
-
-> **Important**: We strongly recommend that you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
+Welcome to the Stingray 1.8 (1.8.X.0) release.
 
 Sections in this topic:
 
@@ -26,6 +24,20 @@ Sections in this topic:
 ## What's New
 
 * * *
+
+## Run projects in a web browser
+
+For early adopters of WebGL 2.0 or WebAssembly tech in Stingray, or those who have been waiting to try it out, we're happy to announce that the workflow for deploying your project to run in a web browser has graduated out of 'experimental' status.  Highlights of this new and improved workflow: 
+
+- Since both WebAssembly and WebGL 2.0 are now released, it's no longer necessary to modify any web browser configuration or flags to run Stingray in a web browser. If you modified your browser configuration to run Stingray in a web browser, we suggest you revert these changes.
+
+- We now use a local Node.js HTTP server to run projects for the web rather than using a file URL served up to the browser, which eliminates a bunch of tricky extra configuration steps that you had to do in previous versions of Stingray. We also use virtual mapping to reduce the URL to a much simpler value (like localhost:3000) that stays the same across projects.
+
+- We've started making use of the web browser’s indexedDB local storage so that you don’t have to re-download content every time you refresh the page. (You might notice you need to clear that cache from time to time if you’re making frequent updates to the project.)
+
+- To support all of this, Stingray now requires a web browser that also supports WebAssembly, like Chrome version 57 or Firefox version 52.
+
+Check out ~{ Get started with Web }~ for updated information.
 
 ## Particle Editor updates
 
@@ -85,10 +97,6 @@ script_data = {
 }
 ~~~
 
-## What's New in documentation?
-
-- Press F1 to open Stingray Help while using the Editor
-
 ## What's New in VR?
 
 ### Toggle VR mode
@@ -114,9 +122,7 @@ You can use the **Script Editor** to open and edit Stingray resource files like
 -	Surface Properties (.surface_properties) and
 -	Stingray Type Description(.type) files.
 
-## Experimental features
-
-### HoloLens
+## Experimental feature: HoloLens
 
 Initial support for the HoloLens platform has been added. For more information, see ~{ Get started on HoloLens }~.
 
@@ -149,6 +155,8 @@ This can be useful when you launch multiple instances of the engine from the **C
 ## What else is new?
 
 - Motion Blur is now disabled in the default shading environment. (See ~{ Shading environment properties }~.) You can turn Motion Blur on if you want to create a slightly blurred effect when the camera is moving.
+
+- You can now press F1 to open the Stingray Help while using the Editor. 
 
 - The `SaveSystem` in Lua and the `SaveSystemCApi` in C can now save and load `IdString32` and `IdString64` objects. In Lua, you can also save and load `IdString32Box` and `IdString64Box` objects.
 
@@ -360,8 +368,6 @@ These were late-breaking issues that affected Stingray 1.7 as known limitations.
 This section lists known limitations and workarounds for Stingray.
 
 Unless otherwise noted in the **What's Fixed** section, please be aware that this release contains the same **Known Limitations** described in the previous versions of Stingray Release Notes.
-
-> **Note**: We recommended you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
 - **GAME-19426 iOS cardboard VR view only renders on part of the screen on iPhone 7 Plus**
 
