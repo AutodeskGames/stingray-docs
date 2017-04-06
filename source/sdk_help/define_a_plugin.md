@@ -155,9 +155,7 @@ The following parameters are all optional. They are intended for future use, but
 
 Extensions define what your plug-in adds to the Stingray system. Every plug-in needs at least one extension in order for the editor to load it successfully.
 
--	If your plug-in needs to add new content that should be available to all projects, you'll configure one or more `resources` extension. For details, see ~{ Extend the project content }~.
-
--	The other extensions that you can configure in this file set up the points of integration between your plug-in and the Stingray editor. For more information on how these extensions work and what extensions you can use in your plug-in, see ~{ Use extensions to define plug-in behaviors }~.
+For more information on how these extensions work and what extensions you can use in your plug-in, see ~{ Use extensions to define plug-in behaviors }~.
 
 ## Dependencies
 
