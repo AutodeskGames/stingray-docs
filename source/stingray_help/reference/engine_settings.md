@@ -1,5 +1,7 @@
 # Stingray engine `settings.ini` file reference
 
+![UPDATED](../images/updated.png)
+
 <a name="top"></a>
 
 Every Stingray project needs to have a *settings.ini* file at the root of the project folder. This file contains a variety of settings that the engine uses to initialize its subsystems. It expresses the data using the SJSON format. See ~{ About the SJSON data format }~.
@@ -141,6 +143,16 @@ win32 = {
 >
 > Enables or disables *vsync*, or vertical synchronization, which constrains the apparent frame rate of the game to the refresh rate of the display. Enabling vsync may correct problems with screen "tearing" when the frame rate of the game is greater than the refresh rate of the display. However, it may cause the apparent frame rate of the game to drop noticeably when the frame rate drops below the refresh rate of the display. For a good explanation, see [here](http://hardforum.com/showthread.php?t=928593). The default is `false`.
 
+`disable_implicit_sli = true`
+
+[![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)
+
+> VR SLI improves performance for VR applications, and uses multiple GPUs to accelerate stereo rendering. When a machine has two Nvidia GPUs connected by the SLI bridge, the driver takes care of utilizing the two GPUs while running on D3D11.  
+>
+> When set to true, this setting tells the driver to stop using both GPUS, and the application takes care of utilizing the two GPUs instead.
+>
+> **Note:** This setting must be used in conjunction with the `nv_vr_sli_enabled` setting. Both settings must be manually added to the settings.ini file when working in the VR templates.
+
 `crash_dump = false`
 
 > If this is set to false, this disables crashdumps in development builds. If Steam is used, crashdumps are always enabled for release builds.
@@ -205,6 +217,14 @@ render_settings = {
 `vr_mirror_mode = mono`
 
 > Can be "mono" (default) or "stereo". When running or testing your game using a VR app, the game image appears in your HMD (head mount display) and on your mirror window (your monitor). The vr_mirror_mode property lets you control the display on the mirror window. This setting is only available in the VR templates.
+
+`nv_vr_sli_enabled = true`
+
+[![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)
+
+> Boots the renderer into a mode where both GPUs are used for VR.
+
+> **Note:** This setting must be used in conjunction with the `disable_implicit_sli` setting. Both settings must be manually added to the settings.ini file when working in the VR templates.
 
 [Back to top](#top)
 
