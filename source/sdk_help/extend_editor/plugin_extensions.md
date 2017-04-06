@@ -1,6 +1,6 @@
 # Use extensions to define plug-in behaviors
 
-*Extensions* define the points of integration between your plug-in and the Stingray environment: that is, the things that your plug-in changes or adds to the editor and the engine when it's loaded.
+*Extensions* define the points of integration between your plug-in and the Stingray environment: that is, the things that your plug-in changes or adds to the editor when it's loaded.
 
 You can set up several different kinds of extensions in your *.stingray_plugin* descriptor file:
 
@@ -24,7 +24,7 @@ You can set up several different kinds of extensions in your *.stingray_plugin* 
 
 -	`viewports` help you integrate an engine viewport into your plug-in's views and panels, like the ones you see in the **Level Viewport** or the **Asset Preview**. See ~{ Create a custom engine viewport }~.
 
--	`runtime_libraries` make the engine automatically load *.dll* files that you provide with your plug-in. See ~{ Extend the Engine }~.
+-	`runtime_libraries` tell the editor to configure all instances of the engine that it launches to automatically load *.dll* files that you provide with your plug-in. See ~{ Extend the Engine }~.
 
 Every plug-in needs to have at least one of these extensions. There is no limit to the number of extensions that a plug-in can have.
 
