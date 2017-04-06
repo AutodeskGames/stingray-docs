@@ -93,7 +93,11 @@ script_data = {
 
 ### Toggle VR mode
 
-New functionality has been exposed from the GoogleVR API in the **GoogleVR** template.  You can now enter or exit VR mode at runtime using Lua. This supports hybrid applications that can run with or without VR.  Simply invoke the project’s Lua function, Project.shutdown(), to switch from VR stereo display to non-VR display, and then invoke Project.on_init_complete() to return to VR mode. 
+New functionality has been exposed from the GoogleVR API in the **GoogleVR** template.  You can now enter or exit VR mode at runtime using Lua. This supports hybrid applications that can run with or without VR.  Simply invoke the project’s Lua function, Project.shutdown(), to switch from VR stereo display to non-VR display, and then invoke Project.on_init_complete() to return to VR mode.
+
+### VR SLI support
+
+VR SLI improves performance for VR applications, and uses multiple GPUs to accelerate stereo rendering. To take advantage of this enhanced performance, manually add two new settings, `disable_implicit_sli` and `nv_vr_sli_enabled`,  to the settings.ini file when working in the VR templates. For more information, see ~{ Stingray engine settings.ini file reference }~.
 
 ## Stingray resource files
 
