@@ -1,7 +1,13 @@
 # Stingray 1.8 Release Notes
 <a name="top"></a>
 
-Welcome to the Stingray 1.8 (1.8.X.0) release.
+Welcome to the Stingray 1.8 (1.8.1267.0) release. 
+
+Stingray 1.8 includes a new non-interactive mode for the light baker, built-in support for splash screens in the appkit, and experimental support for the Hololens platform. Now that both WebAssembly and WebGL 2.0 are released, the workflow to run your project in a web browser has officially graduated out of experimental mode, and the process to deploy is smoother than ever. 
+
+In addition, you'll find some nice usability improvements in the Capture Frames tool, the Particle Editor, and the Asset Browser. An updated GoogleVR template lets you create hybrid apps that can run with or without VR. Plug-in developers will want to check out the new public stingray-plugin repo on GitHub which has everything you need to get started, including a great new tutorial.
+
+For details on these and more new features, refer to the [What's New](#whats-new) section below.
 
 Sections in this topic:
 
