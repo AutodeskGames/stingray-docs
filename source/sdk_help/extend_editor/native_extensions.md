@@ -14,7 +14,7 @@ Unlike other editor extensions, you don't have to add anything into your *.plugi
 
 -	You'll need the SDK header files. You can find them under `stingray_sdk` in the example repository, or under `plugin_sdk/editor_plugin_api` in your Stingray installation folder.
 
--	The [reference documentation](editor_c/index.html) contains a browsable companion to the APIs defined in the SDK header files.
+-	The [reference documentation](../../editor_c/index.html) contains a browsable companion to the APIs defined in the SDK header files.
 
 ## Editor and plug-in interactions
 
