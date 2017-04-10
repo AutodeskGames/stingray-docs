@@ -1,4 +1,4 @@
-# Get started with Web
+# Get started for the Web
 
 ![](../images/updated.png)
 
@@ -45,11 +45,11 @@ When you get the project successfully running in the browser, it looks something
 
 ## Step 3. Deploying the project to disk
 
-To deploy your project to disk (for packaging purposes), you'll use the **Deployer** panel on the **HTML5** icon tab. Set up the requested fields, and click **Package Project for Web**.
+To deploy your project to disk (to get it ready for hosting on a web server), you'll use the **Deployer** panel. Go to the tab with the **HTML5** icon, set up the requested fields, and click **Package Project for Web**.
 
-	![WebGL deployment](../images/web_deployer.png)
+![WebGL deployment](../images/web_deployer.png)
 
-	See also ~{ Using the Deployer panel }~.
+See also ~{ Using the Deployer panel }~.
 
 ## About the web project output
 
@@ -101,10 +101,12 @@ If your project doesn't run in the browser:
 
 - Here are some of the errors we've heard about, and how to fix them:
 
-	- **Error:** "Failed to create WebGL 2.0 context"
+	-	**Error:** "Failed to create WebGL 2.0 context"
+		
 		**Solution:** Generally this means either your web browser does not support WebGL 2.0, the feature is disabled in its configuration, your video card driver is out-of-date, or your device has more than one graphic adapter and the wrong one is being used by the web browser. In any case, you can always try other web sites to confirm whether WebGL 2.0 works on your computer.
 
-	- **Error:** "Out of memory"
+	-	**Error:** "Out of memory"
+		
 		**Solution:** Too much memory was requested by your project. This happens much more frequently with 32-bit browsers, try a 64-bit web browser instead. Also keep in mind reducing the memory footprint of your project by using texture compression and other techniques always helps as well.
 
 -	Have you run into a different problem? Let us know about it [on the forum](http://www.autodesk.com/stingray-forums).
