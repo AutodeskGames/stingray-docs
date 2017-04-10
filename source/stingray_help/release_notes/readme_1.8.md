@@ -1,9 +1,9 @@
 # Stingray 1.8 Release Notes
 <a name="top"></a>
 
-Welcome to the Stingray 1.8 (1.8.1267.0) release. 
+Welcome to the Stingray 1.8 (1.8.1267.0) release.
 
-Stingray 1.8 includes a new non-interactive mode for the light baker, built-in support for splash screens in the appkit, and experimental support for the Hololens platform. Now that both WebAssembly and WebGL 2.0 are released, the workflow to run your project in a web browser has officially graduated out of experimental mode, and the process to deploy is smoother than ever. 
+Stingray 1.8 includes a new non-interactive mode for the light baker, built-in support for splash screens in the appkit, and experimental support for the Hololens platform. Now that both WebAssembly and WebGL 2.0 are released, the workflow to run your project in a web browser has officially graduated out of experimental mode, and the process to deploy is smoother than ever.
 
 In addition, you'll find some nice usability improvements in the Capture Frames tool, the Particle Editor, and the Asset Browser. An updated GoogleVR template lets you create hybrid apps that can run with or without VR. Plug-in developers will want to check out the new public stingray-plugin repo on GitHub, which has everything you need to get started, including a great new tutorial.
 
@@ -33,7 +33,7 @@ Sections in this topic:
 
 ## Run projects in a web browser
 
-For early adopters of WebGL 2.0 or WebAssembly tech in Stingray, or those who have been waiting to try it out, we're happy to announce that the workflow for deploying your project to run in a web browser has graduated out of 'experimental' status.  Highlights of this new and improved workflow: 
+For early adopters of WebGL 2.0 or WebAssembly tech in Stingray, or those who have been waiting to try it out, we're happy to announce that the workflow for deploying your project to run in a web browser has graduated out of 'experimental' status.  Highlights of this new and improved workflow:
 
 - Since both WebAssembly and WebGL 2.0 are now released, it's no longer necessary to modify any web browser configuration or flags to run Stingray in a web browser. If you modified your browser configuration to run Stingray in a web browser, we suggest you revert these changes.
 
@@ -105,6 +105,14 @@ script_data = {
 
 ## What's New in VR?
 
+### Accessible Google VR settings
+
+![](../images/wn_vr_gear.png)
+
+When using a Google Cardboard or Google Daydream head-mounted display, touch the gear icon in the top right hand corner to quickly adjust your phone's VR settings.  New lua functions have also been added. 
+
+>**Note:** Currently, only Android devices are supported.
+
 ### Toggle VR mode
 
 New functionality has been exposed from the GoogleVR API in the **GoogleVR** template.  You can now enter or exit VR mode at runtime using Lua. This supports hybrid applications that can run with or without VR.  Simply invoke the project’s Lua function, Project.shutdown(), to switch from VR stereo display to non-VR display, and then invoke Project.on_init_complete() to return to VR mode.
@@ -162,7 +170,7 @@ This can be useful when you launch multiple instances of the engine from the **C
 
 - Motion Blur is now disabled in the default shading environment. (See ~{ Shading environment properties }~.) You can turn Motion Blur on if you want to create a slightly blurred effect when the camera is moving.
 
-- You can now press F1 to open the Stingray Help while using the Editor. 
+- You can now press F1 to open the Stingray Help while using the Editor.
 
 - The `SaveSystem` in Lua and the `SaveSystemCApi` in C can now save and load `IdString32` and `IdString64` objects. In Lua, you can also save and load `IdString32Box` and `IdString64Box` objects.
 
