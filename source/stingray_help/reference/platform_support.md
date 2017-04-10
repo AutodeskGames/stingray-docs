@@ -64,7 +64,7 @@ Devices running older versions may or may not work as expected.
 
 If you plan to run your project in a browser, Stingray requires WebAssembly and WebGL 2.0 (including OpenGL ES 3.0 and GLSL 3.00), which are currently supported by Google Chrome (Version 57) and Mozilla Firefox (Version 52). (Both of these browsers support WebAssembly 1.0 and WebGL 2.0 by default, with no extra configuration required.)
 
-See also ~{ Get started with web deployment }~.
+See also ~{ Get started for the Web }~.
 
 ## Platform libraries
 
