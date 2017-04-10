@@ -43,7 +43,7 @@ For early adopters of WebGL 2.0 or WebAssembly tech in Stingray, or those who ha
 
 - To support all of this, Stingray now requires a web browser that also supports WebAssembly, like Chrome version 57 or Firefox version 52.
 
-Check out ~{ Get started with Web }~ for updated information.
+Check out ~{ Get started for the Web }~ for updated information.
 
 ## Particle Editor updates
 
