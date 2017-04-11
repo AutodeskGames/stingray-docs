@@ -95,7 +95,8 @@
 		<contextId include="*\engine_command_line.html" id="engine_command_line"></contextId>
 
 		<meta name="product-feature" content="Basics" include="*\getting_started*" allow_multiple="true"></meta>
-		<meta name="product-feature" content="Content Management" include="*\importing_assets*,*\managing_content*,*\after_release*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Import" include="*\importing_assets*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Content Management" include="*\managing_content*,*\after_release*" allow_multiple="true"></meta>
 		<meta name="product-feature" content="Level Design" include="*\building_levels*,*\creating_effects*" allow_multiple="true"></meta>
 		<meta name="product-feature" content="Lighting" include="*\lighting_rendering.html,*\lighting_rendering\lighting*,*\lighting_rendering\shading_environment*" allow_multiple="true"></meta>
 		<meta name="product-feature" content="Materials" include="*\lighting_rendering.html,*\lighting_rendering\shading_and_materials*,*\shaders_ref*" allow_multiple="true"></meta>
