@@ -74,6 +74,8 @@ You can now define the capture range in your story using the Capture Frames Tool
 
 Check out the revamped **Texture Manager** with improved texture loading and filtering.
 
+![](../images/wn_texture_manager.png)
+
 -	~{ Create a texture template }~
 -	~{ Create a texture category }~
 
@@ -109,7 +111,7 @@ script_data = {
 
 ![](../images/wn_vr_gear.png)
 
-When using a Google Cardboard or Google Daydream head-mounted display, touch the gear icon in the top right hand corner to quickly adjust your phone's VR settings.  New lua functions have also been added. 
+When using a Google Cardboard or Google Daydream head-mounted display, touch the gear icon in the top right hand corner to quickly adjust your phone's VR settings.  New lua functions have also been added.
 
 >**Note:** Currently, only Android devices are supported.
 
