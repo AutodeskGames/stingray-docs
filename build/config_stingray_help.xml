@@ -94,6 +94,22 @@
 		<contextId include="*\loading_unloading.html" id="loading_unloading"></contextId>
 		<contextId include="*\engine_command_line.html" id="engine_command_line"></contextId>
 
+		<meta name="product-feature" content="Basics" include="*\getting_started*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Content Management" include="*\importing_assets*,*\managing_content*,*\after_release*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Level Design" include="*\building_levels*,*\creating_effects*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Lighting" include="*\lighting_rendering.html,*\lighting_rendering\lighting*,*\lighting_rendering\shading_environment*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Materials" include="*\lighting_rendering.html,*\lighting_rendering\shading_and_materials*,*\shaders_ref*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Create Interactions" include="*\creating_gameplay*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Lua" include="*\lua_ref*,*\creating_gameplay\scripting_with_lua*,*\lua_vs_flow*,*\lua_flow_communication*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Flow" include="*\flow_ref*,*\creating_gameplay\visual-prog_with_flow*,*\lua_vs_flow*,*\lua_flow_communication*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Animation" include="*\animation*,*\cinematics*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="User Interfaces" include="*\creating_uis*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Audio" include="*\working_with_audio*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Entities" include="*\using_entities*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Interoperability" include="*\importing_assets*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Build and Test" include="*\playtesting*,*\deploying*,*\console_commands*" allow_multiple="true"></meta>
+		<meta name="product-feature" content="Plug-ins" include="*\plugins*" allow_multiple="true"></meta>
+
 		<replace pattern="BEGIN_STANDALONE.*END_STANDALONE" replacement="" include="*.html"></replace>
 		<insert_family_links include="\stingray_help\*,\changelog\*"></insert_family_links>
 		<validate_todos>true</validate_todos>

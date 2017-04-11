@@ -47,6 +47,7 @@
 		<meta name="indexterm" content="plug-in" include="*"></meta>
 		<meta name="topic-type" content="concept" include="*\sdk_help\*"></meta>
 		<meta name="topic-type" content="reference" include="*\editor_js\*,*\editor_c\*,*\engine_c\*"></meta>
+		<meta name="product-feature" content="Plug-ins" include="*"></meta>
 		<insert_family_links include="\sdk_help\*"></insert_family_links>
 		<!-- find and replace variables with version numbers -->
 		<replace variable_file="variables.ini" include="*.html"></replace>
