@@ -225,7 +225,7 @@ These were late-breaking issues that affected Stingray 1.7 as known limitations.
 - GAME-19158 ADP dialog gets behind the Editor at launch
 - GAME-20631 Capture Frames should prompt to save before closing
 - GAME-20469 Story Editor: 'a' to Frame All provides a right margin but is missing the corresponding left margin (so keys may not be properly seen)
-- GAME-16434 Story Editor: Error when changing from playing Story to "<none>"
+- GAME-16434 Story Editor: Error when changing from playing Story to "\<none\>"
 - GAME-21323 Property Editor: Capture Frames settings can get out of sync with Story Editor
 - GAME-21044 Property Editor: Stingray crash with many units selected (20,000)
 - GAME-22060 Asset Preview: Unhandled exception when collapsing the Viewport options with wrong input
