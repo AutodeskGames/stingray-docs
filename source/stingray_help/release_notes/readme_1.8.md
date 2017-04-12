@@ -223,7 +223,6 @@ These were late-breaking issues that affected Stingray 1.7 as known limitations.
 - GAME-22178 Unhandled exception when prompted to save an untitled script file
 - GAME-21770 Script Editor: Missing message when attempting to save a script file outside the project folder
 - GAME-19158 ADP dialog gets behind the Editor at launch
-- GAME-21615 Capture Frames Tool: Missing first frames from Story
 - GAME-20631 Capture Frames should prompt to save before closing
 - GAME-20469 Story Editor: 'a' to Frame All provides a right margin but is missing the corresponding left margin (so keys may not be properly seen)
 - GAME-16434 Story Editor: Error when changing from playing Story to "<none>"
