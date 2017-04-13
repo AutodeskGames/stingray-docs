@@ -27,7 +27,7 @@ These options specify which Navigation database the generated NavMesh will belon
 <dd>Name of the database which must be unique.</dd>
 
 <dt>Database ID</dt>
-<dd>ID of the database which must be unique and into [0, database_count-1] where database_count is the value passed to `stingray.GwNavWorld.create(transform, database_count)`.</dd>
+<dd>ID of the database which must be unique and in the range [0, database_count-1] where database_count is the value passed to `stingray.GwNavWorld.create(transform, database_count)`.</dd>
 
 </dl>
 
