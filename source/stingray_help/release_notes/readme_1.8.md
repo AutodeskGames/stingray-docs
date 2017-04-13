@@ -422,6 +422,12 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 	**Workaround:** Modify your project's *settings.ini* file to use the default renderer, and generate the cubemaps. Close the project, switch back to mini_renderer in *settings.ini* and then re-open the project.
 
+-	**GAME-22597 Newly spawned shading environment entity does not work**
+
+	No changes take place when you destroy a shading environment entity and respawn a new entity. After you spawn a new shading environment entity, switching between background levels in the Particle Editor viewport or switching shading environments in the game will not work properly.
+
+	**Workaround:** None.
+
 [Return to top](#top)
 
 ## Upgrade Requirements
