@@ -416,6 +416,10 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 	**Workaround:** None.
 
+- **GAME-20689 Remote sync from Wwise editor can't connect to Stingray on Android**
+
+	When you try to connect to an instance of the Stingray engine running on an Android device using the **Remote** sync feature in the Wwise Editor, the connection to the device fails. In some cases, the engine on the device crashes. There is currently no workaround for this issue.
+
 -	**GAME-22069 Baked reflection probes don't function properly when using the mini-renderer**
 
 	Reflection probe cubemaps are not generated properly when using the mini-renderer, and the reflections look faded in VR template projects.
