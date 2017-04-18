@@ -16,7 +16,7 @@ Unlike other editor extensions, you don't have to add anything into your *.sting
 
 -	You'll need the SDK header files. You can find them under `stingray_sdk` in the example repository, or under `plugin_sdk/editor_plugin_api` in your Stingray installation folder. (If you use the [stingray-plugin repository](https://github.com/AutodeskGames/stingray-plugin) repo, it'll fetch these headers for you automatically so you won't have to worry about it.)
 
--	The [reference documentation](editor_c/index.html) contains a browsable companion to the APIs defined in the SDK header files.
+-	The [reference documentation](../../editor_c/index.html) contains a browsable companion to the APIs defined in the SDK header files.
 
 ## Editor and plug-in interactions
 
