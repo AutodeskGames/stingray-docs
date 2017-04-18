@@ -1,7 +1,5 @@
 # Create a tessellation material
 
-[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html)
-
 Tessellation adds more triangles to your mesh. Adding tessellation to your material can create a more realistic effect on your mesh.
 
 1. Do the following to create a new empty material for customization:
@@ -11,11 +9,13 @@ Tessellation adds more triangles to your mesh. Adding tessellation to your mater
     This creates a new material that contains only one **Output > Standard Base** node by default.
     - In the **Property Editor**, click ![Open Shader Graph](../../images/button_openShaderGraph.png).
 2. In the Shader Graph Editor, select the **Standard Base** node.
-3. In the **Property Editor**, enable **Hardware Tessellation**.
+3. In the **Property Editor**, set **Hardware Tessellation** to **Constant**.
 
 	 ![](../../images/enable_hard_tess.png)
 
-4. In the **Shader Graph Editor**, plug in values to the tessellation specific inputs. See ~{ Create or edit shader graphs }~.
+4. In the **Shader Graph Editor**, plug in values to the tessellation specific inputs. See ~{ Create or edit shader graphs }~. The following example, shows a typical setup in the **Shader Graph Editor**:
+
+  	![](../../images/tess_example.png)
 
 	>**Tip:** You must use the **Domain Sample Texture** sampler node instead of the **Sample Texture** sampler node to drive the tessellation inputs. For more information on these nodes, see the **Sampling** category in the [Stingray Shader Node Reference](../../../shaders_ref/index.html).
 

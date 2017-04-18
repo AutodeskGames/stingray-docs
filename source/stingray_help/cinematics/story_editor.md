@@ -1,7 +1,5 @@
 #Story Editor
 
-![UPDATED](../images/updated.png)
-
 - **Window > Story Editor**
 
 The **Story Editor** is a tool for creating simple animation on objects/units and entities within a level. You can add units and entities to Story and animate their transforms and other parameters using keyframe animation. (You cannot use animation clips in Story.) See also ~{ Create simple animations with the Story Editor }~.
@@ -48,13 +46,11 @@ The **Story Editor** toolbar includes the following:
 | **Key & Tangent options** ![](../images/comp_storyEd_keyOptions.png) | Use the key and tangent options to add or remove keyframes and tangent modes. |
 | **Story Selection mask** ![](../images/icon_storyEd_selOnlyStory.png) | Masks selection so that you can select only objects in the current story.|
 | **Onion skinning** ![](../images/icon_storyEd_onionskin.png) | Toggles the display of ghosting on selected units. Right-click to specify whether to ghost **Everything**, or only **Selected units**. To access additional **Onion Skinning Settings** (including color) in the **Properties** panel, select a `StoryRoot` in the **Story Editor** tree view, or in the main **Explorer** panel. |
-| [![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html)  **Capture Frames Tool** | Opens the ~{ Capture Frames Tool }~. See also ~{ Capture frames to disk }~. |
+| **Capture Frames Tool** | Opens the ~{ Capture Frames Tool }~. See also ~{ Capture frames to disk }~. |
 | **Curve editor/Key editor** ![](../images/icon_storyEd_wrench.png) | Use the curve icon in the toolbar to switch between the different editing views in this area. <br>Curve editing mode: ![](../images/storyEd_curvePanel.png) <br> **Tip:** Select keys on the same curve and enter a value in the edit key field on the toolbar to edit multiple keys at once. <br> Key editing mode: ![](../images/storyEd_keysPanel.png) |
 
 **Controlling story playback**
 <a name="playback"></a>
-
-![UPDATED](../images/updated.png)
 
 The Story Editor offers the following playback modes, which control what happens when the story reaches the end of its playback range.
 

@@ -66,8 +66,6 @@ When working with assets, you often need to replicate assets like materials and 
 
 ## Accessing online assets
 
-[![NEW](../../images/new.png "What else is new in v1.7?")](../../release_notes/readme_1.7.html)
-
 ![](../../images/online_assets.png)
 
 Use the **Online Assets** tab in the Tree view to browse, search and find online assets.To download and import an asset to use in your project, do any of the following:
@@ -76,6 +74,12 @@ Use the **Online Assets** tab in the Tree view to browse, search and find online
   - Select an asset and click the **Download** button in the **Property Editor**.
 
 Click the yellow icon ![](../../images/icon_status_bar_cancel_progress.png) to cancel downloading of the asset. The online assets are not listed in the Asset Browser if the Online Assets server is disconnected from the cloud services.
+
+[![NEW](../../images/new.png "What else is new in v1.8?")](../../release_notes/readme_1.8.html)
+
+Use the Search field to search for an online asset. The number of matching assets are listed next to the Online Assets tab.
+
+  >**Tip**: To view or locate a downloaded asset in your project, select an installed asset (indicated with a green checkmark) and either click ![](../../images/icon_asset_browser_locate.png) or right-click and select **Locate in Project**.
 
 ---
 Related topics:

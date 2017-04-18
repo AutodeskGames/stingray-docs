@@ -45,7 +45,7 @@ extensions = {
 
 `icon`
 
->	If specified, the **Asset Browser** uses this image as the thumbnail for all instances of this resource type in the project. The path must be relative to the location of your *.plugin* file. Optional.
+>	If specified, the **Asset Browser** uses this image as the thumbnail for all instances of this resource type in the project. The path must be relative to the location of your *.stingray_plugin* file. Optional.
 
 `invoke`
 

@@ -16,7 +16,16 @@ The following **Capture Settings** can be adjusted to control your output. See ~
 <dl>
 
 <dt>Camera</dt>
-<dd>[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Lets you select the camera to capture. </dd>
+<dd>Lets you select the camera to capture. </dd>
+
+<dt>Capture Range</dt>
+[![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)
+<dd>Lets you set a custom range for the camera to capture. Instead of recapturing your entire story after making a change to your animation, specify a **Capture Range**, and then quickly recapture only those details that need updating. You can select **Custom Range - Seconds** or **Custom Range - Frames**. To capture the entire story, select **Use Story Timeline**.
+
+When setting a range, it is important to remember that your story starts at frame 0. The naming convention for the output EXR files is the same whether you are capturing in frames or seconds. For example, if you want to recapture from frame 3 to frame 8 of your story, File Name_3.exr to File Name_8.exr are output to the selected **Output Directory**, overwriting the existing files.
+
+You can also capture negative frames, which use following naming convention; *<File Name>_-1.exr*, *<File Name>_-2.exr*, etc.; and are output as still frames.
+</dd>
 
 </dl>
 
@@ -24,7 +33,7 @@ The following **Capture Settings** can be adjusted to control your output. See ~
 <dl>
 
 <dt>Settings File</dt>
-<dd>[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Lets you create a new settings file or open an existing file.</dd>
+<dd>Lets you create a new settings file or open an existing file.</dd>
 
 <dt>Output Directory</dt>
 <dd>The directory where your output is saved.</dd>
@@ -45,4 +54,4 @@ The following **Capture Settings** can be adjusted to control your output. See ~
 <dd>The frame rate that is used to simulate the game or editor playback while capturing.</dd>
 
 <dt>Resolution</dt>
-<dd>[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Lets you set a resolution for your capture. Select 1920 x 1080 (default), 1280 x 780, or enter a custom resolution.</dd>
+<dd>Lets you set a resolution for your capture. Select 1920 x 1080 (default), 1280 x 780, or enter a custom resolution.</dd>

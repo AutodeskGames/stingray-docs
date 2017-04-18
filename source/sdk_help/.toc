@@ -3,6 +3,7 @@ overview
 extensibility_options
 plugin_examples
 define_a_plugin
+plugin_extensions
 extend_editor
 extend_content
 extend_engine

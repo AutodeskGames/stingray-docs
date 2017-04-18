@@ -8,6 +8,8 @@
 
 	The objects are selected in the **Layers** view and the **Level Viewport**.
 
+	>**Tip:** Double-click a layer in the **Explorer** to focus and frame the objects in the **Viewport**.
+
 **To hide or freeze objects in a layer**
 
 

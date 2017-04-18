@@ -2,7 +2,7 @@
 
 When you select a Particle Effect in the **Particle Editor**, the following properties display.
 
-[![NEW](../images/new.png "What else is new in v1.7?")](../release_notes/readme_1.7.html) Click Respawn ![](../images/icon_particle_respawn.png) at any time to view the effect of your changes as you edit the properties of the particle effect system.
+ Click Respawn ![](../images/icon_particle_respawn.png) at any time to view the effect of your changes as you edit the properties of the particle effect system.
 
 ##System properties:
 <dl>
@@ -35,11 +35,11 @@ Set the rate Min/Max values, and use the small graph denoting rate over (particl
 
 ![](../images/billboard_visualizer.png)
 
-By default, the billboard uses core/stingray_renderer/shaders/particle_default.
+By default, the billboard uses `<particle_effect_name>_default.material` that gets created for the effect. (This is a child material of core/stingray_renderer/shaders/particle_default.)
 
 Click the Goto Resource icon, then click **Open Shader Graph** to edit the shader graph.
 
-Refer to the [Stingray Shader Node Reference](../../shaders_ref/index.html) for details on the new nodes added to support the physically based materials for particles, including **Output > Particle Base**, **Particles > Billboard Position**, **Particles > Billboard Rotation**, and **Particles > Billboard Size**.
+Refer to the [Stingray Shader Node Reference](../../shaders_ref/index.html) for details on the nodes added to support the physically based materials for particles, including **Output > Particle Base**, **Particles > Billboard Position**, **Particles > Billboard Rotation**, and **Particles > Billboard Size**.
 </dd>
 
 </dl>
@@ -103,11 +103,8 @@ Right-click a particle system in the **Property Editor** to add the following co
 ### Acceleration
 - Gravity
 - Vector Field Wind
-- Wind (deprecated)
 
 ### Collision
-- Grid Sampled (deprecated)
-- Plane (deprecated)
 - Query
 - Result
 
@@ -132,13 +129,6 @@ Right-click a particle system in the **Property Editor** to add the following co
 
 - Shadow Caster
 
-> **Note:** The following components previously available under the Material category are now deprecated, and listed under the (deprecated) category.
-
-> - Billboard Material (use Visualizer > Billboard)
-> - Pivot
-> - UV Animation
-> - UV Tile
-
 ### Position Control
 - Ray
 - Spiral
@@ -152,9 +142,9 @@ Right-click a particle system in the **Property Editor** to add the following co
 - Warp Box
 
 ### Rotation
-- By Velocity
 - Align Direction Box
 - Align to Velocity
+- By Velocity
 - Face Velocity
 - Facing Direction Box
 - Random
@@ -165,7 +155,7 @@ Right-click a particle system in the **Property Editor** to add the following co
 - Size by Variable
 
 ### Sort
-- Billboards
+- Billboard
 
 ### Spawn
 - Trail

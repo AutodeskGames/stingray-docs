@@ -102,7 +102,7 @@ The Pool room example to shows off the physically-based rendering capabilities o
 
 ## Updated DCC interop plug-ins
 
-Updated the Stingray DCC Link plug-in to support Maya 2016 Extension 2, Maya LT 2016 Extension 3, and 3ds Max 2017. For information on installing the plug-ins, see ~{ Setup the DCC tool plug-in }~.
+Updated the Stingray DCC Link plug-in to support Maya 2016 Extension 2, Maya LT 2016 Extension 3, and 3ds Max 2017. See ~{ Interop with Maya, Maya LT, or 3ds Max }~.
 
 ## New FBX Import options
 

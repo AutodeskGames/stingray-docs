@@ -6,7 +6,7 @@ This lets you produce a high-quality version of a model for up close and a low-q
 
 At any given time, the LOD group makes it easy to display the appropriate version of the geometry (one child of the level of detail group), depending on the group's percentage of screen height.
 
-> ![](../images/icon_video.png) You can find a video tutorial on setting up LODs in Stingray <a href="http://area.autodesk.com/learning/setting-up-levels-of-detail" target="_blank">here.</a>
+> ![](../images/icon_video.png) You can find a video tutorial on setting up LODs in Stingray [here](http://area.autodesk.com/learning/setting-up-levels-of-detail).
 
 ---
 Related topics:

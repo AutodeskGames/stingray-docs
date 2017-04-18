@@ -4,7 +4,7 @@ You can use the `views` extension to define a named view for your plug-in. This 
 
 ## Configuration
 
-Each `views` extension accepts the following settings in the *.plugin* file:
+Each `views` extension accepts the following settings in the *.stingray_plugin* file:
 
 ~~~{sjson}
 views = [
@@ -33,7 +33,7 @@ views = [
 
 `path`
 
->	The path and filename of an HTML file that the editor will load into the view. This path must be set relative to the location of your *.plugin* file. **Required**.
+>	The path and filename of an HTML file that the editor will load into the view. This path must be set relative to the location of your *.stingray_plugin* file. **Required**.
 
 `title`
 
@@ -57,7 +57,7 @@ Most of the tools available under the **General** category in the Stingray **Win
 
 ## Opening the view from a global action
 
-The *stingray-editor.plugin* file sets up a global action named `open-view`. You can use this action in your plug-in to pop open a named view from anywhere that you can run an action.
+The *stingray-editor.stingray_plugin* file sets up a global action named `open-view`. You can use this action in your plug-in to pop open a named view from anywhere that you can run an action.
 
 For example, the following contextual action extension adds a "Show Dependencies" menu item to the contextual menu any time the user right-clicks any asset, and that menu item results in the editor opening the view named `dependency`:
 

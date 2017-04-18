@@ -1,12 +1,13 @@
 # Starting Lua from a template: Using the Appkit
 
-Stingray includes a set of helpful Lua scripts in the `core` resources. These scripts, called the **Appkit**, provide a basic structure or harness for a typical 3D game.
+Stingray includes a set of helpful Lua scripts in the `core` resources. These scripts, called the **Appkit**, provide a basic structure or harness for a typical 3D interactive project.
 
-The Appkit includes several basic services that are common to most kinds of games, including:
+The Appkit includes several basic services that are common to most kinds of projects, including:
 
 -	Window management for platforms that use windows
 -	World management: updating, rendering, and so on.
 -	Level management: loading and unloading, applying lightmaps and shading environments, updating loaded Scaleform Studio projects at each frame, triggering Flow events.
+-	Showing an initial splash screen while the rest of the project content loads up in the background.
 -	Managing cameras, and integrating the location of the current camera with the Wwise audio, scatter and terrain systems.
 -	Getting input from various types of platform-specific input controllers and unifying that input into higher-level constructs.
 -	A modular component system that lets you assign managed components to other Lua objects, and which you can extend by defining your own kinds of managed components.

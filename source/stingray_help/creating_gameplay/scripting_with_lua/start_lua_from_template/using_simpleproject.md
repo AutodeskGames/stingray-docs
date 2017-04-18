@@ -15,7 +15,7 @@ SimpleProject.config.standalone_init_level_name = "content/levels/splash_screen"
 SimpleProject.config.create_free_cam_player = false
 ~~~
 
-The configuration values you can set are:
+The general configuration values you can set are:
 
 | Variable name | Description |
 | ------------- | ----------- |
@@ -24,9 +24,20 @@ The configuration values you can set are:
 | `camera_index` | The index of the camera that the SimpleProject will retrieve from the unit it creates for player-controlled cameras. You should not need to change this value. |
 | `shading_environment` | The resource name of a shading environment that the SimpleProject will use. If you set this value, it will override any shading environments set for your levels in the Stingray Editor.  |
 | `create_free_cam_player` | Determines whether or not the SimpleProject automatically creates a player-controlled camera in each level it creates. |
+| `free_cam_tracks_listener` | Determines whether or not the Appkit's free cam is set as a listener for audio events. |
 | `exit_standalone_with_esc_key` | Determines whether or not the game will quit when the player presses the `Esc` key. Used only when the game is not being tested through the Stingray Editor's Test Level feature. |
 | `stop_world_sounds_on_level_change` | Determines whether or not any sounds playing in the current level will be stopped when you request the SimpleProject to change levels. |
 | `dont_capture_mouse_at_startup` | When set to `true`, the player will be free to move the mouse cursor outside the bounds of the game's window. |
+| `viewport` | Sets the name of the viewport created by the Appkit. Optional, if omitted, the default value is `default`. |
+
+Loading screen configuration parameters (see also ~{ Work with the Appkit loading screen }~):
+
+| Variable name | Description |
+| ------------- | ----------- |
+| `loading_screen_materials` | A list of material resources that the loading screen will show in order when the project first loads. |
+| `loading_screen_start_package` | The name of the *.package* resource that contains the materials listed under `loading_screen_materials`. The loading screen will automatically load this bundle of resources into memory when the project first loads. |
+| `loading_screen_end_package` | The name of a *.package* resource that will be loaded into memory in the background while the loading screen materials are visible. After this package is fully loaded, the loading screen will permit the user to move on to the first level in the project. |
+| `loading_screen_shading_env` | The name of a *.shading_environment* resource that defines the shading environment parameters for the loading screen's level. **Note:** this resource must be loaded in your *boot* package. |
 
 For default values, see the `core/appkit/simple_project.lua` code.
 

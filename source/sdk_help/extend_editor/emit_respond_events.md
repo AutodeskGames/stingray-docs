@@ -8,7 +8,7 @@ You can connect your plug-in to this event framework by listening for events tha
 
 You can make your plug-in listen for and respond to events by:
 
--	configuring an `event` extension in your *.plugin* file to carry out an action or a set of actions when the event occurs. See ~{ Respond to an editor event }~.
+-	configuring an `event` extension in your *.stingray_plugin* file to carry out an action or a set of actions when the event occurs. See ~{ Respond to an editor event }~.
 
 -	calling the `on()` function exposed by the *event-service* module to register a JavaScript function that the editor will automatically call when the event occurs. For example:
 

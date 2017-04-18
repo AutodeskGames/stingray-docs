@@ -11,5 +11,4 @@ With **Live Camera Tracking** enabled, the viewport in one linked application st
 ---
 Related topics:
 - ~{ Send assets to a DCC tool }~
-- ~{ Setup the DCC tool plug-in }~
 ---
