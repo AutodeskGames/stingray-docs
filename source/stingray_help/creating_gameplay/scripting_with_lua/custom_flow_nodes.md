@@ -39,6 +39,12 @@ end
 
 For a Flow node definition that would invoke this function and handle its output float value, see [the query example below][query].
 
+### Getting the Flow execution context
+
+When you write your Lua function, you might find that you need some information about the context the Flow node is currently operating in. For example, if the Flow node is intended for use in Unit Flow, you might need to know the identity of the unit whose Flow graph is currently being evaluated.
+
+You can get this information from the Lua `Application` by calling `stingray.Application.flow_callback_context_world()`, `stingray.Application.flow_callback_context_unit()`, `stingray.Application.flow_callback_context_level()`, and `stingray.Application.flow_callback_context_entity()`.
+
 ## Defining Lua Flow nodes
 
 You must define your custom Flow nodes in data files with the *.script_flow_nodes* extension. These data files may exist anywhere in your project's resources directory, and you can load them in and out of memory when needed along with the other data files in your project.

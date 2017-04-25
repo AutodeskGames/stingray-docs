@@ -31,7 +31,7 @@ extensions = {
 
 `module`
 
->	A JavaScript module that contains the API functions listed by the `api` key. The path is relative to the location of your *.plugin* file.
+>	A JavaScript module that contains the API functions listed by the `api` key. The path is relative to the location of your *.stingray_plugin* file.
 
 `api`
 
@@ -47,16 +47,19 @@ Note that the names of the functions that are exposed on the module below match 
 define([], function () {
     "use strict";
 
-    var exports = {
-        get_greeting: function () {
+    function MyService() {
+
+        this.get_greeting = function () {
             return "Hello world!";
-        },
-		alert_message: function (message) {
+        };
+
+		this.alert_message = function (message) {
             alert(message);
-        }
+        };
+
     };
 
-    return exports;
+    return new MyService();
 });
 ~~~
 

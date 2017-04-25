@@ -1,4 +1,5 @@
 appkit_structure
 using_simpleproject
+loading_screen
 using_appkit
 appkit_components

@@ -1,14 +1,14 @@
 # Define a Stingray Plug-in
 
-Every Stingray plug-in is defined in a data file with the *.plugin* resource type. When you start work on a new plug-in, you have to create one of these files by hand.
+Every Stingray plug-in is defined in a data file with the *.stingray_plugin* resource type. When you start work on a new plug-in, you have to create one of these files by hand.
 
-This page describes the format of the *.plugin* file, and all of the configuration settings you can use.
+This page describes the format of the *.stingray_plugin* file, and all of the configuration settings you can use.
 
->	**NOTE:** At the moment, engine-only plug-ins do not require a *.plugin* file. All that's needed to get an engine-only plug-in to run is to drop its *.dll* file into the engine's plugin folder. However, in future the *.plugin* file will be used for engine plug-ins too, so we recommend always creating one.
+>	**NOTE:** At the moment, engine-only plug-ins do not require a *.stingray_plugin* file. All that's needed to get an engine-only plug-in to run is to drop its *.dll* file into the engine's plugin folder. However, in future the *.stingray_plugin* file will be used for engine plug-ins too, so we recommend always creating one.
 
-## Sample *.plugin* file
+## Sample *.stingray_plugin* file
 
-The following code block provides a minimal working plug-in definition that you can use as a model to get started developing your own plug-ins. Copy and paste this information into a new text file with the *.plugin* extension, and make it visible to the editor's **Plugin Manager**. For more on using the **Plugin Manager**, see [here](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_plugins_add_remove_plugins_html).
+The following code block provides a minimal working plug-in definition that you can use as a model to get started developing your own plug-ins. Copy and paste this information into a new text file with the *.stingray_plugin* extension, and make it visible to the editor's **Plugin Manager**. For more on using the **Plugin Manager**, see [here](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_plugins_add_remove_plugins_html).
 
 If you're familiar with the [`package.json` format](https://docs.npmjs.com/files/package.json) used by [node.js](https://nodejs.org/en/), many of these fields will be familiar to you already.
 
@@ -61,7 +61,7 @@ dependencies = {
 }
 ~~~
 
-As an alternative, you could copy the *.plugin* file from any of the built-in Stingray plug-ins, or from any of the sample plug-ins, for your starting point. Just make sure you change all the configuration values -- especially the unique `name`.
+As an alternative, you could copy the *.stingray_plugin* file from any of the built-in Stingray plug-ins, or from any of the sample plug-ins, for your starting point. Just make sure you change all the configuration values -- especially the unique `name`.
 
 ## Required metadata
 
@@ -109,15 +109,23 @@ The following parameters are all optional. They are used only for display purpos
 
 `thumbnail`
 
->	Specifies an image file for the editor's **Plugin Manager** to display for your plug-in. The path should be relative to the location of your *.plugin* file. Optional; the default is to use a file called `thumbnail.png` if it is present.
+>	Specifies an image file for the editor's **Plugin Manager** to display for your plug-in. The path should be relative to the location of your *.stingray_plugin* file. Optional; the default is to use a file called `thumbnail.png` if it is present.
+
+`keywords`
+
+>	An array of strings that describe what your plug-in does. The editor uses these to filter different kinds of assets that it finds online:
+>
+>	-	`plugin` identifies a plug-in that shows up in the *Get More Plugins* list of the **Plugin Manager**.
+>	-	`project-example` identifies a sample project that shows up in the **Online Projects** tab of the **Project Manager**.
+>	-	`project-template` identifies an online template project that shows up in the **Templates** tab of the **Project Manager**.
+>	-	`asset-package` identifies an asset or a set of assets that shows up in the *Online Assets* folder of the **Asset Browser**.
+>
+
+>	**NOTE:** These keywords are currently useful only for packages shared by Autodesk through [the Gamedev portal](https://gamedev.autodesk.com/stingray/plugins). Customers can't yet share packages through this repository, but we still recommend setting the appropriate keywords now. That way your plug-ins will be ready to upload when you do get access.
 
 ## Optional descriptive metadata for future use
 
 The following parameters are all optional. They are intended for future use, but we do recommend including them now even if they have no immediate use.
-
-`keywords`
-
->	An array of strings that describe what your plug-in does. These may be used in future to help people find your plug-in.
 
 `license`
 
@@ -147,9 +155,7 @@ The following parameters are all optional. They are intended for future use, but
 
 Extensions define what your plug-in adds to the Stingray system. Every plug-in needs at least one extension in order for the editor to load it successfully.
 
--	If your plug-in needs to add new content that should be available to all projects, you'll configure one or more `resources` extension. For details, see ~{ Extend the project content }~.
-
--	The other extensions that you can configure in this file set up the points of integration between your plug-in and the Stingray editor. For more information on how these extensions work and what extensions you can use in your plug-in, see ~{ Use extensions to define plug-in behaviors }~.
+For more information on how these extensions work and what extensions you can use in your plug-in, see ~{ Use extensions to define plug-in behaviors }~.
 
 ## Dependencies
 
@@ -169,4 +175,4 @@ You can use the `platforms` and `dependencies` properties to identify exactly wh
 >
 >	For example, `"stingray" >= "1.5"` means that the base Stingray app must be at least version 1.5 in order to successfully load the plug-in.
 >
->	In future, if your plug-in makes use of a new feature introduced by the `script-editor` plug-in in version 1.8 of Stingray, you might also add `"Script Editor" >= "1.8.0"`. Note that for plug-in dependencies, the version number will be the version of the *plug-in* as listed in that plug-in's *.plugin* descriptor file, not the version of Stingray that contains the version of the plug-in you want to match.
+>	In future, if your plug-in makes use of a new feature introduced by the `script-editor` plug-in in version 1.8 of Stingray, you might also add `"Script Editor" >= "1.8.0"`. Note that for plug-in dependencies, the version number will be the version of the *plug-in* as listed in that plug-in's *.stingray_plugin* descriptor file, not the version of Stingray that contains the version of the plug-in you want to match.

@@ -1,0 +1,2 @@
+plugin_apis
+about_resource_ids

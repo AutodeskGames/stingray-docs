@@ -35,9 +35,7 @@ In addition to linking individual assets, you can now link and export entire sce
 
 The new experimental mode in Stingray offers developers a chance to try development for a new platform, WebGL2. With the experimental mode enabled, you can deploy Stingray projects to run in the nightly developer beta builds of certain web browsers. This is a great way for forward-looking developers to test their projects on a new target platform in advance of those platforms being consumer-ready.
 
-> **Note:** This functionality requires the use of specific developer builds of certain web browsers in conjunction with an experimental mode in Stingray. The functionality is designed for early testing of projects in WebGL2.
-
-See ~{ About Experimental Features }~ and ~{ Run your project in a browser using WebGL }~.
+> **Note:** We've made several updates to this feature since Stingray 1.4 was released. See ~{ Get started for the Web }~ for updated information.
 
 ## VR support
 
@@ -130,7 +128,7 @@ When you bake lightmaps with the Stingray baker, you can now adjust:
 
 ## Updated DCC interop plug-ins
 
-This release includes an updated Stingray DCC Link plug-in to support Maya 2017 and Maya LT 2017, as well as the plug-in for 3ds Max 2017. For information on installing the plug-ins, see ~{ Setup the DCC tool plug-in }~.
+This release includes an updated Stingray DCC Link plug-in to support Maya 2017 and Maya LT 2017, as well as the plug-in for 3ds Max 2017. For information on the plug-ins, see ~{ Interop with Maya, Maya LT, or 3ds Max }~.
 
 ## Easier Wwise engine configuration
 

@@ -82,7 +82,7 @@ extensions = {
 
 `path`
 
->	The path to the *.stingray_project* file for your template project, relative to the *.plugin* file. Required.
+>	The path to the *.stingray_project* file for your template project, relative to the *.stingray_plugin* file. Required.
 
 ---
 Tags:

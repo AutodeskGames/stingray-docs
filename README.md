@@ -95,6 +95,12 @@ You can put other kinds of metadata in the YAML block too. Currently our build h
 
 -	`Tags:` A list of keywords that the search indexer should point to this page, even if those terms don't appear in the page content. This is best used not for boosting the search rank for things that already appear in the page, but rather for adding synonyms or other words that people might use to search for the content on a page.
 
+-	`Features:` A list of product features that apply to this topic. Every topic automatically gets tagged with certain features based on where it is in the hierarchy -- for example, everything under **Building Levels** gets tagged with the `Level Design` feature. If you want to add more tags for a specific topic, you can add them in this list. We can only use values predefined by the front-end AKN system:
+
+	Ones we're using in Stingray already: `Level Design`, `Materials`, `Lighting`, `Create Interactions`, `Animation`, `User Interfaces`, `Audio`, `Content Management`, `Entities`, `Build and Test`, `Plug-ins`, `Flow`, `Lua`, `Basics`, `Interoperability`, `Import`
+
+	Ones from other products that we could also use: `APIs`, `Collaborate`, `Layouts`, `LOD`, `Manage Data`, `Mesh`, `Model`, `Output Formats`, `Properties`, `Simulate`, `Units`, `Upload File`, `Views and Viewports`, `Visualization`, `Working Environment`
+
 Other kinds of metadata don't affect the resulting page in the docs.
 
 ## Variables

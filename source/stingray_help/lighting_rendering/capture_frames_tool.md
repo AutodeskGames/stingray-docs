@@ -1,5 +1,7 @@
 # Capture Frames Tool
 
+![UPDATED](../images/updated.png)
+
 The **Capture Frames** Tool lets you render frames to disk. The tool is integrated into the **Story Editor** workflow, and can also be initiated through Flow. For more information on using Flow, see the **Capture Frames** category in the [Stingray Flow Node Reference](../../flow_ref/index.html).
 
 The following **Capture Settings** can be adjusted to control your output. See ~{ Capture frames to disk }~ for more information.
@@ -15,6 +17,15 @@ The following **Capture Settings** can be adjusted to control your output. See ~
 
 <dt>Camera</dt>
 <dd>Lets you select the camera to capture. </dd>
+
+<dt>Capture Range</dt>
+[![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)
+<dd>Lets you set a custom range for the camera to capture. Instead of recapturing your entire story after making a change to your animation, specify a **Capture Range**, and then quickly recapture only those details that need updating. You can select **Custom Range - Seconds** or **Custom Range - Frames**. To capture the entire story, select **Use Story Timeline**.
+
+When setting a range, it is important to remember that your story starts at frame 0. The naming convention for the output EXR files is the same whether you are capturing in frames or seconds. For example, if you want to recapture from frame 3 to frame 8 of your story, File Name_3.exr to File Name_8.exr are output to the selected **Output Directory**, overwriting the existing files.
+
+You can also capture negative frames, which use following naming convention; *<File Name>_-1.exr*, *<File Name>_-2.exr*, etc.; and are output as still frames.
+</dd>
 
 </dl>
 

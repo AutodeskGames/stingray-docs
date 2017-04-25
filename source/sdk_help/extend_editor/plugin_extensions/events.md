@@ -36,7 +36,7 @@ extensions = {
 
 `for`
 
->	Determines the scope within which the plug-in looks for events. Accepted values: `global`, `engine`, `editor`,`window`, `view`. Optional; default value is `global`.
+>	Determines the scope within which the plug-in looks for events. Accepted values: `global`, `engine`, `editor`,`window`, `view`. You can also use the name of the JavaScript service module that emits the event you want to respond to, such as `plugin-service` or `debugger-service`. Optional; default value is `global`.
 
 `options`
 

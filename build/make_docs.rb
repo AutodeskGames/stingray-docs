@@ -82,16 +82,6 @@ def make_output_dir()
 end
 
 def build()
-	if $options[:dev_help] or $options[:all]
-		puts "Generating HTML for Stingray Developer Help..."
-		puts "NOTE: this build is deprecated in English. It is only kept temporarily to support localizing old content..."
-		output_path = "output/developer_help/#{$lang_dir}/preview"
-		system("#{$doctools_dir}/tools/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_developer_help.xml")
-		puts "Done. Look under #{output_path}."
-		if $options[:dev_help] and $options[:launch]
-			system("start", "#{$script_dir}/../#{output_path}/index.html")
-		end
-	end
 
 	if $options[:source_access_help] or $options[:all]
 		puts "Generating HTML for Stingray Source Access Help..."
@@ -106,12 +96,14 @@ def build()
 	if $options[:sdk_help] or $options[:all]
 		puts "Building the Stingray SDK Help..."
 		output_path = "output/sdk_help/#{$lang_dir}/preview"
-		# Run reference doc generation in the engine submodule
-		ENV["SR_DOCTOOLS_DIR"] = $doctools_dir
-		ENV["SR_DOC_DIR"] = "#{$script_dir}/.."
-		system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--editor-javascript")
-		ENV["SR_DOC_DIR"] = ""
-		ENV["SR_DOCTOOLS_DIR"] = ""
+		if $lang_import_dir == ""
+			# Run reference doc generation in the engine submodule
+			ENV["SR_DOCTOOLS_DIR"] = $doctools_dir
+			ENV["SR_DOC_DIR"] = "#{$script_dir}/.."
+			system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--editor-javascript")
+			ENV["SR_DOC_DIR"] = ""
+			ENV["SR_DOCTOOLS_DIR"] = ""
+		end
 		# Generate the help and bundle it
 		puts "Generating and bundling the SDK help..."
 		ENV["SR_ENGINE_DIR"] = "#{$engine_dir}".gsub("/","\\")
@@ -123,30 +115,22 @@ def build()
 		end
 	end
 
-	if $options[:tutorials] or $options[:all]
-		puts "Building the Stingray Tutorials..."
-		output_path = "output/tutorials/#{$lang_dir}/preview"
-		system("#{$doctools_dir}/tools/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_tutorials.xml")
-		puts "Done. Look under #{output_path}."
-		if $options[:tutorials] and $options[:launch]
-			system("start", "#{$script_dir}/../#{output_path}/index.html")
-		end
-	end
-
 	if $options[:help] or $options[:all]
 		puts "Building the Stingray help..."
 		output_path = "output/stingray_help/#{$lang_dir}/preview/"
-		# Run reference doc generation in the engine submodule
-		ENV["SR_DOCTOOLS_DIR"] = $doctools_dir
-		ENV["SR_DOC_DIR"] = "#{$script_dir}/.."
-		system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--shader-ref")
-		system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--flow-ref")
-		system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--lua-ref")
-		ENV["SR_DOC_DIR"] = ""
-		ENV["SR_DOCTOOLS_DIR"] = ""
+		if $lang_import_dir == ""
+			# Run reference doc generation in the engine submodule
+			ENV["SR_DOCTOOLS_DIR"] = $doctools_dir
+			ENV["SR_DOC_DIR"] = "#{$script_dir}/.."
+			system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--shader-ref")
+			system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--flow-ref")
+			system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--lua-ref")
+			ENV["SR_DOC_DIR"] = ""
+			ENV["SR_DOCTOOLS_DIR"] = ""
+			puts "Getting latest command docs..."
+			system("ruby", "#{$script_dir}/scripts/get_content_from_cpp.rb")
+		end
 		# Generate the main help and bundle it
-		puts "Getting latest command docs..."
-		system("ruby", "#{$script_dir}/scripts/get_content_from_cpp.rb")
 		puts "Generating and bundling the full Stingray help..."
 		ENV["SR_ENGINE_DIR"] = "#{$engine_dir}".gsub("/","\\")
 		system("#{$doctools_dir}/tools/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_stingray_help.xml")

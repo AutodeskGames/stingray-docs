@@ -8,6 +8,8 @@ You create light sources in your game by placing or spawning any type of unit th
 
 The instructions below describe how to place and spawn an instance of this helper unit in the Stingray Editor, Lua, and Flow.
 
+>**Note:** If you happen to see light gizmos in projects migrated from Stingray 1.4 and older, delete the old lights and replace them with new ones.
+
 ## Level editing
 
 To create a new light source in a level:

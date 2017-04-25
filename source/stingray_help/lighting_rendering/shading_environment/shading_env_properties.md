@@ -239,7 +239,7 @@ A small amount of motion blur can cause camera movement to appear smoother and m
 <dl>
 
 <dt>Enabled</dt>
-<dd>Turns the motion blur effect on and off. </dd>
+<dd>Turns the motion blur effect on and off.</dd>
 
 <dt>Amount</dt>
 <dd>Controls the intensity of the motion blur. Larger values produce more blurring.</dd>

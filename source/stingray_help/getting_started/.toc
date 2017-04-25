@@ -5,10 +5,11 @@ open_existing_project
 downloads_creativeMkt
 common_windows
 about_help
-tutorial_next_steps
 get_started_android
 get_started_ios
 get_started_ps4
 get_started_xb1
+get_started_web
 get_started_hololens
 get_started_vr
+tutorial_next_steps

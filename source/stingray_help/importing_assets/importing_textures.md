@@ -16,9 +16,11 @@ For more information on supported file types, see ~{ Supported file formats }~.
 
 ## Quick texture import
 
+>**Note:** The **Quick Texture Import** option is available only in the legacy Texture Manager tool.
+
 If your images are in *.dds* format, and you want to assign a template of processing settings or a category name to multiple textures at the same time, you can import your images using the **Texture Manager**.
 
-1.	Make sure your *.dds* files follow the requirements outlined under ~{ DDS texture file settings for Stingray }~.
+1.	Make sure your *.dds* files follow the requirements outlined under ~{ Recommended texture compression settings }~.
 
 1.	Copy your image files into your project.
 
@@ -33,7 +35,7 @@ See also ~{ Create a texture category }~ and ~{ Create a texture template }~.
 ---
 Related topics:
 
-- ~{ DDS texture file settings for Stingray }~
+- ~{ Recommended texture compression settings }~
 - ~{ Texture Manager }~
 - ~{ Create a texture category }~
 - ~{ Create a texture template }~
