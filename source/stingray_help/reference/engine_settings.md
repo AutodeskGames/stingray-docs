@@ -1,7 +1,5 @@
 # Stingray engine `settings.ini` file reference
 
-![UPDATED](../images/updated.png)
-
 <a name="top"></a>
 
 Every Stingray project needs to have a *settings.ini* file at the root of the project folder. This file contains a variety of settings that the engine uses to initialize its subsystems. It expresses the data using the SJSON format. See ~{ About the SJSON data format }~.
@@ -145,8 +143,6 @@ win32 = {
 
 `disable_implicit_sli = true`
 
-[![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)
-
 > VR SLI improves performance for VR applications, and uses multiple GPUs to accelerate stereo rendering. When a machine has two Nvidia GPUs connected by the SLI bridge, the driver takes care of utilizing the two GPUs while running on D3D11.  
 >
 > When set to true, this setting tells the driver to stop using both GPUS, and the application takes care of utilizing the two GPUs instead.
@@ -219,8 +215,6 @@ render_settings = {
 > Can be "mono" (default) or "stereo". When running or testing your game using a VR app, the game image appears in your HMD (head mount display) and on your mirror window (your monitor). The vr_mirror_mode property lets you control the display on the mirror window. This setting is only available in the VR templates.
 
 `nv_vr_sli_enabled = true`
-
-[![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)
 
 > Boots the renderer into a mode where both GPUs are used for VR.
 

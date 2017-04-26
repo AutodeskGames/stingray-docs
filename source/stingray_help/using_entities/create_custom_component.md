@@ -8,8 +8,6 @@ In this release, you can design your own components that handle arbitrary data v
 
 1.	You define your new component by creating a new *.component* resource in your project's source folder. See the sections below for details.
 
-    [![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)
-
     >**Tip:** Use the **Script Editor** to open and edit a *.component* resource in your project.
 
 1.	Restart the Stingray Editor and load your project. (The list of available components in the project is not yet refreshed automatically.)

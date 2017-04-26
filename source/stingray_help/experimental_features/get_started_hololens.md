@@ -1,7 +1,5 @@
 # Get started on HoloLens
 
-[![NEW](../images/new.png "What else is new in v1.8?")](../release_notes/readme_1.8.html)
-
 >**Note: The HoloLens platform is still in development and work on the deployment and editor workflows is ongoing. This page is subject to change.**
 
 ## Step 1. Building for HoloLens
@@ -65,7 +63,7 @@ If you want to create a package with data you need to first follow the steps in 
 1. Create an app package with the "Create App Packages" wizard in Visual Studio. You can follow the instructions under the _Create an app package_ title on this page: [Packaging UWP apps](https://docs.microsoft.com/en-us/windows/uwp/packaging/packaging-uwp-apps)
 
     Select "No" when asked if you want to build a package for uploading to the Windows Store. Skip the validation step at the end of the wizard.
-    
+
 2.  When the Package is generated you can install it through the HoloLens Device Portal. See this page for information on how to use the Device Portal: [Using the Windows Device Portal](https://developer.microsoft.com/en-us/windows/holographic/using_the_windows_device_portal)
 
 ## Step 3. Connect the editor to the device
