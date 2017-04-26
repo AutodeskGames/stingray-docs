@@ -1,7 +1,5 @@
 ﻿# Edit Texture settings
 
-![UPDATED](../../../images/updated.png)
-
 1. Open the **Texture Manager** (**Window > Texture Manager**).
 
 2. Set the filters to refine the content you want to browse in the window.

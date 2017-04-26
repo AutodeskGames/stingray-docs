@@ -1,7 +1,5 @@
 # Get started for the Web
 
-![](../images/updated.png)
-
 These pages tell you everything you need to know in order to get started developing projects that will run in a web browser.
 
 In this release, you can:
@@ -75,7 +73,7 @@ Starting up a Stingray project in the browser is a multi-step process. This sequ
 
 	In order to save time downloading the same content the next time you load the page, Stingray stores the downloaded content in your browser's IndexedDB local storage. (This can speed things up especially if you're running the project on a remote server.) You may find that you need to clear this cache from your browser if you're not seeing updates to your content as expected.
 
-1.	![](../images/new.png) **Syncing resources**. In this step, your project's data is either downloaded from the remote, or loaded from your browser's IndexedDB local storage.
+1.	**Syncing resources**. In this step, your project's data is either downloaded from the remote, or loaded from your browser's IndexedDB local storage.
 
 	The first time you run a project in the browser, all files will not exist in the browser's IndexedDB local storage, so they will all be downloaded from the remote.
 
@@ -102,11 +100,11 @@ If your project doesn't run in the browser:
 - Here are some of the errors we've heard about, and how to fix them:
 
 	-	**Error:** "Failed to create WebGL 2.0 context"
-		
+
 		**Solution:** Generally this means either your web browser does not support WebGL 2.0, the feature is disabled in its configuration, your video card driver is out-of-date, or your device has more than one graphic adapter and the wrong one is being used by the web browser. In any case, you can always try other web sites to confirm whether WebGL 2.0 works on your computer.
 
 	-	**Error:** "Out of memory"
-		
+
 		**Solution:** Too much memory was requested by your project. This happens much more frequently with 32-bit browsers, try a 64-bit web browser instead. Also keep in mind reducing the memory footprint of your project by using texture compression and other techniques always helps as well.
 
 -	Have you run into a different problem? Let us know about it [on the forum](http://www.autodesk.com/stingray-forums).

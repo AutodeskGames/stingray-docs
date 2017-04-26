@@ -4,7 +4,7 @@
 
 Stingray includes an interop plug-in to support linking to your **DCC** (digital content creation) tool.
 
-![UPDATED](../images/updated.png) The interop plug-ins (for Maya, Maya LT and 3ds Max) are automatically installed in your `C:\ProgramData\Autodesk\ApplicationPlugins` directory. For example, the 3ds Max plug-in installs here: `C:\ProgramData\Autodesk\ApplicationPlugins\StingrayDCCLink_Max2018.bundle\Contents\plugins`
+The interop plug-ins (for Maya, Maya LT and 3ds Max) are automatically installed in your `C:\ProgramData\Autodesk\ApplicationPlugins` directory. For example, the 3ds Max plug-in installs here: `C:\ProgramData\Autodesk\ApplicationPlugins\StingrayDCCLink_Max2018.bundle\Contents\plugins`
 
 > **Note:** In the Stingray Help, we use the term **DCC** tool when we're referring to your content creation tool (such as Maya, Maya LT, or 3ds Max). (DCC = digital content creation).
 
