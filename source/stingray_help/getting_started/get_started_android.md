@@ -139,8 +139,11 @@ These settings are common for all tabs. See ~{ Using the Deployer panel }~.
 <dt>Identifier</dt>
 <dd>The unique process name of your application. It contains two parts separated by a dot.</dd>
 
-<dt>Version</dt>
-<dd>The application version, in two-part notation.</dd>
+<dt>Version Code</dt>
+<dd>An internal version number used by Google store to distinguish between version upgrades.</dd>
+
+<dt>Version Name</dt>
+<dd>The version number, in two-part notation, that is displayed in your application, for example 1.25.</dd>
 
 <dt>Android flavor</dt>
 <dd>There are three different builds of the Stingray engine for Android: a regular build, a build that plays content on Gear VR devices, and a build that plays content on Google VR devices. Use this control to choose which of these engine flavors are included in your package.</dd>

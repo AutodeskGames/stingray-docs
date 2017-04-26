@@ -42,10 +42,12 @@
 		<contextId include="*\sdk_help\introduction.html" id="SDK_HOME"></contextId>
 		<contextId include="*\sdk_help\extend_editor.html" id="SDK_EDITOR_C_PLUGIN"></contextId>
 		<contextId include="*\sdk_help\extend_engine.html" id="SDK_ENGINE_PLUGIN"></contextId>
+		<contextId include="*\sdk_help\about_resource_ids.html" id="resource_ids"></contextId>
 		<meta name="indexterm" content="plugin" include="*"></meta>
 		<meta name="indexterm" content="plug-in" include="*"></meta>
 		<meta name="topic-type" content="concept" include="*\sdk_help\*"></meta>
 		<meta name="topic-type" content="reference" include="*\editor_js\*,*\editor_c\*,*\engine_c\*"></meta>
+		<meta name="product-feature" content="Plug-ins" include="*"></meta>
 		<insert_family_links include="\sdk_help\*"></insert_family_links>
 		<!-- find and replace variables with version numbers -->
 		<replace variable_file="variables.ini" include="*.html"></replace>
@@ -111,7 +113,8 @@
 			<parent_filename>*\extend_editor.html</parent_filename>
 		</merge_toc_config>
 		<include_input_dir>%SR_ENGINE_DIR%\editor\stingray_editor\sdk</include_input_dir>
-		<include_examples make_pages="true" include="editor_native_code\*" exclude="*.vcxproj">%SR_ENGINE_DIR%\tests\plugin_tests</include_examples>
+		<!--TODO:this sample has moved to the plugins repo. Do we add a new submodule?-->
+		<!--include_examples make_pages="true" include="editor_native_code\*" exclude="*.vcxproj">%SR_ENGINE_DIR%\tests\plugin_tests</include_examples-->
 		<show_topics>false</show_topics>
 		<tag name="PROJECT_NAME">"Stingray Editor C API Reference"</tag>
 		<tag name="EXAMPLE_PATTERNS">*.c *.h</tag>

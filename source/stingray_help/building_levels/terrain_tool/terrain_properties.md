@@ -84,7 +84,7 @@ Undergrowth objects display based on camera distance, filling in when the camera
 <dd>For a selected channel, lets you specify objects to be instanced across the terrain plane geometry. Click + to open the **Content browser** and select a lightweight mesh for instancing.</dd>
 
 <dt>Density</dt>
-<dd>Determines how heavily the selected geometry is instanced on the terrain. </dd>
+<dd>Determines how heavily the selected geometry is instanced on the terrain. Keep this value low as higher density values impact the performance. </dd>
 
 </dl>
 

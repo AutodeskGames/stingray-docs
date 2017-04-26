@@ -1,8 +1,11 @@
 # Texture Manager
 
 - **Window > Texture Manager**
+- **Window > Texture Manager Legacy**
 
 Use the **Texture Manager** to import textures and manage texture settings.
+
+>	**Note:** Stingray ships with two versions of the **Texture Manager** tool. We recommend using **Window > Texture Manager** -- this is the version of the tool that you'll see when you double-click a texture in the editor. While we're perfecting this new version of the tool, we temporarily still ship the old "legacy" standalone application too, just in case.
 
 In the **Texture Manager** you'll create a texture-resource, which refers to an input image file. The texture-resource settings define how the file is handled by the data compiler, for example if the texture should be compressed.
 
@@ -14,7 +17,7 @@ You can edit the following settings:
  </dd>
 
  <dt>Category</dt>
- <dd>Can be used for organizing textures. You can filter your textures by **Cubemap**, **Lightmap**, **Albedo**, **Albedo Opacity**, **HDRI/Skydome**, or **Linear Greyscale**. Note that this only changes the category for the chosen platform. The most common case is to have the same category for a texture across all platforms, so make sure to select the correct platforms before changing the category. The category can also be used for dropping mip steps at runtime.</dd>
+ <dd>Can be used for organizing textures. You can filter your textures by **IBL-Probe**, **Lightmap**, **Albedo**, **Albedo Opacity**, **HDRI/Skydome**, or **Linear Greyscale**. Note that this only changes the category for the chosen platform. The most common case is to have the same category for a texture across all platforms, so make sure to select the correct platforms before changing the category. The category can also be used for dropping mip steps at runtime.</dd>
 
  <dt>Apply Processing</dt>
  <dd>When off, the **Input Image** passes through data compilation without any processing or mip step generation. This means that none of the options below the **Apply Processing** option have any effect. This is useful for exotic textures.</dd>

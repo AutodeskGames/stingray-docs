@@ -29,6 +29,8 @@ render_config = "core/rendering/renderer"
 
 For larger examples, you can see the *settings.ini*, *.physics_properties*, or *.shading_environment* files of any project.
 
+>**Note:** You can use the **Script Editor** to open and edit Stingray data resource files in your project.
+
 ## Modifications from standard JSON
 
 The SJSON format has the following differences from standard JSON:

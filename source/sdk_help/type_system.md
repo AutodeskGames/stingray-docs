@@ -18,6 +18,8 @@ Type files are already used in a few places in Stingray:
 
 You don't have to use the `.type` file mechanism in your own plug-in, but it can make things easier if your use case is similar to the ones above.
 
+>**Tip:** Use the **Script Editor** to open and edit a `.type` file in your project.
+
 ## Built-in types
 
 The built-in types are basically a superset of the types supported in the JSON file format, with a few notable differences in order to simplify collaborative editing. Built-in types are always prefixed by the `:` character, to differentiate them from any user-defined types that you might create in your plug-in.

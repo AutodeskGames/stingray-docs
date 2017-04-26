@@ -33,10 +33,10 @@
 <dt>Color<dt>
 <dd>Sets the RGB color of the prototype.</dd>
 
-<dt>Visibility</dt>
+<dt>Visible</dt>
 <dd>Turn on and off rendering of the prototype.
 
-  > **Note:** When Visibility is off, the prototype remains as a physics actor.
+  > **Note:** When Visibile is off, the prototype remains as a physics actor.
 
 </dd>
 

@@ -16,9 +16,11 @@ With the DCC Link plug-in installed, you can import Stingray Physically Based Sh
 
 4. Do one of the following to send the material:
 
-	- (Maya/Maya LT) In the **Hypershade** (**Windows > Material/Texture Baking Editors > Hypershade**), select the StingrayPBS material, then select **File > Send to Stingray > Selection** from the main menu bar.
-	![](../../../images/send_to_hypershade.png)
-	- (3ds Max) Select the object with materials you want to send to Stingray, then select **Stingray > Materials > Send Selected** from the main menu bar.
+	-	(Maya/Maya LT) In the **Hypershade** (**Windows > Material/Texture Baking Editors > Hypershade**), select the StingrayPBS material, then select **File > Send to Stingray > Selection** from the main menu bar.
+	
+		![](../../../images/send_to_hypershade.png)
+	
+	-	(3ds Max) Select the object with materials you want to send to Stingray, then select **Stingray > Materials > Send Selected** from the main menu bar.
 
 	The material is sent to Stingray and appears in the **Asset Browser**, and the shader graph remains the same.
 

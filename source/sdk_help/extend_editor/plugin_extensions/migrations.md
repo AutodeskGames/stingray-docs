@@ -58,7 +58,7 @@ extensions = {
 >
 >	-	If your action points to a function that is defined in a script module, your function can simply return the string you want to save.
 >
->	-	If your action is defined inline in your plugin, you can return the string as follows:
+>	-	If your action is defined inline in your plug-in, you can return the string as follows:
 >
 >		~~~{js}
 >		{

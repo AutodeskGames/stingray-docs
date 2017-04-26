@@ -57,7 +57,7 @@ You can define and call actions in two different ways:
 
 ## Single or multiple actions
 
-Wherever you can set an action in your *.plugin* file, you can use an array of multiple actions instead. Each of the actions in the array can be either named or defined inline (see above) -- you can mix and match within the array if it's convenient for you.
+Wherever you can set an action in your *.stingray_plugin* file, you can use an array of multiple actions instead. Each of the actions in the array can be either named or defined inline (see above) -- you can mix and match within the array if it's convenient for you.
 
 ~~~{sjson}
 extensions = {
@@ -137,7 +137,7 @@ extensions = {
 
 `source`
 
->	The path and filename of the source file that you want to copy. This path is always relative to the location of your *.plugin* file.
+>	The path and filename of the source file that you want to copy. This path is always relative to the location of your *.stingray_plugin* file.
 
 `destination`
 
@@ -189,7 +189,7 @@ extensions = {
 
 `module`
 
->	The  path and filename of the JavaScript file that defines the function you want to run, relative to the location of your *.plugin* file. Required.
+>	The  path and filename of the JavaScript file that defines the function you want to run, relative to the location of your *.stingray_plugin* file. Required.
 
 `function_name`
 

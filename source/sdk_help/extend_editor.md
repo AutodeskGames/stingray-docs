@@ -8,7 +8,7 @@ This section provides some tips on getting started extending the editor with you
 
 ## Getting started
 
-1.	Most of the widgets and panels in the Stingray editor are plug-ins, just like the ones you can create for yourself. You can find their *.plugin* descriptors, and all the other JavaScript files and other resources that they rely on, under the *editor/plugins* folder within your Stingray installation folder. This is a rich set of working examples for you to draw on as you build your own plug-in. See the ~{ Example Plug-ins }~ for details on where you can find these in your Stingray install.
+1.	Most of the widgets and panels in the Stingray editor are plug-ins, just like the ones you can create for yourself. You can find their *.stingray_plugin* descriptors, and all the other JavaScript files and other resources that they rely on, under the *editor/plugins* folder within your Stingray installation folder. This is a rich set of working examples for you to draw on as you build your own plug-in. See the ~{ Example Plug-ins }~ for details on where you can find these in your Stingray install.
 
 1.	Start by understanding the *extensions* that you can set up for your plug-in. These extensions define the points of integration between your plug-in and the editor: in other words, how your plug-in hooks in to the editor. You'll need to have a good idea of what extensions the editor supports in order to figure out how to achieve what you want for your plug-in. For more, see the detailed descriptions of each extension under ~{ Use extensions to define plug-in behaviors }~.
 

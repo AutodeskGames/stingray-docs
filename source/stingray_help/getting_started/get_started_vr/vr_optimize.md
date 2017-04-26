@@ -43,3 +43,5 @@ When the engine prepares to render a surface, it dispatches draw calls to the GP
 - Use shadow proxies: The shadow proxy of a unit with many materials can be reduced to a single material, reducing draw calls.
 - Merge batches: When the engine has multiple instances of the same geometry with the same material(s), and the material supports instancing, then these geometry instances can be merged into a single batch, and all the data for these objects get sent to the GPU in one batch.
 - Optimize materials: Replace the standard material with simpler materials to get the most performance.
+
+> Want to know more? Check out this [free master class](http://au.autodesk.com/au-online/classes-on-demand/class-catalog/classes/year-2016/autodesk-stingray/dv21491#chapter=0) from Autodesk University!

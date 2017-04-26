@@ -26,11 +26,13 @@ Any customer can use the Stingray SDK to make these kinds of plug-ins. You don't
 
 2.	Get the ~{ Example Plug-ins }~. You'll want to have as many real working examples as you can, so we're working on fleshing out a set of plug-ins that show how to extend the editor and the engine in different ways.
 
-3.	Create a new empty folder for your plug-in. You'll put all the files your plug-in needs in here.
+3.	Create a new folder for your plug-in. You'll put all the files your plug-in needs in here.
 
-	In this folder, you'll have to create a new *.plugin* file to describe your plug-in. This descriptor contains metadata about your plug-in, and a set of *extensions* that define what the plug-in should do when it's loaded. An easy way to get started is to copy the minimal description from the ~{ Define a Stingray Plug-in }~ page, or copy one from a sample plug-in.
+	In this folder, you'll have to create a new *.stingray_plugin* file to describe your plug-in. This descriptor contains metadata about your plug-in, and a set of *extensions* that define what the plug-in should do when it's loaded. An easy way to get started is to copy the minimal description from the ~{ Define a Stingray Plug-in }~ page, or copy one from a sample plug-in.
 
-3.	Install and load your plug-in into the editor and/or the engine, so that you can test it out as you work. You'll need to use the editor's **Plugin Manager** to find and load your *.plugin* file. You'll also need to manually copy any *.dll* files that you build for the engine into the `engine/<platform>/<config>/plugins` folder inside your Stingray installation folder.
+	>	**Tip:** Try starting from our [stingray-plugin](https://github.com/AutodeskGames/stingray-plugin) repository on GitHub! This repo gives you a basic framework for your plug-in, including a sample *.stingray_plugin* file that you can tweak as you go. This repo is especially useful if you want to extend the engine or the editor in C or C++, because it comes with all the build tools you'll need to compile your plug-in libraries.
+
+3.	Install and load your plug-in into the editor and/or the engine, so that you can test it out as you work. You'll need to use the editor's **Plugin Manager** to find and load your *.stingray_plugin* file.
 
 	For details on installing plug-ins in the editor, see [this page](http://www.autodesk.com/stingray-help?contextId=install_plugins).
 

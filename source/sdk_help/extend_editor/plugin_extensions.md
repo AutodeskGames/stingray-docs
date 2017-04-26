@@ -1,8 +1,8 @@
 # Use extensions to define plug-in behaviors
 
-*Extensions* define the points of integration between your plug-in and the Stingray editor: that is, the things that your plug-in changes or adds to the editor when it's loaded.
+*Extensions* define the points of integration between your plug-in and the Stingray environment: that is, the things that your plug-in changes or adds to the editor when it's loaded.
 
-The editor's plug-in system defines a number of different kinds of extensions that you can use in your plug-in:
+You can set up several different kinds of extensions in your *.stingray_plugin* descriptor file:
 
 -	`menus` add new items to the main menus of the Stingray editor, like **File**, **Edit**, **Window**. See ~{ Create a new menu item }~.
 
@@ -16,19 +16,21 @@ The editor's plug-in system defines a number of different kinds of extensions th
 
 -	`previews` control the way the **Asset Preview** behaves when the user selects a given type of resource in the **Asset Browser**. See ~{ Define previews for custom assets }~.
 
--	`migrations` offer your plugin a chance to carry out some actions the first time the editor loads a project while this version of your plugin is installed.
+-	`migrations` offer your plug-in a chance to carry out some actions the first time the editor loads a project while this version of your plugin is installed.
 
 -	`events` register your plug-in to listen for editor events with a given name, and to carry out an action or a set of actions when that event happens. See ~{ Respond to an editor event }~ for configuration instructions, and ~{ Emit and handle editor events }~ for more background about events.
 
--	`views` give names to custom UI panels and dialogs that your plug-in adds to Stingray. You can then open these named views from other extensions in your plugin (e.g. from menu items), or even from other plug-ins. See ~{ Create a named panel or dialog }~.
+-	`views` give names to custom UI panels and dialogs that your plug-in adds to Stingray. You can then open these named views from other extensions in your plug-in (e.g. from menu items), or even from other plug-ins. See ~{ Create a named panel or dialog }~.
 
 -	`viewports` help you integrate an engine viewport into your plug-in's views and panels, like the ones you see in the **Level Viewport** or the **Asset Preview**. See ~{ Create a custom engine viewport }~.
+
+-	`runtime_libraries` tell the editor to configure all instances of the engine that it launches to automatically load *.dll* files that you provide with your plug-in. See ~{ Extend the Engine }~.
 
 Every plug-in needs to have at least one of these extensions. There is no limit to the number of extensions that a plug-in can have.
 
 ## Configuring extensions
 
-You set up extensions in your *.plugin* resource file, in the `extensions` object:
+You set up extensions in your *.stingray_plugin* resource file, in the `extensions` object:
 
 ~~~{sjson}
 extensions = {
@@ -53,9 +55,9 @@ extensions = {
 }
 ~~~
 
-Each type of extension the editor supports has its own named list inside the `extensions` object -- like `menus` and `actions` above. Each of these lists can have any number of objects inside it, each of which configures a single instance of that type of extension. So, for example, the configuration above registers one new action, two new menu items, and one new asset type.
+Each type of extension has its own named list inside the `extensions` object -- like `menus` and `actions` above. Each of these lists can have any number of objects inside it, each of which configures a single instance of that type of extension. So, for example, the configuration above registers one new action, two new menu items, and one new asset type.
 
-Each type of extension has its own set of configuration parameters too, which you need to set up. See the other pages in this section for details on the parameters required for each different extension type.
+Each type of extension has its own set of configuration parameters too, which you need to set up. See the other pages in this guide for details on the parameters required for each different extension type.
 
 ## String variables in extension data
 
