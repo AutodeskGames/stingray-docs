@@ -107,7 +107,9 @@ def build()
 		# Generate the help and bundle it
 		puts "Generating and bundling the SDK help..."
 		ENV["SR_ENGINE_DIR"] = "#{$engine_dir}".gsub("/","\\")
+		ENV["SR_PLUGINS_DIR"] = "#{$script_dir}/../stingray-plugin-api-samples"
 		system("#{$doctools_dir}/tools/ADE-HTML-2.1-tools.exe", "#{$script_dir}/config_sdk_help.xml")
+		ENV["SR_PLUGINS_DIR"] = ""
 		ENV["SR_ENGINE_DIR"] = ""
 		puts "Done. Look under #{output_path}."
 		if $options[:sdk_help] and $options[:launch]
