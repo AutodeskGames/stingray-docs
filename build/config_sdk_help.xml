@@ -113,8 +113,7 @@
 			<parent_filename>*\extend_editor.html</parent_filename>
 		</merge_toc_config>
 		<include_input_dir>%SR_ENGINE_DIR%\editor\stingray_editor\sdk</include_input_dir>
-		<!--TODO:this sample has moved to the plugins repo. Do we add a new submodule?-->
-		<!--include_examples make_pages="true" include="editor_native_code\*" exclude="*.vcxproj">%SR_ENGINE_DIR%\tests\plugin_tests</include_examples-->
+		<include_examples make_pages="true" include="editor_native_code\*" exclude="build*,CMake*">%SR_PLUGINS_DIR%\samples</include_examples>
 		<show_topics>false</show_topics>
 		<tag name="PROJECT_NAME">"Stingray Editor C API Reference"</tag>
 		<tag name="EXAMPLE_PATTERNS">*.c *.h</tag>

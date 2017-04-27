@@ -4,3 +4,6 @@
 [submodule "stingray"]
 	path = stingray
 	url = https://git.autodesk.com/gameware/stingray
+[submodule "stingray-plugin-api-samples"]
+	path = stingray-plugin-api-samples
+	url = https://github.com/AutodeskGames/stingray-plugin-api-samples
