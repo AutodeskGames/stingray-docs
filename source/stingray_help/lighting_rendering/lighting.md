@@ -1,5 +1,7 @@
 # Lighting
 
+![UPDATED](../images/updated.png)
+
 In the real world, you only see the things around you because light is constantly bouncing around, different wavelengths get absorbed and reflected, and some of the rays finally hit your eye. Similarly, in your game level, you won't see any of the objects you place in your scene without having some light to bounce from their surfaces and hit the camera.
 
 Controlling the light in your game involves combining the contributions from many different sources that can interact in complex ways. When you set up the lighting for your level, you balance a number of factors:
@@ -53,6 +55,14 @@ If you need to achieve more accurate and realistic indirect lighting without inc
 Calculating these lightmaps takes extra time, and loading the lightmaps into the game takes extra memory, but the runtime CPU performance and the realism are usually better than fully dynamic lighting.
 
 See ~{ Light baking }~.
+
+## Physically based lighting
+
+[![NEW](../images/new.png "What else is new in v1.9?")](../release_notes/readme_1.9.html)
+
+The measurement of light is known as photometry. You can use photometric lights to more accurately define lights in your scene. In Stingray, the Physical Light Entity lets you use data from real-world lights to create a realistic distribution of light in your scene.
+
+See ~{ Physically Based Lighting }~.
 
 ## Emissive glow
 
