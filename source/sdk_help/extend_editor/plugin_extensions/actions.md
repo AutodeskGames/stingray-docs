@@ -172,14 +172,14 @@ extensions = {
 
 ## Run an existing JavaScript function
 
-To make your action run a JavaScript function from a module defined in a separate *.js* file, use the `module` type:
+To make your action run a JavaScript function from a module defined in a separate *.js* file, use the `js` type and specify the file location with module definition:
 
 ~~~{sjson}
 extensions = {
 	actions = [
 		{
 			name = "recompile-all-resources"
-		    type = "module"
+		    type = "js"
 			module = "my-plugin-javascript-file"
 			function_name = "myFunctionName"
 		}
