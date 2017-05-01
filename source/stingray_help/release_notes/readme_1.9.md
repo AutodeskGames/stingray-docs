@@ -26,6 +26,13 @@ Sections in this topic:
 ## What's New
 
 * * *
+## Texture Manager improvements
+
+Continuing the improvements from the previous release, the **Texture Manager** tool is looking better than ever. The platform list looks crisp and compact, and headers added to the texture view list lets you view textures in an organized manner. You can organize your textures in the Texture Manager by sorting them by size, date modified or name. The Texture Manager also now preserves the state of UI layout you adjust like filters enabled or resized filter views.
+
+## FBX Version 2018.1.1
+
+This release of Stingray picks up the latest version of FBX (2018.1.1), which provides various improvements and bug fixes.
 
 [Return to top](#top)
 
