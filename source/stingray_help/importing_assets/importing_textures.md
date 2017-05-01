@@ -14,24 +14,6 @@ For more information on supported file types, see ~{ Supported file formats }~.
 
 3. To set up additional properties for a new texture, double-click it in the Asset Browser to open it in the ~{ Texture Manager }~.
 
-## Quick texture import
-
->**Note:** The **Quick Texture Import** option is available only in the legacy Texture Manager tool.
-
-If your images are in *.dds* format, and you want to assign a template of processing settings or a category name to multiple textures at the same time, you can import your images using the **Texture Manager**.
-
-1.	Make sure your *.dds* files follow the requirements outlined under ~{ Recommended texture compression settings }~.
-
-1.	Copy your image files into your project.
-
-1.	Open the **Texture Manager** by choosing **Window > Texture Manager** from the main Stingray menu.
-
-1.	In the **Texture Manager**, choose **File > New Texture From DDS...**. The **Choose DDS** window opens, which lists all *.dds* files in your project that are not already associated with a texture resource.
-
-1.	In the **Choose DDS** window, select your new image files and click **OK**. The **Quick Texture Import** window opens, where you can set the texture processing template and category that will be applied to each new texture, or to all textures. Click **OK** when done.
-
-See also ~{ Create a texture category }~ and ~{ Create a texture template }~.
-
 ---
 Related topics:
 
