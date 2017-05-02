@@ -1,4 +1,4 @@
-# Create a a physical light
+# Create a physical light
 
 [![NEW](../../../images/new.png "What else is new in v1.9?")](../../../release_notes/readme_1.9.html)
 

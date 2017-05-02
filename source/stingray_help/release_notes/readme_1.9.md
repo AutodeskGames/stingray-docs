@@ -26,13 +26,30 @@ Sections in this topic:
 ## What's New
 
 * * *
+
+## Favorites
+
+You can add frequently used assets or folders as favorites ![](../images/icon_asset_favorites.png) to the **Favorites** directory in the **Asset Browser**. Check the favorite icon ![](../images/icon_asset_set_favorite.png) or right-click in the **Asset Browser** and select **Add to Favorites** to mark an asset or folder as favorite. You can also drag and drop assets and folders to the **Favorites** directory. For more information, see ~{ Asset Browser }~.
+
 ## Texture Manager improvements
 
 Continuing the improvements from the previous release, the **Texture Manager** tool is looking better than ever. The platform list looks crisp and compact, and headers added to the texture view list lets you view textures in an organized manner. You can organize your textures in the Texture Manager by sorting them by size, date modified or name. The Texture Manager also now preserves the state of UI layout you adjust like filters enabled or resized filter views.
 
+## Physically-based lights
+
+See ~{ Physically Based Lighting }~ and ~{ Create a physical light }~ for creating a physical light entity.
+
+## Visual Studio Code Debugger
+
+This release of Stingray replaces the **Script Debugger** with a Visual Studio Code extension named **Stingray Visual Code Debugger**.
+
 ## FBX Version 2018.1.1
 
 This release of Stingray picks up the latest version of FBX (2018.1.1), which provides various improvements and bug fixes.
+
+## What else is new?
+
+-	Removed the **History** tool from the Stingray Editor. You can view the list of actions executed and undo/redo actions in the Particle Editor or the Texture Manager.
 
 [Return to top](#top)
 

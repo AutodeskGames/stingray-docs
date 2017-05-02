@@ -62,10 +62,6 @@
 
 >Launches the **Flow Editor**. Use this to create or edit a set of Flow nodes. See ~{ Visual programming using Flow }~ and ~{ Extending Flow }~.
 
-**History**
-
->Launches the ~{ History tool }~ with a list of actions performed and with undo/redo options.
-
 **Level Flow**
 
 >Launches the ~{Level Flow Editor }~.
