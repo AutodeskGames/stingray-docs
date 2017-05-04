@@ -68,7 +68,7 @@ No.
 
 ##Is Stingray source code available?
 
-You can purchase Stingray source code access from Autodesk for an additional fee. For details on accessing the source code, see [User accounts](http://help.autodesk.com/view/Stingray/ENU/?guid=__developer_getting_started_user_accounts_html).
+You can purchase Stingray source code access from Autodesk for an additional fee. Contact us at [mailto:gamedev@autodesk.com](gamedev@autodesk.com) to request access. For more details, see the [Source Access Help](http://help.autodesk.com/view/Stingray/ENU/?contextId=SOURCE_ACCESS_HOME).
 
 ##What are the minimum system requirements for Stingray?
 
