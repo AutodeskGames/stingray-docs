@@ -42,10 +42,6 @@
 
 >Launches the **Creative Market** panel. Browse and purchase game assets from Creative Market.  See ~{ Download assets and example projects }~.
 
-**Front End Tests**
-
->Launches the **Front End Tests** tool with a series of tests to verify whether all data service specifications are met.
-
 **Dependency**
 
 >Launches the **Dependency** tool to check for file dependencies. <!-- TODO: Link to video tutorial when it's ready -->
@@ -90,10 +86,6 @@
 
 >Launches the ~{ Property Editor }~.
 
-**Script Debugger**
-
->Launches the **Script Debugger**. See ~{ Using the Script Debugger }~.
-
 **Script Editor**
 
 >Launches the **Script Editor**. See ~{ Using the Script Editor }~.
@@ -112,15 +104,15 @@
 
 ###ANIMATION
 
-**Anim Clip**
+**Clip Editor**
 
->Opens the ~{ Anim Clip Editor }~.
+>Opens the ~{ Animation Clip Editor }~.
 
 **Anim Controller**
 
 >Opens the ~{ Anim Controller Editor }~.
 
-**Skeleton**
+**Skeleton Editor**
 
 >Opens the **Skeleton Editor**
 

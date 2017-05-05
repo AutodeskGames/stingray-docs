@@ -15,7 +15,9 @@ The **Asset Browser** is the main way to browse and import assets in your game p
 | Narrow asset types displayed in File view area  | Click the Filter icon ![ ](../../images/icon_filter.png) and enable only the types you want. |
 | Edit an original source scene in your DCC tool | Right-click an asset and select **Open Source Asset**.  |
 | Refresh current window  | F5  |
+| Focus Search field | Ctrl + F |
 | Return to the last opened folder  | Backspace  |
+| View history of assets navigated to | Alt + left arrow or right arrow to navigate back and forth. |
 | Open selected asset in Windows Explorer  | Right-click the asset and select **Show in Explorer**.  |
 | Open a directory location in Windows Explorer  | Right-click anywhere in the **File View** and select **Show in Explorer**.  |
 | Update assets in a scene  | Right-click the assets and select **Re-import** option to import them again using the **Import FBX** options window. Note that the Re-import option displays only for units, animation clips and skeletons.|
@@ -36,6 +38,8 @@ When you select an asset in the file view area, a preview displays in the ~{ Ass
 
 Use the vertical slider between the tree view and file view to control how large or small the file icons in the file view display. At maximum zoom, the files display in a list. At minimum zoom, the file icons display full thumbnails, which are generated when the asset is imported or updated.
 
+>**Tip:** Press Ctrl + mouse wheel over the file view to change the zoom level.
+
 ### Read-only files
 
 The file view indicates read-only folders and resources using a lock icon: ![Locked resource](../../images/icon_read_only.png).
@@ -51,6 +55,8 @@ To remove the favorite bookmark, select the asset or folder, and uncheck the Fav
 ## Searching
 
 Use the Search field above the file view to search for resource names within the currently selected folder and its sub-folders.
+
+>**Tip:** Press Ctrl + F to focus the Search field.
 
 Click the config icon ![ ](../../images/icon_config.png) to set search options.
 
@@ -72,20 +78,28 @@ You can also use the configuration options ![ ](../../images/icon_config.png) to
 
 When working with assets, you often need to replicate assets like materials and animation clips to try out different variations. To do so, right-click the asset in the **Asset Browser**, select **Duplicate** and assign a name for the asset. This creates a duplicate asset which you can edit independently of the original asset. You can also duplicate folders in the Tree view making it easy to organize and customize your assets.
 
+>**Tip:** Press Ctrl + D to duplicate selected assets.
+
 ## Accessing online assets
 
 ![](../../images/online_assets.png)
 
-Use the **Online Assets** tab in the Tree view to browse, search and find online assets.To download and import an asset to use in your project, do any of the following:
+Use the **Online Assets** in the Tree view to browse, search and find online assets.
 
-  - Right-click an asset and select **Download Asset**, or click the **Download and install asset** icon ![](../../images/online_assets_download.png).
-  - Select an asset and click the **Download** button in the **Property Editor**.
+- To download an online asset, do any of the following:
 
-Click the yellow icon ![](../../images/icon_status_bar_cancel_progress.png) to cancel downloading of the asset. The online assets are not listed in the Asset Browser if the Online Assets server is disconnected from the cloud services.
+    - Right-click an asset and select **Download Asset**, or click the **Download and install asset** icon ![](../../images/online_assets_download.png).
+    - Select an asset and click the **Download** button in the **Property Editor**.
 
-Use the Search field to search for an online asset. The number of matching assets are listed next to the Online Assets tab.
+- To cancel downloading of the asset, click the yellow icon ![](../../images/icon_status_bar_cancel_progress.png).
 
-  >**Tip**: To view or locate a downloaded asset in your project, select an installed asset (indicated with a green checkmark) and either click ![](../../images/icon_asset_browser_locate.png) or right-click and select **Locate in Project**.
+- To search for an online asset, use the Search field. The number of matching assets are listed next to the **Online Assets**.
+
+- To hide **Online Assets** from the Asset view, uncheck *Online Assets* in the configuration option ![ ](../../images/icon_config.png).
+
+- To view or locate a downloaded asset in your project, select an installed asset (indicated with a green checkmark) and either click ![](../../images/icon_asset_browser_locate.png) or right-click and select **Locate in Project**.
+
+The online assets are not listed in the Asset Browser if the Online Assets server is disconnected from the cloud services.
 
 ---
 Related topics:

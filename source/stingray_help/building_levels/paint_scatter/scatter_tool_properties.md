@@ -17,7 +17,7 @@ When you create a new Scatter Brush, the following properties appear in the Prop
 
 <dt>Frequency</dt>
 
-<dd>Sets the weight of the currerntly selected unit in relation to the other units associated with your scatter brush.</dd>
+<dd>Sets the weight of the currently selected unit in relation to the other units associated with your scatter brush.</dd>
 
 
 <dt>Orientation</dt>

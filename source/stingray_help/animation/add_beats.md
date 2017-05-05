@@ -11,7 +11,7 @@ Using beats, you can create a beat called left when the left foot is forward and
 
 ## To add new beats or flow events:
 
-1. Open the ~{ Anim Clip Editor }~.
+1. Open the ~{ Animation Clip Editor }~.
 
 2. Right-click on the timeline, and select **Add Beat > New Beat** or **Add Flow Event > New Flow Event**.
 
@@ -19,17 +19,33 @@ Using beats, you can create a beat called left when the left foot is forward and
 
   ![Add Event options](../images/addBeatTrigger_options.png)
 
+  <dl>
+
+  <dt>Event type</dt>
+
+  <dd>Set to beat, or flow event.</dd>
+
+  <dt>Event name<dt>
+
+  <dd>Enter a name for this event.</dd>
+
+  <dt>Event time (Frames or Seconds)</dt>
+
+  <dd>Enter an exact frame value (or time in seconds depending on the toggle option) where you want the beat or flow event to occur. (By default the value is set to the frame where you right-click.)</dd>
+
+  </dl>
+
 (All events that you add – you right-click to create the event type/marker type.)
 
 ## To add existing beats or flow events:
 
-1. In the ~{ Anim Clip Editor }~ timeline, right-click on the frame where you want to add the beat or the flow event, click **Add Beat > Existing** or  **Add Flow Event > Existing** and select one of the existing beat or flow events.
+1. In the **Clip Editor** timeline, right-click on the frame where you want to add the beat or the flow event, click **Add Beat > Existing** or  **Add Flow Event > Existing** and select one of the existing beat or flow events.
 
   The beat or the flow event is set to the timeline and upon selection, you can view its properties in the **Property Editor**.
 
 ## To modify the beats or flow events on the timeline:
 
-1. Click the beat or the flow event on the **Anim Clip** editor timeline.
+1. Click the beat or the flow event on the **Clip Editor** timeline.
 
 2. In the **Property Editor**, select a different flow event in the **Name** field or set a new time.
 
