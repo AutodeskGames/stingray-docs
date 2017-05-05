@@ -26,7 +26,7 @@
 
 5. In the animation clip properties, toggle **Import Transform Curves**, **Import Blend Shape Channel Curves**, or **Import Extra Curves** to control the type of curves that are evaluated during playback.
 
-6. You can trim the imported animation clips in the ~{ Anim Clip Editor }~. See ~{ Trim animation clips }~.
+6. You can trim the imported animation clips in the ~{ Animation Clip Editor }~. See ~{ Trim animation clips }~.
 
 ---
 Related topics:

@@ -87,7 +87,7 @@ Dynamic actors that are "awake" are bright yellow. Sleeping actors are a dull ye
 
 Create some ragdolls and make sure that they go to sleep after a while. Try spawning them on different types of ground. Sometimes a ragdoll can sleep fine on flat ground, but will have problems in stairs or on ramps.
 
-## Skeleon LOD performance
+## Skeleton LOD performance
 
 Setting up skeleton LODs (levels of detail) improves performance by disabling the animation of small bones (such as fingers) at distances where their movement isn't visible. When animation is disabled for a bone it will freeze in its current position in local space.
 
