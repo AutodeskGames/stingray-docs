@@ -1,5 +1,7 @@
 # Create panel
 
+![UPDATED](../../images/updated.png)
+
 - **Window > Create**
 
 Lets you create standard game objects that can be placed and modified in the game level. See also ~{ Create game objects }~.
@@ -113,6 +115,11 @@ Splines are user-generated 3D curved paths, commonly used for constricting motio
 Lets you create a standard camera. See also ~{ Cameras in Stingray }~.
 
 ## Lights
+
+### Physical Light
+
+[![NEW](../../images/new.png "What else is new in v1.9?")](../../release_notes/readme_1.9.html)
+Lets you create a physical light entity. See also ~{ Physically Based Lighting }~ and ~{ Create a physical light }~.
 
 ### Light
 
