@@ -18,13 +18,13 @@ You can start the Stingray engine application from a command-line prompt, and pr
 	stingray_win64_dev.exe --toolchain "C:\Program Files\Autodesk\Stingray\<version>" --ini core/stingray_renderer/light_baker/standalone/light_baker --project-root <absolute path of the project's source data> --level <path of the level to bake, relative to the project root> --viewport-provider
 	~~~
 
--	`--toolchain` should point to the absolute path of your binaries directory.
+-	`--toolchain` should point to the absolute path of your binaries directory. Most users will find this under `C:\Program Files\Autodesk\Stingray\<version>`.
 
-  	For example, if you build your Stingray engine from source, and your root checkout of Stingray is `C:\work\stingray`, your binaries directory is located here: `C:\work\stingray\stingray\build\binaries`.
+  	If you build your Stingray engine from source, and your root checkout of Stingray is `C:\work\stingray`, your binaries directory is typically located here: `C:\work\stingray\build\binaries`.
 		
 -	`--project-root` should point to the absolute path of your project's source data.
 
-	For example, `C:/Stingray_Projects/New_Project`
+	For example, `C:\Stingray_Projects\New_Project`
 
 -	`--level` should point to the path of the level you want to bake.
 
