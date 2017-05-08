@@ -8,6 +8,8 @@ To generate lightmaps for your level, do the following:
 
 	- For each light, set the **Baking** option in the **Property Editor** to determine whether or not the light's direct illumination should be included in the lightmap. See ~{ Lightmap baking settings }~.
 
+	>**Important:** An object with a black base color can not receive any baked lighting. Avoid a pure black base color or color map if you want any light baking contribution for your object(s).
+
 	>**Note:** Stingray baker does not support box lights.
 
 1.	If you have made any changes to your level, units or lights, save the current level before you bake to ensure all of your changes are reflected correctly in the lightmaps.

@@ -41,6 +41,8 @@ Continuing the improvements from the previous release, the **Texture Manager** t
 
 ## Physically-based lights
 
+![](../images/physical_lights_rn.png)
+
 The new **Physical Light** entity lets you use data from real-world lights to create a realistic distribution of light in your scene. You can add a **Physical Light** from the **Create** panel, and adjust its **Brightness** and **Temperature** using new sliders in the **Property Editor**.  To emulate the distribution of a real-world light source, import an IES Light Profile and assign it to your light. Physical lights are fully compatible with the light baker, so your lights appear when you bake your scene. See ~{ Physically Based Lighting }~ and ~{ Create a physical light }~.
 
 ## Visual Studio Code Debugger
@@ -50,6 +52,10 @@ This release of Stingray replaces the **Script Debugger** with a Visual Studio C
 ## FBX Version 2018.1.1
 
 This release of Stingray picks up the latest version of FBX (2018.1.1), which provides various improvements and bug fixes.
+
+## Experimental feature: HoloLens updates
+
+A new HoloLens online project is now available in the **Project Manager**.
 
 ## What else is new?
 
