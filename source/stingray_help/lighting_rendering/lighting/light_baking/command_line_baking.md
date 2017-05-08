@@ -15,7 +15,7 @@ You can start the Stingray engine application from a command-line prompt, and pr
 2.  Enter the following command:
 
     ~~~
-    stingray_win64_dev.exe --toolchain "C:\Program Files\Autodesk\Stingray\<version>" --ini core/stingray_renderer/light_baker/standalone/light_baker --project-root <absolute path of the project's source data> --level <path of level to bake> --viewport-provider`
+    stingray_win64_dev.exe --toolchain "C:\Program Files\Autodesk\Stingray\<version>" --ini core/stingray_renderer/light_baker/standalone/light_baker --project-root <absolute path of the project's source data> --level <path of level to bake, relative path from the project root> --viewport-provider
     ~~~
 
 - --toolchain should point to the absolute path of your binaries directory.
