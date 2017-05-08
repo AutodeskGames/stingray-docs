@@ -1,6 +1,6 @@
 #Supported file formats
 
-##Textures
+## Textures
 
 - PNG
 - JPG
@@ -17,11 +17,12 @@
 
 >	**Note:** Stingray does not support multilayer EXR files.
 
-##Model Formats
-- FBX
+## Model Formats
 
-> **Note:** Stingray does not support OBJ files.
+-	FBX is the preferred format for importing 3D meshes, animations and materials.
 
-##Audio
+> **Note:** Stingray does not support OBJ files. For a sample plug-in that demonstrates how you could extend Stingray to bring in OBJ models, see [the SDK sample repository](https://github.com/AutodeskGames/stingray-plugin-api-samples/tree/master/samples/mesh_import) and [the companion page in the SDK Help](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_extend_editor_plugin_extensions_imports_html).
 
-- WAV
+## Audio
+
+You can use any audio file type [supported by Wwise](https://www.audiokinetic.com/library/edge/?source=Help&id=what_media_files_are_supported). Most projects use WAV files.
