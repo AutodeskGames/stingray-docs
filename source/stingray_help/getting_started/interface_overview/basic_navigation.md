@@ -6,7 +6,7 @@
 | ------------- | ------------- |
 | Pan  | Middle-drag or Alt + middle-drag  |
 | Zoom  | Scroll wheel or Alt + right-drag |
-| Orbit (tumble)  | Alt + drag |
+| Orbit (tumble)  | Alt + left-drag |
 | Frame a selected object |  Press F  |
 | Frame all objects  | Press A  |
 | Look around  | Right-drag |
@@ -27,7 +27,7 @@ You can also right-click and hold to enter game navigation mode, then use the fo
 | Move down  | Q |
 
 
-> **Tip:** To adjust viewport navigation speed in game mode, press W to move forward, then use your mouse scroll wheel to adjust speed. Scroll forward to move faster in the viewport, scroll backwards to move slower.
+> **Tip:** To adjust viewport navigation speed in game mode, press W to move forward, then use your mouse scroll wheel to adjust speed. Scroll forward to move faster in the viewport, scroll backwards to move slower. You can also press Shift to increase the speed of the camera while navigating in game mode or press Ctrl to decrease the speed.
 
 ---
 Related topics:
