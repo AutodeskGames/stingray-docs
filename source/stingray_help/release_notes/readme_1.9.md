@@ -58,9 +58,13 @@ This release of Stingray replaces the **Script Debugger** with a Visual Studio C
 
 This release of Stingray picks up the latest version of FBX (2018.1.1), which provides various improvements and bug fixes.
 
+## Clear coat improvements
+
+Clear coat is now more energy conserving, which reduces bloom when using a clear coat material.
+
 ## Experimental feature: HoloLens updates
 
-A new HoloLens online project is now available in the **Project Manager**.
+A new HoloLens project is now available in the **Online Projects** tab in the **Project Manager**.
 
 ## What else is new?
 
