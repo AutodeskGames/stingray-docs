@@ -51,8 +51,8 @@ You can print your own debug messages to the Stingray log from Flow or Lua. You 
 	stingray.Application.console_send(message)
 	~~~
 
-## The Lua debugger
+## Use a Lua debugger
 
-The Stingray Editor features a built-in debugger for your Lua code. You can use this system to set breakpoints, step through your code, and see the values of your variables at runtime.
+If your project's user interaction is written in Lua, you can get a lot of information about what your code is doing by connecting a debugger to your project. You can set *breakpoints* that automatically pause the game at specific places in your code, advance the code line-by-line or function-by-function, check and even modify the value of variables, etc. If you're new to debugging code, see ~{ Debugging Lua }~ for some background.
 
-For details on using this system, see ~{ Debugging Lua }~.
+We've developed an extension for [Visual Studio Code](https://code.visualstudio.com/) that makes all this possible in a free, open-source code editor. For specifics about using the Visual Studio Code extension, see [its documentation here](https://marketplace.visualstudio.com/items?itemName=jschmidt42.stingray-debug).

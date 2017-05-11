@@ -143,7 +143,7 @@ win32 = {
 
 `disable_implicit_sli = true`
 
-> VR SLI improves performance for VR applications, and uses multiple GPUs to accelerate stereo rendering. When a machine has two Nvidia GPUs connected by the SLI bridge, the driver takes care of utilizing the two GPUs while running on D3D11.  
+> VR SLI improves performance for VR applications, and uses multiple GPUs to accelerate stereo rendering. When a machine has two Nvidia GPUs connected by the SLI bridge, the driver takes care of utilizing the two GPUs while running on D3D11.
 >
 > When set to true, this setting tells the driver to stop using both GPUS, and the application takes care of utilizing the two GPUs instead.
 >
