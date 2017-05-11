@@ -27,6 +27,12 @@ Sections in this topic:
 
 * * *
 
+## Physically-based lights
+
+![](../images/physical_lights_rn.png)
+
+The new **Physical Light** entity lets you use data from real-world lights to create a realistic distribution of light in your scene. You can add a **Physical Light** from the **Create** panel, and adjust its **Brightness** and **Temperature** using new sliders in the **Property Editor**.  To emulate the distribution of a real-world light source, import an IES Light Profile and assign it to your light. Physical lights are fully compatible with the light baker, so your lights appear when you bake your scene. See ~{ Physically Based Lighting }~ and ~{ Create a physical light }~.
+
 ## Capture Frame Tool updates
 
 The Capture Frames tool has now been updated to be a frame capturing interface plugin tool with a separate encoder plug-in using the OpenEXR format (.exr). You can extend the encoder plug-in with other encoder formats to capture frames in different file formats.
@@ -43,12 +49,6 @@ Continuing the improvements from the previous release, the **Texture Manager** t
 
 -	~{ Create a texture template }~
 -	~{ Create a texture category }~
-
-## Physically-based lights
-
-![](../images/physical_lights_rn.png)
-
-The new **Physical Light** entity lets you use data from real-world lights to create a realistic distribution of light in your scene. You can add a **Physical Light** from the **Create** panel, and adjust its **Brightness** and **Temperature** using new sliders in the **Property Editor**.  To emulate the distribution of a real-world light source, import an IES Light Profile and assign it to your light. Physical lights are fully compatible with the light baker, so your lights appear when you bake your scene. See ~{ Physically Based Lighting }~ and ~{ Create a physical light }~.
 
 ## Visual Studio Code Debugger
 
