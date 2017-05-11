@@ -17,7 +17,7 @@
 | ------------- | ------------- |
 | Pan  | Alt + middle-drag  |
 | Zoom  | Scroll wheel or Alt + right-drag |
-| Orbit (tumble)  | Alt + drag |
+| Orbit (tumble)  | Alt + left-drag |
 
 ###Level Viewport Navigation - Game Mode
 | Action  | Hotkey |
@@ -31,7 +31,7 @@
 | Move down vertically  | Q  |
 | Look around  | Right-click and drag |
 
-> **Tip:** To adjust viewport navigation speed in game mode, press W to move forward, then use your mouse scroll wheel or press Shift to adjust speed. Scroll forward to move faster in the viewport, scroll backwards to move slower.
+> **Tip:** To adjust viewport navigation speed in game mode, press W to move forward, then use your mouse scroll wheel or press Shift to increase speed and press Ctrl to decrease speed. Scroll forward to move faster in the viewport, scroll backwards to move slower.
 
 ###Tool operations
 
@@ -48,7 +48,7 @@
 | Snap position  | X |
 | Snap rotation  | Z |
 | Select tool    | Q |
-| Toggle Window/Crossing selection | (when in Select mode) Q |
+| Toggle Window/Crossing marquee selection mode | (when in Select mode) Q |
 
 ###Edit operations
 

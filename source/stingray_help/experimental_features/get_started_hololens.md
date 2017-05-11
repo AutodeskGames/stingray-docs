@@ -15,7 +15,9 @@ When working on HoloLens you can do one of the following:
 - Add your project data to Visual Studio and deploy it to the device together with the engine executable.
 - Deploy the executable without data and then connect the editor to the device. This is similar to the workflow that's available for iOS. See ~{ Get started on iOS }~.
 
-A WIP Project for HoloLens testing purposes can be found as an Online Project in the Project Manager.
+A WIP project for HoloLens testing purposes can be found in the **Online Projects** tab in the **Project Manager**.
+
+![](../images/hololens_online_proj.png)
 
 ### Bundle project data ###
 

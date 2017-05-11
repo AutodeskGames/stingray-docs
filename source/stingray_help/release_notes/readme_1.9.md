@@ -27,11 +27,17 @@ Sections in this topic:
 
 * * *
 
+## Physically-based lights
+
+![](../images/physical_lights_rn.png)
+
+The new **Physical Light** entity lets you use data from real-world lights to create a realistic distribution of light in your scene. You can add a **Physical Light** from the **Create** panel, and adjust its **Brightness** and **Temperature** using new sliders in the **Property Editor**.  To emulate the distribution of a real-world light source, import an IES Light Profile and assign it to your light. Physical lights are fully compatible with the light baker, so your lights appear when you bake your scene. See ~{ Physically Based Lighting }~ and ~{ Create a physical light }~.
+
 ## Capture Frame Tool updates
 
 The Capture Frames tool has now been updated to be a frame capturing interface plugin tool with a separate encoder plug-in using the OpenEXR format (.exr). You can extend the encoder plug-in with other encoder formats to capture frames in different file formats.
 
-## Favorites
+## Favorites in Asset Browser
 
 You can add frequently used assets or folders as favorites ![](../images/icon_asset_favorites.png) to the **Favorites** directory in the **Asset Browser**. Check the favorite icon ![](../images/icon_asset_set_favorite.png) or right-click in the **Asset Browser** and select **Add to Favorites** to mark an asset or folder as favorite. You can also drag and drop assets and folders to the **Favorites** directory. For more information, see ~{ Asset Browser }~.
 
@@ -39,11 +45,10 @@ You can add frequently used assets or folders as favorites ![](../images/icon_as
 
 Continuing the improvements from the previous release, the **Texture Manager** tool is looking better than ever. The platform list looks crisp and compact, and headers added to the texture view list lets you view textures in an organized manner. You can organize your textures in the Texture Manager by sorting them by size, date modified or name. The Texture Manager also now preserves the state of UI layout you adjust like filters enabled or resized filter views.
 
-## Physically based lights
+![](../images/wn_updated_texture_manager.png)
 
-![](../images/physical_lights_rn.png)
-
-The new **Physical Light** entity lets you use data from real-world lights to create a realistic distribution of light in your scene. You can add a **Physical Light** from the **Create** panel, and adjust its **Brightness** and **Temperature** using new sliders in the **Property Editor**.  To emulate the distribution of a real-world light source, import an IES Light Profile and assign it to your light. Physical lights are fully compatible with the light baker, so your lights appear when you bake your scene. See ~{ Physically Based Lighting }~ and ~{ Create a physical light }~.
+-	~{ Create a texture template }~
+-	~{ Create a texture category }~
 
 ## Debug projects in Visual Studio Code
 
@@ -55,9 +60,13 @@ We're so happy about this new workflow, and so confident that you'll love it too
 
 This release of Stingray picks up the latest version of FBX (2018.1.1), which provides various improvements and bug fixes.
 
+## Clear coat improvements
+
+Clear coat is now more energy conserving, which reduces bloom when using a clear coat material.
+
 ## Experimental feature: HoloLens updates
 
-A new HoloLens online project is now available in the **Project Manager**.
+A new HoloLens project is now available in the **Online Projects** tab in the **Project Manager**.
 
 ## What else is new?
 
