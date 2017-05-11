@@ -1,7 +1,7 @@
 # Stingray 1.9 Release Notes
 <a name="top"></a>
 
-Stingray 1.9 (1.9.X.0) ...
+Welcome to the Stingray 1.9 (1.9.1358.0) Beta release.
 
 > **Important**: We strongly recommend that you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
@@ -68,7 +68,7 @@ A new HoloLens project is now available in the **Online Projects** tab in the **
 
 ## What else is new?
 
--	Removed the **History** tool from the Stingray Editor. You can view the list of actions executed and undo/redo actions in the Particle Editor or the Texture Manager.
+-	We have removed the **History** tool from the Stingray Editor. You can view the list of actions executed and undo/redo actions in the Particle Editor or the Texture Manager.
 
 [Return to top](#top)
 
@@ -152,20 +152,20 @@ A new HoloLens project is now available in the **Online Projects** tab in the **
 ## Flow
 
 - GAME-22828 Flow and Particle Editor: Cannot open editor if file is saved in a mapped folder
-- GAME-21290 Flow: Search box cyan highlight frame does not seem to be tall enough (only seen on sides)
-- GAME-20934 Flow: Nodes should automatically update for changed External Input/Output pins instead of giving an error
-- GAME-18119 Flow: Search bar should only count each field once
-- GAME-18111 Flow: There is no shortcut for going to next/previous search result
-- GAME-18106 Flow: Re-setting a Flow Subroutine to the same Flow resource clears all connections
+- GAME-21290 Search box cyan highlight frame does not seem to be tall enough (only seen on sides)
+- GAME-20934 Nodes should automatically update for changed External Input/Output pins instead of giving an error
+- GAME-18119 Search bar should only count each field once
+- GAME-18111 There is no shortcut for going to next/previous search result
+- GAME-18106 Re-setting a Flow Subroutine to the same Flow resource clears all connections
 - GAME-18099 Undoing removal of object referenced in a Flow node does not restore it in the Flow node
-- GAME-18092 Flow: Tab quick-search menu doesn't have tooltips
-- GAME-17349 Flow: Error message for a missing required input does not get shown in the status bar
-- GAME-12762 Flow: Right-click in the background should clear the Tab search results
-- GAME-12726 Flow: "Effect Resource" node "Resource" input should be renamed "Effect"
-- GAME-8883 Flow: Tab search and right-click context menu can both be on the screen at the same time
-- GAME-8094 Flow: When a larger node is under a smaller one, it always gets and stays highlighted as if selected
+- GAME-18092 Tab quick-search menu doesn't have tooltips
+- GAME-17349 Error message for a missing required input does not get shown in the status bar
+- GAME-12762 Right-clicking the background should clear the Tab search results
+- GAME-12726 "Effect Resource" node "Resource" input should be renamed "Effect"
+- GAME-8883 Tab search and right-click context menu can both be on the screen at the same time
+- GAME-8094 When a larger node is under a smaller one, it always gets and stays highlighted as if selected
 - GAME-16558 Double-clicking in the Level Flow Editor while compiling data produces an error
-- GAME-15099 Flow: Searching nodes inside collapsed groups focus empty space
+- GAME-15099 Searching nodes inside collapsed groups focus empty space
 - GAME-16369 Error thrown for a Flow node without a unit
 - GAME-18780 Subroutine nodes do not automatically refresh when saved
 - GAME-5269 Undoing a drag-and-drop into a group leaves the node in the group and requires two Ctrl-Z undos
@@ -177,7 +177,7 @@ A new HoloLens project is now available in the **Online Projects** tab in the **
 - GAME-23181 Connection to Stingray doesn't update properly in 3ds Max when Stingray connection changes
 - GAME-23122 Crash importing instanced geometry
 - GAME-22666 Maya level sync Set Engine Resource ignores values in dialog
-- GAME-22649 Maya -> Send to Stingray no longer works in developer builds
+- GAME-22649 Maya > Send to Stingray no longer works in developer builds
 - GAME-21933 No feedback to user when editor external applications path is not set
 - GAME-21838 Asset Browser: Should allow import of IVF video files
 - GAME-21669 Skeleton creation fails if an FBX is re-imported into same folder, even if the folder is empty
@@ -227,22 +227,22 @@ A new HoloLens project is now available in the **Online Projects** tab in the **
 
 ## Texture Manager
 
-- GAME-22732 Texture Manager: Only one texture is deleted/duplicated at a time when selecting multiple textures
-- GAME-22389 Texture Manager: When a texture category is deleted, related textures should have their category properties set to "No category."
+- GAME-22732 Only one texture is deleted/duplicated at a time when selecting multiple textures
+- GAME-22389 When a texture category is deleted, related textures should have their category properties set to "No category."
 - GAME-22358 Importing FBX with textures does not update the Texture Manager list
-- GAME-22195 Texture Manager: Long file paths makes it difficult to read the texture name
-- GAME-22159 Texture Manager: Typo in option 'Generate Mip Step'
-- GAME-22068 Texture Manager: Platforms checkbox list should be in a grid format
-- GAME-22067 Texture Manager: Filter checklists should have right-justified checkboxes
-- GAME-21970 Texture Manager: Cut Alpha Threshold slider can have negative values
-- GAME-21962 Texture Manager: Input image should accept image file instead of textures
-- GAME-21961 Texture Manager: Pressing Escape in the search/filter field should clear the field
-- GAME-21928 Texture Manager: Textures thumbnails don't update when changing projects
-- GAME-21920 Texture Manager: History panel does not use a resizer and is difficult to see
-- GAME-21889 Texture manager selects all platforms by default
-- GAME-21828 Texture Manager: Ctrl-Z and Ctrl-Y do not Undo/Redo
+- GAME-22195 Long file paths makes it difficult to read the texture name
+- GAME-22159 Typo in the option 'Generate Mip Step'
+- GAME-22068 Platforms checkbox list should be in a grid format
+- GAME-22067 Filter checklists should have right-justified checkboxes
+- GAME-21970 Cut Alpha Threshold slider can have negative values
+- GAME-21962 Input image should accept image file instead of textures
+- GAME-21961 Pressing Escape in the search/filter field should clear the field
+- GAME-21928 Textures thumbnails don't update when changing projects
+- GAME-21920 History panel does not use a resizer and is difficult to see
+- GAME-21889 Texture Manager selects all platforms by default
+- GAME-21828 Ctrl-Z and Ctrl-Y do not Undo/Redo
 - GAME-21803 Texture Manager doesn't update when deleting or duplicating textures until the window is reloaded
-- GAME-21788 Texture Manager: Create Template and Create Category are using the same icon
+- GAME-21788 Create Template and Create Category are using the same icon
 
 ## Tools Foundation
 
