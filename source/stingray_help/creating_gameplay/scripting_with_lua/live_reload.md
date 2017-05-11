@@ -10,7 +10,7 @@ This page describes how to recompile and reload your Lua scripts, and details a 
 
 2.	Scripts are not re-compiled immediately when you save them. You must force your script to be recompiled. In the Stingray Editor, press **F5** or select **Edit > Level Testing > Refresh** from the main menu. This updates your compiled data folder with the new version of the script.
 
-3.	Make your game reload the script by issuing the `refresh` console command through the Status bar. If you are running the project in standalone mode, use the **External Console**. See ~{ Send commands from the Status bar }~.
+3.	Make your game reload the script by issuing the `refresh` console command through the Status bar. See ~{ Send commands from the Status bar }~.
 
 See also ~{ Reloading resources }~.
 

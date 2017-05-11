@@ -37,7 +37,7 @@ Using both Lua and Flow together in combination, you can take advantage of the s
 -	Programmers can use Lua to code game logic into reusable functions, which they expose in custom Flow nodes.
 -	Level designers invoke those custom nodes from Flow when that gameplay logic is needed.
 
-This offers the best of both worlds. Your game designers benefit from the ability to construct interactive experiences out of building blocks without going to the deepest level of programming logic. They can also prototype creative new gameplay ideas on their own in Flow, and hand off to programmers for polishing, improvements to the algorithms or performance, or to make future maintenance easier. Meanwhile, your programmers benefit from the wider API available in Lua, the familiar scripting environment, and built-in development tools like the integrated debugger.
+This offers the best of both worlds. Your game designers benefit from the ability to construct interactive experiences out of building blocks without going to the deepest level of programming logic. They can also prototype creative new gameplay ideas on their own in Flow, and hand off to programmers for polishing, improvements to the algorithms or performance, or to make future maintenance easier. Meanwhile, your programmers benefit from the wider API available in Lua, the familiar scripting environment, and the possibility to use standard development tools like [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=jschmidt42.stingray-debug) to debug the behavior.
 
 See also ~{ Communicating between Flow and Lua }~.
 
