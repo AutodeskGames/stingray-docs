@@ -77,6 +77,7 @@
 |-----------|------------|
 | Toggle selection | Ctrl (or hold down Ctrl) |
 | Add objects to current selection | Shift |
+| Remove objects from current selection | Ctrl + Shift |
 
 >Note: See the selection outline on objects indicating which objects change their selection status in a marquee selection.
 
