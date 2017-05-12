@@ -50,9 +50,11 @@ Continuing the improvements from the previous release, the **Texture Manager** t
 -	~{ Create a texture template }~
 -	~{ Create a texture category }~
 
-## Visual Studio Code Debugger
+## Debug projects in Visual Studio Code
 
-This release of Stingray replaces the **Script Debugger** with a Visual Studio Code extension named **Stingray Visual Code Debugger**.
+You told us that you wanted to debug your projects in a dedicated, full-featured development and debugging environment, and we listened! As of now, you can use our [Stingray extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=jschmidt42.stingray-debug) to set and trigger breakpoints in Lua code, step through your code, trace variable values, send commands and Lua to the engine, read console messages, and more!
+
+We're so happy about this new workflow, and so confident that you'll love it too, that we've removed the old integrated **Script Debugger** from the Stingray editor.
 
 ## FBX Version 2018.1.1
 

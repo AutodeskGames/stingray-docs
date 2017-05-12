@@ -37,25 +37,3 @@ The **Script Editor** integrates both Lua documentation and Lua command auto-com
 | Accept suggestion           | Tab  or Enter   |
 
 > **Tip:** To send single line Lua scripts or predefined commands to a running game, you can use the ~{ Status bar }~.
-
-## Debugging tools
-
-This part of the toolbar contains the same debugging tools as the **Script Debugger**. For details, see ~{ Using the Script Debugger }~.
-
-![Debug Tools](../../images/comp_debugger_toolbar.png)
-
--	The **Script Editor** shows breakpoints as red circles to the left of the line numbers.
--	When a breakpoint is hit and code execution is paused, the location of the top of the call stack is displayed as a yellow highlighted area in the gutter.
--	While broken, you can get the values of current local variables by hovering the mouse cursor over the variable name.
-- When debugging, you can test a selected piece of Lua code by right-clicking the selected text and selecting **Evaluate in Engine**.
-
-| Task overview |
-| ------------- | ------------- |
-| **To set or unset a breakpoint**  | Left-click the gutter to the left of the line number, or use **F9** to toggle a breakpoint on the current line.|
-| **To enable or disable a breakpoint**  | Right-click the breakpoint circle.|
-
----
-Related topics:
--	~{ Debugging Lua }~
--	~{ Using the Script Debugger }~
----

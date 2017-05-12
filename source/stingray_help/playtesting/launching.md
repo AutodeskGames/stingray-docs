@@ -10,7 +10,7 @@ Use any of the following methods:
 
 -	From the main menu, select **Edit > Level Testing > Test Level**.
 -	Use the **F8** hotkey.
--	Click the ![Play](../images/icon_Play.png) icon in the **Level Viewport** panel, in the **Script Editor**, or in the **Script Debugger**.
+-	Click the ![Play](../images/icon_Play.png) icon in the **Level Viewport** panel.
 
 > **Note:** it is up to the project's Lua boot code to support starting with the current level. If you use the Appkit's `SimpleProject` in your game (like any of the template projects provided with Stingray), this is done for you. If you write your own Lua boot script, you will need to support it yourself if you want. See ~{ Loading the current level for testing }~.
 
