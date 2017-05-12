@@ -14,7 +14,7 @@ If you're already familiar with using a debugger, head over to [the extension's 
 
 For novice programmers, writing code can be an intimidating enough task on its own. Many shy away from learning how to use tools to help debug that code, concentrating instead on "simpler" ways to get feedback from the code, like printing debug messages.
 
-However, learning to use debugging tools effectively is a worthwhile investment. It can make you far more efficient at isolating problems, but also encourages a mindset and coding habits that help avoid producing similar bugs in future.
+However, learning to use debugging tools effectively is a worthwhile investment. It can make you far more efficient at isolating problems, but also encourages a mindset and coding habits that help you avoid producing similar bugs in future.
 
 Like programming itself, debugging works best when you approach the problem in a structured way rather than diving in just anywhere. Make *hypotheses* about your code first, and use the debugging tools to test those hypotheses. For example, where do you think the problem might be located? Why? How would you tell if the problem occurs there or not? What assumptions does your code make? How could you test whether or not those assumptions are really valid?
 
@@ -30,7 +30,7 @@ Using a debugger to track down problems in your code typically follows three mai
 
 	You typically pause a game by setting markers called *breakpoints* at specific lines in your Lua scripts. Do this in Visual Studio Code by opening the Lua file that contains the code you want to interrupt, and clicking in the left margin next to the line numbers. When the game runs your Lua script and reaches that line, it will automatically pause the game.
 
-	You can also pause a running game at any time by hitting the pause icon in the Visual Studio Code debugging toolbar while you're connected to the engine. TODO: can you?
+	You can also pause a running game at any time by hitting the pause icon in the Visual Studio Code debugging toolbar while you're connected to the engine.
 
 2.	**Inspect the code.**
 
@@ -58,8 +58,8 @@ You can only debug the engine while it's running in `dev` configuration. For per
 
 That means that you can debug:
 
--	when you use the Test Level feature to launch your project from the Stingray editor.
--	when you use the Run Project feature to launch your project from the Stingray editor, on any target platform.
+-	when you use Test Level to launch your project from the Stingray editor. ![Test Level](../../images/icon_Play.png)
+-	when you use Run Project to launch your project from the Stingray editor, on any target platform. ![Test Level](../../images/icon_playGame.png)
 -	the engine that the editor runs internally.
 -	a standalone build that you package with the `dev` configuration.
 
