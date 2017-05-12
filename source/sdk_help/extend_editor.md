@@ -16,8 +16,6 @@ This section provides some tips on getting started extending the editor with you
 
 	For more on programming in the editor's JavaScript environment, see ~{ Tips for developing plug-ins }~, and ~{ Use built-in editor services }~.
 
-	See also the [editor JavaScript reference documentation](editor_js/index.html), which contains a browsable companion to the JavaScript APIs offered by the editor's services and extensions.
-
 3.	For many plug-ins, you'll need to create some UI for users working in the editor to interact with. The editor extensions make it relatively easy to set up HTML panels whose data and interactions are controlled by JavaScript modules. You can set this up however you want -- if you're already comfortable using a web front-end development framework to set up the binding between your page UI, you should be able to use your preferred tech.
 
 	The panels and views in the Stingray editor mostly use [Mithril](http://mithril.js.org/), and sometimes [Angular.js](https://angularjs.org/). If you can, we highly recommend using Mithril for your own plug-in, since you'll be able to steal more liberally from existing plug-ins. You also may be able to re-use shared UI widgets that you'll find in the *editor/core/components* folder.

@@ -72,6 +72,16 @@ A new HoloLens project is now available in the **Online Projects** tab in the **
 
 -	We have removed the **History** tool from the Stingray Editor. You can view the list of actions executed and undo/redo actions in the Particle Editor or the Texture Manager.
 
+## What's new for developers?
+
+### Typescript and the JavaScript API reference
+
+We're starting to move the editor's front-end JavaScript code to [TypeScript](https://www.typescriptlang.org/)! This won't change your life much as a plug-in developer, since the changes for now are mostly about how we manage our own source code in our repo. You can keep doing your editor plug-ins in plain JavaScript the way you have been.
+
+But we wanted to mention that as a result of this change, we're also taking out our old JavaScript API reference docs for now. We don't think this is a terrible loss -- since they never fully covered the whole public API, you often had to go look for functions directly in the editor's source files anyway.
+
+Our hope is that before long we'll be able to leverage the built-in type info in the new TypeScript code to generate a much more complete and more useful reference than we had before.
+
 [Return to top](#top)
 
 ## What's Fixed

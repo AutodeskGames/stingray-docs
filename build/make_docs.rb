@@ -96,14 +96,6 @@ def build()
 	if $options[:sdk_help] or $options[:all]
 		puts "Building the Stingray SDK Help..."
 		output_path = "output/sdk_help/#{$lang_dir}/preview"
-		if $lang_import_dir == ""
-			# Run reference doc generation in the engine submodule
-			ENV["SR_DOCTOOLS_DIR"] = $doctools_dir
-			ENV["SR_DOC_DIR"] = "#{$script_dir}/.."
-			system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--editor-javascript")
-			ENV["SR_DOC_DIR"] = ""
-			ENV["SR_DOCTOOLS_DIR"] = ""
-		end
 		# Generate the help and bundle it
 		puts "Generating and bundling the SDK help..."
 		ENV["SR_ENGINE_DIR"] = "#{$engine_dir}".gsub("/","\\")
