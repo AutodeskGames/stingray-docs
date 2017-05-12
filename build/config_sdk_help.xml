@@ -30,9 +30,6 @@
 		<search_filter id="concept" include_expression="sdk_help/.*\.htm">
 			<label lang="en">Search concept topics?</label>
 		</search_filter>
-		<search_filter id="editor_js" include_expression="editor_js/.*\.htm">
-			<label lang="en">Search editor JavaScript API?</label>
-		</search_filter>
 		<search_filter id="editor_c" include_expression="editor_c/.*\.htm">
 			<label lang="en">Search editor C API?</label>
 		</search_filter>
@@ -89,19 +86,6 @@
 			<first_entry_title>Custom C Flow node description format</first_entry_title>
 			<first_entry_title lang="ko">사용자 정의 C 흐름 노드 설명 형식</first_entry_title>
 			<first_entry_title lang="ja">カスタム C フロー ノードの記述形式</first_entry_title>
-		</merge_toc_config>
-	</merge>
-
-	<merge id="editor_js">
-		<source>%SR_ENGINE_DIR%\docs\output\editor_javascript\*.*</source>
-		<apply_template>false</apply_template>
-		<merge_toc_config>
-			<source type="iframe">index.html</source>
-			<parent_filename>*\extend_editor.html</parent_filename>
-			<first_entry_title>Editor JavaScript API Reference</first_entry_title>
-			<first_entry_title lang="ko">Editor JavaScript API Reference</first_entry_title>
-			<first_entry_title lang="ja">Editor JavaScript API Reference</first_entry_title>
-			<promote_first_topic>false</promote_first_topic>
 		</merge_toc_config>
 	</merge>
 
