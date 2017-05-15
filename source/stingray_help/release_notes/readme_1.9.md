@@ -66,7 +66,7 @@ Clear coat is now more energy conserving, which reduces bloom when using a clear
 
 ## Experimental feature: HoloLens updates
 
-A new HoloLens project is now available in the **Online Projects** tab in the **Project Manager**.
+A new experimental HoloLens project is now available for *source code customers* in the **Online Projects** tab in the **Project Manager**. See ~{ Get started on HoloLens }~.
 
 ## What else is new?
 

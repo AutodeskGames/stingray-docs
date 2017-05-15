@@ -17,6 +17,8 @@ When working on HoloLens you can do one of the following:
 
 A WIP project for HoloLens testing purposes can be found in the **Online Projects** tab in the **Project Manager**.
 
+>**Note:** This project is available only for source code customers.
+
 ![](../images/hololens_online_proj.png)
 
 ### Bundle project data ###
