@@ -62,6 +62,8 @@ This release of Stingray picks up the latest version of FBX (2018.1.1), which pr
 
 ## Clear coat improvements
 
+![](../images/clear_coat_rn.png)
+
 Clear coat is now more energy conserving, which reduces bloom when using a clear coat material.
 
 ## Experimental feature: HoloLens updates
@@ -304,6 +306,14 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 The full installation guide for Autodesk products including Stingray is included in the Stingray online help, [here](http://www.autodesk.com/stingray-install-ENU "here").
 
 This section explains the improvements and fixes that require specific upgrade steps for users currently using a previous version of Stingray.
+
+### Shader compiler updates
+
+The D3D10 compatibility flag, *D3D10_SHADER_ENABLE_BACKWARDS_COMPATIBILITY*, has been removed from the D3D11 shader compiler. This change affects users with custom shaders. Without the compatibility flag, you can no longer modify shader constants, as they are now considered static.  To modify values, you now need to create local variables.
+
+### Clear coat changes
+
+Updates have been made to improve clear coat. As a result, the behavior of the `Output` node has changed. If your project contains a clear coat material, you may need to adjust your content.
 
 ### Lua API changes
 
