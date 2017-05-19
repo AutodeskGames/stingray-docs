@@ -19,7 +19,7 @@ The **Asset Browser** is the main way to browse and import assets in your game p
 | Return to the last opened folder  | Backspace  |
 | View history of assets navigated to | Alt + left arrow or right arrow to navigate back and forth. |
 | Open selected asset in Windows Explorer  | Right-click the asset and select **Show in Explorer**.  |
-| Open a directory location in Windows Explorer  | Right-click anywhere in the **File View** and select **Show in Explorer**.  |
+| Open a folder location in Windows Explorer  | Right-click anywhere in the **File View** and select **Show in Explorer**.  |
 | Update assets in a scene  | Right-click the assets and select **Re-import** option to import them again using the **Import FBX** options window. Note that the Re-import option displays only for units, animation clips and skeletons.|
 | Duplicate assets and folders | Right-click assets and select **Duplicate**. For folders in the Asset Browser, right-click and select **Duplicate Folder**. |
 
@@ -48,7 +48,7 @@ The file view indicates read-only folders and resources using a lock icon: ![Loc
 
 [![NEW](../../images/new.png "What else is new in v1.9?")](../../release_notes/readme_1.9.html)
 
-The **Favorites** directory lists the assets and folders you bookmark as a favorite ![](../../images/icon_asset_favorites.png). To add a frequently used asset or folder as a favorite, check the favorite icon ![](../../images/icon_asset_set_favorite.png) beside the asset/folder or right-click and select **Add to Favorites**. You can also drag and drop assets and folders to the **Favorites** directory.  
+The **Favorites** lists the assets and folders you bookmark as a favorite ![](../../images/icon_asset_favorites.png). To add a frequently used asset or folder as a favorite, check the favorite icon ![](../../images/icon_asset_set_favorite.png) beside the asset/folder or right-click and select **Add to Favorites**. You can also drag and drop assets and folders to the **Favorites**.  
 
 To remove the favorite bookmark, select the asset or folder, and uncheck the Favorites icon or right-click and select **Remove from Favorites**. You can also hide the **Favorites** from the Asset view by unchecking *Favorites* in the configuration option ![ ](../../images/icon_config.png).
 
