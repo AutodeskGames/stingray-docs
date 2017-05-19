@@ -18,9 +18,9 @@ To install the PhysX plug-in for your DCC tool:
 
 When exporting PhysX data from Maya or Maya LT to Stingray, ensure you specify the correct unit scaling for export. Stingray requires the data in meters.
 
-In the PhysX plug-in, set the value of **PhysX > nxRigidSolver1 > Scene Attributes > Scale Manual** to convert from the unit used in Maya to meters.
+You’ll find that the scaling for exported PhysX data is handled in **File > Export All (or Export Selected) > Output Scaling Factor**. Depending on the conversion units selected in the **Output Unit**, the **Scaling Factor** displays the scale factor for the exported units. To manually add the scale factor, enable the **Custom Scaling**. The **Output Unit** is set to meter by default.
 
-For example, if your scene is using cm, set the **Scale Manual** value to 0.01. When working in inches, set the value to 0.0252.
+![](../../images/physx_export_scalefactor.png)
 
 This ensures the correct correlation between meshes, PhysX actors, and global-anchored joints in Stingray with the unit or coordinate system you use in Maya, and the unit you set for your FBX scene export.
 

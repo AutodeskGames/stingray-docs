@@ -1,12 +1,12 @@
 # Import animation clips
 
-1. In the **Asset Browser**, navigate to the directory where you want to import animation clips.
+1. In the **Asset Browser**, navigate to the folder where you want to import animation clips.
 
 	In general, it's a good idea to keep animation clips in a separate folder alongside the units they will animate. <br>For example, `content/models/my_Character/animations`
 
 	This helps you keep track of which animations belong to which character. Prefixing your animation clips with  the character name is also a good habit. For example, an idle animation for a predator character would be chr_predator_idle.fbx.
 
-1. Right-click in your animation directory and select **Import Asset**.
+1. Right-click in your animation folder and select **Import Asset**.
 
 1. Browse to select an FBX animation clip and click **Open**.
 

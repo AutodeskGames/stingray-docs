@@ -103,4 +103,4 @@ You'll add an event for each of the animation clips you want the controller to i
 
 1.  Click the Save icon ![](../images/animCtrl_saveIcon.png).
 
-	Always save the animation controller in the same directory as your character: for example, `content/models/*characterName*/`.
+	Always save the animation controller in the same folder as your character: for example, `content/models/*characterName*/`.
