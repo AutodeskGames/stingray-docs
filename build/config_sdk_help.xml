@@ -131,7 +131,8 @@
 							"_FUNCTIONAL_=1"</tag>
 		<tag name="ALWAYS_DETAILED_SEC">NO</tag>
 		<tag name="REPEAT_BRIEF">NO</tag>
-		<run_adoc_from_xml index_file="%SR_ENGINE_DIR%\docs\source\editor_c\mainpage.md">true</run_adoc_from_xml>
+		<run_adoc_from_xml index_file="%SR_ENGINE_DIR%\docs\source\editor_c\mainpage.md"
+			version_history="%SR_DOC_DIR%\source\editor_c\versions">true</run_adoc_from_xml>
 	</doxygen>
 
 	<doxygen id="engine_c">
@@ -182,7 +183,8 @@
 		<tag name="ENABLE_PREPROCESSING">YES</tag>
 		<tag name="PREDEFINED"></tag>
 		<tag name="SUBGROUPING">NO</tag>
-		<run_adoc_from_xml index_file="%SR_ENGINE_DIR%\docs\source\engine_c\mainpage.md">true</run_adoc_from_xml>
+		<run_adoc_from_xml index_file="%SR_ENGINE_DIR%\docs\source\engine_c\mainpage.md"
+			version_history="%SR_DOC_DIR%\source\engine_c\versions">true</run_adoc_from_xml>
 	</doxygen>
 
 </ADE_HTML_2_1_tools_Config>
