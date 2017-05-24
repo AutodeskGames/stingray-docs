@@ -315,14 +315,46 @@ The D3D10 compatibility flag, *D3D10_SHADER_ENABLE_BACKWARDS_COMPATIBILITY*, has
 
 Updates have been made to improve clear coat. As a result, the behavior of the `Output` node has changed. If your project contains a clear coat material, you may need to adjust your content.
 
+### Entity and component APIs
+
+TODO
+
+These changes affect almost all entity component functions, so if you're using Lua or C to interact with entities, you'll probably need to update your code.
+
+For some technical background about why this change is good, have a look at [this blog post](http://bitsquid.blogspot.ca/2017/05/rebuilding-entity-index.html).
+
 ### Lua API changes
 
 For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](../../lua_ref/versions.html).
 
 If your project contains any API elements that have been modified or removed, you will need to adjust your code accordingly.
 
-### Flow node changes
+The main changes are:
 
-For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
+-	The APIs for creating, accessing and managing entity components has changed. See the [Entity and component APIs] section above.
+
+-	Most `HumanIK` functions that previously took a context index now require a unit instead. The functions automatically retrieve the context associated with that unit.
+
+### Plug-in SDK changes for developers
+
+#### Engine C APIs
+
+For a complete list of all new, modified, and removed elements in the engine plug-in API and C script APIs in this release, see the [version history](help.autodesk.com/cloudhelp/ENU/Stingray-SDK-Help/engine_c/versions.html).
+
+The main changes are:
+
+-	The APIs for creating, accessing and managing entity components has changed. See the [Entity and component APIs] section above. In addition, we've changed the way you get the C APIs for entities and components. TODO: Extension API, etc.
+
+-	TODO:Input has changed, now matches the Lua API better.
+
+#### Editor C APIs
+
+For a complete list of all new, modified, and removed elements in the editor plug-in API in this release, see the [version history](help.autodesk.com/cloudhelp/ENU/Stingray-SDK-Help/editor_c/versions.html).
+
+TODO: No upgrade requirements, should be binary compatible and API compatible.
+
+#### Editor JavaScript changes
+
+-	paths to local modules within a plug-in need to be prefixed with `@` -- TBD: what paths, in what cases?
 
 [Return to top](#top)
