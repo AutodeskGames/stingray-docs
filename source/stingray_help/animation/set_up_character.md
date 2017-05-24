@@ -28,11 +28,11 @@
 
 (See ~{ Import animation clips }~.)
 
-1. In the **Asset Browser**, browse to the directory you created for your character mesh.
+1. In the **Asset Browser**, browse to the folder you created for your character mesh.
 
 	Example: `content/models/new_character/animations`.
 
-1. Right-click in this directory and select **Import Asset**, then browse to select an animation clip and click **Open**.
+1. Right-click in this folder and select **Import Asset**, then browse to select an animation clip and click **Open**.
 
 1. In the **Import FBX** options, turn off **Unit Mesh**, then set the following:
 

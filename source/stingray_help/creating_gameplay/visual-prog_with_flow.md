@@ -18,7 +18,7 @@ The ~{ Level Flow Editor }~ (**Window > Level Flow Editor**) handles all of the 
 
 To create logic specific to a given unit such a character, prop, or other object, you'll use the **Unit Flow** tab in the ~{ Unit Editor }~. This is useful for doing things like character controls, effects on props, and so on.
 
-Level flow graphs are saved alongside your level files (in the same directory in the **Asset Browser**), and unit flow graphs are saved alongside unit files.
+Level flow graphs are saved alongside your level files (in the same folder in the **Asset Browser**), and unit flow graphs are saved alongside unit files.
 
 ---
 Related topics:
