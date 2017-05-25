@@ -1,6 +1,6 @@
 ﻿# Hotkeys
 
-###General Level Viewport
+### General Level Viewport
 
 | Action  | Hotkey |
 | ------------- | ------------- |
@@ -10,16 +10,17 @@
 | Show grid | G |
 | Grid size  | Ctrl + G |
 | Refresh  | F5 |
+| Play level  | F8  |
 
 
-###Level Viewport Navigation
+### Level Viewport Navigation
 | Action  | Hotkey |
 | ------------- | ------------- |
 | Pan  | Alt + middle-drag  |
 | Zoom  | Scroll wheel or Alt + right-drag |
 | Orbit (tumble)  | Alt + left-drag |
 
-###Level Viewport Navigation - Game Mode
+### Level Viewport Navigation - Game Mode
 | Action  | Hotkey |
 | ------------- | ------------- |
 | Enter game mode navigation  | Right-click and hold  |
@@ -33,24 +34,23 @@
 
 > **Tip:** To adjust viewport navigation speed in game mode, press W to move forward, then use your mouse scroll wheel or press Shift to increase speed and press Ctrl to decrease speed. Scroll forward to move faster in the viewport, scroll backwards to move slower.
 
-###Tool operations
+### Manipulate tool operations
 
 | Action  | Hotkey |
 | ------------- | ------------- |
-| Play level  | F8  |
-| Placement tool  | T |
-| Clone tool  | Shift + drag  |
+| Select tool    | Q |
 | Move (Transform) tool  | W  |
-| Toggle World/Local Transform  | (when in Transform mode) W  |
 | Rotate tool  | E  |
-| Toggle World/Local Rotation  | (when in Rotate mode) E  |
 | Scale tool  | R  |
+| Placement tool  | T |
 | Snap position  | X |
 | Snap rotation  | Z |
-| Select tool    | Q |
+| Clone   | (when in Transform, Rotate or Scale mode) Shift + drag  |
+| Toggle World/Local Transform  | (when in Transform mode) W  |
+| Toggle World/Local Rotation  | (when in Rotate mode) E  |
 | Toggle Window/Crossing marquee selection mode | (when in Select mode) Q |
 
-###Edit operations
+### Edit operations
 
 | Action  | Hotkey |
 | ------------- | ------------- |
@@ -59,7 +59,7 @@
 | Duplicate  | Ctrl + D  |
 | Delete  | Delete |
 
-###File operations
+### File operations
 
 | Action  | Hotkey |
 | ------------- | ------------- |
@@ -71,7 +71,7 @@
 | **Project Manager**  | Alt + F7 |
 | Quit  | Ctrl + Q |
 
-###Selection and marquee selection
+### Selection and marquee selection
 
 | Action   |  Hotkey  |
 |-----------|------------|
@@ -81,7 +81,7 @@
 
 >Note: See the selection outline on objects indicating which objects change their selection status in a marquee selection.
 
-###Terrain
+### Terrain
 
 | Action  | Hotkey |
 | ------------- | ------------- |
@@ -91,7 +91,7 @@
 | Brush strength  | M + right-drag |
 
 
-###Miscellaneous
+### Miscellaneous
 
 | Action  | Hotkey |
 | ------------- | ------------- |

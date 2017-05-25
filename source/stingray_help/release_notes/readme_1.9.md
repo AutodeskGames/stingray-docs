@@ -69,11 +69,12 @@ Clear coat is now more energy conserving, which reduces bloom when using a clear
 ## Experimental feature: HoloLens updates
 
 - A new experimental HoloLens project is now available for *source code customers* in the **Online Projects** tab in the **Project Manager**. See ~{ Get started on HoloLens }~.
-- A new raycasting Lua function (`mesh_both_sides`) lets you cast a ray against both sides of triangles. This parameter is needed for raycasting against a spatial mapping mesh on HoloLens. 
+- A new raycasting Lua function (`mesh_both_sides`) lets you cast a ray against both sides of triangles. This parameter is needed for raycasting against a spatial mapping mesh on HoloLens.
 
 ## What else is new?
 
 -	We have removed the **History** tool from the Stingray Editor. You can view the list of actions executed and undo/redo actions in the Particle Editor or the Texture Manager.
+- The viewport option ![](../images/icon_assetPreview.png) to toggle playing of audio sources in the level is now renamed to **Play Audio Sources**.
 
 ## What's new for developers?
 
