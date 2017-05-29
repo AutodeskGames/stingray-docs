@@ -6,7 +6,7 @@ The **Physical Light** entity lets you use data from real-world lights to create
 
 ## To create a physical light
 
-1. In the the **Create** panel, select the **Physical Light** and drag-and-drop it into your scene.
+1. In the **Create** panel, select the **Physical Light** and drag-and-drop it into your scene.
 
 	![](../../../images/physical_light_create.png)
 
