@@ -69,7 +69,6 @@
 | Save All  | Ctrl + Shift + S |
 | Import  | Ctrl + I |
 | **Project Manager**  | Alt + F7 |
-| Quit  | Ctrl + Q |
 
 ### Selection and marquee selection
 
