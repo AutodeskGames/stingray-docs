@@ -86,6 +86,22 @@ But we wanted to mention that as a result of this change, we're also taking out 
 
 Our hope is that before long we'll be able to leverage the built-in type info in the new TypeScript code to generate a much more complete and more useful reference than we had before.
 
+### Native zip support for editor plug-ins
+
+The `stingray.fs` JavaScript API now offers built-in support for working with *.zip* files:
+
+`stingray.fs.zip(folderPath:string, zipFilePath: string): boolean`
+
+Creates a new zip file from the contents of *folderPath*, and names the new zip file *zipFilePath*. The return value indicates whether the new file was written.
+
+`stingray.fs.zipinfo(zipFilePath: string): array.<{path:string, size:number}>`
+
+Reads a zip file named *zipFilePath*, and returns an array of all objects contained in the zip. Each object in the array has a `path` member that identifies its filename within the zip, and a `size` member that contains its size when uncompressed.
+
+`stingray.fs.unzip(zipFilePath:string, destinationPath: string): boolean`
+
+Reads a zip file named *zipFilePath*, and extracts its contents to the folder named *destinationPath*. The return value indicates whether the extraction was completed successfully.
+
 [Return to top](#top)
 
 ## What's Fixed
