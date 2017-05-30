@@ -102,6 +102,19 @@ Reads a zip file named *zipFilePath*, and returns an array of all objects contai
 
 Reads a zip file named *zipFilePath*, and extracts its contents to the folder named *destinationPath*. The return value indicates whether the extraction was completed successfully.
 
+### Run Lua from JavaScript and get its result in a Promise
+
+The JavaScript `engine-service` offers a new function, `evaluateScript()`. This function runs a Lua script in the engine's Lua environment, and returns a `Promise` that you can use to access the result of that Lua script. This makes it much easier for your plug-in's JavaScript code to get and use the results of Lua snippets, using the same asynchronous mechanism you use to call other JavaScript services provided by the editor.
+
+For example:
+
+~~~{js}
+let snippet = "6 * 8";
+engineService.evaluateScript(script).then(
+	function (result) { console.log("The result is: " + result); }
+);
+~~~
+
 [Return to top](#top)
 
 ## What's Fixed
