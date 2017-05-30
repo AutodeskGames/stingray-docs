@@ -344,3 +344,13 @@ If your project contains any API elements that have been modified or removed, yo
 For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
 
 [Return to top](#top)
+
+### Xbox One XDK version
+
+Stingray now requires the **October 2016 QFE 2** release of the XDK.
+
+### PlayStation 4 SDK version
+
+Stingray now requires **Version 4.0** of the PlayStation 4 SDK.
+
+If you have trouble upgrading to this version from an older version of the SDK, try deleting any existing files from the `C:\ProgramData\SCE directory` before you install.
