@@ -60,6 +60,10 @@ We're so happy about this new workflow, and so confident that you'll love it too
 
 This release of Stingray picks up the latest version of FBX (2018.1.1), which provides various improvements and bug fixes.
 
+## Updated DCC interop plug-ins
+
+This release also includes an updated Stingray DCC Link plug-in to support Maya 2018 and Maya LT 2018. For information on the plug-ins, see ~{ Interop with Maya, Maya LT, or 3ds Max }~.
+
 ## Clear coat improvements
 
 ![](../images/clear_coat_rn.png)
@@ -73,6 +77,7 @@ Clear coat is now more energy conserving, which reduces bloom when using a clear
 
 ## What else is new?
 
+-	You can now exclude physics actors from navmesh generation by adding their shape templates in the **Excluded Physics Actor Shape Template** field in the ~{ Navigation options }~.
 -	We have removed the **History** tool from the Stingray Editor. You can view the list of actions executed and undo/redo actions in the Particle Editor or the Texture Manager.
 - The viewport option ![](../images/icon_assetPreview.png) to toggle playing of audio sources in the level is now renamed to **Play Audio Sources**.
 

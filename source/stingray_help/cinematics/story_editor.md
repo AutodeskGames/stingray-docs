@@ -46,7 +46,7 @@ The **Story Editor** toolbar includes the following:
 | **Key & Tangent options** ![](../images/comp_storyEd_keyOptions.png) | Use the key and tangent options to add or remove keyframes and tangent modes. |
 | **Story Selection mask** ![](../images/icon_storyEd_selOnlyStory.png) | Masks selection so that you can select only objects in the current story.|
 | **Onion skinning** ![](../images/icon_storyEd_onionskin.png) | Toggles the display of ghosting on selected units. Right-click to specify whether to ghost **Everything**, or only **Selected units**. To access additional **Onion Skinning Settings** (including color) in the **Properties** panel, select a `StoryRoot` in the **Story Editor** tree view, or in the main **Explorer** panel. |
-| **Capture Frames Tool** | Opens the ~{ Capture Frames Tool }~. See also ~{ Capture frames to disk }~. |
+| **Capture Frames Tool** ![](../images/icon_capture_frame.png) | Opens the ~{ Capture Frames Tool }~. A Story must be selected to start capturing the frames. See also ~{ Capture frames to disk }~. <br>**Note:** The **Story Editor** need not be "Live" for a frame capture. |
 | **Curve editor/Key editor** ![](../images/icon_storyEd_wrench.png) | Use the curve icon in the toolbar to switch between the different editing views in this area. <br>Curve editing mode: ![](../images/storyEd_curvePanel.png) <br> **Tip:** Select keys on the same curve and enter a value in the edit key field on the toolbar to edit multiple keys at once. <br> Key editing mode: ![](../images/storyEd_keysPanel.png) |
 
 **Controlling story playback**

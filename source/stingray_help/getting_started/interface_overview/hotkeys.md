@@ -45,7 +45,7 @@
 | Placement tool  | T |
 | Snap position  | X |
 | Snap rotation  | Z |
-| Clone   | (when in Transform, Rotate or Scale mode) Shift + drag  |
+| Clone   | (when in Transform, Rotate or Scale mode) Shift + drag a transformation manipulator |
 | Toggle World/Local Transform  | (when in Transform mode) W  |
 | Toggle World/Local Rotation  | (when in Rotate mode) E  |
 | Toggle Window/Crossing marquee selection mode | (when in Select mode) Q |
