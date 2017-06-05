@@ -91,6 +91,35 @@ But we wanted to mention that as a result of this change, we're also taking out 
 
 Our hope is that before long we'll be able to leverage the built-in type info in the new TypeScript code to generate a much more complete and more useful reference than we had before.
 
+### Native zip support for editor plug-ins
+
+The `stingray.fs` JavaScript API now offers built-in support for working with *.zip* files:
+
+`stingray.fs.zip(folderPath:string, zipFilePath: string): boolean`
+
+Creates a new zip file from the contents of *folderPath*, and names the new zip file *zipFilePath*. The return value indicates whether the new file was written.
+
+`stingray.fs.zipinfo(zipFilePath: string): array.<{path:string, size:number}>`
+
+Reads a zip file named *zipFilePath*, and returns an array of all objects contained in the zip. Each object in the array has a `path` member that identifies its filename within the zip, and a `size` member that contains its size when uncompressed.
+
+`stingray.fs.unzip(zipFilePath:string, destinationPath: string): boolean`
+
+Reads a zip file named *zipFilePath*, and extracts its contents to the folder named *destinationPath*. The return value indicates whether the extraction was completed successfully.
+
+### Run Lua from JavaScript and get its result in a Promise
+
+The JavaScript `engine-service` offers a new function, `evaluateScript()`. This function runs a Lua script in the engine's Lua environment, and returns a `Promise` that you can use to access the result of that Lua script. This makes it much easier for your plug-in's JavaScript code to get and use the results of Lua snippets, using the same asynchronous mechanism you use to call other JavaScript services provided by the editor.
+
+For example:
+
+~~~{js}
+let snippet = "6 * 8";
+engineService.evaluateScript(script).then(
+	function (result) { console.log("The result is: " + result); }
+);
+~~~
+
 [Return to top](#top)
 
 ## What's Fixed
@@ -333,3 +362,13 @@ If your project contains any API elements that have been modified or removed, yo
 For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
 
 [Return to top](#top)
+
+### Xbox One XDK version
+
+Stingray now requires the **October 2016 QFE 2** release of the XDK.
+
+### PlayStation 4 SDK version
+
+Stingray now requires **Version 4.0** of the PlayStation 4 SDK.
+
+If you have trouble upgrading to this version from an older version of the SDK, try deleting any existing files from the `C:\ProgramData\SCE directory` before you install.
