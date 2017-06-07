@@ -9,7 +9,6 @@
 - [Is there an educational license available for Stingray?](#is-there-an-educational-license-available-for-stingray)
 - [Are there other ways to get access to Stingray?](#are-there-other-ways-to-get-access-to-stingray)
 - [Do Maya LT customers with a perpetual license have access to Stingray?](#maya-lt-access)
-- [Is Stingray available to Maya LT customers who subscribe on Steam?](#maya-lt-steam)
 - [Is Stingray available for free with Maya subscription?](#maya-free)
 - [Is Stingray source code available?](#is-stingray-source-code-available)
 - [What are the minimum system requirements for Stingray?](#what-are-the-minimum-system-requirements-for-stingray)
@@ -57,10 +56,6 @@ Some customers are eligible to run Stingray with a Non-Commercial license. Refer
 ##Do Maya LT customers with a perpetual license have access to Stingray? <a name="maya-lt-access"></a>
 
 Customers with a Maya LT perpetual license have access to Stingray for their respective version of Maya LT. To access the latest version of Stingray, your Maya LT license must have a valid Maintenance contract, or be on active Subscription. For more information about perpetual licenses see: [www.autodesk.com/products/perpetual-licenses](http://www.autodesk.com/products/perpetual-licenses).
-
-##Is Stingray available to Maya LT customers who subscribe on Steam? <a name="maya-lt-steam"></a>
-
-Yes.
 
 ##Is Stingray available for free with Maya subscription? <a name="maya-free"></a>
 
