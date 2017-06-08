@@ -315,8 +315,6 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 - **GAME-22567 Main window, Project Manager, Getting Started, About Box and possibly other dialogs often come up smaller than they should be (and sometimes offset with blank areas)**
 
--	**GAME-23257 Directed Learning: Hands-on Training Mission option is not functional anymore**
-
 -	**GAME-23441 Renaming an entity resource that is instanced in a level with changes causes an error**
 
 - **GAME-23579 Android: Connection to device takes much longer (2x-3x) now than before**

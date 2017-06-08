@@ -16,8 +16,6 @@ All of the tutorials we make in-house get posted to [the AREA](http://area.autod
 
 ![](../images/area.png)
 
-If reading lots of help topics or watching videos isn't really your thing and you just want to know the best way to get started with Stingray, we highly recommend our neighbor in the Stingray **Help** menu, the **Hands-on Training Mission**. **Help > Hands-on Training Mission** launches a small set of fast-moving, interactive tutorials designed to get the introductions over with, and get you working in Stingray.
-
 ## Stingray Help in Japanese and Korean
 
 We currently translate the Stingray Help into Korean and Japanese. You can switch to either language using the drop-down menu at the top right corner of this page.

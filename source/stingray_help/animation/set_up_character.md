@@ -176,5 +176,5 @@ Related topics:
 -	~{ Import a character mesh }~
 -	~{ Set up an animation controller }~
 -	~{ Import animation clips }~
--	~{ Test a level }~
+-	~{ Ways to run your project }~
 ---

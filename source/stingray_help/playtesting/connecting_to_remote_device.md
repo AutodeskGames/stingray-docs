@@ -30,3 +30,5 @@ Stingray offers two different lightweight mechanisms for testing your content on
 	-	~{ Get started on Xbox One }~
 
 **Note:** you cannot currently connect to a remote Windows host for viewport mirroring or running the project.
+
+>	**Tip:** The first time you connect to a project on a new target platform, it takes some time to compile the project data. This can be a lengthy process if the project is big. But don't worry, you only have to do this once. Once the initial file has completed, you only have to recompile the data that has actually changed, so future compiles will run much faster.
