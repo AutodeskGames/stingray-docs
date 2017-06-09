@@ -14,11 +14,12 @@ Sometimes, however, you may want to open an existing project that somebody else 
 
 	![Add Existing](../images/project_manager_add_existing.png)
 
-3.	Click **Add Existing** and browse to the location of your project on your local computer. Select the project's resources folder and click **Select Folder**.
+3.	Click **Add Existing** and browse to the location of your project on your local computer. Select the project's *.stingray_project* file and click **Open**.
 
 	This adds the selected project to the *Projects* area of the **My Projects** tab.
 
-4.	Select the project and click **Open**.
+	>	**Note:** If the project you want to open was created with a version of Stingray before 1.7, it might not have a *.stingray_project* file. If so, change the dialog's filter to look for `All Files (*.*)` instead of `Stingray Projects (*.stingray_project)`, and select your project's *settings.ini* file.
+
 5.	(Optional) If your project was created using an earlier version of Stingray, do one of the following in the dialog box that appears:
 	- Click **Yes**.
 	<br>
