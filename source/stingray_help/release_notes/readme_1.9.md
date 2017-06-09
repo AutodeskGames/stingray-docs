@@ -351,7 +351,7 @@ The D3D10 compatibility flag, *D3D10_SHADER_ENABLE_BACKWARDS_COMPATIBILITY*, has
 
 Updates have been made to improve clear coat. As a result, the behavior of the `Output` node has changed. If your project contains a clear coat material, you may need to adjust your content.
 
-### Entity API changes
+### Entity and component API changes
 
 This release changes the way you interact with entity components in the Lua and C APIs. Each component now requires an ID that is unique within the entity that owns it. You use this ID to retrieve a reference to the individual entity instance from the component manager.
 
@@ -373,12 +373,11 @@ For a complete list of all new, modified, and removed elements in the Lua API in
 
 If your project contains any API elements that have been modified or removed, you will need to adjust your code accordingly.
 
-### Flow node changes
+The main changes are:
 
-For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
+-	The APIs for creating, accessing and managing entity components has changed. See the [Entity and component API changes] section above.
 
-
-[Return to top](#top)
+-	Most `HumanIK` functions that previously took a context index now require a unit instead. The functions automatically retrieve the context associated with that unit.
 
 ### Xbox One XDK version
 
@@ -389,3 +388,39 @@ Stingray now requires the **October 2016 QFE 2** release of the XDK.
 Stingray now requires **Version 4.0** of the PlayStation 4 SDK.
 
 If you have trouble upgrading to this version from an older version of the SDK, try deleting any existing files from the `C:\ProgramData\SCE directory` before you install.
+
+## Plug-in SDK changes for developers
+
+If you've used the Stingray SDK to create plug-ins for previous versions of Stingray, this section summarizes the main changes in this release that might affect you.
+
+### Engine C APIs
+
+>	**IMPORTANT NOTE:** Binary compatibility is not guaranteed against the previous version! If you used the C plug-in APIs to create plug-ins for the engine, your plug-in may or may not work correctly against this version of Stingray. It *may* continue to work if your code does not use any of the APIs that have changed since the previous version. However, we strongly recommend getting the latest version of the Stingray SDK header files and re-compiling your plug-in's *.dll* against the new headers.
+
+For a complete list of all new, modified, and removed elements in the engine plug-in API and C script APIs in this release, see the [version history](help.autodesk.com/cloudhelp/ENU/Stingray-SDK-Help/engine_c/versions.html).
+
+### Editor C APIs
+
+For a complete list of all new, modified, and removed elements in the editor plug-in API in this release, see the [version history](help.autodesk.com/cloudhelp/ENU/Stingray-SDK-Help/editor_c/versions.html).
+
+In this release, the editor API has not changed significantly. There are no upgrade requirements; it should be binary compatible and API compatible.
+
+### Editor JavaScript module paths
+
+If your plug-in needs to refer to another script module that you ship with your plug-in, or a script module in a different plug-in, you may need to adjust the path you use when you refer to that module in `require()` and `define()` calls.
+
+You used to be able to start your module paths with the name of your plug-in, and `require.js` would automatically resolve it. In this release:
+
+-	If you're referring to a script file that you ship with your plug-in, we recommend using a simple relative path from the script file that contains the `require()` call to the module you want to invoke. Remove your plug-in name from the start of your path. For example:
+
+	`require(['services/engine-service', 'components/list-view'], function(engineService, listView) { ... })`
+
+-	If you're referring to a script file that is part of another plug-in, you now have to preface the plug-in name with `@` in order for `require.js` to resolve the path. For example:
+
+	`require(['my-module-file', '../subfolder/my-other-module'], function(myModule, anotherModule) { ... })`
+
+-	If you're referring to a service or component built in to Stingray, no change should be needed to your paths:
+
+	`require(['@my-other-plugin/some-module', '@asset-browser/asset-browser-actions'], function(otherPluginModule, assetBrowserActions) { ... })`
+
+[Return to top](#top)
