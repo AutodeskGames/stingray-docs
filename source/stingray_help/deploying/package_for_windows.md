@@ -11,11 +11,15 @@ You can test or distribute your game by simply copying or zipping up this folder
 
 ## Additional runtime requirements
 
-To run on Windows, the Stingray engine requires the **DirectX End-User Runtimes** from Microsoft.
+To run on Windows, the Stingray engine requires:
 
-If you create an installer for your game, you need to package these redistributable libraries into your installer. If you don't, your customer will have to download and install the runtimes if they don't already have them installed.
+-	The **DirectX End-User Runtimes (June 2010)** from Microsoft, available at <https://www.microsoft.com/en-us/download/details.aspx?id=8109>.
 
-You or your customers can download the required libraries from this link: <https://www.microsoft.com/en-us/download/details.aspx?id=8109>
+-	The **Visual C++ Redistributable for Visual Studio 2015** from Microsoft, available at <https://www.microsoft.com/en-ca/download/details.aspx?id=48145>.
+
+Recent systems are likely to have these runtime requirements installed already. However, if you distribute your deployed project to a customer that does not already have these requirements installed, your customer will need to install them in order to successfully run your project.
+
+If you create an installer for your project, you should package these redistributable libraries into your installer.
 
 ## Windows deployment settings
 

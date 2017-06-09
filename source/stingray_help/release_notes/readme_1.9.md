@@ -60,6 +60,10 @@ We're so happy about this new workflow, and so confident that you'll love it too
 
 This release of Stingray picks up the latest version of FBX (2018.1.1), which provides various improvements and bug fixes.
 
+## Updated DCC interop plug-ins
+
+This release also includes an updated Stingray DCC Link plug-in to support Maya 2018 and Maya LT 2018. For information on the plug-ins, see ~{ Interop with Maya, Maya LT, or 3ds Max }~.
+
 ## Clear coat improvements
 
 ![](../images/clear_coat_rn.png)
@@ -69,11 +73,13 @@ Clear coat is now more energy conserving, which reduces bloom when using a clear
 ## Experimental feature: HoloLens updates
 
 - A new experimental HoloLens project is now available for *source code customers* in the **Online Projects** tab in the **Project Manager**. See ~{ Get started on HoloLens }~.
-- A new raycasting Lua function (`mesh_both_sides`) lets you cast a ray against both sides of triangles. This parameter is needed for raycasting against a spatial mapping mesh on HoloLens. 
+- A new option (`mesh_both_sides`) has been added to the `Raycast` Lua function that lets you cast a ray against both sides of triangles. This parameter is needed for raycasting against a spatial mapping mesh on HoloLens.
 
 ## What else is new?
 
+-	You can now exclude physics actors from navmesh generation by adding their shape templates in the **Excluded Physics Actor Shape Template** field in the ~{ Navigation options }~.
 -	We have removed the **History** tool from the Stingray Editor. You can view the list of actions executed and undo/redo actions in the Particle Editor or the Texture Manager.
+- The viewport option ![](../images/icon_assetPreview.png) to toggle playing of audio sources in the level is now renamed to **Play Audio Sources**.
 
 ## What's new for developers?
 
@@ -84,6 +90,35 @@ We're starting to move the editor's front-end JavaScript code to [TypeScript](ht
 But we wanted to mention that as a result of this change, we're also taking out our old JavaScript API reference docs for now. We don't think this is a terrible loss -- since they never fully covered the whole public API, you often had to go look for functions directly in the editor's source files anyway.
 
 Our hope is that before long we'll be able to leverage the built-in type info in the new TypeScript code to generate a much more complete and more useful reference than we had before.
+
+### Native zip support for editor plug-ins
+
+The `stingray.fs` JavaScript API now offers built-in support for working with *.zip* files:
+
+`stingray.fs.zip(folderPath:string, zipFilePath: string): boolean`
+
+Creates a new zip file from the contents of *folderPath*, and names the new zip file *zipFilePath*. The return value indicates whether the new file was written.
+
+`stingray.fs.zipinfo(zipFilePath: string): array.<{path:string, size:number}>`
+
+Reads a zip file named *zipFilePath*, and returns an array of all objects contained in the zip. Each object in the array has a `path` member that identifies its filename within the zip, and a `size` member that contains its size when uncompressed.
+
+`stingray.fs.unzip(zipFilePath:string, destinationPath: string): boolean`
+
+Reads a zip file named *zipFilePath*, and extracts its contents to the folder named *destinationPath*. The return value indicates whether the extraction was completed successfully.
+
+### Run Lua from JavaScript and get its result in a Promise
+
+The JavaScript `engine-service` offers a new function, `evaluateScript()`. This function runs a Lua script in the engine's Lua environment, and returns a `Promise` that you can use to access the result of that Lua script. This makes it much easier for your plug-in's JavaScript code to get and use the results of Lua snippets, using the same asynchronous mechanism you use to call other JavaScript services provided by the editor.
+
+For example:
+
+~~~{js}
+let snippet = "6 * 8";
+engineService.evaluateScript(script).then(
+	function (result) { console.log("The result is: " + result); }
+);
+~~~
 
 [Return to top](#top)
 
@@ -316,13 +351,21 @@ The D3D10 compatibility flag, *D3D10_SHADER_ENABLE_BACKWARDS_COMPATIBILITY*, has
 
 Updates have been made to improve clear coat. As a result, the behavior of the `Output` node has changed. If your project contains a clear coat material, you may need to adjust your content.
 
-### Entity and component APIs
+### Entity and component API changes
 
-TODO
+This release changes the way you interact with entity components in the Lua and C APIs. Each component now requires an ID that is unique within the entity that owns it. You use this ID to retrieve a reference to the individual entity instance from the component manager.
 
-These changes affect almost all entity component functions, so if you're using Lua or C to interact with entities, you'll probably need to update your code.
+For an overview of how these component IDs and component instances work, check the ~{ Interact with entities during gameplay }~ page.
 
-For some technical background about why this change is good, have a look at [this blog post](http://bitsquid.blogspot.ca/2017/05/rebuilding-entity-index.html).
+If you're using *either* the Lua or C APIs to interact with your entities, you'll probably have to update your code:
+
+-	If you create a new component dynamically, you now need to give it an ID.
+
+-	When you destroy an individual component or access information about a component, you will mostly be using references to the component *instances*. You can look up the instance from the component manager based on the component's ID and its entity. Some commonly used component functions, like `get_property()` and `set_property()`, also have new helpers like `get_property_by_id()` and `set_property_by_id()` that do the lookup for you.
+
+-	Component *instances* are volatile. You can't save them and reuse them in future frames. Instead, you'll have to save the component's ID, and use that ID to look up the instance when you need it again in a later frame.
+
+For some background on why we made these changes, see [the blog post](https://gamedev.autodesk.com/blogs/1/post/2892151168947775843).
 
 ### Lua API changes
 
@@ -332,30 +375,42 @@ If your project contains any API elements that have been modified or removed, yo
 
 The main changes are:
 
--	The APIs for creating, accessing and managing entity components has changed. See the [Entity and component APIs] section above.
+-	The APIs for creating, accessing and managing entity components has changed. See the [Entity and component API changes] section above.
 
 -	Most `HumanIK` functions that previously took a context index now require a unit instead. The functions automatically retrieve the context associated with that unit.
 
-### Plug-in SDK changes for developers
+### Xbox One XDK version
 
-#### Engine C APIs
+Stingray now requires the **October 2016 QFE 2** release of the XDK.
+
+### PlayStation 4 SDK version
+
+Stingray now requires **Version 4.0** of the PlayStation 4 SDK.
+
+If you have trouble upgrading to this version from an older version of the SDK, try deleting any existing files from the `C:\ProgramData\SCE directory` before you install.
+
+## Plug-in SDK changes for developers
+
+If you've used the Stingray SDK to create plug-ins for previous versions of Stingray, this section summarizes the main changes in this release that might affect you.
+
+### Engine C APIs
+
+>	**IMPORTANT NOTE:** Binary compatibility is not guaranteed against the previous version! If you used the C plug-in APIs to create plug-ins for the engine, your plug-in may or may not work correctly against this version of Stingray. It *may* continue to work if your code does not use any of the APIs that have changed since the previous version. However, we strongly recommend getting the latest version of the Stingray SDK header files and re-compiling your plug-in's *.dll* against the new headers.
 
 For a complete list of all new, modified, and removed elements in the engine plug-in API and C script APIs in this release, see the [version history](help.autodesk.com/cloudhelp/ENU/Stingray-SDK-Help/engine_c/versions.html).
 
-The main changes are:
-
--	The APIs for creating, accessing and managing entity components has changed. See the [Entity and component APIs] section above. In addition, we've changed the way you get the C APIs for entities and components. TODO: Extension API, etc.
-
--	TODO:Input has changed, now matches the Lua API better.
-
-#### Editor C APIs
+### Editor C APIs
 
 For a complete list of all new, modified, and removed elements in the editor plug-in API in this release, see the [version history](help.autodesk.com/cloudhelp/ENU/Stingray-SDK-Help/editor_c/versions.html).
 
-TODO: No upgrade requirements, should be binary compatible and API compatible.
+In this release, the editor API has not changed significantly. There are no upgrade requirements; it should be binary compatible and API compatible.
 
-#### Editor JavaScript changes
+### Editor JavaScript module paths
 
--	paths to local modules within a plug-in need to be prefixed with `@` -- TBD: what paths, in what cases?
+When your plug-in needs to refer to a script module -- for example, in a call to `require()` or `define()` -- you may need to add the `@` prefix to the relative path.
+
+-	We recommend using a simple relative path from the script file that contains the `require()` call. This way, you can omit the `@`. For example, `require(['../subfolder/another_module'], function (myModule) { ... });`
+
+-	Alternatively, if you want to preface your relative path with the name of your plug-in, you'll have to add the `@` prefix. For example, `require(['@my-plugin/subfolder/another_module'], function(myModule) { ... })`
 
 [Return to top](#top)

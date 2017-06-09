@@ -48,12 +48,20 @@ The Stingray engine officially supports only Android devices running **version S
 
 Devices running older versions may or may not work as expected.
 
+## Supported Rendering frameworks
+
+- DX11 (Xbox One and Windows)
+- DX12 (Xbox One and Windows)
+- OpenGL (Android, Mac OS, Linux)
+- Metal (iOS)
+- GNM (PlayStation 4)
+
 ## Supported VR development kits
 
 | HMD Device | Target Frame Rate | VR SDK Version |
 |------------|-------------------|-----|
-| Oculus Dk2 | 75 fps            | 1.10.1.0  |
-| Oculus Rift | 90 fps            | 1.10.1.0  |
+| Oculus Dk2 | 75 fps            | 1.13.0.0  |
+| Oculus Rift | 90 fps            | 1.13.0.0  |
 | HTC Vive       | 90 fps            | 1.0.0  |
 
 >**Note:** The Oculus Remote and Oculus Touch Controller are supported.
