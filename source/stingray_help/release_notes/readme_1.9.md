@@ -115,7 +115,7 @@ For example:
 
 ~~~{js}
 let snippet = "6 * 8";
-engineService.evaluateScript(script).then(
+engineService.evaluateScript(snippet).then(
 	function (result) { console.log("The result is: " + result); }
 );
 ~~~
