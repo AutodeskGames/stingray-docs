@@ -351,6 +351,22 @@ The D3D10 compatibility flag, *D3D10_SHADER_ENABLE_BACKWARDS_COMPATIBILITY*, has
 
 Updates have been made to improve clear coat. As a result, the behavior of the `Output` node has changed. If your project contains a clear coat material, you may need to adjust your content.
 
+### Entity API changes
+
+This release changes the way you interact with entity components in the Lua and C APIs. Each component now requires an ID that is unique within the entity that owns it. You use this ID to retrieve a reference to the individual entity instance from the component manager.
+
+For an overview of how these component IDs and component instances work, check the ~{ Interact with entities during gameplay }~ page.
+
+If you're using *either* the Lua or C APIs to interact with your entities, you'll probably have to update your code:
+
+-	If you create a new component dynamically, you now need to give it an ID.
+
+-	When you destroy an individual component or access information about a component, you will mostly be using references to the component *instances*. You can look up the instance from the component manager based on the component's ID and its entity. Some commonly used component functions, like `get_property()` and `set_property()`, also have new helpers like `get_property_by_id()` and `set_property_by_id()` that do the lookup for you.
+
+-	Component *instances* are volatile. You can't save them and reuse them in future frames. Instead, you'll have to save the component's ID, and use that ID to look up the instance when you need it again in a later frame.
+
+For some background on why we made these changes, see [the blog post](https://gamedev.autodesk.com/blogs/1/post/2892151168947775843).
+
 ### Lua API changes
 
 For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](../../lua_ref/versions.html).
@@ -360,6 +376,7 @@ If your project contains any API elements that have been modified or removed, yo
 ### Flow node changes
 
 For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
+
 
 [Return to top](#top)
 
