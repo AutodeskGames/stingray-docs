@@ -8,6 +8,34 @@ This topic provides an overview of the ways you can interact with entities in yo
 
 -	 The entity system is not yet exposed to Flow, though you can expose any functions you need by defining custom Flow nodes (see ~{ Create custom Flow nodes in Lua }~).
 
+## About component managers, instances and instance IDs
+
+When you work with components, you'll need to understand the difference between component *managers*, component *IDs*, and component *instances*.
+
+-	For each different type of component, the engine creates a component manager that is responsible for creating and updating all the individual instances of that component type. You also use the component manager to interact with individual component instances, for example to get and set property values or call functions.
+
+-	Each individual component within an entity has to have an ID that is unique within the entity that owns it. This name is shown in the Property Editor when you have the entity selected, like **Transform**, **Unit** and **Flow** here:
+
+	![Entity IDs](../images/entity_ids.png)
+
+	It's also how you get access to a particular component in Flow and Lua so that you can get or set its property values.
+
+	Usually you'll probably want to use strings to name your components, so that you can tell them apart. But the engine stores those names internally as hashed integer values. If you're using Lua, and you need to pass in an ID to a function like `DataComponent.lookup()`, you can pass either the string value or the hash. If you pass the string, Stingray will convert it for you. But the conversion is one-way, so if you retrieve ID names from the engine by calling a function like `DataComponent.instance_ids()`, what you'll get back is the hashed integers.
+
+-	A component *instance* represents a particular component assigned to a particular entity that has actually been spawned in the engine. Typically, you get an instance of a component from a component manager of the corresponding type, by doing one of the following:
+
+	-	Calling the manager's `lookup()` function to get an instance with a particular ID assigned to a particular entity.
+	-	Calling the manager's `instances()` function to get all instances of that component type assigned to a given entity.
+	-	Calling the manager's `create()` function with a new ID to spawn a new instance of that component type dynamically.
+
+	>	**Important:** Component instances are only valid within the frame in which you retrieve them. You *cannot* save a component instance to use in a later frame. Instead, save the component's instance ID, and use that ID to do another lookup to get the instance again next time you need it.
+
+Managers typically allow you to interact with individual components either by passing them the instance you want to affect, or by passing them the entity and component ID that identify the instance you want to affect. In the latter case, the component manager will do the lookup for you. For example, you could use `DataComponent.set_property ( self, instance, key, value )` to set a property on an instance, or `DataComponent.set_property_by_id ( self, entity, id, key, value )` to have the DataComponent look up the instance from the entity and ID you provide.
+
+Using the component ID can sometimes be more convenient. However, if you need to make many calls to the same component manager about the same component instance within a given frame, it's generally better if you look up the component instance yourself, to avoid the (small) overhead of extra lookup calls.
+
+>	**Note:** The confusing thing about instances and instance IDs in Lua is that they are both exposed as numbers. You'll have to keep straight what's an ID and what's a reference to an actual instance.
+
 ## Spawn and destroy an entity
 
 Entities that you place in a level in the Stingray Editor are automatically spawned when you load that level into your game at runtime. These entities are automatically destroyed when the level is unloaded, if they have not already been destroyed.
@@ -43,13 +71,20 @@ function add_remove_components(entity)
     local xform_component_manager = stingray.EntityManager.transform_component(SimpleProject.world)
 
     -- assign a new data component
-    local new_component_id = stingray.DataComponent.create(data_component_manager, entity)
+    local id = "My New Data Component"
+    local new_component_id = stingray.DataComponent.create(data_component_manager, entity, id)
 
-    -- remove an existing component
-    local xform_component_id = stingray.TransformComponent.instances(xform_component_manager, entity)
-    if xform_component_id then
-        stingray.TransformComponent.destroy(xform_component_manager, entity, xform_component_id)
+    -- remove the first instance of a given component on an entity
+    local xform_component_ids = { stingray.TransformComponent.instance_ids(xform_component_manager, entity) }
+    if next(xform_component_ids) then
+        stingray.TransformComponent.destroy(xform_component_manager, entity, xform_component_ids[1])
     end
+
+	-- remove a component instance with a specific ID
+	local my_instance = stingray.DataComponent.lookup(data_component_manager, entity, "My New Data Component")
+	if my_instance then
+		stingray.DataComponent.destroy(data_component_manager, my_instance)
+	end
 end
 ~~~
 
@@ -57,7 +92,7 @@ end
 
 You can use Lua to access the components that you have assigned to an entity. Once you have the component instance, the API of the relevant component manager object provides functions to interact with that component.
 
-For example, the following function shows how to use the `TransformComponent` to get the world space position of an entity from its transform component. It also shows how to use the `DataComponent` manager API to set a new data value for a data  component.
+For example, the following function shows how to use the `TransformComponent` to get the world space position of an entity from its transform component. It also shows how to use the `DataComponent` manager API to set a new data value for a custom data component.
 
 ~~~{lua}
 function change_component_values(entity)
