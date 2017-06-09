@@ -4,7 +4,7 @@
 
 Displays assets as you browse and select them in the **Asset Browser**. You can zoom, pan, and tumble in the **Asset Preview** just like you do in the **Level Viewport**.
 
-![](../../images/asset_preview_bonsai.png)
+![](../../images/asset_preview_unit.png)
 
 - When you select a material, the **Asset Preview** displays the shaderball with your material applied, letting you preview the material within the current lighting environment. You can also preview 2D texture files.
 
@@ -13,10 +13,6 @@ Displays assets as you browse and select them in the **Asset Browser**. You can 
 - When you select an animation clip, the animation automatically plays back in the **Asset Preview**. To disable automatic playback, select **File > Settings > Editor Settings**, then enable **Disable animation preview autoplay** in the **Property Editor**.
 
 	![](../../images/anim_clip_preview.png)
-
-> **Tip:** To update asset thumbnails that display in the **Asset Browser**, select the asset, then click the snapshot icon ![](../../images/icon_snapshot.png) in the **Asset Preview**.
-
-![](../../images/comp_thumbnail_snapshot.png)
 
 > **Note:** Adjusting the Shading Environment settings (see ~{ The Shading environment and post effects }~) does not update the rendering in the **Asset Preview**  window.
 
