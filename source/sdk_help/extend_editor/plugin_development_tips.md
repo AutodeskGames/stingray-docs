@@ -55,6 +55,22 @@ For code examples that show how this works, see the page about how to ~{ Use bui
 
 For more in-depth information, you can also see <http://requirejs.org/>
 
+## Paths to script modules
+
+Whenever you refer to a script module, such as in a call to `require()` or `define()`, there are a few ways you can construct the path to that module.
+
+-	If you need to refer to a built-in service or component in the Stingray editor, use a path relative to the `editor/core` folder. For example, the `services` and `components` folders in this example will automatically resolve to `editor/core/services` and `editor/core/components`:
+
+	`require(['services/engine-service', 'components/list-view'], function(engineService, listView) { ... })`
+
+-	If you need to refer to another script file that you ship with your plug-in, we recommend using a simple relative path from the file that contains your `require()` or `define()` call to the module you're invoking. For example:
+
+	`require(['my-module-file', '../subfolder/my-other-module'], function(myModule, anotherModule) { ... })`
+
+-	If you need to refer to a script file within a *different* plug-in, you can start the path with `@`, followed by the name of the plug-in, followed by the path to the module within that plug-in's folder. These plug-in paths are automatically resolved by `require.js`. For example:
+
+	`require(['@my-other-plugin/some-module', '@asset-browser/asset-browser-actions'], function(otherPluginModule, assetBrowserActions) { ... })`
+
 ---
 Tags:
 -	plugin

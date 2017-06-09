@@ -407,10 +407,20 @@ In this release, the editor API has not changed significantly. There are no upgr
 
 ### Editor JavaScript module paths
 
-When your plug-in needs to refer to a script module -- for example, in a call to `require()` or `define()` -- you may need to add the `@` prefix to the relative path.
+If your plug-in needs to refer to another script module that you ship with your plug-in, or a script module in a different plug-in, you may need to adjust the path you use when you refer to that module in `require()` and `define()` calls.
 
--	We recommend using a simple relative path from the script file that contains the `require()` call. This way, you can omit the `@`. For example, `require(['../subfolder/another_module'], function (myModule) { ... });`
+You used to be able to start your module paths with the name of your plug-in, and `require.js` would automatically resolve it. In this release:
 
--	Alternatively, if you want to preface your relative path with the name of your plug-in, you'll have to add the `@` prefix. For example, `require(['@my-plugin/subfolder/another_module'], function(myModule) { ... })`
+-	If you're referring to a script file that you ship with your plug-in, we recommend using a simple relative path from the script file that contains the `require()` call to the module you want to invoke. Remove your plug-in name from the start of your path. For example:
+
+	`require(['services/engine-service', 'components/list-view'], function(engineService, listView) { ... })`
+
+-	If you're referring to a script file that is part of another plug-in, you now have to preface the plug-in name with `@` in order for `require.js` to resolve the path. For example:
+
+	`require(['my-module-file', '../subfolder/my-other-module'], function(myModule, anotherModule) { ... })`
+
+-	If you're referring to a service or component built in to Stingray, no change should be needed to your paths:
+
+	`require(['@my-other-plugin/some-module', '@asset-browser/asset-browser-actions'], function(otherPluginModule, assetBrowserActions) { ... })`
 
 [Return to top](#top)
