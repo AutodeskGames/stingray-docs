@@ -30,13 +30,17 @@ You can also capture negative frames, which use following naming convention; *<F
 <dl>
 
 <dt>Settings File</dt>
-<dd>Lets you create a new settings file or open an existing file.</dd>
+<dd>Lets you create a new settings file or open an existing file. To create a new capture settings file, click the ![](../images/icon_scriptEd_new.png) icon or right-click in the **Asset Browser** and select **Create > Capture Settings**.</dd>
 
 <dt>Output Directory</dt>
 <dd>The directory where your output is saved.</dd>
 
 <dt>File Name</dt>
-<dd>The name that is used for each file(s) that is saved.</dd>
+<dd>The name that is used for each file(s) that is saved.The file name contains #### frame padding to indicate the placement of frame numbers in the output files. You can have a file name with any number of # paddings. Note that there should be at least one number padding in the file name.
+
+
+The # frame paddings could be in the beginning, middle and the end of the file name. For example, *###Filename.exr* would output frames *001Filename.exr*, *002Filename.exr*, ..,*010Filename.exr* and so on. If you have multiple # frame padding patterns, the capture engine always uses the last found ## pattern in a name to create the padding. For example *My###Filename-####Capture.exr* will output the frames as *My###Filename-0000Capture.exr*, *My###Filename-0001Capture.exr*, *My###Filename-0002Capture.exr* and the first left aligned pattern is ignored.
+</dd>
 
 <dt>File Type</dt>
 <dd>Lets you select a file type for your output. Currently, frames are exported using the OpenEXR format (.exr). The tool delivers three different buffers in OpenEXR when it captures:
@@ -51,4 +55,6 @@ You can also capture negative frames, which use following naming convention; *<F
 <dd>The frame rate that is used to simulate the game or editor playback while capturing.</dd>
 
 <dt>Resolution</dt>
-<dd>Lets you set a resolution for your capture. Select 1920 x 1080 (default), 1280 x 780, or enter a custom resolution.</dd>
+<dd>Lets you set a resolution for your capture. Select 1920 x 1080 (default), 1280 x 780, or enter a custom resolution. The custom resolution you set here is available only when capturing from Story and not when capturing from Flow.</dd>
+
+>**Note:** Compile the level or press F5 before capturing to take into account the level changes, especially if you add back to the Capture Frames tool a camera previously used for frame capturing and then deleted from the level.

@@ -55,6 +55,8 @@ Use a Steam VR device to visually interact with the scenes in this template.</dd
 This template supports Google Cardboard for iOS and Android, and Google Daydream with Daydream controller support for Android devices.
 
 Use iOS devices, Android 7.x+ devices like Nexus 9 or a Daydream device like Pixel with this template.
+
+>Note: Google VR template won't run on *Normal* flavor or *localhost* (Windows).
 </dd>
 
 <dt>VR Gear</dt>
