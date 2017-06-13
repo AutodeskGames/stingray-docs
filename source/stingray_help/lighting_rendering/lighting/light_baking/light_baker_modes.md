@@ -4,11 +4,14 @@ Light baking is the process of pre-calculating the lighting for the objects in y
 
 **Baker Materials** mode can be enabled by clicking the **Full Render** mode HUD in the **Level Viewport**, selecting **Debug** in the menu that appears, and then selecting **Baker Materials**. See ~{ Level Viewport }~.
 
+
 ## Baker Materials
 
 The light baker transfers materials by saving them as low resolution textures. In **Baker Materials** visualization mode, you can see the scene as the light baker sees it.
 
 To activate this mode, you must initiate a baking session. For more information, see ~{ Bake lightmaps }~.
+
+>**Important:** To view Baker Materials mode, you must select the viewport before initiating a baking session.
 
 When your baking session is active, **Baker Materials** mode displays five smaller viewports, showing the following:
 
