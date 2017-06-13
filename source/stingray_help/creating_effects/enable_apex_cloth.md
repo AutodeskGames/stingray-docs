@@ -21,7 +21,10 @@
 		A cloth resource is created and is visible under the 'apex cloth' section in the Outliner.
 	4. Select the cloth resource and in the Properties Panel, browse for the corresponding cloth definition (.apx files) to bind to the mesh.
 
-		![](../images/apex_cloth_bind.png)
+		>Note: APX files are generated when exporting APEX cloth created with the PhysX DCC plug-ins. These files are automatically imported by Stingray when you import an FBX with APEX cloth.
+
+	 	![](../images/apex_cloth_bind.png)
+
 	5. Repeat steps 2-4 for each mesh that should be bound to an APEX cloth.
 
 6. Restart the editor engine (Ctrl + F6).

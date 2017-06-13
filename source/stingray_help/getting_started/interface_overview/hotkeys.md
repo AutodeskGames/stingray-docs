@@ -85,10 +85,11 @@
 | Action  | Hotkey |
 | ------------- | ------------- |
 | Enter paint mode  | B |
-| Brush radius  | B + right-drag |
-| Brush falloff  | N + right-drag |
-| Brush strength  | M + right-drag |
+| Brush radius  | B + left-drag left or right |
+| Brush falloff  | N + left-drag left or right |
+| Brush strength  | M + left-drag left or right |
 
+>Note: Dragging left decreases the value and dragging right increases the value.
 
 ### Miscellaneous
 
