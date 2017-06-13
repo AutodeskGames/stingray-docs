@@ -29,4 +29,4 @@ The **Physical Light** entity lets you use data from real-world lights to create
 
   		![](../../../images/physical_light_property_ed_ies.png)
 
-  	The distibution of the light in the scene adjusts to match the data contained in the IES Light profile.
+  	The distibution of the selected light in the scene adjusts to match the data contained in the IES Light profile.
