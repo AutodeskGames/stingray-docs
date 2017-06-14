@@ -160,7 +160,6 @@ engineService.evaluateScript(snippet).then(
 - GAME-20841 Renaming .texture file doesn't rename dependencies
 - GAME-19985 Replacing all usage of a resource in the Dependency window  does not update the references
 - GAME-23569 'slot name' conflict from "Sample texture" node in the Material Graph Editor causes a crash
-- GAME-22371 Clicking an asset opens a new window instead of bringing forward its editor
 - GAME-16401 Picking a swizzle mask for a material connection doesn't validate input correctly
 - GAME-22872 Nodes on Color graph aren't easily visible when working with greys
 - GAME-22293 Mouse pointer doesn't indicate that you can select a name
@@ -352,6 +351,8 @@ This section lists known limitations and workarounds for Stingray.
 Unless otherwise noted in the **What's Fixed** section, please be aware that this release contains the same **Known Limitations** described in the previous versions of Stingray Release Notes.
 
 > **Note**: We recommended you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
+
+- **GAME- 24078 Light baking will not consider units inside an entity**
 
 - **GAME-20689 Remote sync from Wwise editor can't connect to Stingray on Android**
 
