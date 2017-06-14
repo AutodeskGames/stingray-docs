@@ -198,6 +198,8 @@ engineService.evaluateScript(snippet).then(
 - GAME-23763 Stingray does not recognize that it has lost connection to the license server
 - GAME-23750 Stingray does not support idle state for network license timeout period
 - GAME-18422 Arial DF font artifacts fixed by increasing character resolution while maintaining texture size
+-	GAME-22985 Navigation: "Filter out by Unit subname" is mislabeled as "Filter out by script data"
+- GAME-22359 Be able to exclude physics shape templates when generating navmesh
 
 ## Audio/Wwise
 
@@ -298,7 +300,6 @@ engineService.evaluateScript(snippet).then(
 ## Rendering
 
 - GAME-23618 .exr files are imported with a blue hue
-- GAME-23580 Vive:"Powered by Stingray" splash screen is blurry with HMD movement
 - GAME-23541 VR: Mono view mode is lost when Oculus HMD is worn
 - GAME-23129 Crashes involving 'Texture streaming'
 - GAME-23052 'Mini renderer' doesn't work on iOS Metal
