@@ -1,5 +1,7 @@
 # Shading environment properties
 
+![UPDATED](../../images/updated.png)
+
 This page describes the properties that are available in the Property Editor panel when you select the shading environment for a level.
 
 ## Global Lighting
@@ -98,6 +100,15 @@ The **Max** value sets the distance from the camera at which the fog reaches its
 <dl>
 <dt>Exposure</dt>
 <dd>Adjusts the overall brightness of the scene. Lower values produce a darker image, higher values produce a lighter image.</dd>
+</dl>
+
+## Tone Mapping
+
+[![NEW](../../images/new.png "What else is new in v1.9?")](../../release_notes/readme_1.9.html)
+
+<dl>
+<dt>Enabled</dt>
+<dd>Lets you disable default tone mapping, and provide a custom tone mapper plugin. Disable this option to use a custom plugin. An example plugin with an ACES tone mapper can be found on [Github](https://github.com/greje656/camera).</dd>
 </dl>
 
 ## Screen Space Ambient Occlusion

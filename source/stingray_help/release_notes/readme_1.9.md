@@ -70,6 +70,12 @@ This release also includes an updated Stingray DCC Link plug-in to support Maya 
 
 Clear coat is now more energy conserving, which reduces bloom when using a clear coat material.
 
+## Custom tone mapping
+
+A new shading environment property lets you disable default tone mapping, and extend tone mapping through a custom plugin. See ~{ Shading environment properties }~.
+
+>**Note:** It is recommended that you leave defatult tone mapping enabled unless you are implementing custom post effect features.
+
 ## Experimental feature: HoloLens updates
 
 - A new experimental HoloLens project is now available for *source code customers* in the **Online Projects** tab in the **Project Manager**. See ~{ Get started on HoloLens }~.
