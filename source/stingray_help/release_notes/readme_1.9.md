@@ -132,6 +132,8 @@ engineService.evaluateScript(snippet).then(
 
 ## Previous known limitations:
 
+These were late-breaking issues that affected Stingray 1.8 as known limitations. They really bugged us and we're extra happy to tell you we fixed them in Stingray 1.9.
+
 - GAME-19426 iOS cardboard VR view only renders on part of the screen on iPhone 7 Plus
 -	GAME-22597 Newly spawned shading environment entity does not work
 
