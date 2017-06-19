@@ -74,7 +74,7 @@ For example, you might want a strong wind to continuously blow lighter objects a
 
 You need to use Lua to apply the wind forces, but you can still set up the wind effect using entities and components.
 
-By default, wind forces do not wake physical objects; it would hurt performance if the wind could wake every object in the level. This means that even if you trigger a big explosion, it won't affect any dynamic actors that have already gone to sleep. To fix this, you can use `stingray.PhysicsWorld.wake_objects()` to wake any dynamic objects that should be affected by the wind or explosion, so that they are awake and can receive wind force from the vector field.
+By default, wind forces do not wake physical objects; it would hurt performance if the wind could wake every object in the level. This means that even if you trigger a big explosion, it won't affect any dynamic actors that have already gone to sleep. To fix this, you can use `stingray.PhysicsWorld.wake_actors()` to wake any dynamic objects that should be affected by the wind or explosion, so that they are awake and can receive wind force from the vector field.
 
 To make a vector field to affect physical objects, call the `stingray.PhysicsWorld.apply_wind()` function to apply wind forces from a vector field to physical objects. You pass this function the name of the vector field effect you want to apply. If you set up the vector field using entity components, this should match the **Effect** setting of the vector field component. If you set up the vector field in Lua, this should match the name you passed to `stingray.World.vector_field()`.
 
