@@ -361,7 +361,7 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 > **Note**: We recommended you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
-- **GAME- 24078 Light baking will not consider units inside an entity**
+- **GAME-24078 Light baking will not consider units inside an entity**
 
 - **GAME-20689 Remote sync from Wwise editor can't connect to Stingray on Android**
 

@@ -55,7 +55,7 @@ Next, you'll create the trigger that will start this animation.
 1. Click Play in the ~{ Toolbar }~ to play the level, and walk to the door.
 	The door should animate when you reach the trigger area.
 
-	(See also ~{ Test a level }~.)
+	(See also ~{ Ways to run your project }~.)
 
 ---
 Related topics:
