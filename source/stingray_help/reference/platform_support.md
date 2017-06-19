@@ -25,7 +25,11 @@ The Stingray engine only supports iOS devices running **iOS SR_DOC_IOS_VERSION**
 
 ## Requirements for Running the Stingray iOS Packaging Server
 
-In order to package games from Windows you need to run the Stingray iOS package server on a Mac device with *Mac OS X SR_DOC_MACOS_VERSION* and *Xcode SR_DOC_XCODE_VERSION*. Please download these from <https://developer.apple.com/downloads>. We recommend you disable auto update on your Apple development machine. <!-- If you already have a newer version of Xcode installed (Xcode 7), you can simply delete that from your application folder and copy the one you have downloaded from the Apple website there. -->
+In order to package iOS games from Windows, you need to run the Stingray iOS package server on a Mac. This package server is included in the Stingray installer. For details on finding and using it, see ~{ Get started on iOS }~.
+
+Your Mac device must be using at least *Mac OS X SR_DOC_MACOS_VERSION* and must have *Xcode SR_DOC_XCODE_VERSION* installed. Please download these from <https://developer.apple.com/downloads>.
+
+We recommend you disable auto update on your Apple development machine. <!-- If you already have a newer version of Xcode installed (Xcode 7), you can simply delete that from your application folder and copy the one you have downloaded from the Apple website there. -->
 
 ## Android Device Compatibility
 

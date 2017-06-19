@@ -45,7 +45,7 @@
 | Placement tool  | T |
 | Snap position  | X |
 | Snap rotation  | Z |
-| Clone   | (when in Transform, Rotate or Scale mode) Shift + drag  |
+| Clone   | (when in Transform, Rotate or Scale mode) Shift + drag a transformation manipulator |
 | Toggle World/Local Transform  | (when in Transform mode) W  |
 | Toggle World/Local Rotation  | (when in Rotate mode) E  |
 | Toggle Window/Crossing marquee selection mode | (when in Select mode) Q |
@@ -85,10 +85,11 @@
 | Action  | Hotkey |
 | ------------- | ------------- |
 | Enter paint mode  | B |
-| Brush radius  | B + right-drag |
-| Brush falloff  | N + right-drag |
-| Brush strength  | M + right-drag |
+| Brush radius  | B + left-drag left or right |
+| Brush falloff  | N + left-drag left or right |
+| Brush strength  | M + left-drag left or right |
 
+>Note: Dragging left decreases the value and dragging right increases the value.
 
 ### Miscellaneous
 
