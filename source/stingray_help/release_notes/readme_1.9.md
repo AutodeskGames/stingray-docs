@@ -74,7 +74,7 @@ Clear coat is now more energy conserving, which reduces bloom when using a clear
 
 A new shading environment property lets you disable default tone mapping, and extend tone mapping through a custom plugin. See ~{ Shading environment properties }~.
 
->**Note:** It is recommended that you leave defatult tone mapping enabled unless you are implementing custom post effect features.
+>**Note:** It is recommended that you leave default tone mapping enabled unless you are implementing custom post effect features.
 
 ## Experimental feature: HoloLens updates
 
