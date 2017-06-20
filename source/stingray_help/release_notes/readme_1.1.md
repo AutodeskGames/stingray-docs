@@ -186,7 +186,7 @@ New drag and drop functionality lets you quickly add audio files to environments
 
 ## **Log Console** improvements
 
-The ~{ Log Console }~ window now includes a filter widget that lets you filter out data from different components of Stingray, making it easier to debug issues. In addition, any errors and warnings that result when you select **Project > Run** now output directly to the **Log Console**. See ~{ Test a project }~.
+The ~{ Log Console }~ window now includes a filter widget that lets you filter out data from different components of Stingray, making it easier to debug issues. In addition, any errors and warnings that result when you select **Project > Run** now output directly to the **Log Console**. See ~{ Test and build a project }~.
 
 ## Updated PhysX plug-in
 
