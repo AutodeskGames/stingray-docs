@@ -38,5 +38,5 @@ Related topics:
 -	~{ Status bar }~
 -	~{ Console commands }~
 -	~{ Using the Connections panel }~
--	~{ Ways to run your game }~
+-	~{ Ways to run your project }~
 ---
