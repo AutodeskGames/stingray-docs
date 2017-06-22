@@ -10,9 +10,9 @@ This page describes how to create custom Flow nodes that run custom C code in an
 
 2.	[Write the trigger function] that should get called when your node gets evaluated in the Flow graph.
 
-3.	[Register the trigger function] with the engine.
+3.	[Register and unregister the trigger function] with the engine.
 
-4.	Define the characteristics of the node -- for example, the types of inputs it expects and outputs it produces -- in a data resource file with the *.script_flow_nodes* extension. See [Define C Flow nodes] below.
+4.	Define the characteristics of the node -- for example, the types of inputs it expects and outputs it produces -- in a data resource file with the *.flow_node_definitions* extension. See [Define the node] below.
 
 We'll look at these three things separately over the next sections, but keep in mind that your trigger function and your node definition are mutually dependent. For example, if your node definition tells the editor to provide a certain set of input and output data, your trigger function has to be set up to handle those inputs and outputs correctly. In addition, your C code needs to run within an engine plug-in, so you should be familiar with how these plug-ins work. See ~{ Extend the Engine }~.
 
