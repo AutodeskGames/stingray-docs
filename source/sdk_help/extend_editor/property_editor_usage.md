@@ -53,7 +53,7 @@ define([
     'services/asset-service',
     'services/file-system-service'
 ],
-	/** This is the initialzation function of your module. Each required dependency gets injected
+	/** This is the initialization function of your module. Each required dependency gets injected
     	in the same order it is included. Module starting with capital letter a generally Component
         or class (that can be used with new). Module starting with a lowerCase are generally namespace
         containing functions and data.
@@ -66,17 +66,6 @@ define([
     // Ensure all CSS are loaded for the property editor:
     domTools.loadCss("core/css/widgets/json-component.css");
     domTools.loadCss("core/css/widgets/property-editor.css");
-
-    // In V1.6, we need to create a context for the PropertyEditor containing access to all the
-    // Stingray Services used by properties. This will no longer be necessary for V1.7 and upward.
-    var services = {
-        marshallingService: marshallingService,
-        elementService: elementService,
-        projectService: projectService,
-        assetService: assetService,
-        fileSystemService: fileSystemService
-    };
-    var editorContext = props.makeEditorContext(services);
 ~~~
 
 Also see the section ~{ Use built-in editor services}~ for more information on the core Stingray services included in the `define` call above.
@@ -162,29 +151,27 @@ The type descriptor we defined above has six different properties. Each field ha
 
 ### Property Document setup
 
-In order to intialize a property editor from a type descriptor, we use the `PropertyDocument` class. This class allows us to customize the categories and to listen for `propertyChanged` events that happen when the user modifies the JSON value using the controls in the property editor.
+In order to intialize a property editor from a type descriptor, we use the `PropertyDocument` class. This class allows us to customize the categories and to listen for `valueChanged` events that happen when the user modifies the JSON value using the controls in the property editor.
 
 ~~~{js}
 // Use the dataTypeService to create an initial value that conforms to the type definition.
 var initialValue = dataTypeService.createDefaultValue(typeDefinition);
 
 // This instance will holds all the categories and properties created from the type definition.
-var propertyDocument = new PropertyDocument(dataTypeService);
+var documentFromType = new PropertyDocument();
 
 // you can register a global listener to know when a property changes:
-propertyDocument.on('propertyChanged', function (path, value, property, category, doc) {
-    console.log('onPropertyChanged', path, value, property, category, doc);
+documentFromType.on('valueChanged', function (path, value) {
+    console.log('valueChanged', path, value);
     m.utils.redraw();
 });
 
 // Now we add a category block mapped to a typeDefinition and a value:
-propertyDocument.addCategory("My Data", {}, initialValue, typeDefinition);
+documentFromType.addCategory("My Data", {}, initialValue, typeDefinition);
 
-// We then create the configuration used to power up the property editor component:
-var fromTypeConfig = props.editor(editorContext, propertyDocument.getCategories());
 ~~~
 
-The `fromTypeConfig` will be passed to the `PropertyEditor` component in order to be rendered in the HTML panel. But before we finalize the UI code, let's see how to create a property editor purely from JavaScript and without using type descriptors.
+The `documentFromType` will be passed to the `PropertyEditor` component in order to be rendered in the HTML panel. But before we finalize the UI code, let's see how to create a property editor purely from JavaScript and without using type descriptors.
 
 ## Method 2: using compact notation
 
@@ -205,8 +192,8 @@ In our panel, we have created a property model **generator** function:
 ~~~{js}
 function genModel (value) {
 	// This returns a property model function that uses a closure to stores its value.
-    return function (property, newValue) {
-        if (arguments.length > 1) {
+    return function (newValue) {
+        if (arguments.length) {
         	// arguments is a JavaScript built in variable available in a function. It allows access to
             // all the parameters passed to the function. Here we check if we have more than
             // 1 parameters so see if the model should be used as a setter.
@@ -221,7 +208,7 @@ The following code uses the editor's *compact notation* to express exactly the s
 
 ~~~{js}
 // The compact notation allows easy configuration of a PropertyEditor using pure JavaScript:
-var compactNotationConfig = props.editor(editorContext, [
+var compactNotationDocument = new PropertyDocument([
     props.category("My Data also!", {}, [
         props.number("Number", genModel(1), {
             default: 1, min: 0, max: 1, increment: 0.3, priority: 4
@@ -244,7 +231,7 @@ For more information on the different property controls supported by Stingray co
 
 ## Create and mount a Mithril view
 
-All that is left in order to complete the goal for our panel is to create a view that holds the two property editor widgets. We'll use [Mithril](http://mithril.js.org/): a lightweight JavaScript library that simplifies creating dynamic HTML that stays in sync with a data model. Everything can be done in pure JavaScript (even the templating), which allows easy debugging.
+All that is left to complete our panel is to create a view that holds the two property editor widgets. We'll use [Mithril](http://mithril.js.org/): a lightweight JavaScript library that simplifies creating dynamic HTML that stays in sync with a data model. Everything can be done in pure JavaScript (even the templating), which allows easy debugging.
 
 We use two of Mithril's core concepts:
 
@@ -262,10 +249,10 @@ var PropertyEditorUsageApp = {
             m('div', {class: "panel-fill"}, [
                 // Use the PropertyEditor Mithril component to attach a
                 // Property editor in our view and pass it a configuration:
-                PropertyEditor.component(fromTypeConfig)
+                PropertyEditor.component({document: documentFromType })
             ]),
             m('div', {class: "panel-fill"}, [
-                PropertyEditor.component(compactNotationConfig)
+                PropertyEditor.component({document: compactNotationDocument})
             ])
         ]);
     }
@@ -305,17 +292,6 @@ define([
     // Ensure all CSS are loaded for the property editor:
     domTools.loadCss("core/css/widgets/json-component.css");
     domTools.loadCss("core/css/widgets/property-editor.css");
-
-    // In V1.6, we need to create a context for the PropertyEditor containing access to all the
-    // Stingray Services used by properties. This will no longer be necessary for V1.7 and upward.
-    var services = {
-        marshallingService: marshallingService,
-        elementService: elementService,
-        projectService: projectService,
-        assetService: assetService,
-        fileSystemService: fileSystemService
-    };
-    var editorContext = props.makeEditorContext(services);
 
     //////////////////////////////////////////////////////////////////
     // Initialization of a property editor using a Type file to populate itself.
@@ -391,19 +367,16 @@ define([
     var initialValue = dataTypeService.createDefaultValue(typeDefinition);
 
     // This instance will holds all the categories and properties created from the type definition.
-    var propertyDocument = new PropertyDocument(dataTypeService);
+    var documentFromType = new PropertyDocument();
 
     // you can register global listener to know when a property changes:
-    propertyDocument.on('propertyChanged', function (path, value, property, category, doc) {
-        console.log('onPropertyChanged', path, value, property, category, doc);
+    documentFromType.on('valueChanged', function (path, value, property, category, doc) {
+        console.log('valueChanged', path, value, property, category, doc);
         m.utils.redraw();
     });
 
     // Now we add a category block mapped to a typeDescriptor and a value:
-    propertyDocument.addCategory("My Data", {}, initialValue, typeDefinition);
-
-    // We then create the configuration used to power up the property editor component:
-    var fromTypeConfig = props.editor(editorContext, propertyDocument.getCategories());
+    documentFromType.addCategory("My Data", {}, initialValue, typeDefinition);
 
     //////////////////////////////////////////////////////////////////
     // Initialization of a property editor using a Type file to populate itself.
@@ -419,7 +392,7 @@ define([
     }
 
     // The compact notation allows easy configuration of a PropertyEditor using pure JavaScript:
-    var compactNotationConfig = props.editor(editorContext, [
+    var compactNotationDocument = new PropertyDocument([
         props.category("My Data also!", {}, [
             props.number("Number", genModel(1), {
                 default: 1, min: 0, max: 1, increment: 0.3, priority: 4
@@ -446,10 +419,10 @@ define([
         view: function () {
             return m('div', {class :"panel-fill panel-flex-horizontal fullscreen", style:"overflow: auto;"}, [
                 m('div', {class: "panel-fill"}, [
-                    PropertyEditor.component(fromTypeConfig)
+                    PropertyEditor.component(documentFromType)
                 ]),
                 m('div', {class: "panel-fill"}, [
-                    PropertyEditor.component(compactNotationConfig)
+                    PropertyEditor.component(compactNotationDocument)
                 ])
             ]);
         }

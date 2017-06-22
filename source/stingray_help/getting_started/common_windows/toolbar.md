@@ -8,11 +8,11 @@ The Toolbar displays in the main Stingray Editor window, on the left side of the
 
 <dt>Test Level</dt>
 
-<dd>Launches the test engine and the **Test Level** preview window, letting you enter and interact with the world you've been building. See also ~{Test a level}~ .</dd>
+<dd>Launches the test engine and the **Test Level** preview window, letting you enter and interact with the world you've been building.</dd>
 
 <dt>Run Project</dt>
 
-<dd>Lets you test the entire project on your PC. See ~{Test a project}~.</dd>
+<dd>Lets you test the entire project on your PC. See ~{Test and build a project}~.</dd>
 
 <dt>Select</dt>
 <dd>Activates the Select tool. Using the Select tool, you can select objects within the marquee selection (**Window** mode) or objects that intersect the marquee selection (**Crossing** mode). See ~{ Select objects in a level  }~. **Hotkey: q**</dd>
@@ -64,7 +64,6 @@ The Toolbar displays in the main Stingray Editor window, on the left side of the
 
 ---
 Related topics:
--	~{ Test a level }~
 -	~{ Move, rotate, or scale objects in a level }~
 -	~{ Place objects in a level }~
 - ~{ Select objects in a level }~

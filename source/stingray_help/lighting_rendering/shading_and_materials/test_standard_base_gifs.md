@@ -1,10 +1,10 @@
-# Standard Base Node Gifs
+# Standard Base Node Examples
 ﻿
 The standard base output node produces physically plausible shading based on a base color value and a variety of parameters that describe the physical properties of the object and the way it interacts with incoming light.
 
-For more information on these nodes, see the **Output > Standard Base** node in the Stingray Shader Node reference. 
+For more information on these nodes, see the **Output > Standard Base** node in the Stingray Shader Node reference.
 
-Animated Gif: | Node: | Description:
+Example: | Node: | Description:
 --- | --- | ---
 ![](../../gifs/shader_base_offset.gif)  | **Offset** | An optional world-space offset to apply to the position of the pixel being shaded, changing the apparent placement of the object in the scene.
 ![](../../gifs/shader_base_color.gif)  | **Base Color** | The RGB color of the pixel being shaded.
