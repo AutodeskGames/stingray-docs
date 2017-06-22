@@ -58,8 +58,8 @@ You can only debug the engine while it's running in `dev` configuration. For per
 
 That means that you can debug:
 
--	when you use Test Level to launch your project from the Stingray editor. ![Test Level](../../images/icon_Play.png)
--	when you use Run Project to launch your project from the Stingray editor, on any target platform. ![Test Level](../../images/icon_playGame.png)
+-	when you use Test Level to launch your project from the Stingray editor. ![Test Level](../../images/icon_test_level.png)
+-	when you use Run Project to launch your project from the Stingray editor, on any target platform. ![Test Level](../../images/icon_run_project.png)
 -	the engine that the editor runs internally.
 -	a standalone build that you package with the `dev` configuration.
 

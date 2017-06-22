@@ -12,7 +12,7 @@ Cameras in Stingray are your way of viewing your game world. Because they are ne
 
   	![](../images/active_camera_flow.png)
 
-3. Click the Play icon ![](../images/icon_Play.png) in the ~{ Toolbar }~, and you can now press C to assume your new camera.
+3. Click the Play icon ![](../images/icon_test_level.png) in the ~{ Toolbar }~, and you can now press C to assume your new camera.
 
 ## Setting clipping planes
 

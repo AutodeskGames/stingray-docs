@@ -10,7 +10,7 @@ Based on the core technology from the proven Bitsquid game engine, Stingray is t
 
 Starting with a template or sample project, or creating your own project populated with assets built in other apps, Stingray lets you quickly build a world by dragging and dropping assets. With a little Lua scripting, or using the visual node-based **Level Flow** Editor, you can quickly create rules and logic that govern how your world operates, and what are the behaviors and properties that define the objects within it.
 
-Click Play ![](../images/icon_Play.png) to enter **Test Level** mode and start to walk through your experience, interacting with the objects you've created. With Stingray, there's no waiting for your scene to render, the scene that you create is always alive. Basic shadows and lighting are built-in by default, and animated assets continually move.
+Click Play ![](../images/icon_test_level.png) to enter **Test Level** mode and start to walk through your experience, interacting with the objects you've created. With Stingray, there's no waiting for your scene to render, the scene that you create is always alive. Basic shadows and lighting are built-in by default, and animated assets continually move.
 
 To get started, try any of the following:
 
