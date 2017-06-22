@@ -74,9 +74,9 @@ This is a quick example of a property model function:
 
 ~~~{js}
 var _propertyData = "This is my data";
-function propertyModel (property) {
-	if (arguments.length > 1) {
-    	_propertyData = arguments[1];
+function propertyModel (value) {
+	if (arguments.length) {
+    	_propertyData = value;
     }
     return _propertyData;
 }
@@ -86,8 +86,8 @@ Most examples below use the following function which **generates** a property mo
 
 ~~~{js}
 function genModel (value) {
-	return function (property, newValue) {
-    	if (arguments.length > 1) {
+	return function (newValue) {
+    	if (arguments.length) {
     		value = newValue;
     	}
     	return value;
