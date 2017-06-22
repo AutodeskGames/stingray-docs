@@ -67,7 +67,7 @@
 		<source convert_from="markdown"
 			get_metadata="true"
 			github_root_public="https://www.github.com/AutodeskGames/stingray-docs/tree/master/source/sdk_help"
-			github_root_internal="https://git.autodesk.com/gameware/stingray-docs/tree/release/1.8.0/source/sdk_help"
+			github_root_internal="https://git.autodesk.com/gameware/stingray-docs/tree/master/source/sdk_help"
 		>..\source\sdk_help\*.md</source>
 		<source>..\source\sdk_help\*.png</source>
 		<source>..\source\sdk_help\*.jp?g</source>
