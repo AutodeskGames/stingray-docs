@@ -76,6 +76,14 @@ A new shading environment property lets you disable default tone mapping, and ex
 
 >**Note:** It is recommended that you leave default tone mapping enabled unless you are implementing custom post effect features.
 
+## Connected engines now auto-refresh
+
+Whenever you have to make changes to your project's resources, it's a lot easier to get those changes right when you can see them in context, running in the engine on your target platform.
+
+So, as of this release, whenever you're working in the editor and you're connected to a live instance of the Stingray engine (that is, an engine that you launch with either the Test Level ![](../images/icon_test_level.png) or the Run Project ![](../images/icon_run_project.png) buttons), the engine automatically detects any changes you make to your project resources and reloads those modified assets whenever possible.
+
+(Note that for some kinds of assets, like levels and script files, you may need to do a couple of extra steps. For details, see ~{ Reloading resources }~.)
+
 ## Experimental feature: HoloLens updates
 
 - A new experimental HoloLens project is now available for *source code customers* in the **Online Projects** tab in the **Project Manager**. See ~{ Get started on HoloLens }~.

@@ -2,7 +2,7 @@
 
 You can start your project in multiple different ways to test out various aspects of your content and gameplay.
 
-## ![Play](../images/icon_Play.png) Test Level
+## ![Play](../images/icon_test_level.png) Test Level
 
 You can launch your project on your local machine from the Stingray Editor, and have it start up with the current level you have opened in the Stingray Editor. This is a fast way to drop in and out of a level to test your changes.
 
@@ -10,20 +10,20 @@ Use any of the following methods:
 
 -	From the main menu, select **Edit > Level Testing > Test Level**.
 -	Use the **F8** hotkey.
--	Click the ![Play](../images/icon_Play.png) icon in the **Level Viewport** panel.
+-	Click the ![Play](../images/icon_test_level.png) icon in the **Level Viewport** panel.
 
 > **Note:** it is up to the project's Lua boot code to support starting with the current level. If you use the Appkit's `SimpleProject` in your game (like any of the template projects provided with Stingray), this is done for you. If you write your own Lua boot script, you will need to support it yourself if you want. See ~{ Loading the current level for testing }~.
 
 Also, it's important to note that the Test Level doesn't handle loading resources in exactly the same way as your final app will. When you test the level, the engine automatically loads each resource that it needs directly from your project's data folder when it's needed, whether or not that resource is included in any resource packages, and whether or not your project loads any resource packages at all. So, when testing the level, you don't have to worry about resource management at all. (See also ~{ Loading and unloading content at runtime }~.)
 
-## ![Run](../images/icon_playGame.png) Run Project
+## ![Run](../images/icon_run_project.png) Run Project
 
 You can launch the project as a standalone playable application on your local machine, and on any other remote target that you have set up in the **Connections** panel. This is a good way to test the full project on any target platform as you work, starting from the very beginning.
 
 Use any of the following methods:
 
 -	From the main menu, select **Edit > Level Testing > Run Project**.
--	Click the ![Run](../images/icon_playGame.png) icon next in the Level Viewport panel or the Connections panel.
+-	Click the ![Run](../images/icon_run_project.png) icon next in the Level Viewport panel or the Connections panel.
 
 See also ~{ Connect to a remote device }~.
 

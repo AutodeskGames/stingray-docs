@@ -16,9 +16,9 @@ This is a great way to test, because:
 -	you can use the **Status Bar** to send commands and scripts to the engine.
 -	all output from the engine is captured in the editor's **Log Console**.
 
-## ![](../../images/icon_Play.png) Test only the current level
+## ![](../../images/icon_test_level.png) Test only the current level
 
-In the Stingray editor, you always work on one level at a time. While you have a level open, you'll likely want to test out the experience of running that particular level a lot. Use the ![](../../images/icon_Play.png) button in the **Level Viewport** ~{ Toolbar }~ to quickly step in to your current level.
+In the Stingray editor, you always work on one level at a time. While you have a level open, you'll likely want to test out the experience of running that particular level a lot. Use the ![](../../images/icon_test_level.png) button in the **Level Viewport** ~{ Toolbar }~ to quickly step in to your current level.
 
 This is a great way to test, because:
 

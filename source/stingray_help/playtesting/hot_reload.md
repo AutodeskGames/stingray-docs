@@ -1,46 +1,48 @@
 # Reloading resources
 
-You can make a running Stingray game reload most types of resources live, without needing to stop and restart the whole game. Viewing the effects of your changes immediately in the context of the real game can help you shorten your iteration time and work more efficiently.
+While you're working on your project's assets -- for example, tweaking the properties of a material or a particle effect -- it's usually easier to get the effect you want if you can see your changes immediately in the context of your scene.
 
-This page describes how to get live reloading working in your environment, what it can do, and what it cannot do.
+The Stingray editor's asset preview and level editing viewports always show you the most up-to-date changes to your assets and scenes. But, sometimes you'll want to see your modifications live in the engine, running on the final target platform for your project.
 
-## Step 1. Start the game
+This page explains how you can get a running instance of the engine to "hot-reload" an asset: that is, to reload it immediately into memory and show you the very latest changes.
 
-You can live reload resources for any game that is running from the compiled data folder for your game project. That means you can start your game using either of the main playtesting modes:
+## Refresh assets automatically
 
--	**Edit > Level Testing > Test Level** (or **F8**), which opens your current level.
--	**Edit > Level Testing > Run Project** which starts your project as a standalone game.
+Whenever you change an asset in your project, the editor automatically refreshes each connected engine to show the latest changes. This works for any engine that you launch using the Test Level ![Test Level](../images/icon_test_level.png) or Run Project ![Run Project](../images/icon_run_project.png) button.
 
-## Step 2. Recompile the resource
+This helps you work seamlessly whenever you're working on an asset that is saved in its own data file in the project folder.
 
-The source data files for your resources live in your project folder, but running games read *compiled* versions of that data from your project's `_data` folder. (See ~{ About the content lifecycle }~.)
+-	**Materials** and **particle effects** are updated immediately in the engine any time you modify the object's properties in the Stingray editor. This provides you with immediate feedback while you make even small adjustments, like dragging sliders and picking colors.
 
-Therefore, when you edit the source data file for a resource, you have to recompile that resource into the compiled data folder before it can be loaded in game.
+-	For most other types of assets, such as unit resources, terrains, and animation controllers, you have to save your modifications to the file on disk. The editor detects the modification to the file on disk, re-compiles the resource, and refreshes the engine.
 
-The Stingray Editor automatically recompiles most kinds of resources immediately when you save them. However, some kinds of data, like Lua files, are not immediately recompiled. Also, if you modify resources outside of the editing tools (for example, if you modify physics properties in your project's `global.physics_properties` file in a text editor), you may need to instruct the editor to recompile them.
+-	**Levels:** If you use the Stingray editor to change any information that is saved in a *.level* resource -- such as moving objects around in the scene, placing new units, changing the properties of the entities or units that you've placed in the level, or modifying the Level Flow graph -- the editor treats your *.level* asset exactly the same as the other kinds of assets described above. It automatically recompiles the level resource, then asks all connected engines to refresh the level with the new content.
+
+	However, if the connected engine *currently* has that modified level loaded up at the time that you save your modifications to the level, you won't be able see your changes immediately. You'll have to exit and restart that level in the engine in order for your changes to appear.
+
+## Force assets to recompile
+
+The source data files for your resources live in your project folder, but the engine loads *compiled* versions of that data from your project's `_data` folder. (See ~{ About the content lifecycle }~.) So, whenever you modify the source data file for a resource, that asset has to be recompiled into the compiled data folder before it can be loaded in game.
+
+As mentioned above, the Stingray Editor automatically recompiles most kinds of resources immediately when you save them. However, one exception is Lua files -- if you modify one or more scripts in your project, you'll have to ask the editor to recompile them for you. You'll have to do the same if you modify resources outside of the editing tools (for example, if you modify physics properties in your project's `global.physics_properties` file in a text editor).
 
 To force a compilation of any recently modified resources:
 
--	Press **F5** in the Stingray Editor, or select **Edit > Level Testing > Refresh** from the main menu.
+-	In the Stingray editor, press **F5** or select **Edit > Level Testing > Refresh** from the main menu.
+-	If you're not running the Stingray editor, you can launch the engine from the command line with the `--compile` flag. See also the ~{ Stingray engine command-line reference }~ for more.
 
-## Step 3. Reload the resource
+## Force a refresh
 
-If your game has already loaded the old version of the resource that you have just modified, it will not automatically detect and reload your modifications. You must instruct your game to check for any resources that have been modified since they were loaded.
+Every time you modify or recompile an asset in the Stingray editor, the editor automatically refreshes the modified content in all connected instances of the engine. That includes its own internal engine, and all engines you launched through the editor's Test Level and Run Project buttons.
 
-To trigger a reload, send your game the `refresh` console command through the Stingray Editor "Status bar". See ~{ Send commands from the Status bar }~.
+However, sometimes you might need to force an engine to refresh itself from the latest compiled content. For example, if you have your project running in the engine, and you make some changes to an asset using a different editing tool (for example, while debugging your Lua scripts in Visual Studio Code), you will need to send a command to the engine to tell it to refresh the assets it currently has loaded.
+
+To trigger a reload, send the `refresh` console command to the engine. You can send this through the Stingray editor's **Status bar** (see ~{ Send commands from the Status bar }~, or from the [Visual Studio Code debugging plug-in](https://marketplace.visualstudio.com/items?itemName=jschmidt42.stingray-debug).
 
 Make sure that:
 
--	You have the Status bar set to the **Command** option instead of the **Lua** option.
--	You have selected the right instance of the engine in the drop-down list in the Status bar.
-
-If you want to reload a script running in a standalone game, you can send the command using the **External Console** application. Launch the External Console by selecting **Window > External Console**  from the main menu (or **Alt + 2**).
-
-## Limitations of live reloading
-
-Not *all* types of resources will show your changes immediately in the game.
-
-In particular, once you have loaded a level into your game, any changes to the data that are maintained in its  *.level* resource are not immediately updated in the game when you send the `refresh` command. For example, you will not see the results of changes in unit and trigger placement, material assignments, or level flow connections. To see the effects of these kinds of changes, restart the level.
+-	If using the Status Bar, you have it set to the **Command** option instead of the **Lua** option, and you have selected the right instance of the engine in the drop-down list.
+-	If using Visual Studio Code, you preface the command name with `--`, like `--refresh`.
 
 ---
 Related topics:
