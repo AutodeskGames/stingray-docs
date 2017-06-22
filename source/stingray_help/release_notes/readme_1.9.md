@@ -1,7 +1,13 @@
 # Stingray 1.9 Release Notes
 <a name="top"></a>
 
-Welcome to the Stingray 1.9 (1.9.1358.0) Beta release.
+Stingray 1.9 helps you create a more realistic distribution of light in your scenes, by introducing physical lights with temperature settings and IES light profiles. Custom tone mapping and an updated clear coat material also increase the control and quality of your rendering.
+
+Other enhancements include the ability to mark assets in the **Asset Browser** as favorites, making it easy to find them anytime. As you work in the Stingray editor, your assets are now automatically updated in all connected engines. An updated **Capture Frames** plug-in offers an extensibility interface designed to allow support for additional codecs, and scripters and programmers can now debug a project’s Lua code from the Visual Studio Code editor.
+
+This release also offers an experimental HoloLens project, accessible to source customers.
+
+For details on these and more new features, refer to the [What's New](#whats-new) section below.
 
 > **Important**: We strongly recommend that you back up your existing Stingray data or work on a copy of your project when using a beta version of Stingray.
 
