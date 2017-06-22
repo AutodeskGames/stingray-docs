@@ -430,7 +430,9 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 	No changes take place when you destroy a shading environment entity and respawn a new entity. After you spawn a new shading environment entity, switching between background levels in the Particle Editor viewport or switching shading environments in the game will not work properly.
 
-	**Workaround:** None.
+	**Workaround:** None. 
+	
+	> **Note:** This limitation is fixed in 3ds Max Interactive.
 
 [Return to top](#top)
 
