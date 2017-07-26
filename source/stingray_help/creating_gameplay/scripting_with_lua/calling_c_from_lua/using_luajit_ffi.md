@@ -28,6 +28,12 @@ When you compile this code into a library, there is no need to link your C libra
 
 If you want to use functions from a third-party library instead of writing your own C code, you can usually use the library as-is as long as it has been compiled for the right processor architecture.
 
+Note that:
+
+-	You must compile your DLL for 64-bit targets. The engine will be unable to load your DLL if you compile for 32-bit targets.
+
+-	The functions that you want to invoke through FFI must be exposed in your DLL as C code, to avoid the [function name mangling](https://en.wikipedia.org/wiki/Name_mangling) introduced by C++ compilers. If you want to write your DLL in C++ and compile it with a C++ compiler, make sure that you enclose the functions you want to expose inside an `extern "C" { ... }` block.
+
 ## Step 2. Load and call the C code
 
 To invoke your C code from within your project's Lua scripts:
