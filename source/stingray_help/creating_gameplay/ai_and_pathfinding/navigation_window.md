@@ -1,7 +1,5 @@
 # Navigation options
 
-![UPDATED](../../images/updated.png)
-
 Select **Window > Navigation** to access the following **Navigation Options** in Stingray.
 
 ##Generate
@@ -55,7 +53,7 @@ These options specify how to generate the NavMesh.
  <br/>**Note** that terrains (heightfield physics actors) are always consumed regardless of `Consume Mesh` value, though script data exclusion still applies.
 </dd>
 
-<dt>[![NEW](../../images/new.png "What else is new in v1.9?")](../../release_notes/readme_1.9.html)Excluded Physics Actor Shape Template</dt>
+<dt>Excluded Physics Actor Shape Template</dt>
 <dd>When `Physics Actor` is selected to consume meshes, the NavMesh generation will consume all static actors except if their shape template is listed in the `Excluded Physics Actor Shape Template` field (a comma-separated list)</dd>
 
 <dt>Terrain Sampling</dt>

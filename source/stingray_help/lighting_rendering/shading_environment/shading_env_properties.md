@@ -1,7 +1,5 @@
 # Shading environment properties
 
-![UPDATED](../../images/updated.png)
-
 This page describes the properties that are available in the Property Editor panel when you select the shading environment for a level.
 
 ## Global Lighting
@@ -103,8 +101,6 @@ The **Max** value sets the distance from the camera at which the fog reaches its
 </dl>
 
 ## Tone Mapping
-
-[![NEW](../../images/new.png "What else is new in v1.9?")](../../release_notes/readme_1.9.html)
 
 <dl>
 <dt>Enabled</dt>

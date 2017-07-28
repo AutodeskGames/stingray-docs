@@ -1,7 +1,5 @@
 # Create a texture template
 
-![UPDATED](../../../images/updated.png)
-
 A texture template is a file in your project that typically contains the texture resource settings and compression formats of the texture on different platforms and enables an improved import workflow.
 
 The **Texture Manager** includes default texture templates such as
@@ -12,8 +10,7 @@ The **Texture Manager** includes default texture templates such as
 -	Albedo template for textures without alpha channel.
 -	Roughness/Metallic/AO template for RMA textures.
 -	HDRI/Skydome template for skydome textures.
--	[![NEW](../../../images/new.png "What else is new in v1.9?")](../../../release_notes/readme_1.9.html)
-Light/IES template for lightmap and IES light profile textures.
+-	Light/IES template for lightmap and IES light profile textures.
 
 In addition to the texture settings, you will find suffixes denoting the texture types defined in the texture templates. These are used to assign the texture templates to the textures you import by matching the file suffix to the suffix defined in one of the templates. See below for the file suffixes defined in the core texture templates:
 
@@ -61,7 +58,7 @@ You can create texture templates to quickly configure imported textures without 
 To create a new template:
 
 1. Select one (and only one) texture in the **Texture Manager**.
-2. ![UPDATED](../../../images/updated.png) Click *Create* icon ![](../../../images/icon_createAsset.png) and select **Create Template**.
+2. Click *Create* icon ![](../../../images/icon_createAsset.png) and select **Create Template**.
 
 	The window that appears shows how the actual template file will look internally, what settings it will contain for each platform, and what settings they have in common.
 

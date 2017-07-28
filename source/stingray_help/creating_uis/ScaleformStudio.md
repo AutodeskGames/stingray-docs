@@ -13,7 +13,7 @@ The Scaleform Studio plug-in provides the following capabilities to Stingray:
 * Compatible with all platforms supported by the Stingray engine.
 
 <table class="not-ruled"><tr><td>
-![Advanced menu sample project](images/project_example_scaleform.png)
+![Advanced menu sample project](../images/project_example_scaleform.png)
 </td><td>
 Check out the Advanced Menu project to see a snazzier example of what Scaleform Studio can do for you. Open it from the **Online Projects** tab of the **Project Manager**, or [download the project here](https://gamedev.autodesk.com/stingray/plugins/advanced_menu_example)!
 </td></tr></table>
