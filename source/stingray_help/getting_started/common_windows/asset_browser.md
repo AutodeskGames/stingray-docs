@@ -1,6 +1,5 @@
 ﻿# Asset Browser
 
-![UPDATED](../../images/updated.png)
 
 - **Window > Asset Browser**
 
@@ -45,8 +44,6 @@ Use the vertical slider between the tree view and file view to control how large
 The file view indicates read-only folders and resources using a lock icon: ![Locked resource](../../images/icon_read_only.png).
 
 ## Favorites
-
-[![NEW](../../images/new.png "What else is new in v1.9?")](../../release_notes/readme_1.9.html)
 
 The **Favorites** lists the assets and folders you bookmark as a favorite ![](../../images/icon_asset_favorites.png). To add a frequently used asset or folder as a favorite, check the favorite icon ![](../../images/icon_asset_set_favorite.png) beside the asset/folder or right-click and select **Add to Favorites**. You can also drag and drop assets and folders to the **Favorites**.  
 

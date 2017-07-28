@@ -1,7 +1,5 @@
 # Physically Based Lighting
 
-[![NEW](../../images/new.png "What else is new in v1.9?")](../../release_notes/readme_1.9.html)
-
 The measurement of light is known as photometry. You can use photometric lights to more accurately define lights in your scene. In Stingray, the Physical Light Entity lets you use data from real-world lights to create a realistic distribution of light in your scene.
 
 Physical lights can be added to your scene from the **Create** panel.

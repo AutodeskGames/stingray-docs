@@ -1,6 +1,5 @@
 # Create a physical light
 
-[![NEW](../../../images/new.png "What else is new in v1.9?")](../../../release_notes/readme_1.9.html)
 
 The **Physical Light** entity lets you use data from real-world lights to create a realistic distribution of light in your scene.
 

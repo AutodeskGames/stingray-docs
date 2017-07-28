@@ -31,7 +31,7 @@
 
 <dt>Never Twice in a Row</dt>
 
-<dd>Every loop iteration, a new animation is picket at random. To avoid repetition, the same animation is never picked for two loop iterations in a row.</dd>
+<dd>Every loop iteration, a new animation is picked at random. To avoid repetition, the same animation is never picked for two loop iterations in a row.</dd>
 </dl></dd>
 
 </dl>
