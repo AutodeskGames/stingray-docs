@@ -1,0 +1,6 @@
+create_wwiseproj
+generate_sound_banks
+import_audio
+listen_to_sound
+load_sound_banks
+audio_sources

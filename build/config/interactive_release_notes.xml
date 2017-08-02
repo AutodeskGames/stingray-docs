@@ -42,7 +42,7 @@
 		<source convert_from="markdown"
 			get_metadata="true"
 			github_root_public=""
-			github_root_internal="https://git.autodesk.com/gameware/stingray-docs/tree/release/2.0/source/sdk_help"
+			github_root_internal="https://git.autodesk.com/gameware/stingray-docs/tree/release/2.0/source/interactive_release_notes"
 		>..\..\source\interactive_release_notes\*.md</source>
 		<source>..\..\source\interactive_release_notes\*.png</source>
 		<source>..\..\source\interactive_release_notes\*.jp*g</source>
