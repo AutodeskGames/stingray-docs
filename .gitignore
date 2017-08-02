@@ -1,6 +1,8 @@
-build/archives/
 build/logs/
+build/config/temp*/
+build/config/archives/
 build/temp*/
+build/archives/
 output/
 
 # these two files are updated automatically during the build with content
