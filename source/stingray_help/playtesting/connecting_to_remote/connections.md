@@ -1,6 +1,5 @@
 # Using the Connections panel
 
-![UPDATED](../../images/updated.png)
 
 - **Window > Deploy and Connect > Connections**
 
