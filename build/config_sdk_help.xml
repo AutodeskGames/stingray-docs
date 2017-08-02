@@ -47,7 +47,7 @@
 		<meta name="product-feature" content="Plug-ins" include="*"></meta>
 		<insert_family_links include="\sdk_help\*"></insert_family_links>
 		<!-- find and replace variables with version numbers -->
-		<replace variable_file="variables.ini" include="*.html"></replace>
+		<template_in_place include="*.html" exclude="*_ref\*">variables.ini</template_in_place>
 		<replace include="*\_read_me.htm" pattern="_read_me.txt">
 			<label lang="en">Custom Flow node description format</label>
 			<label lang="ko">사용자 정의 C 흐름 노드 설명 형식</label>
