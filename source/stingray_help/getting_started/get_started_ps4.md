@@ -20,7 +20,7 @@ Once you have the distribution *.zip* file on your computer, unzip it into your 
 
 If you want to connect your Windows development machine to your PlayStation 4 for mirroring or running your project, you need to install the PlayStation 4 platform SDK.
 
-You need **version SR_DOC_PS4_SDK_VERSION**. Other versions may or may not be compatible.
+You need **version {{SR_DOC_PS4_SDK_VERSION}}**. Other versions may or may not be compatible.
 
 You can get the SDK using the SDK Manager utility, available to registered developers on the Sony DevNet: <https://ps4.scedev.net/>.
 

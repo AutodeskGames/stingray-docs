@@ -21,13 +21,13 @@ The Stingray engine only supports iOS devices compatible with Metal and OpenGL E
 
 ## iOS Version Compatibility
 
-The Stingray engine only supports iOS devices running **iOS SR_DOC_IOS_VERSION**.
+The Stingray engine only supports iOS devices running **iOS {{SR_DOC_IOS_VERSION}}**.
 
 ## Requirements for Running the Stingray iOS Packaging Server
 
 In order to package iOS games from Windows, you need to run the Stingray iOS package server on a Mac. This package server is included in the Stingray installer. For details on finding and using it, see ~{ Get started on iOS }~.
 
-Your Mac device must be using at least *Mac OS X SR_DOC_MACOS_VERSION* and must have *Xcode SR_DOC_XCODE_VERSION* installed. Please download these from <https://developer.apple.com/downloads>.
+Your Mac device must be using at least *Mac OS X {{SR_DOC_MACOS_VERSION}}* and must have *Xcode {{SR_DOC_XCODE_VERSION}}* installed. Please download these from <https://developer.apple.com/downloads>.
 
 We recommend you disable auto update on your Apple development machine. <!-- If you already have a newer version of Xcode installed (Xcode 7), you can simply delete that from your application folder and copy the one you have downloaded from the Apple website there. -->
 
@@ -48,7 +48,7 @@ The Stingray engine supports Android devices with Tegra K1 GPUs, the ARM Mali se
 
 ## Android Version Compatibility
 
-The Stingray engine officially supports only Android devices running **version SR_DOC_ANDROID_VERSION** or higher.
+The Stingray engine officially supports only Android devices running **version {{SR_DOC_ANDROID_VERSION}}** or higher.
 
 Devices running older versions may or may not work as expected.
 
@@ -84,11 +84,11 @@ Stingray is built with the following set of libraries for its target platforms. 
 
 | Platform | IDE | SDK |
 |---|---|---|
-| Windows 32/64bit | Visual Studio SR_DOC_VISUAL_STUDIO_VERSION | |
-| Android | Visual Studio SR_DOC_VISUAL_STUDIO_VERSION | NVIDIA CodeWorks for Android SR_DOC_CODEWORKS_VERSION |
-| iOS | Xcode SR_DOC_XCODE_VERSION | iOS SDK SR_DOC_IOS_VERSION |
-| PlayStation 4 | Visual Studio SR_DOC_VISUAL_STUDIO_VERSION | ORBIS SDK SR_DOC_PS4_SDK_VERSION |
-| Xbox One | Visual Studio SR_DOC_VISUAL_STUDIO_VERSION | XDK SR_DOC_XDK_VERSION |
+| Windows 32/64bit | Visual Studio {{SR_DOC_VISUAL_STUDIO_VERSION}} | |
+| Android | Visual Studio {{SR_DOC_VISUAL_STUDIO_VERSION}} | NVIDIA CodeWorks for Android {{SR_DOC_CODEWORKS_VERSION}} |
+| iOS | Xcode {{SR_DOC_XCODE_VERSION}} | iOS SDK {{SR_DOC_IOS_SDK_VERSION}} |
+| PlayStation 4 | Visual Studio {{SR_DOC_VISUAL_STUDIO_VERSION}} | ORBIS SDK {{SR_DOC_PS4_SDK_VERSION}} |
+| Xbox One | Visual Studio {{SR_DOC_VISUAL_STUDIO_VERSION}} | XDK {{SR_DOC_XDK_VERSION}} |
 
 ---
 Tags:

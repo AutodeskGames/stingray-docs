@@ -42,7 +42,7 @@ There are some libraries for optional third-party integrations that Autodesk is 
 
 ### Steam
 
-Steam integration requires version **SR_DOC_STEAMWORKS_VERSION** ONLY of the Steamworks SDK.
+Steam integration requires version **{{SR_DOC_STEAMWORKS_VERSION}}** ONLY of the Steamworks SDK.
 
 1.  Download the required version from:
 

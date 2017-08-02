@@ -29,8 +29,7 @@
 		<syntax_coloring include="\source_access\*" default_lang="lang-lua">true</syntax_coloring>
 		<contextId include="*\source_access\introduction.html" id="SOURCE_ACCESS_HOME"></contextId>
 		<insert_family_links include="\source_access\*"></insert_family_links>
-		<!-- find and replace variables with version numbers -->
-		<replace variable_file="variables.ini" include="*.html"></replace>
+		<template_in_place include="*.html" exclude="*_ref\*">variables.ini</template_in_place>
 	</global>
 
 	<merge id="images">
