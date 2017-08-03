@@ -111,6 +111,7 @@
 		<default_file>./homepage/homepage.htm</default_file>
 		<rename_toc_node old_title="Stingray FAQ" new_title="FAQ"></rename_toc_node>
 		<template_in_place include="*.html" exclude="*_ref\*,*_c\*">common_variables.config</template_in_place>
+		<template_in_place include="*.html" exclude="*_ref\*,*_c\*">%SR_DOC_VARIABLES_CONFIG_FILE%</template_in_place>
 
 		<replace include="*\_read_me.htm" pattern="_read_me.txt">
 			<label lang="en">Custom Flow node description format</label>
@@ -148,6 +149,7 @@
 		</merge_toc_config>
 	</merge>
 
+<!--
 	<merge id="tutorial_link">
 		<apply_template>false</apply_template>
 		<apply_cloudhelp>false</apply_cloudhelp>
@@ -313,5 +315,5 @@
 		<run_adoc_from_xml index_file="%SR_ENGINE_DIR%\docs\source\engine_c\mainpage.md"
 			version_history="%SR_DOC_DIR%\source\engine_c\versions">true</run_adoc_from_xml>
 	</doxygen>
-
+-->
 </ADE_HTML_2_1_tools_Config>

@@ -1,5 +1,5 @@
 
-puts("Starting to build the Interactive Component internal help...")
+puts("Starting to build the Stingray component help...")
 
 $script_dir = File.expand_path(File.dirname(__FILE__))
 Dir.chdir("#{$script_dir}")
@@ -14,6 +14,8 @@ ENV["SR_DOC_AKN_PRODUCT"] = "Stingray"
 ENV["SR_DOC_AKN_RELEASE"] = "NA"
 ENV["SR_DOC_PROJECT_TITLE"] = "Stingray Help"
 ENV["SR_DOC_LOCAL_OUTPUT"] = "stingray_help"
+
+ENV["SR_DOC_VARIABLES_CONFIG_FILE"] = "variables_stingray.config"
 
 set_upload_variables()
 

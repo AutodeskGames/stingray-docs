@@ -77,12 +77,13 @@ def make_output_dir()
 		FileUtils.mkdir_p($output_dir)
 	end
 end
+$output_path_segment = ENV["SR_DOC_LOCAL_OUTPUT"]
 
 def build()
 
 	if $options[:interactive_release_notes] or $options[:all]
 		puts "Generating HTML for the interactive component internal release notes..."
-		output_path = "output/interactive_release_notes/#{$lang_dir}/preview"
+		output_path = "output/#{$output_path_segment}/#{$lang_dir}/preview"
 		system("#{$doctools_dir}/tools/ADE-HTML-2.1-tools.exe", "#{$script_dir}/../config/interactive_release_notes.xml")
 		puts "Done. Look under #{output_path}."
 		if $options[:interactive_release_notes] and $options[:launch]
@@ -92,14 +93,14 @@ def build()
 
   if $options[:interactive_help] or $options[:all]
 		puts "Building the interactive component help..."
-		output_path = "output/interactive_help/#{$lang_dir}/preview/"
+		output_path = "output/#{$output_path_segment}/#{$lang_dir}/preview/"
 		if $lang_import_dir == ""
 			# Run reference doc generation in the engine submodule
 			ENV["SR_DOCTOOLS_DIR"] = $doctools_dir
 			ENV["SR_DOC_DIR"] = "#{$script_dir}/../.."
-			system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--shader-ref")
-			system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--flow-ref")
-			system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--lua-ref")
+			#system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--shader-ref")
+			#system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--flow-ref")
+			#system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--lua-ref")
 			ENV["SR_DOC_DIR"] = ""
 			ENV["SR_DOCTOOLS_DIR"] = ""
 			puts "Getting latest command docs..."
