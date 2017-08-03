@@ -1,6 +1,6 @@
-# Welcome to the Stingray Documentation
+# Welcome to the docs repo for the Stingray interactive component
 
-This repository hosts all the source files for the Stingray documentation.
+This repository hosts all the source files that are used to build public-facing documentation for Stingray, and for the products that ship with Stingray as an interactive component (currently 3ds Max Interactive and Maya Interactive).
 
 This readme is intended to orient internal Autodesk developers and external customers to our help and docs systems.
 
@@ -46,7 +46,7 @@ You submit modifications to us using *pull requests* -- the mechanism GitHub use
 
 ## Source organization
 
-Source files for these parts of the doc are all maintained in the *source* folder. The organization of the files in this folder more or less matches the organization of the final TOC shown on the public docs site, so it should be pretty easy to figure out where to make your edits and additions.
+Source files for these parts of the doc are all maintained in the *source/interactive_help* folder. The organization of the files in this folder more or less matches the organization of the final TOC shown on the public docs site, so it should be pretty easy to figure out where to make your edits and additions.
 
 **NOTE:** This repo also has a couple of *submodules* that point to other repositories. Currently these submodules are hidden away in our private GitHub cloud, so you can't access them. If you're working in the public mirror, you might occasionally run into errors when cloning or pulling from this repo, telling you that the submodules can't be found. Don't worry about it, that's expected! If the errors are getting in the way though, you might be able to avoid these errors by configuring your Git client not to *recurse* into submodules.
 
@@ -61,6 +61,50 @@ For details on what you can do in Pandoc-flavored markdown, see:
 Many good text editors can give you previews of what the Markdown format will look like when transformed into HTML. Although the styles will be different from the styles in our final public help, a preview like this should give you a good enough idea of the structure and markup you're writing. (You can also run a doc build yourself to see the final format; see below.)
 
 As a general rule, if the GitHub preview looks good, you can be pretty sure that your content will be formatted correctly in the final build.
+
+## Using conditions to make text appear for different "flavors"
+
+The source material in this repo is used to build customer-facing help for Stingray, 3ds Max Interactive, and Maya Interactive. Although these different flavors are based on the same core interactive component, they are specialized and tweaked by using different build configurations and shipping with different sets of default plug-ins. So, sometimes the help content that accompanies the flavors will need to be different too.
+
+There are two ways to change things up for different flavors: variables, and conditions.
+
+Variables are simple text keys that get replaced automatically during the doc build process by new strings that reflect the flavor being built. You can tell a variable by the syntax `{{ variable_name }}`, with two curly-brackets around the variable name. For example, if you write, `Welcome to {{ ProductName }}, the greatest software in history`, that text will be rendered as `Welcome to Stingray, the greatest software in history` or `Welcome to 3ds Max Interactive, the greatest software in history` depending on the flavor you choose to build.
+
+Conditional text means including or excluding a block of text or an entire topic based on whether certain flags are active. For example, if a certain paragraph only applies to 3ds Max Interactive, you could write:
+
+```
+{{#if MaxInteractive}}
+Here's the Markdown content that will be seen **only** in Max builds.
+{{/if}}
+```
+
+or, to exclude some text from a given flavor, you can use `unless`:
+
+```
+{{#unless MayaInteractive}}
+This content will get seen in every other flavor but not in Maya.
+{{/unless}}
+```
+
+To include and exclude Markdown pages based on condition flags, add them to the `IncludeIf` and/or `ExcludeIf` metadata in the page's YAML block. For example, the following YAML block means that the page will only show up in Maya, but not in Stingray or Max:
+
+```
+---
+IncludeIf:
+-	MayaInteractive
+---
+```
+
+Similarly, in the following case, the page will appear in all builds *except* Max Interactive:
+
+```
+---
+ExcludeIf:
+-	MaxInteractive
+---
+```
+
+Variable definitions and conditional text settings are all kept in the *.config* files inside the *configs* folder. If you need to, you can add new variables and conditional text settings to these files.
 
 ## Controlling the TOC
 
@@ -118,21 +162,23 @@ The following sections are intended only for people with access to the internal 
 2.	If you're building the main Stingray Help, which includes the reference docs, you'll need the MSBuild tools for Visual Studio 2015, available [here](
 https://www.microsoft.com/en-us/download/details.aspx?id=48159).
 
+3.	Install [Lua for Windows](http://files.luaforge.net/releases/luaforwindows/luaforwindows), and make sure that `lua.exe` is in your system path.
+
 2.	Make sure that you have fully cloned this repo *and* its submodules. You should have a `build/ixg-doc-tools` folder full of stuff, and a `stingray-engine` folder full of stuff.
 
-3.	Go to the `build` folder, and look for the Ruby scripts. You'll find three convenient `make_....rb` files for building the main help, the developer help, and the tutorials individually.
+3.	Go to the `build` folder, and look for the Ruby scripts. You'll find three convenient `make_....rb` files for building the main help in each of its flavors: Stingray, Max Interactive and Maya Interactive.
 
-By default, you'll get a local build, which is placed in the `output` folder.
+By default, you'll get a local build, which is placed in the `output` folder. You can also have it upload to the public Autodesk Knowledge Network (AKN) site on the cloud.
 
 ### Build settings
 
-The build process for each chunk of the docs is controlled by an XML configuration file that lives next to the Ruby scripts. You can modify these files to change how the docs are generated and where they end up. For details, see the readme `.docx` file in the `build/ixg-doc-tools/tools` folder.
+The build process for each flavor of the help is controlled by variables in the Ruby script file, and configuration files that you'll find in the `config` folder. You can modify these files to change how the docs are generated and where they end up. For more information on the settings in the .xml files, see the readme `.docx` file in the `build/ixg-doc-tools/tools` folder.
 
-Feel free to experiment with these settings in your local builds. However, we on the Stingray team would appreciate it if you refrain from posting your builds to the AKN cloud without checking with us, to avoid the possibility of accidentally overwriting something.
+Feel free to experiment with these settings in your local builds. However, we on the Stingray team would appreciate it if you refrain from posting your builds to the AKN cloud unless you know what you're doing, to avoid the possibility of accidentally overwriting something.
 
 ## Reference docs
 
-The Stingray docs that are generated from the Markdown source in this repo are bundled with sets of *reference* documentation that are auto-generated from comments in the source code of the Stingray engine and editor.
+The docs that are generated from the Markdown source in this repo are bundled with sets of *reference* documentation that are auto-generated from comments in the source code of the Stingray engine and editor.
 
 Building the docs in this docs repository will automatically build these reference docs in the engine submodule, package them up where they're needed, create links for better navigation, etc.
 
@@ -154,7 +200,7 @@ In order to avoid confusion, we're adopting the following conventions for how we
 
 -	The `develop` branch of this repo should track the `develop` branch of the engine repo. Anytime we're doing work that applies to something done in the mainline develop branch of the engine, we put it here. This branch's submodule will point to a relatively recent commit in the `develop` branch of the engine repo.
 
--	When the engine repo creates a `release/1.X` branch, we'll create one here too. Most of our work will probably get done in these release branches. Each release branch's submodule will point to a relatively recent commit in the corresponding branch of the engine repo.
+-	When the engine repo creates a `release/X.Y.Z` branch, we'll create one here too. Most of our work will probably get done in these release branches. Each release branch's submodule will point to a relatively recent commit in the corresponding branch of the engine repo.
 
 Submodules don't "advance" automatically; we have to specifically set them every so often when we need to change the commit of the engine repo that we want to pick up. We'll start by doing this once a sprint, and on-demand if needed for some reason.
 
