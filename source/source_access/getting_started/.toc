@@ -1,3 +1,0 @@
-user_accounts
-managing_source
-libraries

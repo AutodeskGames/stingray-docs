@@ -1,5 +1,0 @@
-change_shading_env_properties
-shading_env_properties
-apply_color_grading
-share_shading_env
-adapt_scene_light_env

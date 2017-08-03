@@ -1,4 +1,0 @@
-create_light_source
-change_light_properties
-light_properties
-create_custom_light_material

@@ -1,3 +1,0 @@
-cloning_and_submodules
-updating
-contributing

@@ -1,8 +1,0 @@
-create_load_level
-place_objects_level
-select_objects_level
-copy_paste_level
-move_rotate_scale
-show_hide_objects
-snap_objects
-test_a_level

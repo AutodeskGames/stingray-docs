@@ -1,8 +1,0 @@
-content_lifecycle
-loading_unloading
-localizing
-sjson
-core_resources
-compiled_resource_names
-ignore_files
-about_units_and_entities
