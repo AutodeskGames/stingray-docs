@@ -1,25 +1,25 @@
 <ADE_HTML_2_1_tools_Config>
 	<project>
-		<output>..\..\output\interactive_help\%SR_DOC_LANG%\preview</output>
-		<output>..\..\output\interactive_help\%SR_DOC_LANG%\stingray_help.zip</output>
+		<output>..\..\output\%SR_DOC_LOCAL_OUTPUT%\%SR_DOC_LANG%\preview</output>
+		<output>..\..\output\%SR_DOC_LOCAL_OUTPUT%\%SR_DOC_LANG%\%SR_DOC_LOCAL_OUTPUT%.zip</output>
 		<AKN>
-			<component_id>Interactive-Help</component_id>
-			<product>Stingray</product>
-			<release>NA</release>
-			<language>%SR_DOC_LANG_AKN%</language>
+			<component_id>%SR_DOC_AKN_COMPONENT_ID%</component_id>
+			<product>%SR_DOC_AKN_PRODUCT%</product>
+			<release>%SR_DOC_AKN_RELEASE%</release>
+			<language>%SR_DOC_AKN_LANG%</language>
 			<book>GeneralUser</book>
-			<local_output>..\..\output\interactive_help\%SR_DOC_LANG%\AKN</local_output>
+			<local_output>..\..\output\%SR_DOC_LOCAL_OUTPUT%\%SR_DOC_LANG%\AKN</local_output>
 			<post_to_AKN>%SR_DOC_UPLOAD%</post_to_AKN>
 			<post_to_AKN_beta>%SR_DOC_UPLOAD_BETA%</post_to_AKN_beta>
 			<redirect_to_help include="*">true</redirect_to_help>
 			<athena include="*" exclude="*_ref\*"></athena>
 			<job-specification>
 				<!-- this forces the title in the AKN Publisher to show up in English. -->
-				<parameter name="documenttitle">Interactive Help</parameter>
+				<parameter name="documenttitle">Interactive Component Help</parameter>
 			</job-specification>
 		</AKN>
 		<language>%SR_DOC_LANG%</language>
-		<project_title>Stingray Component Help</project_title>
+		<project_title>%SR_DOC_PROJECT_TITLE%</project_title>
 		<export_for_localization>%SR_DOC_EXPORT_DIR%</export_for_localization>
 		<import_from_localization>%SR_DOC_IMPORT_DIR%</import_from_localization>
     <logDirectory>..\logs</logDirectory>

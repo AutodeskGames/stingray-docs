@@ -7,7 +7,13 @@ Dir.chdir("#{$script_dir}")
 require 'io/console'
 require_relative 'scripts/set_upload_variables'
 
-# Set environment variables used to generate the doc and publishing it on AKN.
+# Set environment variables used to generate the doc and publish it on AKN.
+
+ENV["SR_DOC_AKN_COMPONENT_ID"] = "Stingray-Help"
+ENV["SR_DOC_AKN_PRODUCT"] = "Stingray"
+ENV["SR_DOC_AKN_RELEASE"] = "NA"
+ENV["SR_DOC_PROJECT_TITLE"] = "Stingray Help"
+ENV["SR_DOC_LOCAL_OUTPUT"] = "stingray_help"
 
 set_upload_variables()
 

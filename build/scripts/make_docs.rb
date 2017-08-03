@@ -58,8 +58,8 @@ def validate_options()
 	if not ENV["SR_DOC_LANG"] then
 		ENV["SR_DOC_LANG"] = "en-us"
 	end
-	if not ENV["SR_DOC_LANG_AKN"] then
-		ENV["SR_DOC_LANG_AKN"] = "ENU"
+	if not ENV["SR_DOC_AKN_LANG"] then
+		ENV["SR_DOC_AKN_LANG"] = "ENU"
 	end
 	if not ENV["SR_DOC_EXPORT_DIR"] then
 		ENV["SR_DOC_EXPORT_DIR"] = ""
