@@ -1,5 +1,0 @@
-
-lifetimes
-storing_data
-floating_point
-optimizing

@@ -1,0 +1,8 @@
+launching
+feedback
+connecting_to_remote
+hot_reload
+troubleshooting
+optimize_memory
+log_console
+send_commands_statusline

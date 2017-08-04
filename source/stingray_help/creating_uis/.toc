@@ -1,7 +1,0 @@
-ScaleformStudio
-launch_scaleform_studio
-import_scaleform_studio
-integrating_scaleform
-run_in_stingray
-using_flow
-communication_sfs_sr

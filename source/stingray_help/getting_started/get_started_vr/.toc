@@ -1,6 +1,0 @@
-vr_engine
-mini_renderer
-vr_optimize
-vr_optimize_mobile
-build_for_gearVR
-vr_nodes

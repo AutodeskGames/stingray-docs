@@ -11,8 +11,8 @@ TAG = "<!-- The following content is automatically generated. Do not edit by han
 def run_extractions()
 
 	# get the command line parameters for the engine executable.
-	in_file = "#{$script_dir}/../../source/stingray_help/reference/_engine_command_line.in"
-	markdown_file = "#{$script_dir}/../../source/stingray_help/reference/engine_command_line.md"
+	in_file = "#{$script_dir}/../../source/interactive_help/reference/_engine_command_line.in"
+	markdown_file = "#{$script_dir}/../../source/interactive_help/reference/engine_command_line.md"
 	alphabetize = false
 	make_toc = false
 	should_join_lines = true
@@ -24,8 +24,8 @@ def run_extractions()
 			"#{$engine_dir}/runtime/application/application_options.cpp")
 
 	# get the console commands.
-	in_file = "#{$script_dir}/../../source/stingray_help/reference/_console_commands.in"
-	markdown_file = "#{$script_dir}/../../source/stingray_help/reference/console_commands.md"
+	in_file = "#{$script_dir}/../../source/interactive_help/reference/_console_commands.in"
+	markdown_file = "#{$script_dir}/../../source/interactive_help/reference/console_commands.md"
 	alphabetize = true
 	make_toc = true
 	should_join_lines = false

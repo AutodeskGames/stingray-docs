@@ -1,6 +1,0 @@
-create_texture_category
-create_texture_template
-edit_texture_settings
-dds_settings
-texture_streaming
-texture_manager

@@ -1,5 +1,0 @@
-lightmap_uvsetup
-bake_settings
-bake_lightmaps
-bake_with_stingray
-

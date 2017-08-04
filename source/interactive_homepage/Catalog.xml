@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+  <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <resources xmlns="http://www.intelliarts.com/publishing/resources">
+
+      <file type="html" id="homepage" locale="en_US">English/files/homepage.htm</file>
+      <file type="css" exclude-from-page="true" id="600">English/styles/style.css</file>
+
+      <!-- Homepage images -->
+      <file type="image" id="bench">English/images/bench.png</file>
+      <file type="image" id="dan">English/images/dan.png</file>
+      <file type="image" id="paul">English/images/paul.png</file>
+      <file type="image" id="product-icon">English/images/product-icon.png</file>
+      <file type="image" id="product-title">English/images/product-title.png</file>
+      <file type="image" id="splash">English/images/splash.png</file>
+      <file type="image" id="taxi">English/images/taxi.png</file>
+      <file type="image" id="town">English/images/town.png</file>
+      <file type="image" id="walking">English/images/walking.png</file>
+    </resources>
+  </catalog>

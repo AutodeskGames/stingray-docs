@@ -1,2 +1,0 @@
-built_in_types
-built_in_properties
