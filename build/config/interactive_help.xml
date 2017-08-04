@@ -40,6 +40,7 @@
 		<meta name="topicid" content="__stingray_help_video_tutorials_vid_gettingStarted_vid_gs3_manip_html" include="*\_vid_gs3_manip.html"></meta>
 		<meta name="topicid" content="__stingray_help_video_tutorials_vid_gettingStarted_vid_gs4_import_html" include="*\_vid_gs4_import.html"></meta>
 		<!-- context IDs for CSH -->
+		<contextId include="*.html" exclude="*_ref\*,*_c\*" from_title="true"></contextId>
 		<contextId include="*\level_viewport.html" id="tools_level_viewport"></contextId>
 		<contextId include="*\level_flow_editor.html" id="tools_level_flow_editor"></contextId>
 		<contextId include="*\level_explorer.html" id="tools_level_explorer"></contextId>
@@ -149,7 +150,6 @@
 		</merge_toc_config>
 	</merge>
 
-<!--
 	<merge id="tutorial_link">
 		<apply_template>false</apply_template>
 		<apply_cloudhelp>false</apply_cloudhelp>
@@ -315,5 +315,5 @@
 		<run_adoc_from_xml index_file="%SR_ENGINE_DIR%\docs\source\engine_c\mainpage.md"
 			version_history="%SR_DOC_DIR%\source\engine_c\versions">true</run_adoc_from_xml>
 	</doxygen>
--->
+
 </ADE_HTML_2_1_tools_Config>

@@ -29,6 +29,7 @@
 		<meta name="topic-type" content="concept" include="*"></meta>
 		<meta name="experiencelevel" content="general" include="*"></meta>
 		<meta name="audience" content="user" include="*"></meta>
+		<contextId include="*.html" from_title="true"></contextId>
 		<insert_family_links include="*"></insert_family_links>
 		<template_in_place include="*.html" exclude="*_ref\*">common_variables.config</template_in_place>
 	</global>

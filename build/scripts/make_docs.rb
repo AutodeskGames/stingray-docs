@@ -98,9 +98,9 @@ def build()
 			# Run reference doc generation in the engine submodule
 			ENV["SR_DOCTOOLS_DIR"] = $doctools_dir
 			ENV["SR_DOC_DIR"] = "#{$script_dir}/../.."
-			#system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--shader-ref")
-			#system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--flow-ref")
-			#system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--lua-ref")
+			system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--shader-ref")
+			system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--flow-ref")
+			system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--lua-ref")
 			ENV["SR_DOC_DIR"] = ""
 			ENV["SR_DOCTOOLS_DIR"] = ""
 			puts "Getting latest command docs..."
