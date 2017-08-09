@@ -23,6 +23,7 @@ For details on all the platform-specific settings required by the **Deployer** p
 -	~{ Get started on iOS }~
 -	~{ Get started on PlayStation 4 }~
 -	~{ Get started on Xbox One }~
+-	~{ Get started for the Web }~
 
 ## Common settings
 
