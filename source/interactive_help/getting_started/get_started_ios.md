@@ -1,6 +1,8 @@
 # Get started on iOS
 
-This page tells you everything you need to know in order to get started developing projects for iOS. You'll need an iPhone or iPad to follow along.
+This page tells you everything you need to know in order to get started developing projects for iOS. You'll need an iPhone or iPad to follow along, as well as a Mac running OS X.
+
+>	**NOTE:** You'll need to be a [registered developer with Apple](https://developer.apple.com/). It will also be helpful if you have a basic understanding of how iOS apps are typically developed and distributed, especially [how to manage your digital signing certificates](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html#//apple_ref/doc/uid/TP40012582-CH31-SW1).
 
 ## Step 1. Check the supported devices
 
