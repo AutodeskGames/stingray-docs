@@ -1,4 +1,7 @@
+about_3ds_max_interactive
+3ds_max_interactive_installation
 getting_started
+linking_3ds_max_and_max_interactive
 importing_assets
 building_levels
 lighting_rendering

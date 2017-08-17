@@ -158,7 +158,7 @@
 		<source>..\..\source\tutorial_link\*.html</source>
 		<merge_toc_config>
 			<source type="file">tutorials_on_area.html</source>
-			<parent_index>2</parent_index>
+			<parent_index>3</parent_index>
 		</merge_toc_config>
 	</merge>
 
