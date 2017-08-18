@@ -15,6 +15,8 @@ ENV["SR_DOC_AKN_RELEASE"] = "NA"
 ENV["SR_DOC_PROJECT_TITLE"] = "Stingray Help"
 ENV["SR_DOC_LOCAL_OUTPUT"] = "stingray_help"
 
+ENV["SR_DOC_TITLE_FORMAT"] = "$TITLE$"
+
 ENV["SR_DOC_VARIABLES_CONFIG_FILE"] = "variables_stingray.config"
 
 set_upload_variables()
