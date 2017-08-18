@@ -114,6 +114,8 @@
 		<template_in_place include="*.html" exclude="*_ref\*,*_c\*">common_variables.config</template_in_place>
 		<template_in_place include="*.html" exclude="*_ref\*,*_c\*">%SR_DOC_VARIABLES_CONFIG_FILE%</template_in_place>
 
+		<title_format include="*">%SR_DOC_TITLE_FORMAT%</title_format>
+
 		<replace include="*\_read_me.htm" pattern="_read_me.txt">
 			<label lang="en">Custom Flow node description format</label>
 			<label lang="ko">사용자 정의 C 흐름 노드 설명 형식</label>

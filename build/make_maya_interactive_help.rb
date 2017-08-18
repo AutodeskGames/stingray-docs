@@ -15,6 +15,8 @@ ENV["SR_DOC_AKN_RELEASE"] = "2018"
 ENV["SR_DOC_PROJECT_TITLE"] = "Maya Interactive Help"
 ENV["SR_DOC_LOCAL_OUTPUT"] = "maya_interactive_help"
 
+ENV["SR_DOC_TITLE_FORMAT"] = "$TITLE$ (Maya Interactive Help)"
+
 ENV["SR_DOC_VARIABLES_CONFIG_FILE"] = "variables_maya_interactive.config"
 
 set_upload_variables()

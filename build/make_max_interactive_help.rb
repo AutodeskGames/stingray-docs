@@ -15,6 +15,8 @@ ENV["SR_DOC_AKN_RELEASE"] = "2018"
 ENV["SR_DOC_PROJECT_TITLE"] = "3ds Max Interactive Help"
 ENV["SR_DOC_LOCAL_OUTPUT"] = "max_interactive_help"
 
+ENV["SR_DOC_TITLE_FORMAT"] = "$TITLE$ (3ds Max Interactive Help)"
+
 ENV["SR_DOC_VARIABLES_CONFIG_FILE"] = "variables_max_interactive.config"
 
 set_upload_variables()
