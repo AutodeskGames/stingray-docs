@@ -49,7 +49,7 @@
 <br>
 The speed can be a number, but you can also write in an expression, so you can use a variable to control it. For example you can set it to run_speed to have it controlled by the run_speed variable.
 <br>
-The Stingray animations are compressed and optimized for forward play. Don't play animations with a negative speed, instead create a separate animation that moves backwards.</dd>
+The animations are compressed and optimized for forward play. Don't play animations with a negative speed, instead create a separate animation that moves backwards.</dd>
 
 <dt>Animations and Weights<dt>
 <dd>A list of the animations that should be played in this state. The actual animation that gets played is picked at random from the list. You can set the weights to change the probabilities that a certain animation is picked. An animation with weight 10 is 10 times as likely to be picked as one with weight 1.</dd>

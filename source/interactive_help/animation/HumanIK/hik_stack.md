@@ -1,12 +1,12 @@
 #The IK stack
 
-HumanIK in Stingray provides a stack of IK behaviors that you can apply to your characters simultaneously. For example, you might want the character to do all of the following at once:
+HumanIK in {{ProductName}} provides a stack of IK behaviors that you can apply to your characters simultaneously. For example, you might want the character to do all of the following at once:
 
  - maintain floor contact
  - look at enemy
  - aim a weapon
 
-There are two components to the workflow when setting up the IK behavior stack in Stingray. First, you declare or set up everything the character needs for IK during gameplay. Next, you'll use game play mode (test level mode) to dynamically test and fine tune the constraints that you declared.
+There are two components to the workflow when setting up the IK behavior stack in {{ProductName}}. First, you declare or set up everything the character needs for IK during gameplay. Next, you'll use game play mode (test level mode) to dynamically test and fine tune the constraints that you declared.
 
 ## Step 1. Declare your IK intentions
 

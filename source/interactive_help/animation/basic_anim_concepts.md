@@ -2,7 +2,7 @@
 
 ##Skinning
 
-When you animate units you typically want to skin them so that you get a smooth mesh, but in the Stingray engine there is no direct connection between animation and skinning.
+When you animate units you typically want to skin them so that you get a smooth mesh, but in the interactive engine there is no direct connection between animation and skinning.
 
 Skinning affects how a mesh is drawn, when the nodes in the scene tree are in a particular arrangement. It doesn't affect their movement.
 Animation affects how the nodes move, not how they are rendered.
@@ -19,7 +19,7 @@ The interpolation allows animations to be played back at a higher frame rate tha
 
 ##Types of animation playback
 
-The Stingray engine supports different types of animation playback:
+The interactive engine supports different types of animation playback:
 
 1.	Story animations.
 

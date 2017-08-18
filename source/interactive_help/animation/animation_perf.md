@@ -109,7 +109,7 @@ Skeleton LOD mainly reduces the cost of the animation_blenders (but it can also 
 
 Animation merging is an optimization to reduce the cost of AnimationPlayer::update when you have lots of units, many of which are playing the same animation (for example, a marching army).
 
-Normally, the Stingray engine creates a separate animation evaluator for each unit in the game. If there are 50 units in the game using the run animation, each unit separately evaluates the pose of the animation at its own local time (t=0.11, t=0.23, t=0.13). An exception is if two units start the run animation at exactly the same time and play it at exactly the same speed. In that case, the two units can share the evaluation. You only need to find out what the run animation looks at for t=0.19 once, and can the reuse that pose for both units.
+Normally, the interactive engine creates a separate animation evaluator for each unit in the game. If there are 50 units in the game using the run animation, each unit separately evaluates the pose of the animation at its own local time (t=0.11, t=0.23, t=0.13). An exception is if two units start the run animation at exactly the same time and play it at exactly the same speed. In that case, the two units can share the evaluation. You only need to find out what the run animation looks at for t=0.19 once, and can the reuse that pose for both units.
 
 The animation merging optimization lets more units to share an animation evaluation by relaxing the demands on showing the pose at exactly the right time. For example, suppose one unit wants to evaluate run at t=0.11 and another wants to evaluate it at t=0.13. To improve performance, you can evaluate the animation once att=0.12 and then reuse that for both units. Each unit shows the animation at a slightly different time than expected, but the difference is hardly noticeable.
 
@@ -121,7 +121,7 @@ To enable animation merging, put this command in your Lua script:
 
 <dt>max_start_time = 0</dt>
 
-<dd>Controls how far into the animation to start, if a character is already playing the desired animation. For example, with a value of 0.2, it's possible to reuse an existing run animation playing at t=0.1, but not one at t=0.3. If there is a playing animation with a suitable t, in some cases jumping into that animation can cause a time discontinuity. If there's no suitable t, Stingray creates another animation evaluator.</dd>
+<dd>Controls how far into the animation to start, if a character is already playing the desired animation. For example, with a value of 0.2, it's possible to reuse an existing run animation playing at t=0.1, but not one at t=0.3. If there is a playing animation with a suitable t, in some cases jumping into that animation can cause a time discontinuity. If there's no suitable t, the engine creates another animation evaluator.</dd>
 
 <dt>max_drift = 0 </dt>
 
