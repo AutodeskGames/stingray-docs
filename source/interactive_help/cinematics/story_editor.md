@@ -26,7 +26,7 @@ You can still select, move, delete, or modify key values when the **Story Editor
 
 ![](../images/comp_story_controls.png)
 
-Click ![](../images/icon_storyEd_addNew.png) to add a new Story to the editor. If you select a unit or entity before clicking ![](../images/icon_storyEd_addNew.png), Stingray automatically adds the unit or entity to a new level object track within the story.
+Click ![](../images/icon_storyEd_addNew.png) to add a new Story to the editor. If you select a unit or entity before clicking ![](../images/icon_storyEd_addNew.png), the editor automatically adds the unit or entity to a new level object track within the story.
 
 When working on multiple stories within a level, use the Current Story drop-down to switch between them.
 

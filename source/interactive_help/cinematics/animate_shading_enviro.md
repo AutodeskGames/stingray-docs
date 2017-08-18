@@ -6,7 +6,7 @@ By default, shading environments are contained in entities. You can animate enti
 
 2. In the **Story Editor** (**Window > Story Editor**), click ![](../images/icon_storyEd_addNew.png) to add a new story.
 
-	Stingray automatically adds the the entity to a new entity track within the story.
+	The editor automatically adds the the entity to a new entity track within the story.
 
 3. Right-click the track to see the entity's components and component properties. For more information on individual components, see ~{ The Shading environment and post effects }~.
 

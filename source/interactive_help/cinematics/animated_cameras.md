@@ -1,8 +1,8 @@
-#Export an animated camera from Maya into Stingray
+# Import an animated camera from Maya
 
 1. In Maya, export the animated camera as an FBX file.
 
-2. In Stingray, import the FBX file as a unit with a skeleton and an animation clip:
+2. In the interactive editor, import the FBX file as a unit with a skeleton and an animation clip:
 
 	- Use the **Asset Browser** to navigate to the folder where you want to import the camera.
 	- Click **Import**.
