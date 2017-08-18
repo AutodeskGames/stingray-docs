@@ -2,7 +2,7 @@
 
 You can update bundled releases of your game by creating incremental patches that contain new content, bug fixes, and updates to existing assets.
 
-These incremental patches are made up of *patch bundles*. These are bundles of assets that correspond to the bundles originally released with your game, but that contain only files that have been added or modified since the original bundles were made. You install these files alongside the bundles originally shipped with your game, and Stingray automatically takes care of loading the latest versions of all your resources.
+These incremental patches are made up of *patch bundles*. These are bundles of assets that correspond to the bundles originally released with your game, but that contain only files that have been added or modified since the original bundles were made. You install these files alongside the bundles originally shipped with your game, and the interactive engine automatically takes care of loading the latest versions of all your resources.
 
 Each patch bundle is created with a file extension that increments each time you create a patch for that bundle. When the engine loads a resource package, it starts by loading all resources from the latest patch file available. It then loads each previous patch file in turn, skipping any resources that have already been loaded from a later patch file. Finally, it loads all remaining resources from the original bundle.
 
@@ -18,7 +18,7 @@ To make your game use the new and modified resources, you have to install this n
 
 ## Creating patch bundles
 
-Stingray provides a small standalone tool for creating patches, called the Patch Builder.
+{{ProductName}} provides a small standalone tool for creating patches, called the Patch Builder.
 
 The Patch Builder tool compares two complete versions of your game project. It automatically determines which resources have been added or modified between the two versions, and which packages contain one or more of those modified resources. It then creates a new patch bundle for each of those packages, for use on a target platform that you specify. If a patch bundle for one of those packages already exists in the original version of the project, it generates a new patch bundle with a higher patch version.
 
@@ -26,7 +26,7 @@ Since this process is platform-specific, you must repeat it for each platform th
 
 To create a patch:
 
-1.	Launch the Patch Builder tool from the `tools\patch_builder.exe` file within your Stingray installation directory. It opens with the **Diff Patch** tab selected, which you will use for this process.
+1.	Launch the Patch Builder tool from the `tools\patch_builder.exe` file within your {{ProductName}} installation directory. It opens with the **Diff Patch** tab selected, which you will use for this process.
 
 	![The Patch Builder](../images/patch_builder.png)
 
@@ -38,7 +38,7 @@ To create a patch:
 
 	If the automatic scan has missed any files that you know have changed, or if you want to force any other files to be included, you force selected resources to be treated as modified. Click the **Add...** button to select them. In most cases, however, this should not be necessary.
 
-5.	Set the **Compile Exe** field to point to the version of the Stingray engine that you want to use in order to compile the files. Typically you should use the development build of the latest version of Stingray you have installed.
+5.	Set the **Compile Exe** field to point to the version of the interactive engine that you want to use in order to compile the files. Typically you should use the development build of the latest version of {{ProductName}} you have installed.
 
 6.	Set the target platform for the new patch bundles. This must correspond to the platform of the compiled and bundled data you provided in steps 2 and 3 for the original data and updated data.
 

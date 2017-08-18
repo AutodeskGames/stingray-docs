@@ -1,10 +1,10 @@
 # Downloadable content (DLC) and other extras
 
-You may at some point want to enhance your game with extra content that is added on to a base install -- for example, downloadable content (DLCs) bought through an on-line store. You can do this with Stingray in much the same way that you can provide patches to update existing game content.
+You may at some point want to enhance your interactive application with extra content that is added on to a base install -- for example, downloadable content (DLCs) that you distribute through an on-line store or web site. You can do this with {{ProductName}} in much the same way that you provide patches to update existing game content.
 
-With Stingray, there is no difference in principle between DLCs and regular game content. You build the new content for your DLC using the standard Stingray tools, organize it into new *packages*, and compile those packages into *bundles*. You distribute these bundles to your users as patches for your game, which install the new bundles alongside the already existing game data bundles.
+With {{ProductName}}, there is no difference in principle between DLCs and regular game content. You build the new content for your DLC using the standard editing tools, organize it into new *packages*, and compile those packages into *bundles*. You distribute these bundles to your users as patches that install the new bundles alongside the already existing data bundles for your application.
 
-Although all users who install the patch receive the bundled data, you typically want your game to make that data available only to authorized users who have purchased an entitlement. You would typically do this in your Lua gameplay code, as shown below.
+Although all users who install the patch receive the bundled data, you might want your game to make that data available only to authorized users who have purchased an entitlement. You would typically do this in your Lua gameplay code, as shown below.
 
 Therefore, when a user buys a DLC from an on-line service, what the user receives from the asset store is typically not the full DLC content, but just an account setting or an entitlement that your gameplay code uses to decide whether or not the DLC content installed in the patch should be visible to the player.
 
@@ -12,7 +12,7 @@ See also ~{ Patching your game }~ for background on the patching system.
 
 ## Step 1. Create the DLC content
 
-To create content for a DLC, you work in the Stingray tools as normal creating new content like units, levels, and scripts. You then put this new content into one or more new *.package* resources that you create. For details, see ~{ Defining resource packages }~.
+To create content for a DLC, you work in the {{ProductName}} editing tools as normal, creating new content like units, levels, and scripts. You then put this new content into one or more new *.package* resources that you create. For details, see ~{ Defining resource packages }~.
 
 ## Step 2. Update gameplay code
 
