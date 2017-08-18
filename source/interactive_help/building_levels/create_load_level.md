@@ -1,6 +1,6 @@
 # Create or load a level
 
-  > **Note:** You can open and edit one level at a time in Stingray.
+  > **Note:** You can open and edit one level at a time in the interactive editor.
 
 **To create a new level**
 
@@ -12,7 +12,7 @@
 
 1.	Select **File > Save Level**, then enter a name for your level.
 
-	Level files are saved with the extension `.level`. In the Stingray templates, all the built-in level files are saved in the `content/levels` folder. You can keep to this convention, or save your levels in any other location within your project's source folder.
+	Level files are saved with the extension `.level`. In the template projects, all the built-in level files are saved in the `content/levels` folder. You can keep to this convention, or save your levels in any other location within your project's source folder.
 
 Every new level comes with a few useful helpers, which you can find listed in the ~{ Explorer panel }~:
 

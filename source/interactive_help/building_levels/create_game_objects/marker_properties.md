@@ -4,7 +4,7 @@
 <dt>Name</dt>
 <dd>Name of the marker. Name must be unique.
 
-> **Note:** Stingray gives the marker a unique name when you create it, and prevents you from changing the name to an existing name.
+> **Note:** The interactive editor gives the marker a unique name when you create it, and prevents you from changing the name to an existing name.
 
 </dd>
 

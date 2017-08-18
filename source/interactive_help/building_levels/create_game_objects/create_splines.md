@@ -2,7 +2,7 @@
 
 Splines are 3D curved paths, commonly used for constricting motion. They are [Bézier curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve), made up of a series of control points.
 
-A level designer can create complex curves in the Stingray Editor and save them in the level. The gameplay code can pick up these curves, read their control points, and interpret the data to do something, such as animate a character or a camera.
+A level designer can create complex curves in the interactive editor and save them in the level. The gameplay code can pick up these curves, read their control points, and interpret the data to do something, such as animate a character or a camera.
 
 ## Create a spline
 
@@ -44,7 +44,7 @@ A level designer can create complex curves in the Stingray Editor and save them 
 <dt>Name</dt>
 <dd>Name of the spline. Name must be unique.
 
-> **Note:** Stingray gives the spline a unique name when you create it, and prevents you from changing the name to an existing name.
+> **Note:** The editor gives the spline a unique name when you create it, and prevents you from changing the name to an existing name.
 
 </dd>
 </dl>

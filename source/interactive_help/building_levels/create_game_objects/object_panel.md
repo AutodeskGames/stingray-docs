@@ -38,7 +38,7 @@ See also  ~{ Gameware Navigation }~ and ~{ Set up levels to use Gameware Navigat
 
 Seed points let you define the walkable areas of the terrain in your level.
 
-When you place one or more seed points on a navigation mesh, Stingray can automatically discard navigation data for those areas that are not accessible from the seed points, such as tree tops, roof tops, or barriers.
+When you place one or more seed points in a level, navigation data is only generated for areas that are accessible from those seed points. By placing seed points in areas where you don't want your NPCs to be able to walk, like rooftops, or barriers, you can reduce the amount of navigation data you generate for your level.
 
 See also ~{ Generate navigation mesh }~.
 
@@ -70,9 +70,7 @@ You can think of triggers as switches. When the switch is activated (something e
 
 **Audio Source**
 
-Creates an audio source unit. Place this unit in the level to play an event using a Wwise Soundscape Source whenever the audio listener enters the Source shape area.
-
-Internally the Unit calls the `add_soundscape_unit_source` function from the Stingray Wwise plug-in native script interface. Please see the plug-in documentation for details.
+Creates an audio source unit. Place this unit in the level to play an event whenever the audio listener enters the Source shape area.
 
 See also ~{ About audio sources }~ and ~{ Wwise Workflow Tutorial }~.
 
@@ -112,7 +110,7 @@ Splines are user-generated 3D curved paths, commonly used for constricting motio
 
 ### Camera
 
-Lets you create a standard camera. See also ~{ Cameras in Stingray }~.
+Lets you create a standard camera. See also ~{ Cameras }~.
 
 ## Lights
 

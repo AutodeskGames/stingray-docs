@@ -1,6 +1,6 @@
 # Create game objects
 
-Game objects in Stingray are basic primitives that you can use to set up game logic. They're represented visually in your level so you can see their position in 3D.
+Game objects in {{ProductName}} are basic primitives that you can use to set up game logic. They're represented visually in your level so you can see their position in 3D.
 
 They give you the simple hooks you need to trigger events using Flow and Lua at specific locations in your level.
 

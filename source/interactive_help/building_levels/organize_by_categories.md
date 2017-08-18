@@ -12,7 +12,7 @@ Categories are defined in *.object_filter* resource files in your project folder
 
 **To re-apply a category filter**
 
-When you create or modify a category, you do not need to restart the Stingray Editor to make your changes show up in the **Explorer** panel. Instead, press **F5** to refresh the resource from your project's source folder.
+When you create or modify a category, you do not need to restart the interactive editor to make your changes show up in the **Explorer** panel. Instead, press **F5** to refresh the resource from your project's source folder.
 
 ## The *.object_filter* resource format
 
@@ -70,7 +70,7 @@ The editor passes two parameters to this function:
 
 	These wrapper objects are not currently documented, but you can find their code in the `core/editor_slave/editor` folder. The base object definition is in `object.lua`, which is inherited by other kinds of specialized objects such as the `UnitObject` defined in `unit.lua`. See also the `LevelEditing` object in `level_editing.lua`, which provides some object management and testing utilities.
 
--	`engine_object`: The game object that is wrapped by the first parameter. This may be any of various kinds of objects exposed in the Stingray runtime Lua API, such as a `stingray.Unit`, `stingray.Light`, `stingray.Camera`, and so on. Once you find out from the level object what kind of game object this parameter represents, you can use the appropriate runtime API to interact with the object.
+-	`engine_object`: The game object that is wrapped by the first parameter. This may be any of various kinds of objects exposed in the Lua API, such as a `stingray.Unit`, `stingray.Light`, `stingray.Camera`, and so on. Once you find out from the level object what kind of game object this parameter represents, you can use the appropriate runtime API to interact with the object.
 
 The function must return `true` if the object passed in should be included within this category, and `false` otherwise.
 
