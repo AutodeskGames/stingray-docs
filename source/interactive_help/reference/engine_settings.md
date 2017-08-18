@@ -1,10 +1,10 @@
-# Stingray engine `settings.ini` file reference
+# `settings.ini` file reference
 
 <a name="top"></a>
 
-Every Stingray project needs to have a *settings.ini* file at the root of the project folder. This file contains a variety of settings that the engine uses to initialize its subsystems. It expresses the data using the SJSON format. See ~{ About the SJSON data format }~.
+Every {{ProductName}} project needs to have a *settings.ini* file at the root of the project folder. This file contains a variety of settings that the engine uses to initialize its subsystems. It expresses the data using the SJSON format. See ~{ About the SJSON data format }~.
 
-If you've created a new project based on any of the default Stingray ~{ Template projects }~, you already have a *settings.ini* file created for you, pre-configured with default settings.
+If you've created a new project based on any of the default ~{ Template projects }~, you already have a *settings.ini* file created for you, pre-configured with default settings.
 
 This topic describes all the settings that you can configure in this file in order to modify the behavior of the engine.
 
@@ -30,7 +30,7 @@ This topic describes all the settings that you can configure in this file in ord
 
 ## Special file and path name variables
 
-When you set a path and/or filename as the value of a setting in this file, you can include the following variables in the path. Stingray automatically expands them to appropriate values for the current user, platform and time.
+When you set a path and/or filename as the value of a setting in this file, you can include the following variables in the path. The engine automatically expands them to appropriate values for the current user, platform and time.
 
 *	**%APPDATA%**: The folder reserved for storing data related to the current user. (Available on Windows and iOS)
 *	**%HOSTNAME%**: The name of the computer. (Available on Windows only)

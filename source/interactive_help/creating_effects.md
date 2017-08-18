@@ -1,6 +1,6 @@
 # Creating FX
 
-Creating beautiful and lasting impressions of your game or architectural scene often requires special effects. Waterfalls, glow, depth of field, a gentle hazy fog, or particle trails - all are possible in Stingray and can give your scene that extra quality that's just not possible from standard polygonal modeling alone.
+Creating beautiful and lasting impressions of your game or architectural scene often requires special effects. Waterfalls, glow, depth of field, a gentle hazy fog, or particle trails - all are possible in {{ProductName}} and can give your scene that extra quality that's just not possible from standard polygonal modeling alone.
 
 You can use particle effects to create an entire array of effects including but not limited to explosions, waterfalls, mist and smoke.
 
