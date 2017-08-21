@@ -1,6 +1,6 @@
 # Extending Lua to C using the LuaJIT FFI library
 
-The runtime Lua environment hosted by the Stingray engine is powered by the LuaJIT library. LuaJIT offers a very fast script interpreter and just-in-time compiler, in addition to several extensions to the base Lua API. One of these additional modules is its **FFI** library, which aims to allow easy access to C functions and data structures from Lua scripts without requiring any custom bindings on the C side.
+The runtime Lua environment hosted by the interactive engine is powered by the LuaJIT library. LuaJIT offers a very fast script interpreter and just-in-time compiler, in addition to several extensions to the base Lua API. One of these additional modules is its **FFI** library, which aims to allow easy access to C functions and data structures from Lua scripts without requiring any custom bindings on the C side.
 
 If you have C code in a dynamically linked library, you should be able to take advantage of the FFI library to access that code from your project's Lua scripts.
 

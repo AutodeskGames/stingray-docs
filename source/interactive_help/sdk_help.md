@@ -1,4 +1,4 @@
-# Welcome to the Stingray SDK
+# The Interactive Plug-in SDK
 
 The Stingray SDK is what we call the collection of programming APIs and extensibility features that you can use to create plug-ins that customize and extend Stingray.
 

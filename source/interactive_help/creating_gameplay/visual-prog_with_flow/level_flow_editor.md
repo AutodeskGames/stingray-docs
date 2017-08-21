@@ -7,7 +7,7 @@ A visual authoring tool that handles all of the level logic you want to happen w
 
 ![Level Flow Editor](../../images/levelFlow.png)
 
-For detailed reference to the Flow nodes in the Stingray, see [here](../../../flow_ref/index.html).
+For detailed reference to the Flow nodes offered by {{ProductName}}, see [here](../../../flow_ref/index.html).
 
 ##Flow Editor Hotkeys
 

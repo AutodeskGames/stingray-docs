@@ -29,8 +29,8 @@ end
 
 With:
 
-* `world`: the Stingray World
-* `level`: the Stingray Level this world represents
+* `world`: the engine world object
+* `level`: the engine level object that represents your scene
 
 ## Update
 

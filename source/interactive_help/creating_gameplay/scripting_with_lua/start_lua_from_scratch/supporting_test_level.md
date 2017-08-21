@@ -1,6 +1,6 @@
 # Loading the current level for testing
 
-When a user working in the Stingray Editor tests the current level (e.g. using the ![Play](../../../images/icon_test_level.png) button), the editor does some special things in the game's Lua environment that make it possible for the startup code to figure out what level to load. The Appkit handles this automatically, but if you are using a custom boot script you will have to handle a few things in your startup code.
+When a user working in the interactive editor tests the current level (e.g. using the ![Play](../../../images/icon_test_level.png) button), the editor does some special things in the game's Lua environment that make it possible for the startup code to figure out what level to load. The Appkit handles this automatically, but if you are using a custom boot script you will have to handle a few things in your startup code.
 
 ## Level content
 

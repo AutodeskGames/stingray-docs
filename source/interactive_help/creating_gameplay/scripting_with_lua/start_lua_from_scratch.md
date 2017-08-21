@@ -1,6 +1,6 @@
 # Starting Lua from scratch: using a custom boot script
 
-Every Stingray project has a single *boot script* -- a Lua file that the game engine loads into memory and runs immediately on startup. The role of the boot script is to provide definitions for a set of functions that the game engine will call at pre-determined points in its startup, update and shutdown processes. By implementing these functions in your own boot script (or in other script files that are loaded by your boot script) you can take control over the way the game engine loads and unloads packages and levels, renders game worlds, and responds to changing gameplay conditions and user interactions.
+Every {{ProductName}} project has a single *boot script* -- a Lua file that the game engine loads into memory and runs immediately on startup. The role of the boot script is to provide definitions for a set of functions that the game engine will call at pre-determined points in its startup, update and shutdown processes. By implementing these functions in your own boot script (or in other script files that are loaded by your boot script) you can take control over the way the game engine loads and unloads packages and levels, renders game worlds, and responds to changing gameplay conditions and user interactions.
 
 ## Specifying the boot script
 
@@ -10,13 +10,13 @@ You identify the boot script file in your game's *settings.ini* file, in the val
 boot_script = "scripts/game/boot/boot"
 ~~~
 
-Note that, like other Stingray resources, the path is expected to use `/` as a directory separator, and to omit the extension of the Lua script file.
+Note that, like other resources, the path is expected to use `/` as a directory separator, and to omit the extension of the Lua script file.
 
-For details on the *settings.ini* file, see ~{ Stingray engine settings.ini file reference }~.
+For details on the *settings.ini* file, see ~{ settings.ini file reference }~.
 
 ## Functions called by the game engine
 
-The Stingray game engine calls the following global Lua functions, which you can customize in your game:
+The interactive engine calls the following global Lua functions, which you can customize in your game:
 
 ### init()
 

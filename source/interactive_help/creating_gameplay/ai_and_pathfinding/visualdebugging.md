@@ -1,4 +1,4 @@
-﻿# Visually debug navigation
+# Visually debug navigation
 
 This document describes how to visually debug Gameware Navigation and your own game using the Navigation Lab.
 
@@ -8,9 +8,7 @@ You can disconnect any time from the live view and scrub back in time to analyze
 
 # The NavigationLab
 
-The NavigationLab is available for Windows only, and located in:
-
-*Your_Stingray_lib_folder/navigation_XXX.X.X_tool/bin/*
+The NavigationLab is available for Windows only, and located in the *tools_external/navigation/bin* directory within your {{ProductName}} installation folder.
 
 Check the Gameware Navigation reference manual for a guide on how to use the NavigationLab.
 

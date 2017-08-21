@@ -10,11 +10,11 @@ Autodesk generally recommends using this approach whenever possible.
 
 **Benefits and drawbacks:**
 
--	Your changes will not affect any other projects that you create with Stingray. Other projects will use the default Appkit from the core resources as usual, or they can have their own set of customizations.
+-	Your changes will not affect any other projects that you create with {{ProductName}}. Other projects will use the default Appkit from the core resources as usual, or they can have their own set of customizations.
 
--	Your changes remain isolated from the product installation folder, so your game will use the same code regardless of what version of Stingray you use.
+-	Your changes remain isolated from the product installation folder, so your game will use the same code regardless of what version of {{ProductName}} you use.
 
-	On the other hand, this means that when you upgrade to a new version of Stingray you might not benefit immediately from any additions, improvements or bug fixes that are made to the Appkit in the new version. You would need to merge the new Appkit code into your project's modified scripts.
+	On the other hand, this means that when you upgrade to a new version of {{ProductName}} you might not benefit immediately from any additions, improvements or bug fixes that are made to the Appkit in the new version. You would need to merge the new Appkit code into your project's modified scripts.
 
 -	Distributing your project for use by other people remains easy, since everything you need to share is contained in your project source folder.
 
@@ -24,21 +24,21 @@ Autodesk generally recommends using this approach whenever possible.
 
 **To use this approach:**
 
-Copy the `core/appkit` folder from your Stingray installation folder into your project, or take just the files you want to modify.
+Copy the `core/appkit` folder from your {{ProductName}} installation folder into your project, or take just the files you want to modify.
 
 Make sure that any files you copy use the same path within your project's resources as they did previously within the installation directory. For example, a file named *core/appkit/lua/player_util.lua* within the core resources should still be found at *core/appkit/lua/player_util.lua* relative to the root of your project's source folder.
 
 ## Option 2. Modifying the Appkit core resources
 
-You can change the Appkit script files in place within your Stingray installation directory. For example, *C:\\Program Files\\Autodesk\\Stingray\\\<version\>\\core*.
+You can change the Appkit script files in place within your {{ProductName}} installation directory. For example, *C:\\Program Files\\Autodesk\\Stingray\\\<version\>\\core*.
 
 **Benefits and drawbacks:**
 
--	Your changes will apply to all projects that you open with this version of Stingray. You only have to make your modifications in one place.
+-	Your changes will apply to all projects that you open with this version of {{ProductName}}. You only have to make your modifications in one place.
 
 -	Distributing your project's source and dealing with version control becomes more difficult, since you now have resources located in your application's installation directory in addition to the ones in your project's source folder.
 
--	When you upgrade to a new version of Stingray, your modifications will not be used until you copy or merge your customizations from the old version's core resources folder into the new version's core resources.
+-	When you upgrade to a new version of {{ProductName}}, your modifications will not be used until you copy or merge your customizations from the old version's core resources folder into the new version's core resources.
 
 ## Option 3. Overriding the Appkit in your project code
 
@@ -50,11 +50,11 @@ For a code example, see the [Overriding the SimpleProject](using_simpleproject.h
 
 -	This is a quick and dirty way to make small overrides or test things out.
 
--	Your changes will not affect any other projects that you create with Stingray. Other projects will use the default Appkit from the core resources as usual, or can have their own set of customizations.
+-	Your changes will not affect any other projects that you create with {{ProductName}}. Other projects will use the default Appkit from the core resources as usual, or can have their own set of customizations.
 
--	When you upgrade to a new version of Stingray, your project will benefit from any additions, improvements or bug fixes that are made in the new version in any parts of the Appkit that you have not overridden.
+-	When you upgrade to a new version of {{ProductName}}, your project will benefit from any additions, improvements or bug fixes that are made in the new version in any parts of the Appkit that you have not overridden.
 
- 	On the other hand, changes in the new version's Appkit scripts may break your overrides. For example, a function that you override may be renamed in the new version of Stingray, meaning that your override never gets called; or the function may have its parameters or return values changed in the new version, meaning that your override will not behave as expected.
+ 	On the other hand, changes in the new version's Appkit scripts may break your overrides. For example, a function that you override may be renamed in the new version of {{ProductName}}, meaning that your override never gets called; or the function may have its parameters or return values changed in the new version, meaning that your override will not behave as expected.
 
 -	The more extensively you override the base Appkit code inside your project, the more disjointed your codebase becomes, and the more difficult it is to follow the path of code execution when tracking down problems.
 

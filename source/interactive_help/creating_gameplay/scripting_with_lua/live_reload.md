@@ -1,6 +1,6 @@
 # Reloading Lua code
 
-Like most other kinds of Stingray resources, you can modify and recompile your Lua scripts while your game is running, and have the game reload them on the fly. This is a powerful mechanism that allows you to shorten your iteration time while debugging and testing new changes. For background on live reloading of Stingray assets in general, see also ~{ Reloading resources }~.
+Like most other kinds of {{ProductName}} resources, you can modify and recompile your Lua scripts while your game is running, and have the game reload them on the fly. This is a powerful mechanism that allows you to shorten your iteration time while debugging and testing new changes. For background on live reloading of {{ProductName}} assets in general, see also ~{ Reloading resources }~.
 
 This page describes how to recompile and reload your Lua scripts, and details a few special considerations that apply when reloading Lua scripts into the game.
 
@@ -8,7 +8,7 @@ This page describes how to recompile and reload your Lua scripts, and details a 
 
 1.	Make changes in your script and save it in your project folder.
 
-2.	Scripts are not re-compiled immediately when you save them. You must force your script to be recompiled. In the Stingray Editor, press **F5** or select **Edit > Level Testing > Refresh** from the main menu. This updates your compiled data folder with the new version of the script.
+2.	Scripts are not re-compiled immediately when you save them. You must force your script to be recompiled. In the interactive editor, press **F5** or select **Edit > Level Testing > Refresh** from the main menu. This updates your compiled data folder with the new version of the script.
 
 3.	Make your game reload the script by issuing the `refresh` console command through the Status bar. See ~{ Send commands from the Status bar }~.
 

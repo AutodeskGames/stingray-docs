@@ -8,17 +8,17 @@ For background information, see the chapter about C libraries in the [Programmin
 
 ## Step 1. Get LuaJIT
 
-The runtime Lua environment hosted by the Stingray engine is powered by the LuaJIT library, which offers a very fast script interpreter and just-in-time compiler. You need to include a header file from this library, and link your C library against the LuaJIT library for your target platform.
+The runtime Lua environment hosted by the interactive engine is powered by the LuaJIT library, which offers a very fast script interpreter and just-in-time compiler. You need to include a header file from this library, and link your C library against the LuaJIT library for your target platform.
 
-**If you have access to the Stingray source code:**
+**If you have access to the {{ProductName}} source code:**
 
--	You can use the LuaJIT libraries that you will find in your Stingray library folder (`SR_LIB_DIR`).
+-	You can use the LuaJIT libraries that you will find in your library dependencies folder (`SR_LIB_DIR`).
 
-**If you do not have access to the Stingray source code:**
+**If you do not have access to the {{ProductName}} source code:**
 
 1.	Download LuaJIT from its [project page](http://luajit.org/download.html) or from the Git repository given at that site.
 
-	Stingray uses **version 2.1.0**. You must get the same version.
+	{{ProductName}} uses **version 2.1.0**. You must get the same version.
 
 2.	Follow the instructions on [the LuaJIT installation page](http://luajit.org/install.html) to build the LuaJIT binaries for your target platform and processor architecture (e.g. x86 vs. x64 on Windows).
 

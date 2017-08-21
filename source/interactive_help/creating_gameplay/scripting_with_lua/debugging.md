@@ -6,7 +6,7 @@ Fortunately, you don't have to just sit and take it -- you can fight back, by us
 
 ## About the Visual Studio Code extension
 
-The best way to debug your Stingray Lua code is using our extension for the free, open-source [Visual Studio Code](https://code.visualstudio.com/) editor. With our extension, you can connect Visual Studio code to any running instance of the engine, set breakpoints, trace through your code, send console commands and Lua snippets to the engine, and much more.
+The best way to debug your {{ProductName}} Lua code is using our extension for the free, open-source [Visual Studio Code](https://code.visualstudio.com/) editor. With our extension, you can connect Visual Studio code to any running instance of the engine, set breakpoints, trace through your code, send console commands and Lua snippets to the engine, and much more.
 
 If you're already familiar with using a debugger, head over to [the extension's homepage](https://marketplace.visualstudio.com/items?itemName=jschmidt42.stingray-debug) for specifics about how to set it up and use it.
 
@@ -50,7 +50,7 @@ If you have not been able to identify and fix your problem, make a new hypothesi
 
 ## Other ways to debug
 
-If you are interested in other ways to get information out of the in-game Lua environment, see ~{ Ways to get runtime feedback }~. This topic describes how to use Lua `print` statements and functions in the Stingray runtime Lua API to send messages to the **Log Console** panel.
+If you are interested in other ways to get information out of the in-game Lua environment, see ~{ Ways to get runtime feedback }~. This topic describes how to use Lua `print` statements and functions in the engine's runtime Lua API to send messages to the **Log Console** panel.
 
 ## Debugging and build configs
 
@@ -58,8 +58,8 @@ You can only debug the engine while it's running in `dev` configuration. For per
 
 That means that you can debug:
 
--	when you use Test Level to launch your project from the Stingray editor. ![Test Level](../../images/icon_test_level.png)
--	when you use Run Project to launch your project from the Stingray editor, on any target platform. ![Test Level](../../images/icon_run_project.png)
+-	when you use Test Level to launch your project from the interactive editor. ![Test Level](../../images/icon_test_level.png)
+-	when you use Run Project to launch your project from the interactive editor, on any target platform. ![Test Level](../../images/icon_run_project.png)
 -	the engine that the editor runs internally.
 -	a standalone build that you package with the `dev` configuration.
 

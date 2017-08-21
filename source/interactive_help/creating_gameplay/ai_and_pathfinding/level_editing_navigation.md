@@ -1,6 +1,6 @@
 # Set up levels to use Gameware Navigation
 
-This document describes how to set up your levels to use Gameware Navigation in Stingray Editor. You will learn how to add and configure:
+This document describes how to set up your levels to use Gameware Navigation in the interactive editor. You will learn how to add and configure:
 
 * Navigation Worlds
 * Navigation Bots

@@ -1,6 +1,6 @@
 # Storing data in Lua objects
 
-Several different kinds of objects in the Stingray Lua API offer you a generic interface for storing and retrieving data values.
+Several different kinds of objects in the interactive engine's Lua API offer you a generic interface for storing and retrieving data values.
 
 Using this system has some advantages over storing the data in your own Lua variables:
 

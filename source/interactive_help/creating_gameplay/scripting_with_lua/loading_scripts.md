@@ -6,7 +6,7 @@ This page describes what you need to do in order to make sure that your own scri
 
 ## Step 1. Include your scripts in a resource package
 
-The Stingray engine treats Lua scripts exactly like any other kind of data file. Just like any other resources you want to use, you need to put your scripts into a resource package so that the game can load them into memory at runtime.
+The interactive engine treats Lua scripts exactly like any other kind of data file. Just like any other resources you want to use, you need to put your scripts into a resource package so that the game can load them into memory at runtime.
 
 For details on defining packages, see ~{ Loading and unloading content at runtime }~.
 
@@ -25,7 +25,7 @@ However, if you want to have different scripts in memory at different times in y
 
 Once you have loaded the resource packages that contain your Lua files into memory, you cannot use the functions and data in those Lua files until you bring them into the game's Lua environment.
 
-To do this, you call standard Lua functions for interpreting files, like `require()` and `dofile()`. Make sure that you identify the Lua script file using its Stingray resource ID: i.e. the path to the file relative to the root of your data directory, using forward-slashes as delimiters, and with **no** file extension.
+To do this, you call standard Lua functions for interpreting files, like `require()` and `dofile()`. Make sure that you identify the Lua script file using its resource ID: i.e. the path to the file relative to the root of your data directory, using forward-slashes as delimiters, and with **no** file extension.
 
 This is typically done at initialization time. For example, if you are using a custom boot script, you would do this either in the boot script or in another script required by the boot script. If you are using the Appkit, you can do it your `project.lua` script file. However, you could also load new Lua script content at any other time if necessary.
 

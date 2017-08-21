@@ -1,6 +1,6 @@
 # Navigation options
 
-Select **Window > Navigation** to access the following **Navigation Options** in Stingray.
+Select **Window > Navigation** in the interactive engine to access the following **Navigation Options**.
 
 ##Generate
 

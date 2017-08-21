@@ -1,6 +1,6 @@
-﻿#Vehicle physics properties
+# Vehicle physics properties
 
-To view a sample vehicle physics file, you can load the Vehicle template project in Stingray, and open `4wheel.physics` in a text editor.
+To view a sample vehicle physics file, you can load the Vehicle template project in the interactive editor, and open `4wheel.physics` in a text editor.
 
 After you create a project based on the vehicle template, you can find this file in the following location: `..\vehicle_project\content\models\4wheel`.
 

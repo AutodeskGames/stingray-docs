@@ -1,6 +1,6 @@
 # Managing worlds, levels and cameras through the Appkit
 
-If you are starting with a Stingray template project, the `SimpleProject` will take care of calling the services provided by the Appkit for managing game worlds and levels, and will set up a default camera. See ~{ Using the SimpleProject }~.
+If you are starting with a template project, the `SimpleProject` will take care of calling the services provided by the Appkit for managing game worlds and levels, and will set up a default camera. See ~{ Using the SimpleProject }~.
 
 However, if you choose not to use the `SimpleProject`, or if you want to override its default behavior, you will have to call functions exposed by the Appkit in order to make it manage your game worlds and levels. This page introduces some of the world and level management functions offered by the Appkit.
 
@@ -40,7 +40,7 @@ You can also do this last step by enabling and disabling a `CameraWrapper` objec
 
 The Appkit uses a `LevelWrapper` to manage a single game level that you load into the game world. The `LevelWrapper` does the following:
 
--	Loads the shading environment specified for the Level in the Stingray Editor, if any.
+-	Loads the shading environment specified for the level in the interactive editor, if any.
 -	Spawns the level background.
 -	Loads the level's baked lighting, if any.
 -	Manages cameras that are set as active cameras, but that are not managed by an `Appkit.CameraWrapper`. For example, camera units that you place in the Level Editor.
@@ -95,7 +95,7 @@ camera_wrapper:enable()
 
 ## Example boot script
 
-The following boot script uses the Appkit to manage world rendering for a single world, with no support for the Stingray Editor's Test Level feature. See also ~{ Understanding the Appkit structure }~.
+The following boot script uses the Appkit to manage world rendering for a single world, with no support for the editor's Test Level feature. See also ~{ Understanding the Appkit structure }~.
 
 ~~~{lua}
 require 'core/appkit/lua/app'

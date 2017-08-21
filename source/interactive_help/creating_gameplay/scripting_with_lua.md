@@ -1,12 +1,12 @@
 # Scripting with Lua
 
-The Stingray engine contains a versatile, built-in scripting component that provides control over gameplay and user interactions through Lua scripts. Most of the engine's subsystems are exposed to the scripting engine, allowing you to write virtually your entire game in Lua if you like.
+The interactive engine contains a versatile, built-in scripting component that provides control over gameplay and user interactions through Lua scripts. Most of the engine's subsystems are exposed to the scripting engine, allowing you to write virtually your entire game in Lua if you like.
 
-This document gives an overview of how the Lua scripting engine is connected to the C++ engine, and how you can get your Lua scripts to run in the game. It also offers some tips on the best practices for using the Stingray Lua API, and help on using the Stingray **Script Editor**.
+This document gives an overview of how the Lua scripting engine is connected to the C++ engine, and how you can get your Lua scripts to run in the game. It also offers some tips on the best practices for using the {{ProductName}} Lua API, and help on using the **Script Editor**.
 
-The topics in this document do not provide detailed descriptions of how the different engine subsystems work, even those that expose objects and functions to the Lua API (such as the physics or rendering systems). To understand those systems, begin by looking in the rest of the Stingray Help for conceptual information and overviews about how the subsystems work and how to use them in the editing tools. Then you can consult the API reference for a details on the scripting interface exposed by those subsystems.
+The topics in this document do not provide detailed descriptions of how the different engine subsystems work, even those that expose objects and functions to the Lua API (such as the physics or rendering systems). To understand those systems, begin by looking in the rest of this documentation for conceptual information and overviews about how the subsystems work and how to use them in the editing tools. Then you can consult the API reference for a details on the scripting interface exposed by those subsystems.
 
-For the detailed reference companion to all the objects and functions exposed in the Stingray Lua API, see [here](../../lua_ref/index.html).
+For the detailed reference companion to all the objects and functions exposed in the interactive engine's Lua API, see [here](../../lua_ref/index.html).
 
 ## About Lua
 

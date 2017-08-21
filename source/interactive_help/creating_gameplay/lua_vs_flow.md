@@ -1,6 +1,6 @@
 # Lua or Flow: which do I use?
 
-With Stingray, you have the choice between two primary ways of setting up interactive gameplay: Flow visual programming, and Lua scripting. You are free to choose either, or you can use both in tandem. So how do you choose?
+With {{ProductName}}, you have the choice between two primary ways of setting up interactive gameplay: Flow visual programming, and Lua scripting. You are free to choose either, or you can use both in tandem. So how do you choose?
 
 The answer really depends on a number of factors that are specific to your project design and the team you work in. For example, the size and style of your project, the size of the team, your level of programming experience and experience working in other game engines.
 
@@ -28,7 +28,7 @@ The biggest downsides of Flow are:
 The biggest downsides of Lua are:
 
 -	People who have not done much programming before may find Lua difficult or intimidating.
--	If you start from scratch, it can be challenging to structure your gameplay code in a sensible way -- to figure out what you need to happen at each step, how to code it, and how to organize the code into modules. To get started, use the Appkit that is built in to the Stingray template projects. It at least provides you with a basic framework that you can extend with your own customizations.
+-	If you start from scratch, it can be challenging to structure your gameplay code in a sensible way -- to figure out what you need to happen at each step, how to code it, and how to organize the code into modules. To get started, use the Appkit that is built in to the template projects. It at least provides you with a basic framework that you can extend with your own customizations.
 
 ## The best choice of all:
 
@@ -47,4 +47,4 @@ If you are an experienced programmer, you may want to use custom C or C++ code i
 
 If you can package your code into a dynamically linked library, you may be able to make Lua bindings for your functions, which you can call from your game's Lua environment. Or, you may be able to use the LuaJIT FFI library to call the C functions directly from your Lua code. For details, see ~{ Calling C code from Lua }~ and its sub-topics.
 
-Alternatively, you may be able to use the native plug-in APIs exposed by the Stingray engine to write your own engine-level plug-in. This currently requires access to the Stingray source repositories; contact an Autodesk representative for details. See also the [Stingray Developer Help](http://www.autodesk.com/stingray-help?contextId=DEVELOPER_HOME).
+Alternatively, you may be able to use the native plug-in APIs exposed by the interactive engine to write your own engine-level plug-in. See ~{ The Interactive Plug-in SDK }~.

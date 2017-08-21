@@ -1,10 +1,10 @@
 # Create custom Flow nodes in Lua
 
-You can create your own custom Flow nodes that extend the set of nodes built in to the Stingray engine. Your level designers and gameplay programmers working in the Stingray level editing tools can hook these custom nodes in to their Flow graphs for levels and units just like any other built-in nodes. However, when your custom nodes are triggered or evaluated in the game at runtime, they call out to your own custom Lua code.
+You can create your own custom Flow nodes that extend the set of nodes built in to the interactive engine. Your level designers and gameplay programmers working in the level editing tools can hook these custom nodes in to their Flow graphs for levels and units just like any other built-in nodes. However, when your custom nodes are triggered or evaluated in the game at runtime, they call out to your own custom Lua code.
 
 You can use these custom nodes to create complex custom responses to gameplay events, or to give your game designers direct control over when the game engine should execute custom Lua functions that you define.
 
->	**Note:** You can also use the Stingray SDK to implement your custom Flow nodes in C instead of Lua. For details, see [Create custom Flow nodes in C](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_custom_flow_nodes_in_c_html).
+>	**Note:** You can also use the {{ProductName}} plug-in SDK to implement your custom Flow nodes in C instead of Lua. For details, see ~{ Create custom Flow nodes in C }~.
 
 **To use custom Lua Flow nodes:**
 
@@ -53,7 +53,7 @@ You can have as many *.script_flow_nodes* files in your project as you like, so 
 
 ### *.script_flow_nodes* file format
 
-*.script_flow_nodes* files are in the same SJSON format used by most other Stingray data resources; for details, see ~{ About the SJSON Data Format }~.
+*.script_flow_nodes* files are in the same SJSON format used by most other data resources; for details, see ~{ About the SJSON Data Format }~.
 
 Each file must contain a single top-level `nodes` element. The value of this element must be a list of objects, each of which defines a single Flow node. Each of these node objects can in turn use several configuration parameters defined below.
 

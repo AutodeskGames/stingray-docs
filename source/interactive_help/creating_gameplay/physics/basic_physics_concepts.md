@@ -28,7 +28,7 @@ Keyframed actors *always* follow the animated movement. Whereas the path of a dy
 >
 > The engine does not support this kind of translation. If you want to do physical animations, you have to do it by manually applying forces to objects from the script.
 
-Each physics actor has a shape that represents the space it takes up in the physics simulation. This shape can be a regular solid like a sphere, capsule or box, it can match a mesh associated with the actor, or it can be a convex volume that Stingray computes automatically from the mesh.
+Each physics actor has a shape that represents the space it takes up in the physics simulation. This shape can be a regular solid like a sphere, capsule or box, it can match a mesh associated with the actor, or it can be a convex volume that the engine computes automatically from the mesh.
 
 - Static actors are (usually) best modeled with meshes. This gives the most accurate results in collision testing.
 
@@ -105,7 +105,7 @@ The vehicle's base actor must contain a number of shapes to establish the chassi
 
 There are two fundamental types of vehicles that are supported: wheeled, and tank. The fundamental difference between wheeled and tank vehicles is that the tank wheels on the same side of the body all operate at the same speed. Wheeled vehicle wheels operate independently. Tank wheels do not turn by rotating like wheeled vehicles, a tank turns by applying different levels of thrust to each tread.
 
-There is no support for keyframed vehicles in Stingray.
+There is no support for keyframed vehicles.
 
 Vehicle properties are based in SI units. Distances are measured in meters, mass is measured in kilograms and time is measured in seconds.
 

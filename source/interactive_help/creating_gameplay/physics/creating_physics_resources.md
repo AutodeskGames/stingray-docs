@@ -1,6 +1,6 @@
 ﻿#Creating physics resources
 
-There are two different ways of setting up physics objects in Stingray:
+There are two different ways of setting up physics objects in {{ProductName}}:
 
 - Using the **Unit Editor**
 

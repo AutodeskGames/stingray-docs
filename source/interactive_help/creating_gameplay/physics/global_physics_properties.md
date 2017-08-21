@@ -51,7 +51,7 @@ The material properties are defined below:
 
 **density = 1000**
 
-The density of the object in SI-units (kg / m^3). (All properties in the Stingray engine are specified in SI-units.) Water has a density of 1000. Floating objects have a density < 1000 and sinking objects > 1000.
+The density of the object in SI-units (kg / m^3). (All properties in the interactive engine are specified in SI-units.) Water has a density of 1000. Floating objects have a density < 1000 and sinking objects > 1000.
 
 **dynamic_friction = 0.1**
 
