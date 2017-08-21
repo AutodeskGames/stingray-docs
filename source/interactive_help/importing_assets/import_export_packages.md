@@ -2,7 +2,7 @@
 
 You can package assets together and export them to a zip file, so they can easily be shared.
 
-##Export assets as a package
+## Export assets as a package
 
 1. In the **Asset Browser**, right-click the asset you want to export and select **Export Assets**.
 
@@ -18,7 +18,7 @@ You can package assets together and export them to a zip file, so they can easil
 <br>
 	The files are exported to a zip file and saved to the location you selected.
 
-##Import packaged assets
+## Import packaged assets
 
 1. From the main menus, select **File > Import**.
 
@@ -30,8 +30,6 @@ You can package assets together and export them to a zip file, so they can easil
 
 	![](../images/import_packages.png)
 
-4. Click **Import**.
-<br>
-	The assets are imported into your current project.
+4.	Click **Import**. The assets are imported into your current project.
 
-	>	**Note:** You can only import packages exported from Stingray.
+	>	**Note:** You can only import *.zip* files that you previously exported from the interactive editor.

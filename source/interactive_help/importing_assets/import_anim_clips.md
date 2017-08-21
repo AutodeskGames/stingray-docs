@@ -30,5 +30,5 @@
 
 ---
 Related topics:
--	~{ Recommended FBX settings for export to Stingray }~
+-	~{ Recommended FBX settings for export to {{ProductName}} }~
 ---

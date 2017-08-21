@@ -1,4 +1,4 @@
-﻿# Import and test LODs using FBX
+# Import and test LODs using FBX
 
 For information on setting up LODs in your FBX file, refer to the documentation in your content creation package. (For example, in Maya LT, look for a topic called 'Create an LOD group'.)
 
@@ -14,7 +14,7 @@ For information on setting up LODs in your FBX file, refer to the documentation 
 3. Switch to the **Level of Detail** panel (top right in the **Unit Editor**).
 	Each Screen Height Percentage threshold displays, the same way you set them up in Maya or Maya LT.
 
-## Test LODs in Stingray
+## Test LODs
 
 1. Drag the unit from the **Asset Browser** into the **Level Viewport** to place it in your level.
 
