@@ -11,17 +11,17 @@ When you start to optimize your VR content, it's a good idea to reduce or elimin
 ## Overdraw and Anti-aliasing
 
 The anti-aliasing and overdraw settings are stored in your settings.ini file, under **render_settings**. You can set anti-aliasing to **taa_enabled** (default) or **fxaa_enabled**. Start with FXAA, which is less expensive.
-Overdraw is a multiplier on your output resolution. If overdraw is set to 1.5, the image is rendered 1.5 times the size of the output resolution, then downsized as an anti-aliasing method. Stingray VR templates run at 1.6 by default, but you can lower this setting to at least 1.4 as a starting point. See ~{ Stingray engine settings.ini file reference }~.
+Overdraw is a multiplier on your output resolution. If overdraw is set to 1.5, the image is rendered 1.5 times the size of the output resolution, then downsized as an anti-aliasing method. The VR templates run at 1.6 by default, but you can lower this setting to at least 1.4 as a starting point. See ~{ settings.ini file reference }~.
 
 ## Post Processes
 
 When optimizing your VR project, first turn off all post-processes until all areas of your scene are performant, and you have milliseconds to spare for enhancing the quality of your scene with post processes. At that point, you can start turning on post-processes one at a time, making sure that you aren’t losing necessary framerates. Most post processes can be disabled by selecting the shading environment entity in your level and disabling each post process in the **Property Editor**.
 
->**Note:** Bloom and Auto-Exposure are the only processes enabled by default in the Stingray VR templates.
+>**Note:** Bloom and Auto-Exposure are the only processes enabled by default in the VR templates.
 
 ## Poly Reduction
 
-Typically polygon count is not a problem, as Stingray can handle a lot of polygons very efficiently. Architectural vizualization interiors usually have very reasonable poly counts, aside from specific assets. Assets from photogrammetry for example, or plants, and sometimes insignificant models that happen to have high polygon counts can simply be replaced. If you need to do some poly reduction, you can use 3ds Max or Maya.
+Typically polygon count is not a problem, as the interactive engine can handle a lot of polygons very efficiently. Architectural vizualization interiors usually have very reasonable poly counts, aside from specific assets. Assets from photogrammetry for example, or plants, and sometimes insignificant models that happen to have high polygon counts can simply be replaced. If you need to do some poly reduction, you can use 3ds Max or Maya.
 
 ## Texture Blowout
 

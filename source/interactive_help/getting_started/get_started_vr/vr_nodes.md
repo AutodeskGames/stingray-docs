@@ -2,7 +2,7 @@
 
 Each VR template project adds some new Flow nodes, which are only available in that project. This page introduces these VR-specific nodes.
 
-For reference information on all the other Flow nodes built in to Stingray and its plugins, go to the [Stingray Flow Node Reference](../../../flow_ref/index.html).
+For reference information on all the other Flow nodes available in the interactive engine and its built-in plugins, go to the [Flow Node Reference](../../../flow_ref/index.html).
 
 ## General VR Flow node descriptions
 

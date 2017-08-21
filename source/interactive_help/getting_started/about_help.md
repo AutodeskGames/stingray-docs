@@ -1,24 +1,24 @@
-# About the Stingray Help
+# About the {{ProductName}} Help
 
 You're looking at it! Since you already know how to get here, let us point out a few more details.
 
 ## Search
 
-By default when you search this site, we'll show you results from multiple sources like YouTube, blogs, our AREA learning site, the Stingray forums, and so on. When you click those search results, sometimes you will navigate away to other sites. As long as you find the answer to your questions, that's great!
+By default when you search this site, we'll show you results from multiple sources like YouTube, blogs, our AREA learning site, forums, and so on. When you click those search results, sometimes you will navigate away to other sites. As long as you find the answer to your questions, that's great!
 
-On the other hand, if you want to search only within the Stingray Help topics from here, you can narrow your search using the "Refine By" filters in the Search panel. (Try a search now, and you'll see the panel we mean.) If you only want to see topics in the Stingray Help, select the **Product Documentation** filter in the **Knowledge Source** category.
+On the other hand, if you want to search only within the help topics from here, you can narrow your search using the "Refine By" filters in the Search panel. (Try a search now, and you'll see the panel we mean.) If you only want to see topics in the help, select the **Product Documentation** filter in the **Knowledge Source** category.
 
 ![](../images/narrow-search.png)
 
 ## Tutorials
 
-All of the tutorials we make in-house get posted to [the AREA](http://area.autodesk.com/learning/stingray). We've included a link to that site in the Stingray Help table-of-contents. These tutorials come up by default in your search results and they display within this Help site, but you can also visit and browse the AREA site separately or contribute your own tutorials there. The standalone videos we use in the tutorials are also posted on [our YouTube channel](https://www.youtube.com/user/autodeskgameshowtos).
+All of the tutorials we make in-house get posted to [the AREA](http://area.autodesk.com/learning/stingray). We've included a link to that site in the table of contents. These tutorials come up by default in your search results and they display within this Help site, but you can also visit and browse the AREA site separately or contribute your own tutorials there. The standalone videos we use in the tutorials are also posted on [our YouTube channel](https://www.youtube.com/user/autodeskgameshowtos).
 
 ![](../images/area.png)
 
-## Stingray Help in Japanese and Korean
+## Help in Japanese and Korean
 
-We currently translate the Stingray Help into Korean and Japanese. You can switch to either language using the drop-down menu at the top right corner of this page.
+We currently translate the help into Korean and Japanese. You can switch to either language using the drop-down menu at the top right corner of this page.
 
 ![](../images/lang-menu.png)
 

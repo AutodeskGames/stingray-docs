@@ -4,17 +4,17 @@ This page tells you everything you need to know in order to get started developi
 
 ## Step 1. First-time setup
 
-You'll have to install and set up a few things on the Windows machine that you use to run the Stingray editor.
+You'll have to install and set up a few things on the Windows machine that you use to run the interactive editor.
 
-### Install the Stingray Xbox One distribution
+### Install the {{ProductName}} Xbox One distribution
 
-The parts of Stingray related to Xbox One are only distributed to teams that are registered with Microsoft as Xbox One developers. You need to get this distribution and install it on your computer.
+The parts of {{ProductName}} related to Xbox One are only distributed to teams that are registered with Microsoft as Xbox One developers. You need to get this distribution and install it on your computer.
 
-Registered Xbox One developers can download the distribution from the Autodesk Game Developer Center, at <http://gamedev.autodesk.com/releases>.  Make sure that you download the version that matches the version of Stingray that you have installed on your Windows machine.
+Registered Xbox One developers can download the distribution from the Autodesk Game Developer Center, at <http://gamedev.autodesk.com/releases>.  Make sure that you download the version that matches the version of {{ProductName}} that you have installed on your Windows machine.
 
 If you need to register for an account, or if you need to add Xbox One access rights to your account, you can do so through the site.
 
-Once you have the distribution *.zip* file on your computer, unzip it into your Stingray installation folder. Make sure that the contents of its `engine` folder are merged into the `engine` folder that is already present in your installation folder.
+Once you have the distribution *.zip* file on your computer, unzip it into your {{ProductName}} installation folder. Make sure that the contents of its `engine` folder are merged into the `engine` folder that is already present in your installation folder.
 
 ### Install the Xbox One platform SDK
 
@@ -34,7 +34,7 @@ For more background information, see ~{ Connect to a remote device }~.
 
 **To connect to an Xbox One:**
 
-In the Stingray Editor, use the **Connections** panel (**Window > Deploy and Connect > Connections**) to set up a connection to the Xbox One device:
+In the interactive editor, use the **Connections** panel (**Window > Deploy and Connect > Connections**) to set up a connection to the Xbox One device:
 
 ![Connect to Xbox One](../images/connect_xbox.png)
 
@@ -42,7 +42,7 @@ For details, see ~{ Using the Connections panel }~.
 
 >	**Note:** In the *Address* field of the **Connections** panel, enter the "Console IP" of your Xbox One device. Do not use the "Tools IP".
 
-When you connect the Stingray Editor to the Xbox One device, the Stingray Editor automatically sends the engine to the device over the network, runs the engine on the device, then sends your project data to the engine.
+When you connect the editor to the Xbox One device, the editor automatically sends the engine to the device over the network, runs the engine on the device, then sends your project data to the engine.
 
 ## Step 3. Deploy the project for Xbox One
 
@@ -50,12 +50,12 @@ Deploying creates a standalone bundle that you can try out on your Xbox One (and
 
 **To package a project for Xbox One:**
 
-1.	In the Stingray Editor, open the **Deployer** panel (**Window > Deploy and Connect > Deployer**) to the Xbox tab and enter the required information. (See below.)
+1.	In the interactive editor, open the **Deployer** panel (**Window > Deploy and Connect > Deployer**) to the Xbox tab and enter the required information. (See below.)
 2.	Click **Package Project for Xbox One**.
 
-Stingray copies the files your game needs to the location on your computer that you specify in the **Destination** field.
+The deployer copies the files your game needs to the location on your computer that you specify in the **Destination** field.
 
-After deploying from Stingray, you can use the development tools provided by Microsoft to copy your game to an Xbox One device for testing, and to finish preparing your game for distribution using any of the channels supported by Microsoft.
+After deploying, you can use the development tools provided by Microsoft to copy your game to an Xbox One device for testing, and to finish preparing your game for distribution using any of the channels supported by Microsoft.
 
 ### Xbox One deployment settings
 

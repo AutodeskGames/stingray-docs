@@ -1,8 +1,8 @@
 # Test and build a project
 
-Typically, when you're working in the Stingray editor you're either setting up a scene with some 3D content, or setting up some ways for a user to experience that scene and interact with it. Although you see your scene in the editor's viewport, the way you interact with the scene while you're editing isn't the same as the way a player or user will interact with it when they experience your project.
+Typically, when you're working in the interactive editor you're either setting up a scene with some 3D content, or setting up some ways for a user to experience that scene and interact with it. Although you see your scene in the editor's viewport, the way you interact with the scene while you're editing isn't the same as the way a player or user will interact with it when they experience your project.
 
-As you work on your project, you'll often want to try out the levels and interactions that you're building in the Stingray editor, to make sure that everything will work as you're expecting when a player experiences it. You have a few ways that you can do this, described below.
+As you work on your project, you'll often want to try out the levels and interactions that you're building in the editor, to make sure that everything will work as you're expecting when a player experiences it. You have a few ways that you can do this, described below.
 
 ## ![](../../images/icon_runProject.png) Test the whole project
 
@@ -18,7 +18,7 @@ This is a great way to test, because:
 
 ## ![](../../images/icon_test_level.png) Test only the current level
 
-In the Stingray editor, you always work on one level at a time. While you have a level open, you'll likely want to test out the experience of running that particular level a lot. Use the ![](../../images/icon_test_level.png) button in the **Level Viewport** ~{ Toolbar }~ to quickly step in to your current level.
+In the interactive editor, you always work on one level at a time. While you have a level open, you'll likely want to test out the experience of running that particular level a lot. Use the ![](../../images/icon_test_level.png) button in the **Level Viewport** ~{ Toolbar }~ to quickly step in to your current level.
 
 This is a great way to test, because:
 
@@ -29,7 +29,7 @@ This is a great way to test, because:
 
 ## Deploy your app
 
-Ultimately, the people who experience the content you're building in Stingray won't see the Stingray editor at all. You *deploy* your project -- that is, you package it up into a standalone form. On Windows, this is an executable *.exe* application accompanied by some *.dll* libraries and data files; on mobile platforms, it's a simple app. Anytime you're ready, you can deploy your project for whatever target platform you want to test or distribute.
+Ultimately, the people who experience the content you're building won't see the interactive editor at all. You *deploy* your project -- that is, you package it up into a standalone form. On Windows, this is an executable *.exe* application accompanied by some *.dll* libraries and data files; on mobile platforms, it's a simple app. Anytime you're ready, you can deploy your project for whatever target platform you want to test or distribute.
 
 This is a great way to test, because:
 

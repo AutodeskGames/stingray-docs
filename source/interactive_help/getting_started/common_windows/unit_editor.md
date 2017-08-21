@@ -4,12 +4,11 @@
 
 ![Unit Editor Overview](../../images/unit_editor.png)
 
-The **Unit Editor** gives you control over many elements of your unit's basic properties and constituent pieces. Because Stingray lets you import scenes with multiple models, the **Unit Editor** is an essential tool for managing how the unit and all its parts interact in the game.
+The **Unit Editor** gives you control over many elements of your unit's basic properties and constituent pieces. Because each unit can be made up of multiple meshes, lights, cameras, physics actors, and script data, the **Unit Editor** is an essential tool for managing how the unit and all its parts interact.
 
-The **Unit Editor** separates unit data from level/project data in Stingray Editor. This allows you to launch the **Unit Editor** separate from the Stingray Editor and work on a unit without loading a level.
+The **Unit Editor** works on unit *resources* in your project. Each *.unit* resource is like a template, which you *spawn* in your levels when you want an instance of that unit to show up in the level's 3D scene. You can launch the **Unit Editor** separately from the interactive editor, and work on your units without needing to load a level.
 
 ## Unit Editor Overview
-
 
 ![Unit Editor Overview](../../images/UnitEditor_InterfaceOverview.png)
 

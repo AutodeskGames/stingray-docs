@@ -36,14 +36,14 @@ Select **File > Settings > Editor Settings** to view and edit the following in t
 <dd>The path to the location where 3ds Max is installed.</dd>
 
 <dt>Autodesk Shared Materials path</dt>
-<dd>The path to the folder location containing materials shared between Stingray and DCC tool.</dd>
+<dd>The path to the folder location containing materials shared between {{ProductName}} and your DCC tool.</dd>
 </dl>
 
 **DCC Link Interop**
 
 <dl>
 <dt>Prompt overwrite sent materials</dt>
-<dd>If selected, a user confirmation dialog appears for overwriting existing materials when sending material updates from Stingray to Maya. See ~{ Send materials to Maya, Maya LT, or 3ds Max }~.</dd>
+<dd>If selected, a user confirmation dialog appears for overwriting existing materials when sending material updates from {{ProductName}} to your DCC tool. See ~{ Send materials to Maya, Maya LT, or 3ds Max }~.</dd>
 
 <dt>Send materials with unit</dt>
 <dd>If enabled, send material updates when units are sent to the DCC tool using <b>Send to</b> option.</dd>

@@ -4,17 +4,17 @@ This page tells you everything you need to know in order to get started developi
 
 ## Step 1. Check the supported devices
 
-See the ~{ Supported platforms }~ page for details on the Android devices and OS versions that the Stingray engine can work with, and make sure your device is a good fit.
+See the ~{ Supported platforms }~ page for details on the Android devices and OS versions that the interactive engine can work with, and make sure your device is a good fit.
 
 ## Step 2. First-time setup
 
-You'll have to install and set up a few things on the Windows machine that you use to run the Stingray editor.
+You'll have to install and set up a few things on the Windows machine that you use to run the interactive editor.
 
 ### Install Java
 
 You need both the Java Development Kit (JDK) and the Java Runtime Environment (JRE).
 
-Stingray requires at least version 7, but we recommend using the latest update of version 8.
+{{ProductName}} requires at least version 7, but we recommend using the latest update of version 8.
 
 You can download the JDK from the [Oracle Java SE site](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). The JDK package contains a full version of the JRE, so you should not have to install the JRE separately.
 
@@ -41,7 +41,7 @@ After you install Java and the Android SDK:
 
 ### Make a default keystore for app signing
 
-When you deploy a project to a standalone *.apk* application, Stingray needs to sign your app using a keystore that you have set up on your system. If you do not specify a keystore when you deploy, Stingray relies on a default "debug" keystore. Most versions of the Android SDK generate this default keystore automatically when you install the Android SDK, but some may not.
+When you deploy a project to a standalone *.apk* application, the deployer needs to sign your app using a keystore that you have set up on your system. If you do not specify a keystore when you deploy, the deployer relies on a default "debug" keystore. Most versions of the Android SDK generate this default keystore automatically when you install the Android SDK, but some may not.
 
 Look for the default keystore at this location: `C:\Users\<username>\.android\debug.keystore`.
 
@@ -55,7 +55,7 @@ Note that the debug keystore expires 365 days after creation. If your default ke
 
 ### Set up your Android Debug Bridge USB drivers
 
-In order to connect the Stingray Editor to your device over a USB connection, or to install apps to your device using the Android Debug Bridge, you need to have USB drivers installed on your computer that are compatible with your device.
+In order to connect the interactive editor to your device over a USB connection, or to install apps to your device using the Android Debug Bridge, you need to have USB drivers installed on your computer that are compatible with your device.
 
 Which drivers you should use, and how to install those drivers, depends on the make and model of your Android device.
 
@@ -85,7 +85,7 @@ For more background information, see ~{ Connect to a remote device }~.
 
 	If you don't see the **Developer options** on your device, you may need to enable them. Find the Android **Build number** in the device's settings, and tap the build number seven times.
 
-1.	In the Stingray Editor, use the **Connections** panel (**Windows > Deploy and Connect > Connections**) to set up a connection to the Android device:
+1.	In the interactive editor, use the **Connections** panel (**Windows > Deploy and Connect > Connections**) to set up a connection to the Android device:
 
 	![Connect to Android](../images/connect_android.png)
 
@@ -103,12 +103,12 @@ Deploying creates a standalone *.apk* bundle that you can try out on your device
 
 **To package a project for Android:**
 
-1.	In the Stingray Engine, open the **Deployer** panel (**Windows > Deploy and Connect > Deployer**) to the Android tab and enter the required information. (See below.)
+1.	In the interactive engine, open the **Deployer** panel (**Windows > Deploy and Connect > Deployer**) to the Android tab and enter the required information. (See below.)
 1.	Click **Package Project for Android**.
 
-Stingray creates an *.apk* file for your game, and copies it to the location on your computer that you specify in the **Destination** field.
+The deployer creates an *.apk* file for your game, and copies it to the location on your computer that you specify in the **Destination** field.
 
-**After deploying from Stingray:**
+**After deploying:**
 
 -	To copy your deployed game to a connected device for testing, use the `adb` utility. You can find this tool in your Android SDK installation folder, under the `/platform-tools/` sub-directory. Connect your device to the computer by USB, open a command prompt, and type:
 
@@ -146,12 +146,12 @@ These settings are common for all tabs. See ~{ Using the Deployer panel }~.
 <dd>The version number, in two-part notation, that is displayed in your application, for example 1.25.</dd>
 
 <dt>Android flavor</dt>
-<dd>There are three different builds of the Stingray engine for Android: a regular build, a build that plays content on Gear VR devices, and a build that plays content on Google VR devices. Use this control to choose which of these engine flavors are included in your package.</dd>
+<dd>There are three different builds of the interactive engine for Android: a regular build, a build that plays content on Gear VR devices, and a build that plays content on Google VR devices. Use this control to choose which of these engine flavors are included in your package.</dd>
 </dl>
 
 ### Icons settings
 
-Browse to select your game icon in PNG format. It can be any size, but we recommend a maximum of 512x512 pixels. If you leave this empty, the **Deployer** uses the default icon for Autodesk Stingray.
+Browse to select your game icon in PNG format. It can be any size, but we recommend a maximum of 512x512 pixels. If you leave this empty, the **Deployer** uses a default Autodesk icon.
 
 ### Keystore Signing settings
 

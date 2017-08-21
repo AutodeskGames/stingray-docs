@@ -1,10 +1,10 @@
 # Project Manager
 
-The **Project Manager** launches automatically each time you start Stingray. You can also select **File > Project Manager** to open the **Project Manager**.
+The **Project Manager** launches automatically each time you start the interactive editor. You can also select **File > Project Manager** to open the **Project Manager**.
 
-This window lets you create and manage your game projects and download online example projects.
+You can use this window to create and manage your game projects, and to download online example projects.
 
-Creating the project that organizes your entire game is the first task you'll complete in Stingray. Every project in Stingray is built from one of the template projects available in the **Project Manager**, or another existing project. This ensures you always have the correct project architecture necessary when Stingray compiles your game data.
+The first task you'll complete in {{ProductName}} is to create a project that organizes all the resources that make up your interactive application. Typically, you'll start each new project from one of the template projects available in the **Project Manager**, or from another existing project. This ensures you always have at least the minimal set of required resources in place when you get started.
 
 ![Project Manager Overview](../../images/comp_project_manager.png)
 
@@ -14,5 +14,5 @@ Related topics:
 -	~{ About the project structure }~
 -	~{ Template projects }~
 -	~{ About engine configurations }~
-- ~{ Download assets and example projects }~
+-	~{ Download assets and example projects }~
 ---

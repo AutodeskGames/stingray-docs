@@ -1,9 +1,8 @@
-﻿# Interface overview
+# Interface overview
 
 ![interface_overview](../images/comp_interface_overview.png)
 
-
-> **Tip:** As you drag, drop, and rearrange the windows in the Stingray Editor, you can select **Window > Layout > Reset Layout** to restore the interface to this configuration at any time.
+> **Tip:** You can freely drag, drop, and rearrange the windows in the interactive editor. If you ever want to restore the default configuration shown above, select **Window > Layout > Reset Layout** from the main menu.
 
 ---
 Related topics:
