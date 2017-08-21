@@ -16,7 +16,7 @@ For example, if you're working with many objects that use a common material, cre
 
 	![](../../images/new_mat_name.png)
 
-	This creates a new child material that points to the default, standard Stingray material. (The standard Stingray material is its parent.) The child material properties display in the ~{ Property Editor }~.
+	This creates a new child material that points to the default, standard material. (The standard material is its parent.) The child material properties display in the ~{ Property Editor }~.
 
 4.	To connect maps such as color, normal, and roughness, select the material and open the ~{ Property Editor }~. Here, you can do one of the following:
 

@@ -2,7 +2,7 @@
 
 - **Window > Shader Graph Editor**
 
-The **Shader Graph Editor** is a hub where technical artists and shader writers can load, edit, and save material graphs across a project. See also ~{ Create or edit shader graphs }~. For more information about the shader nodes supplied with Stingray, see [Stingray Shader Node Reference](../../../../shaders_ref/index.html).
+The **Shader Graph Editor** is a hub where technical artists and shader writers can load, edit, and save material graphs across a project. See also ~{ Create or edit shader graphs }~. For more information about all built-in shader nodes, see the [Shader Node Reference](../../../../shaders_ref/index.html).
 
 To load a shader graph in the **Shader Graph Editor**:
 

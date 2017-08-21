@@ -1,6 +1,6 @@
 #Create a parent material
 
-Stingray ships with several standard materials that provide many features, but you can also use these steps to create and optimize your own material graphs.
+{{ProductName}} ships with several standard materials that provide many features, but you can also use these steps to create and optimize your own material graphs.
 
 > **Note:** This is an advanced workflow that creates an entirely new parent material with a unique shader graph. See ~{ Create a material }~ for the basic workflow of creating a new child material.
 
@@ -30,7 +30,7 @@ Stingray ships with several standard materials that provide many features, but y
 
 	![](../../images/message_data_compiling.png)
 
-	This message displays as Stingray works in the background to create the shader permutations for each material that you might need in game.
+	This message displays as the engine works in the background to create the shader permutations for each material that you might need in game.
 
 ---
 Related topics:

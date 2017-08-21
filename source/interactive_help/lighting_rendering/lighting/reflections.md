@@ -1,6 +1,6 @@
 # Reflections
 
-Almost all surfaces in the real world exhibit at least a little specular reflectivity. In the Stingray physically based rendering system, each material's *metallic* setting determines how much specular reflectivity the material shows at a given viewing angle, and its *roughness* setting determines how sharp or blurred those reflections are.
+Almost all surfaces in the real world exhibit at least a little specular reflectivity. In the {{ProductName}} physically based rendering system, each material's *metallic* setting determines how much specular reflectivity the material shows at a given viewing angle, and its *roughness* setting determines how sharp or blurred those reflections are.
 
 But when reflected light is needed, where do these reflections come from?
 
@@ -50,7 +50,7 @@ The biggest drawback of using light probes to bake reflections for your level is
 
 Most game levels change in many different ways over time -- player characters, non-player characters and vehicles move around, particle effects start and stop, objects get created and destroyed. To make these dynamic objects show up in reflective surfaces, you can add screen space reflections: a technique that "fakes" dynamic reflections as a post-effect after each frame is rendered.
 
-When Stingray renders a frame, it also creates a *depth buffer* -- a record of the distance from the camera to the various shaded surfaces in the frame. Using this depth information, the renderer can detect when a surface is reflecting something else that has already been rendered in the frame. It can then reflect that shaded object in the reflective surface.
+When the interactive engine renders a frame, it also creates a *depth buffer* -- a record of the distance from the camera to the various shaded surfaces in the frame. Using this depth information, the renderer can detect when a surface is reflecting something else that has already been rendered in the frame. It can then reflect that shaded object in the reflective surface.
 
 Here you can see not only the static targets and ramps being reflected, but also the dynamic character:
 

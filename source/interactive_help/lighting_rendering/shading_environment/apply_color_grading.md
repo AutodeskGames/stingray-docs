@@ -1,14 +1,14 @@
 # How to apply color grading to a level
 
-Color grading in Stingray is a post-processing operation that adjusts the colors of the image being rendered in the viewport each frame to fit into an output color space that you provide. You can use color grading to apply adjustments to color balance, brightness and contrast, hue, and saturation across your whole level.
+Color grading in {{ProductName}} is a post-processing operation that adjusts the colors of the image being rendered in the viewport each frame to fit into an output color space that you provide. You can use color grading to apply adjustments to color balance, brightness and contrast, hue, and saturation across your whole level.
 
-You set the output color space as a texture resource in the shading environment. The steps on this page show how to produce a texture resource that defines an output color space. You'll start from a base "identity" color space that comes with Stingray, adjust its colors in Photoshop, and re-import the adjusted color space into a new texture resource.
+You set the output color space as a texture resource in the shading environment. The steps on this page show how to produce a texture resource that defines an output color space. You'll start from a built-in base "identity" color space, adjust its colors in Photoshop, and re-import the adjusted color space into a new texture resource.
 
 >	**Note:** You'll need to have access to Adobe Photoshop, along with the [NVIDIA Texture Tools](https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop) plug-in, in order to open and save DDS files in the right format.
 
 ## Step 1. Take a screenshot of your level
 
-1.	In Stingray, open the level where you want to apply color grading adjustments.
+1.	In the editor, open the level where you want to apply color grading adjustments.
 
 1.	Adjust your view in the **Level Viewport** until you have a good, wide field of view on your scene.
 
@@ -18,7 +18,7 @@ You set the output color space as a texture resource in the shading environment.
 
 ## Step 2. Combine and adjust files in Photoshop
 
-1.	In Photoshop, open the Stingray base color grading file, which is located in your core resources at `core/stingray_renderer/environments/color_grading_identity.dds`. This file defines a basic ARGB color space that leaves output colors unchanged when used as the color grading volume map for a level's shading environment.
+1.	In Photoshop, open the base color grading file, which is located in your core resources at `core/stingray_renderer/environments/color_grading_identity.dds`. This file defines a basic ARGB color space that leaves output colors unchanged when used as the color grading volume map for a level's shading environment.
 
 	![](../../images/color_grade_2.png)
 
@@ -60,9 +60,9 @@ You set the output color space as a texture resource in the shading environment.
 
 	-	Save the file..
 
-## Step 4. Import the color grading file into Stingray
+## Step 4. Import the color grading file
 
-1.	In Stingray, import the adjusted *.dds* file you created as a new texture resource. See ~{ Import textures }~.
+1.	In the interactive editor, import the adjusted *.dds* file you created as a new texture resource. See ~{ Import textures }~.
 
 1.	Double-click the texture resource in the **Asset Browser** to launch the ~{ Texture Manager }~.
 

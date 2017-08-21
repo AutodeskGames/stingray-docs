@@ -41,7 +41,7 @@ You may be able to work around this issue by reducing the memory size of your li
 
 Pre-calculating realistic global illumination takes time. To get very high-quality results on big scenes, it can take a very large amount of time -- sometimes many hours or even days each time you do a final bake. You have to factor this extra time into your level design and production workflow.
 
-The built-in GPU-accelerated Stingray light baker converges toward its final result by iterating through multiple passes, increasing the quality of the rendering each time. This lets you get preliminary results quickly, so you can reduce the number of times you need to bake. See ~{ Bake lightmaps }~.
+The built-in GPU-accelerated light baker converges toward its final result by iterating through multiple passes, increasing the quality of the rendering each time. This lets you get preliminary results quickly, so you can reduce the number of times you need to bake. See ~{ Bake lightmaps }~.
 
 ### Static objects and lights only
 

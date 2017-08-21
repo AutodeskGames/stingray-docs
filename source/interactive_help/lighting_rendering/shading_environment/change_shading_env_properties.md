@@ -1,6 +1,6 @@
 # Change shading environment properties
 
-This page describes your options for changing the properties of your shading environment, both in the Stingray Editor and dynamically in the game at runtime.
+This page describes your options for changing the properties of your shading environment, both in the interactive editor and dynamically in the interactive engine at runtime.
 
 ## Property Editor
 

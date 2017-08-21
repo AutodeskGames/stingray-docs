@@ -2,13 +2,11 @@
 
 Light sources are contained within units. Each unit can contain zero, one, or many light sources.
 
-You create light sources in your game by placing or spawning any type of unit that contains one or more light sources. For example, the Stingray core resources contains a helper unit, `core/unit/light_source.unit`, that contains a single light source. This helper unit is represented in the Stingray Editor viewport as a light bulb:
+You create light sources in your game by placing or spawning any type of unit that contains one or more light sources. For example, the core resources contains a helper unit, `core/unit/light_source.unit`, that contains a single light source. This helper unit is represented in the interactive editor viewport as a light bulb:
 
 ![Light gizmo](../../../images/marker_light_3d.png)
 
-The instructions below describe how to place and spawn an instance of this helper unit in the Stingray Editor, Lua, and Flow.
-
->**Note:** If you happen to see light gizmos in projects migrated from Stingray 1.4 and older, delete the old lights and replace them with new ones.
+The instructions below describe how to place and spawn an instance of this helper unit in the interactive editor, in Lua, and in Flow.
 
 ## Level editing
 
@@ -40,9 +38,9 @@ For example, the following chain creates a bright red light at a preset location
 
 ## Importing lights
 
-In addition to creating light sources directly in your Stingray level, you can create lights in your 3D content creation tool, save them in the *.fbx* file along with your model, and import the lights into Stingray. You might find this easier to manage if you have an object that you want to always cast light in a certain way from a certain position, like a lamppost.
+As an alternative to creating light sources directly in your level in the interactive editor, you can create lights in your 3D content creation tool, save them in the *.fbx* file along with your model, and import the model into a new unit. You might find this easier to manage if you have an object that you want to always cast light in a certain way from a certain position, like a lamppost.
 
-The kinds of lights and light source features supported by Stingray may not match the lights and features supported by your content creation tool. Stingray will do its best to translate the properties of the light from your 3D design tool, but you may need to tweak the properties of the light after importing. To do this, double-click your new unit to open it in the Unit Editor, find the light or lights you want to modify in the unit's scene hierarchy, and use the controls in the Properties panel to change the light settings.
+The kinds of lights and light source features supported by {{ProductName}} may not match the lights and features supported by your content creation tool. The FBX importer will do its best to translate the properties of the light from your 3D design tool, but you may need to tweak the properties of the light after importing. To do this, double-click your new unit to open it in the Unit Editor, find the light or lights you want to modify in the unit's scene hierarchy, and use the controls in the Properties panel to change the light settings.
 
 Note that changing the light properties in the Unit Editor will change the properties for all instances of that unit. You can also override these default settings within each instance of the unit that you spawn.
 

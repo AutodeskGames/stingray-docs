@@ -2,7 +2,7 @@
 
 Shadows might seem easy to set up and manage: after all, they should just naturally appear everywhere that light isn't. However, shadows in a real-time rendered game come with their own technical concerns and limitations.
 
-Stingray uses *shadow maps* to simulate shadows from dynamic lights. The idea behind a shadow map is that each shadow-casting light creates a *depth map* from its own point of view on the scene. This depth map records the distance from the light source to all of the places in the scene that its illumination reaches. When the renderer draws the objects in the scene from the point of view of a camera, it projects each surface into the local space of the light. It then checks the position of the surface against the light's depth map to determine whether or not that surface should be occluded from the light source.
+{{ProductName}} uses *shadow maps* to simulate shadows from dynamic lights. The idea behind a shadow map is that each shadow-casting light creates a *depth map* from its own point of view on the scene. This depth map records the distance from the light source to all of the places in the scene that its illumination reaches. When the renderer draws the objects in the scene from the point of view of a camera, it projects each surface into the local space of the light. It then checks the position of the surface against the light's depth map to determine whether or not that surface should be occluded from the light source.
 
 The first directional light in the scene, which typically represents the sun, has a special type of shadow map called a *cascaded shadow map*. This is essentially a combination of multiple shadow maps, each of which handles the shadows that lie at different distances from the camera. That way, objects close to the camera can have more fine details in their shadows than objects at a distance.
 
@@ -12,7 +12,7 @@ You don't have to know any of the technical details involved in shadow mapping i
 
 However, it should be clear that each additional shadow-casting light adds some extra performance overhead to rendering the game world in each frame. You therefore want to avoid creating shadow-casting lights unnecessarily.
 
-Stingray has a few additional parameters that you can use to control which lights and objects cast shadows, and to set up technical parameters for shadow mapping. These are described in the following sections.
+{{ProductName}} has a few additional parameters that you can use to control which lights and objects cast shadows, and to set up technical parameters for shadow mapping. These are described in the following sections.
 
 ## Enabling and disabling shadows
 
@@ -42,4 +42,4 @@ Decreasing this value may help if you see "peter pan" artifacts, where the shado
 
 The *settings.ini* file exposes some render settings that control the shadow map texture sizes and filter quality. You can try to tweak the default values of these parameters in order to trade off performance and memory usage against shadow quality.
 
-See ~{ Stingray engine settings.ini file reference }~.
+See ~{ settings.ini file reference }~.

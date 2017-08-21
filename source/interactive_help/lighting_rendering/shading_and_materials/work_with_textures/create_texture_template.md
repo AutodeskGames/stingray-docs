@@ -51,7 +51,7 @@ Suffixes = [ "_ies" ]
 }
 ~~~
 
-You can customize the texture templates to add texture suffixes of your own and use them on texture import. Core texture templates are located in `core/texture_categories` folder within your Stingray install. See ~{ Working with core resources }~ for details on overriding the texture template resources.
+You can customize the texture templates to add texture suffixes of your own and use them on texture import. Core texture templates are located in `core/texture_categories` folder within your {{ProductName}} installation folder. See ~{ Working with core resources }~ for details on overriding the texture template resources.
 
 You can create texture templates to quickly configure imported textures without having to use the **Texture Manager**.
 

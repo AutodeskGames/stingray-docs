@@ -10,7 +10,7 @@ Controlling the light in your game involves combining the contributions from man
 
 -	Performance: The way you set up your lighting and shadowing can have a large impact on performance and memory consumption in the game.
 
-The topics in this section describe how to use all of the different lighting techniques that Stingray provides.
+The topics in this section describe how to use all of the different lighting techniques that {{ProductName}} provides.
 
 ![Lighting example](../images/lighting_combined.jpg)
 
@@ -56,13 +56,13 @@ See ~{ Light baking }~.
 
 ## Physically based lighting
 
-The measurement of light is known as photometry. You can use photometric lights to more accurately define lights in your scene. In Stingray, the Physical Light Entity lets you use data from real-world lights to create a realistic distribution of light in your scene.
+The measurement of light is known as photometry. You can use photometric lights to more accurately define lights in your scene. In {{ProductName}}, the Physical Light Entity lets you use data from real-world lights to create a realistic distribution of light in your scene.
 
 See ~{ Physically Based Lighting }~.
 
 ## Emissive glow
 
-You can use the *emissive* property of your Stingray materials to make parts of your models appear to glow, like a car's taillights, LEDs on a machine, or a neon sign. You set up these emissive contributions in the materials that you use to shade the objects.
+You can use the *emissive* property of your materials to make parts of your models appear to glow, like a car's taillights, LEDs on a machine, or a neon sign. You set up these emissive contributions in the materials that you use to shade the objects.
 
 Emissive materials do not actually emit direct light onto other objects in your scene. The real-time renderer does not include any direct contributions from them. But, combined with a little bloom applied by the shading environment in post-processing, this makes an effective, low-cost way to simulate small light sources.
 

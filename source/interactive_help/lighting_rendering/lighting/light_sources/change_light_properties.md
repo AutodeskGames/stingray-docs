@@ -16,7 +16,7 @@ See the ~{ Story Editor }~.
 
 ## Lua
 
-In your runtime Lua code, you can retrieve an object that represents your light and change its properties on the fly. You retrieve the light object from the unit instance that contains the light you want to change, using the name set for the unit in the Stingray Editor. This may be the "light helper" unit if you created the light in Stingray, or your custom unit if you imported the light into Stingray through an  *.fbx* file.
+In your runtime Lua code, you can retrieve an object that represents your light and change its properties on the fly. You retrieve the light object from the unit instance that contains the light you want to change, using the name set for the unit in the editor. This may be the "light helper" unit if you created the light in the editor, or your custom unit if you imported the light into the editor through an  *.fbx* file.
 
 For example, the following code shows how to set new values for the Intensity and color properties of a light:
 
@@ -34,7 +34,7 @@ See the functions for the `stingray.Light` object in the Lua API reference.
 
 ## Flow
 
-Flow offers a set of built-in nodes for getting and setting the properties of a light source. You can retrieve the light from the unit instance that contains the light you want to change, using the name set for the unit in the Stingray Editor. This may be the "light helper" unit if you created the light in Stingray, or your custom unit if you imported the light into Stingray through an  *.fbx* file.
+Flow offers a set of built-in nodes for getting and setting the properties of a light source. You can retrieve the light from the unit instance that contains the light you want to change, using the name set for the unit in the editor. This may be the "light helper" unit if you created the light in the editor, or your custom unit if you imported the light into the editor through an  *.fbx* file.
 
 See the nodes in the **Light** category in the Flow API reference; for example, **Light > Get Light Color** / **Light > Set Light Color**.
 

@@ -8,7 +8,7 @@ See ~{ Shading environment properties }~ for descriptions of all the settings yo
 
 ## About shading environments, worlds and levels
 
-Each level can have one and only one shading environment entity. When you create a new level, it automatically gets a new environment preset with default values for a clear sunny day, including a default image texture for the sky. Any settings you modify for that shading environment in the Stingray Editor get saved in your level and used every time your level is loaded.
+Each level can have one and only one shading environment entity. When you create a new level, it automatically gets a new environment preset with default values for a clear sunny day, including a default image texture for the sky. Any settings you modify for that shading environment in the interactive editor get saved in your level and used every time your level is loaded.
 
 If you ever want to start your level over with the default settings, you can delete the shading environment entity from the ~{ Explorer panel }~ and re-create it by choosing **Create > Shading Environment** from the main menu and giving it a new name.
 

@@ -15,7 +15,7 @@ The image above shows a plain white wall enhanced in the level by several decals
 
 ## Step 1. Create a decal projector
 
-Decals are usually projected using a decal projector unit, which is provided with Stingray in the core resources folder, at `core/stingray_renderer/helper_units/decals/decal_box`.
+Decals are usually projected using a decal projector unit, which is provided in the core resources folder, at `core/stingray_renderer/helper_units/decals/decal_box`.
 
 To create a new decal projector in a level:
 
@@ -31,7 +31,7 @@ To create a new decal projector in a level:
 
 ## Step 2. Create a new material to project
 
-Each new decal projector uses a default material that comes from the Stingray core resources. This placeholder projects the debug texture for missing textures: a question mark on a yellow background. You will want to create a new material for your decal, and set it up to project your own texture.
+Each new decal projector uses a default material that comes from the core resources. This placeholder projects the debug texture for missing textures: a question mark on a yellow background. You will want to create a new material for your decal, and set it up to project your own texture.
 
 1.	In the ~{ Asset Browser }~, navigate to the folder where you want to keep your new material.
 

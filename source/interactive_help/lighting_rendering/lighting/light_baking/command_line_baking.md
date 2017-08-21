@@ -1,14 +1,14 @@
 # Trigger lightmap baking from the command line
 
-You can start the Stingray engine application from a command-line prompt, and provide parameters on the command line to trigger lightmap baking.
+You can start the interactive engine application from a command-line prompt, and provide parameters on the command line to trigger lightmap baking.
 
->	**Note:** Non-interactive baking is the default baking mode when you launch a baking session from the command line. See ~{ Baking with the Stingray baker }~.
+>	**Note:** Non-interactive baking is the default baking mode when you launch a baking session from the command line. See ~{ Baking with the built-in baker }~.
 
 ## To trigger lightmap baking from the command line
 
 1.  Open a command prompt and change to the following directory:
 
-		C:\Program Files\Autodesk\Stingray\<version>\engine\win64\dev
+		`C:\Program Files\Autodesk\Stingray\<version>\engine\win64\dev`
 
 2.  Enter the following command:
 
@@ -18,11 +18,11 @@ You can start the Stingray engine application from a command-line prompt, and pr
 
 -	`--toolchain` should point to the absolute path of your binaries directory. Most users will find this under `C:\Program Files\Autodesk\Stingray\<version>`.
 
-  	If you build your Stingray engine from source, and your root checkout of Stingray is `C:\work\stingray`, your binaries directory is typically located here: `C:\work\stingray\build\binaries`.
-		
+  	If you build your engine from source, and the root folder of your source code repository is at `C:\work\stingray`, your binaries directory is typically located here: `C:\work\stingray\build\binaries`.
+
 -	`--project-root` should point to the absolute path of your project's source data.
 
-	For example, `C:\Stingray_Projects\New_Project`
+	For example, `C:\Interactive_Projects\New_Project`
 
 -	`--level` should point to the path of the level you want to bake.
 
@@ -30,5 +30,5 @@ You can start the Stingray engine application from a command-line prompt, and pr
 
 ---
 Related topics:
-- ~{ Stingray engine command-line reference }~
+- ~{ command-line reference }~
 ---

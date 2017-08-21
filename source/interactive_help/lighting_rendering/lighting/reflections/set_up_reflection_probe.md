@@ -56,22 +56,6 @@ For example, this image has a single reflection probe (the sphere on the far rig
 
 ![Parallax correction](../../../images/reflection_probes_parallax_correction.jpg)
 
-## Visualizing reflection probes
-
->	**Note:** This currently works for reflection probe units in your existing Stingray projects. With Stingray 1.5, reflection probes are saved as entities and you can see the current extents by activating the probe gizmo.
-
-Once you have baked your reflection probes at least once, you can visualize their associated volumes in the viewport.
-
--	From the viewport overlays, select **Full Render > Tools > Reflection Probe Volumes**.
-
-![Reflection probe volume visualization](../../../images/reflection_probes_visualization.jpg)
-
-In this visualization mode:
-
--	The red volume (outlined in red and yellow) shows the current extents set for the *light* volume: that is, the limits within which the baked reflections apply to surfaces.
-
--	The green volume shows the current extents set for the *parallax correction* volume.
-
 ## Examples
 
 The following sections give some guidelines or recipes for setting up reflection probes for common game situations. They may not apply in all cases, but should hopefully give you a starting point.

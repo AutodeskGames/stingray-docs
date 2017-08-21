@@ -28,7 +28,7 @@ For example, in the image below, the reflection probe (the sphere on the right) 
 
 1.	Bake your probe. From the main menu, select **Window > Lighting > Bake Reflection Probes**.
 
-	Stingray creates a new subfolder in the same folder as the current level's *.level* resource file, named `<level_name>-cubemaps`. In this folder, it stores *.dds* and *.texture* files for the diffuse and specular light from each reflection probe in the level. You'll need to refer to these texture resources later.
+	The editor creates a new subfolder in the same folder as the current level's *.level* resource file, named `<level_name>-cubemaps`. In this folder, it stores *.dds* and *.texture* files for the diffuse and specular light from each reflection probe in the level. You'll need to refer to these texture resources later.
 
 1.	In the ~{ Explorer panel }~, find and select your shading environment entity.
 
@@ -46,7 +46,7 @@ For example, in the image below, the reflection probe (the sphere on the right) 
 
 	-	Use the settings next to **Reflections Tint** to control the color and intensity of the specular reflections in your level.
 
-1.	Set up global radiance (currently used only by the Stingray light baker):
+1.	Set up global radiance (currently used only by the light baker):
 
 	-	Set the **Global Radiance Map** to point to the `<probe_name>_radiance_bake` texture baked for your probe in the `<level_name>-cubemaps` folder.
 

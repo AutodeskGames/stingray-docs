@@ -6,7 +6,7 @@ This page describes some points to keep in mind when you create a skydome textur
 
 Your texture will be mapped onto the inside of the skydome sphere. It therefore needs to be a projection of spherical coordinates into a rectangular texture.
 
-Stingray expects your image to use *equirectangular projection*:
+{{ProductName}} expects your image to use *equirectangular projection*:
 
 -	The X axis of the image wraps horizontally around the sphere (the longitude), and the Y axis of the image is up and down on the sphere (the latitude).
 
@@ -38,13 +38,13 @@ See [this tutorial](http://adaptivesamples.com/2016/03/16/make-your-own-hdri/) f
 
 For best results:
 
--	Save your skydome image as a *.DDS* file with 32 bits per color channel before importing it into Stingray. 16 bits is usually acceptable.
+-	Save your skydome image as a *.DDS* file with 32 bits per color channel before importing it into your project. 16 bits is usually acceptable.
 
 	For example, if you're using the Photoshop DDS plug-in from NVIDIA, set its output format to `32.32.32.32f ABGR` or `16.16.16.16f ABGR`
 
--	Do not use any compression on your image, either in Photoshop or in Stingray.
+-	Do not use any compression on your image, either in Photoshop or in {{ProductName}}.
 
-	After you import your image into a Stingray texture, make sure that you disable compression for the image in the ~{ Texture Manager }~.
+	After you import your image into a texture, make sure that you disable compression for the image in the ~{ Texture Manager }~.
 
 -	You can import EXR files to use as skydome images. When imported, the files with `"hdri"`, `"skydome"` and `"_hdr"` suffix are set the appropriate texture compressions for the HDRI maps. The EXR files should be 32 bit HDRI images.
 

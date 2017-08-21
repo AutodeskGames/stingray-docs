@@ -6,7 +6,7 @@ The direct light and shadows from the light sources you place in your level are 
 
 ## Types of placed light sources
 
-You can create different kinds of light sources that emit light in different ways, and within different kinds of volumes. Stingray offers four types of dynamic lights: directional, omni-directional, spotlights, and box lights.
+You can create different kinds of light sources that emit light in different ways, and within different kinds of volumes. {{ProductName}} offers four types of dynamic light sources: directional, omni-directional, spotlights, and box lights.
 
 ### Directional lights
 
@@ -14,7 +14,7 @@ Directional lights simulate the light coming from distant sources such as the su
 
 ![Directional light](../../images/light_source_directional.png)
 
-In the Stingray Editor, a directional light is shown by white arrows pointing in the direction of the light:
+In the editor, a directional light is shown by white arrows pointing in the direction of the light:
 
 ![Directional light gizmo](../../images/light_source_directional_gizmo.png)
 
@@ -32,7 +32,7 @@ Note that, in contrast to the directional light image above, the shadows from th
 
 ![Omni-directional light](../../images/light_source_omni.png)
 
-In the Stingray Editor, an omni-directional light is shown by a white sphere around the light source:
+In the editor, an omni-directional light is shown by a white sphere around the light source:
 
 ![Omni-directional light gizmo](../../images/light_source_omni_gizmo.png)
 
@@ -46,7 +46,7 @@ The light fades out with distance from the position of the light source. It also
 
 ![Spot light](../../images/light_source_spot.png)
 
-In the Stingray Editor, a spot light is shown by a white arrow along the direction the light is shining, and a white cone that marks the outer boundary of the spot:
+In the editor, a spot light is shown by a white arrow along the direction the light is shining, and a white cone that marks the outer boundary of the spot:
 
 ![Spot light gizmo](../../images/light_source_spot_gizmo.png)
 
@@ -58,7 +58,7 @@ Note the sharp shadows where the edges of the box intersect the objects in the l
 
 ![Box light](../../images/light_source_box.png)
 
-In the Stingray Editor, a box light is shown by a white 3D bounding box. The white arrow in the move gizmo shows the direction the light shines:
+In the editor, a box light is shown by a white 3D bounding box. The white arrow in the move gizmo shows the direction the light shines:
 
 ![Box light gizmo](../../images/light_source_box_gizmo.png)
 
