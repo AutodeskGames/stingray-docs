@@ -1,4 +1,4 @@
-# About Stingray build configurations
+# About engine build configurations
 
 This topic contains some information for developers about the different build configurations offered in the Stingray build system.
 
