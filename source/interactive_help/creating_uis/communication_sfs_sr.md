@@ -1,26 +1,28 @@
-# Communication between Stingray and Scaleform Studio
+# Communication between {{ProductName}} and Scaleform Studio
 
-The Scaleform Studio plug-in and Stingray share a common Lua virtual machine, which means that Lua code run by Scaleform Studio (when running integrated with Stingray) can invoke Lua commands from Stingray, and that Stingray can invoke Lua commands from Scaleform Studio.
+The Scaleform Studio plug-in and the {{ProductName}} engine share a common Lua virtual machine, which means that Lua code run by Scaleform Studio (when running integrated with {{ProductName}}) can invoke Lua commands from {{ProductName}}, and that {{ProductName}} can invoke Lua commands from Scaleform Studio.
 
-If you want your Scaleform Studio project to run in the stand-alone Scaleform Studio Player, we recommend that most communication between Stingray and Scaleform Studio be handled using  the `scaleform.Stage.dispatch_event` and custom event listeners in the Scaleform Studio and Stingray Lua scripts.
+If you want your Scaleform Studio project to run in the stand-alone Scaleform Studio Player, we recommend that most communication between {{ProductName}} and Scaleform Studio be handled using  the `scaleform.Stage.dispatch_event` and custom event listeners in the Scaleform Studio and {{ProductName}} Lua scripts.
 
-The Scaleform Studio plug-in also provides `scaleform.Stingray.send_message` for sending events like mouse, keyboard, touch events from Stingray to Scaleform Studio.
+The Scaleform Studio plug-in also provides `scaleform.Stingray.send_message` for sending events like mouse, keyboard, touch events from {{ProductName}} to Scaleform Studio.
 
->  **Note**: Calling Stingray functions within Scaleform Studio Lua scripts prevents the Scaleform Studio project from running in stand-alone mode.
+>  **Note**: Calling {{ProductName}} functions within Scaleform Studio Lua scripts prevents the Scaleform Studio project from running in stand-alone mode.
 
 
-* For custom events, use `scaleform.Stage.dispatch_event`.
+*	For custom events, use `scaleform.Stage.dispatch_event`.
 
 	You can send other event types using `scaleform.Stage.dispatch_event`, but the plug-in also provides direct support for many of these events with `scaleform.Stingray.send_message`, such as Keyboard, Mouse, or Touch.
 
 	For a complete list of event types in Scaleform Studio, refer to the Lua reference documentation [here](http://www.autodesk.com/scaleformstudio-help?guid=__lua_ref_enu_scaleform_EventTypes_html).
 
-* `scaleform.Stage.dispatch_event` processes the event immediately.
-* `scaleform.Stingray.send_message` buffers until the next `Update` is called to advance the Scaleform Studio project (s2dproj).
-* By default, Mouse, Keyboard, and Touch input will be automatically passed to Scaleform Studio from Stingray by the AppKit.
+*	`scaleform.Stage.dispatch_event` processes the event immediately.
+
+*	`scaleform.Stingray.send_message` buffers until the next `Update` is called to advance the Scaleform Studio project (s2dproj).
+
+*	If your project uses the Appkit, like all of the default template projects, the player's Mouse, Keyboard, and Touch input is automatically passed to Scaleform Studio from {{ProductName}}.
 
 
-**Example: Sending mouse input to Scaleform Studio from Stingray**
+**Example: Sending mouse input to Scaleform Studio from {{ProductName}}**
 
 
 ~~~
@@ -48,7 +50,7 @@ The Scaleform Studio plug-in also provides `scaleform.Stingray.send_message` for
 
 **Example: Loading a Main Menu template using custom messages**
 
-From Stingray scripts, you can load a project and send custom events to the project.
+From Lua scripts in your {{ProductName}} project, you can load a Scaleform Studio project and send custom events to the project.
 
 ~~~
 
@@ -66,7 +68,7 @@ From Stingray scripts, you can load a project and send custom events to the proj
 
 ~~~
 
-**Example: Registering a Scaleform Studio custom Listener in Stingray**
+**Example: Registering a Scaleform Studio custom Listener in {{ProductName}}**
 
 This listens for all custom events and processes them using a provided function.
 
