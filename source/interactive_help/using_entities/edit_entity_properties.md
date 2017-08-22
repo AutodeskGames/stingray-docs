@@ -1,6 +1,6 @@
 # Edit or rename an entity
 
-As with most other kinds of objects you work with in the Stingray Editor, you edit properties for your entities in the ~{ Property Editor }~ panel.
+As with most other kinds of objects you work with in the interactive editor, you edit properties for your entities in the ~{ Property Editor }~ panel.
 
 However, entities can be defined in two different places: inside their own *.entity* resource files, or inside levels. It is important to make sure that you select the entity definition that you want to edit in the right place:
 

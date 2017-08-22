@@ -1,6 +1,6 @@
 # Using Entities in your Project
 
->	**NOTE:** Stingray entities are intended to offer a modular, easily extensible system for constructing and re-using custom building blocks. At the moment, support for entities is just getting started, and mostly centers around supporting ~{ The Shading environment and post effects }~. Feel free to try out using the entity system for other purposes using any of the information you see in this section, but be aware that for the moment most Stingray workflows are still based around the use of *units* rather than entities. See also ~{ About units and entities }~.
+>	**NOTE:** Entities are intended to offer a modular, easily extensible system for constructing and re-using custom building blocks. At the moment, support for entities is just getting started, and mostly centers around supporting ~{ The Shading environment and post effects }~. Feel free to try out using the entity system for other purposes using any of the information you see in this section, but be aware that for the moment most workflows are still based around the use of *units* rather than entities. See also ~{ About units and entities }~.
 
 Entities are building blocks that you can use in your project to set up complex objects that have their own unique sets of data, behaviors and interactions.
 
@@ -8,7 +8,7 @@ Entities are building blocks that you can use in your project to set up complex 
 
 The goal of the entity system is to be flexible and open enough to model just about any kind of object that you might need in your project.
 
-Under the hood, a few core Stingray features and workflows are already built around entities. For example, anytime you create a new level, it comes with an entity that handles the rendering settings used by ~{ The Shading environment and post effects }~.
+Under the hood, a few core features and workflows are already built around entities. For example, anytime you create a new level, it comes with an entity that handles the rendering settings used by ~{ The Shading environment and post effects }~.
 
 You can also use the entity system directly to set up your own kinds of game objects. In this release, you will find it mainly useful for creating entities that store arbitrary data values: numeric, boolean, strings, resource names, 3D coordinates, colors.
 
@@ -30,7 +30,7 @@ In addition, each type of component is managed by a separate subsystem. Each of 
 
 ## Entities are *extensible*
 
-Stingray comes with some built-in components that are ready to be assigned to your own entities. (In this release, the set of components that have full end-to-end workflows from the Stingray Editor to the runtime gameplay is very limited. Future releases will add more built-in component types and easier ways to set them up.)
+{{ProductName}} comes with some built-in components that are ready to be assigned to your own entities. (In this release, the set of components that have full end-to-end workflows from the editor to the runtime gameplay is very limited. Future releases will add more built-in component types and easier ways to set them up.)
 
 Depending on the type of project you are creating, you may need your entities to do different kinds of jobs or manage different kinds of data than the set of built-in components allows.
 

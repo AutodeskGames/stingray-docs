@@ -20,7 +20,7 @@ When you work with components, you'll need to understand the difference between 
 
 	It's also how you get access to a particular component in Flow and Lua so that you can get or set its property values.
 
-	Usually you'll probably want to use strings to name your components, so that you can tell them apart. But the engine stores those names internally as hashed integer values. If you're using Lua, and you need to pass in an ID to a function like `DataComponent.lookup()`, you can pass either the string value or the hash. If you pass the string, Stingray will convert it for you. But the conversion is one-way, so if you retrieve ID names from the engine by calling a function like `DataComponent.instance_ids()`, what you'll get back is the hashed integers.
+	Usually you'll probably want to use strings to name your components, so that you can tell them apart. But the engine stores those names internally as hashed integer values. If you're using Lua, and you need to pass in an ID to a function like `DataComponent.lookup()`, you can pass either the string value or the hash. If you pass the string, the engine will convert it for you. But the conversion is one-way, so if you retrieve ID names from the engine by calling a function like `DataComponent.instance_ids()`, what you'll get back is the hashed integers.
 
 -	A component *instance* represents a particular component assigned to a particular entity that has actually been spawned in the engine. Typically, you get an instance of a component from a component manager of the corresponding type, by doing one of the following:
 
@@ -38,7 +38,7 @@ Using the component ID can sometimes be more convenient. However, if you need to
 
 ## Spawn and destroy an entity
 
-Entities that you place in a level in the Stingray Editor are automatically spawned when you load that level into your game at runtime. These entities are automatically destroyed when the level is unloaded, if they have not already been destroyed.
+Entities that you place in a level in the editor are automatically spawned when you load that level into your game at runtime. These entities are automatically destroyed when the level is unloaded, if they have not already been destroyed.
 
 In addition, you can spawn entities at runtime using the following methods from the `EntityManager` API:
 
@@ -54,13 +54,13 @@ There are two main ways to get a list of the entities:
 -	`stingray.World.entities()` returns a list of all entities that are currently "alive". This includes:
 
  	-	Entities that were spawned dynamically by a Lua script.
-	-	Entities that were placed in a level in the Stingray Editor and spawned when that level was loaded. The list will not include any entities that have been destroyed dynamically by a Lua script or when the level was unloaded.
+	-	Entities that were placed in a level in the editor and spawned when that level was loaded. The list will not include any entities that have been destroyed dynamically by a Lua script or when the level was unloaded.
 
--	`stingray.Level.entities()` returns a list of all entities that were placed into the specified level in the Stingray editor and spawned when that level was loaded. The list will not include any entities that have been destroyed dynamically by a Lua script or when the level was unloaded.
+-	`stingray.Level.entities()` returns a list of all entities that were placed into the specified level in the editor and spawned when that level was loaded. The list will not include any entities that have been destroyed dynamically by a Lua script or when the level was unloaded.
 
 ## Assign and remove components
 
-You can set up an entity in your gameplay code by adding and removing components dynamically, just like you can in the Stingray Editor. You do this through the component manager for the kind of component you want to create or destroy for an entity. You retrieve this component manager from the `EntityManager`.
+You can set up an entity in your gameplay code by adding and removing components dynamically, just like you can in the editor. You do this through the component manager for the kind of component you want to create or destroy for an entity. You retrieve this component manager from the `EntityManager`.
 
 For example:
 
