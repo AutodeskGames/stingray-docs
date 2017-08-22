@@ -9,7 +9,7 @@ You'll start up in the {{ProductName}} *editor*. This is the main tool that you'
 -	bring in 3D content like models, animations and textures from other applications like Maya or 3ds Max,
 -	lay out your content in scenes, which we call *levels*,
 -	set up the way end-users will interact with your scenes and content,
--	create other kinds of content specific to Stingray, like particle effects,
+-	create other kinds of content specific to {{ProductName}}, like particle effects,
 -	and *deploy* your content in a standalone package or app for one or more target platforms like Windows, iOS, or Android.
 
 <table class="not-ruled"><tr><td>

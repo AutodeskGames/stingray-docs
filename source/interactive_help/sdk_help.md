@@ -20,7 +20,7 @@ Any customer can use the {{ProductName}} SDK to make these kinds of plug-ins. Yo
 
 ## To get started:
 
-1.	Make sure you take the time to understand how Stingray works. If you're new to {{ProductName}}, you'll want to start by creating some projects and getting used to creating content in the environment before you jump in to writing your plug-in.
+1.	Make sure you take the time to understand how {{ProductName}} works. If you're new to {{ProductName}}, you'll want to start by creating some projects and getting used to creating content in the environment before you jump in to writing your plug-in.
 
 	You'll also need a good idea of how all the pieces of the ecosystem work together internally under the hood, so that you can plan out what your plug-in will need to do and how it will need to tie in to the overall system. See the ~{ System Overview }~ and ~{ All the Ways You Can Extend {{ProductName}} }~.
 
@@ -38,7 +38,7 @@ Any customer can use the {{ProductName}} SDK to make these kinds of plug-ins. Yo
 
 4.	Get working!
 
-	The sections on [extending the editor](./extend_editor.html), [extending the engine](./extend_engine.html) and [extending the project content](./extend_content.html) describe how to go about setting up your plug-in to hook in to the different parts of the Stingray system.
+	The sections on [extending the editor](./extend_editor.html), [extending the engine](./extend_engine.html) and [extending the project content](./extend_content.html) describe how to go about setting up your plug-in to hook in to the different parts of the {{ProductName}} system.
 
 5.	While you're working on your plug-in, you'll probably need to reload it often so that you can test and iterate on your latest changes. See ~{ Reload a Plug-in }~.
 
