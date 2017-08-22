@@ -1,19 +1,19 @@
-# Building Stingray from source
+# Building from source
 
-This topic describes how to build the Stingray engine and editing tools from a local copy of the source code and libraries.
+This topic describes how to build the interactive engine and editing tools from a local copy of the source code and libraries.
 
 ## Pre-requisites
 
 -	You must have an up-to-date local copy of the source code for all platforms you need. That means the main `stingray` repository, as well as the submodules for any private console platforms that you have access to.
--	You must have installed all the tools described in the `readme.md` file for your branch of the Stingray source repository.
--	You must have the `SR_LIB_DIR` environment variable set up to point to your Stingray library directory. See ~{ Library dependencies }~.
+-	You must have installed all the tools described in the `readme.md` file for your branch of the source repository.
+-	You must have the `SR_LIB_DIR` environment variable set up to point to your library directory. See ~{ Library dependencies }~.
 
 ## Things to know about the build system
 
 ### `make.rb`
 
--	The main entry point to the build system is the `make.rb` script at the top level of the Stingray source code repository. Use this script to build all the parts of the product, on all target platforms, in all build configurations.
--	`make.rb` relies on CMake to set up and carry out the builds for the runtime engine, and invokes the `msbuild` tool to build the C# solutions for the Stingray Editor back-end application and legacy editing tools.
+-	The main entry point to the build system is the `make.rb` script at the top level of the source code repository. Use this script to build all the parts of the product, on all target platforms, in all build configurations.
+-	`make.rb` relies on CMake to set up and carry out the builds for the runtime engine, and invokes the `msbuild` tool to build the C# solutions for the editor back-end application and legacy editing tools.
 
 ### Platforms
 
@@ -25,7 +25,7 @@ This topic describes how to build the Stingray engine and editing tools from a l
 By default, `make.rb` places all generated binaries and other required files under the `build/binaries` sub-directory. In a full build on Windows, this output directory contains:
 
 -	`core`: Lua scripts for the editor viewports and renderer settings.
--	`editor`: the Stingray Editor executables.
+-	`editor`: the interactive editor executables.
 -	`engine`
     -	`<platform>`: The engine runtime and data compiler for each platform.
 -	`tools`: Legacy Bitsquid tools, such as the Unit Editor and Material Editor.
@@ -41,7 +41,7 @@ The simplest way to build everything is to run `make.rb` on a 64-bit Windows mac
 > make.rb
 ```
 
-This downloads all required libraries to your computer. Then it builds the Stingray Editor, the runtime engine, and the legacy authoring tools using the default `dev` build configuration (see ~{ About Stingray build configurations }~). It also copies the `core` content files required by the Stingray Editor to the output directory.
+This downloads all required libraries to your computer. Then it builds the editor, the runtime engine, and the legacy authoring tools using the default `dev` build configuration (see ~{ About engine build configurations }~). It also copies the `core` content files required by the editor to the output directory.
 
 ## Building the engine for other platforms
 
@@ -78,7 +78,7 @@ This environment variable should already be set up by the SDK installer.
 To build the engine for PlayStation 4:
 
 -	you must have the `SCE_ROOT_DIR` environment variable set up to point to the root directory in which you have installed the PlayStation 4 platform SDK.
--	you must have the `SCE_ORBIS_SDK_DIR` environment variable set up to point to the directory that contains the version of the platform SDK required by Stingray.
+-	you must have the `SCE_ORBIS_SDK_DIR` environment variable set up to point to the directory that contains the version of the platform SDK required by the engine.
 
 These environment variables should already be set up by the SDK installer.
 

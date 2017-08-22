@@ -1,10 +1,10 @@
-# Contribute changes back to the Stingray community
+# Contribute changes back to the community
 
-Stingray is an ongoing work in progress. It is not perfect, and may never be so, but we are trying hard every day to make it the best choice for you to achieve your vision.
+{{ProductName}} is an ongoing work in progress. It is not perfect, and may never be so, but we are trying hard every day to make it the best choice for you to achieve your vision.
 
 By making the source code available to customers, we hope to accelerate this process. If you can make your own immediate fixes and modifications to fix issues or make your lives easier, so much the better.
 
-Some of those changes will likely be closely tied to your own projects and/or the specific workflows you use in your organization. However, it's very likely that some would be of interest to other customers using Stingray as well. We hope that you will consider sharing these kinds of modifications back to the community.
+Some of those changes will likely be closely tied to your own projects and/or the specific workflows you use in your organization. However, it's very likely that some would be of interest to other customers using the {{ProductName}} engine and editing tools as well. We hope that you will consider sharing these kinds of modifications back to the community.
 
 If you choose to contribute features or fixes, the expected workflow is as follows:
 

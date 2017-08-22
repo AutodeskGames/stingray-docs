@@ -6,7 +6,7 @@ Once you have been granted access to the GitHub repository, you can follow the i
 
 The steps below show how to get the source code using the command-line tools that are installed when you install Git. We consider this method the most foolproof and the least likely to encounter problems.
 
-You might choose to carry out the same steps using a visual Git client instead. However, visual tools often try to simplify your life by handling submodules automatically. Since you won't have access to some of the Stingray submodules by default, you may encounter problems using visual clients unless you can configure them not to recurse into the submodules when cloning and updating.
+You might choose to carry out the same steps using a visual Git client instead. However, visual tools often try to simplify your life by handling submodules automatically. Since you won't have access to some of the source code submodules by default, you may encounter problems using visual clients unless you can configure them not to recurse into the submodules when cloning and updating.
 
 For example, when you clone your repository for the first time, you need to make sure that you do **not** use the *--recursive* option when you get your clone. Visual clients sometimes do this by default, so you might need to configure your client not to recurse into submodules. Similarly, visual clients may automatically try to update all submodules every time you checkout a new branch or pull from the main repository.
 
@@ -57,7 +57,7 @@ If you have access to the source code for either or both the PlayStation 4 and X
 
 ## I'm getting submodule errors!
 
-When you clone or update your Stingray repository, your git client may report errors about updating submodules, or about being unable to access the `https://git.autodesk.com` repository. As long as these errors refer to the `stingray-internal` repository, or submodule repositories for consoles that you don't have access to, you can safely ignore these errors. They won't prevent you from getting any code that you need.
+When you clone or update the main source code repository, your git client may report errors about updating submodules, or about being unable to access the `https://git.autodesk.com` repository. As long as these errors refer to the `stingray-internal` repository, or submodule repositories for consoles that you don't have access to, you can safely ignore these errors. They won't prevent you from getting any code that you need.
 
 To avoid seeing these errors in future:
 

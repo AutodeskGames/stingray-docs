@@ -1,8 +1,8 @@
 # Library dependencies
 
-This topic describes how to set up a local revision of the Stingray source code on your computer with the libraries required to rebuild the engine and editing tools.
+This topic describes how to set up a local revision of the source code on your computer with the libraries required to rebuild the engine and editing tools.
 
-Each revision of the Stingray source code depends on a specific set of base libraries. This includes libraries for middleware SDKs like HumanIK, digital content creation tools like 3ds Max and Maya, languages like Lua and GLSL, utilities like QT and LuaJIT, etc.
+Each revision of the source code depends on a specific set of base libraries. This includes libraries for middleware SDKs like HumanIK, digital content creation tools like 3ds Max and Maya, languages like Lua and GLSL, utilities like QT and LuaJIT, etc.
 
 Each time you get a new local revision of the source code, you should use one of the methods below to get the library versions that correspond to the revision you have checked out.
 
@@ -12,7 +12,7 @@ Each time you get a new local revision of the source code, you should use one of
 
 **To set up your library directory:**
 
-You have to specify a location on your computer where you want the Stingray build tools to store and access the libraries needed to build binaries from your source code revision.
+You have to specify a location on your computer where you want the build tools to store and access the libraries needed to build binaries from your source code revision.
 
 -   Create an environment variable named `SR_LIB_DIR`. Set its value to an empty directory on your computer where you want the libraries to be copied. Make sure that you have at least 40 GB of space.
 
@@ -20,11 +20,11 @@ You have to specify a location on your computer where you want the Stingray buil
 
 **To get the libraries automatically when you build:**
 
-By default, the `make.rb` script, which you use to build Stingray, will automatically get all the libraries it needs in order to build all of the targets you have asked it to build.
+By default, the `make.rb` script, which you use to build the engine and editor, will automatically get all the libraries it needs in order to build all of the targets you have asked it to build.
 
 If you want to *prevent* it from updating the libraries you currently have installed, pass it the `--no-update` command-line parameter.
 
-See also ~{ Building Stingray from source }~ for more details on `make.rb`.
+See also ~{ Building from source }~ for more details on `make.rb`.
 
 **To manage your libraries manually:**
 
@@ -50,8 +50,8 @@ Steam integration requires version **{{SR_DOC_STEAMWORKS_VERSION}}** ONLY of the
 
 2.  Extract the zip to a local folder.
 
-3.  To make the Stingray build system able to find the SDK, you can do either of the following:
+3.  To make the build system able to find the SDK, you can do either of the following:
 
-    -   Copy the extracted files to a directory named `steamworks` within your Stingray libraries directory. The build process will look for files in `<SR_LIB_DIR>/steamworks/sdk`.
+    -   Copy the extracted files to a directory named `steamworks` within your libraries directory. The build process will look for files in `<SR_LIB_DIR>/steamworks/sdk`.
 
     -   If you want the Steamworks SDK to reside in a different location on your system, set up an environment variable named `SR_STEAM_ROOT` and set it to point to the `sdk` subdirectory.

@@ -1,6 +1,6 @@
 # About engine build configurations
 
-This topic contains some information for developers about the different build configurations offered in the Stingray build system.
+This topic contains some information for developers about the different build configurations offered in the {{ProductName}} build system.
 
 ## Setting the build configuration
 
@@ -22,7 +22,7 @@ configuration   compiler optimizations   game creation code   full debugging opt
 
 ## `dev`
 
-This is the only build mode of the engine that works with the Stingray Editor, and contains all functionality needed to create game content and compile data. Use this build mode for most tasks during your game production cycle.
+This is the only build mode of the engine that works with the editor, and contains all functionality needed to create game content and compile data. Use this build mode for most tasks during your game production cycle.
 
 ## `debug`
 
