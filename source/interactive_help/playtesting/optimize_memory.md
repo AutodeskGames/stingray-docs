@@ -46,10 +46,10 @@ There are several console commands you can use to get information about the memo
 
 		![Lua HUD](../images/perfhud_lua.png)
 
-	You can also show these visualizations in the Stingray Editor viewport. Click the **View** overlay on the viewport, and select **performance hud** from the contextual menu.
+	You can also show these visualizations in the viewport of the interactive editor. Click the **View** overlay on the viewport, and select **performance hud** from the contextual menu.
 
 
-For details on sending commands from the Stingray Editor to a running game, see ~{ Send Commands from the Status Bar }~. For more detail about the commands themselves, see ~{ Console commands }~.
+For details on sending commands from the editor to a running game, see ~{ Send Commands from the Status Bar }~. For more detail about the commands themselves, see ~{ Console commands }~.
 
 ## Remove unused resources from the boot package or the project
 
@@ -99,7 +99,7 @@ Note that for streaming compressed textures, the pixel sizes need to be multiple
 
 ### Use per-platform compilation settings
 
-You can use the Stingray **Texture Manager** to control the way Stingray compiles your textures for each different target platform.
+You can use the **Texture Manager** to control the way the engine compiles your textures for each different target platform.
 
 -	The most important setting to adjust is the **Output Format**, which defines the kind of compression that is applied to your texture.
 
@@ -115,15 +115,15 @@ For details on using the **Texture Manager**, see also the topics under ~{ Worki
 
 ### Take advantage of texture streaming
 
-By default, Stingray treats textures like any other resource. It loads them into memory along with all the other resources in a resource package, keeps them in memory persistently, and unloads them only when you unload the resource package. This means that all the mip levels for each texture are taking up memory in your game even when those mip levels are not actually being used due to the texture being off-screen or very distant.
+By default, {{ProductName}} treats textures like any other resource. It loads them into memory along with all the other resources in a resource package, keeps them in memory persistently, and unloads them only when you unload the resource package. This means that all the mip levels for each texture are taking up memory in your game even when those mip levels are not actually being used due to the texture being off-screen or very distant.
 
-Instead, you can set up Stingray to stream texture data into memory only when that data is actually needed for rendering. With texture streaming, you can increase the number of textures you use in your game without increasing memory usage, and without decreasing the maximum resolution of those textures.
+Instead, you can set up the engine to stream texture data into memory only when that data is actually needed for rendering. With texture streaming, you can increase the number of textures you use in your game without increasing memory usage, and without decreasing the maximum resolution of those textures.
 
 For details on how this system works, see ~{ Texture streaming }~.
 
 ### Or, reduce texture streaming memory
 
-The engine reserves 16 MB of memory at startup for use by the texture streaming system. If you choose not to use texture streaming in your game, you can avoid allocating this memory by setting the value of the `streaming_buffer_size` key to `0` in your project's *settings.ini* file for each of your target platforms. See ~{ Stingray engine settings.ini file reference }~.
+The engine reserves 16 MB of memory at startup for use by the texture streaming system. If you choose not to use texture streaming in your game, you can avoid allocating this memory by setting the value of the `streaming_buffer_size` key to `0` in your project's *settings.ini* file for each of your target platforms. See the ~{ settings.ini file reference }~.
 
 ### Reduce lightmap texture size
 
@@ -135,7 +135,7 @@ If your lightmaps are taking up too much memory, you can try the following ideas
 
 -	Restrict light baking to only some important objects in the scene, and leave others to use dynamic direct lighting and the global baked diffuse lighting.
 
--	Lower the *lightmap resolution* setting in the **Light Baking** dialog. This makes the generated textures smaller in size, at the cost of detail and sharpness. See ~{ Baking with the Stingray baker }~.
+-	Lower the *lightmap resolution* setting in the **Light Baking** dialog. This makes the generated textures smaller in size, at the cost of detail and sharpness. See ~{ Baking with the built-in baker }~.
 
 	If you find that you can't get enough detail in the baked lighting when you reduce the lightmap resolution this way, you can try baking only indirect illumination but not direct light. The effect of lowering the resolution is typically less noticeable for indirect light, which tends to be blurry and low-frequency anyway.
 
@@ -165,7 +165,7 @@ The main memory optimization you can make in the physics subsystem is to avoid c
 
 -	Only create movers for units that represent controllable characters or objects.
 
--	If you don't need to use physics in your game at all, you can save memory by disabling it when the Stingray world. To do this, pass `stingray.Application.DISABLE_PHYSICS` in the call to `stingray.Application.new_world()` that creates the world. If you are using the Appkit, this is done in the *core/appkit/lua/simple_project.lua* file.
+-	If you don't need to use physics in your game at all, you can save memory by disabling it when you create the world in the engine. To do this, pass `stingray.Application.DISABLE_PHYSICS` in the call to `stingray.Application.new_world()` that creates the world. If you are using the Appkit, this is done in the *core/appkit/lua/simple_project.lua* file.
 
 ## Compress animation clips
 

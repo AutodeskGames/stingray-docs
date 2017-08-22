@@ -1,4 +1,4 @@
-# Stingray engine command-line reference
+# Engine command-line reference
 
 The Stingray engine accepts all command-line parameters detailed on this page.
 
@@ -377,4 +377,3 @@ Specifies that the engine main window should be created as a child window to the
 #### --no-raw-input
 
 Disables the use of raw WM_INPUT messages in the engine.
-

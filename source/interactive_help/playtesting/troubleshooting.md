@@ -1,6 +1,6 @@
 # Troubleshooting common issues
 
-This page lists some common problems that you may run into when using Stingray.
+This page lists some common problems that you may run into when using {{ProductName}}.
 
 For strategies you can use to get a better idea of what's going on in a running game, see also ~{ Ways to get runtime feedback }~.
 
@@ -18,21 +18,21 @@ You may need to add your resources to your *boot.package* file, or to another pa
 
 ## Fatal error when testing levels
 
-Shut down Stingray and delete the `editor.config` file. You can find this file at `C:\Users\<user name>\AppData\Local\Autodesk\Stingray\Settings\editor.config`. When you restart, the problem should be corrected.
+Shut down the editor and delete the `editor.config` file. You can find this file at `C:\Users\<user name>\AppData\Local\Autodesk\Stingray\Settings\editor.config`. When you restart, the problem should be corrected.
 
 ## General misbehavior
 
 If things aren't working the way you expect, give the following options a try and see if any of them correct the problem.
 
--	Press F5 in the Stingray Editor to trigger compilation of any updated project resources.
+-	Press F5 in the editor to trigger compilation of any updated project resources.
 
--	Choose **Edit > Engine > Restart Engine** from the main menu, or press `Ctrl+F6`. This closes down and restarts the instance of the Stingray engine that the Stingray Editor runs internally.
+-	Choose **Edit > Engine > Restart Engine** from the main menu, or press `Ctrl+F6`. This closes down and restarts the instance of the engine that the editor runs internally.
 
--	Shut down and restart the Stingray Editor.
+-	Shut down and restart the editor.
 
--	Try deleting your compiled data directory and restarting the the Stingray Editor. This should force all your resources to be recompiled.
+-	Try deleting your compiled data directory and restarting the the editor. This should force all your resources to be recompiled.
 
--	Try running the Stingray Editor as Administrator.
+-	Try running the editor as Administrator.
 
 -	Check for the presence of read-only files in your project and data folders. If you find any, make them writeable by checking them out of version control or by modifying their file properties.
 
