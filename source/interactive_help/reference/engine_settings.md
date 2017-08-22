@@ -71,7 +71,7 @@ win32 = {
 	crash_dump = false
 	crash_dump_path = "%APPDATA%\\Company\\Project\\dumps\\dump-%UTCDATE%-%UTCTIME%-%RANDOM%.dmp"
 
-	window_name = "Stingray Vehicle Project"
+	window_name = "Vehicle Project"
 	floating_point_exceptions = true
 
 	input = {
@@ -95,7 +95,7 @@ win32 = {
 
 `floating_point_exceptions = true`
 
-> Causes the Stingray engine to throw an exception when a floating-point math operation fails. For details, see ~{ Avoiding floating-point exceptions }~.
+> Causes the engine to throw an exception when a floating-point math operation fails. For details, see ~{ Avoiding floating-point exceptions }~.
 
 `input = {`
 
@@ -415,7 +415,7 @@ wwise = {
 
 `data_dir`
 
->	The folder within your Stingray project that the Wwise authoring tool will target when exporting your sound banks.
+>	The folder within your project that the Wwise authoring tool will target when exporting your sound banks.
 
 `memory_manager`
 
@@ -525,7 +525,7 @@ platform-specific sound engine settings common to all platforms:
 
 >	`enabled`
 >
->>	Determines whether or not the Wwise Authoring Tool Profile can connect to the Stingray engine.
+>>	Determines whether or not the Wwise Authoring Tool Profile can connect to the engine.
 
 [Back to top](#top)
 

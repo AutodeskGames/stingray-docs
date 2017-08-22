@@ -1,10 +1,10 @@
 # Engine command-line reference
 
-The Stingray engine accepts all command-line parameters detailed on this page.
+The interactive engine accepts all command-line parameters detailed on this page.
 
-If you launch the Stingray engine from a command-line prompt, you can use these parameters to specify the project data the game should load, to kick off the compilation and/or bundling processes, or to control other specific aspects of the engine operation.
+If you launch the engine from a command-line prompt, you can use these parameters to specify the project data the game should load, to kick off the compilation and/or bundling processes, or to control other specific aspects of the engine operation.
 
-You can also provide command-line parameters when you set up a target in the Connections panel of the Stingray Editor. See ~{ Using the Connections panel }~.
+You can also provide command-line parameters when you set up a target in the **Connections** panel of the editor. See ~{ Using the Connections panel }~.
 
 All parameters are optional, unless otherwise specified.
 

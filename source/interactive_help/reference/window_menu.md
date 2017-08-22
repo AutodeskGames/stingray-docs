@@ -80,7 +80,7 @@
 
 **Plugin Manager**
 
->Launches the **Plugin Manager**. See ~{ Customize the Stingray editor using Plug-ins }~.
+>Launches the **Plugin Manager**. See ~{ Customize {{ProductName}} using Plug-ins }~.
 
 **Property Editor**
 
