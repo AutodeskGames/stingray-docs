@@ -1,6 +1,6 @@
 # Designing a packaging strategy
 
-Stingray does not place any restrictions or requirements on package structure. You can organize your resources into packages in any way that you decide is appropriate for your game. As long as as all the resources that the game needs at runtime are present in memory, it makes no difference to the engine how they got there.
+{{ProductName}} does not place any restrictions or requirements on package structure. You can organize your resources into packages in any way that you decide is appropriate for your game. As long as as all the resources that the game needs at runtime are present in memory, it makes no difference to the engine how they got there.
 
 There are a wide variety of strategies you can use for dividing your resources into packages. Which way you choose to do it in your game will likely depend on a variety of factors, including:
 

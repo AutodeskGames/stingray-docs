@@ -18,13 +18,13 @@ lua = [
 ]
 ~~~
 
-Note that the individual resources are listed without file extensions, since each list of resources refers only to a specific type of resource. For example, in the snippet above, Stingray knows that the `levels/city` resource refers to the *levels/city.level* file on disk, since it is specified in the `level` list.
+Note that the individual resources are listed without file extensions, since each list of resources refers only to a specific type of resource. For example, in the snippet above, the engine knows that the `levels/city` resource refers to the *levels/city.level* file on disk, since it is specified in the `level` list.
 
 Package files, like other kinds of resources, can live anywhere in your project source folder. All the names of the resources you specify must always be relative to the root of the project, not to the location of the *.package* file.
 
 ## Handling dependencies
 
-Whenever Stingray loads a resource defined in a package, it automatically loads any other resources that resource refers to. So, for example, when the `levels/city` resource is loaded, any units and textures that have been placed in that level in the Stingray editor are also loaded automatically.
+Whenever the engine loads a resource defined in a package, it automatically loads any other resources that resource refers to. So, for example, when the `levels/city` resource is loaded, any units and textures that have been placed in that level in the editor are also loaded automatically.
 
 > **Note:** Automatic dependency tracking only applies to dependencies that are recorded explicitly in the resources being loaded. This does **not** include resources that are referred to only by Lua scripts. So, for example, if you need your Lua code to spawn a new kind of unit that has not already been placed in the level, you must add that unit resource to one of your package definitions in order for the resource to be available at runtime.
 
@@ -66,7 +66,7 @@ In addition to lists of resources, your package files can also contain the follo
 
 `IGNORE_DEPENDENCIES = <boolean>`
 
->	This flag determines whether or not Stingray loads any resources that are used by the resources listed in this package. See [Handling dependencies] above. If you set this option to `true`, only the resources that are explicitly listed in this file will be loaded.
+>	This flag determines whether or not the engine loads any resources that are used by the resources listed in this package. See [Handling dependencies] above. If you set this option to `true`, only the resources that are explicitly listed in this file will be loaded.
 
 `ADD_PACKAGES = []`
 

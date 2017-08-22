@@ -10,7 +10,7 @@ Setting this up involves assigning the language of each audio file when you impo
 
 In this step, you add support for your target languages into your Wwise project.
 
-1.	Open the Wwise project for your Stingray project. From the main menu bar in Wwise, select **Project > Languages...**
+1.	Open the Wwise project for your {{ProductName}} project. From the main menu bar in Wwise, select **Project > Languages...**
 
 2.	In the **Language Manager** window, move all the languages you want to support from the Available Languages list into the Project Languages list.
 
@@ -49,7 +49,7 @@ When you want to change languages in your game at runtime, use the following seq
 
 2.	Set the current language.
 
-	In your Stingray game project, you can set the current language for the Wwise project at any time using either of the following methods:
+	In your {{ProductName}} project, you can set the current language for the Wwise project at any time using either of the following methods:
 
 	-	**Flow:** Trigger the **Audio > Wwise > Global > Wwise Set Language** Flow node, and send it the name of the language in the *Name* slot.
 	-	**Lua:** Call the `stingray.Wwise.set_language()` function, and pass the name of the language as a parameter.

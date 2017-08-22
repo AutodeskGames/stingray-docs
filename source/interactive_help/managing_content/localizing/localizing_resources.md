@@ -2,7 +2,7 @@
 
 You may sometimes need your game to load and use different versions of a resource depending on runtime conditions. For example, if you want to translate your game into multiple languages, you may need to show different textures or play different animations depending on the current language chosen by the player. Or, you may need to use different versions of a resource depending on the platform the game currently is running on.
 
-Stingray provides a built-in resource selection mechanism that can automatically choose the most appropriate version of each resource to load, based on settings that you specify.
+{{ProductName}} provides a built-in resource selection mechanism that can automatically choose the most appropriate version of each resource to load, based on settings that you specify.
 
 ## The basic override mechanism
 

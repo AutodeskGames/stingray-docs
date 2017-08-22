@@ -149,7 +149,7 @@ In this step, we'll test to make sure that the memory actually consumed by your 
 
 1.	Run your project.
 
-1.	In the ~{ Status Bar }~ of the Stingray Editor, select your running project from the drop-down list, and issue the `perfhud memory` command to your game. See also ~{ Send commands from the Status bar }~.
+1.	In the ~{ Status Bar }~ of the editor, select your running project from the drop-down list, and issue the `perfhud memory` command to your game. See also ~{ Send commands from the Status bar }~.
 
 	Your game UI should be overlaid with a summary of its current memory usage.
 

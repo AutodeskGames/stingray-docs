@@ -6,4 +6,4 @@ You could always store these different content variants in different resources, 
 
 However, this approach does not scale well. As the number of variant resources you have increases, it becomes increasingly tedious and error-prone to manage by hand which resources get loaded.
 
-Stingray offers some built-in mechanisms to make this process easier, depending on the type of resource you are dealing with. This section describes these different mechanisms and some approaches you can use to handle multiple versions of your game assets and resources.
+{{ProductName}} offers some built-in mechanisms to make this process easier, depending on the type of resource you are dealing with. This section describes these different mechanisms and some approaches you can use to handle multiple versions of your game assets and resources.

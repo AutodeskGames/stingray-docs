@@ -2,7 +2,7 @@
 
 Every game must have at least one package, called the *boot package*. This package is automatically loaded when the game starts up, kick-starting the resource loading process.
 
-You specify the boot package in the `boot_package` setting of your game's *settings.ini* file. See ~{ Stingray engine settings.ini file reference }~.
+You specify the boot package in the `boot_package` setting of your game's *settings.ini* file. See the ~{ settings.ini file reference }~.
 
 ## Requirements
 
@@ -16,7 +16,7 @@ It is generally recommended that the boot package also contain:
 
 -	All the `core` resources.
 
-	Many features that help you author content in the Stingray editor are based on content in the core folder. For example, many Flow nodes rely on node definitions and Lua scripts located in the core resources -- some come from the Appkit, some from plug-ins like Scaleform Studio, HumanIK or Gameware Navigation. In addition, the Stingray rendering pipeline relies on data files stored in the `core` folder.
+	Many features that help you author content in the interactive editor are based on content in the core folder. For example, many Flow nodes rely on node definitions and Lua scripts located in the core resources -- some come from the Appkit, some from plug-ins like Scaleform Studio, HumanIK or Gameware Navigation. In addition, the engine's rendering pipeline relies on data files stored in the `core` folder.
 
 	It is not *required* that you include all the `core` resources in your boot package; you could pick and choose only the specific pieces of content that you actually use in your game. However, including the whole `core` folder avoids the possibility of accidentally leaving out important resources.
 
