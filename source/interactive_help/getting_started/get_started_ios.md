@@ -14,13 +14,13 @@ You'll have to install and set up a few things on the Windows machine that you u
 
 ### Set up and run the iOS Package Server
 
-The **Stingray iOS Packaging Server** lets you package and re-sign the interactive engine and your iOS game from your Windows development machine.
+The **{{SR_DOC_FULL_NAME}} Packaging Server** lets you package and re-sign the interactive engine and your iOS game from your Windows development machine.
 
-Due to restrictions from Apple, the iOS packaging process cannot be fully completed on a Windows machine only. Some steps can only be completed on a computer running Mac OS X. This is where the **Stingray iOS Packaging Server** comes in.
+Due to restrictions from Apple, the iOS packaging process cannot be fully completed on a Windows machine only. Some steps can only be completed on a computer running Mac OS X. This is where the **{{SR_DOC_FULL_NAME}} Packaging Server** comes in.
 
 You will need to install and run the server application on a Mac. For system requirements, see ~{ Supported platforms }~.
 
-1.	Locate the packaging app within your {{ProductName}} install directory. For example: `C:\Program Files\Autodesk\{{SR_DOC_SHORT_NAME}}\<version>\tools\Autodesk Stingray iOS Package Server.app`
+1.	Locate the packaging app within your {{ProductName}} install directory. For example: `C:\Program Files\Autodesk\{{SR_DOC_SHORT_NAME}}\<version>\tools\{{SR_DOC_FULL_NAME}} Package Server.app`
 
 2.	Copy the app to the Applications folder on your Mac.
 

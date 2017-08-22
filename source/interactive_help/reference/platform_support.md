@@ -23,9 +23,9 @@ The engine only supports iOS devices compatible with Metal and OpenGL ES 3.0, as
 
 The engine only supports iOS devices running **iOS {{SR_DOC_IOS_VERSION}}**.
 
-## Requirements for Running the Stingray iOS Packaging Server
+## Requirements for Running the iOS Packaging Server
 
-In order to package iOS games from Windows, you need to run the Stingray iOS Packaging Server on a Mac. This package server is included in the {{ProductName}} installer. For details on finding and using it, see ~{ Get started on iOS }~.
+In order to package iOS games from Windows, you need to run the {{SR_DOC_FULL_NAME}} iOS Packaging Server on a Mac. This package server is included in the {{ProductName}} installer. For details on finding and using it, see ~{ Get started on iOS }~.
 
 Your Mac device must be using at least *Mac OS X {{SR_DOC_MACOS_VERSION}}* and must have *Xcode {{SR_DOC_XCODE_VERSION}}* installed. Please download these from <https://developer.apple.com/downloads>.
 
