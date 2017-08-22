@@ -1,6 +1,6 @@
 # Add choices to contextual menus
 
-In several places in the Stingray editor, users can right-click on something to get a *contextual menu* that offers actions related to the selected item. For example, when you right-click an asset in the **Asset Browser**, or you right-click a unit in the **Level Viewport** or **Explorer**, you get a menu of actions that apply to that asset or level object.
+In several places in the interactive editor, users can right-click on something to get a *contextual menu* that offers actions related to the selected item. For example, when you right-click an asset in the **Asset Browser**, or you right-click a unit in the **Level Viewport** or **Explorer**, you get a menu of actions that apply to that asset or level object.
 
 Your plug-in can use the `contextual_actions` extension to add new choices to the default set of options offered by these contextual menus.
 

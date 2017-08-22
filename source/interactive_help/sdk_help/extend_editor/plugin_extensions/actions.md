@@ -250,7 +250,7 @@ extensions = {
 
 `script`
 
->	Contains the Lua snippet this action will run. This code runs in the editor's Lua environment, where you have full access to the Stingray Lua API. In addition, you can take advantage of all the Lua editing code that the editor uses internally to modify the current level. For example, the snippet above uses functions from the `Editor` and `Terrain` objects that are defined in this Lua editing environment, in order to find the level viewport and to spawn a new terrain. These interfaces aren't currently documented, but you have the full source code in the Stingray core resources, under *core/editor_slave/stingray_editor*.
+>	Contains the Lua snippet this action will run. This code runs in the Lua environment hosted by the editor engine, where you have full access to the engine's Lua API. In addition, you can take advantage of all the Lua editing code that the editor uses internally to modify the current level. For example, the snippet above uses functions from the `Editor` and `Terrain` objects that are defined in this Lua editing environment, in order to find the level viewport and to spawn a new terrain. These interfaces aren't currently documented, but you have the full source code in the core resources, under *core/editor_slave/stingray_editor*.
 >
 > Make sure you enclose your code in triple-quotes `"""` as in the example.
 

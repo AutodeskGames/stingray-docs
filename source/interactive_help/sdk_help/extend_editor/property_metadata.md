@@ -4,7 +4,7 @@ You can use the editor's **Property Editor** panel to view and modify a wide ran
 
 To tell the **Property Editor** how it should visually represent the data it is editing, you can give your data some metadata. There are two main ways to do this:
 
--	If your data is described in a type file, you can use an `editor` block for each type in the data to describe how that type should be represented in the editor. See also ~{ The Stingray Type System }~.
+-	If your data is described in a type file, you can use an `editor` block for each type in the data to describe how that type should be represented in the editor. See also ~{ The {{ProductName}} Type System }~.
 
 -	Or, you can use a compact notation that is expressed purely in JavaScript. See ~{ Use the Property Editor component in your UI }~.
 

@@ -1,13 +1,12 @@
 # Layouts
-Layouts are used as containers to place tools and controls inside Stingray modules. They are split in two types : Simple Layouts and Resizer Layouts. Each of these layouts can be placed inside another layouts.
 
-In theses examples, dark borders were added to clearly show separation between panels with `stingray-border-dark` class but it can be ignored as it suits your needs.
+Layouts are used as containers to place tools and controls inside editor modules. They are split in two types : Simple Layouts and Resizer Layouts. Each of these layouts can be placed inside another layout.
 
-To use these examples simply copy and paste the code in your plugin, remove or add panels and replace the `'Panel x'` elements with you content.
+In these examples, dark borders were added to clearly show separation between panels with the `stingray-border-dark` class, but you can remove this if it suits your needs better.
 
-You can try these examples by installing the [Mithril components sample](https://github.com/AutodeskGames/stingray-plugin-api-samples/tree/develop/samples/mithril_components) plugin inside your Stingray Editor.
+To use these examples simply copy and paste the code in your plug-in, remove or add panels and replace the `'Panel x'` elements with you content.
 
-[TOC]
+You can try these examples by installing the [Mithril components sample](https://github.com/AutodeskGames/stingray-plugin-api-samples/tree/develop/samples/mithril_components) plug-in in your editor.
 
 ## Simple Layouts
 

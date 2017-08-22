@@ -1,14 +1,14 @@
 # Use extensions to define plug-in behaviors
 
-*Extensions* define the points of integration between your plug-in and the Stingray environment: that is, the things that your plug-in changes or adds to the editor when it's loaded.
+*Extensions* define the points of integration between your plug-in and the {{ProductName}} environment: that is, the things that your plug-in changes or adds to the editor when it's loaded.
 
 You can set up several different kinds of extensions in your *.stingray_plugin* descriptor file:
 
--	`menus` add new items to the main menus of the Stingray editor, like **File**, **Edit**, **Window**. See ~{ Create a new menu item }~.
+-	`menus` add new items to the main menus of the editor, like **File**, **Edit**, **Window**. See ~{ Create a new menu item }~.
 
 -	`actions` define reusable commands or script blocks that you can refer to from other extensions in your plug-in. See ~{ Register an action }~.
 
--	`services` add new JavaScript worker services to the editor. Your plug-in (or other plug-ins) can require and use these services in exactly the same way as the standard Stingray editor services. See ~{ Register a custom service }~.
+-	`services` add new JavaScript worker services to the editor. Your plug-in (or other plug-ins) can require and use these services in exactly the same way as the standard editor services. See ~{ Register a custom service }~.
 
 -	`asset_types` tell the **Asset Browser** how to handle new types of data files in the project -- that is, files whose extensions don't match any known asset types. See ~{ Register a custom asset type }~.
 
@@ -20,7 +20,7 @@ You can set up several different kinds of extensions in your *.stingray_plugin* 
 
 -	`events` register your plug-in to listen for editor events with a given name, and to carry out an action or a set of actions when that event happens. See ~{ Respond to an editor event }~ for configuration instructions, and ~{ Emit and handle editor events }~ for more background about events.
 
--	`views` give names to custom UI panels and dialogs that your plug-in adds to Stingray. You can then open these named views from other extensions in your plug-in (e.g. from menu items), or even from other plug-ins. See ~{ Create a named panel or dialog }~.
+-	`views` give names to custom UI panels and dialogs that your plug-in adds to the editor. You can then open these named views from other extensions in your plug-in (e.g. from menu items), or even from other plug-ins. See ~{ Create a named panel or dialog }~.
 
 -	`viewports` help you integrate an engine viewport into your plug-in's views and panels, like the ones you see in the **Level Viewport** or the **Asset Preview**. See ~{ Create a custom engine viewport }~.
 
@@ -67,7 +67,7 @@ Currently, you can use the following variables:
 
 -	`$project`: This string is replaced by the path to the current project's source folder.
 
--	`$editor`: This string is replaced by the directory that contains the Stingray editor executable: that is, the `editor` folder under your Stingray installation directory.
+-	`$editor`: This string is replaced by the directory that contains the editor executable: that is, the `editor` folder under your {{ProductName}} installation directory.
 
 Some extensions also add more of these dynamic strings. See the pages in this section for details.
 

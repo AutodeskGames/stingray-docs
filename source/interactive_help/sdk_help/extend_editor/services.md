@@ -1,6 +1,6 @@
 # Use built-in editor services
 
-The Stingray editor includes several JavaScript *services* that provide helpful functions for interacting with project data, the Stingray engine, and the operating system. Most of the standard features built in to the Stingray editor rely on these services to carry out the editing tasks requested by the user in the UI. You can also take advantage of these same services in your custom plug-in.
+The editor includes several JavaScript *services* that provide helpful functions for interacting with project data, the engine, and the operating system. Most of the standard features built in to the editor rely on these services to carry out the editing tasks requested by the user in the UI. You can also take advantage of these same services in your custom plug-in.
 
 ## Standard services
 
@@ -8,13 +8,13 @@ You'll find all the editor's standard services in the JavaScript modules under *
 
 -	The *asset-service* offers functions for managing assets, including saving, moving, renaming, and handling dependencies.
 
--	The *engine-service* helps you interact directly with instances of the Stingray engine: both the one that the editor runs internally, and any other remotely connected engines. For example, you can use the `sendToEditors()` function to send Lua scripts to be run in the engine's Lua environment, request resource compilation, or receive events.
+-	The *engine-service* helps you interact directly with instances of the engine: both the one that the editor runs internally, and any other remotely connected engines. For example, you can use the `sendToEditors()` function to send Lua scripts to be run in the engine's Lua environment, request resource compilation, or receive events.
 
 -	The *file-system-service* helps you interact with the local file system where your project is mounted. You can do things like list files, read and write SJSON data, and check that paths exist.
 
 -	The *host-service* interacts with the operating system to provide support for the clipboard, and standard windows for things like opening and saving files.
 
--	The *settings-service* reads and writes data in the user's Stingray settings. If you need to persist some information between sessions, such as user preferences, you can use this service to save and retrieve that data.
+-	The *settings-service* reads and writes data in a settings file specific to each user. The built-in editor plug-ins use this service to save things like user preferences and default settings. If you need to persist some information between sessions, such as user preferences that control the way your plug-in should operate, you can use this service to save and retrieve that data.
 
 There are dozens more. We're working on putting together a complete reference to all of the functions exposed by these services. In the meantime, the best way to find out what functions you can use in your plug-in is to browse the source code files.
 

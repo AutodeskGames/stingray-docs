@@ -21,7 +21,7 @@ views = [
 
 `name`
 
->	A unique name for the view. This name must be unique among all views registered by all Stingray plug-ins. You'll use this name to refer to your view when you want to open it from another extension or from JavaScript code in your plug-in. **Required**.
+>	A unique name for the view. This name must be unique among all views registered by all plug-ins. You'll use this name to refer to your view when you want to open it from another extension or from JavaScript code in your plug-in. **Required**.
 
 `type`
 
@@ -49,9 +49,9 @@ views = [
 
 ## Opening the view from a menu
 
-You can use a `menus` extension to create a new menu item in the Stingray editor that opens your named view. For details, see ~{ Create a new menu item }~, and use the `view` property to specify the name of the view you want to open.
+You can use a `menus` extension to create a new menu item in the editor that opens your named view. For details, see ~{ Create a new menu item }~, and use the `view` property to specify the name of the view you want to open.
 
-Most of the tools available under the **General** category in the Stingray **Window** menu come from named views that have been registered in a plug-in:
+Most of the tools available under the **General** category of the **Window** menu come from named views that have been registered in a plug-in:
 
 ![window_menu](../../../images/window_menu.png)
 

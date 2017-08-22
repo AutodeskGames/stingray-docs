@@ -1,6 +1,6 @@
 # Extend the Engine
 
-You can write plug-ins that add new features to the runtime Stingray game engine, expose new objects and functions in the Lua gameplay API, integrate with external middleware SDKs or other libraries, etc. You could even write your gameplay code entirely in C rather than using Flow and Lua, if you are comfortable doing so.
+You can write plug-ins that add new features to the runtime interactive engine, expose new objects and functions in the Lua gameplay API, integrate with external middleware SDKs or other libraries, etc. You could even write your gameplay code entirely in C rather than using Flow and Lua, if you are comfortable doing so.
 
 This section provides some tips on getting started extending the engine with your own plug-ins.
 
@@ -14,7 +14,7 @@ This section provides some tips on getting started extending the engine with you
 
 -	We really recommend basing your plug-in on the [stingray-plugin repository](https://github.com/AutodeskGames/stingray-plugin). It's already set up with everything you'll need to compile your code to a *.dll* using Visual Studio 2015, which will make it way easier for you to get started.
 
--	You'll need the SDK header files. You can find them under `stingray_sdk` in the example repository, or under `plugin_sdk` in your Stingray installation folder. (If you use the [stingray-plugin repository](https://github.com/AutodeskGames/stingray-plugin) repo, it'll fetch these headers for you automatically so you won't have to worry about it.)
+-	You'll need the SDK header files. You can find them under `stingray_sdk` in the example repository, or under `plugin_sdk` in your {{ProductName}} installation folder. (If you use the [stingray-plugin repository](https://github.com/AutodeskGames/stingray-plugin) repo, it'll fetch these headers for you automatically so you won't have to worry about it.)
 
 -	The [reference documentation](../engine_c/index.html) contains a browsable companion to the APIs defined in the SDK header files.
 
@@ -145,10 +145,10 @@ On platforms that support dynamic plug-ins (currently Windows only), the engine 
 
 -	By default, the list of plug-in folders contains only the `plugins` folder under the engine executable. You can simply copy your plug-in's *.dll* file to this location.
 
--	You can add paths to this list by passing the `--plugin-dir <folder>` command-line parameter when you start the engine. See [the command-line reference](http://help.autodesk.com/view/Stingray/ENU/?contextId=engine_command_line).
+-	You can add paths to this list by passing the `--plugin-dir <folder>` command-line parameter when you start the engine. See the ~{ Engine command-line reference }~.
 
 -	You can load (and unload) plug-ins dynamically from other paths at runtime:
 
-	-	In Lua, use the functions in the [`PluginManager`](http://help.autodesk.com/view/Stingray/ENU/?contextId=lua_ref_ns_stingray_PluginManager) API, such as `PluginManager.load_plugin()` and `PluginManager.load_relative_plugin()`.
+	-	In Lua, use the functions in the `stingray.PluginManager` API, such as `PluginManager.load_plugin()` and `PluginManager.load_relative_plugin()`.
 
 	-	In C/C++, if you have a loaded plug-in that needs to load another plug-in dynamically, use `PluginManagerApi::load_relative_plugin()`.

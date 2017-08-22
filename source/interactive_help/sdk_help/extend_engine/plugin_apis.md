@@ -8,7 +8,7 @@ One very common thing for plug-ins to do is to add new modules and functions to 
 
 For a very simple example of how this works, see the `simple_plugin/plugin.c` file in the engine plug-in examples. This file defines a new C function, `static int test(struct lua_State *L)`. Then, it retrieves the engine's `LuaApi`, and calls `add_module_function("SimplePlugin", "test", test)` to expose the `test` function from C to Lua. The project's Lua code can then invoke the function by calling it as `stingray.SimplePlugin.test()`.
 
-Note that the C function is passed a `lua_State`. This is a Lua *stack*, which lets your C function access parameters passed by the Lua invocation, and send return values back to Lua. This is the standard way of passing information back and forth between Lua and C -- you can read more about it [in the Lua documentation](https://www.lua.org/pil/24.2.html). The only extra thing to know is that your plug-in accesses the Lua functions for stack manipulation (like `lua_tonumber` and `lua_pushnumber`) through the Stingray `LuaApi` -- for example, `LuaApi::tonumber` and `LuaApi::pushnumber`. The `LuaApi` also extends these standard functions with additional ones that handle types specific to Stingray, like `LuaApi::getunit` and `LuaApi::pushvector3`, so that you can pass units, vectors, quaternions and matrices back and forth between your plug-in and the project's Lua code.
+Note that the C function is passed a `lua_State`. This is a Lua *stack*, which lets your C function access parameters passed by the Lua invocation, and send return values back to Lua. This is the standard way of passing information back and forth between Lua and C -- you can read more about it [in the Lua documentation](https://www.lua.org/pil/24.2.html). The only extra thing to know is that your plug-in accesses the Lua functions for stack manipulation (like `lua_tonumber` and `lua_pushnumber`) through the `LuaApi` -- for example, `LuaApi::tonumber` and `LuaApi::pushnumber`. The `LuaApi` also extends these standard functions with additional ones that handle types specific to the engine, like `LuaApi::getunit` and `LuaApi::pushvector3`, so that you can pass units, vectors, quaternions and matrices back and forth between your plug-in and the project's Lua code.
 
 ## Controlling gameplay
 
@@ -28,9 +28,9 @@ For an example that demonstrates this resource management pipeline -- how to com
 
 ## Building and rendering procedural meshes
 
-Your plug-in can use the `MeshObjectApi` and the `RenderBufferApi` together to build new meshes at runtime, and to render them in the scene. The new objects are shaded with dynamic lighting, exactly as if you had placed the objects into the scene in the Stingray editor.
+Your plug-in can use the `MeshObjectApi` and the `RenderBufferApi` together to build new meshes at runtime, and to render them in the scene. The new objects are shaded with dynamic lighting, exactly as if you had placed the objects into the scene in the editor.
 
-For a working example that shows how a plug-in can create and render meshes on the fly, see the `render_plugin/plugin.cpp` file in the engine plug-in examples. This plug-in programmatically creates a mesh shaped like the word Stingray, and deforms the mesh each frame to simulate a cloth effect:
+For a working example that shows how a plug-in can create and render meshes on the fly, see the `render_plugin/plugin.cpp` file in the engine plug-in examples. This plug-in programmatically creates a mesh shaped like the word "Stingray", and deforms the mesh each frame to simulate a cloth effect:
 
 ![Procedural mesh rendering example](../../images/procedural_mesh_example.png)
 
@@ -42,7 +42,7 @@ To get this example working in your own project, first compile and install the *
 
 ## Logging messages to the engine
 
-It's often a good idea for your plug-in to send back some feedback to the user, especially when things go wrong. The engine already has a mechanism for logging messages, which a user working in the Stingray editor can see in the **Log Console**. Your plug-in can have the engine re-use the same mechanism for its own messages.
+It's often a good idea for your plug-in to send back some feedback to the user, especially when things go wrong. The engine already has a mechanism for logging messages, which a user working in the editor can see in the **Log Console**. Your plug-in can have the engine re-use the same mechanism for its own messages.
 
 You'll need to retrieve the `LoggingApi` from the engine, and call its `error()`, `info()` or `warning()` methods. When you call these methods, you need to provide a `system` parameter -- the name of your plug-in, as you want it to appear to the user in the log message. For example:
 
@@ -56,7 +56,7 @@ _logging_api->warning("My Custom Plugin", "Something may have gone wrong!");
 
 Not everything your plug-in does will be glamorous and original. To be able to make the good stuff happen, you'll also have to do some less exciting plumbing work -- like vector and quaternion math, managing strings and arrays and memory allocations, etc.
 
-To help simplify this work, and to standardize the way these things are handled across plug-ins, the Stingray SDK comes with a *plug-in foundation*. This foundation is a set of interfaces that you can  use in your plug-in to handle these kinds of common tasks. The foundation is totally optional; you are free to use as much or as little of it as you like.
+To help simplify this work, and to standardize the way these things are handled across plug-ins, the {{ProductName}} SDK comes with a *plug-in foundation*. This foundation is a set of interfaces that you can  use in your plug-in to handle these kinds of common tasks. The foundation is totally optional; you are free to use as much or as little of it as you like.
 
 It's particularly helpful in conjunction with the `ScriptApi`, as most of its types can be cast back and forth with the types used by `ScriptApi` functions. For example, if you get a `CApiQuaternion` returned to you by the `ScriptApi`, you can cast it to a `stingray_plugin_foundation::Quaternion` and use foundation functions like `stingray_plugin_foundation::lerp()` or  `stingray_plugin_foundation::normalize()` to transform it.
 

@@ -77,4 +77,4 @@ extensions = {
 
 `deferred`
 
->	Determines whether the migration actions should be delayed until after the project is fully loaded and the editor starts its internal instance of the Stingray engine. This can be useful if your migration action depends on having the engine environment in place in order to do what it needs to do. For example, if you want your action to run a Lua script, or if you depend on some other services provided by the engine. Optional; the default value is `false`.
+>	Determines whether the migration actions should be delayed until after the project is fully loaded and the editor starts its internal instance of the engine. This can be useful if your migration action depends on having the engine environment in place in order to do what it needs to do. For example, if you want your action to run a Lua script, or if you depend on some other services provided by the engine. Optional; the default value is `false`.

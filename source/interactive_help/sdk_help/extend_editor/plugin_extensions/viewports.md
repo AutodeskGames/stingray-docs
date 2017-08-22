@@ -1,6 +1,6 @@
 # Create a custom engine viewport
 
-You can use the `viewports` extension to embed an engine viewport into a custom panel or view that your plug-in adds to the Stingray editor.
+You can use the `viewports` extension to embed an engine viewport into a custom panel or view that your plug-in adds to the editor.
 
 You can also control the behavior of this viewport by providing a set of custom JavaScript and Lua files that define how users interact with the viewport, and how the engine that is being rendered by the viewport behaves.
 
@@ -23,7 +23,7 @@ extensions = {
 
 `name`
 
->	A descriptive name for the viewport, used internally to instantiate the viewport and to send it Lua commands. This name must be unique among all views registered in the Stingray editor. **Required**.
+>	A descriptive name for the viewport, used internally to instantiate the viewport and to send it Lua commands. This name must be unique among all views registered in the editor. **Required**.
 
 `engine`
 
@@ -37,7 +37,7 @@ extensions = {
 
 ## Example
 
-The following sections use a new particle editor plug-in as an example. You can find its files under: *editor/plugins/particle-editor* within your Stingray installation directory. This example uses an engine viewport to preview a selected particle system, keeping the preview in sync with the changes that the user makes to the particle settings.
+The following sections use a new particle editor plug-in as an example. You can find its files under: *editor/plugins/particle-editor* within your {{ProductName}} installation directory. This example uses an engine viewport to preview a selected particle system, keeping the preview in sync with the changes that the user makes to the particle settings.
 
 (We're still working on this plug-in, so it isn't yet enabled by default in this release. If you want to try it out in the editor, you'll have to go into its *.stingray_plugin* file and remove the comments at the start on the `menus` and `views` extensions.)
 
@@ -57,7 +57,7 @@ The general flow of control when users interact with a viewport in the editor is
 
 ## Set up the viewport in JavaScript
 
-The JavaScript file that you set in your viewport's `module` parameter should return a module that contains a `setup()` function. The editor will call this function when the viewport is instantiated and ready to be used. For example, you might use this function to load an initial level, implement a ViewportBehavior, or tweak the interactions between the viewport and other Stingray services.
+The JavaScript file that you set in your viewport's `module` parameter should return a module that contains a `setup()` function. The editor will call this function when the viewport is instantiated and ready to be used. For example, you might use this function to load an initial level, implement a ViewportBehavior, or tweak the interactions between the viewport and other editor services.
 
 The return value of the `setup` function is a ViewportBehavior object that will receive user events directly from the viewport window.
 

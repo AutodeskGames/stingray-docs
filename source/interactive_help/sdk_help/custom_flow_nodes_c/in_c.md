@@ -2,7 +2,7 @@
 
 This page describes how to create custom Flow nodes that run custom C code in an engine plug-in.
 
->	**Note:** You can also implement your custom Flow nodes in Lua instead of C. For details, see [Create custom Flow nodes in Lua](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_creating_gameplay_scripting_with_lua_custom_flow_nodes_html).
+>	**Note:** You can also implement your custom Flow nodes in Lua instead of C. For details, see ~{ Create custom Flow nodes in Lua }~.
 
 **To create a custom C Flow node:**
 

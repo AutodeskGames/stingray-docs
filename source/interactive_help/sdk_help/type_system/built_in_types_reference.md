@@ -1,13 +1,13 @@
 # Built-in types reference
 
-This page details the types that come with Stingray out of the box, and the set of supported properties that can be used to customize each of those types.
+This page details the types that come with {{ProductName}} out of the box, and the set of supported properties that can be used to customize each of those types.
 
 *	The `equatable` trait means that you can test for equality between two instances of the given type. They are ideal for use as dictionary keys, testing set membership, etc.
 * 	The `mutable` trait means that the type can be changed in-place. Everything that holds a reference to a mutable data structure will see the change after it is applied.
 *	The `simple` trait means that the type describes a raw JSON value in an uncustomized form. Note that the type will lose the `simple` type trait if customized.
 *	The `virtual` trait means that the type is refined dynamically into a non-virtual type at runtime based on the data it holds.
 
-For background information about what types are and how to use them, see ~{ The Stingray Type System }~.
+For background information about what types are and how to use them, see ~{ The {{ProductName}} Type System }~.
 
 >	**NOTE: Under Active Development!** Expect things to change as this system matures.
 
@@ -203,7 +203,7 @@ Property |Type    |Default    |Description
 
 ### Supported editor metadata properties
 
-The following `editor` metadata properties affect how the `:number` type behaves inside the Stingray editor:
+The following `editor` metadata properties affect how the `:number` type behaves inside the interactive editor:
 
 Property|Type    |Default |Description
 --------|--------|--------|-----------

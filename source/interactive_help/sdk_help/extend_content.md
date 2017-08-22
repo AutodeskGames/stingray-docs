@@ -1,6 +1,6 @@
 # Extend the Project Content
 
-Your plug-in can make new assets and content available to the project by including one or more `resources` extensions in the *.stingray_plugin* descriptor file. When your plug-in is loaded into the Stingray editor, users are able to work with these resources just like any other assets that live in their project source folder or in the `core` resources folder.
+Your plug-in can make new assets and content available to the project by including one or more `resources` extensions in the *.stingray_plugin* descriptor file. When your plug-in is loaded into the editor, users are able to work with these resources just like any other assets that live in their project source folder or in the `core` resources folder.
 
 For example, your plug-in could include pre-made assets like units, materials and particle effects for users to drop directly into their levels. Or, you could accompany your plug-in with a *.script_flow_nodes* file and Lua module that set up some custom Flow nodes; a user with your plug-in installed would then be able to add your custom nodes into their Flow graphs.
 
@@ -12,7 +12,7 @@ Each folder that you share through a resource extension is treated in the editor
 
 -	the assets in your shared folder are read-only in the editor. In order to modify them, a user would need to duplicate them in the project folder.
 
-See also [Working with core resources](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_managing_content_core_resources_html).
+See also ~{ Working with core resources }~.
 
 ## Configuration
 
@@ -36,6 +36,6 @@ extensions = {
 
 ## Resource extensions and resource packages
 
-Stingray offers a system for streaming bundles of resources in and out of memory while the game is running. This is typically used when a project grows too large to fit all resources into memory at the same time. For background information, see the pages under [Loading and unloading content at runtime](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_managing_content_loading_unloading_html).
+The {{ProductName}} engine offers a system for streaming bundles of resources in and out of memory dynamically, while the interactive app is running. This is typically used when a project grows too large to fit all resources into memory at the same time. For background information, see the pages under ~{ Loading and unloading content at runtime }~.
 
 If a project that uses custom resource packages like this also uses any resources shared by a plug-in's resource extensions, that project's authors need to make sure that their resource packages also include whatever resources it needs from the plug-in's resource folders. See ~{ Distribute and Install a Plug-in }~.

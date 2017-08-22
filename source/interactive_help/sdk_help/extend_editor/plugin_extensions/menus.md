@@ -1,6 +1,6 @@
 # Create a new menu item
 
-You can use the `menus` extension to add new items into the main menus of the Stingray editor.
+You can use the `menus` extension to add new items into the main menus of the editor.
 
 Each custom menu item can either launch an HTML panel, or carry out an *action* that you define in your plug-in. For background about actions, see also ~{ Register an action }~.
 
@@ -59,7 +59,7 @@ extensions = {
 
 `panel`
 
->	When your menu item is selected, the Stingray editor attempts to load *.html* and *.js* files with this name. Required.
+>	When your menu item is selected, the editor attempts to load *.html* and *.js* files with this name. Required.
 
 `width` and `height`
 
@@ -71,11 +71,11 @@ extensions = {
 
 You can write the content of your HTML panel however you like. There are no particular restrictions.
 
-Stingray does ship with some default widgets and components. If you're comfortable with using a framework like [Angular.js](https://angularjs.org/) or [Mithril](http://mithril.js.org/) to separate the HTML UI view from the JavaScript controller logic, you may be able to take advantage of these components by modeling your HTML and JavaScript code on the standard plug-ins in the *editor/plugins* folder.
+The editor does ship with some default widgets and components. If you're comfortable with using a framework like [Angular.js](https://angularjs.org/) or [Mithril](http://mithril.js.org/) to separate the HTML UI view from the JavaScript controller logic, you may be able to take advantage of these components by modeling your HTML and JavaScript code on the standard plug-ins in the *editor/plugins* folder.
 
 ## Open a named view
 
-As an alternative to setting up a panel as above, you can use the `view` setting to specify a named panel or dialog that you've set up in a `views` extension, or that another Stingray plug-in has registered in a `views` extension. See also ~{ Create a named panel or dialog }~.
+As an alternative to setting up a panel as above, you can use the `view` setting to specify a named panel or dialog that you've set up in a `views` extension, or that another plug-in has registered in a `views` extension. See also ~{ Create a named panel or dialog }~.
 
 ~~~{sjson}
 extensions = {
@@ -93,7 +93,7 @@ extensions = {
 
 `view`
 
->	The unique name of the view you want to open, as registered with Stingray in its plug-in's `views` extension.
+>	The unique name of the view you want to open, as registered in its plug-in's `views` extension.
 
 ## Run an action
 
@@ -101,7 +101,7 @@ To make a menu item that runs an action, you need to add a single parameter: `ac
 
 `action`
 
->	The action that the Stingray editor should take when the user selects the new menu item. This value can be either the name of an action that you have already set up in the `actions` extension, or an inline action definition. For more information, see ~{ Register an action }~.
+>	The action that the editor should take when the user selects the new menu item. This value can be either the name of an action that you have already set up in the `actions` extension, or an inline action definition. For more information, see ~{ Register an action }~.
 
 ## Create new menu hierarchies
 

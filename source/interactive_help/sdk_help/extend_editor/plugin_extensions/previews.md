@@ -1,6 +1,6 @@
 # Define previews for custom assets
 
-You can use the `previews` extension to define the way the **Asset Preview** panel behaves when the user selects an asset of a specific type in the **Asset Browser**. If your plug-in adds a new type of resource to Stingray, this is a helpful way to provide users working in the editor with some visual feedback to distinguish between different resources of the same type within the project.
+You can use the `previews` extension to define the way the **Asset Preview** panel behaves when the user selects an asset of a specific type in the **Asset Browser**. If your plug-in registers a new type of resource, this is a helpful way to provide users working in the editor with some visual feedback to distinguish between different resources of the same type within the project.
 
 ## How it works
 
@@ -14,11 +14,11 @@ You can provide:
 
 ## Examples
 
-The preview extension can be a little tricky to set up, since it involves setting up the plug-in configuration, the JavaScript module and the Lua module to all work together. Fortunately, you have some examples in the standard Stingray plug-ins that you can use as models for your own plug-ins:
+The preview extension can be a little tricky to set up, since it involves setting up the plug-in configuration, the JavaScript module and the Lua module to all work together. Fortunately, you have some examples in the built-in plug-ins that you can use as models for your own plug-ins:
 
 -	The `blend_shapes` plug-in gives a good example of how a custom plug-in can use *resource*, *asset_type* and *preview* extensions together to define a new kind of asset. The *blend_shapes/preview-blend-shapes.js* and *blend_shapes/preview-blend-shapes.lua* files define the JavaScript and Lua modules used by its preview extension.
 
--	The `asset_preview` plug-in contains several different preview extensions for Stingray resources, like materials, textures, particle effects, and animations. Each is slightly different, so this is a good place to look to see a variety of different approaches.
+-	The `asset_preview` plug-in contains several different preview extensions for resources like materials, textures, particle effects, and animations. Each is slightly different, so this is a good place to look to see a variety of different approaches.
 
 	For example, the material preview extension is set up with a Lua module (*preview_behaviors/preview-material.lua*) that spawns a new sphere and assigns it the material the user has currently selected. On the other hand, the preview module for textures (*preview_behaviors/preview-texture.lua*) uses the `stingray.Gui` Lua API to render the texture in front of the viewport camera.
 
@@ -42,7 +42,7 @@ define([], function () {
 });
 ~~~
 
-For details on all the functions you can define in your module, and the parameters that the engine passes to those functions when it invokes them, see the comments in the *core/js/extensions/preview-behaviors.js* file and the JavaScript modules in the standard Stingray plug-ins that contain preview extensions.
+For details on all the functions you can define in your module, and the parameters that the engine passes to those functions when it invokes them, see the comments in the *core/js/extensions/preview-behaviors.js* file and the JavaScript modules in the built-in plug-ins that contain preview extensions.
 
 ## Writing a Lua preview module
 
@@ -95,7 +95,7 @@ extensions = {
 
 `type`
 
->	The resource type (i.e. the file extension) that will be associated with this preview extension. Most Stingray resources (like *.unit*, *.material*, *.texture*) already have built-in preview behaviors, so this will typically be a new kind of resource that your plug-in adds to Stingray. Required.
+>	The resource type (i.e. the file extension) that will be associated with this preview extension. Most resources (like *.unit*, *.material*, *.texture*) already have built-in preview behaviors, so this will typically be a new kind of resource that is registered by your plug-in. Required.
 
 `name`
 

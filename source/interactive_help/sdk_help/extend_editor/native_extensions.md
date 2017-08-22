@@ -14,7 +14,7 @@ Unlike other editor extensions, you don't have to add anything into your *.sting
 
 -	We really recommend basing your plug-in on the [stingray-plugin repository](https://github.com/AutodeskGames/stingray-plugin). It's already set up with everything you'll need to compile your code to a *.dll* using Visual Studio 2015, which will make it way easier for you to get started.
 
--	You'll need the SDK header files. You can find them under `stingray_sdk` in the example repository, or under `plugin_sdk/editor_plugin_api` in your Stingray installation folder. (If you use the [stingray-plugin repository](https://github.com/AutodeskGames/stingray-plugin) repo, it'll fetch these headers for you automatically so you won't have to worry about it.)
+-	You'll need the SDK header files. You can find them under `stingray_sdk` in the example repository, or under `plugin_sdk/editor_plugin_api` in your {{ProductName}} installation folder. (If you use the [stingray-plugin repository](https://github.com/AutodeskGames/stingray-plugin) repo, it'll fetch these headers for you automatically so you won't have to worry about it.)
 
 -	The [reference documentation](../../editor_c/index.html) contains a browsable companion to the APIs defined in the SDK header files.
 
@@ -30,7 +30,7 @@ The following image summarizes this workflow:
 
 ![plug-in workflow](../../images/editor_plugin_interaction.png)
 
-This overall pattern is very similar to the way the Stingray engine interacts with plug-ins that extend its runtime capabilities. See ~{ Extend the Engine }~.
+This overall pattern is very similar to the way the engine interacts with plug-ins that extend its runtime capabilities. See ~{ Extend the Engine }~.
 
 ## Synchronous vs Asynchronous
 

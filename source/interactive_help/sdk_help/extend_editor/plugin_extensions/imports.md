@@ -1,8 +1,8 @@
 # Create a new importer
 
-You can use the `imports` extension to make your plug-in handle the process of importing new assets of a specified file type. Each time a user imports a file of the type you specify, the engine calls your plug-in to handle reading that file and converting it to standard Stingray assets (like *.texture* files).
+You can use the `imports` extension to make your plug-in handle the process of importing new assets of a specified file type. Each time a user imports a file of the type you specify, the engine calls your plug-in to handle reading that file and converting it to standard asset types (like *.texture* files).
 
-Once your importer is in place, users are able to import your custom file type using any of the import methods supported by the Stingray editor:
+Once your importer is in place, users are able to import your custom file type using any of the import methods supported by the editor:
 
 -	Drag and drop into the **Asset Browser**:
 
@@ -90,7 +90,7 @@ imports = [
 
 ## FBX importer
 
-The Stingray **Asset Browser** plug-in contains import extensions for several different file types. You can find all their definitions in *editor/plugins/asset_browser/asset-browser.stingray_plugin*.
+The ~{ Asset Browser }~ plug-in contains import extensions for several different file types. You can find all their definitions in *editor/plugins/asset_browser/asset-browser.stingray_plugin*.
 
 Let's look at the *.fbx* file importer to see how it works. Here is its configuration:
 
@@ -244,7 +244,7 @@ fbxImportLog: function (options, previousResult, assets, directory, flags) {
 
 ## Font importation and the generic import dialog
 
-Stingray also supports a font importer that makes use of the generic import dialog.
+{{ProductName}} also supports a font importer that makes use of the generic import dialog.
 
 ~~~{sjson}
 // From font-importer.stingray_plugin:
@@ -269,7 +269,7 @@ imports = [
                 function_name = "fontImporterDialog"
             }
 
-            // Step 2 - Import actual asset as a Stingray resource
+            // Step 2 - Import actual asset as a resource
             {
                 type = "js"
                 module = "font-importer-module"
@@ -454,8 +454,8 @@ types = {
 }
 ~~~
 
-Basically, this is an SJSON file that specifies how a specific piece of data should be interpreted and edited. The Stingray property editor uses the `.type` file to populate itself automatically and to edit a JSON data model:
+Basically, this is an SJSON file that specifies how a specific piece of data should be interpreted and edited. The interactive editor's **Property Editor** panel uses the `.type` file to populate itself automatically and to edit a JSON data model:
 
 ![font_importer_dialog](../../../images/font_importer_dialog.png)
 
-For more information about `.type` files, see ~{ The Stingray Type System }~. For more about how your type can control what is shown in the property editor, see the ~{ Built-in metadata properties }~.
+For more information about `.type` files, see ~{ The {{ProductName}} Type System }~. For more about how your type can control what is shown in the property editor, see the ~{ Built-in metadata properties }~.

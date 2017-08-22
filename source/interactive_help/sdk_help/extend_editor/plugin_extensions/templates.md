@@ -12,7 +12,7 @@ When a user clicks the ![Create asset icon](../../../images/icon_createAsset.png
 
 This may be particularly useful if you are adding a new asset type to the editor with an *asset_type* extension, since it provides users an easy way to create new assets of that custom type. For an example of this usage, see the Scaleform Studio plug-in under *editor/plugins/scaleform_studio*.
 
-You might also find it useful to hook into the asset creation menu for other reasons. For example, your plug-in might give users the ability to create standard Stingray assets that are already set up in a certain way, like a set of particle effects preset to simulate common effects like fire, rain, and smoke. In this case, your plug-in could give the user the ability to create a new asset from each of these pre-configured templates.
+You might also find it useful to hook into the asset creation menu for other reasons. For example, your plug-in might give users the ability to create standard assets that are already set up in a certain way, like a set of particle effects preset to simulate common effects like fire, rain, and smoke. In this case, your plug-in could give the user the ability to create a new asset from each of these pre-configured templates.
 
 ### Configuration
 
@@ -53,7 +53,7 @@ extensions = {
 
 ## Template projects
 
-Template projects that you set up in your plug-in descriptor are listed in the **Templates** tab of the **Project Manager**. Users can use them as starting points for new projects that they create, just like the default templates that ship with Stingray.
+Template projects that you set up in your plug-in descriptor are listed in the **Templates** tab of the **Project Manager**. Users can use them as starting points for new projects that they create, just like the default templates that ship with {{ProductName}}.
 
 This can be useful if you want to provide users with a complete, working project that demonstrates how your plug-in should be used.
 

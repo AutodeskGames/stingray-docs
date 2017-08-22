@@ -1,6 +1,6 @@
 # Editing custom asset types
 
-If you need your plug-in to save data to resource files in the project, you can benefit from many of the standard editing features and tools the editor provides for working with other Stingray resources. For example, you can make your plug-in's resource files editable in the **Property Editor**, benefit from automatic undo/redo, etc.
+If you need your plug-in to save data to resource files in the project, you can benefit from many of the standard editing features and tools the editor provides for working with built-in resource types. For example, you can make your plug-in's resource files editable in the **Property Editor**, benefit from automatic undo/redo, etc.
 
 To do this, you define a new *type* for your asset, using a custom SJSON format that describes the kinds of information that each instance of that asset can hold. You can then use the editor's built-in mechanisms to create and modify resources of your custom type. Your plug-in can work with the data in the resources, and let the editor worry about the mechanics of how the user creates, edits and saves instances of the resources.
 
@@ -14,7 +14,7 @@ This page describes how you can make your custom SJSON resources re-use the edit
 
 ## Step 1. Create a type file
 
-The first step is to create a `.type` file for the data you need to save in your new resource files. This file defines the structure of your data, using a set of built-in types and other defined types as building blocks. For more information, see ~{ The Stingray Type System }~.
+The first step is to create a `.type` file for the data you need to save in your new resource files. This file defines the structure of your data, using a set of built-in types and other defined types as building blocks. For more information, see ~{ The {{ProductName}} Type System }~.
 
 In order to link the type you define to resource files that contain instances of the defined data structure, you must make sure that your type contains the `extension` field. For example, here is how the `scatter_brush.type` file links its type to the `.scatter_brush` extension:
 
@@ -209,11 +209,11 @@ You can take advantage of other editor services if you want to work with files o
 
 ## Custom editor asset examples
 
-The Stingray editor ships with several custom asset types that are defined in `.type` files as described above. These are good working examples of how the built-in asset editing system can simplify creating and editing resources.
+The "core" resources that are installed with {{ProductName}}, and the built-in plug-ins that are installed with the editor, include several custom asset types that are defined in `.type` files as described above. These are good working examples of how the built-in asset editing system can simplify creating and editing resources.
 
 ### Blend shapes
 
-The blend shapes plug-in defines the way users can work with and preview blend shapes in the editor. For background information about working with blend shapes in Stingray, see [the main Stingray Help](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_animation_blend_shapes_html).
+The blend shapes plug-in defines the way users can work with and preview blend shapes in the editor. For background information about working with blend shapes, see the pages under ~{ Blend shapes }~.
 
 ![blend shape preview](../../images/blend_shape_preview_update.gif)
 
@@ -254,7 +254,7 @@ types = {
 
 ### Scatter brushes
 
-Scatter brushes are resources used only by the editor that encapsulate a list of units that should be painted or *scattered* on another unit or a terrain. For background information about working with scatter brushes in Stingray, see [the main Stingray Help](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_building_levels_scatter_tool_html)
+Scatter brushes are resources used only by the editor that encapsulate a list of units that should be painted or *scattered* on another unit or a terrain. For background information about working with scatter brushes in the editor, see the pages under ~{ Paint with the Scatter Tool }~.
 
 ![capture_settings](../../images/scatter_brush_property_editing.png)
 
@@ -284,7 +284,7 @@ objectEditingService.on("DataObjectsConsensusChanged", function (args) {
 
 ### Capture settings
 
-Capture settings are resources used only by the editor that specify parameters for capturing a stream of images from the viewport and saving the result as a set of *.exr* files. This usage showcases how a custom asset type can make the **Property Editor** act like a specicalized editing tool. For background information about working with scatter brushes in Stingray, see [the main Stingray Help](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_lighting_rendering_capture_frames_tool_html).
+Capture settings are resources used only by the editor that specify parameters for capturing a stream of images from the viewport and saving the result as a set of *.exr* files. This usage showcases how a custom asset type can make the **Property Editor** act like a specicalized editing tool. For background information about working with capture settings, see the pages under ~{ Capture Frames Tool }~.
 
 ![capture_settings](../../images/capture_settings_editing.png)
 

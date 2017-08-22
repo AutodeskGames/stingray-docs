@@ -1,6 +1,6 @@
-# Define a Stingray Plug-in
+# Define a {{ProductName}} Plug-in
 
-Every Stingray plug-in is defined in a data file with the *.stingray_plugin* resource type. When you start work on a new plug-in, you have to create one of these files by hand.
+Every {{ProductName}} plug-in is defined in a data file with the *.stingray_plugin* resource type. When you start work on a new plug-in, you have to create one of these files by hand.
 
 This page describes the format of the *.stingray_plugin* file, and all of the configuration settings you can use.
 
@@ -8,7 +8,7 @@ This page describes the format of the *.stingray_plugin* file, and all of the co
 
 ## Sample *.stingray_plugin* file
 
-The following code block provides a minimal working plug-in definition that you can use as a model to get started developing your own plug-ins. Copy and paste this information into a new text file with the *.stingray_plugin* extension, and make it visible to the editor's **Plugin Manager**. For more on using the **Plugin Manager**, see [here](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_plugins_add_remove_plugins_html).
+The following code block provides a minimal working plug-in definition that you can use as a model to get started developing your own plug-ins. Copy and paste this information into a new text file with the *.stingray_plugin* extension, and make it visible to the editor's ~{ Plugin Manager }~.
 
 If you're familiar with the [`package.json` format](https://docs.npmjs.com/files/package.json) used by [node.js](https://nodejs.org/en/), many of these fields will be familiar to you already.
 
@@ -22,7 +22,7 @@ version = "1.0.0"
 //
 description = "A minimal custom plug-in that triggers some Javascript code."
 author = {
-	name = "Stingray"
+	name = "{{ProductName}}"
 	company = "Autodesk inc."
 	url = "https://gamedev.autodesk.com/"
 }
@@ -38,7 +38,7 @@ repository = {
     url = "http://www.github.com/octocat/hello-world.git"
 }
 
-// Extensions define the ways the plug-in extends Stingray.
+// Extensions define the ways the plug-in extends the {{ProductName}} system.
 // All plug-ins need at least one extension in order to be successfully loaded.
 //
 extensions = {
@@ -61,7 +61,7 @@ dependencies = {
 }
 ~~~
 
-As an alternative, you could copy the *.stingray_plugin* file from any of the built-in Stingray plug-ins, or from any of the sample plug-ins, for your starting point. Just make sure you change all the configuration values -- especially the unique `name`.
+As an alternative, you could copy the *.stingray_plugin* file from any of the built-in plug-ins, or from any of the sample plug-ins, for your starting point. Just make sure you change all the configuration values -- especially the unique `name`.
 
 ## Required metadata
 
@@ -129,7 +129,7 @@ The following parameters are all optional. They are intended for future use, but
 
 `license`
 
->	The software license that you want to govern your plug-in. This indicates the rights that Stingray users have to install, use, modify, and redistribute your plug-in. The value of this property may be a single string value from the [SPDX license list](https://spdx.org/licenses/), or it may be an object that contains the following values:
+>	The software license that you want to govern your plug-in. This indicates the rights that other users have to install, use, modify, and redistribute your plug-in. The value of this property may be a single string value from the [SPDX license list](https://spdx.org/licenses/), or it may be an object that contains the following values:
 >
 >	`type`
 >
@@ -153,17 +153,17 @@ The following parameters are all optional. They are intended for future use, but
 
 ## Extensions
 
-Extensions define what your plug-in adds to the Stingray system. Every plug-in needs at least one extension in order for the editor to load it successfully.
+Extensions define what your plug-in adds to the {{ProductName}} system. Every plug-in needs at least one extension in order for the editor to load it successfully.
 
 For more information on how these extensions work and what extensions you can use in your plug-in, see ~{ Use extensions to define plug-in behaviors }~.
 
 ## Dependencies
 
-Stingray is a complex system, with a lot of interactions between different components that change from time to time. It's very likely that you'll intend your plug-in to be used only in some cases -- for example, only on certain platforms, or only against a certain version of Stingray, or only when a certain other plug-in is *also* installed, etc.
+{{ProductName}} is a complex system, with a lot of interactions between different components that change from time to time. It's very likely that you'll intend your plug-in to be used only in some cases -- for example, only on certain platforms, or only against a certain version of {{ProductName}}, or only when a certain other plug-in is *also* installed, etc.
 
 You can use the `platforms` and `dependencies` properties to identify exactly what other platforms, plug-ins and versions your plug-in needs.
 
->	**NOTE:** The only dependency that is currently enforced by the editor is the dependency on the base `Stingray` app. The editor does not yet handle platform dependencies or dependencies on other plug-ins. However, we encourage you to start including them now. Not only will this give you less to do later when Stingray starts to enforce the versioning, but it can also be helpful in general to identify exactly what your plug-in really depends on.
+>	**NOTE:** The only dependency that is currently enforced by the editor is the dependency on the base `Stingray` app. The editor does not yet handle platform dependencies or dependencies on other plug-ins. However, we encourage you to start including them now. Not only will this give you less to do later when {{ProductName}} starts to enforce the versioning, but it can also be helpful in general to identify exactly what your plug-in really depends on.
 
 `platforms`
 
@@ -171,7 +171,7 @@ You can use the `platforms` and `dependencies` properties to identify exactly wh
 
 `dependencies`
 
->	An array of items that lists which other Stingray plug-ins your plug-in depends on, and which versions of those other plug-ins must be installed. The key of each item must match the `name` key of another Stingray plug-in. Like each plug-in's own `version` property (described above), the value of each key should be a [semver](http://semver.org/) tag that denotes the compatible versions of that plug-in.
+>	An array of items that lists which other {{ProductName}} plug-ins your plug-in depends on, and which versions of those other plug-ins must be installed. The key of each item must match the `name` key of another plug-in. Like each plug-in's own `version` property (described above), the value of each key should be a [semver](http://semver.org/) tag that denotes the compatible versions of that plug-in.
 >
 >	For example, `"stingray" >= "1.5"` means that the base Stingray app must be at least version 1.5 in order to successfully load the plug-in.
 >
