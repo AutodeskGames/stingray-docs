@@ -20,7 +20,7 @@ Due to restrictions from Apple, the iOS packaging process cannot be fully comple
 
 You will need to install and run the server application on a Mac. For system requirements, see ~{ Supported platforms }~.
 
-1.	Locate the packaging app within your {{ProductName}} install directory. For example: `\Program Files\Autodesk\Stingray\<version>\tools\Autodesk Stingray iOS Package Server.app`
+1.	Locate the packaging app within your {{ProductName}} install directory. For example: `C:\Program Files\Autodesk\{{SR_DOC_SHORT_NAME}}\<version>\tools\Autodesk Stingray iOS Package Server.app`
 
 2.	Copy the app to the Applications folder on your Mac.
 
@@ -73,7 +73,7 @@ To generate the engine *.ipa* files:
 
 4.	Click **Generate Engine IPA**.
 
-	The file is created and saved in your Windows user directory, typically under `AppData\Local\Autodesk\Stingray\engine\ios\<configuration>`.
+	The file is created and saved in your Windows user directory, typically under `AppData\Local\Autodesk\{{SR_DOC_SHORT_NAME}}\engine\ios\<configuration>`.
 
 Once the *.ipa* file for the engine is available, the **Deployer** panel shows all of the options you can set when you deploy a full standalone build of your game. See [Deploy the project for iOS] below.
 

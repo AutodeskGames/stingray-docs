@@ -43,7 +43,7 @@ If you want to create an app package with data you need to add the compiled and 
 
 Alternatively you can add the files to Visual Studio manually:
 
-1. Open the uwp32 Visual Studio solution (`build/engine/uwp32/stingray_engine_uwp32.sln`)
+1. Open the uwp32 Visual Studio solution (`build/engine/uwp32/{{SR_DOC_EXE_PREFIX}}_engine_uwp32.sln`)
 2. Add the bundled game data to the "main_uwp" Visual Studio project, and set each item as "Content" by selecting all of them, right-clicking and going into Properties.
 
 ### Deploying through Visual Studio ###

@@ -18,7 +18,7 @@ You may need to add your resources to your *boot.package* file, or to another pa
 
 ## Fatal error when testing levels
 
-Shut down the editor and delete the `editor.config` file. You can find this file at `C:\Users\<user name>\AppData\Local\Autodesk\Stingray\Settings\editor.config`. When you restart, the problem should be corrected.
+Shut down the editor and delete the `editor.config` file. You can find this file at `C:\Users\<user name>\AppData\Local\Autodesk\{{SR_DOC_SHORT_NAME}}\Settings\editor.config`. When you restart, the problem should be corrected.
 
 ## General misbehavior
 
@@ -36,7 +36,7 @@ If things aren't working the way you expect, give the following options a try an
 
 -	Check for the presence of read-only files in your project and data folders. If you find any, make them writeable by checking them out of version control or by modifying their file properties.
 
--	Try deleting your "toolchain" folder, which you can find under `C:\Users\<user name>\AppData\Local\Autodesk\Stingray`. This will empty the list of projects in the ~{ Project Manager }~, but you can get them back. See ~{ Open an existing project }~.
+-	Try deleting your "toolchain" folder, which you can find under `C:\Users\<user name>\AppData\Local\Autodesk\{{SR_DOC_SHORT_NAME}}`. This will empty the list of projects in the ~{ Project Manager }~, but you can get them back. See ~{ Open an existing project }~.
 
 -	Make sure the editor is **not** set to **Update Mode > Always** in the viewport if the performance is lower for the vr template projects.
 

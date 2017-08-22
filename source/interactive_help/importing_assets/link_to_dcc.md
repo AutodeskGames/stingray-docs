@@ -21,7 +21,7 @@ If your DCC tool fails to discover the link to {{ProductName}}, you can try the 
 
 **Manually install the interop plug-in:**
 
-1. Double-click the StingrayDCCLink.msi located here within your {{ProductName}} install directory: `\Program Files\Autodesk\Stingray\<*version*>\extras`
+1. Double-click the StingrayDCCLink.msi located here within your {{ProductName}} install directory: `\Program Files\Autodesk\{{SR_DOC_SHORT_NAME}}\<*version*>\extras`
 
 2. Click **Install Now**.
 

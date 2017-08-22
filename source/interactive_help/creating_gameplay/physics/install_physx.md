@@ -6,7 +6,7 @@ When installed and loaded, the PhysX plug-in adds a PhysX menu to the main menu 
 
 To install the PhysX plug-in for your DCC tool:
 
-1. Double-click the `NVIDIA_PhysX_For_<Product>_<Version>.msi` located here within your {{ProductName}} install directory: `\Program Files\Autodesk\Stingray\<*version*>\extras`
+1. Double-click the `NVIDIA_PhysX_For_<Product>_<Version>.msi` located here within your {{ProductName}} install directory: `\Program Files\Autodesk\{{SR_DOC_SHORT_NAME}}\<*version*>\extras`
 
 2. Follow the instructions in the NVIDIA installer.
 

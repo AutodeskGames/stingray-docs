@@ -19,25 +19,25 @@ In your gameplay code, you can access all of the command-line parameters that we
 Run the engine using the project settings from a particular toolchain directory (this will also compile the data if necessary):
 
 ```{nohighlight}
-stingray_win64_dev.exe --toolchain C:\work\toolchain
+{{SR_DOC_EXE_PREFIX}}_win64_dev.exe --toolchain C:\work\toolchain
 ```
 
 Run the engine using compiled data from a particular folder:
 
 ```{nohighlight}
-stingray_win64_dev.exe --data-dir D:\Projects\testbed_data\win32
+{{SR_DOC_EXE_PREFIX}}_win64_dev.exe --data-dir D:\Projects\testbed_data\win32
 ```
 
 Run the engine using bundled data:
 
 ```{nohighlight}
-stingray_win64_dev.exe --bundle-dir D:\Projects\testbed_data\win32_bundled
+{{SR_DOC_EXE_PREFIX}}_win64_dev.exe --bundle-dir D:\Projects\testbed_data\win32_bundled
 ```
 
 Run the engine using streamed data from a TCP/IP file server. The `--data-dir` is the directory on the file server the engine should use. The `--secret` should match the content of a `.stingray-asset-server-secret` file in that directory.
 
 ```{nohighlight}
-stingray_win64_dev.exe --host 172.64.22.32 --data-dir D:\Projects\testbed_data\win32 --secret PqdjliMO52Tu4As+FxuJig==
+{{SR_DOC_EXE_PREFIX}}_win64_dev.exe --host 172.64.22.32 --data-dir D:\Projects\testbed_data\win32 --secret PqdjliMO52Tu4As+FxuJig==
 ```
 
 ### Compiling data
@@ -45,25 +45,25 @@ stingray_win64_dev.exe --host 172.64.22.32 --data-dir D:\Projects\testbed_data\w
 Cross-compile project data from the toolchain settings for a particular platform (`win32`, `xb1`, `android`, `macosx`, `ios`, `ps4`) :
 
 ```{nohighlight}
-stingray_win64_dev.exe --compile-for ps4 --toolchain C:\work\toolchain
+{{SR_DOC_EXE_PREFIX}}_win64_dev.exe --compile-for ps4 --toolchain C:\work\toolchain
 ```
 
 Cross-compile and bundle project data using the toolchain settings:
 
 ```{nohighlight}
-stingray_win64_dev.exe --compile-for ps4 --bundle --toolchain C:\work\toolchain
+{{SR_DOC_EXE_PREFIX}}_win64_dev.exe --compile-for ps4 --bundle --toolchain C:\work\toolchain
 ```
 
-Compile Win32 project data using a mapped core folder:
+Compile project data for Windows using a mapped core folder:
 
 ```{nohighlight}
-stingray_win64_dev.exe --compile --source-dir D:\projects\testbed --data-dir D:\projects\testbed_data\win32 --map-source-dir core C:\work\toolchain
+{{SR_DOC_EXE_PREFIX}}_win64_dev.exe --compile --source-dir D:\projects\testbed --data-dir D:\projects\testbed_data\win32 --map-source-dir core C:\work\toolchain
 ```
 
-Compile and bundle Win32 project data:
+Compile and bundle project data for Windows:
 
 ```{nohighlight}
-stingray_win64_dev.exe --compile --bundle --source-dir D:\projects\testbed --data-dir  D:\projects\testbed_data\win32 --bundle-dir  D:\projects\testbed_data\win32_bundled --map-source-dir core C:\work\toolchain
+{{SR_DOC_EXE_PREFIX}}_win64_dev.exe --compile --bundle --source-dir D:\projects\testbed --data-dir  D:\projects\testbed_data\win32 --bundle-dir  D:\projects\testbed_data\win32_bundled --map-source-dir core C:\work\toolchain
 ```
 
 ## Parameters
@@ -150,7 +150,7 @@ On most consoles, where only one copy of the engine can run at a time, the engin
 
 On Xbox One, port 4601 will be used, since that is the default port for XboxOne desktop connections.
 
-On PC where there can be many engine instances running simultaneously, the console server will use a random free port unless one is specified. On the PC, the *Console* finds running game engines to connect to by searching for running executables called "stingray_*.exe" with open TCP/IP ports
+On PC where there can be many engine instances running simultaneously, the console server will use a random free port unless one is specified. On the PC, the *Console* finds running game engines to connect to by searching for running executables called "{{SR_DOC_EXE_PREFIX}}_*.exe" with open TCP/IP ports
 
 #### --wait-for-debugger
 
