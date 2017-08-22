@@ -43,7 +43,7 @@ The Appkit uses a `LevelWrapper` to manage a single game level that you load int
 -	Loads the shading environment specified for the level in the interactive editor, if any.
 -	Spawns the level background.
 -	Loads the level's baked lighting, if any.
--	Manages cameras that are set as active cameras, but that are not managed by an `Appkit.CameraWrapper`. For example, camera units that you place in the Level Editor.
+-	Manages cameras that are set as active cameras, but that are not managed by an `Appkit.CameraWrapper`. For example, camera units that you place in the editor.
 -	Provides level object management so that other scripts can register Lua objects with a Level to receive update and shutdown calls automatically.
 
 The `LevelWrapper` works with the `ComponentManager` to allow components to be ticked per level. It also works with the `Appkit` object to allow for different tick ordering relative to the `World` update.

@@ -12,7 +12,7 @@ See also ~{ Defining resource packages }~.
 
 In auto-load mode, whenever the engine needs a resource that isn't already loaded into the game, it automatically loads that resource.
 
-Auto-load mode is used by the engine that runs inside the interactive editor. The editor never uses resource packages to load and unload content that it shows while you are editing your levels. Auto-load mode is also used by default when you use **Test Level (F8)** function from the Editor.
+Auto-load mode is used by the engine that runs inside the interactive editor. The editor never uses resource packages to load and unload content that it shows while you are editing your levels. Auto-load mode is also used by default when you use **Test Level (F8)** function from the editor.
 
 You may want to enable this same auto-loading mode when you use **Run Project** and when you deploy your game. Using auto-loading almost completely bypasses the package system. However, since auto-load is enabled and disabled through the Lua API (see below), you still have to make sure that your boot package and *settings.ini* are configured to load and run the script in which you activate auto-loading before any other resources are needed.
 

@@ -14,7 +14,7 @@ Otherwise, the difference between these configurations comes down to a tradeoff 
 
 `Development`
 
->	The `dev` or `development` configuration is the one you'll use the most while you're actively working on your project. It's almost as fast and optimized as `release`, but it offers many features that are crucial during your development phase, like two-way communications with the Editor. In addition, this configuration is somewhat more forgiving than `release`: you can deploy your project even if it contains compilation warnings.
+>	The `dev` or `development` configuration is the one you'll use the most while you're actively working on your project. It's almost as fast and optimized as `release`, but it offers many features that are crucial during your development phase, like two-way communications with the editor. In addition, this configuration is somewhat more forgiving than `release`: you can deploy your project even if it contains compilation warnings.
 
 **Note:** Developers with source access can also build the engine with a third configuration, `debug`, which lets you attach an external debugger like Visual Studio to trace function calls and data values in the C++ code that runs inside the engine. See ~{ About engine build configurations }~.
 

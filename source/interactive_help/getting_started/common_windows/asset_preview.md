@@ -18,7 +18,7 @@ Displays assets as you browse and select them in the **Asset Browser**. You can 
 
 ## Preview levels
 
-By default, the Asset Preview shows your selected asset in a different level from the level you are currently working on in the Editor. It uses the same default level that the Editor uses when you create a new level, taken from the core resources that come with {{ProductName}}.
+By default, the Asset Preview shows your selected asset in a different level from the level you are currently working on in the editor. It uses the same default level that the editor uses when you create a new level, taken from the core resources that come with {{ProductName}}.
 
 You can change the background of the Asset Preview, if you want to see your assets rendered with different scenery, different lighting, and a different shading environment.
 

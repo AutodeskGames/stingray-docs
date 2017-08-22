@@ -21,7 +21,7 @@ The main editor where you'll place objects and build interactive worlds.
 
 <br>
 
-> **Note:** Showing or hiding individual objects in the level (using **Edit > Object Visibility** options) affects only your work in the **Level Editor**, it doesn't actually affect the visibility of objects in your game.
+> **Note:** Showing or hiding individual objects in the level (using **Edit > Object Visibility** options) affects only what you can see while you're working in the editor, it won't actually affect the visibility of objects in your interactive app.
 
 ##Viewport Options
 

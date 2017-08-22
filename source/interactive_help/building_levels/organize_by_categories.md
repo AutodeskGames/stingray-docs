@@ -107,9 +107,9 @@ if level_object._unit ~= nil then
 end
 ~~~
 
-### Example: filtering by Editor unit name
+### Example: filtering by unit name
 
-If you have a well-defined scheme for assigning names to the units you spawn in the Editor, you can make use of this naming scheme to organize your objects into categories. For example, the following function returns `true` only for units whose names start with the string `enemy_`:
+If you have a well-defined scheme for assigning names to the units you spawn in the editor, you can make use of this naming scheme to organize your objects into categories. For example, the following function returns `true` only for units whose names start with the string `enemy_`:
 
 ~~~{sjson}
 if level_object.name:find("^enemy_") then return true end

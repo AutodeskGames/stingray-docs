@@ -1,6 +1,6 @@
 # Switch between DX11 and DX12
 
-Developers with source access can toggle between DX11 and DX12 in the Editor, provided your system supports both renderers.
+Developers with source access can toggle between DX11 and DX12 in the editor, provided your system supports both renderers.
 
 >**Note**: To add support for DX12 in your projects, compile the engine with `--use-d3d12` flag.
 
