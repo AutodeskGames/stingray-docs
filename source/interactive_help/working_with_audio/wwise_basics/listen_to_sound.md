@@ -1,6 +1,6 @@
 ﻿# Listening to sound events
 
-After you generate sound banks in Wwise, you can preview events in the Stingray **Property Editor**.
+After you generate sound banks in Wwise, you can preview events in the interactive editor's **Property Editor**.
 
 Click each sound bank to reveal the events tied to that sound bank. You must have the
 ~{ Asset Preview }~ window open in order for playback to occur.

@@ -1,12 +1,12 @@
 # Wwise workflow tutorial
 
-This tutorial provides a brief step by step example of the basic Wwise Stingray workflow.
+This tutorial provides a brief step by step example of the basic Wwise workflow in {{ProductName}}.
 
 > ![](../images/icon_video.png) You can also find a longer video tutorial on how to trigger audio and particle effects [here](http://area.autodesk.com/learning/triggering-sound-and-particle-effects).
 
 ## Step 1. Make new project
 
-Open Stingray and create a new project. In this example we are using the empty game template and naming our project wwise_tutorial.
+Open the {{ProductName}} editor and create a new project. In this example we are using the empty game template and naming our project wwise_tutorial.
 
 ## Step 2. Set up tutorial content
 
@@ -26,9 +26,9 @@ Open Stingray and create a new project. In this example we are using the empty g
 
 6. Export the sound bank.
 
-	After export, the Stingray-formatted assets can be found in the ~{ Wwise project }~ folder of your Stingray game project.
+	You can find the exported assets, formatted for use by the {{ProductName}} engine, in the ~{ Wwise project }~ folder of your {{ProductName}} project.
 
-## Step 3. Back in Stingray, play a sound
+## Step 3. Back in the {{ProductName}} project, play a sound
 
 1. To make the sound bank available to the game project level:
     - add the "wwise/Init" and "wwise/Main" resources to *boot.package*.

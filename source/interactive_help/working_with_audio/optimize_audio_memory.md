@@ -8,11 +8,11 @@ See also ~{ Optimize memory usage }~ for tips on monitoring memory consumption i
 
 ## Monitor audio usage with the Wwise profiler
 
-The Wwise editor contains a built-in profiling and monitoring system that you can use to track and follow the way your game loads and uses audio clips at a more granular level than the shared memory monitoring tools offered by the Stingray engine.
+The Wwise editor contains a built-in profiling and monitoring system that you can use to track and follow the way your game loads and uses audio clips at a more granular level than the shared memory monitoring tools offered by the {{ProductName}} engine.
 
 To get started profiling:
 
-1.	From the Stingray Editor, run your Stingray project on your local PC or on another connected platform.
+1.	From the interactive editor, run your project on your local PC or on another connected platform.
 
 2.	In Wwise, choose **Layouts > Profiler** from the main menu.
 
@@ -28,7 +28,7 @@ See also the Wwise documentation about [profiling](https://www.audiokinetic.com/
 
 ## Use multiple sound banks
 
-If you have set up a system for loading and unloading resource packages in your game, you can reduce memory usage by creating multiple different sound banks (or sets of audio clips) in Wwise, and listing those different sound banks in different Stingray resource packages. This ensures that you only load into memory the sets of sounds that you will actually need in the game at a given time.
+If you have set up a system for loading and unloading resource packages in your game, you can reduce memory usage by creating multiple different sound banks (or sets of audio clips) in Wwise, and listing those different sound banks in different resource packages. This ensures that you only load into memory the sets of sounds that you will actually need in the game at a given time.
 
 For example, if you set up your game to use a different resource package for each level, you could also create a sound bank for each level that contains only the sounds needed for that level. You would then add each level's bank to that level's resource package.
 
@@ -36,13 +36,13 @@ Or, if your game uses a large number of sounds, you can create more granular ban
 
 Keep in mind that if you localize your game, you will likely want to keep voice-over and dialogue tracks for a given character or level in separate banks and packages from the other sound effects used by that character or level.
 
-For details on using Stingray resource packages, ~{ Loading and unloading content at runtime }~.
+For details on using resource packages, ~{ Loading and unloading content at runtime }~.
 
 ## Compress and downsample clips
 
 When you generate sound banks in Wwise, each audio clip in the project undergoes a format conversion for each target platform. You can change the conversion settings used for each clip on each platform.
 
-Wwise saves your conversion settings in presets, which you can edit in the **Conversion Settings Editor** window. By default, when you create a new Stingray project, its corresponding Wwise project is created with the following default settings for all clips:
+Wwise saves your conversion settings in presets, which you can edit in the **Conversion Settings Editor** window. By default, when you create a new project, its corresponding Wwise project is created with the following default settings for all clips:
 
 ![](../images/wwise_conversion_settings.png)
 
@@ -72,11 +72,11 @@ See also the [Wwise documentation](https://www.audiokinetic.com/library/2015.1.4
 
 ## Optimize Wwise engine settings
 
-The Wwise engine reserves several pools of memory that it uses over the course of the game. By default, Stingray initializes Wwise with fairly large values for these engine pools, which are suitable for games with quite complex audio needs. If your game has more moderate needs, you can tune the size of these pools.
+The Wwise engine reserves several pools of memory that it uses over the course of the game. By default, the interactive engine initializes Wwise with fairly large values for these engine pools, which are suitable for games with quite complex audio needs. If your game has more moderate needs, you can tune the size of these pools.
 
-These settings are exposed in your Stingray game's *settings.ini* file.
+These settings are exposed in your project's *settings.ini* file.
 
-See the ~{ Stingray engine settings.ini file reference }~ for a list of the Wwise engine settings exposed there, and also see these [tips to reduce memory usage](https://www.audiokinetic.com/library/2015.1.4_5497/?source=SDK&id=goingfurther__optimizingmempools__reducing__memory.html) in the Wwise documentation.
+See the ~{ settings.ini file reference }~ for a list of the Wwise engine settings exposed there, and also see these [tips to reduce memory usage](https://www.audiokinetic.com/library/2015.1.4_5497/?source=SDK&id=goingfurther__optimizingmempools__reducing__memory.html) in the Wwise documentation.
 
 ## Sound design techniques
 

@@ -9,15 +9,15 @@ For more information about Wwise, see:
 *	The Audiokinetic Wwise site: <https://www.audiokinetic.com/products/wwise/>
 *	The latest full-product documentation from Audiokinetic, available from the **Help** menu of the Wwise authoring tool.
 
-When you launch the Wwise Authoring tool in Stingray, this automatically opens the Wwise project associated with the current game project. (See also ~{ Create or open a Wwise project }~.)
+When you launch the Wwise Authoring tool from the interactive editor, it automatically opens the Wwise project associated with the {{ProductName}} project you're currently working on. (See also ~{ Create or open a Wwise project }~.)
 
-  > **Important:** If you experience issues connecting to Stingray from Wwise, you may need to add an exception or to your firewall. In addition, the following UDP ports must be open for Wwise remote sync functionality: 24024, 24025, and 24026. For more information, refer to the Wwise documentation.
+  > **Important:** If you experience issues connecting to {{ProductName}} from Wwise, you may need to add an exception or to your firewall. In addition, the following UDP ports must be open for Wwise remote sync functionality: 24024, 24025, and 24026. For more information, refer to the Wwise documentation.
 
 ## About the Wwise plug-in
 
-The Wwise plug-in adds the following capabilities to Stingray:
+The Wwise plug-in adds the following capabilities to {{ProductName}}:
 
-*	Every new Stingray game project is automatically set up with a linked Wwise project.
-*	You can export sound banks from Wwise formatted as Stingray resources, and have them placed directly into your Stingray project's data folder.
-*	The Wwise runtime engine is integrated into the Stingray runtime engine.
-*	The Wwise plugin exposes several functions to the Stingray Lua API, which you can call in your gameplay code to control sound sources, trigger sound events, and modify parameter values. <br>For details, see the `Wwise` and `WwiseWorld` objects in the Stingray Lua API Reference.
+*	Every new project you create in the editor is automatically set up with a linked Wwise project.
+*	You can export sound banks from Wwise formatted as {{ProductName}} resources, and have them placed directly into your project's data folder.
+*	The Wwise runtime engine is integrated into the {{ProductName}} runtime engine.
+*	The Wwise plugin exposes several functions to the {{ProductName}} Lua API, which you can call in your gameplay code to control sound sources, trigger sound events, and modify parameter values. <br>For details, see the `Wwise` and `WwiseWorld` objects in the Lua API Reference.

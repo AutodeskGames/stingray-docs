@@ -32,7 +32,7 @@ end
 
 ## Load sound banks in a resource package
 
-You can make use of the Stingray resource packaging system to load and unload your sound banks at the same time as you load and unload bundles of other types of resources. For background about how resource packages work, see the topics under ~{ Loading and unloading content at runtime }~.
+You can make use of the {{ProductName}} resource packaging system to load and unload your sound banks at the same time as you load and unload bundles of other types of resources. For background about how resource packages work, see the topics under ~{ Loading and unloading content at runtime }~.
 
 If you follow this approach, it is not necessary to issue load and unload commands in Lua and Flow.
 
