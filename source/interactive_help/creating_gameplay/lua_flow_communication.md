@@ -8,7 +8,7 @@ This page describes some strategies that you can use to communicate data and tri
 
 You can define custom Flow nodes for your project that call out to functions that you define in your Lua code. This is a powerful and flexible way to tie the two systems together:
 
--	You can easily make custom Lua code react immediately to triggers in the game at any time.
+-	You can easily make custom Lua code react immediately to triggers in the engine at any time.
 -	Your Lua function can accept any number of input values from Flow, which are exposed as connection slots in the custom node.
 -	Your Lua function can return values to the Flow graph, which are also exposed as output slots in your custom node. You can hook up these output values to other Flow nodes in order to use the information computed by the Lua function immediately.
 
@@ -26,7 +26,7 @@ See the node description for additional details.
 
 ## Typing Lua code directly within Flow
 
-Instead of calling out to a function that is defined in a Lua script, you can enter a block of Lua script directly into the Script slot of the **Script > Script Do String** node. When the node's In event is triggered, your code block is evaluated within the game's Lua environment.
+Instead of calling out to a function that is defined in a Lua script, you can enter a block of Lua script directly into the Script slot of the **Script > Script Do String** node. When the node's In event is triggered, your code block is evaluated within the engine's Lua environment.
 
 ![The Script Do String node](../images/lua_flow_script_do_string.png)
 

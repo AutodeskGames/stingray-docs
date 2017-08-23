@@ -1,10 +1,10 @@
 # Working with core resources
 
-In addition to the resources that you import and create in the source folder, each project inherits a preset collection of "core" resources. These core resources are installed with {{ProductName}}, and are kept in the `core` folder within the installation directory. When you compile a game project, the interactive engine automatically picks up the content from the core folder, compiles the files, and adds them to your project's compiled data.
+In addition to the resources that you import and create in the source folder, each project inherits a preset collection of "core" resources. These core resources are installed with {{ProductName}}, and are kept in the `core` folder within the installation directory. When you compile your project, the interactive engine automatically picks up the content from the core folder, compiles the files, and adds them to the project's compiled data.
 
-Otherwise, the game engine treats core resources just like any other data resources in your project. If you want to use any of them in your game at runtime, you need to make sure that they are included in your package definitions. This is typically done in your boot package.
+Otherwise, the interactive engine treats core resources just like any other data resources in your project. If you want to use any of them in the engine at runtime, you need to make sure that they are included in your package definitions. This is typically done in your boot package.
 
-Although many of the core resources are intended primarily to support the interactive editor, there are many that you are likely to want in your final game. For example, you are likely to need the Lua scripts for the Appkit and for the other plug-ins (such as Wwise, Gameware Navigation, or HumanIK). Use the `boot.package` and `main.package` provided with the template projects as a model.
+Although many of the core resources are intended primarily to support the interactive editor, there are many that you are likely to want in your final app. For example, you are likely to need the Lua scripts for the Appkit and for the other plug-ins (such as Wwise, Gameware Navigation, or HumanIK). Use the `boot.package` and `main.package` provided with the template projects as a model.
 
 ## What's in the core
 
@@ -24,7 +24,7 @@ To view core resources, click the configuration icon ![Configuration](../images/
 
 ## Overriding core resources
 
-You may want to modify or override the core resources in order to customize them for your own projects. Doing so implies a tradeoff between control and convenience. On one hand, you can take direct control of more of the content that goes into making your game. On the other hand, this may add some extra complexity when you upgrade to a newer version of {{ProductName}}, since each version comes with its own set of core resources.
+You may want to modify or override the core resources in order to customize them for your own projects. Doing so implies a tradeoff between control and convenience. On one hand, you can take direct control of more of the content that goes into making your app. On the other hand, this may add some extra complexity when you upgrade to a newer version of {{ProductName}}, since each version comes with its own set of core resources.
 
 You can override the core resources in either of two ways:
 

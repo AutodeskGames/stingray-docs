@@ -1,6 +1,6 @@
 # Customizing the Appkit
 
-If you want to use the Appkit in your game, but you want to customize some specific aspects of its behavior, there are several possible approaches you can follow. These are described in the following sections. Each has its own benefits and drawbacks. You can choose whichever you feel is most appropriate for the scope and nature of the modifications you want to make to the Appkit code.
+If you want to use the Appkit in your project, but you want to customize some specific aspects of its behavior, there are several possible approaches you can follow. These are described in the following sections. Each has its own benefits and drawbacks. You can choose whichever you feel is most appropriate for the scope and nature of the modifications you want to make to the Appkit code.
 
 ## Option 1. Copying the Appkit into your project
 
@@ -12,7 +12,7 @@ Autodesk generally recommends using this approach whenever possible.
 
 -	Your changes will not affect any other projects that you create with {{ProductName}}. Other projects will use the default Appkit from the core resources as usual, or they can have their own set of customizations.
 
--	Your changes remain isolated from the product installation folder, so your game will use the same code regardless of what version of {{ProductName}} you use.
+-	Your changes remain isolated from the product installation folder, so your project will use the same code regardless of what version of {{ProductName}} you use.
 
 	On the other hand, this means that when you upgrade to a new version of {{ProductName}} you might not benefit immediately from any additions, improvements or bug fixes that are made to the Appkit in the new version. You would need to merge the new Appkit code into your project's modified scripts.
 

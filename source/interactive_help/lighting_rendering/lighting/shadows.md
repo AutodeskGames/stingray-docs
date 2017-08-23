@@ -1,6 +1,6 @@
 # Shadows
 
-Shadows might seem easy to set up and manage: after all, they should just naturally appear everywhere that light isn't. However, shadows in a real-time rendered game come with their own technical concerns and limitations.
+Shadows might seem easy to set up and manage: after all, they should just naturally appear everywhere that light isn't. However, shadows in a real-time rendered scene come with their own technical concerns and limitations.
 
 {{ProductName}} uses *shadow maps* to simulate shadows from dynamic lights. The idea behind a shadow map is that each shadow-casting light creates a *depth map* from its own point of view on the scene. This depth map records the distance from the light source to all of the places in the scene that its illumination reaches. When the renderer draws the objects in the scene from the point of view of a camera, it projects each surface into the local space of the light. It then checks the position of the surface against the light's depth map to determine whether or not that surface should be occluded from the light source.
 
@@ -8,9 +8,9 @@ The first directional light in the scene, which typically represents the sun, ha
 
 >	**Note:** Only the first directional light in the level can cast shadows.
 
-You don't have to know any of the technical details involved in shadow mapping in order to use them in your game. If you want to learn more, you can read about it on [Wikipedia](https://en.wikipedia.org/wiki/Shadow_mapping) or in [this tutorial](http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-16-shadow-mapping/).
+You don't have to know any of the technical details involved in shadow mapping in order to use them in your project. If you want to learn more, you can read about it on [Wikipedia](https://en.wikipedia.org/wiki/Shadow_mapping) or in [this tutorial](http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-16-shadow-mapping/).
 
-However, it should be clear that each additional shadow-casting light adds some extra performance overhead to rendering the game world in each frame. You therefore want to avoid creating shadow-casting lights unnecessarily.
+However, it should be clear that each additional shadow-casting light adds some extra performance overhead to rendering the engine world in each frame. You therefore want to avoid creating shadow-casting lights unnecessarily.
 
 {{ProductName}} has a few additional parameters that you can use to control which lights and objects cast shadows, and to set up technical parameters for shadow mapping. These are described in the following sections.
 

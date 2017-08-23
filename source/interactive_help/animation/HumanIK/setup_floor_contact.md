@@ -1,6 +1,6 @@
 # Set up floor contact using HumanIK
 
-HumanIK tools implemented in {{ProductName}} let you quickly set up foot pinning on your game characters, ensuring that the feet do not slip through the ground even on dynamic terrain. With HumanIK floor contact, the feet angle and position themselves dynamically, and the rest of the body reacts naturally to the foot position, maintaining a realistic range of motion.
+HumanIK tools implemented in {{ProductName}} let you quickly set up foot pinning on your characters, ensuring that the feet do not slip through the ground even on dynamic terrain. With HumanIK floor contact, the feet angle and position themselves dynamically, and the rest of the body reacts naturally to the foot position, maintaining a realistic range of motion.
 
 This topic explains how to set up floor contact using the HumanIK plug-in. Floor contact lets you adapt locomotion clips (or entire animation controllers) live, so that they take into account the terrain topology.
 
@@ -12,7 +12,7 @@ For example, an animation clip recorded on a flat ground can be warped to play b
 
 1.	In Maya or MotionBuilder, characterize your character model using the **Character Controls**.
 
-	> **Note:** It's important to make sure the characterization includes feet markers if you plan to set up floor contact. The feet markers will ensure precise feet contact in the game engine by taking into account the thickness of the mesh around the feet joints; markers should also be included for the hands if you plan to enable floor contact on hands (when the character is crouching for instance).
+	> **Note:** It's important to make sure the characterization includes feet markers if you plan to set up floor contact. The feet markers will ensure precise feet contact by taking into account the thickness of the mesh around the feet joints; markers should also be included for the hands if you plan to enable floor contact on hands (when the character is crouching for instance).
 
 2.	In {{ProductName}}, create a new level. See ~{ Create or load a level }~.
 

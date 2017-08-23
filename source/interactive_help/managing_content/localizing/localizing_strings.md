@@ -1,6 +1,6 @@
 # Localizing strings
 
-If you need your game to be translated into multiple languages, one of your key needs will likely be a set of strings for each target language, typically for displaying in some kind of UI.
+If you need your content to be translated into multiple languages, one of your key needs will likely be a set of strings for each target language, typically for displaying in some kind of UI.
 
 {{ProductName}} offers a built-in mechanism for swapping and accessing localized strings at runtime through the use of *.strings* resources.
 

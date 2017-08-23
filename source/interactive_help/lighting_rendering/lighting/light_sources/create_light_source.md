@@ -2,7 +2,7 @@
 
 Light sources are contained within units. Each unit can contain zero, one, or many light sources.
 
-You create light sources in your game by placing or spawning any type of unit that contains one or more light sources. For example, the core resources contains a helper unit, `core/unit/light_source.unit`, that contains a single light source. This helper unit is represented in the interactive editor viewport as a light bulb:
+You create light sources in your levels by placing or spawning any type of unit that contains one or more light sources. For example, the core resources contains a helper unit, `core/unit/light_source.unit`, that contains a single light source. This helper unit is represented in the interactive editor viewport as a light bulb:
 
 ![Light gizmo](../../../images/marker_light_3d.png)
 

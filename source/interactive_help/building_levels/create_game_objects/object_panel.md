@@ -4,7 +4,7 @@
 
 - **Window > Create**
 
-Lets you create standard game objects that can be placed and modified in the game level. See also ~{ Create game objects }~.
+Lets you create standard level objects that can be placed and modified in the level. See also ~{ Create level objects }~.
 
 Search for the object name, or browse by category of object.
 
@@ -50,9 +50,9 @@ See ~{ Set up levels to use Gameware Navigation }~.
 
 **Nav World**
 
-This is the main component to integrate if you're setting up navigation in your level. It lets you load navigation data and render the navmesh in your game.
+This is the main component to integrate if you're setting up navigation in your level. It helps you generate navigation data and makes that navigation data get automatically packaged up with the level.
 
-See ~{ Integrate Gameware Navigation into your game runtime }~.
+See ~{ Integrate Gameware Navigation into your project }~.
 
 **Bot Configuration**
 

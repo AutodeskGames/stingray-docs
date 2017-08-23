@@ -69,9 +69,9 @@ else
 end
 ~~~
 
-If you are using the Appkit in your game, you could put this code in your *script/lua/project.lua* file in order to make it run when the game is started.
+If you are using the Appkit in your project, you could put this code in your *script/lua/project.lua* file in order to make it run when the engine is started.
 
-Note that after you do steps 1-3 to bring the C constructs into the Lua environment, you can then invoke the functions at any time you need them. So, you can do steps 1-3 once during your game's initialization, then call the functions from your scripts or from custom Flow nodes.
+Note that after you do steps 1-3 to bring the C constructs into the Lua environment, you can then invoke the functions at any time you need them. So, you can do steps 1-3 once when the engine is initialized, then call the functions from your scripts or from custom Flow nodes.
 
 ## Step 3. Make your library available to the engine
 

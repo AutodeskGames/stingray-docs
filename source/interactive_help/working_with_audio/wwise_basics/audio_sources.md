@@ -6,7 +6,7 @@ When a listener comes within range of an audio source that you have placed in yo
 
 > ![](../../images/icon_video.png) For a video tutorial that helps you understand working with audio sources in {{ProductName}}, go [here](http://area.autodesk.com/learning/understanding-audio-sources).
 
-Note that the attenuation settings that you configure for your sound events in Wwise have a large effect on the way your source will be perceived in the game. For details on setting up attenuation in the Wwise authoring tool, see the [Wwise documentation](https://www.audiokinetic.com/library/2015.1.2_5457/?source=Help&id=applying_distance_based_attenuation) or [this quick tip video](https://www.youtube.com/watch?v=v0D4lJkffII).
+Note that the attenuation settings that you configure for your sound events in Wwise have a large effect on the way people will perceive your source when they experience your interactive app. For details on setting up attenuation in the Wwise authoring tool, see the [Wwise documentation](https://www.audiokinetic.com/library/2015.1.2_5457/?source=Help&id=applying_distance_based_attenuation) or [this quick tip video](https://www.youtube.com/watch?v=v0D4lJkffII).
 
 ## Audio source shapes and ranges
 

@@ -1,11 +1,11 @@
 # Gameware Navigation
 
-Autodesk Gameware Navigation is a middleware for Artificial Intelligence (AI) in 3D video games and simulations: it helps your game-controlled characters (NPCs) find and follow paths from place to place in the game world, avoiding collisions with each other and with other dynamic obstacles; and it provides spatial analysis tools for getting information about the game world.
+Autodesk Gameware Navigation is a middleware for Artificial Intelligence (AI) in 3D video games and simulations: it helps your computer-controlled characters (NPCs) find and follow paths from place to place in the 3D world, avoiding collisions with each other and with other dynamic obstacles; and it provides spatial analysis tools for getting information about the 3D world.
 
 The Gameware Navigation plug-in adds the following capabilities to {{ProductName}}:
 
 *	You can automatically create navigation meshes for your levels in the interactive editor.
-*	You can spawn bots in your game at runtime, and make them find and follow paths from place to place in the level.
+*	You can spawn bots in the engine at runtime, and make them find and follow paths from place to place in the level.
 *	In your Lua or Flow code, you can conduct high-performance spatial queries against the navigation data, and use the results to drive gameplay.
 
 <table class="not-ruled"><tr><td>

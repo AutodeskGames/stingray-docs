@@ -3,7 +3,7 @@
 
 - **Window > Asset Browser**
 
-The **Asset Browser** is the main way to browse and import assets in your game project. It includes two main view panels, the folder or tree view, and the file view. Both areas include several controls that let you browse or search for assets efficiently.
+The **Asset Browser** is the main way to browse and import assets in your project. It includes two main view panels, the folder or tree view, and the file view. Both areas include several controls that let you browse or search for assets efficiently.
 
 ![Asset Browser Overview](../../images/comp_asset_browser.png)
 
@@ -23,7 +23,7 @@ The **Asset Browser** is the main way to browse and import assets in your game p
 | Duplicate assets and folders | Right-click assets and select **Duplicate**. For folders in the Asset Browser, right-click and select **Duplicate Folder**. |
 
 ## Tree view
-The Tree view displays all folders in your game project. Select a folder to display its contents in the File view area.
+The Tree view displays all folders in your project. Select a folder to display its contents in the File view area.
 
 You can use the **Import** button directly above the Tree view to import assets directly to a selected folder.
 
@@ -45,7 +45,7 @@ The file view indicates read-only folders and resources using a lock icon: ![Loc
 
 ## Favorites
 
-The **Favorites** lists the assets and folders you bookmark as a favorite ![](../../images/icon_asset_favorites.png). To add a frequently used asset or folder as a favorite, check the favorite icon ![](../../images/icon_asset_set_favorite.png) beside the asset/folder or right-click and select **Add to Favorites**. You can also drag and drop assets and folders to the **Favorites**.  
+The **Favorites** lists the assets and folders you bookmark as a favorite ![](../../images/icon_asset_favorites.png). To add a frequently used asset or folder as a favorite, check the favorite icon ![](../../images/icon_asset_set_favorite.png) beside the asset/folder or right-click and select **Add to Favorites**. You can also drag and drop assets and folders to the **Favorites**.
 
 To remove the favorite bookmark, select the asset or folder, and uncheck the Favorites icon or right-click and select **Remove from Favorites**. You can also hide the **Favorites** from the Asset view by unchecking *Favorites* in the configuration option ![ ](../../images/icon_config.png).
 

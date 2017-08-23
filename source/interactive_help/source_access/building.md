@@ -28,7 +28,7 @@ By default, `make.rb` places all generated binaries and other required files und
 -	`editor`: the interactive editor executables.
 -	`engine`
     -	`<platform>`: The engine runtime and data compiler for each platform.
--	`tools`: Legacy Bitsquid tools, such as the Unit Editor and Material Editor.
+-	`tools`: Legacy editing tools, such as the Unit Editor and Material Editor.
 -   `tools_external`: Third-party editing tools.
 
 You can specify a different output location using the `--output` command-line option.

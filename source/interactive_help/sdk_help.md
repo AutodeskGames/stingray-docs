@@ -10,7 +10,7 @@ Use this SDK if you want to do things like:
 
 -	Integrate the editor and/or the runtime engine with third-party libraries, applications, web services, or data sources;
 
--	Generate new content programmatically on the fly during the game;
+-	Generate new content programmatically on the fly while the app is running;
 
 -	Write your own gameplay interaction code in C instead of using Flow or Lua;
 

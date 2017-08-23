@@ -7,7 +7,7 @@ Most of the template projects that come with {{ProductName}} (except for the `em
 
 The `empty` template contains an empty Scaleform Studio project to help you get started, but it doesn't include the scripts found in other templates.
 
-You can modify these templates to suit your game project, or create a new Scaleform Studio project and import it to your {{ProductName}} project.
+You can modify these templates to suit your project, or create a new Scaleform Studio project and import it to your {{ProductName}} project.
 
 ### To import your own Scaleform Studio project to {{ProductName}}
 

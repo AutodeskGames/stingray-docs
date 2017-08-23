@@ -6,7 +6,7 @@ The {{ProductName}} editor ships with a few sample projects to help you get star
 
 ![](../../images/template_projects.png)
 
-The best way to start a new project is always to clone an existing one, like the Basic project, rather than starting completely from scratch. This ensures you have the correct project structure built in when it's time to compile your game.
+The best way to start a new project is always to clone an existing one, like the Basic project, rather than starting completely from scratch. This ensures you have the correct project structure built in when it's time to compile your project.
 
 If you want to start with nothing in your project, use the `Empty` project to start.
 

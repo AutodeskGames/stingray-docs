@@ -2,7 +2,7 @@
 
 You can use the Status bar at the bottom of the interactive editor to send simple commands to an instance of the engine that you started from the editor. This can be a local instance of the engine on your PC, the Test Engine, or the engine running on a connected console.
 
-For example, you can execute a command that draws a performance HUD in the game viewport by entering `perfhud artist` or `perfhud network`. You can use other commands to enable and disable the built-in profiling system, toggle the display of performance statistics in the game viewport, or pause and resume the game itself.
+For example, you can execute a command that draws a performance HUD in the engine viewport by entering `perfhud artist` or `perfhud network`. You can use other commands to enable and disable the built-in profiling system, toggle the display of performance statistics in the engine viewport, or pause and resume the engine itself.
 
 **To execute commands from the Status bar:**
 
@@ -28,7 +28,7 @@ For details, see [the home page of our Visual Studio Code extension](https://mar
 
 ## Using the External Console
 
-If you need to send console commands to a standalone game that is not connected to the editor, you can use the **External Console** application. From the main menu, select **Window > External Console** (Hotkey: **Alt + 2**).
+If you need to send console commands to a standalone interactive app that is not connected to the editor, you can use the **External Console** application. From the main menu, select **Window > External Console** (Hotkey: **Alt + 2**).
 
 Connect to **localhost** in the **External Console** application when you want to debug or view performance statistics of a deployed package.
 

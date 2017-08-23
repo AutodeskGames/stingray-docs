@@ -14,7 +14,7 @@ You'll have to install and set up a few things on the Windows machine that you u
 
 ### Set up and run the iOS Package Server
 
-The **{{SR_DOC_FULL_NAME}} Packaging Server** lets you package and re-sign the interactive engine and your iOS game from your Windows development machine.
+The **{{SR_DOC_FULL_NAME}} Packaging Server** lets you package and re-sign the interactive engine from your Windows development machine.
 
 Due to restrictions from Apple, the iOS packaging process cannot be fully completed on a Windows machine only. Some steps can only be completed on a computer running Mac OS X. This is where the **{{SR_DOC_FULL_NAME}} Packaging Server** comes in.
 
@@ -75,7 +75,7 @@ To generate the engine *.ipa* files:
 
 	The file is created and saved in your Windows user directory, typically under `AppData\Local\Autodesk\{{SR_DOC_SHORT_NAME}}\engine\ios\<configuration>`.
 
-Once the *.ipa* file for the engine is available, the **Deployer** panel shows all of the options you can set when you deploy a full standalone build of your game. See [Deploy the project for iOS] below.
+Once the *.ipa* file for the engine is available, the **Deployer** panel shows all of the options you can set when you deploy a full standalone build of your interactive app. See [Deploy the project for iOS] below.
 
 ## Step 3. Connect the editor to the device
 
@@ -124,13 +124,13 @@ Deploying creates a standalone *.ipa* bundle that you can try out on your device
 1.	In the interactive editor, open the **Deployer** panel (**Window > Deploy and Connect > Deployer**) to the iOS tab and enter the required information. (See below.)
 1.	Click **Package Project for iOS**.
 
-The deployer creates an *.ipa* file for your game, and copies it to the location on your computer that you specify in the **Destination** field.
+The deployer creates an *.ipa* file for your app, and copies it to the location on your computer that you specify in the **Destination** field.
 
 **After deploying:**
 
--	To copy your deployed game to a connected device for testing, use iTunes.
+-	To copy your deployed app to a connected device for testing, use iTunes.
 
--	To distribute your game on the Apple iTunes Store, use the tools provided by Apple. See the [App Distribution Guide](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html).
+-	To distribute your app on the Apple iTunes Store, use the tools provided by Apple. See the [App Distribution Guide](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html).
 
 ### iOS deployment settings
 
@@ -162,11 +162,11 @@ These settings are common for all tabs. See ~{ Using the Deployer panel }~.
 
 ### Icons settings
 
-Icons used for your app. If you leave them empty, the **Deployer** uses a default Autodesk icon. When you are ready to release your game, you'll need to specify an icon for each listed size.
+Icons used for your app. If you leave them empty, the **Deployer** uses a default Autodesk icon. When you are ready to release your app, you'll need to specify an icon for each listed size.
 
 ### Launch Images settings
 
-The Launch images (splash screens) used for your app. If you leave them empty, the **Deployer** uses a default Autodesk image. When you are ready to release your game, you'll need to specify an icon for each listed size.
+The Launch images (splash screens) used for your app. If you leave them empty, the **Deployer** uses a default Autodesk image. When you are ready to release your app, you'll need to specify an icon for each listed size.
 
 ## Step 5. Keep your content optimized!
 

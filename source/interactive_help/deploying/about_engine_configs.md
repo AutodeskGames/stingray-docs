@@ -2,7 +2,7 @@
 
 The interactive engine comes in multiple different flavors, called "configurations".
 
-The only real rule to remember is that you should always use the `Release` configuration to do any builds of your game that you distribute.
+The only real rule to remember is that you should always use the `Release` configuration to do any builds of your app that you distribute.
 
 Otherwise, the difference between these configurations comes down to a tradeoff between the ability to debug what's going on inside the engine on one hand, and getting optimal performance and speed on the other hand.
 
@@ -10,7 +10,7 @@ Otherwise, the difference between these configurations comes down to a tradeoff 
 
 `Release`
 
->	The `release` configuration is the smallest, fastest, most highly optimized version of the engine. It achieves this optimization by omitting a lot of code that is only useful during your project's design and development phase -- like error reporting, console connections to the editor, and performance HUDs. Always try to use this configuration for builds of your game that you intend to distribute outside your organization or team.
+>	The `release` configuration is the smallest, fastest, most highly optimized version of the engine. It achieves this optimization by omitting a lot of code that is only useful during your project's design and development phase -- like error reporting, console connections to the editor, and performance HUDs. Always try to use this configuration for builds of your app that you intend to distribute outside your organization or team.
 
 `Development`
 

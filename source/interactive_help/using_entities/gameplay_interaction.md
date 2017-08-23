@@ -38,14 +38,14 @@ Using the component ID can sometimes be more convenient. However, if you need to
 
 ## Spawn and destroy an entity
 
-Entities that you place in a level in the editor are automatically spawned when you load that level into your game at runtime. These entities are automatically destroyed when the level is unloaded, if they have not already been destroyed.
+Entities that you place in a level in the editor are automatically spawned when you load that level into your project at runtime. These entities are automatically destroyed when the level is unloaded, if they have not already been destroyed.
 
 In addition, you can spawn entities at runtime using the following methods from the `EntityManager` API:
 
--	`EntityManager.create()` creates a new, empty entity in the game world. This entity has no components assigned to it and does not inherit from any other entity asset. It is a blank slate for you to customize by adding new components.
+-	`EntityManager.create()` creates a new, empty entity in the engine world. This entity has no components assigned to it and does not inherit from any other entity asset. It is a blank slate for you to customize by adding new components.
 -	`EntityManager.spawn()` creates a new entity from an entity asset that you pass to the function. This entity will be created with all of the components and data that you have set up in the entity asset you specify.
 
-When you no longer need an entity in your game, you can destroy it by calling `EntityManager.destroy()`. You can call this function for any entity, regardless of whether you created the entity dynamically by calling the functions above, or whether that entity was spawned automatically when its level was loaded into the game.
+When you no longer need an entity in your project, you can destroy it by calling `EntityManager.destroy()`. You can call this function for any entity, regardless of whether you created the entity dynamically by calling the functions above, or whether that entity was spawned automatically when its level was loaded into the engine world.
 
 ## Get a list of entities
 

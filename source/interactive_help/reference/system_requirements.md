@@ -18,7 +18,7 @@ Microsoft® Windows® 7 (SP1), Windows 8.1, or Windows 10
 
 {{ProductName}} enables developers to deploy projects to Microsoft Windows 7, Windows 8, Windows 10, Apple® iOS, Google® Android®, Sony® PlayStation® 4, and Microsoft Xbox One®.
 
-See ~{ Supported platforms }~ for additional details on target game platforms, compatible devices and VR SDK kits.
+See ~{ Supported platforms }~ for additional details on target platforms, compatible devices and VR SDK kits.
 
 ## Web browser
 

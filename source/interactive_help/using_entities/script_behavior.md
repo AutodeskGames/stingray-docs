@@ -4,7 +4,7 @@ Often, you'll want all entities of a given type to behave the same way when you 
 
 This is made easier by using *script* components and *Flow* components, which associate your entities with Lua modules and Flow graphs in your project. Those Lua modules and Flow graphs can take care of responding to the events that happen over the lifetime of the entity, and carrying out the appropriate response for the entity to take.
 
-These components are useful because they help you keep your entity's behavior relatively self-contained. This makes your game easier to manage, and makes it easier to re-use your behaviors. For example, instead of having to include a Lua routine in your game's main update loop that checks the state of each door in the level, you can encapsulate all the dynamic runtime behavior for your doors inside a script component that gets invoked automatically. This keeps your main gameplay scripts and Flow graphs less cluttered with logic to handle for specific types of game objects, and allows you to more easily share behaviors between different entities (and across multiple projects).
+These components are useful because they help you keep your entity's behavior relatively self-contained. This makes your project easier to manage, and makes it easier to re-use your behaviors. For example, instead of having to include a Lua routine in your app's main update loop that checks the state of each door in the level, you can encapsulate all the dynamic runtime behavior for your doors inside a script component that gets invoked automatically. This keeps your main gameplay scripts and Flow graphs less cluttered with logic to handle for specific types of objects, and allows you to more easily share behaviors between different entities (and across multiple projects).
 
 ## Set up a behavior in Flow
 
@@ -80,11 +80,11 @@ The best way to get started writing a behavior module for your own entities is t
 
 	For a full list of all the functions that you can set up in your script component module, as well as what parameters get passed to each, see the *core/components/templates/script_component.template* file.
 
-The trickiest thing to keep in mind while writing this script is that your module has to handle *all* entities that it is associated with, across all game worlds. You don't have a separate copy of the component object you define in this script for each entity; there is only *one* instance of this Lua object in the game. The script module itself is only run once, the first time one of its associated entities is spawned. After that, each time one of the functions in this module needs to be invoked (say the `update()` function), it is only invoked *one* time. You have to be aware when implementing these functions that your component has to handle the event for all entity instances associated with that component.
+The trickiest thing to keep in mind while writing this script is that your module has to handle *all* entities that it is associated with, across all worlds in the engine. You don't have a separate copy of the component object you define in this script for each entity; there is only *one* instance of this Lua object. The script module itself is only run once, the first time one of its associated entities is spawned. After that, each time one of the functions in this module needs to be invoked (say the `update()` function), it is only invoked *one* time. You have to be aware when implementing these functions that your component has to handle the event for all entity instances associated with that component.
 
 For example, if you look at the template file, you'll see that the pre-written function definitions for `spawned()` and `unspawned()` cache some state information in the `world_data` field about all entities that are currently using the component. It uses this cache in the `update()` function to loop through all of the entities that need updating.
 
-Note that you don't have to `require` your script anywhere. The script component will automatically take care of loading it in to the Lua environment in the game.
+Note that you don't have to `require` your script anywhere. The script component will automatically take care of loading it in to the engine's Lua environment.
 
 #### More examples
 

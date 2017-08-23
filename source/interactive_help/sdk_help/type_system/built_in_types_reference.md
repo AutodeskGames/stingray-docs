@@ -129,7 +129,7 @@ Property|Type    |Default |Description
 For example, in order to decide the concrete type at run-time, the following interface reads the value of the `"type"` property of the Object. This will typically be a type resource name or a short type alias string.
 
 ~~~{sjson}
-// core/types/flow_node.type
+// content/types/zone.type
 export = {
     type = ":interface"
     refine = {
@@ -139,14 +139,14 @@ export = {
 }
 ~~~
 
-Let's look at a game-specific `:struct` that implements the interface. The `implements` declaration tells the type system to resolve the short type alias `"sword_trail"` to our concrete type, `game/types/sword_trail_flow_node` in the context of the virtual type `core/types/flow_node`. If we do not want to use a short type alias, we can state `"core/types/flow_node" = true` in our `implements` declaration instead.
+Let's look at a project-specific `:struct` that implements the interface. The `implements` declaration tells the type system to resolve the short type alias `"danger_zone"` to our concrete type, `content/types/danger_zone_config` in the context of the virtual type `content/types/zone`. If we do not want to use a short type alias, we can state `"content/types/zone" = true` in our `implements` declaration instead.
 
 ~~~
-// game/types/sword_trail_flow_node.type
+// content/types/danger_zone_config.type
 export = {
     type = ":struct"
     implements = {
-        "core/types/flow_node" = "sword_trail"
+        "content/types/zone" = "danger_zone"
     }
     fields = {
         ...
@@ -154,34 +154,32 @@ export = {
 }
 ~~~
 
-And here's an example usage of the interface, a type file that describes the `.flow` file format. Our set of nodes can contain any struct that declares it implements the `core/types/flow_node` interface.
+And here's an example usage of the interface, a type file that describes a `.zone_list` file format. Our set of zones can contain any struct that declares it implements the `content/types/zone` interface.
 
 ~~~{sjson}
-// core/types/flow.type
-extension = "flow"
+// content/types/zone_list.type
+extension = "zone_list"
 export = {
     type = ":struct"
     fields = {
-        nodes = {
+        zones = {
             type = ":dict"
             key = ":guid"
-            value = "core/types/flow_node"
+            value = "content/types/zone"
         }
     }
 }
 ~~~
 
-Based on these type declarations we are now able to determine that the first element in our collection of nodes inside this `.flow` file is of type `game/types/sword_trail_flow_node`, because we know that `nodes` is a `:dict` of values of type `core/types/flow_node` -- and the specified entry is refined into the concrete type `game/types/sword_trail_flow_node` because the `type` of the Object is `"sword_trail"`.
+Based on these type declarations we are now able to determine that the first element in our collection of zones inside the following sample `.zone_list` file is of type `content/types/danger_zone_config`, because we know that `zones` is a `:dict` of values of type `content/types/zone` -- and the specified entry is refined into the concrete type `content/types/danger_zone_config` because the `type` of the Object is `"danger_zone"`.
 
 ~~~{sjson}
-// game/units/guard/guard.flow
-nodes = {
+// content/factory_floor.zone_configuration
+zones = {
     "2c91b841-a48f-49cb-8a48-9e5f2d5550e1" = {
-        type = "sword_trail"
+        type = "danger_zone"
         variable_values = {
-            parent_node = "right_hand"
-            axis = "z"
-            sword_length = 1.1
+            danger_level = 9
             ...
         }
     }

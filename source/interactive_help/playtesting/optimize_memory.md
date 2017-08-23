@@ -1,38 +1,38 @@
 # Optimize memory usage
 
-Your game needs to load your project's resources into memory in order to render them or work with the data they contain. And every device that can run your game has a hard limit on the amount of memory it makes available. This implies a limit on both the quantity and size of the resources the game can load at any given time. Needless to say, these limits are especially low on mobile devices. However, even on 64-bit PCs and consoles, memory becomes increasingly precious as the scope of your game project increases.
+Your interactive application needs to load your project's resources into memory in order to render them or work with the data they contain. And every device that can run your app has a hard limit on the amount of memory it makes available. This implies a limit on both the quantity and size of the resources the engine can load at any given time. Needless to say, these limits are especially low on mobile devices. However, even on 64-bit PCs and consoles, memory becomes increasingly precious as the scope of your project increases.
 
-It is critical to ensure that your game never runs out of memory. If your game needs more memory that it can get from the operating system, it is likely to crash immediately and be terminated by the operating system before the engine even has a chance to respond.
+It is critical to ensure that your app never runs out of memory. If the engine needs more memory that it can get from the operating system, it is likely to crash immediately and be terminated by the operating system before the engine even has a chance to respond.
 
-Rather than ignore memory usage until your game gets so heavy that it crashes, a more proactive approach establishes budgets and best practices from the beginning of the project, and monitors the actual usage throughout the development cycle. This avoids panic in the final stages before release.
+Rather than ignore memory usage until your project gets so heavy that it crashes, a more proactive approach establishes budgets and best practices from the beginning of the project, and monitors the actual usage throughout the development cycle. This avoids panic in the final stages before release.
 
-This page presents some tips and techniques for reducing the amount of memory your game needs. These fall into three main categories:
+This page presents some tips and techniques for reducing the amount of memory your project needs. These fall into three main categories:
 
 -	Loading only the resources you need, only at the time you need them.
 -	Reducing the size in memory of individual assets or groups of assets, typically by trading off some quality.
--	Disabling or minimizing subsystems that you don't intend to use in your game.
+-	Disabling or minimizing subsystems that you don't intend to use in your app.
 
 ## Set budgets or quotas
 
 Before you begin optimizing and minimizing memory usage, it's helpful to have a clear idea of the targets you're trying to reach.
 
-Your overall budget will depend on the specs for the hardware devices that you want to support. From this, you have to subtract the memory used by the operating system. Then, subtract a large percentage to account for memory space used by other apps -- you cannot simply assume that your game is the only app running on the device. Finally, shave off an extra percentage to give yourself the comfort of some extra "headroom". Depending on how safe you want to be from unpredictable crashes, your overall target might be a quarter of the available device memory, or even less.
+Your overall budget will depend on the specs for the hardware devices that you want to support. From this, you have to subtract the memory used by the operating system. Then, subtract a large percentage to account for memory space used by other apps -- you cannot simply assume that your interactive app is the only thing running on the device. Finally, shave off an extra percentage to give yourself the comfort of some extra "headroom". Depending on how safe you want to be from unpredictable crashes, your overall target might be a quarter of the available device memory, or even less.
 
-Once you have an idea of the overall budget for the game as a whole, you may also find it useful to divide the total into smaller budgets for different subsystems or different kinds of resources, such as textures, audio, meshes. The numbers here are likely to vary depending on the kind of game you intend to develop. For example, if the aesthetic of your game involves intentionally low-poly art but complex music and audio cues, you may need to assign a larger budget to your audio resources as a percentage of the overall budget than you do for games that are heavy on visuals. These budgets do not need to be absolute rules and may be subject to negotiation over the course of your project, but if you have multiple team members working on different areas of the project, setting some rough expectations up front can help the teams collaborate more smoothly.
+Once you have an idea of the overall budget for the app as a whole, you may also find it useful to divide the total into smaller budgets for different subsystems or different kinds of resources, such as textures, audio, meshes. The numbers here are likely to vary depending on the kind of content you intend to develop. For example, if the aesthetic of your project involves intentionally low-poly art but complex music and audio cues, you may need to assign a larger budget to your audio resources as a percentage of the overall budget than you do for experiences that are heavy on visuals. These budgets do not need to be absolute rules and may be subject to negotiation over the course of your project, but if you have multiple team members working on different areas of the project, setting some rough expectations up front can help the teams collaborate more smoothly.
 
 ## Monitor runtime usage
 
-If you don't have clear data about the real memory usage of your game at runtime, you won't be able to identify where the problems are that you need to solve. Without data, you can easily spend time and effort in the wrong places: for example, aggressively reducing your texture quality even though your problems are really caused by enormous, highly detailed models.
+If you don't have clear data about the real memory usage of your app at runtime, you won't be able to identify where the problems are that you need to solve. Without data, you can easily spend time and effort in the wrong places: for example, aggressively reducing your texture quality even though your problems are really caused by enormous, highly detailed models.
 
-It's also essential to evaluate the memory used in the game at runtime, because the size in memory of a resource is often very different from the size of the resource on disk. For example, image textures in your project folder will often be stored on disk in a compressed *.png* format that can make the files tiny on disk. However, in runtime memory the texture data are uncompressed and take up much more space than you might expect from their file size.
+It's also essential to evaluate the memory used in the engine at runtime, because the size in memory of a resource is often very different from the size of the resource on disk. For example, image textures in your project folder will often be stored on disk in a compressed *.png* format that can make the files tiny on disk. However, in runtime memory the texture data are uncompressed and take up much more space than you might expect from their file size.
 
-There are several console commands you can use to get information about the memory usage in your game:
+There are several console commands you can use to get information about the memory usage in the engine:
 
--	`memory_tree`: Prints to the ~{ Log Console }~ a hierarchical tree of all memory allocated by different sub-systems within your game.
+-	`memory_tree`: Prints to the ~{ Log Console }~ a hierarchical tree of all memory allocated by different sub-systems within the engine.
 
 	![Memory tree output](../images/command_memory_tree.png)
 
--	`memory_resources`: Prints to the ~{ Log Console }~ a list of the memory taken up by the resources loaded into your game, organized by type.
+-	`memory_resources`: Prints to the ~{ Log Console }~ a list of the memory taken up by the resources loaded into the engine, organized by type.
 
 	![Memory resources "all" output](../images/command_memory_resources.png)
 
@@ -49,11 +49,11 @@ There are several console commands you can use to get information about the memo
 	You can also show these visualizations in the viewport of the interactive editor. Click the **View** overlay on the viewport, and select **performance hud** from the contextual menu.
 
 
-For details on sending commands from the editor to a running game, see ~{ Send Commands from the Status Bar }~. For more detail about the commands themselves, see ~{ Console commands }~.
+For details on sending commands from the editor to a running instance of the engine, see ~{ Send Commands from the Status Bar }~. For more detail about the commands themselves, see ~{ Console commands }~.
 
 ## Remove unused resources from the boot package or the project
 
-If your game crashes on startup, particularly when testing on mobile devices with low available memory, the most likely cause is that the boot package is trying to load in too many resources.
+If the engine crashes on startup, particularly when testing on mobile devices with low available memory, the most likely cause is that the boot package is trying to load in too many resources.
 
 If your boot package is using wildcards to decide what resources it should contain, it may be that some of the resources it's loading aren't actually necessary. This is particularly likely if you're using the following line to load *all* resources of *all* types that are in the project.
 
@@ -69,9 +69,9 @@ See also ~{ About the boot package }~ and ~{ Defining resource packages }~.
 
 ## Use multiple resource packages
 
-The most powerful and flexible option that you have for controlling your game's memory usage is to divide your project's resources into multiple separate packages, and to stream these packages in and out of memory dynamically during the game when they are needed.
+The most powerful and flexible option that you have for controlling your project's memory usage is to divide your project's resources into multiple separate packages, and to stream these packages in and out of memory dynamically at runtime when they are needed.
 
-Any project that needs different sets of resources at different times can usually benefit from this approach. For example, if your game has multiple levels, you could create a separate resource package for the assets used in each level. That way, each level can take up the full memory budget for the game without having to share the available memory with other levels. Even if you only have a single level, you might be able to use resource packages for different isolated parts of the level, or for different characters.
+Any project that needs different sets of resources at different times can usually benefit from this approach. For example, if your project has multiple levels, you could create a separate resource package for the assets used in each level. That way, each level can take up the full memory budget for the app without having to share the available memory with other levels. Even if you only have a single level, you might be able to use resource packages for different isolated parts of the level, or for different characters.
 
 For more detail on how to set up this kind of system, see the topics under ~{ Loading and unloading content at runtime }~.
 
@@ -79,17 +79,17 @@ Note that even if you decide to set up a custom system for streaming resource pa
 
 ## Optimize textures
 
-Textures are usually by far the largest memory consumers for most games. Of course, they are also a large part of the visual appeal of the game. Therefore, finding a good balance between visual quality and memory size can be tricky. This is especially true if you need to support multiple different platforms with very different screen sizes and available memory. On a device with a large screen, you might need to put more of a priority on image quality. By contrast, on a smaller screen, you can use lower quality or smaller textures without a noticeable difference in the rendering quality.
+Textures are usually by far the largest memory consumers for most projects. Of course, they are also a large part of the visual appeal of the content. Therefore, finding a good balance between visual quality and memory size can be tricky. This is especially true if you need to support multiple different platforms with very different screen sizes and available memory. On a device with a large screen, you might need to put more of a priority on image quality. By contrast, on a smaller screen, you can use lower quality or smaller textures without a noticeable difference in the rendering quality.
 
 The following sections provide some tips to help you achieve the best balance of memory and quality for your project.
 
 ### Reduce texture sizes
 
-The first step in optimizing your textures is to start with an appropriate image size. If you make every texture in your game 4096x4096 pixels, you will quickly run out of memory on any system.
+The first step in optimizing your textures is to start with an appropriate image size. If you make every texture in your project 4096x4096 pixels, you will quickly run out of memory on any system.
 
 There is no hard and fast rule about what sizes your textures should be. Ultimately you make this decision depending on:
 
--	The maximum amount of screen space that the texture will take up when rendered in game. This will in turn depend on the size of the model that the texture is applied to, and on how close the camera will get to the model. For example, a mountain may be large, but if it remains far in the distance you can still use smaller textures for it without noticing a difference. Similarly, a small object like a newspaper or book may need larger textures if the player is able or encouraged to inspect it closely.
+-	The maximum amount of screen space that the texture will take up when rendered in the engine. This will in turn depend on the size of the model that the texture is applied to, and on how close the camera will get to the model. For example, a mountain may be large, but if it remains far in the distance you can still use smaller textures for it without noticing a difference. Similarly, a small object like a newspaper or book may need larger textures if the player is able or encouraged to inspect it closely.
 
 -	The visual quality or fidelity that you need to have for the object. For example, you might consider that some blocky artifacts are acceptable for parts of the level that the player will only see for a short time, or where the player will likely be focusing elsewhere due to the gameplay.
 
@@ -103,7 +103,7 @@ You can use the **Texture Manager** to control the way the engine compiles your 
 
 -	The most important setting to adjust is the **Output Format**, which defines the kind of compression that is applied to your texture.
 
-	By applying a compression algorithm like PVR for iOS, or DXT5 for other platforms, you can often lower the in-game memory consumption of your textures dramatically at the cost of introducing some compression artifacts into the images.
+	By applying a compression algorithm like PVR for iOS, or DXT5 for other platforms, you can often lower the in-engine memory consumption of your textures dramatically at the cost of introducing some compression artifacts into the images.
 
 	Note that the errors and artifacts introduced by the texture compression are usually least apparent for textures that contain straightforward color maps. However, you may want to avoid compressing normal maps, since the compression tends to introduce very obvious irregularities into the surface.
 
@@ -115,19 +115,19 @@ For details on using the **Texture Manager**, see also the topics under ~{ Worki
 
 ### Take advantage of texture streaming
 
-By default, {{ProductName}} treats textures like any other resource. It loads them into memory along with all the other resources in a resource package, keeps them in memory persistently, and unloads them only when you unload the resource package. This means that all the mip levels for each texture are taking up memory in your game even when those mip levels are not actually being used due to the texture being off-screen or very distant.
+By default, {{ProductName}} treats textures like any other resource. It loads them into memory along with all the other resources in a resource package, keeps them in memory persistently, and unloads them only when you unload the resource package. This means that all the mip levels for each texture are taking up memory in the engine even when those mip levels are not actually being used due to the texture being off-screen or very distant.
 
-Instead, you can set up the engine to stream texture data into memory only when that data is actually needed for rendering. With texture streaming, you can increase the number of textures you use in your game without increasing memory usage, and without decreasing the maximum resolution of those textures.
+Instead, you can set up the engine to stream texture data into memory only when that data is actually needed for rendering. With texture streaming, you can increase the number of textures you use in your project without increasing memory usage, and without decreasing the maximum resolution of those textures.
 
 For details on how this system works, see ~{ Texture streaming }~.
 
 ### Or, reduce texture streaming memory
 
-The engine reserves 16 MB of memory at startup for use by the texture streaming system. If you choose not to use texture streaming in your game, you can avoid allocating this memory by setting the value of the `streaming_buffer_size` key to `0` in your project's *settings.ini* file for each of your target platforms. See the ~{ settings.ini file reference }~.
+The engine reserves 16 MB of memory at startup for use by the texture streaming system. If you choose not to use texture streaming in your project, you can avoid allocating this memory by setting the value of the `streaming_buffer_size` key to `0` in your project's *settings.ini* file for each of your target platforms. See the ~{ settings.ini file reference }~.
 
 ### Reduce lightmap texture size
 
-When you bake the lighting for a level, you generate additional textures that your game needs to load. Although baking typically achieves higher quality rendering with lower CPU and GPU usage, this always comes at the cost of higher runtime memory requirements.
+When you bake the lighting for a level, you generate additional textures that the engine needs to load. Although baking typically achieves higher quality rendering with lower CPU and GPU usage, this always comes at the cost of higher runtime memory requirements.
 
 If your lightmaps are taking up too much memory, you can try the following ideas:
 
@@ -143,15 +143,15 @@ If your lightmaps are taking up too much memory, you can try the following ideas
 
 ## Optimize models
 
-The more vertices and data channels in each model asset that you add to your project, the more memory it will take to load that mesh into the game. You may be able to save some memory by optimizing your meshes in your modeling tool (i.e. 3ds Max or Maya) to reduce their vertex count and to remove any channels that aren't needed in the game (for example, extra UV sets).
+The more vertices and data channels in each model asset that you add to your project, the more memory it will take to load that mesh into the engine. You may be able to save some memory by optimizing your meshes in your modeling tool (i.e. 3ds Max or Maya) to reduce their vertex count and to remove any channels that aren't needed at runtime (for example, extra UV sets).
 
-There are no strict rules about what vertex counts you should aim for. Like with texture size, you have to balance memory requirements against the visual quality of the model when rendering in game, which depends on the size of the model, its distance from the camera, and its importance to the gameplay or the scene. Remember that you may be able to treat some models like movie set dressing: if the player will never see the back of a particular building or object, it can be a flat plane with minimal vertices.
+There are no strict rules about what vertex counts you should aim for. Like with texture size, you have to balance memory requirements against the visual quality of the model when rendering in the engine, which depends on the size of the model, its distance from the camera, and its importance to the gameplay or the scene. Remember that you may be able to treat some models like movie set dressing: if the player will never see the back of a particular building or object, it can be a flat plane with minimal vertices.
 
-Unless your mesh sizes are really excessive to start with, you probably will not see as dramatic a difference in memory consumption as you do when optimizing textures. However, the more different meshes you have in the game at the same time, the more your small optimizations will add up.
+Unless your mesh sizes are really excessive to start with, you probably will not see as dramatic a difference in memory consumption as you do when optimizing textures. However, the more different meshes you have in the engine at the same time, the more your small optimizations will add up.
 
 ## Optimize audio
 
-After textures and meshes, the type of resource that typically uses the most memory in your game is audio files.
+After textures and meshes, the type of resource that typically uses the most memory in the engine is audio files.
 
 As with textures and meshes described above, you can reduce memory requirements by trading off sound quality. However, there are many other complementary techniques that you can use in addition, such as streaming audio direct from disk, and tuning the size of the memory pools allocated internally by the Wwise engine.
 
@@ -165,7 +165,7 @@ The main memory optimization you can make in the physics subsystem is to avoid c
 
 -	Only create movers for units that represent controllable characters or objects.
 
--	If you don't need to use physics in your game at all, you can save memory by disabling it when you create the world in the engine. To do this, pass `stingray.Application.DISABLE_PHYSICS` in the call to `stingray.Application.new_world()` that creates the world. If you are using the Appkit, this is done in the *core/appkit/lua/simple_project.lua* file.
+-	If you don't need to use physics in your project at all, you can save memory by disabling it when you create the world in the engine. To do this, pass `stingray.Application.DISABLE_PHYSICS` in the call to `stingray.Application.new_world()` that creates the world. If you are using the Appkit, this is done in the *core/appkit/lua/simple_project.lua* file.
 
 ## Compress animation clips
 
@@ -181,7 +181,7 @@ To keep the memory used by the Lua environment down:
 
 -	Avoid creating large numbers of full userdata objects, like `stingray.Raycast`.
 
--	If you save temporary objects like `Vector3` and `Quaternion` across frames during the game using "box" objects like `Vector3Box` and `QuaternionBox`, try to create the boxes in a reusable pool at initialization time in order to avoid repeatedly creating new instances on the heap during the game. See also ~{ Object lifetimes and userdata binding }~.
+-	If you save temporary objects like `Vector3` and `Quaternion` across multiple frames by using "box" objects like `Vector3Box` and `QuaternionBox`, try to create the boxes in a reusable pool at initialization time in order to avoid repeatedly creating new instances on the heap. See also ~{ Object lifetimes and userdata binding }~.
 
 -	Use the typical best practices for coding in Lua to avoid placing too much strain on the built-in garbage collection system. For example, avoid concatenating strings together in loops; instead, insert the string fragments into a table and concatenate it once.
 
@@ -191,7 +191,7 @@ See also [this blog post](http://bitsquid.blogspot.com/2011/08/fixing-memory-iss
 
 ## Check for leaks in level design and gameplay
 
-If a level is still taking up too much memory after you've gone through the options above for reducing the memory consumed by the various resource types and sub-systems in your game, check thoroughly to make sure that your level isn't consuming memory unnecessarily or without your knowledge.
+If a level is still taking up too much memory after you've gone through the options above for reducing the memory consumed by the various resource types and sub-systems in the engine, check thoroughly to make sure that your level isn't consuming memory unnecessarily or without your knowledge.
 
 -	Don't spawn huge numbers of units at runtime in Flow or Lua without unspawning them afterward. Extra instances of a unit don't take up much extra space in memory, so you can spawn them pretty freely. However, if you spawn thousands of them -- for example, projectiles like bullets or arrows -- they will increase memory usage, especially if they have physics actors.
 

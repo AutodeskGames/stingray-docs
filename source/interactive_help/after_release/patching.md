@@ -1,26 +1,26 @@
-# Patching your game
+# Patching your app
 
-You can update bundled releases of your game by creating incremental patches that contain new content, bug fixes, and updates to existing assets.
+You can update bundled releases of your app by creating incremental patches that contain new content, bug fixes, and updates to existing assets.
 
-These incremental patches are made up of *patch bundles*. These are bundles of assets that correspond to the bundles originally released with your game, but that contain only files that have been added or modified since the original bundles were made. You install these files alongside the bundles originally shipped with your game, and the interactive engine automatically takes care of loading the latest versions of all your resources.
+These incremental patches are made up of *patch bundles*. These are bundles of assets that correspond to the bundles originally released with your app, but that contain only files that have been added or modified since the original bundles were made. You install these files alongside the bundles originally shipped with your app, and the interactive engine automatically takes care of loading the latest versions of all your resources.
 
 Each patch bundle is created with a file extension that increments each time you create a patch for that bundle. When the engine loads a resource package, it starts by loading all resources from the latest patch file available. It then loads each previous patch file in turn, skipping any resources that have already been loaded from a later patch file. Finally, it loads all remaining resources from the original bundle.
 
 ## Example
 
-For example, suppose that your game contains a package resource named `city_level.package`.
+For example, suppose that your project contains a package resource named `city_level.package`.
 
-When you bundle your game, all of the resources in this package get combined into a single bundled file named `7d07839294be9576`.
+When you bundle your project, all of the resources in this package get combined into a single bundled file named `7d07839294be9576`.
 
 After release, if you update one or more of the resources in this package, you will make a new patch bundle named `7d07839294be9576.patch_0`. This bundle contains only the new and modified resources.
 
-To make your game use the new and modified resources, you have to install this new patch bundle into the same folder that contains the existing `7d07839294be9576` bundle.
+To make the engine use the new and modified resources, you have to install this new patch bundle into the same folder that contains the existing `7d07839294be9576` bundle.
 
 ## Creating patch bundles
 
 {{ProductName}} provides a small standalone tool for creating patches, called the Patch Builder.
 
-The Patch Builder tool compares two complete versions of your game project. It automatically determines which resources have been added or modified between the two versions, and which packages contain one or more of those modified resources. It then creates a new patch bundle for each of those packages, for use on a target platform that you specify. If a patch bundle for one of those packages already exists in the original version of the project, it generates a new patch bundle with a higher patch version.
+The Patch Builder tool compares two complete versions of your project. It automatically determines which resources have been added or modified between the two versions, and which packages contain one or more of those modified resources. It then creates a new patch bundle for each of those packages, for use on a target platform that you specify. If a patch bundle for one of those packages already exists in the original version of the project, it generates a new patch bundle with a higher patch version.
 
 Since this process is platform-specific, you must repeat it for each platform that you need to patch.
 
@@ -30,9 +30,9 @@ To create a patch:
 
 	![The Patch Builder](../images/patch_builder.png)
 
-2.	In the **Original Data** area, you need to provide the source folder, compiled data folder, and bundled data folder for the version of your game project that you want to patch. Note that the compiled and bundled data folders are platform-specific.
+2.	In the **Original Data** area, you need to provide the source folder, compiled data folder, and bundled data folder for the version of your project that you want to patch. Note that the compiled and bundled data folders are platform-specific.
 
-3.	In the **Updated Data** area, provide the corresponding source folder, compiled data folder and bundled data folder for the version of your game project that contains the newest changes.  Note that the compiled and bundled data folders are platform-specific, and *must* match the platforms you set up for your original data.
+3.	In the **Updated Data** area, provide the corresponding source folder, compiled data folder and bundled data folder for the version of your project that contains the newest changes.  Note that the compiled and bundled data folders are platform-specific, and *must* match the platforms you set up for your original data.
 
 4.	Click **Check...**. The **Changed Resources** list will show all the resources that have been modified in the updated project data.
 
@@ -44,7 +44,7 @@ To create a patch:
 
 7.	Set an output directory in which the Patch Builder will create the patch bundles, and click **Build**.
 
-The patch builder creates the patch bundles in the specified directory. Packaging and distributing these files so that they end up installed at the correct location with the rest of your released game data is up to you.
+The patch builder creates the patch bundles in the specified directory. Packaging and distributing these files so that they end up installed at the correct location with the rest of your released data is up to you.
 
 ## Creating patch bundles manually
 

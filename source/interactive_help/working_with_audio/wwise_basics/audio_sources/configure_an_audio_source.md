@@ -10,7 +10,7 @@ When you have one or more audio sources selected in the viewport, you can config
 
 <dl>
 <dt>Bank Resource Name</dt>
-<dd>Sets the audio sound bank that will be loaded for use by this audio source. This value is used only when testing your level within the interactive editor. In your final game, you will need to handle the bank loading yourself. See ~{ Load sound banks at runtime }~. This bank must contain an event that matches the name set in the **Event Name** value.</dd>
+<dd>Sets the audio sound bank that will be loaded for use by this audio source. This value is used only when testing your level within the interactive editor. In your final interactive app, you will need to handle the bank loading yourself. See ~{ Load sound banks at runtime }~. This bank must contain an event that matches the name set in the **Event Name** value.</dd>
 <dt>Box Extents</dt>
 <dd>Sets the half-extents of the audio source's inner volume along its local right, front and up axes respectively. The actual dimensions of the inner volume will be twice these values. Used only when the **Shape** value is set to *Box*.</dd>
 <dt>Event Name</dt>

@@ -70,7 +70,7 @@ The gwnav volume types are located in *core/gwnav/volumes*.
 Spawn seedpoint Unit instances to only keep NavData connected to these seedpoints.
 This allows to prevent having NavData on tree tops, barriers or roof tops.
 
-Also note that NavMarker unit can also be used as `gwnavseedpoint` script data since this unit is instanciated to mark places to go during the game, hence if a NavMesh is generated there it should be kept. Though `gwnavseedpoint` is unchecked by default for NavMarkers.
+Also note that NavMarker unit can also be used as `gwnavseedpoint` script data -- this unit marks destination places, so you will likely want there to be a NavMesh in the surrounding area. However, the `gwnavseedpoint` property is unchecked by default for NavMarkers.
 
 Seedpoints are accessible using the ~{ Create panel }~:
 

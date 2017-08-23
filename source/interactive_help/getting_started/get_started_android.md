@@ -106,15 +106,15 @@ Deploying creates a standalone *.apk* bundle that you can try out on your device
 1.	In the interactive engine, open the **Deployer** panel (**Windows > Deploy and Connect > Deployer**) to the Android tab and enter the required information. (See below.)
 1.	Click **Package Project for Android**.
 
-The deployer creates an *.apk* file for your game, and copies it to the location on your computer that you specify in the **Destination** field.
+The deployer creates an *.apk* file for your app, and copies it to the location on your computer that you specify in the **Destination** field.
 
 **After deploying:**
 
--	To copy your deployed game to a connected device for testing, use the `adb` utility. You can find this tool in your Android SDK installation folder, under the `/platform-tools/` sub-directory. Connect your device to the computer by USB, open a command prompt, and type:
+-	To copy your deployed app to a connected device for testing, use the `adb` utility. You can find this tool in your Android SDK installation folder, under the `/platform-tools/` sub-directory. Connect your device to the computer by USB, open a command prompt, and type:
 
 	`adb install <path-to-apk>`
 
--	To distribute your game on the Google Play store, use the tools provided by Google. See the [Developer Console Help](https://support.google.com/googleplay/android-developer/answer/113469?hl=en) for more information on the Google Play Developer Console.
+-	To distribute your app on the Google Play store, use the tools provided by Google. See the [Developer Console Help](https://support.google.com/googleplay/android-developer/answer/113469?hl=en) for more information on the Google Play Developer Console.
 
 ### Android deployment settings
 
@@ -151,7 +151,7 @@ These settings are common for all tabs. See ~{ Using the Deployer panel }~.
 
 ### Icons settings
 
-Browse to select your game icon in PNG format. It can be any size, but we recommend a maximum of 512x512 pixels. If you leave this empty, the **Deployer** uses a default Autodesk icon.
+Browse to select your app icon in PNG format. It can be any size, but we recommend a maximum of 512x512 pixels. If you leave this empty, the **Deployer** uses a default Autodesk icon.
 
 ### Keystore Signing settings
 

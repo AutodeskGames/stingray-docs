@@ -1,6 +1,6 @@
 ﻿# Console commands
 
-This page lists all console commands that you can send to a game from the command line in the **Status bar** of the interactive editor.
+This page lists all console commands that you can send to an instance of the engine from the command line in the **Status bar** of the interactive editor.
 
 For details on how to send commands, see ~{ Send commands from the Status bar }~.
 

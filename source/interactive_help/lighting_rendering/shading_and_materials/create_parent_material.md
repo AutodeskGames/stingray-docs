@@ -1,4 +1,4 @@
-#Create a parent material
+# Create a parent material
 
 {{ProductName}} ships with several standard materials that provide many features, but you can also use these steps to create and optimize your own material graphs.
 
@@ -30,7 +30,7 @@
 
 	![](../../images/message_data_compiling.png)
 
-	This message displays as the engine works in the background to create the shader permutations for each material that you might need in game.
+	This message displays as the engine works in the background to create the shader permutations for each material that you might need.
 
 ---
 Related topics:

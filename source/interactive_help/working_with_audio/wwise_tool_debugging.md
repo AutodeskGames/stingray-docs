@@ -6,6 +6,6 @@ You can connect the Wwise authoring tool to a running instance of your interacti
 - You can get profiling information to monitor and debug performance.
 - You can use a visual graph to see the state of all active Wwise objects.
 - The 3D world viewer visualizes sources and events in real-time.
-- Recording and playback allows for advanced debugging and mastering without needing to replay the game simulation.
+- Recording and playback allows for advanced debugging and mastering without needing to replay the interactive app.
 
 For more information, see the [Wwise documentation](https://www.audiokinetic.com/library/edge/?source=Help&id=profiling_overview).

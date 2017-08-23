@@ -30,7 +30,7 @@ The standalone plug-ins that you make with this SDK currently only work on Windo
 
 -	Engine plug-ins that you make using this SDK are *dynamically linked* -- they are packaged up in separate *.dll* files that the engine automatically finds and loads when it starts up. However, the engine is currently only able to do this dynamic linking on Windows. We need a little more time to get our other platforms up to speed.
 
-If you need to develop a plug-in for the runtime engine, and you need that plug-in to work on mobile devices or on consoles, you *could* get it to work if you get source code access and recompile the engine with a *static link* to your plug-in (see the ~{ Introduction to Source Code Access }~). Unfortunately in this scenario you wouldn't be able to redistribute your plug-in on its own, as it gets bundled into the game engine when you rebuild it from source. So this would only be useful if you don't need to distribute your plug-in outside your own organization.
+If you need to develop a plug-in for the runtime engine, and you need that plug-in to work on mobile devices or on consoles, you *could* get it to work if you get source code access and recompile the engine with a *static link* to your plug-in (see the ~{ Introduction to Source Code Access }~). Unfortunately in this scenario you wouldn't be able to redistribute your plug-in on its own, as it gets bundled into the engine when you rebuild it from source. So this would only be useful if you don't need to distribute your plug-in outside your own organization.
 
 ## Distribution and installation workarounds
 

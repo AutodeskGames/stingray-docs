@@ -16,4 +16,4 @@ The sample project illustrates some of the most common use cases, including:
  - Reaching
  - Finger IK
 
-But there are many more! We recommend that you download the project and start to experiment with the sample project as you prepare to work with HumanIK on your own game.
+But there are many more! We recommend that you download the project and start to experiment with the sample project as you prepare to work with HumanIK in your own project.

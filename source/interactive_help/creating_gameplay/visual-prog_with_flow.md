@@ -1,6 +1,6 @@
-﻿# Visual programming using Flow
+# Visual programming using Flow
 
-Flow is the visual programming system built in to {{ProductName}}. With node-based Flow tools, you can author gameplay logic to determine all the interactions possible in your game world.  Using Flow, you can set up mission scripts, trigger effects, or define how units react to events in their surroundings.
+Flow is the visual programming system built in to {{ProductName}}. With node-based Flow tools, you can author gameplay logic to determine all the interactions possible in the engine.  Using Flow, you can set up mission scripts, trigger effects, or define how units react to events in their surroundings.
 
 ![](../images/flow_graph.png)
 
@@ -14,7 +14,7 @@ Flow also acts as the main event hub for the interactive engine. All events that
 
 There are two types of Flow in {{ProductName}}: level flow, and unit flow. Level flow lets you define the logic of a level, and unit flow lets you define the parameters and logic for a specific object.
 
-The ~{ Level Flow Editor }~ (**Window > Level Flow Editor**) handles all of the logic you want to happen when loading your level, or when the game is running, including spawning units, applying level effects, and triggering events.
+The ~{ Level Flow Editor }~ (**Window > Level Flow Editor**) handles all of the logic you want to happen when loading your level, or when the engine is running, including spawning units, applying level effects, and triggering events.
 
 To create logic specific to a given unit such a character, prop, or other object, you'll use the **Unit Flow** tab in the ~{ Unit Editor }~. This is useful for doing things like character controls, effects on props, and so on.
 

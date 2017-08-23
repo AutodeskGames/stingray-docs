@@ -50,11 +50,11 @@ The editor doesn't only import content that you've created in other apps like Ma
 
 ## Learn more about project runtime settings
 
-Every project has a *settings.ini* file that offers a ton of options about how the editor and all of its subsystems work. By tweaking these settings, you can control many aspects of the way the game runs and renders your content. For more info on all the settings, see [this reference page](../reference/engine_settings.html).
+Every project has a *settings.ini* file that offers a ton of options about how the editor and all of its subsystems work. By tweaking these settings, you can control many aspects of the way the engine runs and renders your content. For more info on all the settings, see [this reference page](../reference/engine_settings.html).
 
 ## Try out the entity system
 
-If you're already knowledgeable about working in other game engines, you might be wondering how to build up your own customized game objects out of modular components. We're working on making our entity system into a full-fledged system for authoring any kind of interactive game objects -- it's still a work in progress, but you can read more about the current possibilities under ~{ Using Entities in your Project }~.
+If you're already knowledgeable about working in other interactive engines, you might be wondering how to build up your own customized kinds of objects out of modular components. We're working on making our entity system into a full-fledged system for authoring any kind of interactive objects -- it's still a work in progress, but you can read more about the current possibilities under ~{ Using Entities in your Project }~.
 
 This is actually great material for all users to know, as we envision the entity system being used for more and more different things as time goes on, eventually replacing units.
 

@@ -132,7 +132,7 @@ static void setup_game(GetApiFunction get_engine_api)
 }
 ~~~
 
-When your node no longer needs to be available in the editor -- typically when the game shuts down -- you should also unregister your node by calling `FlowNodesApi::unregister_trigger_function()` with the name of your node:
+When your node no longer needs to be available in the editor -- typically when the app shuts down -- you should also unregister your node by calling `FlowNodesApi::unregister_trigger_function()` with the name of your node:
 
 ~~~{c}
 static void shutdown_game()

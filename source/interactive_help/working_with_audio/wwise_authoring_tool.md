@@ -2,7 +2,7 @@
 
 - **Window > Wwise Audio**
 
-Audiokinetic WWise is an industry-leading sound engine for 3D games, offering sound designers a complete pipeline that includes a suite of editing tools for setting up projects, monitoring and debugging playback in the game, and live modification of sound properties.
+Audiokinetic WWise is an industry-leading sound engine for 3D games and simulations, offering sound designers a complete pipeline that includes a suite of editing tools for setting up projects, monitoring and debugging playback, and live modification of sound properties.
 
 For more information about Wwise, see:
 

@@ -174,7 +174,7 @@ In addition to the type `metadata` block, types can set editor-only metadata in 
 }
 ~~~
 
-In the future it will be possible to add game-specific widgets to your project, but for now we only support a limited set of built-in widgets. For a comprehensive list of controls and their available properties, see the ~{ Built-in metadata properties }~.
+In the future it will be possible to add project-specific widgets into your project content to modify your project-specific types, but for now we only support a limited set of built-in widgets. For a comprehensive list of controls and their available properties, see the ~{ Built-in metadata properties }~.
 
 Note that you can customize the `editor` metadata properties, just like any other property on a type. Therefore, it is possible to specify sensible defaults in a shared type file and then override its label and description as needed:
 

@@ -1,12 +1,12 @@
-# Create game objects
+# Create level objects
 
-Game objects in {{ProductName}} are basic primitives that you can use to set up game logic. They're represented visually in your level so you can see their position in 3D.
+Level objects in {{ProductName}} are basic primitives that you can use to help set up gameplay logic. They're represented visually in your level so you can see their position in 3D.
 
 They give you the simple hooks you need to trigger events using Flow and Lua at specific locations in your level.
 
-Using the **Create** menu  or the ~{ Create panel }~, you can create the following game objects.
+Using the **Create** menu  or the ~{ Create panel }~, you can create the following types of level objects.
 
-- **Markers** Display as wireframe cubes with the marker name. Used to locate a position in your level so you can make actions happen at that location.
+-	**Markers** Display as wireframe cubes with the marker name. Used to locate a position in your level so you can make actions happen at that location.
 
 	![](../images/marker.png)
 
@@ -14,11 +14,11 @@ Using the **Create** menu  or the ~{ Create panel }~, you can create the followi
 
 	![](../images/spawn_marker_flow.png)
 
-- **Prototypes**. Simple, adjustable 3D blocks that let you rapidly develop geometry in order to rough out level elements. You can also use prototypes to create invisible physics actors. (See ~{ Create a physics actor }~.)
+-	**Prototypes**. Simple, adjustable 3D blocks that let you rapidly develop geometry in order to rough out level elements. You can also use prototypes to create invisible physics actors. (See ~{ Create a physics actor }~.)
 
 	![](../images/primitives.png)
 
-- **Triggers** are also simple 3D blocks, but they're set up to act as a switch, so that you can trigger events when other objects come in contact with them.
+-	**Triggers** are also simple 3D blocks, but they're set up to act as a switch, so that you can trigger events when other objects come in contact with them.
 
 	![](../images/triggers.png)
 
@@ -29,7 +29,7 @@ Using the **Create** menu  or the ~{ Create panel }~, you can create the followi
 
 -	**Volumes** are 3D blocks that are used for tagging the navigation mesh. See ~{ Generate navigation mesh }~.
 
-- **Splines** are 3D curved paths, used for constricting motion. The path information is accessible using Lua scripting and Flow nodes.
+-	**Splines** are 3D curved paths, used for constricting motion. The path information is accessible using Lua scripting and Flow nodes.
 
 ##Cancelling creation mode
 

@@ -25,7 +25,7 @@ The engine only supports iOS devices running **iOS {{SR_DOC_IOS_VERSION}}**.
 
 ## Requirements for Running the iOS Packaging Server
 
-In order to package iOS games from Windows, you need to run the {{SR_DOC_FULL_NAME}} iOS Packaging Server on a Mac. This package server is included in the {{ProductName}} installer. For details on finding and using it, see ~{ Get started on iOS }~.
+In order to package iOS apps from Windows, you need to run the {{SR_DOC_FULL_NAME}} iOS Packaging Server on a Mac. This package server is included in the {{ProductName}} installer. For details on finding and using it, see ~{ Get started on iOS }~.
 
 Your Mac device must be using at least *Mac OS X {{SR_DOC_MACOS_VERSION}}* and must have *Xcode {{SR_DOC_XCODE_VERSION}}* installed. Please download these from <https://developer.apple.com/downloads>.
 
@@ -44,7 +44,7 @@ The engine supports Android devices with Tegra K1 GPUs, the ARM Mali series of G
 | Sony Experia Z3+ | Adreno 430 |
 
 > **Important:** These devices are listed as examples only. In some regions, these devices ship with different GPUs.
-> Confirm that your target Android device uses the GPU you expect before trying to deploy your game. When you start the engine, the device GPU brand is printed in the system log, but there are also various online resources or apps that can help you determine the GPU used in a specific device.
+> Confirm that your target Android device uses the GPU you expect before trying to deploy your interactive app. When you start the engine, the device GPU brand is printed in the system log, but there are also various online resources or apps that can help you determine the GPU used in a specific device.
 
 ## Android Version Compatibility
 

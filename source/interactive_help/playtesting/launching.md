@@ -12,7 +12,7 @@ Use any of the following methods:
 -	Use the **F8** hotkey.
 -	Click the ![Play](../images/icon_test_level.png) icon in the **Level Viewport** panel.
 
-> **Note:** it is up to the project's Lua boot code to support starting with the current level. If you use the Appkit's `SimpleProject` in your game (like any of the template projects provided with {{ProductName}}), this is done for you. If you write your own Lua boot script, you will need to support it yourself if you want. See ~{ Loading the current level for testing }~.
+> **Note:** it is up to the project's Lua boot code to support starting with the current level. If you use the Appkit's `SimpleProject` in your project (like any of the template projects provided with {{ProductName}}), this is done for you. If you write your own Lua boot script, you will need to support it yourself if you want. See ~{ Loading the current level for testing }~.
 
 Also, it's important to note that the Test Level doesn't handle loading resources in exactly the same way as your final app will. When you test the level, the engine automatically loads each resource that it needs directly from your project's data folder when it's needed, whether or not that resource is included in any resource packages, and whether or not your project loads any resource packages at all. So, when testing the level, you don't have to worry about resource management at all. (See also ~{ Loading and unloading content at runtime }~.)
 

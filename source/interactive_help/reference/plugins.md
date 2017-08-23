@@ -1,12 +1,12 @@
-﻿# Technology components
+# Technology components
 
-The {{ProductName}} runtime game engine and editing tools are designed to be extensible through a plug-in architecture, offering the ability to integrate external tools and technology into your game and editing environment.
+The {{ProductName}} runtime engine and editing tools are designed to be extensible through a plug-in architecture, offering the ability to integrate external tools and technology into the engine and editing environments.
 
 {{ProductName}} includes standard plug-ins for several middleware game technologies, both from Autodesk and from other companies:
 
 *	Autodesk Gameware Navigation
 
-	Autodesk Gameware Navigation is a middleware for Artificial Intelligence (AI) in 3D video games and simulations: it helps your game-controlled characters (NPCs) find and follow paths from place to place in the game world, avoiding collisions with each other and with other dynamic obstacles; and it provides spatial analysis tools for getting information about the game world. For help on using this technology in your interactive app, refer to the section ~{ AI and pathfinding }~.
+	Autodesk Gameware Navigation is a middleware for Artificial Intelligence (AI) in 3D video games and simulations: it helps your computer-controlled characters (NPCs) find and follow paths from place to place in the 3D world, avoiding collisions with each other and with other dynamic obstacles; and it provides spatial analysis tools for getting information about the 3D world around them. For help on using this technology in your interactive app, refer to the section ~{ AI and pathfinding }~.
 
 	The latest documentation for Autodesk Gameware Navigation middleware is available [here](http://www.autodesk.com/navigation-sdkdoc-2016-enu).
 
@@ -24,7 +24,7 @@ The {{ProductName}} runtime game engine and editing tools are designed to be ext
 
 *	WWise
 
-	Audiokinetic WWise is an industry-leading sound engine for 3D games, with a complete pipeline that includes editing tools for setting up projects, monitoring and debugging playback in the game, and live modification of sound properties.
+	Audiokinetic WWise is an industry-leading sound engine for 3D games, with a complete pipeline that includes editing tools for setting up projects, monitoring and debugging playback, and live modification of sound properties.
 
 	The Wwise runtime engine is integrated into the {{ProductName}} engine, and all new projects are automatically set up with a linked Wwise sound project. Refer to the section ~{ Working with audio }~ for more information on how you can use Wwise editing tools and integrated Lua functions to control sound sources, trigger sound events, and modify parameter values.
 

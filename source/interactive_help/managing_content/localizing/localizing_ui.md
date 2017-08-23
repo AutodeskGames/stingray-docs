@@ -6,7 +6,7 @@ This page describes some possible approaches you can use to localize on-screen t
 
 You can create a different Scaleform Studio project for each different language or usage, and rely on the engine's built-in resource selection mechanism to choose the right project at runtime. For details on this mechanism, see ~{ Localizing resources }~.
 
-Although this is the heaviest approach, it might be good for cases where a change in language or platform necessarily causes a very big change in the strings or graphics that need to be shown. For example, suppose the goal of your UI is to demonstrate the game's controls to the player. This UI might need to be very different on a console (using a gamepad) from on PC (using keyboard and mouse). You could therefore make multiple separate projects and identify them with platform-specific localization IDs in their resource names.
+Although this is the heaviest approach, it might be good for cases where a change in language or platform necessarily causes a very big change in the strings or graphics that need to be shown. For example, suppose the goal of your UI is to demonstrate the app's interaction controls to the player. This UI might need to be very different on a console (using a gamepad) from on PC (using keyboard and mouse). You could therefore make multiple separate projects and identify them with platform-specific localization IDs in their resource names.
 
 ## Approach 2: swapping strings in Lua within the {{ProductName}} engine
 

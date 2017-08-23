@@ -1,6 +1,6 @@
-﻿#Create a physics actor
+# Create a physics actor
 
-To define how a spawned object moves or interacts in your game world, you set it up as a physics actor. For example, to add collision to an object, you configure the mesh by adding a physics actor using the **Unit Editor**.
+To define how a spawned object moves or interacts in your 3D scenes, you set it up as a physics actor. For example, to add collision to an object, you configure the mesh by adding a physics actor using the **Unit Editor**.
 
 Refer also to ~{ Basic physics concepts }~ for more detailed information on worlds, actors, and shapes.
 

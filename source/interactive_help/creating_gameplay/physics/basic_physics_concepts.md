@@ -16,7 +16,7 @@ A ragdoll consists of multiple actors because the arms and legs must be able to 
 
 An actor has one or more *collision shapes*. The collision shapes determine how the actor collides with other actors. For example, when a ball bounces against the floor it is the collision shape of the ball that touches the collision shape of the floor and causes the bounce.
 
-An actor can be in one of three modes: *static*, *keyframed*, or *dynamic*. A *static* actor never moves. A *keyframed* actor is controlled by the game world, the movement is then mirrored in the physics world, (meaning the game world acts as master and the physics world as slave). Objects that are controlled by animation typically have keyframed physics. *Dynamic* objects are controlled by the physics world and mirrored to the game worlds.
+An actor can be in one of three modes: *static*, *keyframed*, or *dynamic*. A *static* actor never moves. A *keyframed* actor is controlled by the engine world, the movement is then mirrored in the physics world, (meaning the engine world acts as master and the physics world as slave). Objects that are controlled by animation typically have keyframed physics. *Dynamic* objects are controlled by the physics world and mirrored to the engine worlds.
 
 It can sometimes be useful to change an object from keyframed to dynamic and back. For example, while a character is running around, the ragdoll actors can be keyframed and follow the character. Then when he dies, we make the ragdoll actors dynamic and put the physics in charge of the movement. Another option would be to create the ragdoll actors when the character dies.
 
@@ -78,11 +78,11 @@ Characters are not simulated as "real" physical objects (actors), because real p
 
 Still, we need characters to interact with the physical world. When a character moves, that movement must be checked so that the character doesn't penetrate other objects in the world.
 
-The solution is a *mover*. A *mover* is a capsule shape that surrounds the character. When the character moves, the capsule shape is moved around in the physical world and tested for collision with physical objects using a special algorithm. The algorithm makes sure that the mover slides against surfaces as we expect game characters to do.
+The solution is a *mover*. A *mover* is a capsule shape that surrounds the character. When the character moves, the capsule shape is moved around in the physical world and tested for collision with physical objects using a special algorithm. The algorithm makes sure that the mover slides against surfaces as we expect player-controlled characters to do.
 
-When the character crouches, the game can switch to a smaller mover that lets him enter areas that are inaccessible to the bigger mover.
+When the character crouches, the engine can switch to a smaller mover that lets him enter areas that are inaccessible to the bigger mover.
 
-To prevent any part of the character from penetrating the game world, all parts of the character must stay inside the mover shape (since only the mover shape is checked for collision against the world).
+To prevent any part of the character from penetrating the 3D objects in the scene, all parts of the character must stay inside the mover shape (since only the mover shape is checked for collision against the world).
 
 This is often a problem. Interesting animations, such as kicks and sword attacks require a lot of room. To contain them you'd need a really big mover. But big movers are problematic because they can't get into narrow areas, and feel unnatural to the player. There is no perfect solution to this issue. It is up to the gameplay code to find a good balance. In some cases it's probably okay to leave some penetration. Other times it might be better to grow the mover before a big movement, even though doing so might push the character away from a wall if he is standing too close.
 

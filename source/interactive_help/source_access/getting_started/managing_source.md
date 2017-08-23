@@ -40,7 +40,7 @@ All source code repositories are already set up with the following branches:
 
 -   `develop`: This branch is a live mirror of the internal development branch used internally within Autodesk. This branch receives very frequent and potentially disruptive commits. Therefore, it is generally recommended that you work from the master branch unless you need a particular feature or fix that has been introduced since the last update to the master branch.
 
-    If you do choose to work with the `develop` branch, we recommend that you make sure you **back up your game project and your assets** each time you update to the latest code. This can help you recover in case an instability in the `develop` branch causes a corruption in your data.
+    If you do choose to work with the `develop` branch, we recommend that you make sure you **back up your project and your assets** each time you update to the latest code. This can help you recover in case an instability in the `develop` branch causes a corruption in your data.
 
 -   `release/1.X.0`: These branches come and go as we prepare for each successive public release. While a release branch is open, it typically receives only bug fixes for features that are already in. Newer features typically go into develop instead, so that they wind up in the succeeding public release.
 

@@ -11,7 +11,7 @@ You can define your own types of components, and assign instances of those compo
 
 This system allows for component-based aggregation of behaviors using an arbitrary Lua object shared among related components.
 
->	**Note:** This Lua component system is currently unrelated to the game engine's Entity/Component system.
+>	**Note:** This Lua component system is currently unrelated to the engine's Entity/Component system.
 
 You can use the component system regardless of whether or not you use the `SimpleProject`.
 
@@ -26,7 +26,7 @@ PlayerScore = Appkit.class(PlayerScore)
 -- Register the component class with the ComponentManager
 Appkit.ComponentManager.give_manager(PlayerScore)
 
--- Define a handler that will be called systematically every frame of the game.
+-- Define a handler that will be called systematically every frame of the engine's main loop.
 function PlayerScore:update()
     -- check for events that affect the score, and update the stored values accordingly...
 end

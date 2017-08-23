@@ -6,7 +6,7 @@ It's best to create UV sets using 3D design tools like Maya or 3ds Max, and save
 
 -	The amount of space each face of your model has in UV space determines the resolution or detail that your baked lightmap can achieve. Therefore, it's best to set up your UV sets so that the most important parts of the model get the most area in texture space.
 
--	Unfolding and flattening a convex mesh into 2D usually involves introducing some "seams": places where an edge of the model has to be split. At these places, the seams can sometimes be visible when the lightmap is applied back to the object in the game. Therefore, it's best to make the seams occur where they are least noticeable.
+-	Unfolding and flattening a convex mesh into 2D usually involves introducing some "seams": places where an edge of the model has to be split. At these places, the seams can sometimes be visible when the lightmap is applied back to the object in the scene. Therefore, it's best to make the seams occur where they are least noticeable.
 
 You can automatically generate a UV set for light baking as you import an FBX file. The **Generate UVs for Light Baking** is on by default in the **Import FBX** options. See ~{ Import an FBX file }~.
 

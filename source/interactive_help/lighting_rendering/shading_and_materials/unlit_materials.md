@@ -1,6 +1,6 @@
 # Unlit materials
 
-Sometimes you may want to render an object in your game viewport without lighting and shading the object naturally as a part of the scene. To do this, you can create an *unlit* material for the object.
+Sometimes you may want to render an object in the engine viewport without lighting and shading the object naturally as a part of the scene. To do this, you can create an *unlit* material for the object.
 
 Objects with unlit materials are rendered and visible, but they are completely unaffected by light, and they do not cast or receive shadows. They are drawn with a flat shading that looks the same regardless of the dynamic lighting and global sky lighting present in the scene.
 

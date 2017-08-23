@@ -19,15 +19,15 @@ The general configuration values you can set are:
 
 | Variable name | Description |
 | ------------- | ----------- |
-| `standalone_init_level_name` | The resource name of the first level in your game. The SimpleProject will automatically load this level when the game is started. |
+| `standalone_init_level_name` | The resource name of the first level in your project. The SimpleProject will automatically load this level when the engine is started. |
 | `camera_unit` | The resource name of the unit resource that the SimpleProject will spawn if it needs to create a player-controlled camera. |
 | `camera_index` | The index of the camera that the SimpleProject will retrieve from the unit it creates for player-controlled cameras. You should not need to change this value. |
 | `shading_environment` | The resource name of a shading environment that the SimpleProject will use. If you set this value, it will override any shading environments set for your levels in the interactive editor.  |
 | `create_free_cam_player` | Determines whether or not the SimpleProject automatically creates a player-controlled camera in each level it creates. |
 | `free_cam_tracks_listener` | Determines whether or not the Appkit's free cam is set as a listener for audio events. |
-| `exit_standalone_with_esc_key` | Determines whether or not the game will quit when the player presses the `Esc` key. Used only when the game is not being tested through the editor's Test Level feature. |
+| `exit_standalone_with_esc_key` | Determines whether or not the engine app will quit when the player presses the `Esc` key. Used only when the project is not being tested through the editor's Test Level feature. |
 | `stop_world_sounds_on_level_change` | Determines whether or not any sounds playing in the current level will be stopped when you request the SimpleProject to change levels. |
-| `dont_capture_mouse_at_startup` | When set to `true`, the player will be free to move the mouse cursor outside the bounds of the game's window. |
+| `dont_capture_mouse_at_startup` | When set to `true`, the player will be free to move the mouse cursor outside the bounds of the engine app's window. |
 | `viewport` | Sets the name of the viewport created by the Appkit. Optional, if omitted, the default value is `default`. |
 
 Loading screen configuration parameters (see also ~{ Work with the Appkit loading screen }~):
@@ -43,16 +43,16 @@ For default values, see the `core/appkit/simple_project.lua` code.
 
 ## Extending the SimpleProject
 
-At specific moments in the lifespan of the game, the SimpleProject calls out to an *extension project*. The extension project is a Lua table that you can set up with one or more of the following functions:
+At specific moments in the lifespan of the engine, the SimpleProject calls out to an *extension project*. The extension project is a Lua table that you can set up with one or more of the following functions:
 
 | Function name | Description |
 | ------------- | ----------- |
 | `on_level_load_pre_flow()` | Called each time you change the current level managed by the SimpleProject. (See [Changing levels] below.) This function is called just before triggering the **Event > Level Loaded** event in the new level's Flow graph. |
-| `on_init_complete()` | Called after the SimpleProject has finished all of its initialization tasks when the game is first launched, including loading the starting level. |
+| `on_init_complete()` | Called after the SimpleProject has finished all of its initialization tasks when the engine is first launched, including loading the starting level. |
 | `on_level_shutdown_post_flow()` | Called each time you change the current level managed by the SimpleProject. (See [Changing levels] below.) This function is called just after triggering the **Event > Level Shutdown** event in the closing level's Level Flow, and just before destroying the `stingray.Level` object. |
-| `update(dt)` | Called every frame, immediately after updating the game world. This function is called with one parameter: the time step since the last call to `update()`, in seconds. |
-| `render()` | Called every frame, immediately before rendering the game world. |
-| `shutdown()` | Called at the end of the game, immediately before shutting down the game world and closing the main window. |
+| `update(dt)` | Called every frame, immediately after updating the engine world. This function is called with one parameter: the time step since the last call to `update()`, in seconds. |
+| `render()` | Called every frame, immediately before rendering the engine world. |
+| `shutdown()` | Called when the engine shuts down, immediately before shutting down the engine world and closing the main window. |
 
 If you create a global variable named `Project` in your `project.lua` file, the `main.lua` boot script will automatically set up that object as the extension project for the SimpleProject. You can see how this is done in the `script/lua/project.lua` file in any of the template projects. A short example:
 
@@ -82,7 +82,7 @@ SimpleProject.extension_project = MyOtherLuaObject
 
 If you want to customize the behavior of the SimpleProject beyond what it permits through its configuration parameters and extension functions, you can redefine any of the SimpleProject functions in your own code.
 
-For example, the default update function for the SimpleProject updates the Appkit first in every frame, which also updates the engine world and advances the physics simulation. It calls your project's `update()` function afterward. Say that you want to break this update loop into separate pre-update and post-update functions that do separate things before and after each game world update. You can redefine the `SimpleProject.update()` function in your `project.lua` file as follows:
+For example, the default update function for the SimpleProject updates the Appkit first in every frame, which also updates the engine world and advances the physics simulation. It calls your project's `update()` function afterward. Say that you want to break this update loop into separate pre-update and post-update functions that do separate things before and after each engine world update. You can redefine the `SimpleProject.update()` function in your `project.lua` file as follows:
 
 ~~~{lua}
 function SimpleProject.update(dt)
@@ -130,7 +130,7 @@ end
 
 The `SimpleProject` always loads one of the following levels on startup:
 
--	If the game is being run through the interactive editor's Test Level feature, it will load the level currently open in the editor.
+-	If the project is being run through the interactive editor's Test Level feature, it will load the level currently open in the editor.
 
 -	Otherwise, it will load the level whose resource name is specified in its `SimpleProject.config.standalone_init_level_name` variable.
 

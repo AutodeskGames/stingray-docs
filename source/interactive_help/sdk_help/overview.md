@@ -26,7 +26,7 @@ The picture of the three components above is conceptually true when it comes to 
 
 -	The data compilation step is actually carried out by the engine. The editor triggers this compilation automatically for Windows binaries each time you save changes to an asset. For other platforms, the editor asks the engine to compile the data when you run your project on that platform, mirror the editor a remote device, or deploy your project for that platform.
 
--	The editor can't always wait for the changes you make to an asset to get saved to disk, compiled to the Windows-specific binary format, and then reloaded into its internal engine. Although that round-trip process does happen behind the scenes when you save changes, you often need instant feedback in the editor while you're making changes like moving objects or adjusting sliders. In order to provide fast feedback about what you're doing in the editor viewports, the engine running inside the editor doesn't load your levels in exactly the same way as it does when you run your game.
+-	The editor can't always wait for the changes you make to an asset to get saved to disk, compiled to the Windows-specific binary format, and then reloaded into its internal engine. Although that round-trip process does happen behind the scenes when you save changes, you often need instant feedback in the editor while you're making changes like moving objects or adjusting sliders. In order to provide fast feedback about what you're doing in the editor viewports, the engine running inside the editor doesn't load your levels in exactly the same way as it does when you run your app.
 
 	Instead, the editor uses a framework of pre-written Lua scripts to control the way your level's assets get loaded into the engine, and the way you work with those assets in the editing viewports. You can find all these scripts under the `core/editor_slave` folder. If you need your plug-in to integrate with the editor's viewports -- for example, to provide immediate feedback about unsaved edits -- you may occasionally need to integrate with this script environment.
 
@@ -34,7 +34,7 @@ A slightly fuller picture might look like this:
 
 ![A fuller picture](../images/full_picture.png)
 
-However, this picture covers the project authoring and testing workflow for Windows only -- it still omits other things testing and mirroring to other platforms, and deploying final bundles of the game.
+However, this picture covers the project authoring and testing workflow for Windows only -- it still omits other things testing and mirroring to other platforms, and deploying final bundles of your interactive app.
 
 ## Multiple editors
 

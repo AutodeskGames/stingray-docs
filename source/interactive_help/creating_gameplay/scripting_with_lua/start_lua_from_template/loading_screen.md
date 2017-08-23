@@ -84,7 +84,7 @@ All time values are expressed in seconds.
 
 ## More detailed customization
 
-The `SimpleProject` loading screen is a good way to get your project showing something to the player more quickly when it first starts up. It's also a good model for how you can write Lua code to handle loading resource packages in and out of memory at runtime in your game.
+The `SimpleProject` loading screen is a good way to get your project showing something to the player more quickly when it first starts up. It's also a good model for how you can write Lua code to handle loading resource packages in and out of memory at runtime in the engine.
 
 You can also control its behavior to a large extent through its configuration parameters, and by creating unique materials in the shader graph editor. However, you may want to further customize the behavior of the loading screen for your own project.
 

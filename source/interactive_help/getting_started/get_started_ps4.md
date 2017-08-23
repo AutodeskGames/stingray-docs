@@ -24,7 +24,7 @@ You need **version {{SR_DOC_PS4_SDK_VERSION}}**. Other versions may or may not b
 
 You can get the SDK using the SDK Manager utility, available to registered developers on the Sony DevNet: <https://ps4.scedev.net/>.
 
-The editor does not require the SDK in order to deploy or package your game, although you may need it in order to prepare your final distribution.
+The editor does not require the SDK in order to deploy or package your app, although you may need it in order to prepare your final distribution.
 
 ## Step 2. Connect the editor to the device
 
@@ -71,9 +71,9 @@ Deploying creates a standalone bundle that you can try out on your PlayStation 4
 1.	In the interactive editor, open the **Deployer** panel (**Window > Deploy and Connect > Deployer**) to the PlayStation 4 tab and enter the required information. (See below.)
 2.	Click **Package Project for PlayStation 4**.
 
-The deployer copies the files your game needs to the location on your computer that you specify in the **Destination** field.
+The deployer copies the files your app needs to the location on your computer that you specify in the **Destination** field.
 
-After deploying, you can use the development tools provided by Sony to copy your game to a PlayStation device for testing, and to finish preparing your game for distribution using any of the channels supported by Sony.
+After deploying, you can use the development tools provided by Sony to copy your app to a PlayStation device for testing, and to finish preparing your app for distribution using any of the channels supported by Sony.
 
 ### PlayStation 4 deployment settings
 

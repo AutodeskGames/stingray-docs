@@ -2,11 +2,11 @@
 
 This page lists some common problems that you may run into when using {{ProductName}}.
 
-For strategies you can use to get a better idea of what's going on in a running game, see also ~{ Ways to get runtime feedback }~.
+For strategies you can use to get a better idea of what's going on in the engine while your project is running, see also ~{ Ways to get runtime feedback }~.
 
-## Game crashes without errors / crashes at startup
+## Engine crashes without errors / crashes at startup
 
-If your game crashes without sending any errors to the ~{ Log Console }~, you are probably running out of memory on your target platform. This is particularly likely if the crashes occur when running on iOS or Android, but not when testing on a Windows PC.
+If the engine crashes without sending any errors to the ~{ Log Console }~, you are probably running out of memory on your target platform. This is particularly likely if the crashes occur when running on iOS or Android, but not when testing on a Windows PC.
 
 If the crash occurs at startup, the cause is usually that the boot package is attempting to load too many resources into memory. This is likely to happen eventually if your boot package uses wildcards to load in all resources of certain types.
 
@@ -48,4 +48,4 @@ If things aren't working the way you expect, give the following options a try an
 
 -	Make sure that your PlayStation 4 devkit has not expired.
 
--	Check that your IP settings are correct both in the **Deployer** and in the game.
+-	Check that your IP settings are correct in the **Deployer**, and in your gameplay code if necessary.

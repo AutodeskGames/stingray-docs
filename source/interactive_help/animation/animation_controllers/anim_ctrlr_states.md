@@ -44,7 +44,7 @@ The custom blend state is more complex. A custom blend state mixes together a nu
 
 ## Time state
 
-A time state lets you drive the playhead of the state based on a variable. (Every update to the game engine, you’re telling it which frame to evaluate, with a variable.)
+A time state lets you drive the playhead of the state based on a variable. (Every update to the engine, you’re telling it which frame to evaluate, with a variable.)
 
 Instead of having the time of the clip driven by its own playback, a time state lets you drive the time with a value. This works similarly to Set Driven Key in Maya or Maya LT - you take one parameter and drive it with another. In this case, time is driven by a parameter.
 
@@ -104,4 +104,4 @@ The TransitionSwitch node has incoming transitions, called TransitionSwitchEntri
 
 The TransitionSwitch node expression can have existing variable names of the current animation controller and include operators such as `sin`, `cos`, `abs`, `match`, `match_2d`, `match_range`,  and `match_range_2d`. The expression can also include the `rand` operator to generate random numbers from the seed in the layer. Note that you can set the seed of random number generator for each layer in C or LUA.
 
-You can edit the names and properties of the entry and exit transitions, change the min/max values of the interval range of the exit transitions and reorder the order of interval range of each exit transitions using the up/down arrows.  
+You can edit the names and properties of the entry and exit transitions, change the min/max values of the interval range of the exit transitions and reorder the order of interval range of each exit transitions using the up/down arrows.

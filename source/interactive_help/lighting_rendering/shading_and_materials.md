@@ -1,6 +1,6 @@
 # Shading
 
-The topics in this section describe how to control the way the surfaces of your 3D objects are rendered in your game, by designing materials and assigning them to your models.
+The topics in this section describe how to control the way the surfaces of your 3D objects are rendered in the engine, by designing materials and assigning them to your models.
 
 ## About materials, shaders, textures and 3D assets
 

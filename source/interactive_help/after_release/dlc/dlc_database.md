@@ -4,7 +4,7 @@
 
 This can help if you do not want to hard-code information about your DLC modules into your gameplay scripts, so that you do not have to patch your Lua code every time you add new downloadable content.
 
-This system builds on the basic patching and DLC systems explained in ~{ Patching your game }~ and ~{ Downloadable content (DLC) and other extras }~. Make sure that you understand the basic processes explained in those topics before you start here.
+This system builds on the basic patching and DLC systems explained in ~{ Patching your app }~ and ~{ Downloadable content (DLC) and other extras }~. Make sure that you understand the basic processes explained in those topics before you start here.
 
 ## Step 1. Create *.dlc* resources
 
@@ -20,14 +20,14 @@ name = "Continuing Adventures"
 package = "packages/continuing_adventures"
 ~~~
 
-When you build your game project, each of these *.dlc* resources is written to a separate bundle in a `dlc` sub-folder.
+When you build your project, each of these *.dlc* resources is written to a separate bundle in a `dlc` sub-folder.
 
 ## Step 2. Access the DLC information in Lua
 
-Use the functions exposed by the `stingray.DLC` object to scan for DLC data in the game data folder. For example:
+Use the functions exposed by the `stingray.DLC` object to scan for DLC data in the data folder. For example:
 
 ~~~{lua}
--- start scanning the game data for DLC information...
+-- start scanning for DLC information...
 stingray.DLC.scan_for_dlc()
 ...
 

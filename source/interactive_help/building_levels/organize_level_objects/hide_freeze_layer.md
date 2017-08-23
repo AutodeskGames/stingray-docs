@@ -28,5 +28,5 @@
 Related topics:
 -	~{Add, rename, delete, or set current layer}~
 -	~{Filter level objects in the layers view}~
--	~{Create game objects}~
+-	~{Create level objects}~
 ---

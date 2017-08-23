@@ -1,6 +1,6 @@
 # Defining resource packages
 
-You define each resource package you want to load into your game in an SJSON file with the *.package* extension. Each package file contains a list of objects, in which the key of each object is a resource type, and the value of each object is a list of resource names.
+You define each resource package you want to load into the engine in an SJSON file with the *.package* extension. Each package file contains a list of objects, in which the key of each object is a resource type, and the value of each object is a list of resource names.
 
 For example:
 
@@ -12,7 +12,7 @@ level = [
 
 lua = [
     "lua/boot"
-    "lua/game"
+    "lua/player"
     "lua/freeflight"
     "lua/thread"
 ]
@@ -42,7 +42,7 @@ level = ["levels/jungle/*"]
 
 This line causes all levels inside the `levels/jungle` folder to be loaded when this package is loaded. (Any other content used in those levels is also loaded.)
 
-A common use of this approach is to load all Lua scripts into the game in the boot package, since these scripts tend to be small in size, and are often needed throughout the game:
+A common use of this approach is to load all Lua scripts into the engine in the boot package, since these scripts tend to be small in size, and are often needed throughout the entire lifetime of the app:
 
 ~~~{sjson}
 lua = ["*"]
@@ -58,7 +58,7 @@ You can also use a wildcard when you specify a resource *type*. For example:
 
 This snippet causes all resources of all types to be loaded into memory when this package is loaded, wherever they are located in the source directory.
 
-Putting this line in the boot package is a useful way of getting up and running quickly, without worrying about how your resources are distributed into packages. However, as your game grows, loading everything at once will produce slower and slower boot times, and will eventually cause the game to run out of memory (especially on platforms with less available memory, like mobile phones).
+Putting this line in the boot package is a useful way of getting up and running quickly, without worrying about how your resources are distributed into packages. However, as your project grows, loading everything at once will produce slower and slower boot times, and will eventually cause the engine to run out of memory (especially on platforms with less available memory, like mobile phones).
 
 ## Special keys
 
@@ -80,4 +80,4 @@ In addition to lists of resources, your package files can also contain the follo
 
 `BUNDLE = <boolean>`
 
->	If you set this value to `false`, no bundle will be generated from this package. This can be useful if you want to define a package only for organizational purposes (e.g. for use with the `SUBTRACT_PACKAGE` setting), but you do not need to use it independently in your game.
+>	If you set this value to `false`, no bundle will be generated from this package. This can be useful if you want to define a package only for organizational purposes (e.g. for use with the `SUBTRACT_PACKAGE` setting), but you do not need your gameplay code to load and unload it independently in the engine.

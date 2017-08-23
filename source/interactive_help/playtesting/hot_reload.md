@@ -22,7 +22,7 @@ This helps you work seamlessly whenever you're working on an asset that is saved
 
 ## Force assets to recompile
 
-The source data files for your resources live in your project folder, but the engine loads *compiled* versions of that data from your project's `_data` folder. (See ~{ About the content lifecycle }~.) So, whenever you modify the source data file for a resource, that asset has to be recompiled into the compiled data folder before it can be loaded in game.
+The source data files for your resources live in your project folder, but the engine loads *compiled* versions of that data from your project's `_data` folder. (See ~{ About the content lifecycle }~.) So, whenever you modify the source data file for a resource, that asset has to be recompiled into the compiled data folder before it can be loaded into the engine.
 
 As mentioned above, the editor automatically recompiles most kinds of resources immediately when you save them. However, one exception is Lua files -- if you modify one or more scripts in your project, you'll have to ask the editor to recompile them for you. You'll have to do the same if you modify resources outside of the editing tools (for example, if you modify physics properties in your project's `global.physics_properties` file in a text editor).
 

@@ -40,7 +40,7 @@
 
 **Creative Market**
 
->Launches the **Creative Market** panel. Browse and purchase game assets from Creative Market.  See ~{ Download assets and example projects }~.
+>Launches the **Creative Market** panel. Browse and purchase 3D assets from Creative Market.  See ~{ Download assets and example projects }~.
 
 **Dependency**
 

@@ -1,6 +1,6 @@
 # Ways to get runtime feedback
 
-{{ProductName}} provides several different ways for you to get feedback about what is happening in your game. You will probably find it necessary to use many if not all of these methods at different times during your development. Each one may be more convenient than the others, depending on how your gameplay is written, what subsystems of the engine you need to get feedback about, and what kind of information you hope to get.
+{{ProductName}} provides several different ways for you to get feedback about what is happening in the engine while your project is running. You will probably find it necessary to use many if not all of these methods at different times during your development. Each one may be more convenient than the others, depending on how your gameplay is written, what subsystems of the engine you need to get feedback about, and what kind of information you hope to get.
 
 ## The **Log Console**
 
@@ -8,13 +8,13 @@ The **Log Console** shows you all the errors, warnings and information messages 
 
 See ~{ Log Console }~.
 
-## In-game HUDs
+## In-viewport HUDs
 
-The engine has some built-in systems that display diagnostic messages and render debug information in the viewport of the running game. You can use these systems to print performance statistics, visualize performance as a graph, or to debug subsystems like physics and particles.
+The engine has some built-in systems that display diagnostic messages and render debug information in the same 3D viewport that renders your project content. You can use these systems to print performance statistics, visualize performance as a graph, or to debug subsystems like physics and particles.
 
-![In-game HUD for art statistics](../images/perfhud_artist.png)
+![In-viewport HUD for art statistics](../images/perfhud_artist.png)
 
-You toggle the display of these diagnostic systems by sending console commands to the game from the Status bar of the editor, or from the **External Console** application (**Window > External Console**).
+You toggle the display of these diagnostic systems by sending console commands to the engine from the Status bar of the editor, or from the **External Console** application (**Window > External Console**).
 
 For details, see ~{ Send commands from the Status bar }~.
 
@@ -22,7 +22,7 @@ For a list of all console commands, see ~{ Console commands }~. In particular, l
 
 ### HUDs in the editor
 
-While you're working in the interactive editor, you can turn the HUDs on in your editor viewport. This shows the performance of the instance of the game engine that is run internally by the editor, powering the viewport display.
+While you're working in the interactive editor, you can turn the HUDs on in your editor viewport. This shows the performance of the instance of the interactive engine that is run internally by the editor, powering the viewport display.
 
 Click **View > Performance Hud** in the viewport's visualization settings, and select the HUD you're interested in.
 
@@ -30,7 +30,7 @@ To debug or view performance statistics of a deployed package, use the **Externa
 
 ## Print to screen from Flow
 
-If you are using the Appkit, you have access to the **Debug > Print To Screen** Flow node. When this node is evaluated, it prints text that you specify to the screen in game. The Flow system does not currently have a runtime debugger, but you can use this node to find out the current state of your variables and to detect what paths your graph evaluation follows.
+If you are using the Appkit, you have access to the **Debug > Print To Screen** Flow node. When this node is evaluated, it prints text that you specify to the engine viewport. The Flow system does not currently have a runtime debugger, but you can use this node to find out the current state of your variables and to detect what paths your graph evaluation follows.
 
 ## Print to the log from Flow or Lua
 
@@ -53,6 +53,6 @@ You can print your own debug messages to the log from Flow or Lua. You can view 
 
 ## Use a Lua debugger
 
-You can get a lot of information about what your project's Lua scripts are doing by connecting a debugger to your project. You can set *breakpoints* that automatically pause the game at specific places in your code, advance the code line-by-line or function-by-function, check and even modify the value of variables, and more. If you're new to debugging code, see ~{ Debugging Lua }~ for some background.
+You can get a lot of information about what your project's Lua scripts are doing by connecting a debugger to your project. You can set *breakpoints* that automatically pause the engine at specific places in your code, advance the code line-by-line or function-by-function, check and even modify the value of variables, and more. If you're new to debugging code, see ~{ Debugging Lua }~ for some background.
 
 We've developed an extension for [Visual Studio Code](https://code.visualstudio.com/) that makes all this possible in a free, open-source code editor. For specifics about using the Visual Studio Code extension, see [its documentation here](https://marketplace.visualstudio.com/items?itemName=jschmidt42.stingray-debug).

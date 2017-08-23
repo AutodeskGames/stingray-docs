@@ -88,7 +88,7 @@ These controls have relativity to the unit (not the selection).
 
 ### Display Tabs
   - Viewport: 3D viewport displaying your selected unit.
-  - Unit Flow: Flow control of the unit. (See ~{ Visual programming using Flow }~ for details on unit flow vs. level flow.) This part of the **Unit Editor** lets you create logic specific to a given unit such a character, prop, or other object in your game.  This is useful for doing things like character controls or prop effects.
+  - Unit Flow: Flow control of the unit. (See ~{ Visual programming using Flow }~ for details on unit flow vs. level flow.) This part of the **Unit Editor** lets you create logic specific to a given unit such a character, prop, or other object while it is loaded in the engine. This is useful for doing things like character controls or prop effects.
   <br>![](../../images/unitFlow.png)
 
 

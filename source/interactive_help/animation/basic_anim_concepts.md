@@ -15,7 +15,7 @@ An animation consists of a number of frames. Each frame records the local positi
 
 The engine does not play back the exact recorded frames. Instead, it interpolates between the frames to show the animation at the engine's current time. For example, if frames have been recorded for every 0.1 s and the engine's current time is 0.73 s, then the engine blends 70 % of the 0.7 frame with 30 % of the 0.8 frame to get an approximation of what the animation looks like at 0.73 s.
 
-The interpolation allows animations to be played back at a higher frame rate than they were recorded or in slow motion. It also avoids the aliasing effects that would otherwise occur if the engine time step was slightly different than the animation frame time. However, it means that as an animator, you don't see the exact frames you created in-game, only interpolations between those frames.
+The interpolation allows animations to be played back at a higher frame rate than they were recorded or in slow motion. It also avoids the aliasing effects that would otherwise occur if the engine time step was slightly different than the animation frame time. However, it means that as an animator, you don't see the exact frames you created when you play the animation in the engine, only interpolations between those frames.
 
 ##Types of animation playback
 

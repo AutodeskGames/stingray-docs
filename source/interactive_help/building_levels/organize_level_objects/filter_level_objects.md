@@ -2,7 +2,7 @@
 
 Filters let you control the type of level objects that are displayed in the **Explorer** panel and **Layers** view.
 
-**To filter game objects in the Layers view**
+**To filter level objects in the Layers view**
 
 1. In the **Explorer** panel, open the **Layers** view (Hotkey: L).
 2. Click ![](../../images/icon_explorer_filter.png).

@@ -24,7 +24,7 @@ The runtime Lua environment hosted by the interactive engine is powered by the L
 
 ### Using Lua 5.1 instead
 
-LuaJIT 2.x is supposed to be binary-compatible with Lua 5.1. That means that you should be able to compile and link your module with an official distribution of Lua 5.1 instead of needing to use LuaJIT. Similarly, if you're using a third-party module, you may even be able to use a pre-compiled *.dll* of the module, if it was compiled against Lua 5.1 for the same platform and processor as your game (e.g. Windows 64-bit).
+LuaJIT 2.x is supposed to be binary-compatible with Lua 5.1. That means that you should be able to compile and link your module with an official distribution of Lua 5.1 instead of needing to use LuaJIT. Similarly, if you're using a third-party module, you may even be able to use a pre-compiled *.dll* of the module, if it was compiled against Lua 5.1 for the same platform and processor as your app (e.g. Windows 64-bit).
 
 ## Step 2. Write your C code and bindings
 
@@ -120,9 +120,9 @@ else
 end
 ~~~
 
-If you are using the Appkit in your game, you could put this code in your *script/lua/project.lua* file in order to make it run when the game is started.
+If you are using the Appkit in your project, you could put this code in your *script/lua/project.lua* file in order to make it run when the engine is started.
 
-Note that after you load the library into the Lua environment, you can then invoke the loaded functions at any time you need them. So, you can require the library once during your game's initialization, then call the functions from your scripts or from custom Flow nodes.
+Note that after you load the library into the Lua environment, you can then invoke the loaded functions at any time you need them. So, you can require the library once when the engine is initialized, then call the functions from your scripts or from custom Flow nodes.
 
 ## Step 5. Make your library available to the engine
 

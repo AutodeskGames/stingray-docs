@@ -10,7 +10,7 @@ The goal of the entity system is to be flexible and open enough to model just ab
 
 Under the hood, a few core features and workflows are already built around entities. For example, anytime you create a new level, it comes with an entity that handles the rendering settings used by ~{ The Shading environment and post effects }~.
 
-You can also use the entity system directly to set up your own kinds of game objects. In this release, you will find it mainly useful for creating entities that store arbitrary data values: numeric, boolean, strings, resource names, 3D coordinates, colors.
+You can also use the entity system directly to set up your own kinds of objects. In this release, you will find it mainly useful for creating entities that store arbitrary data values: numeric, boolean, strings, resource names, 3D coordinates, colors.
 
 ## Entities are *modular*
 
@@ -34,7 +34,7 @@ In addition, each type of component is managed by a separate subsystem. Each of 
 
 Depending on the type of project you are creating, you may need your entities to do different kinds of jobs or manage different kinds of data than the set of built-in components allows.
 
-To do this, you can create your own custom types of components. This allows you to tailor your game entities to fit the needs of your project very closely.
+To do this, you can create your own custom types of components. This allows you to tailor your entities to fit the needs of your project very closely.
 
 See also ~{ Create a custom component }~.
 

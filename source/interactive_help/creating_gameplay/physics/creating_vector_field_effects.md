@@ -8,7 +8,7 @@ You can set up vector fields in either of the following ways:
 
 -   In your own custom Lua scripts. See [Setting up vector fields in Lua].
 
-Once you have your vector fields set up and active in the game world, you can make them apply to the visible objects in your game. See [Applying vector fields to game objects].
+Once you have your vector fields set up and active in the engine world, you can make them apply to the visible objects in your level. See [Applying vector fields to level objects].
 
 ## Setting up vector fields in the editor
 
@@ -31,7 +31,7 @@ To set up a vector field in the interactive editor:
 
     Configure the properties of the component to control the strength and speed of the effect.
 
-    Note the **Effect** setting: you'll use this effect name as a way to refer to this effect whenever you want the vector field to affect something in the game, like a particle system.
+    Note the **Effect** setting: you'll use this effect name as a way to refer to this effect whenever you want the vector field to affect something in the engine, like a particle system.
 
 5.  Add a Script component to your entity. Set its **Script** property to point to one of the following scripts in the *core* resources folder, which are pre-written to correspond to the effects listed above:
 
@@ -50,7 +50,7 @@ You can add new effects to a vector field with `VectorField.add()`. In this call
 
 You can also use `VectorField.evaluate()` to evaluate a vector field at some positions, if you want the vector field to influence script behavior.
 
-## Applying vector fields to game objects
+## Applying vector fields to level objects
 
 Currently in {{ProductName}}, you can make your vector fields apply to particle effects or to dynamic physical actors.
 

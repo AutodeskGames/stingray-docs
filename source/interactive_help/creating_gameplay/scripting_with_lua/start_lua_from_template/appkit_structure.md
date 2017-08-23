@@ -1,8 +1,8 @@
 # Understanding the Appkit structure
 
-The heart of the Appkit is the `core/appkit/lua/app.lua` file. This file defines an `Appkit` object, which provides services for managing game worlds, levels, and other kinds of utility objects.
+The heart of the Appkit is the `core/appkit/lua/app.lua` file. This file defines an `Appkit` object, which provides services for managing engine worlds, levels, and other kinds of utility objects.
 
-This page compares the two principal ways of getting your game set up to use the Appkit.
+This page compares the two principal ways of getting your project set up to use the Appkit.
 
 ## Using the `SimpleProject` helper
 
@@ -14,7 +14,7 @@ Use this setup if you want to minimize the amount of Lua code you need to write 
 
 In this scenario, access to the `Appkit` is managed through a helper `SimpleProject` object defined in `core/appkit/lua/simple_project.lua`. This helper takes care of everything involved in using the Appkit's services for managing worlds and levels. Although the `SimpleProject` wraps most Appkit usage for you, you can customize it yourself in several ways.
 
-When the game engine starts up, it loads the `core/appkit/lua/main.lua` file as its boot script. This script brings in the `SimpleProject`, and it also looks for a script file inside your project directory at `scripts/lua/project.lua`. You use this file as your entry point for customizing the `SimpleProject` and hooking in other custom Lua code that you want to run in your game.
+When the engine starts up, it loads the `core/appkit/lua/main.lua` file as its boot script. This script brings in the `SimpleProject`, and it also looks for a script file inside your project directory at `scripts/lua/project.lua`. You use this file as your entry point for customizing the `SimpleProject` and hooking in other custom Lua code that you want to run.
 
 You can also use functions that it exposes in order to change levels from your Lua code.
 
@@ -48,9 +48,9 @@ If you want to use the services provided by the Appkit without using the default
 
 ![Lua structure using the Appkit](../../../images/appkit_structure_custom_boot.png)
 
-You set up your game with a custom boot script. This boot script loads the `core/appkit/lua/app.lua` file, as well as any other custom Lua modules you want to run. In this scenario, you are fully responsible for setting up the Appkit and using the services it provides.
+You set up your project with a custom boot script. This boot script loads the `core/appkit/lua/app.lua` file, as well as any other custom Lua modules you want to run. In this scenario, you are fully responsible for setting up the Appkit and using the services it provides.
 
-Use this setup if you are comfortable with developing with Lua, and if you want to completely rewrite the way the `SimpleProject` handles things like level loading. Be aware that you will need to re-implement yourself most of what the `SimpleProject` does, such as handling the Test Level event in the interactive editor, creating and destroying game worlds, or managing level transitions. See ~{ Managing worlds, levels and cameras through the Appkit }~ for an introduction to some of these tasks, and for a working sample of a boot script that loads and uses the Appkit directly.
+Use this setup if you are comfortable with developing with Lua, and if you want to completely rewrite the way the `SimpleProject` handles things like level loading. Be aware that you will need to re-implement yourself most of what the `SimpleProject` does, such as handling the Test Level event in the interactive editor, creating and destroying engine worlds, or managing level transitions. See ~{ Managing worlds, levels and cameras through the Appkit }~ for an introduction to some of these tasks, and for a working sample of a boot script that loads and uses the Appkit directly.
 
 See also ~{ Starting Lua from scratch: using a custom boot script }~ for details on the basic requirements for a custom boot script.
 

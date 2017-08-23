@@ -1,14 +1,14 @@
 # Work with a version control system
 
-Most game development projects involve multiple different people contributing their efforts over a potentially long time. Losing work due to machine failure or data corruption can be catastrophic to the project. Therefore, most games typically use some kind of version control system (VCS) during development in order to track changes to the project, to back up the project's assets, and to ease collaboration between the members of the project.
+Most interactive application development projects involve multiple different people contributing their efforts over a potentially long time. Losing work due to machine failure or data corruption can be catastrophic to the project. Therefore, most customers typically use some kind of version control system (VCS) during development in order to track changes to the project, to back up the project's assets, and to ease collaboration between the members of the project.
 
 {{ProductName}} is intended to be agnostic to whatever version control system you choose to use. Rather than build in direct support for different popular source control systems like Git, Subversion (SVN), or Perforce, {{ProductName}} simply stays out of the way by keeping the data that you really need to track separate from automatically generated data.
 
 This page outlines some considerations to keep in mind when working with a version control system.
 
-## Plain-text game data
+## Plain-text data
 
-One big benefit of {{ProductName}} with regard to version control is that much of the game data that you author in the interactive editor is stored in your project's source directory in the plain-text SJSON format. (See also ~{ About the SJSON data format }~.)
+One big benefit of {{ProductName}} with regard to version control is that much of the content that you author in the interactive editor is stored in your project's source directory in the plain-text SJSON format. (See also ~{ About the SJSON data format }~.)
 
 Because these files are plain-text and not binary, multiple different contributors can easily create branches in the source control system and merge their changes together without overwriting each other's modifications.
 
@@ -16,11 +16,11 @@ Because these files are plain-text and not binary, multiple different contributo
 
 Your project usually consists of three folders:
 
--	The main project source folder that contains your game's raw data. <span style="color:#007700">**Track this folder in version control.**</span>
+-	The main project source folder that contains your app's raw data. <span style="color:#007700">**Track this folder in version control.**</span>
 
--	The `_wwise` folder, which contains your game's audio project and raw audio files. <span style="color:#007700">**Track this folder in version control.**</span>
+-	The `_wwise` folder, which contains your app's audio project and raw audio files. <span style="color:#007700">**Track this folder in version control.**</span>
 
--	The `_data` folder, which contains the game data compiled into binary format for each of the game's target platforms. <span style="color:#CC0000">**Do not track this folder in version control.**</span>
+-	The `_data` folder, which contains the same content that's in the project source folder, but compiled into a binary format for each of the app's target platforms. <span style="color:#CC0000">**Do not track this folder in version control.**</span>
 
 	Anyone working with your project's source data in the editor can re-create these compiled binary files, so it is not necessary to record them in version control.
 

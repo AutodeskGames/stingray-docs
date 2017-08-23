@@ -53,9 +53,9 @@ Deploying creates a standalone bundle that you can try out on your Xbox One (and
 1.	In the interactive editor, open the **Deployer** panel (**Window > Deploy and Connect > Deployer**) to the Xbox tab and enter the required information. (See below.)
 2.	Click **Package Project for Xbox One**.
 
-The deployer copies the files your game needs to the location on your computer that you specify in the **Destination** field.
+The deployer copies the files your app needs to the location on your computer that you specify in the **Destination** field.
 
-After deploying, you can use the development tools provided by Microsoft to copy your game to an Xbox One device for testing, and to finish preparing your game for distribution using any of the channels supported by Microsoft.
+After deploying, you can use the development tools provided by Microsoft to copy your app to an Xbox One device for testing, and to finish preparing your app for distribution using any of the channels supported by Microsoft.
 
 ### Xbox One deployment settings
 

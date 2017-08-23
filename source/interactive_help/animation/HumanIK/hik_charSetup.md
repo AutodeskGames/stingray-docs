@@ -1,6 +1,6 @@
 # HumanIK character setup
 
-To take advantage of HumanIK in {{ProductName}}, each game character needs to have a valid HumanIK skeleton definition.
+To take advantage of HumanIK in {{ProductName}}, each human character needs to have a valid HumanIK skeleton definition.
 
 You create a valid skeleton definition for the character during the rigging process in Maya, Maya LT, or MotionBuilder, then export the character as an FBX file. For detailed information on setting up a HumanIK character and creating the skeleton definition, refer to the HumanIK documentation in your content creation package.
 

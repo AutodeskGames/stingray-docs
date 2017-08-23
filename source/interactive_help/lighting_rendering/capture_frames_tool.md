@@ -52,7 +52,7 @@ The # frame paddings could be in the beginning, middle and the end of the file n
 > **Note:** The rendered OpenEXR frames uses ZIP compression by default.
 
 <dt>Frame Rate</dt>
-<dd>The frame rate that is used to simulate the game or editor playback while capturing.</dd>
+<dd>The frame rate that is used to simulate the app or editor playback while capturing.</dd>
 
 <dt>Resolution</dt>
 <dd>Lets you set a resolution for your capture. Select 1920 x 1080 (default), 1280 x 780, or enter a custom resolution. The custom resolution you set here is available only when capturing from Story and not when capturing from Flow.</dd>

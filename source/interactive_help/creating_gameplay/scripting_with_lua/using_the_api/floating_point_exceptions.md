@@ -4,7 +4,7 @@ Mathematical operations in Lua that cannot return numeric results, such as divid
 
 In order to avoid these problems, the interactive engine includes an optional mechanism for provoking exceptions whenever a floating-point operation returns one of these non-numeric values. The exception will result in an error message that helps you track down the source of the math operation.
 
-To enable this mechanism, set the `floating_point_exceptions` value to *true* in your game's *settings.ini* file:
+To enable this mechanism, set the `floating_point_exceptions` value to *true* in your project's *settings.ini* file:
 
 ~~~{sjson}
 win32 = {
@@ -12,7 +12,7 @@ win32 = {
 }
 ~~~
 
-It is highly recommended that you enable this mechanism in your development builds, and disable it only for the final release of your game.
+It is highly recommended that you enable this mechanism in your development builds, and disable it only for the final release of your interactive app.
 
 ## Third-party modules
 
@@ -33,6 +33,6 @@ Currently, we only know of one case where legitimate Lua code triggers an except
 t = { [math.pow(2,31)] = 1 }
 ~~~
 
-Therefore, when running with floating-point exceptions enabled in your game settings, you must always make sure your table keys are smaller than `2^31` in order to avoid triggering a floating-point exception in LuaJIT.
+Therefore, when running with floating-point exceptions enabled in your engine settings, you must always make sure your table keys are smaller than `2^31` in order to avoid triggering a floating-point exception in LuaJIT.
 
 If you find any other valid Lua operations that cause floating-point exceptions in LuaJIT or any other code module built in to {{ProductName}}, please contact Autodesk Support and let us know.

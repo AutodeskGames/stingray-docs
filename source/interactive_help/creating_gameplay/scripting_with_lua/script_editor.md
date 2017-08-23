@@ -4,7 +4,7 @@
 
 - **Window > Script Editor**
 
-The **Script Editor** helps you create and edit Lua scripts for your game in the interactive editor.
+The **Script Editor** helps you create and edit Lua scripts for your project in the interactive editor.
 
 [![NEW](../../images/new.png "What else is new in v1.8?")](../../release_notes/readme_1.8.html)
 
@@ -36,4 +36,4 @@ The **Script Editor** integrates both Lua documentation and Lua command auto-com
 | Close                       | Esc             |
 | Accept suggestion           | Tab  or Enter   |
 
-> **Tip:** To send single line Lua scripts or predefined commands to a running game, you can use the ~{ Status bar }~.
+> **Tip:** To send single line Lua scripts or predefined commands to a running instance of the engine, you can use the ~{ Status bar }~.

@@ -1,6 +1,6 @@
 # About resources
 
-Each {{ProductName}} project is made up of many data files, also known as *resources*. Each resource contains a small piece of the game's content, such as a texture or a character definition, that gets loaded into the game at runtime and used according to the gameplay rules you set up in the interactive editor.
+Each {{ProductName}} project is made up of many data files, also known as *resources*. Each resource contains a small piece of your content, such as a 3D model, a texture, or a character definition, that gets loaded into the engine at runtime and used according to the gameplay rules you set up in the interactive editor.
 
 Some of these resources contain content that you create in other content creation tools, like Maya, 3ds Max, or a texture painting application. These kinds of assets you import into your project. See the section on ~{ Importing assets }~.
 
@@ -24,7 +24,7 @@ For more details, see ~{ About the SJSON data format }~.
 
 ## Names and types
 
-Each piece of content in your project is uniquely identified by a name and type. You will need to use these names and types in order to refer to the different resources in your project as you build your game.
+Each piece of content in your project is uniquely identified by a name and type. You will need to use these names and types in order to refer to the different resources as you work on your project's levels and runtime interactions.
 
 -	The type of each resource is determined by its file extension.
 -	The name of each resource is determined by its placement within the project. It is the fully qualified path to the file from the root of the project, using forward-slashes as separators, omitting the file extension.

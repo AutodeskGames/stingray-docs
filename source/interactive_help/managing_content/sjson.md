@@ -2,11 +2,11 @@
 
 Many {{ProductName}} resource files express data using a text-based format based on the widely used [JSON](http://www.json.org/) standard, with a few custom extensions and simplifications that are intended to make the data easier to read, edit and maintain. This format is often referred to as *SJSON*, for *simplified JSON*.
 
-Although many types of resource files are automatically created and kept up to date by the interactive editing tools, there are some kinds of data files that you need to modify by hand. For example, in order to set up different types of collision materials for the physics simulation used in your game, you need to make changes directly in your project's *global.physics_properties* file.
+Although many types of resource files are automatically created and kept up to date by the interactive editing tools, there are some kinds of data files that you need to modify by hand. For example, in order to set up different types of collision materials for the physics simulation used in your app, you need to make changes directly in your project's *global.physics_properties* file.
 
 ## Example
 
-The following example from a game's *settings.ini* file shows what a small block of SJSON looks like:
+The following example from a project's *settings.ini* file shows what a small block of SJSON looks like:
 
 ~~~{sjson}
 // The script that should be started when the application runs.

@@ -1,10 +1,10 @@
 # Localizing audio
 
-If you are localizing your game into multiple languages, you will likely need to load and play different audio files for dialogue and voice-overs depending on your game's current language.
+If you are localizing your content into multiple languages, you will likely need to load and play different audio files for dialogue and voice-overs depending on your app's current language.
 
-If you are using Wwise for your game's audio, you can take advantage of the audio localization system built in to the Wwise editor. The Wwise engine transparently takes care of loading and playing only audio files that match your choice of language.
+If you are using Wwise for your app's audio, you can take advantage of the audio localization system built in to the Wwise editor. The Wwise engine transparently takes care of loading and playing only audio files that match your choice of language.
 
-Setting this up involves assigning the language of each audio file when you import it into your Wwise project, and configuring your game to set the current language for the Wwise engine at runtime.
+Setting this up involves assigning the language of each audio file when you import it into your Wwise project, and configuring your gameplay to set the current language for the Wwise engine at runtime.
 
 ## Step 1. Set up the Wwise project
 
@@ -39,11 +39,11 @@ For a video overview that illustrates this process, see [this video from Audioki
 
 ## Step 3. Set up your gameplay
 
-When you want to change languages in your game at runtime, use the following sequence of events:
+When you want to change languages in your app at runtime, use the following sequence of events:
 
 1.	Unload any sound banks that you currently have loaded.
 
-	The Wwise engine only loads audio files into memory that match its current language setting. This avoids consuming memory at runtime to hold localized sounds that will likely never be needed. If you have any sound banks already loaded in your game, the new language setting will not affect them. Any sounds you play from those banks will continue to sound in the language that was in effect at the time they were loaded.
+	The Wwise engine only loads audio files into memory that match its current language setting. This avoids consuming memory at runtime to hold localized sounds that will likely never be needed. If you have any sound banks already loaded in the interactive engine, the new language setting will not affect them. Any sounds you play from those banks will continue to sound in the language that was in effect at the time they were loaded.
 
 	Therefore, if you have any sound banks already loaded, you should consider unloading them before switching languages.
 

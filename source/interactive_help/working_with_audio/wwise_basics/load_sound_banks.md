@@ -1,6 +1,6 @@
 # Load sound banks at runtime
 
-In order for any sounds to play at runtime in your game, you have to load the sound bank resources that contain your audio files into the game's memory. When you're done using a sound bank, you should also unload it from the game's memory in order to avoid having your audio files take up extra space in memory.
+In order for any sounds to play at runtime in your interactive app, you have to load the sound bank resources that contain your audio files into the engine's memory. When you're done using a sound bank, you should also unload it from the engine in order to avoid having your audio files take up extra space in memory.
 
 You can manage loading and unloading your sound banks in three different ways, described in the following sections.
 
@@ -8,7 +8,7 @@ You can manage loading and unloading your sound banks in three different ways, d
 
 Load and unload your sound banks by triggering the **Audio > Wwise > Banks > Wwise Load Bank** and **Audio > Wwise > Banks > Wwise Unload Bank** nodes.
 
-For example, a typical usage would be to load the sound banks that you need for each game level within the flow graph for that level, in response to the **Event > Level Loaded** event emitter node. Then, you can unload the banks in response to the **Event > Level Shutdown** event.
+For example, a typical usage would be to load the sound banks that you need for each level within the flow graph for that level, in response to the **Event > Level Loaded** event emitter node. Then, you can unload the banks in response to the **Event > Level Shutdown** event.
 
 ![](../../images/audio_load_banks_flow.png)
 
@@ -16,7 +16,7 @@ For example, a typical usage would be to load the sound banks that you need for 
 
 Load and unload your sound banks by calling the `stingray.Wwise.load_bank()` and `stingray.Wwise.unload_bank()` functions. Pass as a parameter the resource name of the sound bank you want to load.
 
-For example, this code snippet automatically loads and unloads a sound bank with the same resource name as the current level, if you are using the Appkit and the `SimpleProject` in your game:
+For example, this code snippet automatically loads and unloads a sound bank with the same resource name as the current level, if you are using the Appkit and the `SimpleProject` in your project:
 
 ~~~{lua}
 function Project.on_level_load_pre_flow()
@@ -49,4 +49,4 @@ wwise_dep = [
 ]
 ~~~
 
-Regardless of whether you choose to use this system for loading your sound banks, you should make sure that your game **always** loads the `content/audio/Init` *.wwise_dep* resource in your boot package. This resource contains metadata that the Wwise plug-in needs at runtime in order to be able to work with your banks and events.
+Regardless of whether you choose to use this system for loading your sound banks, you should make sure that your project **always** loads the `content/audio/Init` *.wwise_dep* resource in your boot package. This resource contains metadata that the Wwise plug-in needs at runtime in order to be able to work with your banks and events.

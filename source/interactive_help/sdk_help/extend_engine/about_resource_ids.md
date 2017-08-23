@@ -2,7 +2,7 @@
 
 Many different kinds of things in your project can be identified by string names. For example: resources and assets have path names within the project like "content/models/floor"; they also have type names like "unit" or "material"; level objects like units and entities have names that you can set in the editor; materials have slot names; flow nodes have named input and output ports.
 
-This is convenient to keep things easily readable and understandable by humans. However, it's inefficient to store and use these strings in the game engine at runtime. To maximize performance, and to make sure that each identifier occupies a predictable and consistent amount of memory, the engine converts most strings to a *hashed* value internally.
+This is convenient to keep things easily readable and understandable by humans. However, it's inefficient to store and use these strings in the engine at runtime. To maximize performance, and to make sure that each identifier occupies a predictable and consistent amount of memory, the engine converts most strings to a *hashed* value internally.
 
 For example, a unit that you refer to as `content/models/floor` is known inside the engine as `0xc9f385895440595d`.
 

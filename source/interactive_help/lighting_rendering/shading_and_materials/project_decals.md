@@ -7,7 +7,7 @@ You can use decals to achieve a wide variety of effects. For example:
 -	Enhance the look of your level by scattering subtle atmospheric overlays to simulate things like frost, stains, and shadows.
 -	Tie the objects in your level together visually by projecting overlays across the boundaries between the models.
 -	Disguise mesh instancing by giving unique features to each instance of a copied unit or to each block of a repeating texture.
--	Make game events appear to alter the static objects in your scene by dynamically spawning projectors for marks like footprints, bullet holes, bloodstains, and so on.
+-	Make events appear to alter the static objects in your scene by dynamically spawning projectors for marks like footprints, bullet holes, bloodstains, and so on.
 
 ![](../../images/decals.jpg)
 
@@ -101,7 +101,7 @@ One easy way to do this is to open the base decal box unit in the **Unit Editor*
 
 ## Spawn decal projectors dynamically
 
-Since a decal projector is fundamentally just a unit, you can spawn and unspawn decal projectors dynamically at runtime in your game in Flow or in Lua, exactly the same way you would spawn and unspawn other kinds of units. You will need to place and size the unit so that it projects on the meshes that you want it to, and you may need to set up the unit to project the right material.
+Since a decal projector is fundamentally just a unit, you can spawn and unspawn decal projectors dynamically at runtime in your Flow or Lua gameplay programming, exactly the same way you would spawn and unspawn other kinds of units. You will need to place and size the unit so that it projects on the meshes that you want it to, and you may need to set up the unit to project the right material.
 
 For example:
 

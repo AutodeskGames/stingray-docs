@@ -1,6 +1,6 @@
 # Localizing resources
 
-You may sometimes need your game to load and use different versions of a resource depending on runtime conditions. For example, if you want to translate your game into multiple languages, you may need to show different textures or play different animations depending on the current language chosen by the player. Or, you may need to use different versions of a resource depending on the platform the game currently is running on.
+You may sometimes need your app to load and use different versions of a resource depending on runtime conditions. For example, if you want to translate your content into multiple languages, you may need to show different textures or play different animations depending on the current language chosen by the player. Or, you may need to use different versions of a resource depending on the platform the engine currently is running on.
 
 {{ProductName}} provides a built-in resource selection mechanism that can automatically choose the most appropriate version of each resource to load, based on settings that you specify.
 
@@ -14,7 +14,7 @@ Then whenever the engine was about to spawn `larch_03`, it would spawn `pine_05`
 
 The override happens when a resource is instantiated, for example when a unit is spawned. It doesn't apply retroactively, so any larches that were spawned before the override was enabled will still be larches after the override has been enabled.
 
-The overriding resources will still be pines. If you ask them for their name, it will be `trees/pine_05`, not `trees/larch_03`. It is up to the game developer to make sure that they have all the necessary actors, bones, meshes etc, to work as substitutes for the resources they are overriding.
+The overriding resources will still be pines. If you ask them for their name, it will be `trees/pine_05`, not `trees/larch_03`. It is up to the gameplay developer to make sure that they have all the necessary actors, bones, meshes etc, to work as substitutes for the resources they are overriding.
 
 Note that only individual resources can be overriden. You can't override folders.
 
@@ -88,4 +88,4 @@ For simplicity, multiple suffixes on a resource are not supported. At most one s
 
 ## Game authoring with localized resources
 
-While you are working on your game, always refer to the most generic version of your resources. If you explicitly put `big_white_rock.ps4` units in a level, then that resource will be used on all platforms. To get the override resolution, you should put `big_white_rock` units in the level and they will be automatically remapped to `big_white_rock.ps4`, `big_white_rock.xb1`, based on your override settings.
+While you are working on your project, always refer to the most generic version of your resources. If you explicitly put `big_white_rock.ps4` units in a level, then that resource will be used on all platforms. To get the override resolution, you should put `big_white_rock` units in the level and they will be automatically remapped to `big_white_rock.ps4`, `big_white_rock.xb1`, based on your override settings.

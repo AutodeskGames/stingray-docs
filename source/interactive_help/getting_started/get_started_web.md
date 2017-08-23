@@ -95,7 +95,7 @@ If your project doesn't run in the browser:
 
 -	In the browser, typically you can press **F12** to open the developer tools.
 
-	The **Console** tab in the developer tools lists any errors the browser encountered when trying to open the project. It also lists any messages that your game project writes to the log. This can sometimes be helpful in diagnosing where a problem occurs.
+	The **Console** tab in the developer tools lists any errors the browser encountered when trying to open the project. It also lists any messages that the engine writes to the log while running your project. This can sometimes be helpful in diagnosing where a problem occurs.
 
 - Here are some of the errors we've heard about, and how to fix them:
 

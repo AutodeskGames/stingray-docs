@@ -42,7 +42,7 @@ Each connection you configure requires the following settings:
 >	**Connecting to a remote PC is currently not supported.**
 
 <dl>
-<dt>Compile and install bundled game data on run project</dt>
+<dt>Compile and install bundled game data upon run project</dt>
 <dd>For iOS and Android targets only. When this check box is selected, and you run your project on this device, your project data is saved on the device. The next time you start the engine app on the device, you can choose whether to wait for a connection from the editor, or start up in an offline, standalone mode using the last set of project data saved to the device.</dd>
 
 <dt>Browser Path</dt>
@@ -83,7 +83,7 @@ You can set up the **Connections** panel to launch multiple instances of the eng
 
 	You can read these parameters in your project's Lua script and change the gameplay behavior based on their values. See the `stingray.Application.argv()` function.
 
-	For example, if you're testing a network setup, you could use `--server` and `--client` to make your game logic initialize the networking system in different ways. If you just want to open multiple windows without the parameters having any particular meaning, just add any strings as long as they're different for each target, like `--instance1` and `--instance2`.
+	For example, if you're testing a network setup, you could use `--server` and `--client` to make your gameplay logic initialize the networking system in different ways. If you just want to open multiple windows without the parameters having any particular meaning, just add any strings as long as they're different for each target, like `--instance1` and `--instance2`.
 
 	You can also have a look at the ~{ Engine command-line reference }~ for a list of all the command-line parameters that the engine understands. Many of them won't be useful to include in the connection setup, but you could use parameters like `--editor-ini` to make the different engines load their settings from different *.ini* files.
 

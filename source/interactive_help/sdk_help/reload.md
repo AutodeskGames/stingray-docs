@@ -14,9 +14,9 @@ You could always shut down your session in the engine and the editor, recopy any
 
 When you add or modify any assets in a folder that your plug-in has mounted as a resource library, the editor should automatically detect the changes and recompile the resources. You shouldn't need to do anything special in order to make those resources available, though as always you can press **F5** anytime to force the editor to refresh.
 
-If you're currently testing your level or running your project, just refreshing the resources in the editor won't necessarily make the engine that's running your game start using the updated versions of the assets that you've added or changed. If the engine has already loaded your resources into the running project, it will continue on using the original versions of those assets that it initially loaded. To refresh the engine to use the most recent compiled versions of the assets, you can send the `refresh` command from the editor's status bar to the engine. For details, see ~{ Send commands from the Status bar }~.
+If you're currently testing your level or running your project, just refreshing the resources in the editor won't necessarily make the engine that's running your project start using the updated versions of the assets that you've added or changed. If the engine has already loaded your resources into the running project, it will continue on using the original versions of those assets that it initially loaded. To refresh the engine to use the most recent compiled versions of the assets, you can send the `refresh` command from the editor's status bar to the engine. For details, see ~{ Send commands from the Status bar }~.
 
->	If you're running your project from its compiled data without the editor open, or if you're running from a standalone deployed build of your project, then you won't be able to hot-reload the modified assets. You need to have the editor open in order to compile the assets for you and to send the reload message to the game.
+>	If you're running your project from its compiled data without the editor open, or if you're running from a standalone deployed build of your project, then you won't be able to hot-reload the modified assets. You need to have the editor open in order to compile the assets for you and to send the reload message to the engine.
 
 ## Reload an engine plug-in
 
@@ -26,7 +26,7 @@ Follow all the steps below to set up your plug-in and your build process to be c
 
 ### Step 1. Implement the hot reload interface in your plug-in
 
-When the engine loads the updated version of your plug-in, it always starts with a clean slate. Anything that was computed or stored by the old version of the plug-in is lost during the reload process. However, in many cases, plug-ins rely on stored data that they can't simply recompute after the reload -- like the current state of the plug-in, or records of the units they have spawned in the game world.
+When the engine loads the updated version of your plug-in, it always starts with a clean slate. Anything that was computed or stored by the old version of the plug-in is lost during the reload process. However, in many cases, plug-ins rely on stored data that they can't simply recompute after the reload -- like the current state of the plug-in, or records of the units they have spawned in the engine world.
 
 Therefore, the engine offers an interface that plug-ins can use to cache this kind of state information, preserving it when the plug-in is unloaded and passing it along to the updated version of the plug-in after the reload.
 
@@ -77,4 +77,4 @@ For example, suppose that your plug-in carries out some operations when it's fir
 
 Hot reloading typically works best when you need to test out small tweaks to parameters and settings, or small changes within existing code blocks. The larger the changes you make, the more you risk running into problems after the refresh.
 
-For a deeper discussion about hot-reloading resources, see ~{ Reloading resources }~. If you're reloading Lua code into the game's Lua environment, see also ~{ Reloading Lua code }~.
+For a deeper discussion about hot-reloading resources, see ~{ Reloading resources }~. If you're reloading Lua code into the engine's Lua environment, see also ~{ Reloading Lua code }~.

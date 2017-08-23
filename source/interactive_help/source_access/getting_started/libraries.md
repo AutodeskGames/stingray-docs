@@ -38,7 +38,7 @@ This script requires some additional Ruby gems. If you do not have them installe
 
 ## Additional libraries
 
-There are some libraries for optional third-party integrations that Autodesk is not permitted to redistribute directly. If you want your game to support the systems listed below, you must copy the required versions of the libraries manually into the location specified by your `SR_LIB_DIR` environment variable.
+There are some libraries for optional third-party integrations that Autodesk is not permitted to redistribute directly. If you want your app to support the systems listed below, you must copy the required versions of the libraries manually into the location specified by your `SR_LIB_DIR` environment variable.
 
 ### Steam
 

@@ -26,7 +26,7 @@ Ideally, anything else that's necessary would happen automatically. However, dep
 
 	b)	modify the `engine/<platform>/<config>/package.manifest` file, which tells the deployer what files to ship with the project. They must add the relative path and filename of the *.dll* to the list of files in this manifest along with the other plug-in entries, and save the changes.
 
--	**If your plug-in adds content that needs to be present in the game at runtime:** The user may need to add your plug-in content to their resource packages in order to make sure that your content gets loaded. They can add this to their *boot.package* file, or to another package that they load on-demand in the game. For more, see ~{ Loading and unloading content at runtime }~.
+-	**If your plug-in adds content that needs to be present in the engine at runtime:** The user may need to add your plug-in content to their resource packages in order to make sure that your content gets loaded. They can add this to their *boot.package* file, or to another package that they load on-demand. For more, see ~{ Loading and unloading content at runtime }~.
 
 -	**If your plug-in needs to add any Lua scripts to the project content:** Your plug-in's scripts won't get loaded by default into the project's Lua environment at runtime. Your user will have to adjust their project's Lua code in order to `require` those added script files. So, for example, if your plug-in contains some custom Flow nodes that are implemented in accompanying Lua scripts, the user needs to `require` those scripts from within their own gameplay code in order for the Flow nodes to work.
 

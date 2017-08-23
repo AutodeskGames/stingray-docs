@@ -12,7 +12,7 @@ This page describes how to set up and bake reflection probes to provide localize
 
 1.	With the probe selected, set the **Reflection Probe Settings** properties in the ~{ Property Editor }~:
 
-	-	The **Light Box Min** and **Light Box Max** settings control where in the level the reflections are shown during the game. Only surfaces inside this volume will be lit by the reflections baked for this probe.
+	-	The **Light Box Min** and **Light Box Max** settings control where in the level the reflections are shown when the level is rendered in the engine. Only surfaces inside this volume will be lit by the reflections baked for this probe.
 
 	-	The **Falloff** controls how far from the outside of this volume the reflections start to fade out. Lower values cause the reflections to stop over a smaller distance, as they would at the edge of a mirror frame. Larger values cause the reflections to fade out over a larger distance, which is typically smoother if you want to have multiple overlapping light probes.
 
@@ -58,7 +58,7 @@ For example, this image has a single reflection probe (the sphere on the far rig
 
 ## Examples
 
-The following sections give some guidelines or recipes for setting up reflection probes for common game situations. They may not apply in all cases, but should hopefully give you a starting point.
+The following sections give some guidelines or recipes for setting up reflection probes for common situations. They may not apply in all cases, but should hopefully give you a starting point.
 
 ### Setting up a mirror
 
@@ -80,7 +80,7 @@ To set up reflections for a relatively small 3D object that can be seen from all
 
 ### Setting up a movable reflective 3D object
 
-If you have reflective surfaces that will move around in the game, or if you have large surfaces that need realistic reflections, you will likely have to use multiple probes.
+If you have reflective surfaces that will move around in the scene, or if you have large surfaces that need realistic reflections, you will likely have to use multiple probes.
 
 -	Place the probes spaced at regular intervals throughout the parts of the level that need reflections.
 -	Make their light boxes big enough that they overlap slightly. Within the overlapping areas, the baked reflections from all overlapping probes will apply.

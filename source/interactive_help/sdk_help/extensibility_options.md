@@ -26,11 +26,11 @@ Most of the panels and views that you see in the interactive editor app are actu
 
 ## Engine plug-ins
 
-Engine plug-ins integrate into the runtime viewing and playback engine, typically with the purpose of changing something about the way project data is loaded, or the way the data is used at runtime during the game loop.
+Engine plug-ins integrate into the runtime viewing and playback engine, typically with the purpose of changing something about the way project data is loaded, or the way the data is used at runtime during the engine loop.
 
 -	Engine plug-ins are always written in **C** and compiled to *.dll* files.
 
--	They are invoked systematically through a plug-in API at certain times while the engine is running -- for example, when a project is first loaded, at every frame of the update loop, when the data compiler starts up, when units are spawned in the game, etc. Your plug-in can jump in at these points and control what happens next.
+-	They are invoked systematically through a plug-in API at certain times while the engine is running -- for example, when a project is first loaded, at every frame of the update loop, when the data compiler starts up, when units are spawned in the world, etc. Your plug-in can jump in at these points and control what happens next.
 
 -	Engine plug-ins can also add new functions to the engine's Lua environment, so that the project's gameplay logic and/or editor plug-ins can call out to the C code of the engine plug-in to make stuff happen.
 
@@ -44,7 +44,7 @@ For more information on how to extend the engine in a plug-in, see ~{ Extend the
 
 {{ProductName}} is a set of tools intended for creative people to use to imagine, design and create unique, new experiences that have never been done or imagined before. So the line can be very blurry between what is simply creating new project content on one hand, and what is extending the toolset on the other hand.
 
-When you simply import new units or create new assets like shaders and levels in a project, most people would not think of that as *extending* the tools -- it's just *using* the product to create content, not changing what the tools are capable of. But what about when you add new Lua scripts? Or new custom Flow nodes and shader nodes? Assets like these are still project content -- they live in the project source folder, and they get compiled and brought into the game engine along with your levels, units, animations, etc. But they often also add new ways to use the editor and the engine in order to create other content.
+When you simply import new units or create new assets like shaders and levels in a project, most people would not think of that as *extending* the tools -- it's just *using* the product to create content, not changing what the tools are capable of. But what about when you add new Lua scripts? Or new custom Flow nodes and shader nodes? Assets like these are still project content -- they live in the project source folder, and they get compiled and brought into the engine along with your levels, units, animations, etc. But they often also add new ways to use the editor and the engine in order to create other content.
 
 Content plug-ins make new assets of all kinds available to any project that you open and build in the editor. These new assets are treated in exactly the same way as the `core` resources -- they are "mounted" by the editor, visible in the **Asset Browser**, compiled by the engine, and usable in the project at runtime.
 
@@ -100,9 +100,9 @@ Some examples:
 
 	For example, suppose that you want to add some custom Flow nodes that are implemented in C. To do this, you'll need your plug-in to extend the project content by adding some new *.flow_node_definition* files that contain data descriptions for the nodes, and you'll need to extend the engine with a *.dll* that contains the C implementations for those nodes. You don't need to extend the editor in this case, since the new nodes will be used as part of the existing Flow editing system.
 
-	Similarly, your plug-in could add a new type of entity component that would mark a game entity for some kind of special treatment by your runtime plug-in. In the editor, a game designer would be able to use the existing entity editing workflows to apply your component to whatever entities need to be marked. Each frame of the update loop, your runtime plug-in could iterate through the entities in the world, looking for the ones that have been assigned the new component.
+	Similarly, your plug-in could add a new type of entity component that would mark the entity it is assigned to for some kind of special treatment by your runtime plug-in. In the editor, a designer would be able to use the existing entity editing workflows to apply your component to whatever entities need to be marked. Each frame of the update loop, your runtime plug-in could iterate through the entities in the world, looking for the ones that have been assigned the new component.
 
--	**all-in-one** plug-ins integrate with all the parts of the {{ProductName}} environment. You'll probably find this necessary if you want your plug-in to add sophisticated new features for the runtime experience, backed up with a great editing experience for level designers and game authors working in the editor.
+-	**all-in-one** plug-ins integrate with all the parts of the {{ProductName}} environment. You'll probably find this necessary if you want your plug-in to add sophisticated new features for the runtime experience, backed up with a great editing experience for level designers and interaction authors working in the editor.
 
 	The Navigation plug-in gives a good example of a plug-in that integrates with all three of these systems:
 

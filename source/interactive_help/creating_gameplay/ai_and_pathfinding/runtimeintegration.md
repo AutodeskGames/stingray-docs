@@ -1,6 +1,6 @@
-﻿# Integrate Gameware Navigation into your game runtime
+# Integrate Gameware Navigation into your project
 
-This document describes how to integrate Gameware Navigation into your Lua game code. You will learn how to add a navigation world, and spawn bots.
+This page describes how to integrate Gameware Navigation into your Lua gameplay code. You will learn how to add a navigation world, and spawn bots.
 
 # Gameware Navigation Lua scripts
 
@@ -14,7 +14,7 @@ The main component to integrate is the navigation world (requires *navworld.lua*
 From this object you will be able to:
 
 * load navdata
-* render the navmesh in-game
+* render the navmesh in the editor viewport
 * send visual debug information to the NavigationLab.
 
 ## Init
@@ -35,7 +35,8 @@ With:
 ## Update
 
 The navigation world must be updated each frame.
-The main game camera can also be sent for visual debugging so that when connected to your Game, the camera in the Navigation Lab can match your game camera.
+
+You can also set a camera to use for visual debugging. When you connect the Navigation Lab to the engine, its camera can then track the camera in the interactive engine.
 
 ~~~{lua}
 function MyGame:update(dt)
@@ -62,7 +63,7 @@ To remove NavData from a world:
 
 ## NavData rendering
 
-In order to render the navigation mesh in game call:
+In order to render the navigation mesh in the viewport, call:
 
 ~~~{lua}
 self.navworld:debug_draw(gui, line_object)

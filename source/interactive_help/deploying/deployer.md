@@ -2,7 +2,7 @@
 
 - **Window > Deploy and Connect > Deployer**
 
-You can use the **Deployer** panel to create final, standalone packages of your game on each of your target platforms. It has a separate tab dedicated to each target that {{ProductName}} supports.
+You can use the **Deployer** panel to create final, standalone packages of your interactive app on each of your target platforms. It has a separate tab dedicated to each target that {{ProductName}} supports.
 
 ![Deployer Window Overview](../images/deployer.png)
 
@@ -12,9 +12,9 @@ Basic usage is the same across all target platforms:
 
 2.	You provide the settings requested by the **Deployer** panel.
 
-3.	Click the **Package Project for...** button to launch the deploying process. The **Deployer** creates the final game package in the location that you specify.
+3.	Click the **Package Project for...** button to launch the deploying process. The **Deployer** creates the final app package in the location that you specify.
 
-When the **Deployer** finishes, you may also need to use tools specific to the target platform in order to distribute the packaged game or install it on the target platform. For example, for Windows platforms you may need to create an installer; for iOS or Android platforms you need to use tools provided by Apple or Google to get your app uploaded to the online store for customers to purchase it; for PlayStation 4 platforms you need to use tools provided by Sony to complete the process.
+When the **Deployer** finishes, you may also need to use tools specific to the target platform in order to distribute the packaged app or install it on the target platform. For example, for Windows platforms you may need to create an installer; for iOS or Android platforms you need to use tools provided by Apple or Google to get your app uploaded to the online store for customers to purchase it; for PlayStation 4 platforms you need to use tools provided by Sony to complete the process.
 
 For details on all the platform-specific settings required by the **Deployer** panel, see the other topics in this section:
 

@@ -32,7 +32,7 @@ The light baker creates a new subfolder in the same folder as the current level'
 
 Next to your level's resource file, the baker also creates a *.baked_lighting* resource. This file records the lightmaps generated for your level, and which meshes each map is associated with.
 
-You don't have to do anything with the generated lightmap textures or the *.baked_lighting* file in order for the lightmaps to show up in your game; the engine handles it automatically. However, you might want to use the ~{ Texture Manager }~ to configure the way the textures are processed and compressed when they are compiled for each platform. Baked lightmaps automatically get tagged with the `Lightmap` texture category, so you can easily find them in the **Texture Editor**.
+You don't have to do anything with the generated lightmap textures or the *.baked_lighting* file in order for the lightmaps to show up on your objects; the engine handles it automatically. However, you might want to use the ~{ Texture Manager }~ to configure the way the textures are processed and compressed when they are compiled for each platform. Baked lightmaps automatically get tagged with the `Lightmap` texture category, so you can easily find them in the **Texture Editor**.
 
 >**Tip:** To delete all baked lightmaps, click **Clear** (**Window > Lighting > Light Baking**). Lightmaps are removed and no longer appear in the `<level_name>-lightmaps` subfolder.
 
