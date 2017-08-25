@@ -10,12 +10,13 @@ The following example from a project's *settings.ini* file shows what a small bl
 
 ~~~{sjson}
 // The script that should be started when the application runs.
-boot_script = "boot"
+boot_script = "script/lua/boot"
 
-// The port on which the console server runs.
-console_port = 14030
+// An asset package that the engine should load on startup.
+// Should contain, at a minimum, the boot script and any other assets the boot script refers to.
+boot_package = "boot"
 
-// Settings for the win32 platform
+// Settings for Windows platforms
 win32 = {
 
     /* Sets the affinity mask for
@@ -24,7 +25,7 @@ win32 = {
 
 }
 
-render_config = "core/rendering/renderer"
+render_config = "core/stingray_renderer/renderer"
 ~~~
 
 For larger examples, you can see the *settings.ini*, *.physics_properties*, or *.shading_environment* files of any project.
