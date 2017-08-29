@@ -2,7 +2,7 @@
 
 You can update bundled releases of your app by creating incremental patches that contain new content, bug fixes, and updates to existing assets.
 
-These incremental patches are made up of *patch bundles*. These are bundles of assets that correspond to the bundles originally released with your app, but that contain only files that have been added or modified since the original bundles were made. You install these files alongside the bundles originally shipped with your app, and the interactive engine automatically takes care of loading the latest versions of all your resources.
+These incremental patches are made up of *patch bundles*. These are bundles of assets that correspond to the bundles originally released with your app, but that contain only files that have been added or modified since you made the original bundles. You install these files alongside the bundles originally shipped with your app, and the interactive engine automatically takes care of loading the latest versions of all your resources.
 
 Each patch bundle is created with a file extension that increments each time you create a patch for that bundle. When the engine loads a resource package, it starts by loading all resources from the latest patch file available. It then loads each previous patch file in turn, skipping any resources that have already been loaded from a later patch file. Finally, it loads all remaining resources from the original bundle.
 

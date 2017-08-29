@@ -1,12 +1,12 @@
 # Downloadable content (DLC) and other extras
 
-You may at some point want to enhance your interactive application with extra content that is added on to a base install -- for example, downloadable content (DLCs) that you distribute through an on-line store or web site. You can do this with {{ProductName}} in much the same way that you can provide patches to update existing app content.
+You may at some point want to enhance your interactive application with extra content that is added on to a base install -- for example, downloadable content (DLCs) that you distribute through an online store or web site. You can do this with {{ProductName}} in much the same way that you can provide patches to update existing app content.
 
-With {{ProductName}}, there is no difference in principle between DLCs and regular content. You build the new content for your DLC using the standard editing tools, organize it into new *packages*, and compile those packages into *bundles*. You distribute these bundles to your users as patches that install the new bundles alongside the already existing data bundles for your application.
+With {{ProductName}}, there is no difference in principle between DLCs and regular content. You build the new content for your DLC using the standard editing tools, organize it into new *packages*, and compile those packages into *bundles*. You distribute these bundles to people as patches that install the new bundles alongside the already existing data bundles for your application.
 
-Although all users who install the patch receive the bundled data, you might want your app to make that data available only to authorized users who have purchased an entitlement. You would typically do this in your Lua gameplay code, as shown below.
+Although anyone who installs the patch receives the bundled data, you might want your app to make that data available only to authorized people who have purchased an entitlement. You would typically do this in your Lua gameplay code, as shown below.
 
-Therefore, when a user buys a DLC from an on-line service, what the user receives from the asset store is typically not the full DLC content, but just an account setting or an entitlement that your gameplay code uses to decide whether or not the DLC content installed in the patch should be visible to the player.
+Therefore, when a user buys a DLC from an online service, what the user receives from the asset store is typically not the full DLC content, but just an account setting or an entitlement that your gameplay code uses to decide whether or not the DLC content installed in the patch should be visible to the player.
 
 See also ~{ Patching your app }~ for background on the patching system.
 
