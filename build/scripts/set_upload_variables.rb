@@ -15,11 +15,11 @@ def set_upload_variables
   do_prod = "false"
   do_beta = "false"
 
-  puts("Upload build to AKN? y/n")
+  puts("Upload build to help-staging.autodesk.com? y/n")
   if yesno() then
     do_prod = "true"
   else
-    puts("Upload build to AKN Beta? y/n")
+    puts("Upload build to help-staging-beta.autodesk.com? y/n")
     if yesno() then
       do_beta = "true"
     end
