@@ -26,7 +26,7 @@ Open the {{ProductName}} editor and create a new project. In this example we are
 
 6. Export the sound bank.
 
-	You can find the exported assets, formatted for use by the {{ProductName}} engine, in the ~{ Wwise project }~ folder of your {{ProductName}} project.
+	You can find the exported assets, formatted for use by the {{ProductName}} engine, in the `content/audio/` folder of your {{ProductName}} project.
 
 ## Step 3. Back in the {{ProductName}} project, play a sound
 

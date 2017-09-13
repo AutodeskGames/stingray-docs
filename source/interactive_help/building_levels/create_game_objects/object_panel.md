@@ -40,7 +40,7 @@ Seed points let you define the walkable areas of the terrain in your level.
 
 When you place one or more seed points in a level, navigation data is only generated for areas that are accessible from those seed points. By placing seed points in areas where you don't want your NPCs to be able to walk, like rooftops, or barriers, you can reduce the amount of navigation data you generate for your level.
 
-See also ~{ Generate navigation mesh }~.
+See also ~{ Generate the navigation mesh }~.
 
 **Graph Connector**
 

@@ -2,7 +2,7 @@
 
 You can start the interactive engine application from a command-line prompt, and provide parameters on the command line to trigger lightmap baking.
 
->	**Note:** Non-interactive baking is the default baking mode when you launch a baking session from the command line. See ~{ Baking with the built-in baker }~.
+>	**Note:** Non-interactive baking is the default baking mode when you launch a baking session from the command line. See ~{ Baking with the built-in light baker }~.
 
 ## To trigger lightmap baking from the command line
 
@@ -30,5 +30,5 @@ You can start the interactive engine application from a command-line prompt, and
 
 ---
 Related topics:
-- ~{ command-line reference }~
+- ~{  Engine command-line reference }~
 ---

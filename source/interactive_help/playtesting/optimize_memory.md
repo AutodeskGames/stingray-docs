@@ -135,7 +135,7 @@ If your lightmaps are taking up too much memory, you can try the following ideas
 
 -	Restrict light baking to only some important objects in the scene, and leave others to use dynamic direct lighting and the global baked diffuse lighting.
 
--	Lower the *lightmap resolution* setting in the **Light Baking** dialog. This makes the generated textures smaller in size, at the cost of detail and sharpness. See ~{ Baking with the built-in baker }~.
+-	Lower the *lightmap resolution* setting in the **Light Baking** dialog. This makes the generated textures smaller in size, at the cost of detail and sharpness. See ~{ Baking with the built-in light baker }~.
 
 	If you find that you can't get enough detail in the baked lighting when you reduce the lightmap resolution this way, you can try baking only indirect illumination but not direct light. The effect of lowering the resolution is typically less noticeable for indirect light, which tends to be blurry and low-frequency anyway.
 

@@ -1,4 +1,4 @@
-##Connect DCC tool and engine viewports
+## Connect DCC tool and engine viewports
 
 With the {{ProductName}} DCC link plug-in installed and loaded for your DCC tool, you can establish a live viewport connection between your DCC tool and the interactive editor.
 

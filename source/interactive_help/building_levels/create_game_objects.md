@@ -27,7 +27,7 @@ Using the **Create** menu  or the ~{ Create panel }~, you can create the followi
 	![](../images/trigger_flow_node.png)
 
 
--	**Volumes** are 3D blocks that are used for tagging the navigation mesh. See ~{ Generate navigation mesh }~.
+-	**Volumes** are 3D blocks that are used for tagging the navigation mesh. See ~{ Generate the navigation mesh }~.
 
 -	**Splines** are 3D curved paths, used for constricting motion. The path information is accessible using Lua scripting and Flow nodes.
 

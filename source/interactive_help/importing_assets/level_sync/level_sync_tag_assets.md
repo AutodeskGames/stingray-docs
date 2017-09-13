@@ -4,7 +4,7 @@ Tagging assigns a name and target folder for your asset(s), so your DCC tool kno
 
 ## Manually tag your asset(s) with level sync
 
-1.	Link Maya, Maya LT, or 3ds Max with the interactive editor. See ~{ Connect DCC tool and editor viewports }~.
+1.	Link Maya, Maya LT, or 3ds Max with the interactive editor. See ~{ Connect DCC tool and engine viewports }~.
 
 2.	In your DCC tool, select your asset(s) and then select **Stingray > Set Engine Resource**.
 The Set Engine Resource window lets you tag the assets you want to export to {{ProductName}}.
@@ -25,7 +25,7 @@ The Set Engine Resource window lets you tag the assets you want to export to {{P
 
 ## Automatically tag your asset(s) with level sync
 
-1.	Link Maya, Maya LT, or 3ds Max with the interactive editor. See ~{ Connect DCC tool and Stingray viewports }~.
+1.	Link Maya, Maya LT, or 3ds Max with the interactive editor. See ~{ Connect DCC tool and engine viewports }~.
 
 2.	Do one of the following:
 

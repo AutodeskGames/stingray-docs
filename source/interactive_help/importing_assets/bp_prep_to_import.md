@@ -37,5 +37,5 @@
 ---
 Related topics:
 -	~{ Export an FBX file to use in {{ProductName}} }~
--	~{ Recommended FBX settings for export }~
+-	~{ Recommended FBX settings for export to {{ProductName}} }~
 ---

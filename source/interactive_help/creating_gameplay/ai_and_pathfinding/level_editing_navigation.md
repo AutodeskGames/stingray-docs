@@ -43,7 +43,7 @@ In Lua, the `NavWorld` object looks for unit instances containing a `GwNavBot` s
 The bot will be allowed to go through all navtags at a cost multiplier of 1.
 Except for those specified into `navtag_layers` scriptdata array made of objects with 2 entries `layer_id` and `layer_cost_multiplier`.
 
-`layer_id` refers to the `layer_id` component of a navtag. This may be set at generation time (see "Tagging the NavMesh at generation time" under ~{ Generate navigation mesh }~) or at runtime (see [NavMesh tagging script data] below).
+`layer_id` refers to the `layer_id` component of a navtag. This may be set at generation time (see "Tagging the NavMesh at generation time" under ~{ Generate the navigation mesh }~) or at runtime (see [NavMesh tagging script data] below).
 
 `layer_cost_multiplier` gives the cost applied when traversing such layer, negative or null costs forbid the layer to be traversed.
 
@@ -96,7 +96,7 @@ See `GwNavTagVolume` in the API documentation.
 
 ## NavMesh tagging script data
 
-The following script data setup the tagging (similarly to what is put in a `GwNavGenTag`, see "Tagging the NavMesh at generation time" under ~{ Generate navigation mesh }~):
+The following script data setup the tagging (similarly to what is put in a `GwNavGenTag`, see "Tagging the NavMesh at generation time" under ~{ Generate the navigation mesh }~):
 
 *	Boolean script data `is_exclusive` : when set to `true` allows to make the tagbox exclusive and consequently cut the navmesh.
 *	Integer script data `layer_id` : identifies the layer_id this navtag belongs to, allowing to control how bots traverse it.

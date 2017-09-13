@@ -40,7 +40,7 @@
 <dl>
 
 <dt>Type</dt>
-<dd>Sets the Navigation volume type for tagging NavMesh. See "Generation tagvolumes" in ~{ Generate navigation mesh }~ for the volume types.</dd>
+<dd>Sets the Navigation volume type for tagging NavMesh. See "Generation tagvolumes" in ~{ Generate the navigation mesh }~ for the volume types.</dd>
 
 </dl>
 
