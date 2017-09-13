@@ -31,7 +31,9 @@ There are some common fields that are shared across all tabs:
 
 <dl>
 <dt>Destination</dt>
-<dd>Specifies where to install the final package once it's produced. Within this destination folder, the deployer creates a sub-folder with the platform name. Within the platform folder, it creates another sub-folder with the configuration name. This means that all of your tabs can use the same destination folder setting without overwriting each others' output.</dd>
+<dd>Specifies where to install the final package once it's produced. Within this destination folder, the deployer creates a sub-folder with the platform name. Within the platform folder, it creates another sub-folder with the configuration name. This means that all of your tabs can use the same destination folder setting without overwriting each others' output.
+
+Make sure that you have write permissions to this folder, and that it does not contain any locked or read-only files.</dd>
 
 <dt>Configuration</dt>
 <dd>Determines which configuration of the interactive engine will be used to package your project. By default, this is set to Release. It is generally recommended that you keep this default setting when deploying a standalone build, unless you have a specific need to use a different configuration. For more information, see ~{ About engine configurations }~.</dd>
