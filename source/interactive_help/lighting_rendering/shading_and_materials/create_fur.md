@@ -1,6 +1,6 @@
 # Create fur
 
-The standard fur material in Stingray lets you create realistic short fur that can be applied to assets like bears, cats, and dogs.
+The standard fur material lets you create realistic short fur that can be applied to assets like bears, cats, and dogs.
 
 >**Note:** Currently, fur is supported on Windows only.
 

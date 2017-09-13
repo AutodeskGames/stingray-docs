@@ -3,11 +3,11 @@
 
 - **Window > Level Flow**
 
-A visual authoring tool that handles all of the level logic you want to happen when loading your level, or when the game is running. Use the **Level Flow** Editor for tasks like spawning units, applying level effects, or triggering events.
+A visual authoring tool that handles all of the level logic you want to happen when loading your level, or when the engine is running. Use the **Level Flow** Editor for tasks like spawning units, applying level effects, or triggering events.
 
 ![Level Flow Editor](../../images/levelFlow.png)
 
-For detailed reference to the Flow nodes in the Stingray, see [here](../../../flow_ref/index.html).
+For detailed reference to the Flow nodes offered by {{ProductName}}, see [here](../../../flow_ref/index.html).
 
 ##Flow Editor Hotkeys
 

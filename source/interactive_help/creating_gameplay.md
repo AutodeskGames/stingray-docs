@@ -1,8 +1,8 @@
 # Creating Gameplay
 
-With Stingray, you can set up interactive gameplay using Flow visual programming, and Lua scripting. Topics in this section introduce you to both.
+With {{ProductName}}, you can set up interactive gameplay using Flow visual programming, and Lua scripting. Topics in this section introduce you to both.
 
->  A great way to get started with interactive authoring is to check out some real working game projects built in Stingray. These kits are built mostly in Flow, so they demonstrate the kind of things you can accomplish without needing to write a ton of custom code.
+>  A great way to get started with interactive authoring is to check out some real working projects. These kits are built mostly in Flow, so they demonstrate the kind of interactive applications you can create without needing to write a ton of custom code.
 
 <table class="not-ruled"><tr><td>
 ![Space shooter gamekit](images/project_example_space_shooter.png)

@@ -1,21 +1,22 @@
 # About the SJSON data format
 
-Many Stingray resource files express data using a text-based format based on the widely used [JSON](http://www.json.org/) standard, with a few custom extensions and simplifications that are intended to make the data easier to read, edit and maintain. This format is often referred to as *SJSON*, for *simplified JSON*.
+Many {{ProductName}} resource files express data using a text-based format based on the widely used [JSON](http://www.json.org/) standard, with a few custom extensions and simplifications that are intended to make the data easier to read, edit and maintain. This format is often referred to as *SJSON*, for *simplified JSON*.
 
-Although many types of resource files are automatically created and kept up to date by the Stingray editing tools, there are some kinds of data files that you need to modify by hand. For example, in order to set up different types of collision materials for the physics simulation used in your game, you need to make changes directly in your project's *global.physics_properties* file.
+Although many types of resource files are automatically created and kept up to date by the interactive editing tools, there are some kinds of data files that you need to modify by hand. For example, in order to set up different types of collision materials for the physics simulation used in your app, you need to make changes directly in your project's *global.physics_properties* file.
 
 ## Example
 
-The following example from a game's *settings.ini* file shows what a small block of SJSON looks like:
+The following example from a project's *settings.ini* file shows what a small block of SJSON looks like:
 
 ~~~{sjson}
 // The script that should be started when the application runs.
-boot_script = "boot"
+boot_script = "script/lua/boot"
 
-// The port on which the console server runs.
-console_port = 14030
+// An asset package that the engine should load on startup.
+// Should contain, at a minimum, the boot script and any other assets the boot script refers to.
+boot_package = "boot"
 
-// Settings for the win32 platform
+// Settings for Windows platforms
 win32 = {
 
     /* Sets the affinity mask for
@@ -24,12 +25,12 @@ win32 = {
 
 }
 
-render_config = "core/rendering/renderer"
+render_config = "core/stingray_renderer/renderer"
 ~~~
 
 For larger examples, you can see the *settings.ini*, *.physics_properties*, or *.shading_environment* files of any project.
 
->**Note:** You can use the **Script Editor** to open and edit Stingray data resource files in your project.
+>**Note:** You can use the **Script Editor** to open and edit data resource files in your project.
 
 ## Modifications from standard JSON
 
@@ -46,7 +47,7 @@ The SJSON format has the following differences from standard JSON:
 
 ## Using JSON
 
-Note that despite this added flexibility, the SJSON parser is compatible with plain JSON. You can use a regular JSON file as input to the SJSON parser. That means that if you want to write a custom tool for producing data to be consumed by Stingray, your tool can export standard JSON.
+Note that despite this added flexibility, the SJSON parser is compatible with plain JSON. You can use a regular JSON file as input to the SJSON parser. That means that if you want to write a custom tool for producing data to be consumed by the interactive engine, your tool can export standard JSON.
 
 ## Notable exceptions
 
@@ -55,4 +56,4 @@ Several types of data files do not use SJSON, including:
 *	Scripts, which are plain Lua files.
 *	Raw texture data, which are uncompressed *.dds* files.
 *	Imported *.fbx* assets.
-*	Stingray2D resource files, which may include items such as fonts and images.
+*	Scaleform Studio resources, which may include items such as fonts and images.

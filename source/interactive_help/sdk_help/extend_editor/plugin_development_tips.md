@@ -4,13 +4,13 @@ Developing a custom plug-in that integrates with the editor's JavaScript environ
 
 ## Debugging and using the Developer Tools
 
-The Stingray editor's front-end HTML5 environment runs in the Chromium Embedded Framework (CEF). This means that you have access to the Chrome Developer Tools panel, which offers many essential development resources. You can use the DevTools to place breakpoints and debug your JavaScript code, explore the HTML of your panels, and run JavaScript commands in a console.
+The editor's front-end HTML5 environment runs in the Chromium Embedded Framework (CEF). This means that you have access to the Chrome Developer Tools panel, which offers many essential development resources. You can use the DevTools to place breakpoints and debug your JavaScript code, explore the HTML of your panels, and run JavaScript commands in a console.
 
 ![Chrome DevTools](../../images/chrome_devtools.png)
 
 To launch the DevTools, press **Ctrl+F12**.
 
-Each Stingray editor window gets its own instance of the DevTools. If you want to zero in on a particular panel, you can undock that panel into its own floating window and press **Ctrl+F12** while that window has focus.
+Each editor window gets its own instance of the DevTools. If you want to zero in on a particular panel, you can undock that panel into its own floating window and press **Ctrl+F12** while that window has focus.
 
 For details on all the capabilities of the DevTools, see its home page on [the Google developer site](https://developers.google.com/web/tools/chrome-devtools/).
 
@@ -49,7 +49,7 @@ For more information about promises in JavaScript, see [this page](https://devel
 
 The editor's front-end is a highly complex system that needs to integrate a huge number of JavaScript modules together into a coherently functioning whole. We use `require.js` as a way to keep all these modules organized, and to give our modules and code blocks a structured way to "include" other modules that they depend on.
 
-This has some important consequences on your plug-ins. For example, in order to gain access to any of the services or other modules provided by the Stingray editor, you have to use either the `require()` function or the `define()` function provided by `require.js`.
+This has some important consequences on your plug-ins. For example, in order to gain access to any of the services or other modules provided by the editor, you have to use either the `require()` function or the `define()` function provided by `require.js`.
 
 For code examples that show how this works, see the page about how to ~{ Use built-in editor services }~.
 
@@ -59,7 +59,7 @@ For more in-depth information, you can also see <http://requirejs.org/>
 
 Whenever you refer to a script module, such as in a call to `require()` or `define()`, there are a few ways you can construct the path to that module.
 
--	If you need to refer to a built-in service or component in the Stingray editor, use a path relative to the `editor/core` folder. For example, the `services` and `components` folders in this example will automatically resolve to `editor/core/services` and `editor/core/components`:
+-	If you need to refer to a built-in service or component in the editor, use a path relative to the `editor/core` folder. For example, the `services` and `components` folders in this example will automatically resolve to `editor/core/services` and `editor/core/components`:
 
 	`require(['services/engine-service', 'components/list-view'], function(engineService, listView) { ... })`
 

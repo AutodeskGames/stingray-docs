@@ -32,7 +32,7 @@ Make sure that your reflection probe is located in a place where it captures as 
 
 ## Baking
 
-If you choose to bake the lighting for your level instead of using global lighting, you can also make your skydome contribute light into the baked lightmaps. The Stingray light baker offers an option in the **Light Baking** dialog for controlling the intensity of the skydome. See also the topics under ~{ Light baking }~.
+If you choose to bake the lighting for your level instead of using global lighting, you can also make your skydome contribute light into the baked lightmaps. The built-in light baker offers an option in the **Light Baking** dialog for controlling the intensity of the skydome. See also the topics under ~{ Light baking }~.
 
 ## Combining the sky, the sun, and the global lighting
 

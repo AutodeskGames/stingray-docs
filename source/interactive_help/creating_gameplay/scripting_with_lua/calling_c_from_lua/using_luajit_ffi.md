@@ -1,6 +1,6 @@
 # Extending Lua to C using the LuaJIT FFI library
 
-The runtime Lua environment hosted by the Stingray engine is powered by the LuaJIT library. LuaJIT offers a very fast script interpreter and just-in-time compiler, in addition to several extensions to the base Lua API. One of these additional modules is its **FFI** library, which aims to allow easy access to C functions and data structures from Lua scripts without requiring any custom bindings on the C side.
+The runtime Lua environment hosted by the interactive engine is powered by the LuaJIT library. LuaJIT offers a very fast script interpreter and just-in-time compiler, in addition to several extensions to the base Lua API. One of these additional modules is its **FFI** library, which aims to allow easy access to C functions and data structures from Lua scripts without requiring any custom bindings on the C side.
 
 If you have C code in a dynamically linked library, you should be able to take advantage of the FFI library to access that code from your project's Lua scripts.
 
@@ -69,9 +69,9 @@ else
 end
 ~~~
 
-If you are using the Appkit in your game, you could put this code in your *script/lua/project.lua* file in order to make it run when the game is started.
+If you are using the Appkit in your project, you could put this code in your *script/lua/project.lua* file in order to make it run when the engine is started.
 
-Note that after you do steps 1-3 to bring the C constructs into the Lua environment, you can then invoke the functions at any time you need them. So, you can do steps 1-3 once during your game's initialization, then call the functions from your scripts or from custom Flow nodes.
+Note that after you do steps 1-3 to bring the C constructs into the Lua environment, you can then invoke the functions at any time you need them. So, you can do steps 1-3 once when the engine is initialized, then call the functions from your scripts or from custom Flow nodes.
 
 ## Step 3. Make your library available to the engine
 

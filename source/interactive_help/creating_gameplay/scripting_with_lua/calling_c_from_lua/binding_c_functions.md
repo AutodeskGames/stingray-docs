@@ -8,23 +8,23 @@ For background information, see the chapter about C libraries in the [Programmin
 
 ## Step 1. Get LuaJIT
 
-The runtime Lua environment hosted by the Stingray engine is powered by the LuaJIT library, which offers a very fast script interpreter and just-in-time compiler. You need to include a header file from this library, and link your C library against the LuaJIT library for your target platform.
+The runtime Lua environment hosted by the interactive engine is powered by the LuaJIT library, which offers a very fast script interpreter and just-in-time compiler. You need to include a header file from this library, and link your C library against the LuaJIT library for your target platform.
 
-**If you have access to the Stingray source code:**
+**If you have access to the {{ProductName}} source code:**
 
--	You can use the LuaJIT libraries that you will find in your Stingray library folder (`SR_LIB_DIR`).
+-	You can use the LuaJIT libraries that you will find in your library dependencies folder (`SR_LIB_DIR`).
 
-**If you do not have access to the Stingray source code:**
+**If you do not have access to the {{ProductName}} source code:**
 
 1.	Download LuaJIT from its [project page](http://luajit.org/download.html) or from the Git repository given at that site.
 
-	Stingray uses **version 2.1.0**. You must get the same version.
+	{{ProductName}} uses **version 2.1.0**. You must get the same version.
 
 2.	Follow the instructions on [the LuaJIT installation page](http://luajit.org/install.html) to build the LuaJIT binaries for your target platform and processor architecture (e.g. x86 vs. x64 on Windows).
 
 ### Using Lua 5.1 instead
 
-LuaJIT 2.x is supposed to be binary-compatible with Lua 5.1. That means that you should be able to compile and link your module with an official distribution of Lua 5.1 instead of needing to use LuaJIT. Similarly, if you're using a third-party module, you may even be able to use a pre-compiled *.dll* of the module, if it was compiled against Lua 5.1 for the same platform and processor as your game (e.g. Windows 64-bit).
+LuaJIT 2.x is supposed to be binary-compatible with Lua 5.1. That means that you should be able to compile and link your module with an official distribution of Lua 5.1 instead of needing to use LuaJIT. Similarly, if you're using a third-party module, you may even be able to use a pre-compiled *.dll* of the module, if it was compiled against Lua 5.1 for the same platform and processor as your app (e.g. Windows 64-bit).
 
 ## Step 2. Write your C code and bindings
 
@@ -120,9 +120,9 @@ else
 end
 ~~~
 
-If you are using the Appkit in your game, you could put this code in your *script/lua/project.lua* file in order to make it run when the game is started.
+If you are using the Appkit in your project, you could put this code in your *script/lua/project.lua* file in order to make it run when the engine is started.
 
-Note that after you load the library into the Lua environment, you can then invoke the loaded functions at any time you need them. So, you can require the library once during your game's initialization, then call the functions from your scripts or from custom Flow nodes.
+Note that after you load the library into the Lua environment, you can then invoke the loaded functions at any time you need them. So, you can require the library once when the engine is initialized, then call the functions from your scripts or from custom Flow nodes.
 
 ## Step 5. Make your library available to the engine
 

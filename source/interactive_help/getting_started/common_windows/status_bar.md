@@ -2,7 +2,7 @@
 
 See also: ~{ Send commands from the Status bar }~, ~{ Console commands }~.
 
-At the bottom of the Stingray Editor, the Status bar lets you manipulate instances of the engine using the command input field. The main areas of the Status bar include:
+At the bottom of the interactive editor, the Status bar lets you manipulate instances of the engine using the command input field. The main areas of the Status bar include:
 
 
 ![Status bar overview](../../images/comp_status_bar.png)
@@ -25,7 +25,7 @@ As you type, the input line auto-completes based on the objects and functions in
 
 You can then edit the suggestion, and press `Enter` when ready to send the command. To scroll through all suggestions for your current input, press `Tab` or `Shift`+`Tab`.
 
-Stingray stores up to the last 100 commands you enter in the input field, regardless of whether you save the current level. To navigate through the history, click in the input field and press the Up or Down arrow keys. The Status bar automatically switches between Command/Lua mode as you navigate the history. Press `Enter` to send a command from the history.
+The editor stores up to the last 100 commands you enter in the input field, regardless of whether you save the current level. To navigate through the history, click in the input field and press the Up or Down arrow keys. The Status bar automatically switches between Command/Lua mode as you navigate the history. Press `Enter` to send a command from the history.
 
 ![Command input auto-complete](../../images/command_auto_complete.png)
 
@@ -41,7 +41,7 @@ Other instances of the engine are added to this drop-down dynamically. For examp
 
 ##  Last log message
 
-As you work in Stingray, the **Log Console** prints all kinds of status messages, including errors and warnings. In each line, the response or output from the engine is prefixed with the engine name. Next to the input field, the Status bar prints a single line to display the last warning or error printed in the **Log Console**.
+As you work in the editor, the **Log Console** prints all kinds of status messages, including errors and warnings. In each line, the response or output from the engine is prefixed with the engine name. Next to the input field, the Status bar prints a single line to display the last warning or error printed in the **Log Console**.
 
 -	To clear the last log message, right-click the text area.
 -	To configure which types of messages are shown, or to clear the current message, use the Log Output Options menu ![Log Output Options](../../images/icon_status_bar_log_output_options.png) to the left of the text area.

@@ -1,6 +1,6 @@
 #Toolbar
 
-The Toolbar displays in the main Stingray Editor window, on the left side of the ~{ Level Viewport }~.
+The Toolbar is located on the left side of the ~{ Level Viewport }~ in the main window of the interactive editor.
 
 ![Level Viewport toolbar](../../images/comp_levelEd_toolbar.png)
 

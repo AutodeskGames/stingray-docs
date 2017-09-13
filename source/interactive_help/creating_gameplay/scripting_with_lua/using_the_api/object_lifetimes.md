@@ -1,10 +1,10 @@
 # Object lifetimes and userdata binding
 
-In order to achieve the best possible balance between programming convenience and runtime efficiency, different kinds of objects in the Stingray Lua API are bound to C++ in different ways. These different binding strategies have practical consequences on the way you must interact with these different kinds of objects in your own scripts. This page outlines the principal binding strategies used in the Stingray API.
+In order to achieve the best possible balance between programming convenience and runtime efficiency, different kinds of objects in the interactive engine's Lua API are bound to C++ in different ways. These different binding strategies have practical consequences on the way you must interact with these different kinds of objects in your own scripts. This page outlines the principal binding strategies used in the engine's Lua API.
 
 ## Light userdata binding
 
-This is the most common binding strategy in the Stingray API, used for many core object types such as `Units` and `Actors`. In this case, the object is bound as a light userdata, which means that the Lua side just stores a raw pointer to a corresponding C object, with no metatable and no type information.
+This is the most common binding strategy in the Lua API, used for many core object types such as `Units` and `Actors`. In this case, the object is bound as a light userdata, which means that the Lua side just stores a raw pointer to a corresponding C object, with no metatable and no type information.
 
 Since light user data does not have a metatable, you cannot use the colon syntax to call object functions. For example, this code produces an error:
 

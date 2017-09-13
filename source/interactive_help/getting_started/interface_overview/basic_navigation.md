@@ -12,7 +12,7 @@
 | Look around  | Right-drag |
 
 
-## Navigate the viewport in gameplay mode
+## Navigate the viewport in game mode
 
 You can also right-click and hold to enter game navigation mode, then use the following hotkeys to navigate:
 

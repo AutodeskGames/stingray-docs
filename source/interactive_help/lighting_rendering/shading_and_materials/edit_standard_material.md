@@ -1,6 +1,6 @@
 # Edit a child material
 
-The properties available in the ~{ Property Editor }~ for editing a child material are determined by the shader graph of its parent material. For example, the Stingray physically-based shader graph provides the ~{ Standard material properties }~.
+The properties available in the ~{ Property Editor }~ for editing a child material are determined by the shader graph of its parent material. For example, the {{ProductName}} physically-based shader graph provides the ~{ Standard material properties }~.
 
 See ~{ Parent and child materials }~ for more information on this concept.
 
@@ -16,7 +16,7 @@ See ~{ Parent and child materials }~ for more information on this concept.
 
 	![](../../images/blue_attr_example.png)
 
-	Depending on your Stingray layout, the material name, the **Asset Preview** window, or a small disk icon display in orange to indicate you have unsaved changes on the child material.
+	Depending on your editor layout, the material name, the **Asset Preview** window, or a small disk icon display in orange to indicate you have unsaved changes on the child material.
 
 	![](../../images/unsaved_material.png)
 
@@ -36,7 +36,7 @@ See ~{ Parent and child materials }~ for more information on this concept.
 
 The parent material determines the properties that are available for all instances of a material in the **Property Editor**, so changing the parent material can change the rest of the properties you see.
 
-For example, to change a material that uses the standard Stingray material as its parent to instead use the standard transparent material:
+For example, to change a material that uses the "standard" material as its parent to instead use the "standard transparent" material:
 
 1. In the **Property Editor**, click the **Select resource** icon ![](../../images/icon_browse.png) next to **Parent Material**.
 

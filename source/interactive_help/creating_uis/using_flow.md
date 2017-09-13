@@ -1,6 +1,6 @@
 # Using Flow for UI control
 
-In addition to using scripts to control communication between Scaleform Studio and Stingray, we provide a basic set of Flow nodes to facilitate communication between the two systems.
+In addition to using scripts to control communication between Scaleform Studio and {{ProductName}}, we provide a basic set of Flow nodes to facilitate communication between the two systems.
 
 <dl>
 
@@ -10,7 +10,7 @@ In addition to using scripts to control communication between Scaleform Studio a
 
 The ProjectName argument is the name of the project with the .s2dproj extension, for example: MyProject.s2dproj.
 
-The BundlePath argument is the relative path to the Stingray project root, for example: content/ui/MyProjectFolder</dd>
+The BundlePath argument is the relative path to the root of the {{ProductName}} project, for example: content/ui/MyProjectFolder</dd>
 
 <dt>Scaleform Load Project and Scene</dt>
 
@@ -28,13 +28,13 @@ This node returns a boolean value to indicate if the project was successfully lo
 
 <dt>Scaleform Dispatch Custom Event</dt>
 
-<dd>This node sends a custom event to the currently loaded Scaleform Studio project.  Any custom event listener will be notified and can check to see if the custom event is something to which they should respond.
+<dd>This node sends a custom event to the currently loaded Scaleform Studio project. Any custom event listener will be notified and can check to see if the custom event is something to which they should respond.
 
-The Event argument is a string which contains the name of the event and a colon delimited series of arguments, for example: MyEvent:40:AString:true would dispatch an event named MyEvent with arguments 40, AString and true. In the appropriate event handler, the name string would be processed to extract the data. </dd>
+The Event argument is a string which contains the name of the event and a colon delimited series of arguments, for example: `MyEvent:40:AString:true` would dispatch an event named MyEvent with arguments `40`, `AString` and `true`. In the appropriate event handler, the name string would be processed to extract the data. </dd>
 
 <dt>Scaleform Register Custom Event Listener</dt>
 
-<dd>This node registers a listener for a custom event in Stingray.  Any custom event which is not registered will be ignored.
+<dd>This node registers a listener for a custom event in the interactive engine. Any custom event which is not registered will be ignored.
 
 The Event argument should be the name of the custom event independent of any data, for example: for a name string of MyEvent:40:true the name of the event to register is just MyEvent.</dd>
 

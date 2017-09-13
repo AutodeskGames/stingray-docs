@@ -1,8 +1,8 @@
 # Localizing strings
 
-If you need your game to be translated into multiple languages, one of your key needs will likely be a set of strings for each target language, typically for displaying in some kind of UI.
+If you need your content to be translated into multiple languages, one of your key needs will likely be a set of strings for each target language, typically for displaying in some kind of UI.
 
-Stingray offers a built-in mechanism for swapping and accessing localized strings at runtime through the use of *.strings* resources.
+{{ProductName}} offers a built-in mechanism for swapping and accessing localized strings at runtime through the use of *.strings* resources.
 
 ## About *.strings* resources
 
@@ -56,6 +56,6 @@ You can write a reference *.strings* resource in any text editor.
 
 Since these resource files are essentially just lists of key-value pairs, any external translation providers that you work with should be able to handle these files to create localized versions.
 
-Alternatively, Stingray provides a small utility called the Localizer tool, which you can find at `tools\Localizer.exe` within your Stingray installation directory. You can use this tool to manage the localization of multiple languages at the same time.
+Alternatively, {{ProductName}} provides a small utility called the Localizer tool, which you can find at `tools\Localizer.exe` within your installation directory. You can use this tool to manage the localization of multiple languages at the same time.
 
 <!-- TODO: if we're going to keep this little tool, we should probably say how to use it. -->

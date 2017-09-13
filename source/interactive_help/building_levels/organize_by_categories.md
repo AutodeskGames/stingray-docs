@@ -1,6 +1,6 @@
 # Organize level objects in categories
 
-You can keep the objects in your game levels organized in the **Explorer** panel by creating your own custom categories. These new categories appear in the tree view of **Explorer** view, and in the filter control in both **Explorer** view and **Layers** view.
+You can keep the objects in a level organized in the **Explorer** panel by creating your own custom categories. These new categories appear in the tree view of **Explorer** view, and in the filter control in both **Explorer** view and **Layers** view.
 
 For example, this image shows custom categories like "Enemies" and "Targets" alongside the built-in categories like "Entities", "Units", "Lights", and "Triggers".
 
@@ -12,7 +12,7 @@ Categories are defined in *.object_filter* resource files in your project folder
 
 **To re-apply a category filter**
 
-When you create or modify a category, you do not need to restart the Stingray Editor to make your changes show up in the **Explorer** panel. Instead, press **F5** to refresh the resource from your project's source folder.
+When you create or modify a category, you do not need to restart the interactive editor to make your changes show up in the **Explorer** panel. Instead, press **F5** to refresh the resource from your project's source folder.
 
 ## The *.object_filter* resource format
 
@@ -66,11 +66,11 @@ Each category must contain an `is_type` function, which the editor calls for eac
 
 The editor passes two parameters to this function:
 
--	`level_object`: A wrapper object that represents the game object you need to test within the level editor's Lua environment. You can use this wrapper to find out information about the game object, such as what type of object it is, or what are its coordinates in 3D space.
+-	`level_object`: A wrapper object that represents the level object you need to test within the level editor's Lua environment. You can use this wrapper to find out information about the level object, such as what type of object it is, or what are its coordinates in 3D space.
 
 	These wrapper objects are not currently documented, but you can find their code in the `core/editor_slave/editor` folder. The base object definition is in `object.lua`, which is inherited by other kinds of specialized objects such as the `UnitObject` defined in `unit.lua`. See also the `LevelEditing` object in `level_editing.lua`, which provides some object management and testing utilities.
 
--	`engine_object`: The game object that is wrapped by the first parameter. This may be any of various kinds of objects exposed in the Stingray runtime Lua API, such as a `stingray.Unit`, `stingray.Light`, `stingray.Camera`, and so on. Once you find out from the level object what kind of game object this parameter represents, you can use the appropriate runtime API to interact with the object.
+-	`engine_object`: The level object that is wrapped by the first parameter. This may be any of various kinds of objects exposed in the Lua API, such as a `stingray.Unit`, `stingray.Light`, `stingray.Camera`, and so on. Once you find out from the level object what kind of level object this parameter represents, you can use the appropriate runtime API to interact with the object.
 
 The function must return `true` if the object passed in should be included within this category, and `false` otherwise.
 
@@ -87,7 +87,7 @@ end
 return false
 ~~~
 
-Using this code, you would divide your game units into categories by tagging them with different script data that identifies their object types. For example, you might set different script data values for scenery objects, props, vehicles, or characters. depending on what categories you want to set up.
+Using this code, you would divide your level units into categories by tagging them with different script data that identifies their object types. For example, you might set different script data values for scenery objects, props, vehicles, or characters. depending on what categories you want to set up.
 
 You can set script data for a unit resource in the **Unit Editor**.
 
@@ -107,9 +107,9 @@ if level_object._unit ~= nil then
 end
 ~~~
 
-### Example: filtering by Editor unit name
+### Example: filtering by unit name
 
-If you have a well-defined scheme for assigning names to the units you spawn in the Editor, you can make use of this naming scheme to organize your objects into categories. For example, the following function returns `true` only for units whose names start with the string `enemy_`:
+If you have a well-defined scheme for assigning names to the units you spawn in the editor, you can make use of this naming scheme to organize your objects into categories. For example, the following function returns `true` only for units whose names start with the string `enemy_`:
 
 ~~~{sjson}
 if level_object.name:find("^enemy_") then return true end

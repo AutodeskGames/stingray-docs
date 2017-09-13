@@ -6,7 +6,7 @@ Even if you eventually plan to use a different strategy for dividing up your res
 
 ## Step 1. Create levels
 
-In this step, you'll create two new levels that you'll swap back and forth in the game.
+In this step, you'll create two new levels that you'll swap back and forth in the engine.
 
 1.	Start a new project from the `empty` template.
 
@@ -145,15 +145,15 @@ Note that the code shown above loads the packages immediately, blocking the upda
 
 ## Step 6. Test the system
 
-In this step, we'll test to make sure that the memory actually consumed by your game is changing at runtime as expected.
+In this step, we'll test to make sure that the memory actually consumed by the engine is changing at runtime as expected.
 
 1.	Run your project.
 
-1.	In the ~{ Status Bar }~ of the Stingray Editor, select your running project from the drop-down list, and issue the `perfhud memory` command to your game. See also ~{ Send commands from the Status bar }~.
+1.	In the ~{ Status Bar }~ of the editor, select your running project from the drop-down list, and issue the `perfhud memory` command to the engine. See also ~{ Send commands from the Status bar }~.
 
-	Your game UI should be overlaid with a summary of its current memory usage.
+	The engine viewport should be overlaid with a summary of its current memory usage.
 
-1.	Go to your game, and press **START** in its main menu to load the first level.
+1.	Go to the engine app, and press **START** in its main menu to load the first level.
 
 1.	Press the `l` key to swap back and forth between levels. You should see the memory consumption go up and down each time the levels are swapped. This indicates that the resources are being loaded in and out of memory as expected.
 

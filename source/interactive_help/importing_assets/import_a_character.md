@@ -16,7 +16,7 @@
 
 ---
 Related topics:
--	'~{ Best Practices: How to prepare a model for import into Stingray }~'
--	~{ Recommended FBX settings for export to Stingray }~
+-	'~{ Best Practices: How to prepare a model for import }~'
+-	~{ Recommended FBX settings for export to {{ProductName}} }~
 - ~{ Set up a character }~
 ---

@@ -1,18 +1,18 @@
-# The Stingray Type System
+# The {{ProductName}} Type System
 
-Stingray contains an internal data typing system that is based around `.type` files. These files, which are stored in SJSON in the project content, describe the properties and relationships between complex data types. The editing tools and the data compiler scan the project for type files, and use them to reason about the SJSON data file formats that make up the project content. This information can be used to customize user interfaces, determine which files are affected by a rename, and validate property values.
+{{ProductName}} contains an internal data typing system that is based around `.type` files. These files, which are stored in SJSON in the project content, describe the properties and relationships between complex data types. The editing tools and the data compiler scan the project for type files, and use them to reason about the SJSON data file formats that make up the project content. This information can be used to customize user interfaces, determine which files are affected by a rename, and validate property values.
 
-At the lowest level, Stingray supports a few pre-defined built-in data types that are based loosely on the values supported in the JSON file format. These built-in types are then used to describe more complex *compound* types such as colors, cameras and lights. These in turn eventually can be built into type descriptions for richer file formats such as units or levels.
+At the lowest level, {{ProductName}} supports a few pre-defined built-in data types that are based loosely on the values supported in the JSON file format. These built-in types are then used to describe more complex *compound* types such as colors, cameras and lights. These in turn eventually can be built into type descriptions for richer file formats such as units or levels.
 
 >	**NOTE: Under Active Development!** Expect things to change as this system matures.
 
-## Type file usage in Stingray
+## Type file usage in {{ProductName}}
 
-Type files are already used in a few places in Stingray:
+Type files are already used in a few places:
 
--	The `.component` files that the entity system uses to represent custom types of data components are based on the type system. For details, see [Create a custom component](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_using_entities_create_custom_component_html).
+-	The `.component` files that the entity system uses to represent custom types of data components are based on the type system. For details, see ~{ Create a custom component }~.
 
--	Some plug-ins use type files as a way to define their own data types, and the way those data types get edited in the Stingray editor. See ~{ Editing custom asset types }~ for a look at how we use `.type` files to describe how to edit `.scatter_brush`, `.blend_shape` and `.capture_settings` in the editor UI.
+-	Some plug-ins use type files as a way to define their own data types, and the controls that the editor should expose for modifying those data types. See ~{ Editing custom asset types }~ for a look at how we use `.type` files to describe how to edit `.scatter_brush`, `.blend_shape` and `.capture_settings` in the editor UI.
 
 -	See also ~{ Create a new importer }~ to see how you can customize a new generic import dialog using a `.type` file.
 
@@ -152,11 +152,11 @@ export = {
 
 ## Type metadata
 
-All types have an optional `metadata` block that you can use to store data about the type itself. This is read by the data compiler and the Stingray editor in some circumstances, and might affect how they treat the type. Typically you won't be using the `metadata` block unless you've made custom additions to the data compiler or the editor code itself.
+All types have an optional `metadata` block that you can use to store data about the type itself. This is read by the data compiler and the interactive editor in some circumstances, and might affect how they treat the type. Typically you won't be using the `metadata` block unless you've made custom additions to the data compiler or the editor code itself.
 
 ## Editor metadata
 
-In addition to the type `metadata` block, types can set editor-only metadata in an `editor` block. This is read by the Stingray editor, and controls the way the type is presented inside property editors, etc. For example, here we present a `:number` property using the built-in `adskPropertySlider` control. The editor metadata can contain `control`-specific properties such as a `step` setting for the slider.
+In addition to the type `metadata` block, types can set editor-only metadata in an `editor` block. This is read by the interactive editor, and controls the way the type is presented inside property editors, etc. For example, here we present a `:number` property using the built-in `adskPropertySlider` control. The editor metadata can contain `control`-specific properties such as a `step` setting for the slider.
 
 ~~~{sjson}
 {
@@ -174,7 +174,7 @@ In addition to the type `metadata` block, types can set editor-only metadata in 
 }
 ~~~
 
-In the future it will be possible to add game-specific widgets to your project, but for now we only support a limited set of built-in widgets. For a comprehensive list of controls and their available properties, see the ~{ Built-in metadata properties }~.
+In the future it will be possible to add project-specific widgets into your project content to modify your project-specific types, but for now we only support a limited set of built-in widgets. For a comprehensive list of controls and their available properties, see the ~{ Built-in metadata properties }~.
 
 Note that you can customize the `editor` metadata properties, just like any other property on a type. Therefore, it is possible to specify sensible defaults in a shared type file and then override its label and description as needed:
 

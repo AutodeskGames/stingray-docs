@@ -1,10 +1,10 @@
-# Register as a Stingray developer
+# Register as a developer
 
-In order to access the Stingray source code, you must set up user accounts for GitHub and for the Autodesk Gamedev portal, if you don't already have them. Then, you have to request access to the Stingray source on the Gamedev site.
+In order to access the source code, you must set up user accounts for GitHub and for the Autodesk Gamedev portal, if you don't already have them. Then, you have to ask us to grant your user account access to the Stingray source code.
 
 ## Register for GitHub
 
-Stingray source code is distributed through private repositories on GitHub. In order to get access to the repositories, you must have a GitHub user account. If you do not already have one, sign up for free here:
+Autodesk distributes the source code for the interactive engine and editor through private repositories on GitHub. In order to get access to the repositories, you must have a GitHub user account. If you do not already have one, sign up for free here:
 
 <http://www.github.com>
 
@@ -30,6 +30,6 @@ If you don't already have a company and a project set up on the Gamedev site, ma
 
 ## Request Stingray source access
 
-Finally, e-mail <gamedev@autodesk.com> to request access to Stingray source for your new project.
+Finally, e-mail <gamedev@autodesk.com> to request access to the Stingray source for your new project.
 
-When your Autodesk account is granted access rights to the Stingray project, your GitHub user account is also granted access to the Stingray source code repository on GitHub. You will receive a notification by e-mail. You can then carry on with the next steps listed under ~{ Getting started with source access }~.
+When your Autodesk account is granted access rights to this project, your GitHub user account is also granted access to the source code repository on GitHub. You will receive a notification by e-mail. You can then carry on with the next steps listed under ~{ Getting started with source access }~.

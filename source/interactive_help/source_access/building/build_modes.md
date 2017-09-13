@@ -1,6 +1,6 @@
-# About Stingray build configurations
+# About engine build configurations
 
-This topic contains some information for developers about the different build configurations offered in the Stingray build system.
+This topic contains some information for developers about the different build configurations offered in the {{ProductName}} build system.
 
 ## Setting the build configuration
 
@@ -14,7 +14,7 @@ You can specify the configuration you want to build by adding the `--config` opt
 
 ## Comparison
 
-configuration   compiler optimizations   game creation code   full debugging options
+configuration   compiler optimizations   app creation code    full debugging options
 --------------  -----------------------  -------------------  -----------------------
 `dev`           yes                      yes                  no
 `debug`         no                       yes                  yes
@@ -22,7 +22,7 @@ configuration   compiler optimizations   game creation code   full debugging opt
 
 ## `dev`
 
-This is the only build mode of the engine that works with the Stingray Editor, and contains all functionality needed to create game content and compile data. Use this build mode for most tasks during your game production cycle.
+This is the only build mode of the engine that works with the editor, and contains all functionality needed to create content and compile data. Use this build mode for most tasks during your production cycle.
 
 ## `debug`
 
@@ -30,7 +30,7 @@ This build mode turns on internal error checking, such as asserts. However, beca
 
 ## `release`
 
-This build mode is intended only for final builds of a game or application. It strips from the engine all code that is intended only for use during the production cycle, such as console communication, data compilation, etc. This makes your game run as efficiently as possible.
+This build mode is intended only for final builds of your interactive app. It strips from the engine all code that is intended only for use during the production cycle, such as console communication, data compilation, etc. This makes your app run as efficiently as possible.
 
 ## .pdb files
 

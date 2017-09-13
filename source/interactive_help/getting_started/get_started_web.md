@@ -4,26 +4,26 @@ These pages tell you everything you need to know in order to get started develop
 
 In this release, you can:
 
--	Launch your project in a browser straight from the Stingray editor.
+-	Launch your project in a browser straight from the interactive editor.
 -	Deploy your project to disk and host it on a web server later on.
 
 You can't yet:
 
--	Mirror the Stingray editor viewport to the browser.
--	Run the Stingray editor or any of its tools in the browser to edit your levels and projects.
+-	Mirror the editor viewport to the browser.
+-	Run the editor or any of its tools in the browser to edit your levels and projects.
 
 In addition, you may notice that not all of the rendering settings offered by the shading environment are available yet when the project is running in the browser. We're still working on making more of these high-quality effects work under WebGL.
 
 ## Step 1. Install a supported browser
 
-Stingray Web requires **both** WebAssembly and WebGL 2.0, which are currently supported by:
+The web version of the interactive engine requires **both** WebAssembly and WebGL 2.0, which are currently supported by:
 
 -	Google Chrome (Version 57 and above)
 -	Mozilla Firefox (Version 52 and above)
 
 ## Step 2. Running the project in a web browser
 
-To launch your project in a browser from the Stingray editor, you'll use the **Connections** panel to set up a new web target for each browser you want to use. (See also ~{ Using the Connections panel }~.)
+To launch your project in a browser from the interactive editor, you'll use the **Connections** panel to set up a new web target for each browser you want to use. (See also ~{ Using the Connections panel }~.)
 
 1. In the **Connections** panel (**Window > Deploy and Connect > Connections**), specify a name to identify the connection.
 
@@ -51,11 +51,11 @@ See also ~{ Using the Deployer panel }~.
 
 ## About the web project output
 
-Whether you are running the project from the Stingray editor or deploying to disk, the same engine binaries will be used for both tasks. However, in the case of deployment, the project data will additionally be bundled, just like other platforms. After deploying, looking into the final deployment folder specified in the **Deployer** panel, you will find:
+Whether you are running the project from the interactive editor or deploying to disk, the same engine binaries will be used for both tasks. However, in the case of deployment, the project data will additionally be bundled, just like other platforms. After deploying, looking into the final deployment folder specified in the **Deployer** panel, you will find:
 
 -	A *.wasm* and a *.js* file that are essentially the result of compiling the engine's runtime into WebAssembly, with some JavaScript glue.
 
--	An *.html* wrapper that loads the engine's runtime WebAssembly and JavaScript files and instructs it to launch your project. This default page is branded with Stingray logos, but you can customize it freely if you want, or use it as a model to write your own HTML wrapper page.
+-	An *.html* wrapper that loads the engine's runtime WebAssembly and JavaScript files and instructs it to launch your project. This default page is branded with default logos, but you can customize it freely if you want, or use it as a model to write your own HTML wrapper page.
 
 -	A *scripts* folder that contains additional JavaScript files required to properly initialize the engine. Those can also be configured at will.
 
@@ -63,7 +63,7 @@ Whether you are running the project from the Stingray editor or deploying to dis
 
 ## About the launch process
 
-Starting up a Stingray project in the browser is a multi-step process. This sequence happens automatically without you needing to do anything, but it can be helpful to know a bit about what's happening behind the scenes.
+Starting up a {{ProductName}} project in the browser is a multi-step process. This sequence happens automatically without you needing to do anything, but it can be helpful to know a bit about what's happening behind the scenes.
 
 1.	**Downloading**. In this step, the browser is downloading and compiling the engine's runtime *.wasm* and *.js* files. The actual project data is *not* downloaded in this step.
 
@@ -71,7 +71,7 @@ Starting up a Stingray project in the browser is a multi-step process. This sequ
 
 	The speed of the connection will affect the time of this step, as well as how fast your CPU can compile the WebAssembly and JavaScript files.
 
-	In order to save time downloading the same content the next time you load the page, Stingray stores the downloaded content in your browser's IndexedDB local storage. (This can speed things up especially if you're running the project on a remote server.) You may find that you need to clear this cache from your browser if you're not seeing updates to your content as expected.
+	In order to save time downloading the same content the next time you load the page, the engine stores the downloaded content in your browser's IndexedDB local storage. (This can speed things up especially if you're running the project on a remote server.) You may find that you need to clear this cache from your browser if you're not seeing updates to your content as expected.
 
 1.	**Syncing resources**. In this step, your project's data is either downloaded from the remote, or loaded from your browser's IndexedDB local storage.
 
@@ -95,7 +95,7 @@ If your project doesn't run in the browser:
 
 -	In the browser, typically you can press **F12** to open the developer tools.
 
-	The **Console** tab in the developer tools lists any errors the browser encountered when trying to open the project. It also lists any messages that your game project writes to the log. This can sometimes be helpful in diagnosing where a problem occurs.
+	The **Console** tab in the developer tools lists any errors the browser encountered when trying to open the project. It also lists any messages that the engine writes to the log while running your project. This can sometimes be helpful in diagnosing where a problem occurs.
 
 - Here are some of the errors we've heard about, and how to fix them:
 

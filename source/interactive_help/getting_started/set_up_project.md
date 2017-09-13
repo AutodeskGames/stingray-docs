@@ -1,12 +1,12 @@
 # Set up a project
 
-The first thing you'll need to do in order to get started with Stingray is to set up a *project*: a collection of 3D assets, scripts and configuration files that live together in a folder on your computer and define the way your content behaves in the Stingray game engine.
+The first thing you'll need to do in order to get started with {{ProductName}} is to set up a *project*: a collection of 3D assets, scripts and configuration files that live together in a folder on your computer and define the way your content behaves in the interactive engine.
 
-You can start a new project from one of the simple template projects that are shipped with Stingray, or download a pre-made example project.
+You can start a new project from one of the simple template projects that are shipped with {{ProductName}}, or download a pre-made example project.
 
-Whichever you choose, you'll get started in the ~{ Project Manager }~ window. This usually launches when you start the Stingray editor. You can also get back to it anytime by choosing **File > Project Manager** from the main menu.
+Whichever you choose, you'll get started in the ~{ Project Manager }~ window. This usually launches when you start the interactive editor. You can also get back to it anytime by choosing **File > Project Manager** from the main menu.
 
-> **Note:** Don't try to open a project from a network share! When the Project Manager asks you for a location for your new project, always specify a folder on your own computer. As you work, Stingray needs to open and save your project files frequently, so you'll want that disk access to be as fast as possible.
+> **Note:** Don't try to open a project from a network share! When the Project Manager asks you for a location for your new project, always specify a folder on your own computer. As you work, the editor needs to open and save your project files frequently, so you'll want that disk access to be as fast as possible.
 
 ## Set up a project from a template
 
@@ -20,11 +20,11 @@ Template projects are great places to start when making your own projects. Altho
 
 1.	In the **Create Project** window, enter a name for your project, specify where you want to store the project data on your computer, and click **Create**.
 
-Stingray starts to compile the project data and loads your new project. When the project is fully compiled and loaded, you'll see the project name in the title bar of the Stingray editor and you'll be able to take control.
+The editor starts to compile the project data and loads your new project. When the project is fully compiled and loaded, you'll see the project name in the title bar of the editor and you'll be able to take control.
 
 ## Set up a project from an online example
 
-The online examples are great places to start when looking for more real-life uses of Stingray for particular genres of interactive projects, or examples of how to use specific features. They often have more 3D content in them, which can make them more interesting, but also makes them take longer to download, compile and start up for the first time.
+The online examples are great places to start when looking for more real-life uses of {{ProductName}} for particular genres of interactive projects, or examples of how to use specific features. They often have more 3D content in them, which can make them more interesting, but also makes them take longer to download, compile and start up for the first time.
 
 **To set up a new project from a template:**
 
@@ -34,7 +34,7 @@ The online examples are great places to start when looking for more real-life us
 
 1.	In the **Download and Open Project** window, enter a name for your local copy of the project, specify where you want to store the project data on your computer, and click **Download**.
 
-When Stingray is done downloading the project content, it opens the main editor window and begins to compile the project data. When the project is fully compiled and loaded, you'll see the project name in the title bar of the Stingray editor and you'll be able to take control.
+When the editor is done downloading the project content, it opens its main window and begins to compile the project data. When the project is fully compiled and loaded, you'll see the project name in the title bar of the editor and you'll be able to take control.
 
 Wondering which online project to get started with? Here are a few good suggestions:
 

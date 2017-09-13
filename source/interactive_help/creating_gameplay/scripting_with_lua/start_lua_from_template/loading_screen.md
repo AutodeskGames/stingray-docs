@@ -6,7 +6,7 @@ If you put all your content into your *boot.package*, which the engine loads at 
 
 To avoid this problem, the Appkit offers a built-in module that loads a sequence of ultra-lightweight splash screens immediately, giving a player some visual feedback while the real loading happens in the background. It simplifies managing the transitions between the visuals, handles all the package loading mechanics for you, and takes care of monitoring when the player can be permitted to skip ahead.
 
-The Stingray template projects already make use of this loading screen, so if you start a project from a template you'll have a default Stingray logo already set up. Follow the instructions on this page to customize the default behavior, or to add the loading screen to any project that uses the Appkit and its default `SimpleProject`.
+The {{ProductName}} template projects already make use of this loading screen, so if you start a project from a template you'll have a default logo already set up. Follow the instructions on this page to customize the default behavior, or to add the loading screen to any project that uses the Appkit and its default `SimpleProject`.
 
 ## How it works
 
@@ -26,7 +26,7 @@ Once the loading screen finishes loading the main content package, it allows the
 
 ## Make your own loading screens
 
-You're not stuck with the default Stingray logo -- you can set up your project to show any logos and splash screens you like.
+You're not stuck with the default logo -- you can set up your project to show any logos and splash screens you like.
 
 1.	Create a new *.material* resource in your project for each screen you want to show. You'll need to use an *unlit* material -- see ~{ Unlit materials }~.
 
@@ -84,10 +84,10 @@ All time values are expressed in seconds.
 
 ## More detailed customization
 
-The `SimpleProject` loading screen is a good way to get your project showing something to the player more quickly when it first starts up. It's also a good model for how you can write Lua code to handle loading resource packages in and out of memory at runtime in your game.
+The `SimpleProject` loading screen is a good way to get your project showing something to the player more quickly when it first starts up. It's also a good model for how you can write Lua code to handle loading resource packages in and out of memory at runtime in the engine.
 
 You can also control its behavior to a large extent through its configuration parameters, and by creating unique materials in the shader graph editor. However, you may want to further customize the behavior of the loading screen for your own project.
 
-If you need to do this, we recommend copying the *core/appkit/lua/simple_project.lua* and *core/appkit/lua/loading_screen.lua* files into your project. As long as you make sure that they have the same relative path within your project, they will override the versions in the Stingray core resources. Then you can modify the copies inside your project folder to customize the behavior as you need.
+If you need to do this, we recommend copying the *core/appkit/lua/simple_project.lua* and *core/appkit/lua/loading_screen.lua* files into your project. As long as you make sure that they have the same relative path within your project, they will override the versions in the core resources. Then you can modify the copies inside your project folder to customize the behavior as you need.
 
 See also ~{ Customizing the Appkit }~ and ~{ Working with core resources }~.

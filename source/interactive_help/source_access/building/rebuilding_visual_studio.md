@@ -6,21 +6,21 @@ Once you have run the `make.rb` script at least once, you can rebuild the soluti
 
 1.	Open one of the following solutions in Visual Studio:
 
-	-	`build\engine\<platform>\stingray_engine_<platform>.sln`: The runtime game engine.
-	-	`build\editor\<platform>\stingray_editor_<platform>.sln`: The front-end user interface for the Stingray Editor application. See the next section for additional details.
-	-	`editor\backend\stingray_editor_backend.sln`: The back-end of the Stingray Editor.
-	-	`tools\all_tools\all_tools.sln`: The legacy Bitsquid editing tools.
+	-	`build\engine\<platform>\{{SR_DOC_EXE_PREFIX}}_engine_<platform>.sln`: The runtime interactive engine.
+	-	`build\editor\<platform>\{{SR_DOC_EXE_PREFIX}}_editor_<platform>.sln`: The front-end user interface for the editor application. See the next section for additional details.
+	-	`editor\backend\{{SR_DOC_EXE_PREFIX}}_editor_backend.sln`: The back-end of the editor.
+	-	`tools\all_tools\all_tools.sln`: Legacy editing tools.
 
-2.	Set the desired build configuration: Debug, Dev or Release. See also ~{ About Stingray build configurations }~.
+2.	Set the desired build configuration: Debug, Dev or Release. See also ~{ About build configurations }~.
 
 3.	Build the solution.
 
 ## Known Issues
 
-If you configure the Visual Studio solution for the Stingray engine with a global path to the DirectX SDK, the `scaleformstudio_plugin` project in the Debug configuration will fail to link with the following error:
+If you configure the Visual Studio solution for the engine with a global path to the DirectX SDK, the `scaleformstudio_plugin` project in the Debug configuration will fail to link with the following error:
 
 ~~~{nohighlight}
-13>     Creating library C:/Stingray/git/b/build/engine/win64/lib/Debug/scaleformstudio_pluginw64_debug.lib and object C:/Stingray/git/b/build/engine/win64/lib/Debug/scaleformstudio_pluginw64_debug.exp
+13>     Creating library C:/git/b/build/engine/win64/lib/Debug/scaleformstudio_pluginw64_debug.lib and object C:/git/b/build/engine/win64/lib/Debug/scaleformstudio_pluginw64_debug.exp
 13>Render_DX11.lib(D3D1x_HAL.obj) : error LNK2001: unresolved external symbol IID_ID3DUserDefinedAnnotation
-13>C:\Stingray\b\toolchain\engine\win64\debug\plugins\scaleformstudio_pluginw64_debug.dll : fatal error LNK1120: 1 unresolved external
+13>C:\git\b\toolchain\engine\win64\debug\plugins\scaleformstudio_pluginw64_debug.dll : fatal error LNK1120: 1 unresolved external
 ~~~

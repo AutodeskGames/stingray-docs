@@ -1,14 +1,14 @@
 # Supported platforms
 
-Anyone can use Stingray to create projects that run on Windows PC, iOS, Android, or in a web browser. If you're licensed by Sony as a PlayStation 4 developer, or by Microsoft as an Xbox One developer, you can also create projects for these consoles.
+Anyone can use {{ProductName}} to create projects that run on Windows PC, iOS, Android, or in a web browser. If you're licensed by Sony as a PlayStation 4 developer, or by Microsoft as an Xbox One developer, you can also create projects for these consoles.
 
-This page describes the models of mobile and VR devices and the web browsers that Stingray supports for deploying your projects.
+This page describes the models of mobile and VR devices and the web browsers that {{ProductName}} supports for deploying your projects.
 
->	**NOTE:** This page describes the requirements for playing back a project that you've already created and deployed using the Stingray editor. For the requirements you need in order to run the Stingray editor and create the project content, see ~{ System Requirements }~.
+>	**NOTE:** This page describes the requirements for playing back a project that you've already created and deployed using the interactive editor. For the requirements you need in order to run the editor and create the project content, see ~{ System Requirements }~.
 
 ## iOS Device Compatibility
 
-The Stingray engine only supports iOS devices compatible with Metal and OpenGL ES 3.0, as shown below:
+The engine only supports iOS devices compatible with Metal and OpenGL ES 3.0, as shown below:
 
 | Device Name | GPU |
 |---|---|
@@ -21,11 +21,11 @@ The Stingray engine only supports iOS devices compatible with Metal and OpenGL E
 
 ## iOS Version Compatibility
 
-The Stingray engine only supports iOS devices running **iOS {{SR_DOC_IOS_VERSION}}**.
+The engine only supports iOS devices running **iOS {{SR_DOC_IOS_VERSION}}**.
 
-## Requirements for Running the Stingray iOS Packaging Server
+## Requirements for Running the iOS Packaging Server
 
-In order to package iOS games from Windows, you need to run the Stingray iOS package server on a Mac. This package server is included in the Stingray installer. For details on finding and using it, see ~{ Get started on iOS }~.
+In order to package iOS apps from Windows, you need to run the {{SR_DOC_FULL_NAME}} iOS Packaging Server on a Mac. This package server is included in the {{ProductName}} installer. For details on finding and using it, see ~{ Get started on iOS }~.
 
 Your Mac device must be using at least *Mac OS X {{SR_DOC_MACOS_VERSION}}* and must have *Xcode {{SR_DOC_XCODE_VERSION}}* installed. Please download these from <https://developer.apple.com/downloads>.
 
@@ -33,7 +33,7 @@ We recommend you disable auto update on your Apple development machine. <!-- If 
 
 ## Android Device Compatibility
 
-The Stingray engine supports Android devices with Tegra K1 GPUs, the ARM Mali series of GPUs, or Qualcomm Adreno 330, Adreno 420, and Adreno 430 GPUs, such as:
+The engine supports Android devices with Tegra K1 GPUs, the ARM Mali series of GPUs, or Qualcomm Adreno 330, Adreno 420, and Adreno 430 GPUs, such as:
 
 | Device Name | GPU |
 |---|---|
@@ -44,11 +44,11 @@ The Stingray engine supports Android devices with Tegra K1 GPUs, the ARM Mali se
 | Sony Experia Z3+ | Adreno 430 |
 
 > **Important:** These devices are listed as examples only. In some regions, these devices ship with different GPUs.
-> Confirm that your target Android device uses the GPU you expect before trying to deploy your game. When you start Stingray, the device GPU brand is printed in the system log, but there are also various online resources or apps that can help you determine the GPU used in a specific device.
+> Confirm that your target Android device uses the GPU you expect before trying to deploy your interactive app. When you start the engine, the device GPU brand is printed in the system log, but there are also various online resources or apps that can help you determine the GPU used in a specific device.
 
 ## Android Version Compatibility
 
-The Stingray engine officially supports only Android devices running **version {{SR_DOC_ANDROID_VERSION}}** or higher.
+The engine officially supports only Android devices running **version {{SR_DOC_ANDROID_VERSION}}** or higher.
 
 Devices running older versions may or may not work as expected.
 
@@ -70,17 +70,17 @@ Devices running older versions may or may not work as expected.
 
 >**Note:** The Oculus Remote and Oculus Touch Controller are supported.
 
->**Note:** Stingray also supports Google Cardboard for iOS and Android, and Android Google Daydream with controller support.
+>**Note:** {{ProductName}} also supports Google Cardboard for iOS and Android, and Android Google Daydream with controller support.
 
 ## Supported web browsers
 
-If you plan to run your project in a browser, Stingray requires WebAssembly and WebGL 2.0 (including OpenGL ES 3.0 and GLSL 3.00), which are currently supported by Google Chrome (Version 57) and Mozilla Firefox (Version 52). (Both of these browsers support WebAssembly 1.0 and WebGL 2.0 by default, with no extra configuration required.)
+If you plan to run your project in a browser, the engine requires WebAssembly and WebGL 2.0 (including OpenGL ES 3.0 and GLSL 3.00), which are currently supported by Google Chrome (Version 57) and Mozilla Firefox (Version 52). (Both of these browsers support WebAssembly 1.0 and WebGL 2.0 by default, with no extra configuration required.)
 
 See also ~{ Get started for the Web }~.
 
 ## Platform libraries
 
-Stingray is built with the following set of libraries for its target platforms. You may need this information for compatibility.
+{{ProductName}} is built with the following set of libraries for its target platforms. You may need this information for compatibility.
 
 | Platform | IDE | SDK |
 |---|---|---|

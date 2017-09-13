@@ -20,7 +20,7 @@ There are also a few other settings to be aware of.
 
 		**Contributes**: Determines whether light that bounces off this mesh continues to contribute to lighting other objects in the scene.
 
-		**Resolution multiplier**: Stingray bakes a lightmap for each object, depending on the Resolution multiplier we multiply the global resolution for each object to make each lightmap larger or smaller. The global multiplier is defined in texels per meter. There is no hard set lightmap resolution for objects, it is all based on the global resolution multiplied by each object’s resolution multiplier. See the tooltip for a better explanation.
+		**Resolution multiplier**: The baker generates a lightmap for each object. Depending on the Resolution multiplier, we multiply the global resolution for each object to make that object's lightmap larger or smaller. The global multiplier is defined in texels per meter. There is no hard set lightmap resolution for objects, it is all based on the global resolution multiplied by each object’s resolution multiplier. See the tooltip for a better explanation.
 
 -	Properties per light. Select a light. In the tree view of the  ~{ Property Editor }~, you'll find its additional bake settings:
 

@@ -6,7 +6,7 @@
 
 When importing height maps, consider the following tips:
 
-- Stingray expects the same type of .raw files that Photoshop can import and export:
+- {{ProductName}} expects the same type of .raw files that Photoshop can import and export:
 
     - 1 channel
     - 16 bits

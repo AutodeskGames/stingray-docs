@@ -32,4 +32,4 @@ You need to use event names as a key when you register a listener. So, in order 
 
 We are currently working on putting together an exhaustive list that includes all events, whether they are triggered in the editor's JavaScript layer, the plug-in layer, or the back-end C# layer. We'll make that list public as soon as possible.
 
-For now, your plug-in will mostly be limited to respond to events that you trigger from your own plug-in. However, you can also look through the editor's JavaScript modules and the standard Stingray plug-ins to look for calls to the `on()`, `emit()` and `offer()` functions of the event service.
+For now, your plug-in will mostly be limited to respond to events that you trigger from your own plug-in. However, you can also look through the editor's JavaScript modules and the built-in plug-ins installed with {{ProductName}} to look for calls to the `on()`, `emit()` and `offer()` functions of the event service.

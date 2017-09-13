@@ -7,7 +7,7 @@
 5. [Edit the character unit](#step5)
 6. [Test play the level](#step6)
 
-##Step 1. Import the character mesh <a name="step1"></a>
+## Step 1. Import the character mesh <a name="step1"></a>
 
 (See also ~{ Import a character mesh }~.)
 
@@ -21,8 +21,7 @@
 
 1. In the **Import FBX** options, enable **Animation** and select **New or update skeleton** for the **Skeleton**, then enter a name for this new character skeleton.
 
-	This creates a Stingray skeleton for the character mesh that lets you apply animation clips later on.
-
+	This creates a {{ProductName}} skeleton for the character mesh that lets you apply animation clips later on.
 
 ## Step 2. Import animation clips <a name="step2"></a>
 
@@ -44,7 +43,7 @@
 
 	![](../images/import_clip_settings.png)
 
-	**Tip:** You can also manually create an 'animations' folder before you import the clip, but this is an easy way to make Stingray do it for you. Either way, it's a good idea to organize the clips for a particular character in their own folder.
+	**Tip:** You can also manually create an 'animations' folder before you import the clip, but this is an easy way to make {{ProductName}} do it for you. Either way, it's a good idea to organize the clips for a particular character in their own folder.
 
 	The animation clip is imported, applied to the character, and starts to playback in the **Asset Preview** window.
 
@@ -67,7 +66,7 @@
 
 ## Step 4. Create the character's animation controller <a name="step4"></a>
 
-###Create the controller
+### Create the controller
 
 1. In the **Asset Browser**, right-click the character skeleton unit and select **Create Anim Controller**.
 
@@ -119,7 +118,7 @@ By default, one empty layer displays in the node graph area.
 
 1. Repeat these steps to add a second state, or simply copy the first state, but change the animation clip.
 
-###Create events to trigger each state
+### Create events to trigger each state
 
 Now you'll want to add events to trigger each state.
 
@@ -162,7 +161,7 @@ As you select states in the **Anim Controller** Editor, use the preview pane on 
 1. Save the unit (**File > Save**), then close the **Unit Editor**.
 
 
-##Step 6. Test play the level <a name="step6"></a>
+## Step 6. Test play the level <a name="step6"></a>
 
 
 1. Drag the character unit from the **Asset Browser** into the current level.

@@ -1,12 +1,12 @@
 # Template projects
 
-The Stingray Editor ships with a few sample projects to help you get started. By default, template projects install in the **templates** folder in your **Stingray** directory. On a Windows OS templates are installed at the following location: `C:\Program Files\Autodesk\Stingray\<version>\editor\templates`. Templates are also available from the **Project Manager** every time you start Stingray or select **Templates** tab in the **Project Manager**.
+The {{ProductName}} editor ships with a few sample projects to help you get started. You can start a new project based on any of these templates in the ~{ Project Manager }~ when time you start the editor. Select the **Templates** tab in the **Project Manager** to see the templates you have installed.
 
 > ![](../../images/icon_video.png) You can find video walkthroughs of the templates <a href="http://area.autodesk.com/learning/series/introduction-to-stingray-template-projects" target="blank">here.</a>
 
 ![](../../images/template_projects.png)
 
-The best way to start a new project is always to clone an existing one, like the Basic project, rather than starting completely from scratch. This ensures you have the correct project structure built in when it's time to compile your game.
+The best way to start a new project is always to clone an existing one, like the Basic project, rather than starting completely from scratch. This ensures you have the correct project structure built in when it's time to compile your project.
 
 If you want to start with nothing in your project, use the `Empty` project to start.
 
@@ -32,7 +32,7 @@ This template is a simple vehicle level. It contains a driveable four-wheeled ve
 
 ## VR Template projects
 
-Stingray includes the following templates for rendering in VR devices. (See also: ~{ Get started in VR }~.)
+{{ProductName}} includes the following templates for rendering in VR devices. (See also: ~{ Get started in VR }~.)
 
 <dl>
 <dt>VR Oculus Touch</dt>
@@ -64,7 +64,7 @@ Use iOS devices, Android 7.x+ devices like Nexus 9 or a Daydream device like Pix
 
 </dl>
 
-> **Note:** The VR templates for mobile devices use the Stingray ~{ Mini renderer }~ by default. See ~{ Optimize VR content for mobile devices }~ for tips on preparing your VR scenes.
+> **Note:** The VR templates for mobile devices use the ~{ Mini renderer }~ by default. See ~{ Optimize VR content for mobile devices }~ for tips on preparing your VR scenes.
 
 ---
 Related topics:

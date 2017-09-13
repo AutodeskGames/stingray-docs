@@ -1,10 +1,10 @@
-# Baking with the Stingray baker
+# Baking with the built-in light baker
 
-The Stingray light baker is the light baking system built in to Stingray.
+This page details the way the built-in light baker works by default, and how you can configure it using the settings in the **Bake Lightmaps** window.
 
 ## What does it bake?
 
-For each surface, the Stingray baker includes in the lightmap:
+For each surface, the built-in baker includes in the lightmap:
 
 -	All *indirect* illumination, which hits the baked surface after bouncing off of one or more other surfaces in the scene. This also includes light coming from emissive textures, and environmental light contributed by the sky texture.
 
@@ -12,24 +12,24 @@ For each surface, the Stingray baker includes in the lightmap:
 
 ## How does it bake?
 
-The Stingray baker does multiple passes over the scene, each time progressively refining the result to converge toward a high-quality final solution. This means that you can quickly get a basic idea of what the final result will look like. You can also quit baking when the result stops improving.
+The built-in baker does multiple passes over the scene, each time progressively refining the result to converge toward a high-quality final solution. This means that you can quickly get a basic idea of what the final result will look like. You can also quit baking when the result stops improving.
 
-Each pass makes use of your computer's GPU to accelerate the rendering. It only proceeds when the Stingray Editor is actively using the GPU. Therefore, you will likely want to set your viewport to update all the time, instead of updating only when the editor is focused. That way, your baking session will continue processing even if you click away from the Stingray Editor or leave your computer.
+Each pass makes use of your computer's GPU to accelerate the rendering. It only proceeds when the editor is actively using the GPU. Therefore, you will likely want to set your viewport to update all the time, instead of updating only when the editor is focused. That way, your baking session will continue processing even if you click away from the interactive editor or leave your computer.
 
 -	In the viewport, click the options icon ![Options](../../../images/icon_assetPreview.png) in the overlay, and select **Update Mode > Always** from the contextual menu.
 
 ## Bake settings
 
-You can use the settings in the **Bake Lightmaps** window to control the way the Stingray baker produces its lightmaps.
+You can use the settings in the **Bake Lightmaps** window to control the way the baker produces its lightmaps.
 
-![Stingray light baker settings](../../../images/bake_lightmaps_stingray.png)
+![Light baker settings](../../../images/bake_lightmaps_stingray.png)
 
 <dl>
 
 <dt>Lightmap resolution (Texel/Meter)</dt>
 <dd>Controls the global resolution of the lightmaps produced by the baker in texels per meter.
 
-The Stingray Baker will make sure that all surfaces keep the assigned lightmap resolution. Use the resolution multiplier found in the per mesh settings to allow for higher resolution on certain objects in your scene.
+The baker will make sure that all surfaces keep the assigned lightmap resolution. Use the resolution multiplier found in the per mesh settings to allow for higher resolution on certain objects in your scene.
 
 Increasing this number will permit the baker to put more detail into each lightmap, which allows room for higher quality, more precise results. However, increasing this value can actually produce noisier results if there are not enough sample passes to achieve that level of detail. Increasing this value also increases the size in memory of each lightmap, and makes each sample pass take longer.</dd>
 
@@ -42,13 +42,13 @@ Increasing this value may improve the quality of the final results, if the numbe
 <dd>Determines how much the radiance map texture contributes to the baked lighting.</dd>
 
 <dt>Indirect intensity</dt>
-<dd>Increases or decreases the strength of the indirect illumination the Stingray baker applies to the surfaces in your level.</dd>
+<dd>Increases or decreases the strength of the indirect illumination the baker applies to the surfaces in your level.</dd>
 
 <dt>Emissive intensity</dt>
 <dd>Increases or decreases the amount of diffuse light cast out into the scene from surfaces whose materials have emissive color and emissive intensity.</dd>
 
 <dt>Diffuse boost</dt>
-<dd>Increases or decreases the amount of diffuse light the Stingray baker applies to baked surfaces.
+<dd>Increases or decreases the amount of diffuse light the baker applies to baked surfaces.
 
 Raising this value causes darker surfaces to become brighter and to bounce more light back out into the scene. This may help you get better results if the materials in your scene are too dark to scatter light effectively.
 

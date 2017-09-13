@@ -6,7 +6,7 @@ There are two main reasons why you would want to create an entity asset:
 
 -	You want it to act as an *inherited asset*, whose components and settings get inherited by one or more other entity definitions. Only entity assets can have their components and settings inherited; entities that are saved within levels cannot be inherited by other entities.
 
--	You want to spawn entities from this definition in the game world at runtime. See also ~{ Interact with entities during gameplay }~.
+-	You want to spawn entities from this definition in the engine world at runtime. See also ~{ Interact with entities during gameplay }~.
 
 **To create a new empty entity asset:**
 

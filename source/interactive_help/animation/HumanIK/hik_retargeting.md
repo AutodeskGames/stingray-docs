@@ -6,7 +6,7 @@ For example, if you have two HumanIK characterized characters, a human and a gre
 
 > **Note:** Each character that you want to use in your retargeting pipeline must be set up as a valid HumanIK character. See also ~{ HumanIK character setup }~, and refer to the HumanIK documentation in your content creation package (such as Maya, Maya LT, or MotionBuilder).
 
-Stingray currently supports only Final Pose retargeting. Source retargeting is not yet supported.
+{{ProductName}} currently supports only Final Pose retargeting. Source retargeting is not yet supported.
 
 With final pose retargeting, you can use Flow or Lua to retarget motion output from an animation controller to the input of another animation controller, applying the animation from one character unit to another.
 

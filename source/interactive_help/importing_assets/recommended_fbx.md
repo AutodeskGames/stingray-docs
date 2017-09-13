@@ -1,4 +1,4 @@
-﻿# Recommended FBX settings for export to Stingray
+﻿# Recommended FBX settings for export to {{ProductName}}
 
 This topic lists the recommended settings for what to include as you export a scene from Maya, Maya LT, or 3ds Max. In the export options windows, you can find the following settings under **File Type Specific Options**.
 
@@ -74,5 +74,5 @@ Under **Axis Conversion**:
 
 ---
 Related topics:
--	~{ Export an FBX file to use in Stingray }~
+-	~{ Export an FBX file to use in {{ProductName}} }~
 ---

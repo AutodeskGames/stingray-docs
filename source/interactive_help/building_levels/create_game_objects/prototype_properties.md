@@ -6,7 +6,7 @@
 
 <dd>Enter a unique name for the prototype. The prototype name **must** be unique.
 
-  > **Note:** Stingray gives the prototype a unique name when you create it, and prevents you from changing the name to an existing name.
+  > **Note:** The interactive editor gives the prototype a unique name when you create it, and prevents you from changing the name to an existing name.
 
 </dd>
 

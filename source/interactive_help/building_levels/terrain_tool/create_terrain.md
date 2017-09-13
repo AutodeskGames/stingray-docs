@@ -1,6 +1,6 @@
-#Create terrain
+# Create terrain
 
-The Stingray terrain tools let you create and edit terrain meshes by sculpting, and by importing and exporting terrain files that you work on in other applications.
+The editor's terrain tools let you create and edit terrain meshes by sculpting, and by importing and exporting terrain files that you work on in other applications.
 
 **To create terrain:**
 
@@ -31,7 +31,7 @@ The Stingray terrain tools let you create and edit terrain meshes by sculpting, 
 
 3. In the file browser that appears (**Save Terrain Unit**), enter a name for the terrain and click **Save**. We recommend that you also create a new folder to contain the terrain units in your project '/content' folder.
 
-Stingray creates a terrain plane unit in the level, with a default checkerbox material assigned. This default material (core/stingray_renderer/shaders/terrain_basic) sets up the connection between the material map and actual textures. In the **Asset Browser**, you can see the terrain unit, its material, and the associated textures.
+The editor creates a terrain plane unit in the level, with a default checkerbox material assigned. This default material (core/stingray_renderer/shaders/terrain_basic) sets up the connection between the material map and actual textures. In the **Asset Browser**, you can see the terrain unit, its material, and the associated textures.
 
 ![](../../images/terrain_assetbrwser.png)
 

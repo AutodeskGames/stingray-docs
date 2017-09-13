@@ -1,6 +1,6 @@
 # Create and import a ragdoll
 
-This workflow describes how to build a ragdoll using the PhysX plug-in in Maya, then export to Stingray. The second part of this tutorial still applies if you build the ragdoll in another application.
+This workflow describes how to build a ragdoll using the PhysX plug-in in Maya, then export to {{ProductName}}. The second part of this tutorial still applies if you build the ragdoll in another application.
 
 ##Task overview
 
@@ -9,8 +9,8 @@ This workflow describes how to build a ragdoll using the PhysX plug-in in Maya, 
 3. [Add the torso.](#step3)
 4. [Create remaining rigid bodies.](#step4)
 5. [Test and export.](#step5)
-6. [Import to Stingray.](#step6)
-7. [Control the ragdoll in Stingray.](#step7)
+6. [Import to {{ProductName}}.](#step6)
+7. [Control the ragdoll in {{ProductName}}.](#step7)
 
 See also:
 
@@ -171,7 +171,7 @@ To workaround this issue, create the rigid body that is lower in the hierarchy f
 
 ##Step 5. Test and export <a name="step5"></a>
 
-Once you're happy with each rigid body and constraint individually, you can prepare to export to Stingray.
+Once you're happy with each rigid body and constraint individually, you can prepare to export to {{ProductName}}.
 
 1. Select each rigid body and set the **Simulation Type** back to **Dynamic**.
 
@@ -199,15 +199,15 @@ Once you're happy with each rigid body and constraint individually, you can prep
 
 	![Image](../../images/ragdoll_31.png)
 
-9. Navigate to your Stingray project directory and save the ragdoll file *with the same name*, and *in the same location* as an existing character unit file in your Stingray project.
+9. Navigate to your {{ProductName}} project directory and save the ragdoll file *with the same name*, and *in the same location* as an existing character unit file in your project.
 
 	For example, if your character unit is Guy.unit, name the physics file Guy.xml.
 
 *  *  *
 
-##Step 6. Import to Stingray <a name="step6"></a>
+##Step 6. Import to {{ProductName}} <a name="step6"></a>
 
-1. In the Stingray **Asset Browser**, right-click the character unit and select **Re-import**.
+1. In the interactive editor's **Asset Browser**, right-click the character unit and select **Re-import**.
 
 	The Physx file you saved in the previous steps displays next to your unit file.
 
@@ -225,7 +225,7 @@ Once you're happy with each rigid body and constraint individually, you can prep
 
 *  *  *
 
-##Step 7. Control the ragdoll in Stingray <a name="step7"></a>
+##Step 7. Control the ragdoll in {{ProductName}} <a name="step7"></a>
 
 You probably do not want to activate the ragdoll as soon as the unit is spawned, so let's disable the rigid bodies.
 
@@ -280,7 +280,7 @@ You probably do not want to activate the ragdoll as soon as the unit is spawned,
 
 *  *  *
 
-##Partial ragdoll example: Control the ragdoll in Stingray <a name="partial"></a>
+## Partial ragdoll example: Control the ragdoll in {{ProductName}} <a name="partial"></a>
 
 Partial ragdolls let you create limbs driven by physics, yet drive the rest of the body with animation. This example shows how to activate the ragdoll on only the left arm.
 

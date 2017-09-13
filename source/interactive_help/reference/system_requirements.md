@@ -1,6 +1,6 @@
 # System Requirements
 
-Autodesk® Stingray software is supported on the following 64-bit operating systems and at a minimum, requires a system with the following 64-bit hardware:
+Autodesk® {{ProductName}} software is supported on the following 64-bit operating systems and at a minimum, requires a system with the following 64-bit hardware:
 
 ## Operating system
 
@@ -16,9 +16,9 @@ Microsoft® Windows® 7 (SP1), Windows 8.1, or Windows 10
 
 ## Deployment platforms
 
-Stingray enables developers to deploy projects to Microsoft Windows 7, Windows 8, Windows 10, Apple® iOS, Google® Android®, Sony® PlayStation® 4, and Microsoft Xbox One®.
+{{ProductName}} enables developers to deploy projects to Microsoft Windows 7, Windows 8, Windows 10, Apple® iOS, Google® Android®, Sony® PlayStation® 4, and Microsoft Xbox One®.
 
-See ~{ Supported platforms }~ for additional details on target game platforms, compatible devices and VR SDK kits.
+See ~{ Supported platforms }~ for additional details on target platforms, compatible devices and VR SDK kits.
 
 ## Web browser
 
@@ -28,7 +28,7 @@ Supplemental content is available online. Autodesk recommends using a recent ver
 
 > **Note:**
 
-> - The Stingray Editor will run on hardware below the above-stated system requirements but performance may be limited.
+> - The {{ProductName}} editor will run on hardware below the above-stated system requirements but performance may be limited.
 
 > - Autodesk is not responsible for errors or failures of Autodesk software arising from the installation of updates, extensions or new releases issued by third party hardware or software vendors for the certified software or hardware identified in this document (or for any other third party software or hardware that you may use in connection with Autodesk products).
 

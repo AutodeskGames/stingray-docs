@@ -1,6 +1,6 @@
 # Previewing animation
 
-The various preview windows in the animation tools and the ~{ Asset Preview }~ window let you see how the compressed animation will look in-game. You can use the playback control to play back the animation at various speeds and see if the compression causes any undesired artifacts.
+The various preview windows in the animation tools and the ~{ Asset Preview }~ window let you see how the compressed animation will look when played in the engine. You can use the playback control to play back the animation at various speeds and see if the compression causes any undesired artifacts.
 
 If you create an **Animation/On Animation Controller Flow Events** node in the unit Flow graph, an event with the same name gets emitted from that node when the animation is being played. This lets you connect specific things that happen in the animation (such as foot plants) with sound or particle effects.
 

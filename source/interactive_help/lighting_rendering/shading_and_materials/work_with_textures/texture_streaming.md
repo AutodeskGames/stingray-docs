@@ -1,12 +1,12 @@
 # Texture streaming
 
-Texture streaming allows your game to defer loading detailed texture data into memory from disk until that data is actually needed in order to render the scene.
+Texture streaming allows you to defer loading detailed texture data into memory from disk until that data is actually needed in order to render the scene.
 
-This can help you to increase the number of different textures you use in your game, and to increase the maximum resolution of those textures, without exceeding a fixed maximum amount of memory. It may also reduce the load time of your resource packages (and therefore startup time for your project) by reducing the amount of data that needs to be loaded up front.
+This can help you to increase the number of different textures you use in your project, and to increase the maximum resolution of those textures, without exceeding a fixed maximum amount of memory. It may also reduce the load time of your resource packages (and therefore startup time for your project) by reducing the amount of data that needs to be loaded up front.
 
 ## How texture streaming works
 
-By default, when you load a resource package into your game that contains one or more texture resources, all of the data for those textures is loaded into memory immediately and kept in memory until that resource package is unloaded. All the mip levels for each texture are always available in memory, regardless of whether those mip levels are needed at any time.
+By default, when you load a resource package into the engine that contains one or more texture resources, all of the data for those textures is loaded into memory immediately and kept in memory until that resource package is unloaded. All the mip levels for each texture are always available in memory, regardless of whether those mip levels are needed at any time.
 
 When you use streamable textures, only a limited number of low-quality mip levels are kept in memory persistently for each texture. When the renderer needs to display a more detailed mip level for a given texture, the streaming system fetches that data from disk and loads it into a shared pool of memory.
 
@@ -18,9 +18,9 @@ For streamable textures, the renderer does not have all mip levels available at 
 
 This can occur for several different reasons, for example:
 
--	If the game needs to stream too many high-resolution textures at the same time. You may be able to address this problem by raising the buffer the system uses to load new texture data from disk (see memory settings below). If this problem always occurs in the same places in a level, you can alternatively try to disable streaming for some of the textures in that location so that fewer textures will need to be streamed.
+-	If the engine needs to stream too many high-resolution textures at the same time. You may be able to address this problem by raising the buffer the system uses to load new texture data from disk (see memory settings below). If this problem always occurs in the same places in a level, you can alternatively try to disable streaming for some of the textures in that location so that fewer textures will need to be streamed.
 
--	If you have other data that needs to be loaded into the game from disk at the same time, such as streaming audio or video, or background loading of other resource packages.
+-	If you have other data that needs to be loaded into the engine from disk at the same time, such as streaming audio or video, or background loading of other resource packages.
 
 -	If your project data is read from a slow physical medium such as a DVD or a slow hard disk, or the data is streamed over a network connection.
 
@@ -43,7 +43,7 @@ ios = {
 
 `streaming_texture_pool_size`
 
->	Specifies the maximum amount of memory, in MB, that the texture streaming system can allocate to share between all of the streamable textures it loads into your game. When the number and size of the mip levels the engine needs to stream in is greater than this pool can accommodate, the streaming system begins to discard the highest quality mip levels from its loaded textures. This may reduce the apparent texture detail and visual quality of your game. Therefore, you should attempt to set this value high enough that your game always has an acceptable level of texture detail, even in areas with the greatest texture density (i.e. the largest variety of different textures).
+>	Specifies the maximum amount of memory, in MB, that the texture streaming system can allocate to share between all of the streamable textures it loads into the engine. When the number and size of the mip levels the engine needs to stream in is greater than this pool can accommodate, the streaming system begins to discard the highest quality mip levels from its loaded textures. This may reduce the apparent texture detail and visual quality of the engine viewport. Therefore, you should attempt to set this value high enough that your viewport always has an acceptable level of texture detail, even in areas with the greatest texture density (i.e. the largest variety of different textures).
 >
 >	The default maximum pool size is 512 MB for all platforms. Note that this is a maximum value: if you do not stream any textures, no memory is actually allocated.
 
@@ -83,7 +83,7 @@ For a complete list of all texture resources managed by the streamer, along with
 
 ## Control streaming
 
-You can control the texture streaming system in your game by calling Lua functions in the `stingray.Renderer` API. For example, you can:
+You can control the texture streaming system in the engine by calling Lua functions in the `stingray.Renderer` API. For example, you can:
 
 -	enable or disable streaming, by calling `stingray.Renderer.set_automatic_streaming()`
 -	control the mip levels requested for your textures, by calling `stingray.Renderer.set_texture_requested_mip_level()` or `stingray.Renderer.request_textures_to_highest_mip_level()`

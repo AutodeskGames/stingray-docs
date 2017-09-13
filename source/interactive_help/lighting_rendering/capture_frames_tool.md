@@ -1,6 +1,6 @@
 # Capture Frames Tool
 
-The **Capture Frames** Tool lets you render frames to disk. The tool is integrated into the **Story Editor** workflow, and can also be initiated through Flow. For more information on using Flow, see the **Capture Frames** category in the [Stingray Flow Node Reference](../../flow_ref/index.html).
+The **Capture Frames** Tool lets you render frames to disk. The tool is integrated into the **Story Editor** workflow, and can also be initiated through Flow. For more information on using Flow, see the **Capture Frames** category in the [Flow Node Reference](../../flow_ref/index.html).
 
 The following **Capture Settings** can be adjusted to control your output. See ~{ Capture frames to disk }~ for more information.
 
@@ -52,7 +52,7 @@ The # frame paddings could be in the beginning, middle and the end of the file n
 > **Note:** The rendered OpenEXR frames uses ZIP compression by default.
 
 <dt>Frame Rate</dt>
-<dd>The frame rate that is used to simulate the game or editor playback while capturing.</dd>
+<dd>The frame rate that is used to simulate the app or editor playback while capturing.</dd>
 
 <dt>Resolution</dt>
 <dd>Lets you set a resolution for your capture. Select 1920 x 1080 (default), 1280 x 780, or enter a custom resolution. The custom resolution you set here is available only when capturing from Story and not when capturing from Flow.</dd>

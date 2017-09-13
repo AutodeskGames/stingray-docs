@@ -28,7 +28,8 @@ A WIP project for HoloLens testing purposes can be found in the **Online Project
 To compile and bundle the data:
 
 1. Open the HoloLens project in the editor.
-2. In the **Connections** panel, right-click a UWP platform target and select **Compile and Bundle data...** to bundle the game data for the HoloLens.
+2. In the **Connections** panel, right-click a UWP platform target and select **Compile and Bundle data...** to bundle your project data for the HoloLens.
+
 The data is output to the `hololens_project_data/uwp_bundled` folder next to the project on disk.
 
 ### Add project data to a package ###
@@ -43,8 +44,8 @@ If you want to create an app package with data you need to add the compiled and 
 
 Alternatively you can add the files to Visual Studio manually:
 
-1. Open the uwp32 Visual Studio solution (`build/engine/uwp32/stingray_engine_uwp32.sln`)
-2. Add the bundled game data to the "main_uwp" Visual Studio project, and set each item as "Content" by selecting all of them, right-clicking and going into Properties.
+1. Open the uwp32 Visual Studio solution (`build/engine/uwp32/{{SR_DOC_EXE_PREFIX}}_engine_uwp32.sln`)
+2. Add the bundled project data to the "main_uwp" Visual Studio project, and set each item as "Content" by selecting all of them, right-clicking and going into Properties.
 
 ### Deploying through Visual Studio ###
 
@@ -80,20 +81,21 @@ For more background information, see ~{ Connect to a remote device }~.
 
 2.	Start the engine on the device.
 
-	When the app starts up, it shows the following information while it waits for an incoming connection from the Stingray Editor:
+	When the app starts up, it shows the following information while it waits for an incoming connection from the interactive editor:
 
 	![](../images/connecting-hololens.jpg)
 
-3.	In the Stingray Editor, use the **Connections** panel (**Window > Deploy and Connect > Connections**) to set up the connection to the IP address for the device, then run the project.
+3.	In the interactive editor, use the **Connections** panel (**Window > Deploy and Connect > Connections**) to set up the connection to the IP address for the device, then run the project.
 
 	For details, see ~{ Using the Connections panel }~.
 
-    >	**Note:** The engine app on the device must be in this waiting state in order for the Stingray Editor to initiate a connection. Each time you want to run your project or mirror your viewport, you have to close and restart the engine on the device.
+    >	**Note:** The engine app on the device must be in this waiting state in order for the editor to initiate a connection. Each time you want to run your project or mirror your viewport, you have to close and restart the engine on the device.
 
 4. Close the message dialog window on the device manually when connecting to the editor. The window does not close automatically, and while it is visible it hides the 3D content rendered by the engine.
 
 
 ### Developer Tips
-The Stingray console output is available on the _Logging_ page in the Device Portal under the `Microsoft-Windows-Diagnostics-LoggingChannel` provider.
+
+The engine's console output is available on the _Logging_ page in the Device Portal under the `Microsoft-Windows-Diagnostics-LoggingChannel` provider.
 
 Useful information for debugging is available from various different providers. We have found useful information in the `Microsoft-Windows-WindowsErrorReporting`, `-ProcessStateManager` and `-ProcessExitMonitor` providers.

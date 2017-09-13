@@ -2,7 +2,7 @@
 
 A plugin called DCC Link connects 3ds Max and 3ds Max Interactive when they are installed on the same system, giving you a smoother connection between the two, and supporting your asset creation workflow.
 
-> **Important:**  If you have previously installed Stingray (including Stingray 1.8 or any newer beta version of Stingray), you'll need to manually uninstall your existing DCC Link plugin before installing 3ds Max Interactive. Otherwise, our installer mistakenly detects that you have a newer version of the plugin and won't install the latest. After you uninstall your existing version of the plugin (using Windows Control Panel), the correct DCC Link plugin installs correctly when you install 3ds Max Interactive, or you can install it manually using the following steps.
+> **Important:**  If you have previously installed a standalone version of Autodesk Stingray (including Stingray 1.8 or any newer beta version of Stingray), you'll need to manually uninstall your existing DCC Link plugin before installing 3ds Max Interactive. Otherwise, our installer mistakenly detects that you have a newer version of the plugin and won't install the latest. After you uninstall your existing version of the plugin (using Windows Control Panel), the correct DCC Link plugin installs correctly when you install 3ds Max Interactive, or you can install it manually using the following steps.
 
 ## Install the DCC plug-in
 

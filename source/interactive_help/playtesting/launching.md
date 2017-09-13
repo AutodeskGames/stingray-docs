@@ -4,7 +4,7 @@ You can start your project in multiple different ways to test out various aspect
 
 ## ![Play](../images/icon_test_level.png) Test Level
 
-You can launch your project on your local machine from the Stingray Editor, and have it start up with the current level you have opened in the Stingray Editor. This is a fast way to drop in and out of a level to test your changes.
+You can launch your project on your local machine from the interactive editor, and have it start up with the current level you have opened in the editor. This is a fast way to drop in and out of a level to test your changes.
 
 Use any of the following methods:
 
@@ -12,7 +12,7 @@ Use any of the following methods:
 -	Use the **F8** hotkey.
 -	Click the ![Play](../images/icon_test_level.png) icon in the **Level Viewport** panel.
 
-> **Note:** it is up to the project's Lua boot code to support starting with the current level. If you use the Appkit's `SimpleProject` in your game (like any of the template projects provided with Stingray), this is done for you. If you write your own Lua boot script, you will need to support it yourself if you want. See ~{ Loading the current level for testing }~.
+> **Note:** it is up to the project's Lua boot code to support starting with the current level. If you use the Appkit's `SimpleProject` in your project (like any of the template projects provided with {{ProductName}}), this is done for you. If you write your own Lua boot script, you will need to support it yourself if you want. See ~{ Loading the current level for testing }~.
 
 Also, it's important to note that the Test Level doesn't handle loading resources in exactly the same way as your final app will. When you test the level, the engine automatically loads each resource that it needs directly from your project's data folder when it's needed, whether or not that resource is included in any resource packages, and whether or not your project loads any resource packages at all. So, when testing the level, you don't have to worry about resource management at all. (See also ~{ Loading and unloading content at runtime }~.)
 
@@ -31,7 +31,7 @@ When you use Run Project, the engine uses the resource package system to manage 
 
 ## ![Link](../images/icon_linkConsole.png) Mirroring the viewport to a remote device
 
-You can run the Stingray engine by itself on a console or mobile platform, and connect to it from the Stingray Editor running on your Windows machine. The editor sends your project data over the network to the remote engine, making the display of the console or mobile platform reflect the current viewport of the editor.
+You can run the interactive engine by itself on a console or mobile platform, and connect to it from the editor running on your Windows machine. The editor sends your project data over the network to the remote engine, making the display of the console or mobile platform reflect the current viewport of the editor.
 
 In effect, this mode is not really a playtest, since you are not running your gameplay code on the target platform. However, you can see the way your assets and materials will look on the various targets. This is a convenient way to compare the look of your scenes on multiple platforms at the same time.
 
@@ -47,9 +47,9 @@ For details on using the **Deployer** to produce bundled, distributable builds o
 
 ## Start engine from the command line
 
-On Windows, you can start the Stingray engine application from a command prompt, and provide parameters on the command line to control its behavior. For example, you can tell it to launch with the compiled data from a particular directory, to compile or bundle data only, or to listen for connections from a given IP address.
+On Windows, you can start the interactive engine application from a command prompt, and provide parameters on the command line to control its behavior. For example, you can tell it to launch with the compiled data from a particular directory, to compile or bundle data only, or to listen for connections from a given IP address.
 
-For details on all the parameters the engine accepts, see ~{ Stingray engine command-line reference }~.
+For details on all the parameters the engine accepts, see ~{ Engine command-line reference }~.
 
 ---
 Related topics:

@@ -1,6 +1,6 @@
 # Example workflow: Trigger a door opening
 
-Triggers are simple game objects that let you trigger events when other objects come in contact with them. This workflow explains how to animate a door opening when the player gets close to it.
+Triggers are simple volumes that you place in a level, and that trigger events when other objects come in contact with them. This workflow explains how to animate a door opening when the player gets close to it.
 
 > ![](../../images/icon_video.png) You can also find a video tutorial that demonstrates this workflow [here](http://area.autodesk.com/learning/trigger-a-door-opening).
 

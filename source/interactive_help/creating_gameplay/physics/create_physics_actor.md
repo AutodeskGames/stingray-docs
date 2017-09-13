@@ -1,6 +1,6 @@
-﻿#Create a physics actor
+# Create a physics actor
 
-To define how a spawned object moves or interacts in your game world, you set it up as a physics actor. For example, to add collision to an object, you configure the mesh by adding a physics actor using the **Unit Editor**.
+To define how a spawned object moves or interacts in your 3D scenes, you set it up as a physics actor. For example, to add collision to an object, you configure the mesh by adding a physics actor using the **Unit Editor**.
 
 Refer also to ~{ Basic physics concepts }~ for more detailed information on worlds, actors, and shapes.
 
@@ -25,7 +25,7 @@ Refer also to ~{ Basic physics concepts }~ for more detailed information on worl
 
 8. Close the **Unit Editor** window and click **Save** when prompted.
 
->**Note:** When you scale physics enabled units, the physics actors and the constraints get scaled accordingly to the scale. While a uniform scaling (1,1,1) of physics objects is preferred both in your DCC tool and in Stingray, you can also apply a non-uniform scale. If the imported unit has a single actor, set the scale on the physics actor. For a unit with several physics actors, you can apply the scale to the unit if all the actors have the same orientation. If the physics actors have a different orientation than the unit or in other cases, you must scale the unit in the DCC tool or modify its node hierarchy in the DCC for all the physics actors to have the same orientation.
+>	**Note:** When you scale physics enabled units, the physics actors and the constraints get scaled accordingly to the scale. While a uniform scaling (1,1,1) of physics objects is preferred both in your DCC tool and in {{ProductName}}, you can also apply a non-uniform scale. If the imported unit has a single actor, set the scale on the physics actor. For a unit with several physics actors, you can apply the scale to the unit if all the actors have the same orientation. If the physics actors have a different orientation than the unit or in other cases, you must scale the unit in the DCC tool or modify its node hierarchy in the DCC for all the physics actors to have the same orientation.
 
 ---
 Related topics:

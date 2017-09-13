@@ -7,7 +7,7 @@ You can use decals to achieve a wide variety of effects. For example:
 -	Enhance the look of your level by scattering subtle atmospheric overlays to simulate things like frost, stains, and shadows.
 -	Tie the objects in your level together visually by projecting overlays across the boundaries between the models.
 -	Disguise mesh instancing by giving unique features to each instance of a copied unit or to each block of a repeating texture.
--	Make game events appear to alter the static objects in your scene by dynamically spawning projectors for marks like footprints, bullet holes, bloodstains, and so on.
+-	Make events appear to alter the static objects in your scene by dynamically spawning projectors for marks like footprints, bullet holes, bloodstains, and so on.
 
 ![](../../images/decals.jpg)
 
@@ -15,7 +15,7 @@ The image above shows a plain white wall enhanced in the level by several decals
 
 ## Step 1. Create a decal projector
 
-Decals are usually projected using a decal projector unit, which is provided with Stingray in the core resources folder, at `core/stingray_renderer/helper_units/decals/decal_box`.
+Decals are usually projected using a decal projector unit, which is provided in the core resources folder, at `core/stingray_renderer/helper_units/decals/decal_box`.
 
 To create a new decal projector in a level:
 
@@ -31,7 +31,7 @@ To create a new decal projector in a level:
 
 ## Step 2. Create a new material to project
 
-Each new decal projector uses a default material that comes from the Stingray core resources. This placeholder projects the debug texture for missing textures: a question mark on a yellow background. You will want to create a new material for your decal, and set it up to project your own texture.
+Each new decal projector uses a default material that comes from the core resources. This placeholder projects the debug texture for missing textures: a question mark on a yellow background. You will want to create a new material for your decal, and set it up to project your own texture.
 
 1.	In the ~{ Asset Browser }~, navigate to the folder where you want to keep your new material.
 
@@ -101,7 +101,7 @@ One easy way to do this is to open the base decal box unit in the **Unit Editor*
 
 ## Spawn decal projectors dynamically
 
-Since a decal projector is fundamentally just a unit, you can spawn and unspawn decal projectors dynamically at runtime in your game in Flow or in Lua, exactly the same way you would spawn and unspawn other kinds of units. You will need to place and size the unit so that it projects on the meshes that you want it to, and you may need to set up the unit to project the right material.
+Since a decal projector is fundamentally just a unit, you can spawn and unspawn decal projectors dynamically at runtime in your Flow or Lua gameplay programming, exactly the same way you would spawn and unspawn other kinds of units. You will need to place and size the unit so that it projects on the meshes that you want it to, and you may need to set up the unit to project the right material.
 
 For example:
 

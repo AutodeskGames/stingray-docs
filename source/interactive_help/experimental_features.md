@@ -1,6 +1,6 @@
 # About Experimental Features
 
-From time to time, we work on features that get we can't wait to share them with you even though they're still in development. This gives us a chance to collect your feedback about how they work for you in real life, before they get integrated as an official part of Stingray.
+From time to time, we work on features that get we can't wait to share them with you even though they're still in development. This gives us a chance to collect your feedback about how they work for you in real life, before they get integrated as an official part of {{ProductName}}.
 
 If you're interested in trying out experimental features, we would hugely appreciate hearing your opinions about them! Please drop us a line about your experiences on our main discussion forum, at:
 
@@ -17,7 +17,7 @@ A few reasons why we might tag something as experimental:
 
 ## Enable or disable experimental features
 
-Experimental features are hidden by default. If you want to try them out, enable them in your Stingray editor settings.
+Experimental features are hidden by default. If you want to try them out, enable them in your editor settings.
 
 1.	From the **File** menu, select **Settings > Editor Settings**.
 

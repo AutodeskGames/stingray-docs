@@ -1,6 +1,6 @@
 # Physically Based Lighting
 
-The measurement of light is known as photometry. You can use photometric lights to more accurately define lights in your scene. In Stingray, the Physical Light Entity lets you use data from real-world lights to create a realistic distribution of light in your scene.
+The measurement of light is known as photometry. You can use photometric lights to more accurately define lights in your scene. In {{ProductName}}, the Physical Light Entity lets you use data from real-world lights to create a realistic distribution of light in your scene.
 
 Physical lights can be added to your scene from the **Create** panel.
 
@@ -8,7 +8,7 @@ Physical lights can be added to your scene from the **Create** panel.
 
 ## IES Light Profiles
 
-IES Light Profiles are digital profiles of real-world lights. These ASCII data files describe how a light is cast. When assigned to a **Physical Light** in Stingray, IES profiles help create life-like lighting.
+IES Light Profiles are digital profiles of real-world lights. These ASCII data files describe how a light is cast. When assigned to a **Physical Light** entity, IES profiles help create life-like lighting.
 
 You can download IES Light Profiles from manufacturers like [Phillips](http://www.usa.lighting.philips.com/support/support/literature/photometric-data) and [Lithonia](http://lithonia.com/photometrics.aspx). [Renderman](https://renderman.pixar.com/view/DP25764) also has an IES light collection.
 

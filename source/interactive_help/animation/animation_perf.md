@@ -6,11 +6,11 @@ To minimize animation memory use think about:
 
 - The amount of animation (hours of animated data)
 - Animation compression (more compression means less memory use)
-- Package organization (organize the animations so that special animations for cutscenes do not have to be loaded as part of the main game)
+- Package organization (organize the animations so that, for example, special animations for cutscenes do not have to be loaded in memory when they aren't needed)
 
 Animation streaming is not supported.
 
-When the game is running you can use the console command:
+When the engine is running you can use the console command:
 
 > `memory_resources list animation`
 
@@ -57,9 +57,9 @@ To get a list of the loaded animation resources and their sizes:
 
 ##Animation performance
 
-If your game has lots and lots of animated characters, animation can be one of the more expensive CPU systems in the engine. In that case it makes sense to spend some effort on optimizing your use of animations. (If you only have a few characters, you typically don't have to worry about animation performance.)
+If your project has lots and lots of animated characters, animation can be one of the more expensive CPU systems in the engine. In that case it makes sense to spend some effort on optimizing your use of animations. (If you only have a few characters, you typically don't have to worry about animation performance.)
 
-Objects within units can move for many different reasons (from Lua script), but in a normal game, most objects move because they are animated. So most of the time used here comes from the animation system. The more animated characters there are, the more time used.
+Objects within units can move for many different reasons (such as from Lua or Flow programming), but most objects move because they are animated. So most of the time used here comes from the animation system. The more animated characters there are, the more time used.
 
 If you need to optimize animations, try the following things:
 
@@ -67,7 +67,7 @@ If you need to optimize animations, try the following things:
 
 - Use shorter transition times to avoid having multiple animations playing during the transition.
 
-- If you have lots of bones that are only used in cutscenes, consider using a simpler rig for the in-game character.
+- If you have lots of bones that are only used in cutscenes, consider using a simpler rig for your character.
 
 - Complicated constraints (such as the aim constraint) can be expensive. Avoid using them for unimportant characters.
 
@@ -103,13 +103,13 @@ To set which skeleton LOD is used at runtime, put this command in your Lua scrip
 
 Note that the LOD levels for the skeleton are not connected to any other LOD systems (such as the LOD system for meshes). You can use skeleton LOD regardless of whether you use mesh LOD. For more information on mesh LOD, see ~{ Level of Detail (LODs) }~.
 
-Skeleton LOD mainly reduces the cost of the animation_blenders (but it can also cut down the cost of other systems). Look at what that cost is, and experiment with LODs (a quick test is to disable everything but the root for all units in the game) to see if using skeleton LOD is worth it in your projects.
+Skeleton LOD mainly reduces the cost of the animation_blenders (but it can also cut down the cost of other systems). Look at what that cost is, and experiment with LODs (a quick test is to disable everything but the root for all units) to see if using skeleton LOD is worth it in your projects.
 
 ## Animation merging
 
 Animation merging is an optimization to reduce the cost of AnimationPlayer::update when you have lots of units, many of which are playing the same animation (for example, a marching army).
 
-Normally, the Stingray engine creates a separate animation evaluator for each unit in the game. If there are 50 units in the game using the run animation, each unit separately evaluates the pose of the animation at its own local time (t=0.11, t=0.23, t=0.13). An exception is if two units start the run animation at exactly the same time and play it at exactly the same speed. In that case, the two units can share the evaluation. You only need to find out what the run animation looks at for t=0.19 once, and can the reuse that pose for both units.
+Normally, the interactive engine creates a separate animation evaluator for each unit in the engine world. If there are 50 units using a run animation, each unit separately evaluates the pose of the animation at its own local time (t=0.11, t=0.23, t=0.13). An exception is if two units start the run animation at exactly the same time and play it at exactly the same speed. In that case, the two units can share the evaluation. You only need to find out what the run animation looks at for t=0.19 once, and can the reuse that pose for both units.
 
 The animation merging optimization lets more units to share an animation evaluation by relaxing the demands on showing the pose at exactly the right time. For example, suppose one unit wants to evaluate run at t=0.11 and another wants to evaluate it at t=0.13. To improve performance, you can evaluate the animation once att=0.12 and then reuse that for both units. Each unit shows the animation at a slightly different time than expected, but the difference is hardly noticeable.
 
@@ -121,7 +121,7 @@ To enable animation merging, put this command in your Lua script:
 
 <dt>max_start_time = 0</dt>
 
-<dd>Controls how far into the animation to start, if a character is already playing the desired animation. For example, with a value of 0.2, it's possible to reuse an existing run animation playing at t=0.1, but not one at t=0.3. If there is a playing animation with a suitable t, in some cases jumping into that animation can cause a time discontinuity. If there's no suitable t, Stingray creates another animation evaluator.</dd>
+<dd>Controls how far into the animation to start, if a character is already playing the desired animation. For example, with a value of 0.2, it's possible to reuse an existing run animation playing at t=0.1, but not one at t=0.3. If there is a playing animation with a suitable t, in some cases jumping into that animation can cause a time discontinuity. If there's no suitable t, the engine creates another animation evaluator.</dd>
 
 <dt>max_drift = 0 </dt>
 
@@ -135,7 +135,7 @@ A value of 1.0 means the engine must respect the speed set by the animator 100% 
 
 A value of 0.9 means the engine must only respect the animators speed to 90%. It can speed up or slow down the animation by up to 10% in order to make it synchronize better with other animations.
 
-As described above, animation merging mainly effects the cost of AnimationPlayer::update. Experiment with setting different options for all your game units, and see how it effects the time of AnimationPlayer::update to determine if it is worth using animation merging for your project.
+As described above, animation merging mainly effects the cost of AnimationPlayer::update. Experiment with setting different options for all your units, and see how it effects the time of AnimationPlayer::update to determine if it is worth using animation merging for your project.
 </dd>
 
 </dl>

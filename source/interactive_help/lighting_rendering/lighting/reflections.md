@@ -1,12 +1,12 @@
 # Reflections
 
-Almost all surfaces in the real world exhibit at least a little specular reflectivity. In the Stingray physically based rendering system, each material's *metallic* setting determines how much specular reflectivity the material shows at a given viewing angle, and its *roughness* setting determines how sharp or blurred those reflections are.
+Almost all surfaces in the real world exhibit at least a little specular reflectivity. In the {{ProductName}} physically based rendering system, each material's *metallic* setting determines how much specular reflectivity the material shows at a given viewing angle, and its *roughness* setting determines how sharp or blurred those reflections are.
 
 But when reflected light is needed, where do these reflections come from?
 
-Accurately reflecting the other objects in the scene, which might themselves have reflections from other parts of the scene, involves tracing the paths of light rays around the scene over multiple bounces. Given the number of surfaces that may be involved, and how complex the interaction of their reflections can be, the calculations required for this kind of simulation are very heavy to carry out in real time in the game.
+Accurately reflecting the other objects in the scene, which might themselves have reflections from other parts of the scene, involves tracing the paths of light rays around the scene over multiple bounces. Given the number of surfaces that may be involved, and how complex the interaction of their reflections can be, the calculations required for this kind of simulation are very heavy to carry out in real time in the engine.
 
-However, there are several ways you can achieve close enough approximations for reflected light in your levels. You will need to work out a good balance between these techniques for your own game. In general, keep in mind that the smoother and flatter your materials are, the harder you will have to work to make their reflections accurate enough.
+However, there are several ways you can achieve close enough approximations for reflected light in your levels. You will need to work out a good balance between these techniques for your own project. In general, keep in mind that the smoother and flatter your materials are, the harder you will have to work to make their reflections accurate enough.
 
 Remember that non-metallic surfaces show the color of specular light unchanged. Metallic surfaces tint the light they reflect based on the material's color.
 
@@ -44,13 +44,13 @@ For example, in this image the boxes have been made very metallic, so they pick 
 
 ![Localized reflection probe failure case](../../images/reflections_local_probe_2.jpg)
 
-The biggest drawback of using light probes to bake reflections for your level is that the baked textures are static. The reflections they show can include only the objects that are present in the level at the time they are baked. Anything that happens dynamically over the course of the game isn't reflected. For example, if a building gets destroyed in the game, it will continue to show up in the reflections from nearby surfaces. If the changes are predictable, you may be able to get around this limitation by baking multiple sets of light probes, one set with the building present and one set with the building not present, and toggle the reflection probes from your Flow or Lua gameplay code. However, this approach does not scale well.
+The biggest drawback of using light probes to bake reflections for your level is that the baked textures are static. The reflections they show can include only the objects that are present in the level at the time they are baked. Any changes that happen dynamically over the course of time aren't reflected. For example, if a building is removed from the scene, it will continue to show up in the reflections from nearby surfaces. If the changes are predictable, you may be able to get around this limitation by baking multiple sets of light probes, one set with the building present and one set with the building not present, and toggle the reflection probes from your Flow or Lua gameplay code. However, this approach does not scale well.
 
 ## Screen space reflections
 
-Most game levels change in many different ways over time -- player characters, non-player characters and vehicles move around, particle effects start and stop, objects get created and destroyed. To make these dynamic objects show up in reflective surfaces, you can add screen space reflections: a technique that "fakes" dynamic reflections as a post-effect after each frame is rendered.
+Most levels in an interactive project change in different ways over time -- player characters, non-player characters and vehicles move around, particle effects start and stop, objects get created and destroyed. To make these dynamic objects show up in reflective surfaces, you can add screen space reflections: a technique that "fakes" dynamic reflections as a post-effect after each frame is rendered.
 
-When Stingray renders a frame, it also creates a *depth buffer* -- a record of the distance from the camera to the various shaded surfaces in the frame. Using this depth information, the renderer can detect when a surface is reflecting something else that has already been rendered in the frame. It can then reflect that shaded object in the reflective surface.
+When the interactive engine renders a frame, it also creates a *depth buffer* -- a record of the distance from the camera to the various shaded surfaces in the frame. Using this depth information, the renderer can detect when a surface is reflecting something else that has already been rendered in the frame. It can then reflect that shaded object in the reflective surface.
 
 Here you can see not only the static targets and ramps being reflected, but also the dynamic character:
 
@@ -68,7 +68,7 @@ In addition, screen space reflection by nature cannot reflect any surfaces that 
 
 ## Combining reflection sources
 
-You can use all three approaches above in your game at the same time. The renderer applies their contributions to each pixel as follows:
+You can use all three approaches above in your project at the same time. The renderer applies their contributions to each pixel as follows:
 
 -	If screen space reflections are enabled, and a screen space reflection is found for the pixel, the screen space reflection value will be used.
 -	Otherwise, if the pixel falls within the bounding volume of a localized reflection probe, the renderer calculates the influence from that probe (according to its falloff setting). If the pixel falls within the bounding volume of additional localized probes, the renderer repeats this process for each other localized probe until either the total influence reaches 1 or all localized probes have been treated.

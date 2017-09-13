@@ -1,8 +1,8 @@
 # Use the Property Editor component in your UI
 
-This page shows two different ways that you can re-use the Stingray editor's **Property Editor** widget in your own plug-in's user interface.
+This page shows two different ways that you can re-use the editor's **Property Editor** widget in your own plug-in's user interface.
 
--	One uses a `.type` file to define the structure of a data resource, along with the controls that the editor should expose for editing those data values. For background on these `.type` files, see also ~{ The Stingray Type System }~.
+-	One uses a `.type` file to define the structure of a data resource, along with the controls that the editor should expose for editing those data values. For background on these `.type` files, see also ~{ The {{ProductName}} Type System }~.
 
 -	The other uses pure JavaScript to feed the property editor widget with the data it should manage.
 
@@ -68,7 +68,7 @@ define([
     domTools.loadCss("core/css/widgets/property-editor.css");
 ~~~
 
-Also see the section ~{ Use built-in editor services}~ for more information on the core Stingray services included in the `define` call above.
+Also see the section ~{ Use built-in editor services}~ for more information on the core editor services included in the `define` call above.
 
 ## Method 1: Using a type file
 
@@ -175,7 +175,7 @@ The `documentFromType` will be passed to the `PropertyEditor` component in order
 
 ## Method 2: using compact notation
 
-You can access all the property controls offered by the Stingray editor through the `property-editor-utils` module. In the `define` call we set up in the [Initialization] section above, we required this module and assigned it to the `props` variable.
+You can access all the property controls offered by the editor through the `property-editor-utils` module. In the `define` call we set up in the [Initialization] section above, we required this module and assigned it to the `props` variable.
 
 You can use pure JavaScript code to control the parameters of these different properties, as well as tweak how their property models should behave.
 
@@ -227,7 +227,7 @@ var compactNotationDocument = new PropertyDocument([
 ]);
 ~~~
 
-For more information on the different property controls supported by Stingray compact notation, see ~{ Built-in metadata properties }~.
+For more information on the different property controls supported by this compact notation, see ~{ Built-in metadata properties }~.
 
 ## Create and mount a Mithril view
 

@@ -1,8 +1,8 @@
 # Place an entity in a level
 
-Placing an entity in a level creates a new entity definition within that level. Changes to the new entity get saved within that level's *.level* resource when you save the level in the Stingray Editor.
+Placing an entity in a level creates a new entity definition within that level. Changes to the new entity get saved within that level's *.level* resource when you save the level in the interactive editor.
 
-When you load the level into your game at runtime, all of these placed entities are automatically spawned and added to the game world, with all of the components and property values you set up in the editor.
+When you load the level into your project at runtime, all of these placed entities are automatically spawned and added to the world, with all of the components and property values you set up in the editor.
 
 **To place an empty entity:**
 

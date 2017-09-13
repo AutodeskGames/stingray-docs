@@ -4,15 +4,15 @@ Physical effects like wind are modeled by *vector fields*: areas in the 3D world
 
 You can set up vector fields in either of the following ways:
 
--   Entirely within the Stingray editor, using a set of pre-written entity components and script modules. See [Setting up vector fields in the Stingray editor].
+-   Entirely within the interactive editor, using a set of pre-written entity components and script modules. See [Setting up vector fields in the editor].
 
 -   In your own custom Lua scripts. See [Setting up vector fields in Lua].
 
-Once you have your vector fields set up and active in the game world, you can make them apply to the visible objects in your game. See [Applying vector fields to game objects].
+Once you have your vector fields set up and active in the engine world, you can make them apply to the visible objects in your level. See [Applying vector fields to level objects].
 
-## Setting up vector fields in the Stingray editor
+## Setting up vector fields in the editor
 
-To set up a vector field in the Stingray editor:
+To set up a vector field in the interactive editor:
 
 1.  Create a new empty entity to represent the vector field effect. See ~{ Create a new entity asset }~. Select your new asset in the ~{ Asset Browser }~.
 
@@ -31,7 +31,7 @@ To set up a vector field in the Stingray editor:
 
     Configure the properties of the component to control the strength and speed of the effect.
 
-    Note the **Effect** setting: you'll use this effect name as a way to refer to this effect whenever you want the vector field to affect something in the game, like a particle system.
+    Note the **Effect** setting: you'll use this effect name as a way to refer to this effect whenever you want the vector field to affect something in the engine, like a particle system.
 
 5.  Add a Script component to your entity. Set its **Script** property to point to one of the following scripts in the *core* resources folder, which are pre-written to correspond to the effects listed above:
 
@@ -50,9 +50,9 @@ You can add new effects to a vector field with `VectorField.add()`. In this call
 
 You can also use `VectorField.evaluate()` to evaluate a vector field at some positions, if you want the vector field to influence script behavior.
 
-## Applying vector fields to game objects
+## Applying vector fields to level objects
 
-Currently in Stingray, you can make your vector fields apply to particle effects or to dynamic physical actors.
+Currently in {{ProductName}}, you can make your vector fields apply to particle effects or to dynamic physical actors.
 
 ### Applying vector fields to particle effects
 
@@ -190,4 +190,4 @@ Returns a normalized.
 
 Returns a vector with the sin of each component of *a* in its components.
 
->   For some additional examples of vector field definitions, see the *.vector_field* files under *core/entities/vector_fields*. These definitions provide the basis for the vector field entities and scripts described under [Setting up vector fields in the Stingray editor], but you can also use them to add those effects to a `VectorField` object that you create yourself in Lua.
+>   For some additional examples of vector field definitions, see the *.vector_field* files under *core/entities/vector_fields*. These definitions provide the basis for the vector field entities and scripts described under [Setting up vector fields in the editor], but you can also use them to add those effects to a `VectorField` object that you create yourself in Lua.

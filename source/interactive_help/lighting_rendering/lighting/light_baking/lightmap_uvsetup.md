@@ -1,18 +1,24 @@
 # Unwrap UVs for light baking
 
-In order to store baked lighting for objects, Stingray needs to unfold each mesh using a *UV set*: a mapping of each vertex in the three-dimensional mesh into two-dimensional texture space. Since the first UV set assigned to a mesh (usually named *uv0* in Maya, for example) is usually used for textures like color maps and normal maps, Stingray bakes lightmaps using a second UV set (e.g. *uv1* in Maya).
+In order to store baked lighting for objects, {{ProductName}} needs to unfold each mesh using a *UV set*: a mapping of each vertex in the three-dimensional mesh into two-dimensional texture space. Since the first UV set assigned to a mesh (usually named *uv0* in Maya, for example) is usually used for textures like color maps and normal maps, the built-in {{ProductName}} light baker bakes lightmaps using a second UV set (e.g. *uv1* in Maya).
 
-It's best to create UV sets using 3D design tools like Maya or 3ds Max, and save them in the *.fbx* file that you use to import the asset into Stingray. These design apps give you tools to optimize the way the 3D mesh is represented in 2D space:
+It's best to create UV sets using 3D design tools like Maya or 3ds Max, and save them in the *.fbx* file that you use to import the asset into {{ProductName}}. These design apps give you tools to optimize the way the 3D mesh is represented in 2D space:
 
 -	The amount of space each face of your model has in UV space determines the resolution or detail that your baked lightmap can achieve. Therefore, it's best to set up your UV sets so that the most important parts of the model get the most area in texture space.
 
--	Unfolding and flattening a convex mesh into 2D usually involves introducing some "seams": places where an edge of the model has to be split. At these places, the seams can sometimes be visible when the lightmap is applied back to the object in the game. Therefore, it's best to make the seams occur where they are least noticeable.
+-	Unfolding and flattening a convex mesh into 2D usually involves introducing some "seams": places where an edge of the model has to be split. At these places, the seams can sometimes be visible when the lightmap is applied back to the object in the scene. Therefore, it's best to make the seams occur where they are least noticeable.
 
 You can automatically generate a UV set for light baking as you import an FBX file. The **Generate UVs for Light Baking** is on by default in the **Import FBX** options. See ~{ Import an FBX file }~.
 
-If you have a unit in Stingray that doesn't yet have UVs for a mesh, you can have Stingray auto-generate a UV set for you in the **Unit Editor**. This lets you bake lighting for any mesh, even if its UV set has not been optimized.
+If you have a unit that doesn't yet have UVs for a mesh, you can have {{ProductName}} auto-generate a UV set for you in the **Unit Editor**. This lets you bake lighting for any mesh, even if its UV set has not been optimized.
 
-**To generate UVs automatically in Stingray:**
+**To generate UVs automatically on import:**
+
+1.	Ensure that the second UV set on your object is empty.
+
+2.	When importing the *.fbx* file for your unit, make sure to check the **Generate UVs for Light Baking** check box in the **Import FBX** window.
+
+**To generate UVs automatically for an already imported unit:**
 
 1.	Ensure that the second UV set on your object is empty.
 

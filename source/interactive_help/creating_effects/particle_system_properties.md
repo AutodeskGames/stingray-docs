@@ -39,7 +39,7 @@ By default, the billboard uses `<particle_effect_name>_default.material` that ge
 
 Click the Goto Resource icon, then click **Open Shader Graph** to edit the shader graph.
 
-Refer to the [Stingray Shader Node Reference](../../shaders_ref/index.html) for details on the nodes added to support the physically based materials for particles, including **Output > Particle Base**, **Particles > Billboard Position**, **Particles > Billboard Rotation**, and **Particles > Billboard Size**.
+Refer to the [Shader Node Reference](../../shaders_ref/index.html) for details on the nodes added to support the physically based materials for particles, including **Output > Particle Base**, **Particles > Billboard Position**, **Particles > Billboard Rotation**, and **Particles > Billboard Size**.
 </dd>
 
 </dl>

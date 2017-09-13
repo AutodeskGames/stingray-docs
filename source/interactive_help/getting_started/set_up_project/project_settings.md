@@ -1,4 +1,4 @@
-#Edit project settings
+# Edit project settings
 
 Select **File > Settings > Project Settings** to view and edit the following in the ~{ Property Editor }~.
 
@@ -8,7 +8,7 @@ Select **File > Settings > Project Settings** to view and edit the following in 
 <dd>The name of your main project directory.</dd>
 
 <dt>Created with Stingray</dt>
-<dd>(Read only.) Lists the Stingray data format version of the project.</dd>
+<dd>(Read only.) Lists the data format version of the project.</dd>
 
 <dt>Project description</dt>
 <dd>(Optional) Text description of the project content.  </dd>
@@ -21,7 +21,7 @@ You can update the path to use either a custom folder with compiled data for the
 <dt>Source art directory</dt>
 <dd>(Optional.) Lets you specify the location of your original art source files such as Maya or 3ds Max scenes.
 
-This can help Stingray to resolve relative paths when you right-click in the **Asset Browser** and select **Open Source Asset**.</dd>
+This can help the editor to resolve relative paths when you right-click in the **Asset Browser** and select **Open Source Asset**.</dd>
 
 <dt>Default Level Template</dt>
 <dd>The level automatically loaded when creating new levels.</dd>

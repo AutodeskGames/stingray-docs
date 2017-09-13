@@ -1,6 +1,6 @@
-﻿# Create a trigger
+# Create a trigger
 
-Triggers (or trigger volumes) are simple game objects that let you trigger events when other objects come in contact with them.
+Triggers (or trigger volumes) are simple level objects that let you trigger events when other objects come in contact with them.
 
 Triggers are used for gameplay interaction in levels, and you can think of triggers as switches. When something enters or exits the trigger volume, the switch is activated and an action occurs. You can access triggers using flow nodes or Lua scripts.
 

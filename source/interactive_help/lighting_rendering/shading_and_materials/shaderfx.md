@@ -1,8 +1,8 @@
 # ShaderFX shader graphs
 
-The standard material that you can create and assign in Stingray uses a physically based shader graph, built with ShaderFX nodes, that respects the laws of physics and energy conservation. The Stingray PBS (physically based shader) lets you balance diffusion/reflection and microsurface detail/reflectivity using roughness, normal, and metallic maps. For more information about the shader nodes supplied with Stingray, see [Stingray Shader Node Reference](../../../shaders_ref/index.html).
+The standard material that you can create and assign in the interactive editor uses a physically based shader graph, built with ShaderFX nodes, that respects the laws of physics and energy conservation. The Stingray PBS (physically based shader) lets you balance diffusion/reflection and microsurface detail/reflectivity using roughness, normal, and metallic maps. For more information about built-in shader nodes, see the [Shader Node Reference](../../../shaders_ref/index.html).
 
-The Stingray PBS is also available in Maya 2016, Maya LT 2016, and 3ds Max 2016. This means you can create a Stingray PBS node in these design tools, build its shader graph using ShaderFX nodes, then import the scene into Stingray. The model will look exactly the same, and the imported graph will be the same, including all input connections and nodes. See also ~{ Interop with Maya, Maya LT, or 3ds Max }~.
+The Stingray PBS is also available in Maya 2016, Maya LT 2016, and 3ds Max 2016. This means you can create a Stingray PBS node in these design tools, build its shader graph using ShaderFX nodes, then import the scene into {{ProductName}}. The model will look exactly the same, and the imported graph will be the same, including all input connections and nodes. See also ~{ Interop with Maya, Maya LT, or 3ds Max }~.
 
 > **Note:** If the shader uses a custom preset, the preset shader graph is also exported.
 
@@ -19,7 +19,7 @@ For example, in Maya and Maya LT, look for the following topics:
 - *Create a Stingray Physically Based Shader*
 - *Export a Stingray Physically Based Shader*
 
-In Stingray, you'll use the ~{ Shader Graph Editor }~ to create and edit shader graphs. See ~{ Create or edit shader graphs }~.
+In the interactive editor, you'll use the ~{ Shader Graph Editor }~ to create and edit shader graphs. See ~{ Create or edit shader graphs }~.
 
 ---
 Related topics:

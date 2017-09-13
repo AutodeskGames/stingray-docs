@@ -4,17 +4,17 @@ This page tells you everything you need to know in order to get started developi
 
 ## Step 1. First-time setup
 
-You'll have to install and set up a few things on the Windows machine that you use to run the Stingray editor.
+You'll have to install and set up a few things on the Windows machine that you use to run the interactive editor.
 
-### Install the Stingray PlayStation 4 distribution
+### Install the {{ProductName}} PlayStation 4 distribution
 
-The parts of Stingray related to PlayStation 4 are only distributed to teams that are registered with Sony as PlayStation 4 developers. You need to get this distribution and install it on your computer.
+The parts of {{ProductName}} related to PlayStation 4 are only distributed to teams that are registered with Sony as PlayStation 4 developers. You need to get this distribution and install it on your computer.
 
-Registered PlayStation 4 developers can download the distribution from the Autodesk Game Developer Center, at <http://gamedev.autodesk.com/releases>. Make sure that you download the version that matches the version of Stingray that you have installed on your Windows machine.
+Registered PlayStation 4 developers can download the distribution from the Autodesk Game Developer Center, at <http://gamedev.autodesk.com/releases>. Make sure that you download the version that matches the version of {{ProductName}} that you have installed on your Windows machine.
 
 If you need to register for an account, or if you need to add PlayStation 4 access rights to your existing account, you can do so through the site.
 
-Once you have the distribution *.zip* file on your computer, unzip it into your Stingray installation folder. Make sure that the contents of its `engine` folder are merged into the `engine` folder that is already present in your installation folder.
+Once you have the distribution *.zip* file on your computer, unzip it into your {{ProductName}} installation folder. Make sure that the contents of its `engine` folder are merged into the `engine` folder that is already present in your installation folder.
 
 ### Install the PlayStation 4 platform SDK
 
@@ -24,7 +24,7 @@ You need **version {{SR_DOC_PS4_SDK_VERSION}}**. Other versions may or may not b
 
 You can get the SDK using the SDK Manager utility, available to registered developers on the Sony DevNet: <https://ps4.scedev.net/>.
 
-The editor does not require the SDK in order to deploy or package your game, although you may need it in order to prepare your final distribution.
+The editor does not require the SDK in order to deploy or package your app, although you may need it in order to prepare your final distribution.
 
 ## Step 2. Connect the editor to the device
 
@@ -38,13 +38,13 @@ For more background information, see ~{ Connect to a remote device }~.
 
 **To connect to a PlayStation 4:**
 
-In the Stingray Editor, use the **Connections** panel (**Window > Deploy and Connect > Connections**) to set up a connection to the PlayStation 4 device:
+In the interactive editor, use the **Connections** panel (**Window > Deploy and Connect > Connections**) to set up a connection to the PlayStation 4 device:
 
 ![Connect to PlayStation 4](../images/connect_ps4.png)
 
 For details, see ~{ Using the Connections panel }~.
 
-When you connect to the device or run the project, the Stingray Editor automatically installs the engine on the device over the network, runs the engine on the device, then sends your project data to the engine.
+When you connect to the device or run the project, the editor automatically installs the engine on the device over the network, runs the engine on the device, then sends your project data to the engine.
 
 ### Troubleshoot connecting to PS4
 
@@ -68,12 +68,12 @@ Deploying creates a standalone bundle that you can try out on your PlayStation 4
 
 **To package a project for PlayStation 4:**
 
-1.	In the Stingray Editor, open the **Deployer** panel (**Window > Deploy and Connect > Deployer**) to the PlayStation 4 tab and enter the required information. (See below.)
+1.	In the interactive editor, open the **Deployer** panel (**Window > Deploy and Connect > Deployer**) to the PlayStation 4 tab and enter the required information. (See below.)
 2.	Click **Package Project for PlayStation 4**.
 
-Stingray copies the files your game needs to the location on your computer that you specify in the **Destination** field.
+The deployer copies the files your app needs to the location on your computer that you specify in the **Destination** field.
 
-After deploying from Stingray, you can use the development tools provided by Sony to copy your game to a PlayStation device for testing, and to finish preparing your game for distribution using any of the channels supported by Sony.
+After deploying, you can use the development tools provided by Sony to copy your app to a PlayStation device for testing, and to finish preparing your app for distribution using any of the channels supported by Sony.
 
 ### PlayStation 4 deployment settings
 

@@ -9,7 +9,7 @@ The following properties display in the ~{ Property Editor }~ when you create or
 <dt>Name</dt>
 <dd>Name of the trigger. Name must be unique.
 
-  > **Note:** Stingray gives the trigger a unique name when you create it, and prevents you from changing the name to an existing name.
+  > **Note:** The interactive editor gives the trigger a unique name when you create it, and prevents you from changing the name to an existing name.
 
 </dd>
 

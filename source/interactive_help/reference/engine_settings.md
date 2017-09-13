@@ -1,10 +1,10 @@
-# Stingray engine `settings.ini` file reference
+# `settings.ini` file reference
 
 <a name="top"></a>
 
-Every Stingray project needs to have a *settings.ini* file at the root of the project folder. This file contains a variety of settings that the engine uses to initialize its subsystems. It expresses the data using the SJSON format. See ~{ About the SJSON data format }~.
+Every {{ProductName}} project needs to have a *settings.ini* file at the root of the project folder. This file contains a variety of settings that the engine uses to initialize its subsystems. It expresses the data using the SJSON format. See ~{ About the SJSON data format }~.
 
-If you've created a new project based on any of the default Stingray ~{ Template projects }~, you already have a *settings.ini* file created for you, pre-configured with default settings.
+If you've created a new project based on any of the default ~{ Template projects }~, you already have a *settings.ini* file created for you, pre-configured with default settings.
 
 This topic describes all the settings that you can configure in this file in order to modify the behavior of the engine.
 
@@ -30,7 +30,7 @@ This topic describes all the settings that you can configure in this file in ord
 
 ## Special file and path name variables
 
-When you set a path and/or filename as the value of a setting in this file, you can include the following variables in the path. Stingray automatically expands them to appropriate values for the current user, platform and time.
+When you set a path and/or filename as the value of a setting in this file, you can include the following variables in the path. The engine automatically expands them to appropriate values for the current user, platform and time.
 
 *	**%APPDATA%**: The folder reserved for storing data related to the current user. (Available on Windows and iOS)
 *	**%HOSTNAME%**: The name of the computer. (Available on Windows only)
@@ -46,7 +46,7 @@ When you set a path and/or filename as the value of a setting in this file, you 
 
 `boot_script = "core/appkit/lua/main"`
 
-> This specifies the Lua resource that is the boot script for the game. In the boot script, you can check the flag `LEVEL_EDITOR_TEST` to determine if you are running the game stand-alone or from within the **Level Editor** and take the appropriate action. See also ~{ Example Boot Script }~.
+> This specifies the Lua resource that is the boot script for the engine. In the boot script, you can check the flag `LEVEL_EDITOR_TEST` to determine if you are running the app stand-alone or from within the **Level Editor** and take the appropriate action. See also ~{ Example Boot Script }~.
 
 `boot_package = "boot"`
 
@@ -58,7 +58,7 @@ When you set a path and/or filename as the value of a setting in this file, you 
 
 `build = 1`
 
-> This specifies a build number for a game release. This is used to tag Steam mini dumps on Windows for example.
+> This specifies a build number for a release of your app. This is used to tag Steam mini dumps on Windows for example.
 
 [Back to top](#top)
 
@@ -71,7 +71,7 @@ win32 = {
 	crash_dump = false
 	crash_dump_path = "%APPDATA%\\Company\\Project\\dumps\\dump-%UTCDATE%-%UTCTIME%-%RANDOM%.dmp"
 
-	window_name = "Stingray Vehicle Project"
+	window_name = "Vehicle Project"
 	floating_point_exceptions = true
 
 	input = {
@@ -91,11 +91,11 @@ win32 = {
 
 `window_name = "Project"`
 
-> This is the name that is printed in the window title bar if the game is running in windowed mode.
+> This is the name that is printed in the window title bar if the engine is running in windowed mode.
 
 `floating_point_exceptions = true`
 
-> Causes the Stingray engine to throw an exception when a floating-point math operation fails. For details, see ~{ Avoiding floating-point exceptions }~.
+> Causes the engine to throw an exception when a floating-point math operation fails. For details, see ~{ Avoiding floating-point exceptions }~.
 
 `input = {`
 
@@ -139,7 +139,7 @@ win32 = {
 >
 > `vsync = false`
 >
-> Enables or disables *vsync*, or vertical synchronization, which constrains the apparent frame rate of the game to the refresh rate of the display. Enabling vsync may correct problems with screen "tearing" when the frame rate of the game is greater than the refresh rate of the display. However, it may cause the apparent frame rate of the game to drop noticeably when the frame rate drops below the refresh rate of the display. For a good explanation, see [here](http://hardforum.com/showthread.php?t=928593). The default is `false`.
+> Enables or disables *vsync*, or vertical synchronization, which constrains the apparent frame rate of the engine to the refresh rate of the display. Enabling vsync may correct problems with screen "tearing" when the frame rate of the engine is greater than the refresh rate of the display. However, it may cause the apparent frame rate of the engine to drop noticeably when the frame rate drops below the refresh rate of the display. For a good explanation, see [here](http://hardforum.com/showthread.php?t=928593). The default is `false`.
 
 `disable_implicit_sli = true`
 
@@ -159,7 +159,7 @@ win32 = {
 >
 >	For a list of the special tags you can use in this path, see [Special file and path name variables].
 >
-> In release builds using Steam, the dumps are always stored in the steamapps directory where the game is stored.
+> In release builds using Steam, the dumps are always stored in the steamapps directory where the app is stored.
 
 
 [Back to top](#top)
@@ -212,7 +212,7 @@ render_settings = {
 
 `vr_mirror_mode = mono`
 
-> Can be "mono" (default) or "stereo". When running or testing your game using a VR app, the game image appears in your HMD (head mount display) and on your mirror window (your monitor). The vr_mirror_mode property lets you control the display on the mirror window. This setting is only available in the VR templates.
+> Can be "mono" (default) or "stereo". When running or testing your app in VR, the camera's viewpoint appears in your HMD (head mount display) and on your mirror window (your monitor). The vr_mirror_mode property lets you control the display on the mirror window. This setting is only available in the VR templates.
 
 `nv_vr_sli_enabled = true`
 
@@ -271,15 +271,15 @@ All tools are configured to run as fault tolerant as possible to avoid tearing d
 
 `texture = { fallback_resource = "core/fallback_resources/missing_texture" }`
 
-> If the engine fails to look up a specified texture, use the texture specified in *fallback_resource* instead. Remember that you'll need to list this resource in the *fallback_resource_package* if you intend to bundle and ship a game with these fallbacks enabled.
+> If the engine fails to look up a specified texture, use the texture specified in *fallback_resource* instead. Remember that you'll need to list this resource in the *fallback_resource_package* if you intend to bundle and ship your app with these fallbacks enabled.
 
 `unit = { core/fallback_resources/missing_unit }`
 
-> If the engine fails to look up a specified unit, use the unit specified in *fallback_resource* instead. Remember that you'll need to list this resource in the *fallback_resource_package* if you intend to bundle and ship a game with these fallbacks enabled.
+> If the engine fails to look up a specified unit, use the unit specified in *fallback_resource* instead. Remember that you'll need to list this resource in the *fallback_resource_package* if you intend to bundle and ship your app with these fallbacks enabled.
 
 `material = { core/fallback_resources/missing_material }`
 
-> If the engine fails to look up a specified material, use the material specified in *fallback_resource* instead. Remember that you'll need to list this resource in the *fallback_resource_package* if you intend to bundle and ship a game with these fallbacks enabled.
+> If the engine fails to look up a specified material, use the material specified in *fallback_resource* instead. Remember that you'll need to list this resource in the *fallback_resource_package* if you intend to bundle and ship your app with these fallbacks enabled.
 
 [Back to top](#top)
 
@@ -287,7 +287,7 @@ All tools are configured to run as fault tolerant as possible to avoid tearing d
 
 `render_config = "core/rendering/renderer"`
 
-> Specifies the render_config file to use for the game.
+> Specifies the render_config file to use for the engine.
 
 [Back to top](#top)
 
@@ -310,7 +310,7 @@ ios = {
 
 `streaming_texture_pool_size`
 
->	Specifies the maximum amount of memory, in MB, that the texture streaming system can allocate to share between all of the streamable textures it loads into your game.
+>	Specifies the maximum amount of memory, in MB, that the texture streaming system can allocate to share between all of the streamable textures it loads into the engine.
 >
 >	For details, see ~{ Texture streaming }~.
 
@@ -324,7 +324,7 @@ ios = {
 
 `performance_hud = "core/performance_hud/performance_hud"`
 
-> Specifies a configuration file to be used for the in-game performance HUDs.
+> Specifies a configuration file to be used for the in-viewport performance HUDs.
 
 [Back to top](#top)
 
@@ -411,11 +411,11 @@ wwise = {
 
 `enabled`
 
->	Determines whether or not the Wwise integration is enabled in the engine. This will disable all sounds in your game, so you would typically only disable this setting for temporary testing and debugging purposes.
+>	Determines whether or not the Wwise integration is enabled in the engine. This will disable all sounds in your project, so you would typically only disable this setting for temporary testing and debugging purposes.
 
 `data_dir`
 
->	The folder within your Stingray project that the Wwise authoring tool will target when exporting your sound banks.
+>	The folder within your project that the Wwise authoring tool will target when exporting your sound banks.
 
 `memory_manager`
 
@@ -525,7 +525,7 @@ platform-specific sound engine settings common to all platforms:
 
 >	`enabled`
 >
->>	Determines whether or not the Wwise Authoring Tool Profile can connect to the Stingray engine.
+>>	Determines whether or not the Wwise Authoring Tool Profile can connect to the engine.
 
 [Back to top](#top)
 
@@ -567,7 +567,7 @@ Generic options are placed in the root block. You can override these generic set
 
 `max_substeps = 4`
 
-> Specifies the maximum number of substeps that physics should take every frame. A value of 4 means that a maximum of 4 substeps will be taken every frame. With 4 substeps at 60 Hz the maximum time that physics can process per frame is 4 / 60 = 67 ms. If frames are longer than that, the physics will run in slow-motion with respect to the rest of the game.
+> Specifies the maximum number of substeps that physics should take every frame. A value of 4 means that a maximum of 4 substeps will be taken every frame. With 4 substeps at 60 Hz the maximum time that physics can process per frame is 4 / 60 = 67 ms. If frames are longer than that, the physics will run in slow-motion with respect to the rest of the engine's simulation.
 
 `async_timestep = false`
 
@@ -685,7 +685,7 @@ network = {
 
 ## Log consoles
 
-`local_console_log = "%APPDATA%\\Stingray\\network-test\\console_%RANDOM%.txt"`
+`local_console_log = "%APPDATA%\\{{SR_DOC_SHORT_NAME}}\\network-test\\console_%RANDOM%.txt"`
 
 >	Specifies a path and filename where the engine will save its console logs. Optional.
 >
@@ -703,7 +703,7 @@ network = {
 
 `crash_report = "%APPDATA%\\Company\\Project\\crash_reports\\crash-%UTCDATE%-%UTCTIME%-%RANDOM%.txt"`
 
->	Specifies a path and filename where the engine will write a crash report in the event of a fatal error. These can help debug problems after the game has been released. Currently, crash reports are only supported for release builds running under Windows.
+>	Specifies a path and filename where the engine will write a crash report in the event of a fatal error. These can help debug problems after you have released your app. Currently, crash reports are only supported for release builds running under Windows.
 >
 >	For a list of the special tags you can use in this path, see [Special file and path name variables].
 

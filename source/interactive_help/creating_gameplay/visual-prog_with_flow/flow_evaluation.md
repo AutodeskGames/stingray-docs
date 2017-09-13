@@ -6,7 +6,7 @@ This topic describes the basic rules to keep in mind when wiring your Flow graph
 
 ## Rule 1: Evaluation starts with an event emitter
 
-Certain kinds of Flow nodes emit events in response to triggers that happen elsewhere in the game. You can recognize these nodes because they fire an output event, even though they typically have no input events.
+Certain kinds of Flow nodes emit events in response to triggers that happen in the engine or elsewhere in your gameplay logic. You can recognize these nodes because they fire an output event, even though they typically have no input events.
 
 For example, some commonly used event emitter nodes include:
 

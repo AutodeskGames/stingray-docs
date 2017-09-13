@@ -6,7 +6,7 @@ There are three main contenders for a gameplay programming language:
 *	C#/Java, for example by Mono integration.
 *	Lua/Python/Ruby, or another "dynamic" language.
 
-Using C++ is already possible with Stingray, since the core engine is written in C++. However, we believe that many designers need a more lightweight, friendlier option for scripting gameplay: one that doesn't require frequent recompiling of code, and that doesn't require extensive formal training in programming.
+Using C and C++ is already possible with {{ProductName}}: the core engine is written in C++, and plug-ins can access most of the engine's features through the engine's C APIs. However, we believe that many designers need a more lightweight, friendlier option for scripting gameplay: one that doesn't require frequent recompiling of code, and that doesn't require extensive formal training in programming.
 
 C# and Java may be faster than the "dynamic" languages, and they do offer better refactoring tools, but they also come with heavy runtime environments. It is also debatable whether or not they are different enough from C++ to have a big impact on the productivity of gameplay programmers.
 
@@ -45,7 +45,7 @@ We address this in our APIs by generating as little garbage as possible, and by 
 ### No static typing
 Dynamic typing is often faster during initial development. However, during later stages, type annotation provides valuable documentation, and compile-time checks make refactoring (such as renaming or removing a method) a lot easier. We believe that for big projects, static typing is usually a win.
 
-To address this, we are working on a system that will provide users with type validation for the functions and objects in our Lua APIs when using the code editor widget embedded in the Stingray editor.
+To address this, we are working on a system that will provide users with type validation for the functions and objects in our Lua APIs when using the code editor widget embedded in the interactive editor.
 
 ### No native threading
 Lua has no native threading support. Threading has to be done by having a separate Lua state running on each thread. On the other hand, the thread programming model offered by most languages (i.e. a shared state with explicit synchronization) is generally too complicated to use in gameplay programming anyway.

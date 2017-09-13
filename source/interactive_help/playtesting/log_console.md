@@ -2,11 +2,11 @@
 
 - **Window > Log Console**
 
-Lets you view and filter the messages written to the Stingray log.
+Lets you view and filter the messages the engine and editor have written to the log.
 
--	![Error](../images/icon_log_console_error.png) indicates an error: a problem that prevented Stingray from doing something you asked.
--	![Warning](../images/icon_log_console_warning.png) indicates a warning. Warnings indicate that there may be a problem with a resource or operation, but that Stingray was able to work around it.
--	![Message](../images/icon_log_console_message.png) indicates an information message: feedback to let you know that something occurred in the engine.
+-	![Error](../images/icon_log_console_error.png) indicates an error: a problem that prevented the engine or editor from doing something you asked.
+-	![Warning](../images/icon_log_console_warning.png) indicates a warning. Warnings indicate that there may be a problem with a resource or operation, but that the engine or editor was able to work around it.
+-	![Message](../images/icon_log_console_message.png) indicates an information message: feedback to let you know that something of interest occurred in the engine or the editor.
 
 ![log_console](../images/log_console.png)
 

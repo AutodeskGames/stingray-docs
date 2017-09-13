@@ -1,4 +1,4 @@
-about_3ds_max_interactive
+about_
 3ds_max_interactive_installation
 getting_started
 linking_3ds_max_and_max_interactive
@@ -21,5 +21,4 @@ plugins
 sdk_help
 source_access
 reference
-faq
 get_involved

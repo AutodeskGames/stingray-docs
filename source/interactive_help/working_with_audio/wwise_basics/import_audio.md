@@ -1,6 +1,6 @@
 # Importing audio
 
-You'll use the ~{ Wwise authoring tool }~ to import audio into Stingray.
+You'll use the ~{ Wwise authoring tool }~ to import audio into your {{ProductName}} project.
 
 > ![](../../images/icon_video.png) You can also find a video tutorial on importing audio [here](http://area.autodesk.com/learning/importing-audio).
 

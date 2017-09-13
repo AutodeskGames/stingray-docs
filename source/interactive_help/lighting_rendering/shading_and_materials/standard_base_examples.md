@@ -2,7 +2,7 @@
 ﻿
 The standard base output node produces physically plausible shading based on a base color value and a variety of parameters that describe the physical properties of the object and the way it interacts with incoming light.
 
-For more information on these nodes, see the **Output > Standard Base** node in the Stingray Shader Node reference.
+For more information on these properties, see the **Output > Standard Base** node in the Shader Node reference.
 
 Example: | Node: | Description:
 --- | --- | ---

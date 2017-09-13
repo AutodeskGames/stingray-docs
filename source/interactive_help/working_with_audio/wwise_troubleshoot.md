@@ -1,15 +1,15 @@
 # Troubleshoot Wwise licensing errors
 
-Some Stingray customers report seeing a Wwise licensing error when opening a project, which includes the text:
+Some customers report seeing a Wwise licensing error when opening a project, which includes the text:
 "No valid license key found."
 
-This can occur if you previously used a beta version of Stingray, if you created the Wwise project outside of Stingray, or if you manually upgraded Wwise outside of Stingray.
+This can occur if you previously used a beta version of {{ProductName}}, if you created the Wwise project outside of {{ProductName}}, or if you manually upgraded Wwise outside of {{ProductName}}.
 
 To fix this issue, try either of the following:
 
 ## Update the Wwise settings file
 
-1. In Stingray Editor, select **File > Settings > Update Wwise Project Settings**.
+1. In interactive editor, select **File > Settings > Update Wwise Project Settings**.
 
 ## Manually import the license:
 

@@ -1,10 +1,10 @@
-# Generate navigation mesh
+# Generate the navigation mesh
 
-This topic describes how to generate navigation mesh in the Stingray engine. You will learn how to consume level geometry and tag the navigation mesh.
+This topic describes how to generate navigation meshes in the interactive editor. You will learn how to consume level geometry and tag the navigation mesh.
 
 ## Generation input geometry
 
-The Navigation mesh can be automatically generated from:
+The navigation mesh can be automatically generated from:
 
 * Units
 * Actors
@@ -70,7 +70,7 @@ The gwnav volume types are located in *core/gwnav/volumes*.
 Spawn seedpoint Unit instances to only keep NavData connected to these seedpoints.
 This allows to prevent having NavData on tree tops, barriers or roof tops.
 
-Also note that NavMarker unit can also be used as `gwnavseedpoint` script data since this unit is instanciated to mark places to go during the game, hence if a NavMesh is generated there it should be kept. Though `gwnavseedpoint` is unchecked by default for NavMarkers.
+Also note that NavMarker unit can also be used as `gwnavseedpoint` script data -- this unit marks destination places, so you will likely want there to be a NavMesh in the surrounding area. However, the `gwnavseedpoint` property is unchecked by default for NavMarkers.
 
 Seedpoints are accessible using the ~{ Create panel }~:
 
@@ -80,7 +80,7 @@ Seedpoints are accessible using the ~{ Create panel }~:
 
 Multilevels Generation is useful if you have several levels loaded at the same time at runtime and you want your Bots to be able to move seamlessly from one level to another level. Each level needs a NavMesh generated at its runtime location, and each level must be generated with the same settings.
 
-To set up, enable, and generate multilevel NavMeshes, create `multilevels.gwnavgen_firstinit` file. This file is used to intialize the multilevels NavMesh generation. Each level listed will have its generation settings aligned with the first level generated with 'Use multilevels' checked, and their offset set as specified. The offset must be the one corresponding at runtime.  
+To set up, enable, and generate multilevel NavMeshes, create `multilevels.gwnavgen_firstinit` file. This file is used to intialize the multilevels NavMesh generation. Each level listed will have its generation settings aligned with the first level generated with 'Use multilevels' checked, and their offset set as specified. The offset must be the one corresponding at runtime.
 This file is optional; it is also possible to setup the multilevels directly in the Navigation panel of the editor, by checking 'Use multilevels' for each level implied in the multilevels generation.
 
 1. Create a valid sjson file called `multilevels.gwnavgen_firstinit` with the following format.

@@ -1,31 +1,31 @@
 # Managing worlds, levels and cameras through the Appkit
 
-If you are starting with a Stingray template project, the `SimpleProject` will take care of calling the services provided by the Appkit for managing game worlds and levels, and will set up a default camera. See ~{ Using the SimpleProject }~.
+If you are starting with a template project, the `SimpleProject` will take care of calling the services provided by the Appkit for managing worlds and levels, and will set up a default camera. See ~{ Using the SimpleProject }~.
 
-However, if you choose not to use the `SimpleProject`, or if you want to override its default behavior, you will have to call functions exposed by the Appkit in order to make it manage your game worlds and levels. This page introduces some of the world and level management functions offered by the Appkit.
+However, if you choose not to use the `SimpleProject`, or if you want to override its default behavior, you will have to call functions exposed by the Appkit in order to make it manage your worlds and levels. This page introduces some of the world and level management functions offered by the Appkit.
 
 ## Managing worlds
 
-The Appkit uses a `WorldWrapper` object to manage a single game world that you create. The `WorldWrapper` updates its managed world each frame, rendering each frame with the current camera and shading environment. It also does a few other things, including:
+The Appkit uses a `WorldWrapper` object to manage a single world that you create. The `WorldWrapper` updates its managed world each frame, rendering each frame with the current camera and shading environment. It also does a few other things, including:
 
 -	Managing the list of enabled cameras.
 -	Storing and updating an `Appkit.DebugScrollbox` for debug printing to screen.
 
-To make the Appkit manage a game world that you create:
+To make the Appkit manage an engine world that you create:
 
 ~~~{lua}
 local Project.world = stingray.Application.new_world()
 local world_wrapper = Appkit.manage_world(Project.world)
 ~~~
 
-To get the `WorldWrapper` that manages a given game world:
+To get the `WorldWrapper` that manages a given world:
 
 ~~~{lua}
 -- Returns nil if the specified world is not managed by the Appkit.
 local world_wrapper = Appkit.get_managed_world(Project.world)
 ~~~
 
-In order for the `WorldWrapper` to automatically render your game in the default viewport it creates, you need to create a camera and set it as the active camera for the level. For example:
+In order for the `WorldWrapper` to automatically render your engine world in the default viewport it creates, you need to create a camera and set it as the active camera. For example:
 
 ~~~{lua}
 local camera_unit = stingray.World.spawn_unit(world, "core/appkit/units/camera/camera")
@@ -38,12 +38,12 @@ You can also do this last step by enabling and disabling a `CameraWrapper` objec
 
 ## Managing levels
 
-The Appkit uses a `LevelWrapper` to manage a single game level that you load into the game world. The `LevelWrapper` does the following:
+The Appkit uses a `LevelWrapper` to manage a single level that you load into the engine world. The `LevelWrapper` does the following:
 
--	Loads the shading environment specified for the Level in the Stingray Editor, if any.
+-	Loads the shading environment specified for the level in the interactive editor, if any.
 -	Spawns the level background.
 -	Loads the level's baked lighting, if any.
--	Manages cameras that are set as active cameras, but that are not managed by an `Appkit.CameraWrapper`. For example, camera units that you place in the Level Editor.
+-	Manages cameras that are set as active cameras, but that are not managed by an `Appkit.CameraWrapper`. For example, camera units that you place in the editor.
 -	Provides level object management so that other scripts can register Lua objects with a Level to receive update and shutdown calls automatically.
 
 The `LevelWrapper` works with the `ComponentManager` to allow components to be ticked per level. It also works with the `Appkit` object to allow for different tick ordering relative to the `World` update.
@@ -55,7 +55,7 @@ local Project.level = stingray.World.load_level(world, level_resource_name)
 local level_wrapper = Appkit.manage_level(Project.level)
 ~~~
 
-To get the `LevelWrapper` that manages a given game level:
+To get the `LevelWrapper` that manages a given level:
 
 ~~~{lua}
 -- Returns nil if the specified level is not managed by the Appkit.
@@ -95,7 +95,7 @@ camera_wrapper:enable()
 
 ## Example boot script
 
-The following boot script uses the Appkit to manage world rendering for a single world, with no support for the Stingray Editor's Test Level feature. See also ~{ Understanding the Appkit structure }~.
+The following boot script uses the Appkit to manage world rendering for a single world, with no support for the editor's Test Level feature. See also ~{ Understanding the Appkit structure }~.
 
 ~~~{lua}
 require 'core/appkit/lua/app'

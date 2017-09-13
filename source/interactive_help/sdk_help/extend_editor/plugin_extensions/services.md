@@ -1,8 +1,8 @@
 # Register a custom service
 
-You can use the `services` extension to register new JavaScript services for the Stingray editor.
+You can use the `services` extension to register new JavaScript services for the editor.
 
-These services are instantiated once, and are available as "web workers" throughout the whole Stingray session. You can then invoke the APIs of your custom JavaScript services from elsewhere in your plug-in -- or even from other plug-ins! -- exactly the same way you call functions in the JavaScript services that are built in to the Stingray editor. (See also ~{ Use built-in editor services }~ for more on how to use services.)
+These services are instantiated once, and are available as "web workers" throughout the whole editing session. You can then invoke the APIs of your custom JavaScript services from elsewhere in your plug-in -- or even from other plug-ins! -- exactly the same way you call functions in the JavaScript services that are built in to the editor. (See also ~{ Use built-in editor services }~ for more on how to use services.)
 
 For example, you could call your custom service's API functions from a custom menu action, or from a JavaScript module associated with a custom panel. This can be useful if you have multiple panels that need to share some state information, since a single instance of the service is shared by all panels that require it.
 
@@ -90,7 +90,7 @@ Things to note:
 
 -	However, when you refer to your service in a `require` or `define` call as in the block above, you use the `name` setting prefaced by `services/`.
 
--	The functions in your service are automatically wrapped in an asynchronous API. Even if your functions are simple and straightforward synchronous code, when you invoke them through the service their return values will be automatically wrapped inside promises. You therefore have to be prepared to access them asynchronously, like the built-in Stingray services. The example above uses `then()` to chain together multiple calls so that they are guaranteed to happen in order. See also ~{ Use built-in editor services }~ and ~{ Tips for developing plug-ins }~.
+-	The functions in your service are automatically wrapped in an asynchronous API. Even if your functions are simple and straightforward synchronous code, when you invoke them through the service their return values will be automatically wrapped inside promises. You therefore have to be prepared to access them asynchronously, like the built-in editor services. The example above uses `then()` to chain together multiple calls so that they are guaranteed to happen in order. See also ~{ Use built-in editor services }~ and ~{ Tips for developing plug-ins }~.
 
 -	Your service runs in a self-contained windowless context. This means that your API functions do not have direct access to a window or document unless you pass this information in.
 

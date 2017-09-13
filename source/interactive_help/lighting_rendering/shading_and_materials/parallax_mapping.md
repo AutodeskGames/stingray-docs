@@ -12,9 +12,9 @@ Parallax mapping is a technique used by 3D graphics engines to increase the appa
 
 Parallax mapping gives the advantage of simulated depth at a lower cost (in terms of memory, processor/GPU calculations) over adding model detail, and can often be far quicker to produce good results.
 
-## How do I set up a parallax map shader in Stingray?
+## How do I set up a parallax map shader?
 
-Parallax mapping in Stingray is quite easy to set up using the Parallax node in the ~{ Shader Graph Editor }~.  See the below illustration for an example.
+Parallax mapping is quite easy to set up using the Parallax node in the ~{ Shader Graph Editor }~. See the below illustration for an example.
 
 To begin, you want to drive the parallax and height map from the texture coordinate.
 

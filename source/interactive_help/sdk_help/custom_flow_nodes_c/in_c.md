@@ -2,7 +2,7 @@
 
 This page describes how to create custom Flow nodes that run custom C code in an engine plug-in.
 
->	**Note:** You can also implement your custom Flow nodes in Lua instead of C. For details, see [Create custom Flow nodes in Lua](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_creating_gameplay_scripting_with_lua_custom_flow_nodes_html).
+>	**Note:** You can also implement your custom Flow nodes in Lua instead of C. For details, see ~{ Create custom Flow nodes in Lua }~.
 
 **To create a custom C Flow node:**
 
@@ -132,7 +132,7 @@ static void setup_game(GetApiFunction get_engine_api)
 }
 ~~~
 
-When your node no longer needs to be available in the editor -- typically when the game shuts down -- you should also unregister your node by calling `FlowNodesApi::unregister_trigger_function()` with the name of your node:
+When your node no longer needs to be available in the editor -- typically when the app shuts down -- you should also unregister your node by calling `FlowNodesApi::unregister_trigger_function()` with the name of your node:
 
 ~~~{c}
 static void shutdown_game()

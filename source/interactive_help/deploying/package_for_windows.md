@@ -2,16 +2,16 @@
 
 To package a project for Windows:
 
-1.	In the Stingray Editor, open the **Deployer** panel to the Windows tab and enter the required information. (See below.)
+1.	In the interactive editor, open the **Deployer** panel to the Windows tab and enter the required information. (See below.)
 2.	Click **Package Project for Windows**.
 
-Stingray creates an executable file for your game, named according to the title you set in the **Title** field. It copies this *.exe* file, along with all required *.dll* files and bundled data, to the location on your computer that you specify in the **Destination** field.
+The deployer creates an executable file for your app, named according to the title you set in the **Title** field. It copies this *.exe* file, along with all required *.dll* files and bundled data, to the location on your computer that you specify in the **Destination** field.
 
-You can test or distribute your game by simply copying or zipping up this folder, or by packaging the folder contents into an installer.
+You can test or distribute your app by simply copying or zipping up this folder, or by packaging the folder contents into an installer.
 
 ## Additional runtime requirements
 
-To run on Windows, the Stingray engine requires:
+To run on Windows, the interactive engine requires:
 
 -	The **DirectX End-User Runtimes (June 2010)** from Microsoft, available at <https://www.microsoft.com/en-us/download/details.aspx?id=8109>.
 

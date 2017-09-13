@@ -4,7 +4,7 @@ This topic contains a sample boot scripts that illustrates the functions and con
 
 ## Minimal example
 
-The following Lua script provides a minimal working game:
+The following Lua script provides a minimal working structure for an interactive app:
 
 ~~~{lua}
 package = nil
@@ -55,11 +55,11 @@ function shutdown()
 end
 ~~~
 
-This script creates a game world, spawns some built-in units in that world (taken from the core resources folder), and creates a camera to render the world. Then, at each frame, it continually updates and renders the world. Finally, when it shuts down, it destroys and releases all the resources it has created.
+This script creates an engine world, spawns some built-in units in that world (taken from the core resources folder), and creates a camera to render the world. Then, at each frame of the engine's main loop, it continually updates and renders the world. Finally, when it shuts down, it destroys and releases all the resources it has created.
 
 Note the use of the global `init()`, `update()`, `render()` and `shutdown()` functions.
 
-In your game, if you want to support more than one world (such as a loading screen world and a main world) you will need to keep track of which world is currently being shown, and make sure to update and render only that world in the `update()` and `render()` callbacks.
+In your project, if you want to support more than one world (such as a loading screen world and a main world) you will need to keep track of which world is currently being shown, and make sure to update and render only that world in the `update()` and `render()` callbacks.
 
 ## Minimal template
 
