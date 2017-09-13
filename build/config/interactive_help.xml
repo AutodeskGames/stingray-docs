@@ -110,7 +110,6 @@
 		<insert_family_links include="*" exclude="*_ref\*,*_c\*"></insert_family_links>
 		<validate_todos>true</validate_todos>
 		<default_file>./homepage/homepage.htm</default_file>
-		<rename_toc_node old_title="Stingray FAQ" new_title="FAQ"></rename_toc_node>
 		<template_in_place include="*.html" exclude="*_ref\*,*_c\*">common_variables.config</template_in_place>
 		<template_in_place include="*.html" exclude="*_ref\*,*_c\*">%SR_DOC_VARIABLES_CONFIG_FILE%</template_in_place>
 
@@ -149,18 +148,6 @@
 		<merge_toc_config>
 			<source type="directory"></source>
 			<promote_first_topic>false</promote_first_topic>
-		</merge_toc_config>
-	</merge>
-
-	<merge id="tutorial_link">
-		<apply_template>false</apply_template>
-		<apply_cloudhelp>false</apply_cloudhelp>
-		<search_prefix></search_prefix>
-		<merge_search>false</merge_search>
-		<source>..\..\source\tutorial_link\*.html</source>
-		<merge_toc_config>
-			<source type="file">tutorials_on_area.html</source>
-			<parent_index>3</parent_index>
 		</merge_toc_config>
 	</merge>
 
