@@ -1,10 +1,8 @@
-what_is_stingray
 interface_overview
 set_up_project
 open_existing_project
 downloads_creativeMkt
 common_windows
-about_help
 get_started_android
 get_started_ios
 get_started_ps4
