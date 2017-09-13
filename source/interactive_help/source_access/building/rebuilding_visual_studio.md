@@ -11,7 +11,7 @@ Once you have run the `make.rb` script at least once, you can rebuild the soluti
 	-	`editor\backend\{{SR_DOC_EXE_PREFIX}}_editor_backend.sln`: The back-end of the editor.
 	-	`tools\all_tools\all_tools.sln`: Legacy editing tools.
 
-2.	Set the desired build configuration: Debug, Dev or Release. See also ~{ About build configurations }~.
+2.	Set the desired build configuration: Debug, Dev or Release. See also ~{ About engine build configurations }~.
 
 3.	Build the solution.
 

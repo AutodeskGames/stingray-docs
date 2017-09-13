@@ -8,7 +8,7 @@ This page describes the format of the *.stingray_plugin* file, and all of the co
 
 ## Sample *.stingray_plugin* file
 
-The following code block provides a minimal working plug-in definition that you can use as a model to get started developing your own plug-ins. Copy and paste this information into a new text file with the *.stingray_plugin* extension, and make it visible to the editor's ~{ Plugin Manager }~.
+The following code block provides a minimal working plug-in definition that you can use as a model to get started developing your own plug-ins. Copy and paste this information into a new text file with the *.stingray_plugin* extension, and make it visible to the editor's **Plugin Manager**. See ~{ Add and remove plug-ins using the Plugin Manager }~.
 
 If you're familiar with the [`package.json` format](https://docs.npmjs.com/files/package.json) used by [node.js](https://nodejs.org/en/), many of these fields will be familiar to you already.
 

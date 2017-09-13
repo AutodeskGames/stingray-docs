@@ -28,5 +28,5 @@ If you're exporting a file from Maya or Maya LT, note the following limitations:
 
 ---
 Related topics:
--	~{ Recommended FBX settings for export }~
+-	~{ Recommended FBX settings for export to {{ProductName}} }~
 ---

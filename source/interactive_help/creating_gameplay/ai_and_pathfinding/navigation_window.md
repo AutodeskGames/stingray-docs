@@ -182,5 +182,5 @@ These parameters have no effect on the generation. They are only there to help u
 ---
 Related topics:
 -	~{ Gameware Navigation }~
--	~{ Generate navigation mesh }~
+-	~{ Generate the navigation mesh }~
 ---

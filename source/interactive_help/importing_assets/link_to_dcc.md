@@ -10,7 +10,7 @@ The interop plug-ins (for Maya, Maya LT and 3ds Max) are automatically installed
 
 With this interop plug-in loaded, you can do either of the following:
 
-1. ~{ Connect DCC tool and editor viewports }~
+1. ~{ Connect DCC tool and engine viewports }~
 2. ~{ Send assets to a DCC tool }~
 
 > **Tip:** For more information in the Maya or Maya LT Help, look for the topic *Work with Stingray game engine*.

@@ -16,7 +16,7 @@ Use this SDK if you want to do things like:
 
 -	And many more.
 
-Any customer can use the {{ProductName}} SDK to make these kinds of plug-ins. You don't need to have access to the source code. (Though, if you want source access for other reasons, you can get it! See the ~{ Introduction to Source Access }~ for details.)
+Any customer can use the {{ProductName}} SDK to make these kinds of plug-ins. You don't need to have access to the source code. (Though, if you want source access for other reasons, you can get it! See the ~{ Introduction to Source Code Access }~ for details.)
 
 ## To get started:
 
@@ -28,7 +28,7 @@ Any customer can use the {{ProductName}} SDK to make these kinds of plug-ins. Yo
 
 3.	Create a new folder for your plug-in. You'll put all the files your plug-in needs in here.
 
-	In this folder, you'll have to create a new *.stingray_plugin* file to describe your plug-in. This descriptor contains metadata about your plug-in, and a set of *extensions* that define what the plug-in should do when it's loaded. An easy way to get started is to copy the minimal description from the ~{ Define a Plug-in }~ page, or copy one from a sample plug-in.
+	In this folder, you'll have to create a new *.stingray_plugin* file to describe your plug-in. This descriptor contains metadata about your plug-in, and a set of *extensions* that define what the plug-in should do when it's loaded. An easy way to get started is to copy the minimal description from the ~{ Define a {{ProductName}} Plug-in }~ page, or copy one from a sample plug-in.
 
 	>	**Tip:** Try starting from our [stingray-plugin](https://github.com/AutodeskGames/stingray-plugin) repository on GitHub! This repo gives you a basic framework for your plug-in, including a sample *.stingray_plugin* file that you can tweak as you go. This repo is especially useful if you want to extend the engine or the editor in C or C++, because it comes with all the build tools you'll need to compile your plug-in libraries.
 
