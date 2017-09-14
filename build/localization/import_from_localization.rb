@@ -6,9 +6,6 @@ require 'io/console'
 puts("Importing content from localization...")
 
 def get_language
-  puts("What language am I importing? Choose a number:")
-  puts("1: Korean")
-  puts("2: Japanese")
   case $stdin.getch
     when "1" then
       ENV["SR_DOC_LANG"] = "ko-kr"
@@ -24,34 +21,38 @@ def get_language
   end
 end
 
-flavour = "stingray"
+$flavour = "stingray"
 
 def get_flavour
-  puts("What flavour of interactive help should I build? Choose a number:")
-  puts("1: internal Stingray component")
-  puts("2: 3ds Max Interactive")
-  puts("3: Maya Interactive")
   case $stdin.getch
     when "1" then
       puts ("Stingray it is!")
       true
     when "2" then
-      flavour = "max_interactive"
+      $flavour = "max_interactive"
       puts ("3ds Max Interactive it is!")
       true
     when "3" then
-      flavour = "maya_interactive"
+      $flavour = "maya_interactive"
       puts ("Maya Interactive it is!")
       true
     else get_flavour()
   end
 end
 
+puts("What language am I importing? Choose a number:")
+puts("1: Korean")
+puts("2: Japanese")
 get_language()
-get_flavour()
-ENV["SR_DOC_IMPORT_DIR"] = "..\\..\\output\\import_from_localization\\#{ENV["SR_DOC_LANG"]}"
 
+puts("What flavour of interactive help should I build? Choose a number:")
+puts("1: internal Stingray component")
+puts("2: 3ds Max Interactive")
+puts("3: Maya Interactive")
+get_flavour()
+
+ENV["SR_DOC_IMPORT_DIR"] = "..\\..\\output\\import_from_localization\\#{ENV["SR_DOC_LANG"]}"
 
 puts("Reading localized content from #{ENV["SR_DOC_IMPORT_DIR"]}.")
 
-system("ruby ../make_#{flavour}_help.rb --launch")
+system("ruby ../make_#{$flavour}_help.rb --launch")
