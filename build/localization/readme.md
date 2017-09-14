@@ -8,42 +8,27 @@ The process should be pretty push-button, as long as you have the regular requir
 
 When the content for a given release is ready, and you want to hand it off to localization:
 
-1. In your local stingray-docs/output folder, create empty folders named 'export_for_localization' in the following 3 locations:
+1. Run the `export_for_localization.rb` script in this directory. This runs a regular build of the English docs, and writes out a "raw" export of the content for the localization team to work with into this folder:
 
-`stingray_help/export_for_localization`
-and
-`source_access_help/export_for_localization`
-and
-`sdk_help/export_for_localization`
+	`export_for_localization`
 
-2. Run the `export_for_localization.rb` script in this directory. This runs a regular build of the English docs, and writes out a "raw" export of the content for the localization team to work with. (Into the folders you created in step 1.)
+3. Create a .zip package of the `export_for_localization` folder you created, and send it to Loc.
 
-3. Create .zip packages of the three `export_for_localization` folders you created, and send them to Loc.
+This single package includes the content for all "flavours" of the product docs, with conditional markings and variable names intact. Those will be finalized later, when you import the translated content that comes back from localization.
 
 ## Importing translated content
 
-The HTML files the localization team works with are in an intermediate state. They still need some processing in order to be ready for either the online AKN or offline ADE-2.1 presentation formats. To finish the processing:
+The HTML files the localization team works with are in an intermediate state. They still need some processing in order to be ready for the online AKN presentation format. To finish the processing:
 
-1.	In the `stingray-docs/output` folder, copy the localized content into the following folders:
+1.	Copy the translated content given to you by localization into a language-specific sub-folder under `stingray-docs/output/import_from_localization`. The name of this sub-folder should be the language and country code of the localized content. For example:
 
-- `stingray_help_<lang-code>`
-- `source_access_help_<lang-code>`
-- `sdk_help_<lang-code>`
+	-	`stingray-docs/output/import_from_localization/ko-kr`
+	-	`stingray-docs/output/import_from_localization/ja-jp`
 
-For example, to build the Korean docs you need a `stingray-docs/output/stingray_help_ko-kr` folder, which contains the folders `flow_ref`, `lua_ref`, `stingray_help`, etc.
+	Each of these language folders should contain the set of sub-folders that were exported for localization, like `interactive_help`, `lua_ref`, `shaders_ref`, `flow_ref`, etc.
 
-And to build the Korean source access docs, you need `/stingray-docs/output/source_access_help_ko-kr`, which contains the folders `developer` and `images`.
+3.	In the `stingray-docs/build/localization` folder, run the `import_from_localization` script.
 
-And to build the Korean SDK docs, you need `/stingray-docs/output/sdk_help_ko-kr`.
+You'll be asked what language the content you're importing is in, and what flavour of the interactive help you want to build. Then it'll run a regular doc build, asking you if you want to upload the localized build to AKN production staging or beta staging. However, this build will grab the content from the localized folder you set up above instead of from the regular English source location.
 
-2. In the `stingray-docs/build` folder, set post_to_AKN to true in any or all of the following:
-
-- config_stingray_help.xml
-- config_source_access_help.xml
-- config_sdk_help.xml
-
-3.	In the `stingray-docs/build/localization` folder, run the appropriate `import_<lang-code>` script in this directory (such as import_stingray_help_ko-kr.rb,  import_source_access_ko-kr.rb, or import_sdk_help_ko-kr.).
-
-These run a regular doc build, but grab the content from the `stingray-docs/output/stingray_help_<lang-code>` and `/stingray-docs/output/developer_<lang-code>` folders instead of the regular English source location.
-
-  > Tip: If you don't immediately see the new content on AKN staging, you can confirm the docs are getting pushed to AKN by looking in the AKN publishing tool to check timestamps. 
+  > Tip: If you don't immediately see the new content on AKN staging, you can confirm the docs are getting pushed to AKN by looking in the AKN publishing tool to check timestamps.
