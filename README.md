@@ -159,14 +159,16 @@ The following sections are intended only for people with access to the internal 
 
 1.	Install [Ruby](https://www.ruby-lang.org/en/downloads/), if you don't have it already.
 
-2.	If you're building the main Stingray Help, which includes the reference docs, you'll need the MSBuild tools for Visual Studio 2015, available [here](
+2.	Install [Git](https://git-scm.com/download/win), if you don't have it already. The build process will run `git status` to find the current branch your content is tracking, so make sure that the `Path` environment variable for your system contains the location of your Git binaries. For example, `C:\Program Files (x86)\Git\bin`.
+
+3.	If you're building the main Stingray Help, which includes the reference docs, you'll need the MSBuild tools for Visual Studio 2015, available [here](
 https://www.microsoft.com/en-us/download/details.aspx?id=48159).
 
-3.	Install [Lua for Windows](http://files.luaforge.net/releases/luaforwindows/luaforwindows), and make sure that `lua.exe` is in your system path.
+4.	Install [Lua for Windows](http://files.luaforge.net/releases/luaforwindows/luaforwindows), and make sure that the `Path` environment variable for your system contains the location of `lua.exe`. For example, `C:\Program Files (x86)\Lua\5.1`.
 
-2.	Make sure that you have fully cloned this repo *and* its submodules. You should have a `build/ixg-doc-tools` folder full of stuff, and a `stingray-engine` folder full of stuff.
+5.	Make sure that you have fully cloned this repo *and* its submodules. You should have a `build/ixg-doc-tools` folder full of stuff, and a `stingray-engine` folder full of stuff.
 
-3.	Go to the `build` folder, and look for the Ruby scripts. You'll find three convenient `make_....rb` files for building the main help in each of its flavors: Stingray, Max Interactive and Maya Interactive.
+6.	Go to the `build` folder, and look for the Ruby scripts. You'll find three convenient `make_....rb` files for building the main help in each of its flavors: Stingray, Max Interactive and Maya Interactive.
 
 By default, you'll get a local build, which is placed in the `output` folder. You can also have it upload to the public Autodesk Knowledge Network (AKN) site on the cloud.
 
