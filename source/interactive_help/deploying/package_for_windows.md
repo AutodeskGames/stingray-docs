@@ -5,9 +5,9 @@ To package a project for Windows:
 1.	In the interactive editor, open the **Deployer** panel to the Windows tab and enter the required information. (See below.)
 2.	Click **Package Project for Windows**.
 
-The deployer creates an executable file for your app, named according to the title you set in the **Title** field. It copies this *.exe* file, along with all required *.dll* files and bundled data, to the location on your computer that you specify in the **Destination** field.
+The deployer creates an executable file for your app, named according to the title you set in the **Title** field. It creates a self-extracting zip file containing this *.exe* file, along with all required *.dll* files and bundled data, and saves to the location on your computer that you specify in the **Destination** field.
 
-You can test or distribute your app by simply copying or zipping up this folder, or by packaging the folder contents into an installer.
+If **Self Extracting Zip** is unchecked, you can test or distribute your app by simply copying or zipping up the folder with the *.exe* file and the bundled data, or by packaging the folder contents into an installer.
 
 ## Additional runtime requirements
 
@@ -29,7 +29,12 @@ You can set the following options in the **Deployer** panel for Windows devices.
 
 ### Packaging settings
 
-These settings are common for all tabs. See ~{ Using the Deployer panel }~.
+The **Destination** and **Configuration** settings are common for all tabs. See ~{ Using the Deployer panel }~.
+
+<dl>
+<dt>Self Extracting Zip</dt>
+<dd>When checked, the deployer packages the project as a self-extracting installer file.</dd>
+</dl>
 
 ### General settings
 <dl>
