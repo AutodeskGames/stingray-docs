@@ -29,15 +29,11 @@ Sections in this topic:
 
 * * *
 
-## Header
-
-![Image placeholder](../images/physical_lights_rn.png)
-
-Placeholder text.
 
 ## What's new for developers?
 
-### Placeholder heading 3
+- The Capture Frames tool now supports capturing of frames in PNG format.
+- The Deployer supports bundling a project in a self-extracting zip file instead of creating an installer when you use the deployer panel to create a standalone package of your project for Windows. See the **Self Extracting Zip** option in ~{ Package the project for Windows }~.
 
 [Return to top](#top)
 
