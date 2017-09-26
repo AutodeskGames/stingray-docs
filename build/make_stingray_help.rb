@@ -18,6 +18,7 @@ ENV["SR_DOC_LOCAL_OUTPUT"] = "interactive_help"
 ENV["SR_DOC_TITLE_FORMAT"] = "$TITLE$"
 
 ENV["SR_DOC_VARIABLES_CONFIG_FILE"] = "variables_stingray.config"
+ENV["SR_DOC_AKN_JOB_SPEC_PARAMS"] = ""
 
 set_upload_variables()
 

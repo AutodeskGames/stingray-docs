@@ -16,6 +16,7 @@
 			<job-specification>
 				<!-- this forces the title in the AKN Publisher to show up in English. -->
 				<parameter name="documenttitle">Interactive Component Help</parameter>
+				%SR_DOC_AKN_JOB_SPEC_PARAMS%
 			</job-specification>
 		</AKN>
 		<language>%SR_DOC_LANG%</language>
