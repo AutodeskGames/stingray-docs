@@ -32,6 +32,8 @@ If you have a unit that doesn't yet have UVs for a mesh, you can have {{ProductN
 
 1. Save the unit.
 
+>**Note:** You do not need to enable the **Generate UV-unwrap** option for the primitive objects as they already contain a second set of UVs for light baking.
+
 ## General lightmapping tips:
 
 For best results when baking lightmaps, you'll want to learn a bit about what a good unwrapped layout for UVs looks like. Here are some general tips:

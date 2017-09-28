@@ -20,7 +20,7 @@ With the DCC Link plug-in installed, you can import Stingray Physically Based Sh
 
 		![](../../../images/send_to_hypershade.png)
 
-	-	(3ds Max) Select the object with materials you want to send to {{ProductName}}, then select **Stingray > Materials > Send Selected** from the main menu bar.
+	-	(3ds Max) Select the object with materials you want to send to {{ProductName}}, then select **Interactive > Material Send Selected** from the main menu bar.
 
 	The material is sent to the interactive editor and appears in the **Asset Browser**. Its shader graph remains the same after the transfer.
 

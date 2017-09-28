@@ -4,7 +4,7 @@
 
 {{ProductName}} includes an interop plug-in to support linking to your **DCC** (digital content creation) tool.
 
-The interop plug-ins (for Maya, Maya LT and 3ds Max) are automatically installed in your `C:\ProgramData\Autodesk\ApplicationPlugins` directory. For example, the 3ds Max plug-in installs here: `C:\ProgramData\Autodesk\ApplicationPlugins\StingrayDCCLink_Max2018.bundle\Contents\plugins`
+The interop plug-ins (for Maya, Maya LT and 3ds Max) are automatically installed in your `C:\ProgramData\Autodesk\ApplicationPlugins` directory. For example, the 3ds Max plug-in installs here: `C:\ProgramData\Autodesk\ApplicationPlugins\InteractiveDCCLink_Max2018.bundle\Contents\plugins`
 
 > **Note:** In this help, we use the term **DCC** tool when we're referring to your content creation tool (such as Maya, Maya LT, or 3ds Max). (DCC = digital content creation).
 
@@ -21,7 +21,7 @@ If your DCC tool fails to discover the link to {{ProductName}}, you can try the 
 
 **Manually install the interop plug-in:**
 
-1. Double-click the StingrayDCCLink.msi located here within your {{ProductName}} install directory: `\Program Files\Autodesk\{{SR_DOC_SHORT_NAME}}\<*version*>\extras`
+1. Double-click the DCCLink.msi located here within your {{ProductName}} install directory: `\Program Files\Autodesk\ {{ProductName}}\<*version*>\extras`
 
 2. Click **Install Now**.
 
@@ -30,7 +30,7 @@ If your DCC tool fails to discover the link to {{ProductName}}, you can try the 
 3. Do any of the following:
 
 	 - In Maya and Maya LT, enable the `stingray_link.mll` plug-in using the Plug-in Manager (**Window > Settings/Preferences > Plug-in Manager**). To load the plug-in on startup, ensure *Loaded* and *Auto Load* options are on.
-	 - In 3ds Max, add the install path `C:\ProgramData\Autodesk\ApplicationPlugins\StingrayDCCLink_Max2018.bundle\Contents\plugins` to **Customize > Configure System Paths > 3rd Party Plugins**.
+	 - In 3ds Max, add the install path `C:\ProgramData\Autodesk\ApplicationPlugins\InteractiveDCCLink_Max2018.bundle\Contents\plugins` to **Customize > Configure System Paths > 3rd Party Plugins**.
 
 **Point {{ProductName}} to where you have the DCC tool installed:**
 
