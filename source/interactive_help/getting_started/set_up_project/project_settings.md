@@ -7,7 +7,7 @@ Select **File > Settings > Project Settings** to view and edit the following in 
 <dt>Project Name</dt>
 <dd>The name of your main project directory.</dd>
 
-<dt>Created with Stingray</dt>
+<dt>Project Version</dt>
 <dd>(Read only.) Lists the data format version of the project.</dd>
 
 <dt>Project description</dt>

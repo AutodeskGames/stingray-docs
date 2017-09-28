@@ -8,7 +8,7 @@ Level sync workflows let you automatically rebuild your 3ds Max scenes in the in
 
 2.	Tag the assets you want to send to {{ProductName}}. See ~{ Tag assets with Level Sync }~.
 
-3.	In 3ds Max, select **Stingray > Level Send Selected**.
+3.	In 3ds Max, select **Interactive > Level Send Selected**.
 
 	![Level Send Selected](../../images/level_sync_send_selected.png)
 
@@ -22,7 +22,7 @@ Level sync workflows let you automatically rebuild your 3ds Max scenes in the in
 
 1.	Establish a live editing link between the interactive editor and your DCC tool. See ~{ Send assets to a DCC tool }~.
 
-2.	In 3ds Max, select **Stingray > Level Send All**.
+2.	In 3ds Max, select **Interactive > Level Send All**.
 
 	![Level Send All](../../images/level_sync_send_all.png)
 

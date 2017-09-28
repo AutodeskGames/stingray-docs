@@ -6,7 +6,7 @@ Tagging assigns a name and target folder for your asset(s), so your DCC tool kno
 
 1.	Link Maya, Maya LT, or 3ds Max with the interactive editor. See ~{ Connect DCC tool and engine viewports }~.
 
-2.	In your DCC tool, select your asset(s) and then select **Stingray > Set Engine Resource**.
+2.	In your DCC tool, select your asset(s) and then select **Interactive > Set Engine Resource**.
 The Set Engine Resource window lets you tag the assets you want to export to {{ProductName}}.
 
 3.	In the **Set Engine Resource** window that appears, tag the selected assets using the following fields:
@@ -19,7 +19,7 @@ The Set Engine Resource window lets you tag the assets you want to export to {{P
 
 4. Click **Apply and Close**.
 
-5. Send your assets to your DCC tool. See ~{ Send assets from Maya and Maya LT with Level Sync }~ or ~{ Send assets from 3ds Max with Level Sync }~.
+5. Send your assets from your DCC tool. See ~{ Send assets from Maya and Maya LT with Level Sync }~ or ~{ Send assets from 3ds Max with Level Sync }~.
 
 	>	**Note:** Tagging respects instancing. During tagging, the name of the first instance is used as the **Asset Name**, and all instances receive the same tag.
 
@@ -29,16 +29,16 @@ The Set Engine Resource window lets you tag the assets you want to export to {{P
 
 2.	Do one of the following:
 
-	-	In your DCC tool, select **Stingray > Set Engine Resource**, and then select **Auto Tag All Untagged**.
+	-	In your DCC tool, select **Interactive > Set Engine Resource**, and then select **Auto Tag All Untagged**.
 
 	-	In Maya or Maya LT, Select **Stingray > Send All > ![](../../images/opt_box.png)** or **Stingray > Send Selected > ![](../../images/opt_box.png)** and select **Auto Tag**.
 
 		All of the top level nodes are tagged with the default values.
 
-3.	Send your assets to your DCC tool. See ~{ Send assets from Maya and Maya LT with Level Sync }~ or ~{ Send assets from 3ds Max with Level Sync }~.
+3.	Send your assets from your DCC tool. See ~{ Send assets from Maya and Maya LT with Level Sync }~ or  ~{ Send assets from 3ds Max with Level Sync }~.
 
 ---
 Related topics:
-- ~{ Send assets from Maya and Maya LT with Level Sync }~
-- ~{ Send assets from 3ds Max with Level Sync }~
+-  ~{ Send assets from Maya and Maya LT with Level Sync }~
+-  ~{ Send assets from 3ds Max with Level Sync }~ 
 ---

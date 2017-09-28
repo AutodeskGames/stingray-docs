@@ -24,7 +24,7 @@ By default, materials are automatically sent along with each unit when you trans
 
    When you select the material in your DCC tool (using **Hypershade** in Maya or **Material Editor** in 3ds Max) and view a property editor (such as the **Attribute Editor** in Maya or the **Material Parameter Editor** in 3ds Max), the material **Engine Resource** path points to the material's location in your interactive project.
 
-   The name you enter in the DCC tool is also used as the material name in {{ProductName}}. For example, if you enter myPBS in the **Engine Resource** attribute/parameter, then select **File > Send to Stingray** (in Maya/Maya LT) or **Stingray > Materials > Send Selected** (in 3ds Max), the material is called myPBS.material in {{ProductName}}.
+   The name you enter in the DCC tool is also used as the material name in {{ProductName}}. For example, if you enter myPBS in the **Engine Resource** attribute/parameter, then select **File > Send to Stingray** (in Maya/Maya LT) or **Interactive > Material Send Selected** (in 3ds Max), the material is called myPBS.material in {{ProductName}}.
 
 **To send a unit from the interactive editor to your DCC tool with material updates**
 

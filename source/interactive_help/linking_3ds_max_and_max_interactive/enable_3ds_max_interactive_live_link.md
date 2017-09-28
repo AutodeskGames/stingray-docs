@@ -8,8 +8,8 @@ A plugin called DCC Link connects 3ds Max and 3ds Max Interactive when they are 
 
 You can manually install the DCC plug-in that enables the Live Link:
 
-1.  Locate the plug-in installer 3dsMaxInteractiveDCCLink.msi within the install directory. By default: `\ProgramFiles\Autodesk\3dsMaxInteractive\version\extras`.
-2.  Double-click `3dsMaxInteractiveDCCLink.msi` and then click **Install Now**.
+1.  Locate the plug-in installer DCCLink.msi within the install directory. By default: `\ProgramFiles\Autodesk\3dsMaxInteractive\version\extras`.
+2.  Double-click `DCCLink.msi` and then click **Install Now**.
 
     A message displays when the installation is complete.
 
