@@ -31,7 +31,7 @@ The Set Engine Resource window lets you tag the assets you want to export to {{P
 
 	-	In your DCC tool, select **Interactive > Set Engine Resource**, and then select **Auto Tag All Untagged**.
 
-	-	In Maya or Maya LT, Select **Stingray > Send All > ![](../../images/opt_box.png)** or **Stingray > Send Selected > ![](../../images/opt_box.png)** and select **Auto Tag**.
+	-	In Maya or Maya LT, Select **Interactive > Send All > ![](../../images/opt_box.png)** or **Interactive> Send Selected > ![](../../images/opt_box.png)** and select **Auto Tag**.
 
 		All of the top level nodes are tagged with the default values.
 
@@ -40,5 +40,5 @@ The Set Engine Resource window lets you tag the assets you want to export to {{P
 ---
 Related topics:
 -  ~{ Send assets from Maya and Maya LT with Level Sync }~
--  ~{ Send assets from 3ds Max with Level Sync }~ 
+-  ~{ Send assets from 3ds Max with Level Sync }~
 ---

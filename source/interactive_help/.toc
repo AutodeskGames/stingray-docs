@@ -1,7 +1,7 @@
 about_
 3ds_max_interactive_installation
 getting_started
-linking_3ds_max_and_max_interactive
+linking_with_dcc
 importing_assets
 building_levels
 lighting_rendering
