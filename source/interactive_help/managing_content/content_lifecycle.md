@@ -16,7 +16,7 @@ This page gives an in-depth look at how this *pipeline* works: how the parts of 
 
 Many of the pieces of content that you use in a project are originally created by texture artists, modelers, animators using external content creation tools such as Maya, Maya LT, or 3ds Max. At this "source art" stage, {{ProductName}} places no requirements whatsoever on file formats, where or how these assets are stored and shared. You can use whatever works for your organization.
 
-(Note that for 3D assets imported through FBX files, the **Asset Browser** offers a shortcut that can open a source art file in the design application that originally created it. If you want to take advantage of this capability for your project, you may have some additional configuration to do. See ~{ Interop with Maya, Maya LT, or 3ds Max }~.)
+(Note that for 3D assets imported through FBX files, the **Asset Browser** offers a shortcut that can open a source art file in the design application that originally created it. If you want to take advantage of this capability for your project, you may have some additional configuration to do. See ~{ Enable {{ProductName}} Live Link }~.)
 
 ## Importing and authoring data
 
