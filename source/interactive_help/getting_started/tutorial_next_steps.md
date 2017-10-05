@@ -12,7 +12,7 @@ If you don't have any *.fbx* files of your own handy, don't feel bad -- you have
 
 The editor creates a new *unit* resource in your project for each object you import. Once you have your new unit in your project, you can just drag and drop it from the **Asset Browser** into the viewport to add it to a scene.
 
->	**Tip:** If you're using Maya or 3ds Max, {{ProductName}} comes with some interop plugins that make it even easier to keep your assets in sync. See ~{ Interop with Maya, Maya LT, or 3ds Max }~.
+>	**Tip:** If you're using Maya or 3ds Max, {{ProductName}} comes with some interop plugins that make it even easier to keep your assets in sync. See ~{ Enable {{ProductName}} Live Link }~.
 
 ## Tweak the look and the lighting
 

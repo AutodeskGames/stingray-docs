@@ -6,11 +6,11 @@ There are two ways to connect or send assets between the interactive editor and 
 
 1. Right-click an asset in the **Asset Browser** and select **Send to** > *Product Name*.
 
-	This launches the asset in your DCC tool of choice. A small green "Connected to Stingray" message displays near the bottom of the interface.
+	This launches the asset in your DCC tool of choice. A small green "Connected to Interactive" message displays near the bottom of the interface.
 
 2. Make any edits you want in the DCC tool.
 
-3. Click **Update** next to the "Connected to Stingray" message to send any updates to the interactive editor.
+3. Click **Update** next to the "Connected to Interactive" message to send any updates to the interactive editor.
 
 ### To edit the original source scene in your DCC tool:
 
@@ -22,7 +22,7 @@ There are two ways to connect or send assets between the interactive editor and 
 
 2. Make any edits you want in the DCC tool.
 
-3. When you're ready to reload the asset in the interactive editor, export as an FBX file using **File > Export** options, the **Game Exporter**, or **File > Send to Stingray**.
+3. When you're ready to reload the asset in the interactive editor, export as an FBX file using **File > Export** options, the **Game Exporter**, or **File > Send to Interactive**.
 
 4. Press F5 to refresh the editor if necessary.
 

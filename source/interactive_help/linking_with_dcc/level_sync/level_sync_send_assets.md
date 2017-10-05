@@ -10,7 +10,7 @@ Level sync lets you link and export entire scenes built in Maya, Maya LT, or 3ds
 
 2.	Tag the assets you want to send to {{ProductName}}. See ~{ Tag assets with Level Sync }~.
 
-3.	In your DCC tool, select **Stingray > Send Selected > ![](../../images/opt_box.png)**.
+3.	In your DCC tool, select **Interactive > Send Selected > ![](../../images/opt_box.png)**.
 
 4.	(Optional) In the **Send Level** window that appears, turn on **Send Missing Assets** to ensure assets that are missing from the project are included in the export.
 
@@ -26,7 +26,7 @@ Level sync lets you link and export entire scenes built in Maya, Maya LT, or 3ds
 
 2.	Tag the assets you want to send to {{ProductName}}. See ~{ Tag assets with Level Sync }~.
 
-3.	In your DCC tool, select **Stingray > Send All > ![](../../images/opt_box.png)**.
+3.	In your DCC tool, select **Interactive > Send All > ![](../../images/opt_box.png)**.
 
 4.	(Optional) In the **Send Level** window that appears, turn on **Send Missing Assets** to ensure assets that are missing from the project are included in the export.
 

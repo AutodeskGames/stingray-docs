@@ -4,7 +4,7 @@ Tagging assigns a name and target folder for your asset(s), so your DCC tool kno
 
 ## Manually tag your asset(s) with level sync
 
-1.	Link Maya, Maya LT, or 3ds Max with the interactive editor. See ~{ Connect DCC tool and engine viewports }~.
+1.	Link Maya, Maya LT, or 3ds Max with the interactive editor. See ~{ Connect DCC tool and {{ProductName}} viewports }~.
 
 2.	In your DCC tool, select your asset(s) and then select **Interactive > Set Engine Resource**.
 The Set Engine Resource window lets you tag the assets you want to export to {{ProductName}}.
@@ -25,13 +25,13 @@ The Set Engine Resource window lets you tag the assets you want to export to {{P
 
 ## Automatically tag your asset(s) with level sync
 
-1.	Link Maya, Maya LT, or 3ds Max with the interactive editor. See ~{ Connect DCC tool and engine viewports }~.
+1.	Link Maya, Maya LT, or 3ds Max with the interactive editor. See ~{ Connect DCC tool and {{ProductName}} viewports }~.
 
 2.	Do one of the following:
 
 	-	In your DCC tool, select **Interactive > Set Engine Resource**, and then select **Auto Tag All Untagged**.
 
-	-	In Maya or Maya LT, Select **Stingray > Send All > ![](../../images/opt_box.png)** or **Stingray > Send Selected > ![](../../images/opt_box.png)** and select **Auto Tag**.
+	-	In Maya or Maya LT, Select **Interactive > Send All > ![](../../images/opt_box.png)** or **Interactive> Send Selected > ![](../../images/opt_box.png)** and select **Auto Tag**.
 
 		All of the top level nodes are tagged with the default values.
 
@@ -40,5 +40,5 @@ The Set Engine Resource window lets you tag the assets you want to export to {{P
 ---
 Related topics:
 -  ~{ Send assets from Maya and Maya LT with Level Sync }~
--  ~{ Send assets from 3ds Max with Level Sync }~ 
+-  ~{ Send assets from 3ds Max with Level Sync }~
 ---
