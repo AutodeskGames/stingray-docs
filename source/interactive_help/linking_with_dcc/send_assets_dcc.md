@@ -28,5 +28,5 @@ There are two ways to connect or send assets between the interactive editor and 
 
 ---
 Related topics:
-- ~{ Connect DCC tool and engine viewports }~
+- ~{ Connect DCC tool and {{ProductName}} viewports }~
 ---
