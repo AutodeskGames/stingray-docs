@@ -1,3 +1,4 @@
+install_interactive
 interface_overview
 set_up_project
 open_existing_project
