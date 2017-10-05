@@ -2,7 +2,7 @@
 
 The standard material that you can create and assign in the interactive editor uses a physically based shader graph, built with ShaderFX nodes, that respects the laws of physics and energy conservation. The Stingray PBS (physically based shader) lets you balance diffusion/reflection and microsurface detail/reflectivity using roughness, normal, and metallic maps. For more information about built-in shader nodes, see the [Shader Node Reference](../../../shaders_ref/index.html).
 
-The Stingray PBS is also available in Maya 2016, Maya LT 2016, and 3ds Max 2016. This means you can create a Stingray PBS node in these design tools, build its shader graph using ShaderFX nodes, then import the scene into {{ProductName}}. The model will look exactly the same, and the imported graph will be the same, including all input connections and nodes. See also ~{ Interop with Maya, Maya LT, or 3ds Max }~.
+The Stingray PBS is also available in Maya 2016, Maya LT 2016, and 3ds Max 2016. This means you can create a Stingray PBS node in these design tools, build its shader graph using ShaderFX nodes, then import the scene into {{ProductName}}. The model will look exactly the same, and the imported graph will be the same, including all input connections and nodes. See also ~{ Enable {{ProductName}} Live Link }~.
 
 > **Note:** If the shader uses a custom preset, the preset shader graph is also exported.
 
@@ -24,7 +24,7 @@ In the interactive editor, you'll use the ~{ Shader Graph Editor }~ to create an
 ---
 Related topics:
 - ~{ Create a parent material }~
-- ~{ Interop with Maya, Maya LT, or 3ds Max }~
+- ~{ Enable {{ProductName}} Live Link }~
 
 Tags:
 - physically-based shader

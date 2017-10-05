@@ -100,6 +100,6 @@ The online assets are not listed in the Asset Browser if the Online Assets serve
 
 ---
 Related topics:
-- ~{ Interop with Maya, Maya LT, or 3ds Max }~
+- ~{ Enable {{ProductName}} Live Link }~
 - ~{ Importing Assets }~
 ---

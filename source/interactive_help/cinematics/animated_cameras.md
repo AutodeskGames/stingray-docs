@@ -24,7 +24,7 @@
 ---
 Related topics:
 
-- ~{ Interop with Maya, Maya LT, or 3ds Max }~
+- ~{ Enable {{ProductName}} Live Link }~
 
 Tags:
 - previz

@@ -26,7 +26,7 @@ Similarly, any assets that you author in the interactive editing tools, such as 
 
 Each of these source assets, whether external or authored in the {{ProductName}} editor, is saved in an "intermediate" format that is chosen for stability, compatibility and flexibility rather than for maximum efficiency. For example, most resources use the plain-text human-readable SJSON format as their intermediate storage format, though some use binary formats (such as DDS textures).
 
-In some cases, the imported data file is kept as well, allowing you to return to tweak the asset in an external tool. For example, you can easily open an imported FBX file in Maya or 3ds Max in order to make edits to an imported file and see the results of those edits immediately in the context of your other content. For details, see ~{ Interop with Maya, Maya LT, or 3ds Max }~.
+In some cases, the imported data file is kept as well, allowing you to return to tweak the asset in an external tool. For example, you can easily open an imported FBX file in Maya or 3ds Max in order to make edits to an imported file and see the results of those edits immediately in the context of your other content. For details, see ~{ Enable {{ProductName}} Live Link }~.
 
 ## Compiling the data
 

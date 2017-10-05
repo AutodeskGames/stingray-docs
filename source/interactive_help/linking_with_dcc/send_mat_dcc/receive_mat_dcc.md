@@ -31,6 +31,6 @@ With the DCC Link plug-in installed, you can import Stingray Physically Based Sh
 ---
 Related topics:
 - ~{ Import a model with textures and materials }~
-- ~{ Receive assets from Maya or Maya LT }~
-- ~{ Interop with Maya, Maya LT, or 3ds Max }~
+- ~{ Receive assets from Maya, Maya LT or 3ds Max }~
+- ~{ Enable {{ProductName}} Live Link }~
 ---

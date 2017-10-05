@@ -27,7 +27,7 @@ Select **File > Settings > Editor Settings** to view and edit the following in t
 
 <dl>
 <dt>Maya Path</dt>
-<dd>The path to the location where Maya is installed. For more information, see ~{ Interop with Maya, Maya LT, or 3ds Max }~.</dd>
+<dd>The path to the location where Maya is installed. For more information, see ~{ Enable {{ProductName}} Live Link }~.</dd>
 
 <dt>Maya LT path</dt>
 <dd>The path to the location where Maya LT is installed.</dd>
@@ -52,5 +52,5 @@ Select **File > Settings > Editor Settings** to view and edit the following in t
 
 ---
 Related topics:
-- ~{ Interop with Maya, Maya LT, or 3ds Max }~
+- ~{ Enable {{ProductName}} Live Link }~
 ---
