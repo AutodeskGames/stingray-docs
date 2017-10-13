@@ -6,7 +6,7 @@ Level sync lets you link and export entire scenes built in Maya, Maya LT, or 3ds
 
 ## Send selected assets from Maya or Maya LT with level sync
 
-1.	Establish a live editing link between the interactive editor and your DCC tool. See ~{ Send assets to a DCC tool }~.
+1.	Establish a live editing link between the interactive editor and your DCC tool. See ~{ Connect to a DCC tool }~.
 
 2.	Tag the assets you want to send to {{ProductName}}. See ~{ Tag assets with Level Sync }~.
 
@@ -22,7 +22,7 @@ Level sync lets you link and export entire scenes built in Maya, Maya LT, or 3ds
 
 ## Send all assets from Maya or Maya LT with level sync
 
-1.	Establish a live editing link between the interactive editor and your DCC tool. See ~{ Send assets to a DCC tool }~.
+1.	Establish a live editing link between the interactive editor and your DCC tool. See ~{ Connect to a DCC tool }~.
 
 2.	Tag the assets you want to send to {{ProductName}}. See ~{ Tag assets with Level Sync }~.
 

@@ -34,6 +34,8 @@ Sections in this topic:
 
 - The Capture Frames tool now supports capturing of frames in PNG format.
 - The Deployer supports bundling a project in a self-extracting zip file instead of creating an installer when you use the deployer panel to create a standalone package of your project for Windows. See the **Self Extracting Zip** option in ~{ Package the project for Windows }~.
+- Use the **DCC Live Link** (Window > DCC Live Link) option to connect the interactive to the different version of your DCC tools.
+- The PhysX plug-in installer files are no longer included with the Interactive install. Download and install the plug-in from the [PhysX Plugins Download]( http://www.autodesk.com/physx-plugins-download) page.
 
 [Return to top](#top)
 

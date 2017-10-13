@@ -1,18 +1,14 @@
 # Install the PhysX plug-in for your DCC tool
 
-Included with your {{ProductName}} install, you'll find the NVIDIA PhysX plug-ins for Maya and Maya LT. For the latest {{ProductName}}, the PhysX plug-in version is now 3.3.21117.04582, and the PhysX library/SDK used is 3.3.4.
-
-When installed and loaded, the PhysX plug-in adds a PhysX menu to the main menu bar in your DCC tool, giving you easy access to tools and documentation for creating PhysX ragdolls, rigid bodies, and constraints.
+To run physics simulations and set up PhysX ragdolls, rigid bodies, and constraints, you want to use the NVIDIA PhysX plug-ins for Maya or Maya LT. For the latest {{ProductName}}, the PhysX plug-in version is now 3.3.21117.04582, and the PhysX library/SDK used is 3.3.4.
 
 To install the PhysX plug-in for your DCC tool:
 
-1. Double-click the `NVIDIA_PhysX_For_<Product>_<Version>.msi` located here within your {{ProductName}} install directory: `\Program Files\Autodesk\{{SR_DOC_SHORT_NAME}}\<*version*>\extras`
-
+1. Download the plug-in either from the [PhysX Plugins Download]( http://www.autodesk.com/physx-plugins-download) or the [NVIDIA plugin download](https://developer.nvidia.com/gameworksdownload) page.
 2. Follow the instructions in the NVIDIA installer.
+3. In your DCC tool, open the **Plug-in Manager** (Windows > Settings/Preferences > Plug-in Manager) and set the `physx.mll` plug-in to load (or Autoload).
 
-**Note: **In the Maya or Maya LT Help, you can find more information in the topic *Enable Stingray and PhysX plug-ins*.
-
-**Note:** Get the PhysX plug-ins for older versions of Maya from the [PhysX Plugins Download]( http://www.autodesk.com/physx-plugins-download) page.
+When installed and loaded, the PhysX plug-in adds a PhysX menu to the main menu bar in your DCC tool, giving you easy access to tools and documentation for creating PhysX ragdolls, rigid bodies, and constraints.
 
 ## Setting the Unit scale for PhysX export from Maya or Maya LT
 
