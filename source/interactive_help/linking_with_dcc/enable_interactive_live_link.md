@@ -2,22 +2,17 @@
 
 {{ProductName}} includes an interop plug-in called DCC Link to support linking to your **DCC** (digital content creation) tool.
 
-{{#unless MayaInteractive}}
+{{#if MayaInteractive}}
 
 The DCC Link plug-in connects 3ds Max and 3ds Max Interactive when they are installed on the same system, giving you a smoother connection between the two, and supporting your asset creation workflow. The DCC Link plugin is automatically installed in your `C:\ProgramData\Autodesk\ApplicationPlugins` directory. For example, the 3ds Max plug-in installs here: `C:\ProgramData\Autodesk\ApplicationPlugins\InteractiveDCCLink_Max2018.bundle\Contents\plugins`
 
-{{/unless}}
-
-{{#if MayaInteractive}}
-
-The DCC Link plug-in connects Maya and Maya Interactive when they are installed on the same system, giving you a smoother connection between the two, and supporting your asset creation workflow. The DCC Link plugin is automatically installed in your `C:\ProgramData\Autodesk\ApplicationPlugins` directory. For example, the Maya plug-in installs here: `C:\ProgramData\Autodesk\ApplicationPlugins\InteractiveDCCLink_Maya2018.bundle\Contents\plugins`
-
 {{/if}}
+
 
 >**Notes:** Interop with {{ProductName}} is supported as of Extension 1 for Maya 2016, Maya LT 2016, and 3ds Max 2016. Releases prior to those are not supported.
 > In this help, we use the term **DCC** tool when we're referring to your content creation tool (such as Maya, Maya LT, or 3ds Max). (DCC = digital content creation).
 
-> **Important:**  If you have previously installed a standalone version of Autodesk Stingray (including Stingray 1.8 or any newer beta version of Stingray), you'll need to manually uninstall your existing DCC Link plugin before installing 3ds Max Interactive. Otherwise, our installer mistakenly detects that you have a newer version of the plugin and won't install the latest. After you uninstall your existing version of the plugin (using Windows Control Panel), the correct DCC Link plugin installs correctly when you install {{ProductName}}, or you can install it manually using the following steps.
+> **Important:**  If you have previously installed a standalone version of Autodesk Stingray (including Stingray 1.8 or any newer beta version of Stingray), you'll need to manually uninstall your existing DCC Link plugin before installing {{ProductName}}. Otherwise, our installer mistakenly detects that you have a newer version of the plugin and won't install the latest. After you uninstall your existing version of the plugin (using Windows Control Panel), the correct DCC Link plugin installs correctly when you install {{ProductName}}, or you can install it manually using the following steps.
 
 
 
@@ -30,39 +25,15 @@ You can manually install the DCC plug-in that enables the Live Link:
 
     A message displays when the installation is complete.
 
-3.  Open {{ProductName}}.
-4.  Click **File > Settings > Editor Settings**.
+3.  Open {{ProductName}} and select **File > Settings > Editor Settings**.
+4.  In the **Property Editor**, navigate to select the .exe file wherever you installed the DCC tool.
 
-    The Editor Settings and External Applications rollouts appear in the Property Editor.
+    For example: `C:\My Software\Autodesk\<*version*>\bin\maya.exe`
 
-    {{#unless MayaInteractive}}
+    >**Tip:** If you have both Maya and Maya LT installed, the editor uses Maya to launch FBX files. If you prefer to launch Maya LT instead, remove the path to Maya in your **Editor Settings**, then restart the editor.
 
-5.  In the 3ds Max Path in the External Applications rollout, enter the location of your 3ds Max application if it is not already listed.
-6.  Open 3ds Max, add the install path `C:\ProgramData\Autodesk\ApplicationPlugins\InteractiveDCCLink_Max2018.bundle\Contents\plugins` to **Customize > Configure System Paths > 3rd Party Plugins**.
-7.  In 3ds Max, verify the Interactive menu in the menu bar is active.
+5.  Open your DCC tool, and do any of the following:
 
-    {{/unless}}
-
-    {{#if MayaInteractive}}
-
-5.  In the **Property Editor**, navigate to select the .exe file (for example maya.exe) wherever you installed the DCC tool.
-
-	For example: `C:\My Software\Autodesk\<*version*>\bin\maya.exe`
-
-  >**Tip:** If you have both Maya and Maya LT installed, the editor uses Maya to launch FBX files. If you prefer to launch Maya LT instead, remove the path to Maya in your **Editor Settings**, then restart the editor.
-
-6. In Maya (and Maya LT), enable the `interactive_link.mll` plug-in using the Plug-in Manager (**Window > Settings/Preferences > Plug-in Manager**). To load the plug-in on startup, ensure *Loaded* and *Auto Load* options are on.
-7. In Maya, verify the Stingray menu in the menu bar is active, and the File menu contains a Send to Stingray option.
-
-## Install the PhysX plug-in
-
-To enable the PhysX menu and shelf in Maya, install the appropriate PhysX plug-in included with {{ProductName}}.
-
-1. Locate the appropriate PhysX plug-in for your DCC within the {{ProductName}} install directory. By default: `\Program Files\Autodesk\ {{ProductName}}\<version>\extras`.
-
-2. Double-click the `NVIDIA_PhysX_For_Autodesk_<DCC>_<version>.msi`, and follow the instructions in the NVIDIA installer.
-3. After the plug-in install finishes, start Maya.
-4. Open the Plug-in Manager (Windows > Settings/Preferences > Plug-in Manager) and set the `physx.mll` plug-in to load (or Autoload).
-
-  In Maya, verify that the PhysX menu now displays in the main menu bar, and the PhsyX shelf displays above the viewport.
-    {{/if}}
+    - In 3ds Max, add `C:\ProgramData\Autodesk\ApplicationPlugins\InteractiveDCCLink_Max2018.bundle\Contents\plugins` to **Customize > Configure System Paths > 3rd Party Plugins**.
+    - In Maya and Maya LT, enable the `interactive_link.mll` plug-in using the Plug-in Manager (**Window > Settings/Preferences > Plug-in Manager**). To load the plug-in on startup, ensure *Loaded* and *Auto Load* options are on.
+7.  In your DCC tool, verify the Interactive menu in the menu bar is active.

@@ -4,7 +4,7 @@ Level sync workflows let you automatically rebuild your 3ds Max scenes in the in
 
 ## Send selected assets from 3ds Max with level sync
 
-1.	Establish a live editing link between the interactive editor and your DCC tool. See ~{ Send assets to a DCC tool }~.
+1.	Establish a live editing link between the interactive editor and your DCC tool. See ~{ Connect to a DCC tool }~.
 
 2.	Tag the assets you want to send to {{ProductName}}. See ~{ Tag assets with Level Sync }~.
 
@@ -20,7 +20,7 @@ Level sync workflows let you automatically rebuild your 3ds Max scenes in the in
 
 ## Send all assets from 3ds Max with level sync
 
-1.	Establish a live editing link between the interactive editor and your DCC tool. See ~{ Send assets to a DCC tool }~.
+1.	Establish a live editing link between the interactive editor and your DCC tool. See ~{ Connect to a DCC tool }~.
 
 2.	In 3ds Max, select **Interactive > Level Send All**.
 
