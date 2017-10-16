@@ -30,7 +30,7 @@ This method of shape animation lets you create target shapes directly on the bas
 
       ![](../../images/blend_shape_key.png)
 
-  6. Select your object, and then select **File > Send to Stingray > Selected**.
+  6. Select your object, and then select **File > Send to Interactive > Selected**.
   7. In the window that appears, select a name and location for your exported file, and click **Export Selected**.
 
 ## Import blend shapes in {{ProductName}}
