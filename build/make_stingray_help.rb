@@ -12,7 +12,7 @@ require_relative 'scripts/set_upload_variables'
 ENV["SR_DOC_AKN_COMPONENT_ID"] = "Interactive-Help"
 ENV["SR_DOC_AKN_PRODUCT"] = "Stingray"
 ENV["SR_DOC_AKN_RELEASE"] = "NA"
-ENV["SR_DOC_PROJECT_TITLE"] = "Stingray Interactive Help"
+ENV["SR_DOC_PROJECT_TITLE"] = "Stingray Interactive Component Help"
 ENV["SR_DOC_LOCAL_OUTPUT"] = "interactive_help"
 
 ENV["SR_DOC_TITLE_FORMAT"] = "$TITLE$"
