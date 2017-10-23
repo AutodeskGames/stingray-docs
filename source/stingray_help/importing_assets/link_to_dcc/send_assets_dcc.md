@@ -16,7 +16,7 @@ There are two ways to connect or send assets between Stingray and your DCC tool,
 
 1. Right-click an asset in the **Asset Browser** and select **Open Source Asset**.
 
-	Stingray detects where the original scene was created, and launches the appropriate DCC tool. You're prompted to manually select an application if Stingray can't determine the file origin.
+	Stingray detects where the original scene was created, and launches the appropriate DCC tool. You're prompted to manually select the original scene if Stingray can't determine the file origin.
 
 	>	**Note:** If you have both Maya and Maya LT installed, Stingray uses Maya to launch FBX files. Maya LT only launches if the original scene is an .mlt file.
 
