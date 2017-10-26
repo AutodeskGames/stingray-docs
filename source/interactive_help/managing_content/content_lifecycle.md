@@ -16,7 +16,7 @@ This page gives an in-depth look at how this *pipeline* works: how the parts of 
 
 Many of the pieces of content that you use in a project are originally created by texture artists, modelers, animators using external content creation tools such as Maya, Maya LT, or 3ds Max. At this "source art" stage, {{ProductName}} places no requirements whatsoever on file formats, where or how these assets are stored and shared. You can use whatever works for your organization.
 
-(Note that for 3D assets imported through FBX files, the **Asset Browser** offers a shortcut that can open a source art file in the design application that originally created it. If you want to take advantage of this capability for your project, you may have some additional configuration to do. See ~{ Enable {{ProductName}} Live Link }~.)
+(Note that for 3D assets imported through FBX files, the **Asset Browser** offers a shortcut that can open a source art file in the design application that originally created it. If you want to take advantage of this capability for your project, you may have some additional configuration to do. See ~{ Linking with {{ProductName}} }~.)
 
 ## Importing and authoring data
 
@@ -26,7 +26,7 @@ Similarly, any assets that you author in the interactive editing tools, such as 
 
 Each of these source assets, whether external or authored in the {{ProductName}} editor, is saved in an "intermediate" format that is chosen for stability, compatibility and flexibility rather than for maximum efficiency. For example, most resources use the plain-text human-readable SJSON format as their intermediate storage format, though some use binary formats (such as DDS textures).
 
-In some cases, the imported data file is kept as well, allowing you to return to tweak the asset in an external tool. For example, you can easily open an imported FBX file in Maya or 3ds Max in order to make edits to an imported file and see the results of those edits immediately in the context of your other content. For details, see ~{ Enable {{ProductName}} Live Link }~.
+In some cases, the imported data file is kept as well, allowing you to return to tweak the asset in an external tool. For example, you can easily open an imported FBX file in Maya or 3ds Max in order to make edits to an imported file and see the results of those edits immediately in the context of your other content. For details, see ~{ Linking with {{ProductName}} }~.
 
 ## Compiling the data
 

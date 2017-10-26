@@ -1,37 +1,33 @@
 # Linking with {{ProductName}}
 
+3ds Max Interactive Live Link is a powerful connection between 3ds Max and the 3ds Max Interactive engine that streamlines your 3D asset creation process and lets you create interactive architectural visualizations.
 
-{{#if MaxInteractive}}
-3ds Max Interactive Live Link is a powerful connection between 3ds Max and the Autodesk 3ds Max Interactive engine that streamlines your 3D asset creation process.
+The 3ds Max Interactive Live Link provides the following:
 
-3ds Max Interactive Live Link makes it easier for professional and novice developers to bring content into the 3ds Max Interactive engine by linking directly with 3ds Max. It is the best way to update content shared between 3ds Max and 3ds Max Interactive software, as well as to send assets between the two. Designers can evaluate their assets from both ends, sending them back and forth seamlessly with Send Selection, Send All, or Update asset commands.
+-   An integrated workflow to seamlessly send assets between 3ds Max and 3ds Max Interactive and update the shared contents. See ~{ Send assets to 3ds Max}~ and ~{ Receive assets from 3ds Max }~.
+-   Level sync workflows that let you send 3ds Max scenes to 3ds Max Interactive, exactly replicating your 3ds Max layout in the interactive viewport. See ~{ Level Sync with 3ds Max }~.
+-   Viewport synchronization so you can quickly verify how models, animations, and materials appear in the Interactive viewport while you work in 3ds Max, see ~{ Connect 3ds Max and {{ProductName}} viewports }~.
+-   Visual parity where any material created with 3ds Max Interactive (Stingray) physically-based nodes in ShaderFX are preserved when loaded in 3ds Max. See ~{ Send a material to 3ds Max}~ and ~{ Receive materials from 3ds Max }~.
 
-3ds Max Interactive Live Link includes:
+  ![](images/live_link.png)
 
--   integrated workflow to seamlessly send assets back and forth
--   connection status display
--   visual parity where any material created with 3ds Max Interactive physically-based nodes in ShaderFX are preserved when loaded in 3ds Max
--   viewport synchronization to quickly verify how models, animations, and materials appear in 3ds Max Interactive while you work in 3ds Max.
+Live linking between 3ds Max and the 3ds Max Interactive is enabled by an interop plug-in called DCC Link, which is automatically installed in your `C:\ProgramData\Autodesk\ApplicationPlugins` directory when you install 3ds Max Interactive. This plug-in also adds an *Interactive* menu in the 3ds Max menu bar.
 
-![](images/live_link.png)
+## Troubleshoot interop plug-in installation
 
-{{/if}}
+If 3ds Max fails to discover the link to 3ds Max Interactive, you can try the following:
 
-{{#if MayaInteractive}}
+**Manually install the interop plug-in:**
 
-Maya Interactive Live Link is a powerful connection between Maya and the Maya Interactive engine that streamlines your 3D asset creation process.
+1. Double-click `DCCLink.msi` located here within your 3ds Max Interactive install directory: `\ProgramFiles\Autodesk\ {{ProductName}}\version\extras`. Click Install Now.
 
-Maya Interactive Live Link makes it easier for professional and novice developers to bring content into the Maya Interactive engine by linking directly with Maya. It is the best way to update content shared between Maya and Maya Interactive software, as well as to send assets between the two. Designers can evaluate their assets from both ends, sending them back and forth seamlessly with Send Selection, Send All, or Update asset commands.
+   The plug-in installer runs, and a 'Success' message displays when the install is complete.
 
-Maya Interactive Live Link includes:
+2.  Open 3ds Max, and add `C:\ProgramData\Autodesk\ApplicationPlugins\InteractiveDCCLink_Max2018.bundle\Contents\plugins` to **Customize > Configure System Paths > 3rd Party Plugins**.
 
--   integrated workflow to seamlessly send assets back and forth
--   connection status display
--   visual parity where any material created with Maya Interactive physically-based nodes in ShaderFX are preserved when loaded in Maya
--   viewport synchronization to quickly verify how models, animations, and materials appear in Maya Interactive while you work in Maya.
+**Point {{ProductName}} to where you have the 3ds Max installed:**
 
-## Support for PhysX plug-in
+The 3ds Max Interactive editor automatically detects 3ds Max if you installed it to the default location. If you installed it to a custom location, do the following to point the editor to the application.
 
-Also available with Maya Interactive is the NVIDIA PhysX plug-in for Maya, which adds tools for creating PhysX ragdolls, rigid bodies, and constraints.
-
-{{/if}}
+1. In the {{ProductName}}, select **File > Settings > Editor Settings**.
+2. In the **Property Editor**, navigate to select the .exe file (3dsmax.exe) wherever you installed 3ds Max.

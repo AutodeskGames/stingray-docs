@@ -1,5 +1,3 @@
-enable_interactive_live_link
-receive_assets_from_dcc
 send_assets_dcc
 connect_dcc_and_interactive
 send_mat_dcc

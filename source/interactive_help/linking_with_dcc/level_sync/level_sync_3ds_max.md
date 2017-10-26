@@ -1,14 +1,10 @@
 # Send assets from 3ds Max with Level Sync
 
-Level sync workflows let you automatically rebuild your 3ds Max scenes in the interactive editor. Once 3ds Max is linked to the interactive editor, scene assets can be automatically or manually tagged, and then quickly be reproduced with the same layout in your {{ProductName}} level. Modifications you make to the assets in 3ds Max are then updated inside the {{ProductName}} editor. This makes it easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools.
+## To send selected assets from 3ds Max with Level Sync
 
-## Send selected assets from 3ds Max with level sync
+2.	In 3ds Max, tag the assets you want to send to {{ProductName}}. See ~{ Level Sync with 3ds Max }~.
 
-1.	Establish a live editing link between the interactive editor and your DCC tool. See ~{ Connect to a DCC tool }~.
-
-2.	Tag the assets you want to send to {{ProductName}}. See ~{ Tag assets with Level Sync }~.
-
-3.	In 3ds Max, select **Interactive > Level Send Selected**.
+3.	Select **Interactive > Level Send Selected**.
 
 	![Level Send Selected](../../images/level_sync_send_selected.png)
 
@@ -18,19 +14,10 @@ Level sync workflows let you automatically rebuild your 3ds Max scenes in the in
 
 	All selected assets are sent to the {{ProductName}} editor and appear in the current level.
 
-## Send all assets from 3ds Max with level sync
-
-1.	Establish a live editing link between the interactive editor and your DCC tool. See ~{ Connect to a DCC tool }~.
+## To send all assets from 3ds Max with Level Sync
 
 2.	In 3ds Max, select **Interactive > Level Send All**.
 
 	![Level Send All](../../images/level_sync_send_all.png)
 
-	The assets are sent to the {{ProductName}} editor and appear in the current level. A new folder, with the same name as your scene in 3ds Max, is created.
-
->	**Note:** Level sync is supported in 3ds Max 2016 SP2 or higher.
-
----
-Related topics:
-- ~{ Tag assets with Level Sync }~
----
+	The assets are sent to the {{ProductName}} editor and appear in the current level. A new folder with the same name as your scene in 3ds Max is created.
