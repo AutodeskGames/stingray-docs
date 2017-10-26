@@ -9,7 +9,7 @@ The 3ds Max Interactive Live Link provides the following:
 -   Viewport synchronization so you can quickly verify how models, animations, and materials appear in the Interactive viewport while you work in 3ds Max, see ~{ Connect 3ds Max and {{ProductName}} viewports }~.
 -   Visual parity where any material created with 3ds Max Interactive (Stingray) physically-based nodes in ShaderFX are preserved when loaded in 3ds Max. See ~{ Send a material to 3ds Max}~ and ~{ Receive materials from 3ds Max }~.
 
-  ![](images/live_link.png)
+    ![](images/live_link.png)
 
 Live linking between 3ds Max and the 3ds Max Interactive is enabled by an interop plug-in called DCC Link, which is automatically installed in your `C:\ProgramData\Autodesk\ApplicationPlugins` directory when you install 3ds Max Interactive. This plug-in also adds an *Interactive* menu in the 3ds Max menu bar.
 
@@ -21,7 +21,7 @@ If 3ds Max fails to discover the link to 3ds Max Interactive, you can try the fo
 
 1. Double-click `DCCLink.msi` located here within your 3ds Max Interactive install directory: `\ProgramFiles\Autodesk\ {{ProductName}}\version\extras`. Click Install Now.
 
-   The plug-in installer runs, and a 'Success' message displays when the install is complete.
+    The plug-in installer runs, and a 'Success' message displays when the install is complete.
 
 2.  Open 3ds Max, and add `C:\ProgramData\Autodesk\ApplicationPlugins\InteractiveDCCLink_Max2018.bundle\Contents\plugins` to **Customize > Configure System Paths > 3rd Party Plugins**.
 
