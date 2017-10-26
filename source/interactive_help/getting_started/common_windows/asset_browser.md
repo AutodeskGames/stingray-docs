@@ -100,6 +100,6 @@ The online assets are not listed in the Asset Browser if the Online Assets serve
 
 ---
 Related topics:
-- ~{ Enable {{ProductName}} Live Link }~
+- ~{ Linking with {{ProductName}} }~
 - ~{ Importing Assets }~
 ---

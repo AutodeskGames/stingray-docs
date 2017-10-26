@@ -1,14 +1,15 @@
 # Install the PhysX plug-in for your DCC tool
 
-To run physics simulations and set up PhysX ragdolls, rigid bodies, and constraints, you want to use the NVIDIA PhysX plug-ins for Maya or Maya LT. For the latest {{ProductName}}, the PhysX plug-in version is now 3.3.21117.04582, and the PhysX library/SDK used is 3.3.4.
+To run physics simulations and set up PhysX ragdolls, rigid bodies, and constraints, you want to use the NVIDIA PhysX plug-ins for the DCC tools. For the latest {{ProductName}}, the PhysX plug-in version is now 3.3.21117.04582, and the PhysX library/SDK used is 3.3.4.
 
 To install the PhysX plug-in for your DCC tool:
 
-1. Download the plug-in either from the [PhysX Plugins Download]( http://www.autodesk.com/physx-plugins-download) or the [NVIDIA plugin download](https://developer.nvidia.com/gameworksdownload) page.
+1. Download the plug-in either from the [NVIDIA plugin download](https://developer.nvidia.com/gameworksdownload) page.
 2. Follow the instructions in the NVIDIA installer.
-3. In your DCC tool, open the **Plug-in Manager** (Windows > Settings/Preferences > Plug-in Manager) and set the `physx.mll` plug-in to load (or Autoload).
 
 When installed and loaded, the PhysX plug-in adds a PhysX menu to the main menu bar in your DCC tool, giving you easy access to tools and documentation for creating PhysX ragdolls, rigid bodies, and constraints.
+
+>**Note:** This version of {{ProductName}} does not support the PhysX SDK version 3.4 available for 3ds Max 2018 and Maya 2018, and you may have trouble importing ragdolls and apex cloth. Use the PhysX SDK version 3.3 for 3ds Max 2018 and Maya 2018 when setting up the physics resources in the interactive.
 
 ## Setting the Unit scale for PhysX export from Maya or Maya LT
 

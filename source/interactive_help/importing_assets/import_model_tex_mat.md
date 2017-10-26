@@ -2,7 +2,7 @@
 
 With a properly configured FBX file, you can automatically import a model with its texture resources applied.
 
-> **Note:** You can also export scenes or selected objects and their materials directly into {{ProductName}} using Maya or Maya LT. See ~{ Enable {{ProductName}} Live Link }~.
+> **Note:** You can also export scenes or selected objects and their materials directly into {{ProductName}} using 3ds Max, Maya or Maya LT. See ~{ Linking with {{ProductName}} }~.
 
 **To prepare, then import your FBX file:**
 

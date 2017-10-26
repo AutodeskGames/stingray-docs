@@ -24,7 +24,7 @@
 ---
 Related topics:
 
-- ~{ Enable {{ProductName}} Live Link }~
+- ~{ Linking with {{ProductName}} }~
 
 Tags:
 - previz

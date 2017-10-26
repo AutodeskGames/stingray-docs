@@ -1,6 +1,6 @@
 # Export an FBX file to use in {{ProductName}}
 
-The simplest way to send assets to {{ProductName}} from other Autodesk applications is to use the DCC tool link plug-in. (Refer to ~{ Enable {{ProductName}} Live Link }~.) However, you can also export assets using the standard FBX export in each application.
+The simplest way to send assets to {{ProductName}} from other Autodesk applications is to use the DCC tool link plug-in. (Refer to ~{ Linking with {{ProductName}} }~.) However, you can also export assets using the standard FBX export in each application.
 
 If you're exporting a file from Maya or Maya LT, note the following limitations:
 

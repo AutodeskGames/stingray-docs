@@ -1,2 +1,0 @@
-level_sync_tag_assets
-level_sync_send_assets
