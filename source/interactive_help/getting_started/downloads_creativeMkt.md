@@ -2,7 +2,7 @@
 
 The template projects available in the ~{ Project Manager }~ provide good starting points for creating your own interactive projects. However, in order to make them as easy as possible to understand and apply, they are intentionally kept relatively lightweight and simplistic. Therefore they only scratch the surface of what is possible with {{ProductName}}.
 
-Sample projects that illustrate the potential of specific elements of {{ProductName}} and example projects that show more complex usage of components like Scaleform Studio, HumanIK and Gameware Navigation are available as online examples. Download these projects using the **Online Examples** tab in the **Project Manager**.
+Sample projects that illustrate the potential of specific elements of {{ProductName}} and example projects that show more complex usage of components like Scaleform Studio, HumanIK and Gameware Navigation are available as online examples. Download these projects using the **Online Projects** tab in the **Project Manager**.
 
 ![](../images/online_examples.png)
 
