@@ -81,7 +81,7 @@
 		<contextId include="*\link_to_dcc.html" id="interop_plugins"></contextId>
 		<contextId include="*\about_engine_configs.html" id="engine_configs"></contextId>
 		<contextId include="*\sdk_help.html" id="SDK_HOME"></contextId>
-		<contextId include="*\sdk_help\extend_editor.html" id="SDK_EDITOR_C_PLUGIN"></contextId>
+		<contextId include="*\sdk_help\extend_editor.html" id="SDK_EDITOR_PLUGIN"></contextId>
 		<contextId include="*\sdk_help\extend_engine.html" id="SDK_ENGINE_PLUGIN"></contextId>
 		<contextId include="*\sdk_help\about_resource_ids.html" id="resource_ids"></contextId>
 		<contextId include="*\source_access.html" id="SOURCE_ACCESS_HOME"></contextId>
