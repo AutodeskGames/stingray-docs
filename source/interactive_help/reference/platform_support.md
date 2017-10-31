@@ -21,7 +21,7 @@ The engine only supports iOS devices compatible with Metal and OpenGL ES 3.0, as
 
 ## iOS Version Compatibility
 
-The engine only supports iOS devices running **iOS {{SR_DOC_IOS_VERSION}}**.
+The engine supports iOS devices running **iOS {{SR_DOC_IOS_VERSION}}**.
 
 ## Requirements for Running the iOS Packaging Server
 
