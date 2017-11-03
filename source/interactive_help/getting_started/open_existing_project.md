@@ -14,7 +14,7 @@ Sometimes, however, you may want to open an existing project that somebody else 
 
 	![Add Existing](../images/project_manager_add_existing.png)
 
-3.	Click **Add Existing** and browse to the location of your project on your local computer. Select either the interactive project (  *.stingray_project* or *.zip*) or a Live scene (*.lvsc*) file and click **Open**.
+3.	Click **Add Existing**. In the dialog that appears, select the file type depending on the project you want to add and browse to the location of the project on your local computer. Select the *.stingray_project* or the *.zip* file for interactive projects and the *.lvsc* file for Live scenes and click **Open**.
 
 	This adds the selected project to the *Projects* area of the **My Projects** tab.
 
