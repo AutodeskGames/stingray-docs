@@ -10,6 +10,8 @@ By default, placeable light sources emit light with an even color and intensity.
 
 1.	Apply your material to a light in the scene so that you can see its effect as you work on the material's shader graph. With a light source selected, find the **Material Resource** setting and set it to your new material.
 
+	>**IMPORTANT:** Light material assignments only work on **Omni-directional** lights, **Spotlights**, and **Box** lights. A light material cannot be applied to a **Directional** light.
+
 	You should see the light emitted by the selected source change to the output color you set for your material.
 
 1.	Return to the **Shader Graph Editor** and set up your light material's shader graph the way you want it, so that it produces an output color for the light to emit.
