@@ -37,7 +37,7 @@ Before you download, verify your system meets the [system requirements](http://w
 
 >	**Important:**  If you have a previously installed version of Autodesk Stingray (including Stingray 1.8 or any newer beta version of Stingray), you'll need to manually uninstall the DCC Link plugin before installing 3ds Max Interactive. Otherwise, the installer mistakenly detects that you have a newer version of the plugin and won't install the latest. You need the right version of this plugin to use the interop features that link 3ds Max with 3ds Max Interactive. After you uninstall your existing version of the plugin (using Windows Control Panel), the correct DCC Link plugin installs automatically when you install 3ds Max Interactive.
 
-### To install and license 3ds Max Interactive
+#### To install and license 3ds Max Interactive
 
 1. In the 3ds Max Interactive installer window that appears, click **Install**.
 2. Read and accept the license agreement for your country or region and then click **Next**.
@@ -50,25 +50,23 @@ The following list includes the most common issues that prevent users from runni
 
 1. Make the following ports accessible for 3ds Max Interactive for full software functionality:
 
-**Local web sockets**
+	**Local web sockets**
 
-- 32010-32020
-- 11088
+	- 32010-32020
+	- 11088
 
-**Local HTTP connections**
+	**Local HTTP connections**
 
--55503-55510
+	- 55503-55510
 
-**TCP/IP connections**
+	**TCP/IP connections**
 
-- 14000-14999
-- 4888
+	- 14000-14999
+	- 4888
 
-2. Disable WIndows Aero
-	To increase UI responsiveness and playback performance, disable Windows Aero while running 3ds Max Interactive.
+2. **Disable Windows Aero**: To increase UI responsiveness and playback performance, disable Windows Aero while running 3ds Max Interactive.
 
-3. Update Dell Backup and Recover (DBAR) Application
-	Ensure your Dell Backup and Recovery Application is version 1.9.2.8 or later.
+3. **Update Dell Backup and Recover (DBAR) Application**: Ensure your Dell Backup and Recovery Application is version 1.9.2.8 or later.
 
 ---
 IncludeIf:
