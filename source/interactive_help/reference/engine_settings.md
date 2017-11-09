@@ -685,7 +685,7 @@ network = {
 
 ## Log consoles
 
-`local_console_log = "%APPDATA%\\{{SR_DOC_SHORT_NAME}}\\network-test\\console_%RANDOM%.txt"`
+`local_console_log = "%APPDATA%\\ {{SR_DOC_SHORT_NAME}}\\network-test\\console_%RANDOM%.txt"`
 
 >	Specifies a path and filename where the engine will save its console logs. Optional.
 >

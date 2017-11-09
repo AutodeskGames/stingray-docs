@@ -6,7 +6,7 @@ For example, your project uses a wooden box unit and you place multiple instance
 
 If however you decide you need the same box, only metal, you can select any single instance of the wooden box and override the material properties for that box to make it into a metal box.
 
-All stingray materials support negatively scaled objects.
+All interactive materials support negatively scaled objects.
 
 ## Assign a material to a unit for the entire project
 

@@ -7,7 +7,7 @@ The 3ds Max Interactive Live Link provides the following:
 -   An integrated workflow to seamlessly send assets between 3ds Max and 3ds Max Interactive and update the shared contents. See ~{ Send assets to 3ds Max}~ and ~{ Receive assets from 3ds Max }~.
 -   Level sync workflows that let you send 3ds Max scenes to 3ds Max Interactive, exactly replicating your 3ds Max layout in the interactive viewport. See ~{ Level Sync with 3ds Max }~.
 -   Viewport synchronization so you can quickly verify how models, animations, and materials appear in the Interactive viewport while you work in 3ds Max, see ~{ Connect 3ds Max and {{ProductName}} viewports }~.
--   Visual parity where any material created with 3ds Max Interactive (Stingray) physically-based nodes in ShaderFX are preserved when loaded in 3ds Max. See ~{ Send a material to 3ds Max}~ and ~{ Receive materials from 3ds Max }~.
+-   Visual parity where any material created with Interactive (Stingray) physically-based nodes in ShaderFX are preserved when loaded in 3ds Max. See ~{ Send a material to 3ds Max}~ and ~{ Receive materials from 3ds Max }~.
 
     ![](images/live_link.png)
 

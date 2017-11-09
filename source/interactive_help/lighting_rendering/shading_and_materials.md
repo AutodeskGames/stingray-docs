@@ -24,7 +24,7 @@ Once the artist has the model looking exactly the way they want it to look in th
 
 See also ~{ Import a model with textures and materials }~.
 
-{{ProductName}} uses a physically based shader that aims to provide realistic shading results in diverse lighting evironments. This same shader is also available in Maya and 3ds Max, provided by the DirectX ShaderFX system. For best results when importing your materials, use Stingray ShaderFX materials in Maya or 3ds Max. See also ~{ ShaderFX shader graphs }~. Other types of materials, including standard materials, may bring in color and texture values, but may appear subtly different in the interactive engine due to differences in the way the shader calculates the appearance of the surface based on the way it interacts with incoming light.
+{{ProductName}} uses a physically based shader that aims to provide realistic shading results in diverse lighting environments. This same shader is also available in Maya and 3ds Max, provided by the DirectX ShaderFX system. For best results when importing your materials, use Interactive (Stingray) ShaderFX materials in Maya or 3ds Max. See also ~{ ShaderFX shader graphs }~. Other types of materials, including standard materials, may bring in color and texture values, but may appear subtly different in the interactive engine due to differences in the way the shader calculates the appearance of the surface based on the way it interacts with incoming light.
 
 ### Tweaking imported materials
 

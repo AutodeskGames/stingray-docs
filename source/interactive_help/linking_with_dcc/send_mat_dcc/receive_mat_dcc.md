@@ -1,12 +1,12 @@
 # Receive materials from 3ds Max
 
-You can also import Stingray Physically Based Shaders (PBS) that you create in 3ds Max directly to your Max Interactive project. When you receive your material from 3ds Max, the look of the shader and the graph remains the same, including all of the input connections and nodes.
+You can also import Interactive Physically Based Shaders (PBS) that you create in 3ds Max directly to your {{ProductName}} project. When you receive your material from 3ds Max, the look of the shader and the graph remains the same, including all of the input connections and nodes.
 
 **To import a Stingray PBS material to your {{ProductName}} project**
 
 1. In the Interactive editor, establish a connection with 3ds Max. See ~{ Send assets to 3ds Max }~.
 
-2. In 3ds Max, create a new StingrayPBS shader or select an existing one. See ~{ ShaderFX shader graphs }~.
+2. In 3ds Max, create a new Interactive PBS shader or select an existing one. See ~{ ShaderFX shader graphs }~.
 
 3. In the **Material Parameter Editor** enter a path and a name for the material in the **Engine Resource** attribute.
 
