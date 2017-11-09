@@ -30,7 +30,7 @@ Make sure that any files you copy use the same path within your project's resour
 
 ## Option 2. Modifying the Appkit core resources
 
-You can change the Appkit script files in place within your {{ProductName}} installation directory. For example, `C:\Program Files\Autodesk\{{SR_DOC_SHORT_NAME}}\<version>\core`.
+You can change the Appkit script files in place within your {{ProductName}} installation directory. For example, `C:\Program Files\Autodesk\ {{SR_DOC_SHORT_NAME}}\<version>\core`.
 
 **Benefits and drawbacks:**
 

@@ -6,9 +6,9 @@ Once you have run the `make.rb` script at least once, you can rebuild the soluti
 
 1.	Open one of the following solutions in Visual Studio:
 
-	-	`build\engine\<platform>\{{SR_DOC_EXE_PREFIX}}_engine_<platform>.sln`: The runtime interactive engine.
-	-	`build\editor\<platform>\{{SR_DOC_EXE_PREFIX}}_editor_<platform>.sln`: The front-end user interface for the editor application. See the next section for additional details.
-	-	`editor\backend\{{SR_DOC_EXE_PREFIX}}_editor_backend.sln`: The back-end of the editor.
+	-	`build\engine\<platform>\ {{SR_DOC_EXE_PREFIX}}_engine_<platform>.sln`: The runtime interactive engine.
+	-	`build\editor\<platform>\ {{SR_DOC_EXE_PREFIX}}_editor_<platform>.sln`: The front-end user interface for the editor application. See the next section for additional details.
+	-	`editor\backend\ {{SR_DOC_EXE_PREFIX}}_editor_backend.sln`: The back-end of the editor.
 	-	`tools\all_tools\all_tools.sln`: Legacy editing tools.
 
 2.	Set the desired build configuration: Debug, Dev or Release. See also ~{ About engine build configurations }~.

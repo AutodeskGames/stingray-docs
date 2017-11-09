@@ -8,7 +8,7 @@ In order to launch your content from the interactive editor using either the Tes
 
 The easiest way to do this is to place your dynamic library in the engine's directory within your {{ProductName}} installation folder. For example,
 
-`C:\Program Files\Autodesk\{{SR_DOC_SHORT_NAME}}\<version>\engine\win64\dev`
+`C:\Program Files\Autodesk\\{{SR_DOC_SHORT_NAME}}\<version>\engine\win64\dev`
 
 You could put it in a sub-directory within this location, as long as you add the relative path to the `require` call that loads the library in your project's Lua script.
 

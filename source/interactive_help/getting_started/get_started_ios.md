@@ -20,7 +20,7 @@ Due to restrictions from Apple, the iOS packaging process cannot be fully comple
 
 You will need to install and run the server application on a Mac. For system requirements, see ~{ Supported platforms }~.
 
-1.	Locate the packaging app within your {{ProductName}} install directory. For example: `C:\Program Files\Autodesk\{{SR_DOC_SHORT_NAME}}\<version>\tools\{{SR_DOC_FULL_NAME}} Package Server.app`
+1.	Locate the packaging app within your {{ProductName}} install directory. For example: `C:\Program Files\Autodesk\ {{SR_DOC_SHORT_NAME}}\<version>\tools\ {{SR_DOC_FULL_NAME}} Package Server.app`
 
 2.	Copy the app to the Applications folder on your Mac.
 
@@ -38,7 +38,7 @@ You will need to install and run the server application on a Mac. For system req
 	> **Note:** The drop-down list shows all certificates installed on the machine. If you don't see anything there, and have to enter the value manually, chances are that you don't have the certificate installed on your machine. This may cause the packaging process to fail.</dd>
 
 	<dt>Mobile Provision</dt>
-	<dd>*[Required]* Point to the the mobile provision file associated with your signing certificate. You can download this from your [Apple Developer Center](http://developer.apple.com) page.
+	<dd>*[Required]* Point to the mobile provision file associated with your signing certificate. You can download this from your [Apple Developer Center](http://developer.apple.com) page.
 	<br>
 
 	> **Note:** If you're not using an Enterprise provision profile (which lets you install on any device), make sure that you have added the devices you plan to use for testing to this provision profile. If you used Xcode to develop on this device previously, it is automatically added.</dd>
@@ -73,7 +73,7 @@ To generate the engine *.ipa* files:
 
 4.	Click **Generate Engine IPA**.
 
-	The file is created and saved in your Windows user directory, typically under `AppData\Local\Autodesk\{{SR_DOC_SHORT_NAME}}\engine\ios\<configuration>`.
+	The file is created and saved in your Windows user directory, typically under `AppData\Local\Autodesk\ {{SR_DOC_SHORT_NAME}}\engine\ios\<configuration>`.
 
 Once the *.ipa* file for the engine is available, the **Deployer** panel shows all of the options you can set when you deploy a full standalone build of your interactive app. See [Deploy the project for iOS] below.
 
