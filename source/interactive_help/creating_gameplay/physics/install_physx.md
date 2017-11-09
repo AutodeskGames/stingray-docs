@@ -4,7 +4,7 @@ To run physics simulations and set up PhysX ragdolls, rigid bodies, and constrai
 
 To install the PhysX plug-in for your DCC tool:
 
-1. Download the plug-in either from the [NVIDIA plugin download](https://developer.nvidia.com/gameworksdownload) page.
+1. Download the plug-in from the [NVIDIA plugin download](https://developer.nvidia.com/gameworksdownload) page.
 2. Follow the instructions in the NVIDIA installer.
 
 When installed and loaded, the PhysX plug-in adds a PhysX menu to the main menu bar in your DCC tool, giving you easy access to tools and documentation for creating PhysX ragdolls, rigid bodies, and constraints.
