@@ -31,11 +31,11 @@ Sections in this topic:
 
 ## Better texture import with automatic compression
 
-Textures are now automatically compressed when you import them in Stingray. Depending on the texture type, Stingray assigns the texture template and compression settings for the imported textures for each platform. Texture compressions are applied by texture file suffix match or by image analysis. You can still tweak the textures as required, but you no longer need to manually compress textures on import. For details, see ~{ Import textures}~ and ~{ Create a texture template }~.
+Textures are now automatically compressed when you import them in Stingray. Depending on the texture type, Stingray assigns the texture template and compression settings for the imported textures for each platform. Texture compressions are applied by texture file suffix match or by image analysis. You can still tweak the textures as required, but you no longer need to manually compress textures on import. For details, see [Import textures](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=import-textures) and [Create a texture template](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-a-texture-template).
 
 ## Particle Editor
 
-In previous versions of Stingray, you created and edited particle effects using the **Asset Browser**, **Property Editor**, and **Asset Preview**. With Stingray 1.7, we're pleased to give you a standalone **Particle Editor** that streamlines the workflow for particle artists. Select **Window > Particle Editor** from the main menu, or double-click an existing particle effect in the **Asset Browser** to launch the new tool. For more information, see ~{ Create and edit particle effects }~.
+In previous versions of Stingray, you created and edited particle effects using the **Asset Browser**, **Property Editor**, and **Asset Preview**. With Stingray 1.7, we're pleased to give you a standalone **Particle Editor** that streamlines the workflow for particle artists. Select **Window > Particle Editor** from the main menu, or double-click an existing particle effect in the **Asset Browser** to launch the new tool. For more information, see [Create and edit particle effects](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-and-edit-particle-effects).
 
 ![](../gifs/wn_particle_editor.gif)
 
@@ -45,7 +45,7 @@ In previous versions of Stingray, you created and edited particle effects using 
 
 - Support for Gear VR, Google Daydream Android devices, plus Google Cardboard (iOS and Android)
 - New VR project templates to support rendering on those devices
-- The VR Oculus SDK has been upgraded to V1.10.1.0. See ~{ Supported platforms }~.
+- The VR Oculus SDK has been upgraded to V1.10.1.0. See [Supported platforms](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=supported-platforms).
 
 Stingray 1.7 introduces our GoogleVR plug-in, which adds support for Google Cardboard on iOS, as well as Google Daydream devices and controllers. Google Cardboard for Android is also supported on Daydream devices.
 
@@ -53,11 +53,11 @@ To support rendering your VR projects on these devices, the **Templates** tab in
 
 ![](../images/wn-templates.png)
 
-Use these templates to start building your VR projects for Google Daydream devices and GearVR devices. See also ~{ Build a project for Gear VR }~.
+Use these templates to start building your VR projects for Google Daydream devices and GearVR devices. See also [Build a project for Gear VR](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=build-a-project-for-gear-vr).
 
 ## Browse online assets in the Asset Browser
 
-See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse, find and import assets directly from online to your project. Right-click an online asset and select **Download Asset** to download and install the asset package to a category specific folder in the project. Updated topic include: ~{ Download assets and example projects }~.
+See the new **Online Assets** folder in the [Asset Browser](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=asset-browser). You can browse, find and import assets directly from online to your project. Right-click an online asset and select **Download Asset** to download and install the asset package to a category specific folder in the project. Updated topic include: [Download assets and example projects](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=download-assets-and-example-projects).
 
 ![](../images/online_assets_rn.png)
 
@@ -67,19 +67,19 @@ See the new **Online Assets** folder in the ~{ Asset Browser }~. You can browse,
 
 ### Light baking improvements
 
-- The light baker is now more stable and has been optimized to run faster on most scenes and hardware. See ~{ Baking with the Stingray baker }~.
-- You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See ~{ Bake lightmaps }~.
+- The light baker is now more stable and has been optimized to run faster on most scenes and hardware. See [Baking with the built-in light baker](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=baking-with-the-built-in-light-baker).
+- You can now bake based on selection. After making a selection in your scene, open the **Light Baking** window (**Window > Lighting > Light Baking**) and click the new **Bake Selection** button to start a partial baking session. See [Bake lightmaps](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=bake-lightmaps).
 - Click **Clear** in the **Light Baking** window to quickly delete and unmap all lightmaps on disk.
-- You can now start a standalone baking session using a command-line prompt. For details, see ~{ Trigger lightmap baking from the command line }~.
+- You can now start a standalone baking session using a command-line prompt. For details, see [Trigger lightmap baking from the command line](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=trigger-lightmap-baking-from-the-command-line).
 -	Beast is now deprecated.
 
 ### Tessellation support
 
-Tessellation can now be activated using the standard base material node. Use the **Tesselation Factor** input on the base node to control the tesselation factor of your surface. A lower value results in a less tessellation. See ~{ Create a tessellation material }~.
+Tessellation can now be activated using the standard base material node. Use the **Tesselation Factor** input on the base node to control the tesselation factor of your surface. A lower value results in a less tessellation. See [Create a tessellation material](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-a-tessallation-material).
 
 ### Negative scale support
 
-Stingray shaders now support negative scale. See ~{ Assign a material to an object }~.
+Stingray shaders now support negative scale. See [Assign a material to an object](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=assign-a-material-to-an-obbject).
 
 ### Texture Manager updates
 
@@ -91,39 +91,39 @@ Stingray shaders now support negative scale. See ~{ Assign a material to an obje
 <a name="capture-frames"></a>
 ![](../images/capture_frames_rn.png)
 
-The **Capture Frames** Tool is now a standalone tool connected to the **Story Editor**. Simply create a story and click ![Capture Frames](../images/icon_capture_frame.png) to adjust your **Capture Settings**. New settings include support for different cameras and resolutions, and options to save and reuse your settings. Capturing can also be initiated through new Capture Flow Nodes. For details, see ~{ Capture Frames Tool }~.
+The **Capture Frames** Tool is now a standalone tool connected to the **Story Editor**. Simply create a story and click ![Capture Frames](../images/icon_capture_frame.png) to adjust your **Capture Settings**. New settings include support for different cameras and resolutions, and options to save and reuse your settings. Capturing can also be initiated through new Capture Flow Nodes. For details, see [Capture Frames Tool](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=capture-frames-tool).
 
 ## More Story Editor improvements
 
--	Copy keyframes and paste them on the current time in the timeline or on the cursor position using either the hotkeys or by right click context menu in the **Story Editor**. You can also copy keys from multiple tracks and paste them on other tracks based on the order of track selection. Updated topics include ~{ Create simple animations with the Story Editor }~ and ~{ Story Editor hotkeys }~.
+-	Copy keyframes and paste them on the current time in the timeline or on the cursor position using either the hotkeys or by right click context menu in the **Story Editor**. You can also copy keys from multiple tracks and paste them on other tracks based on the order of track selection. Updated topics include [Create simple animations with the Story Editor](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-simple-animations-with-the-story-editor) and [Story Editor hotkeys](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=story-editor-hotkeys).
 -	New reverse play icon ![](../images/icon_story_reversePlay.png) to play stories in reverse direction.
--	Stories now stop playing at the end of the playback range in *None* playback mode. See ~{ Story Editor }~.
+-	Stories now stop playing at the end of the playback range in *None* playback mode. See [Story Editor](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=story-editor).
 - A Capture Frame Tool icon ![](../images/icon_capture_frame.png) to access Capture Frame Settings; a story must be created to enable this mode. See [Improved Capture Frames Tool](#capture-frames).
 
 
 ## Better network workflows: Run multiple local game instances
 
-The **Connections** panel now lets you add multiple localhost PC targets, which means you can automatically start multiple targets with separate command lines on your local machine when you click **Run Project** ![](../images/icon_runProject.png). This makes it easier to debug and look at the console output for multiple targets using the editor engine instance dropdowns. See also ~{ Using the Connections panel }~.
+The **Connections** panel now lets you add multiple localhost PC targets, which means you can automatically start multiple targets with separate command lines on your local machine when you click **Run Project** ![](../images/icon_runProject.png). This makes it easier to debug and look at the console output for multiple targets using the editor engine instance dropdowns. See also [Using the Connections panel](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=using-the-connections-panel).
 
 ## Edit this page in Github!
 
-At the bottom of most pages in the Stingray Help, you'll now see a green button that invites you to visit the topic source file in GitHub, make any changes you want, and submit a PR to us. With your help we want to make the Stingray Help better and better. If you're feeling inspired, check out ~{ Get Involved! }~ for more ways to contribute to the Stingray community.
+At the bottom of most pages in the Stingray Help, you'll now see a green button that invites you to visit the topic source file in GitHub, make any changes you want, and submit a PR to us. With your help we want to make the Stingray Help better and better. If you're feeling inspired, check out [Get Involved!](http://help.autodesk.com/view/Stingray/ENU/?guid=__stingray_help_get_involved_html) for more ways to contribute to the Stingray community.
 
 ![](../images/edit-on-github.png)
 
 ## Import font files
 
-You can now import font files to generate font resources to render text with sharp edges and preserve them when scaling. When you import font files, this generates the multi-channel signed distance field resources to display the font in your project. This feature is enabled by the *Distance Field Font Importer* plug-in, which is automatically enabled in the **Plugin Manager**. (See ~{ Add and remove plug-ins using the Plugin Manager }~.)
+You can now import font files to generate font resources to render text with sharp edges and preserve them when scaling. When you import font files, this generates the multi-channel signed distance field resources to display the font in your project. This feature is enabled by the *Distance Field Font Importer* plug-in, which is automatically enabled in the **Plugin Manager**. (See [Add and remove plug-ins using the Plugin Manager](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=add-and-remove-plug-ins-using-the-plugin-manager).)
 
-See ~{ Import fonts }~.
+See [Import fonts](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=import-fonts).
 
 ## Trim animation clips
 
-You can now edit the length of animation clips by trimming in the Anim Clip Editor or by modifying the trim values in the ~{ Animation clip properties }~. See ~{ Trim animation clips }~.
+You can now edit the length of animation clips by trimming in the Anim Clip Editor or by modifying the trim values in the [Animation clip properties](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=animation-clip-properties). See [Trim animation clips](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=trim-animation-clips).
 
 ## Visual mesh raycasting
 
-Stingray 1.7 provides new functionality that lets you check for intersections with visual meshes within a specified Unit. You can use this mesh pick raycast to get visual mesh information from a surface, such as which material within a mesh gets hit. (If you don't actually need that level of information, use the standard phyiscs raycast instead.)
+Stingray 1.7 provides new functionality that lets you check for intersections with visual meshes within a specified Unit. You can use this mesh pick raycast to get visual mesh information from a surface, such as which material within a mesh gets hit. (If you don't actually need that level of information, use the standard physics raycast instead.)
 
 For complete documentation, refer to the Lua documentation `stingray.Unit.mesh_pick_raycast()` and the [Flow node documentation](../../flow_ref/index.html) (**Unit > Mesh Pick Raycast**).
 
@@ -137,9 +137,9 @@ An example Flow graph:
 
 The Tag component is now exposed in the Stingray Editor, which lets you associate a set of tags with an entity and quickly find all entities that have a certain tag. See also:
 
-- ~{ Using Entities in your Project }~
-- ~{ About built-in components }~
-- ~{ Assign components to an entity }~
+- [Using Entities in your Project](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=using-entities-in-your-project)
+- [About built-in components](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=about-built-in-components)
+- [Assign components to an entity](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=assign-components-to-an-entity)
 
 ![](../images/wn_entity_tag.png)
 
@@ -171,11 +171,11 @@ Stingray 1.7 integrates Wwise version 2016.1.3, which includes various new featu
 
 If you have an existing project built in previous versions of Stingray, the sound banks are automatically regenerated when you load/migrate the project into Stingray 1.7. Depending on how much audio your project has, please note that the regeneration process can take a long time.
 
-**Important:** In order for Stingray to migrate existing sound banks correctly, make sure the wwise project is available and writable. If you experience any issues with the automatic migration, you can also manually regenerate the sound banks. (See ~{Generate sound banks}~.)
+**Important:** In order for Stingray to migrate existing sound banks correctly, make sure the wwise project is available and writable. If you experience any issues with the automatic migration, you can also manually regenerate the sound banks. (See [Generate sound banks](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=generate-sound-banks).)
 
 ## What's new in the SDK?
 
--	Plug-ins can now provide template projects, which are listed on the **Templates** tab of the ~{ Project Manager }~, just like the template projects that ship with Stingray. See [the help for the templates extension](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_extend_editor_plugin_extensions_templates_html).
+-	Plug-ins can now provide template projects, which are listed on the **Templates** tab of the [Project Manager](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=project-manager), just like the template projects that ship with Stingray. See [the help for the templates extension](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_extend_editor_plugin_extensions_templates_html).
 
 -	We've made some fixes and improvements in the hot-reloading system for engine plug-ins. If you had trouble getting hot reloading to work in the past, try [the new instructions](http://help.autodesk.com/view/Stingray/ENU/?guid=__sdk_help_reload_html).
 
@@ -183,15 +183,15 @@ If you have an existing project built in previous versions of Stingray, the soun
 
 ### Level Sync updates
 
-You can now update existing assets when using level sync with Maya. When **Update Existing Assets** is enabled in the **Send Level** window (**Singray > Send Selected/Send All >** ![Option Box](../images/opt_box.png)), modifications to geometry in Maya get pushed to Stingray when you send your scene. See ~{ Send assets from Maya and Maya LT with Level Sync }~.
+You can now update existing assets when using level sync with Maya. When **Update Existing Assets** is enabled in the **Send Level** window (**Singray > Send Selected/Send All >** ![Option Box](../images/opt_box.png)), modifications to geometry in Maya get pushed to Stingray when you send your scene. See [Send assets from 3ds Max with Level Sync](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=send-assets-from-3ds-max-with-level-sync).
 
 ### Import .EXR files as skydome images
 
-Stingray now supports high definition range EXR files for image based lighting. Import (or drag and drop to Asset Browser) .EXR files to use as skydomes in your level. Updated topics include: ~{ Supported file formats }~ and ~{ Create a skydome texture }~.
+Stingray now supports high definition range EXR files for image based lighting. Import (or drag and drop to Asset Browser) .EXR files to use as skydomes in your level. Updated topics include: [Supported file formats](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=supported-file-formats) and [Create a skydome texture](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-a-skydome-texture).
 
 ### Updated PhysX plug-in
 
-The PhysX plug-in installers for Maya 2017 and Maya LT 2017 that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.21117.04582. For related information, see ~{ Install the PhysX plug-in for your DCC tool }~.
+The PhysX plug-in installers for Maya 2017 and Maya LT 2017 that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.21117.04582. For related information, see [Install the PhysX plug-in for your DCC tool](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=install-the-physx-plug-in-for-your-dcc-tool).
 
 [Return to top](#top)
 
@@ -495,11 +495,11 @@ The full installation guide for Autodesk products including Stingray is included
 This section explains the improvements and fixes that require specific upgrade steps for users currently using a previous version of Stingray.
 
 ### Migrating projects from versions earlier than Stingray 1.6
- 
+
 When you load a project created in the previous release of Stingray, the current release automatically migrates the data from your earlier project to work in the new version of Stingray. This means that projects created in Stingray 1.6 are migrated seamlessly to work in Stingray 1.7.
- 
+
 As of Stingray 1.6, all projects get created with a .stingray_project file extension, and that project file is now required in the **Project Manager** to open the project in Stingray 1.7. This change means that projects created in versions of Stingray previous to 1.6 can't be opened directly in Stingray 1.7.
- 
+
 To open legacy projects in Stingray 1.7, you'll need to open the project using Stingray 1.6 first. This creates a .stingray_project file and performs any other data conversion required. You can then open the project in Stingray 1.7.
 
 ### Auto-loading removed from templates
@@ -520,11 +520,11 @@ We've now modified the *boot.package* in the template projects to disable this a
 
 -	You can go back to the old auto-loading method by removing the two slashes `//` at the start of the line `//* = [*]` at the top of the *boot.package* file in any template project.
 
-For more background information, see ~{ Loading and unloading content at runtime }~ and ~{ Defining resource packages }~.
+For more background information, see [Loading and unloading content at runtime](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=loading-and-unloading-content-at-runtime) and [Defining resource packages](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=defining-resource-packages).
 
 ### Lua API changes
 
-For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](../../lua_ref/versions.html).
+For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__lua_ref_versions_html).
 
 If your project contains any API elements that have been modified or removed, you will need to adjust your code accordingly.
 
@@ -550,7 +550,7 @@ This version includes new nodes for controlling frame capture, triggering Level 
 
 -	Only one node has been modified: **Application > Quit** now accepts an optional exit value, which the application will return to the operating system when it shuts down.
 
-For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
+For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__flow_ref_versions_html).
 
 ### Shader node changes
 
@@ -560,7 +560,7 @@ For a complete list of all new, modified, and removed Flow nodes in this release
 
 - Values entered for **Sprite Columns** and **Sprite Rows** in the **Utility > Flipbook** node are now output correctly on the sprite sheet.
 
-For a complete list of all new, modified, and removed shader nodes in this release, see the [version history](../../shaders_ref/versions.html).
+For a complete list of all new, modified, and removed shader nodes in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__shaders_ref_versions_html).
 
 ### Visual Studio 2015
 

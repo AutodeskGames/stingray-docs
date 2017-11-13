@@ -29,17 +29,17 @@ Sections in this topic:
 
 ## Level Sync with Maya and Maya LT
 
-In addition to linking individual assets, you can now link and export entire scenes built in Maya or Maya LT directly to Stingray. Once Maya or Maya LT are linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray. Modifications you make to the assets in Maya or Maya LT are then updated inside Stingray. This makes it way easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools. See ~{ Level Sync with Maya, Maya LT, or 3ds Max }~.
+In addition to linking individual assets, you can now link and export entire scenes built in Maya or Maya LT directly to Stingray. Once Maya or Maya LT are linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray. Modifications you make to the assets in Maya or Maya LT are then updated inside Stingray. This makes it way easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools. See [Level Sync with 3ds Max](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=level-sync-with-3ds-max).
 
 ## WebGL2 support
 
 The new experimental mode in Stingray offers developers a chance to try development for a new platform, WebGL2. With the experimental mode enabled, you can deploy Stingray projects to run in the nightly developer beta builds of certain web browsers. This is a great way for forward-looking developers to test their projects on a new target platform in advance of those platforms being consumer-ready.
 
-> **Note:** We've made several updates to this feature since Stingray 1.4 was released. See ~{ Get started for the Web }~ for updated information.
+> **Note:** We've made several updates to this feature since Stingray 1.4 was released. See [Get started for the Web](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=get-started-for-the-web) for updated information.
 
 ## VR support
 
-Stingray 1.4 includes improved support for VR platforms, adding support for the Oculus Rift SDK v1.4 and the SteamVR SDK v1.0. See ~{ Supported platforms }~ for the updated list of VR SDK kits.
+Stingray 1.4 includes improved support for VR platforms, adding support for the Oculus Rift SDK v1.4 and the SteamVR SDK v1.0. See [Supported platforms](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=supported-platforms) for the updated list of VR SDK kits.
 
 This release also includes an updated SteamVR template project, which you can download from the **Project Manager**.
 
@@ -49,13 +49,13 @@ Developers can now make use of Flow, the node-based visual scripting system in S
 
 ## Cross-project asset sharing
 
-You can now share assets much more easily between different Stingray projects. Right-clicking a file for export automatically includes all file dependencies into one convenient, compressed file. This makes sharing assets across projects, teams, or selling in digital asset stores easier than before. See ~{ Import and export assets as a package }~.
+You can now share assets much more easily between different Stingray projects. Right-clicking a file for export automatically includes all file dependencies into one convenient, compressed file. This makes sharing assets across projects, teams, or selling in digital asset stores easier than before. See [Import and export assets as a package](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=import-and-export-assets-as-a-package).
 
 ## Multiple databases for Gameware Navigation
 
 In previous releases, each Stingray level could only be associated with a single Gameware Navigation database. This meant that you could only generate NavData for one size of character.
 
-In this release, you can now create multiple NavData databases for each level when you generate your NavData in the **Navigation** panel. You can set different size parameters for each database, so that the NavData managed by each database will more accurately reflect the real movement possibilities for a character of that size. For example, you could use one database for human-sized characters, and another for giants or dinosaurs. For updated information, see ~{ Generate navigation mesh }~.
+In this release, you can now create multiple NavData databases for each level when you generate your NavData in the **Navigation** panel. You can set different size parameters for each database, so that the NavData managed by each database will more accurately reflect the real movement possibilities for a character of that size. For example, you could use one database for human-sized characters, and another for giants or dinosaurs. For updated information, see [Generate the navigation mesh](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=generate-the-navigation-mesh).
 
 ## Edit UV scale/offset values in Stingray
 
@@ -63,7 +63,7 @@ When exporting materials from Maya, Maya LT, or 3ds Max, Stingray now includes a
 
 ## Editor plug-in framework unveiled
 
-This release introduces a new plug-in framework for the Stingray Editor. Anyone can use this framework to customize the editor's behavior and add new editing features, even without access to the Stingray source code. For details, see ~{ Customize the Stingray Editor using Plug-ins }~.
+This release introduces a new plug-in framework for the Stingray Editor. Anyone can use this framework to customize the editor's behavior and add new editing features, even without access to the Stingray source code. For details, see [Customize the Stingray Editor using Plug-ins](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=customize-stingray-using-plug-ins).
 
 ![The Plugin Manager](../images/plugin_manager.png)
 
@@ -71,11 +71,11 @@ This release introduces a new plug-in framework for the Stingray Editor. Anyone 
 
 With the Stingray DCC Link plug-in for 3ds Max installed, you can now import and export Stingray Physically Based Shaders directly to and from a Stingray project folder. When sending a new material between Stingray and 3ds Max, its parameters, including all of its input connections and nodes, are preserved.
 
-See ~{ Send materials to Maya, Maya LT, or 3ds Max }~ and ~{ Receive materials from Maya, Maya LT, or 3ds Max }~ for updated information.
+See [Send a material to 3ds Max](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=send-a-material-to-3ds-max) and [Receive materials from 3ds Max](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=receive-materials-from-3ds-max) for updated information.
 
 ## Expanded Android support
 
-This release adds support for the Mali series of GPUs, providing a greater range of Android-based mobile devices as deployment targets. See ~{ Supported platforms }~ for updated information.
+This release adds support for the Mali series of GPUs, providing a greater range of Android-based mobile devices as deployment targets. See [Supported platforms](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=supported-platforms) for updated information.
 
 ## Asset Browser improvements
 
@@ -84,7 +84,7 @@ This release adds support for the Mali series of GPUs, providing a greater range
 
 ## Shader Graph improvements
 
-- The ~{ Shader Graph Editor }~ now supports multiple shader graphs open at once. Docking multiple shader graphs in the main interface lets you easily cut and paste shader nodes between different shader graphs.
+- The [Shader Graph Editor](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=shader-graph-editor) now supports multiple shader graphs open at once. Docking multiple shader graphs in the main interface lets you easily cut and paste shader nodes between different shader graphs.
 - You can now search for text and nodes in your shader graph using the *Search* field in the **Shader Graph Editor**. Enter a query in the *Search* field and use the arrows to browse through the search results. Click ![](../images/icon_config.png) to narrow your search using the **Search options**.
 - Nodes in the **Shader Graph Editor** now feature built-in links to the Shader reference pages of the Stingray online help, letting you locate learning material on how to use and implement shader elements.
 
@@ -98,7 +98,7 @@ The XYZ scale transform values for scene objects can now be locked, letting you 
 
 ## Support for TIFF files
 
-You can now import TIFF files to use as textures. See ~{ Supported file formats }~ for updated information.
+You can now import TIFF files to use as textures. See [Supported file formats](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=supported-file-formats) for updated information.
 
 ## Cloth simulation improvements
 
@@ -128,15 +128,15 @@ When you bake lightmaps with the Stingray baker, you can now adjust:
 
 ## Updated DCC interop plug-ins
 
-This release includes an updated Stingray DCC Link plug-in to support Maya 2017 and Maya LT 2017, as well as the plug-in for 3ds Max 2017. For information on the plug-ins, see ~{ Interop with Maya, Maya LT, or 3ds Max }~.
+This release includes an updated Stingray DCC Link plug-in to support Maya 2017 and Maya LT 2017, as well as the plug-in for 3ds Max 2017. For information on the plug-ins, see [Linking with Stingray](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=linking-with-productname).
 
 ## Easier Wwise engine configuration
 
-You now have more control over the memory usage and behavior of the integrated Wwise audio engine from the *settings.ini* file in your Stingray project. See the ~{ Stingray engine settings.ini file reference }~.
+You now have more control over the memory usage and behavior of the integrated Wwise audio engine from the *settings.ini* file in your Stingray project. See the [settings.ini file reference](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=settings-ini-file-reference).
 
 ## Updated PhysX plug-in
 
-The PhysX plug-in installers for Maya 2017 and Maya LT 2017 that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.20602.11122. Click [PhysX Plugins Download]( http://www.autodesk.com/physx-plugins-download) to get the plug-ins for older versions of Maya. For related information, see ~{ Install the PhysX plug-in for your DCC tool }~.
+The PhysX plug-in installers for Maya 2017 and Maya LT 2017 that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.20602.11122. Click [PhysX Plugins Download]( http://www.autodesk.com/physx-plugins-download) to get the plug-ins for older versions of Maya. For related information, see [Install the PhysX plug-in for your DCC tool](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=install-the-physx-plug-in-for-your-dcc-tool).
 
 [Return to top](#top)
 
@@ -185,7 +185,7 @@ The PhysX plug-in installers for Maya 2017 and Maya LT 2017 that ship with Sting
 - GAME-14383 FBX Import: Ignore meshes without polygons
 - GAME-14434 Folder rename errors when files have no extension
 - GAME-14413 APEX: Cloth assets not visible in thumbnails
-- GAME-7714 Flow: missing or disappearing colon between the pin/slot/parameter name/label and its value (and their colours should be different)
+- GAME-7714 Flow: missing or disappearing colon between the pin/slot/parameter name/label and its value (and their colors should be different)
 - GAME-10811 Unhandled JavaScript exception in Level Flow Editor when opening level flow during compilation
 - GAME-10768 Project Manager: Search filter does not get cleared properly on creating or adding a new project
 - GAME-10616 Script Editor: the toolbar horizontal scrollbar disappears when the file tab scrollbar appears
@@ -340,7 +340,7 @@ To get around this problem, start a new project from the VR template in this rel
 
 ### Lua API changes
 
-For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](../../lua_ref/versions.html).
+For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__lua_ref_versions_html).
 
 If your project contains any API elements that have been modified or removed, you will need to adjust your code accordingly.
 
@@ -356,7 +356,7 @@ Major changes:
 
 ### Flow node changes
 
-For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
+For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__flow_ref_versions_html).
 
 If your project contains any of the Flow nodes that have been modified or removed, you will need to make sure that your graphs are wired correctly by deleting any old versions of the node and re-inserting the new version.
 

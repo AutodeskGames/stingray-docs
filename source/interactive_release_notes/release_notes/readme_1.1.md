@@ -45,7 +45,7 @@ Transparent materials can now refract the opaque objects behind them using the r
 
 <iframe width="854" height="432" src="http://player.ooyala.com/iframe.html?pbid=6055f5a2061d4016b11ebf1fa8a7751e&amp;platform=html-fallback&amp;ec=p2YWpneDqZwefuzloXX8ZGjXbMdt0FZ6" frameborder="0" allowfullscreen></iframe>
 
-- ~{ Create a standard transparent material }~
+- [Create a standard transparent material](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-a-standard-transparent-material)
 
 ## Temporal AA blur reduction
 
@@ -88,18 +88,18 @@ Organize groups of related level objects using the new **Layers** view (Hotkey: 
 
 ![](../images/readme_layers.png)
 
-For new information, see ~{ Organize level objects in layers }~.
+For new information, see [Organize level objects in layers](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=organize-level-objects-in-layers).
 
 ## Improved interoperability with linked viewports
 
-When you enable a live camera link between Stingray and your Autodesk DCC tool (Maya, Maya LT, and 3ds Max), the acting master/slave viewport now switches automatically depending on which application is active. See ~{ Interop with Maya, Maya LT, or 3ds Max }~ for updated information.
+When you enable a live camera link between Stingray and your Autodesk DCC tool (Maya, Maya LT, and 3ds Max), the acting master/slave viewport now switches automatically depending on which application is active. See [Linking with Stingray](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=linking-with-productname) for updated information.
 
 ![](../images/wn_couches_small.png)
 
 
 ## Updated Character template
 
-An updated version of the Character template project is available in the ~{ Project Manager }~ when you start Stingray. Improvements include:
+An updated version of the Character template project is available in the [Project Manager](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=project-manager) when you start Stingray. Improvements include:
 
 - the camera position
 - the projectile Flow graph
@@ -108,7 +108,7 @@ An updated version of the Character template project is available in the ~{ Proj
 
 ![](../images/wn_charTemplate.png)
 
-- ~{ Template projects }~
+- [Template projects](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=template-projects)
 
 ## Support for additional Android devices
 
@@ -118,7 +118,7 @@ The Stingray engine now supports Android devices equipped with Qualcomm Adreno 3
 
 *The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.*
 
-For updated information, refer to ~{ Supported platforms }~.
+For updated information, refer to [Supported platforms](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=supported-platforms).
 
 ## iOS 9 binary size
 
@@ -136,17 +136,17 @@ In addition, hiding lights in the **Level Viewport** now hides only the visual r
 
 Importing assets with pre-assigned materials is now easier. When the new **Shared Materials** check box is turned on in the **FBX Import** window, Stingray searches your project for existing materials for the asset. If a match is found, Stingray applies the existing material to the asset on import.
 
-For new information, see ~{ Import a model with textures and materials }~.
+For new information, see [Import a model with textures and materials](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=import-a-model-with-textures-and-materials).
 
 ### Drag and drop materials in the viewport
 
 Drag and drop a material from the **Asset Browser** onto an object in the **Level Viewport** to quickly assign a material to a unit in your level. You can also hover your cursor over an object to preview the material before it’s assigned.
 
-For new information, refer to ~{ Assign a material to an object }~.
+For new information, refer to [Assign a material to an object](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=assign-a-material-to-an-object).
 
 ### Better workflow when creating parent materials
 
-When you click **Make Unique** in the **Property Editor** for a material, a new **Open Shader Graph** button displays, making it easy to start editing the shader graph. See ~{Create a parent material }~.
+When you click **Make Unique** in the **Property Editor** for a material, a new **Open Shader Graph** button displays, making it easy to start editing the shader graph. See [Create a parent material](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-a-parent-material).
 
 ## Improved **Asset Browser** experience
 
@@ -172,7 +172,7 @@ New options in the **View > Performance HUD** menu (found in the **Level Viewpor
 
 When in gameplay navigation mode (right-click and hold in the **Level Viewport**), new hotkeys let you move the camera up (Q) and down (E).
 
-See ~{ Navigate in the Level Viewport }~ for updated information.
+See [Navigate in the Level Viewport](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=navigate-in-the-level-viewport) for updated information.
 
 ## Improved editing in the **Property Editor**
 
@@ -186,11 +186,11 @@ New drag and drop functionality lets you quickly add audio files to environments
 
 ## **Log Console** improvements
 
-The ~{ Log Console }~ window now includes a filter widget that lets you filter out data from different components of Stingray, making it easier to debug issues. In addition, any errors and warnings that result when you select **Project > Run** now output directly to the **Log Console**. See ~{ Test and build a project }~.
+The [Log Console](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=log-console) window now includes a filter widget that lets you filter out data from different components of Stingray, making it easier to debug issues. In addition, any errors and warnings that result when you select **Project > Run** now output directly to the **Log Console**. See [Test and build a project](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=test-and-build-a-project).
 
 ## Updated PhysX plug-in
 
-The PhysX plug-in installers for Maya, Maya LT, and 3ds Max that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.10930.12522. This plug-in includes several improvements and bug fixes by Nvidia. For related information, see ~{ Install the PhysX plug-in for your DCC tool }~.
+The PhysX plug-in installers for Maya, Maya LT, and 3ds Max that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.10930.12522. This plug-in includes several improvements and bug fixes by Nvidia. For related information, see [Install the PhysX plug-in for your DCC tool](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=install-the-physx-plug-in-for-your-dcc-tool).
 
 
 ## What else is new?
@@ -200,7 +200,7 @@ The PhysX plug-in installers for Maya, Maya LT, and 3ds Max that ship with Sting
 - The **Explorer** panel now has filters and categories to make it easier to navigate large levels with many objects in the tree view.
 - The **File** menu now displays a list of recently opened levels.
 - You can now paint in negative space in the Terrain tool, which makes it easier to create basins and valleys.
-- A ~{ Documentation Archive }~ page is available if you plan to continue using an earlier version of Stingray or Scaleform Studio and you want to download documentation for previous versions. The Stingray online help always reflects the content and features of the current Stingray release.
+- A [Documentation Archive](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=documentation-archive) page is available if you plan to continue using an earlier version of Stingray or Scaleform Studio and you want to download documentation for previous versions. The Stingray online help always reflects the content and features of the current Stingray release.
 - Support for *.stingrayignore* file. Use this file to list files and directories you want Stingray to ignore using a syntax similar to *.gitignore* files, then place the file in the root of your Stingray project. The data compiler will ignore these files when compiling your project resources. Note, however, that the Stingray Editor will still show the files in the **Asset Browser**.
 - Launch Stingray in maximized windows mode on Windows
 - PhysX heightfields are cooked to avoid long stalls when heightfields are spawned.
@@ -233,10 +233,10 @@ Disable the new **Light** property, **Enabled**, to turn off a light’s contrib
 - GAME-9224 Cannot switch project when compiling
 - GAME-9227 Pressing Delete to delete the selected unit just drag-and-dropped into the level does not work
 - GAME-9169 Compression settings not showing up on clips when selected in **Asset Browser**
-- GAME-9168 Skeleton Editor - Need to adjust icons in tree where animaiton is off to be more transparent, color should match the darker/grayed text
+- GAME-9168 Skeleton Editor - Need to adjust icons in tree where animation is off to be more transparent, color should match the darker/grayed text
 - GAME-9195 **Asset Browser** search by Path returns an asset whose name matches but whose path does not
 - GAME-9194 **Property Editor**: Clicking on the color swatch no longer brings up the color picker dialog
-- GAME-9172 [AnimController] engine errror on unwanted motion mixer refresh
+- GAME-9172 [AnimController] engine error on unwanted motion mixer refresh
 - GAME-9215 **Asset Preview** is not showing the mesh and showing Bones
 - GAME-9167 **Asset Preview** viewport is grey on remote device
 - GAME-9165 **Dependency** tool does not allow expanding the size of the Uses list box
@@ -649,7 +649,7 @@ If your project contains any of the Flow nodes that have been modified or remove
 
 ## Lua API changes
 
-For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](../../lua_ref/versions.html).
+For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__lua_ref_versions_html).
 
 If your project contains any API elements that have been modified or removed, you will need to adjust your code accordingly.
 

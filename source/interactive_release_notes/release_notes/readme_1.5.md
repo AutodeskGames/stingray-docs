@@ -31,17 +31,17 @@ Sections in this topic:
 
 For scenes with HDR information, there is now an auto exposure component for your shading environment. This component gives basic control over the auto exposure feature. You can control min and max exposure, exposure input threshold, and adaptation speed and damping. This lets you create effects of blinding light, and eye adaptation when entering darker areas. Crucially, this component lets you utilize the full HDR range of your scenes.
 
-Accompanying the auto-exposure component, we’ve added a new rendering debug mode with a histogram and average luminance view. For more information, see ~{ Adapt scenes to different lighting environments }~.
+Accompanying the auto-exposure component, we’ve added a new rendering debug mode with a histogram and average luminance view. For more information, see [Adapt scenes to different lighting environments](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=adapt-scenes-to-different-lighting-environments).
 
 ### Blend Shape workflows
 
-You can now use blend shapes/morph targets within Stingray. A full suite of tools let you import, preview, control and animate the blend shapes on your meshes. See ~{ Blend Shapes }~.
+You can now use blend shapes/morph targets within Stingray. A full suite of tools let you import, preview, control and animate the blend shapes on your meshes. See [Blend Shapes](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=blend-shapes).
 
 These tools are implemented as a plug-in that takes full advantage of the extended extensibility features of Stingray 1.5.
 
 ### Easy access to example projects
 
-A new tab in the Project Manager makes it easy to get sample projects from Creative Market. Download example projects and game projects using the new **Online Examples** tab. See ~{ Download assets and example projects }~.
+A new tab in the Project Manager makes it easy to get sample projects from Creative Market. Download example projects and game projects using the new **Online Examples** tab. See [Download assets and example projects](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=download-assets-and-example-projects).
 
 **NOTE from the future:** As of release 1.8, online projects are now available through the [Autodesk Gamedev portal](https://gamedev.autodesk.com/stingray/plugins?category=586fed650af2de001bffaa6f), along with other free assets and environments!
 
@@ -52,13 +52,13 @@ We've added some new components for the entity system:
 
 -	The unit component, which associates a unit resource with the entity. Whenever the entity is spawned and unspawned, an instance of that unit is spawned and unspawned too.
 
--	The script component, which defines behaviors for their associated entities: actions that will be carried out when the entity is spawned and unspawned, and every frame during the main update loop. See ~{ Set up an entity's behavior using Flow or Lua }~.
+-	The script component, which defines behaviors for their associated entities: actions that will be carried out when the entity is spawned and unspawned, and every frame during the main update loop. See [Set up an entity's behavior using Flow or Lua](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=set-up-an-entity's-behavior-using-flow-or-lua).
 
--	Vector field components, which simulate effects like wind in the level. See ~{ Set up vector field (wind) effects }~.
+-	Vector field components, which simulate effects like wind in the level. See [Set up vector field (wind) effects](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=set-up-vector-field-wind-effects).
 
 	The vector field workflow also provides an example of how you can make the new script component work together with a data component that sets parameter values for the feature.
 
--	Reflection probe settings and behaviors. In previous versions of Stingray, reflection probes were units with special types of lights attached. In this version, reflection probes are represented using entities that have a specialized data component and a specific script behavior. The basic workflows are unchanged, and any existing reflection probe units in your level will be automatically migrated to use entities. See also ~{ Set up a baked reflection probe }~ and ~{ Global environment lighting }~ for more about how to use reflection probes.
+-	Reflection probe settings and behaviors. In previous versions of Stingray, reflection probes were units with special types of lights attached. In this version, reflection probes are represented using entities that have a specialized data component and a specific script behavior. The basic workflows are unchanged, and any existing reflection probe units in your level will be automatically migrated to use entities. See also [Set up a baked reflection probe](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=set-up-a-baked-reflection-probe) and [Global environment lighting](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=global-environment-lighting) for more about how to use reflection probes.
 
 	![](../images/probe_gizmo.png)
 
@@ -72,29 +72,29 @@ We've added some new components for the entity system:
 
 ![](../images/scatter_tool_scene.png)
 
-The new **Scatter Tool** plug-in lets you scatter objects in the scene. Quickly build out your level by distributing lightweight units like grass, clumps of flowers, posters, or gas cans by painting with scatter brushes. Modify spawn behavior using the **Scatter Pools Settings**, which apply the selected settings to all of the scatter data in your project at once. See ~{ Paint with the Scatter Tool }~.
+The new **Scatter Tool** plug-in lets you scatter objects in the scene. Quickly build out your level by distributing lightweight units like grass, clumps of flowers, posters, or gas cans by painting with scatter brushes. Modify spawn behavior using the **Scatter Pools Settings**, which apply the selected settings to all of the scatter data in your project at once. See [Paint with the Scatter Tool](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=paint-with-the-scatter-tool).
 
 ### GearVR and Mini Renderer
 
-For people trying to do VR on mobile devices (like GearVR), we’ve provided a new renderer. This is a forward renderer with a simplified material model that excludes all post effects to further improve the performance on lower spec platforms. See ~{ Mini renderer }~.
+For people trying to do VR on mobile devices (like GearVR), we’ve provided a new renderer. This is a forward renderer with a simplified material model that excludes all post effects to further improve the performance on lower spec platforms. See [Mini renderer](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=mini-renderer).
 
 ## Other Benefits
 
 ### Updated light gizmo icons and behavior
 
-We have updated the light gizmo icons and behaviors to be more user friendly and easy to understand. Light gizmos now look like their respective light types and also allow separate control over light gizmo size and adaptive scaling so that light icons scale with your zoom level. For updated light gizmos, see ~{ Light sources }~.
+We have updated the light gizmo icons and behaviors to be more user friendly and easy to understand. Light gizmos now look like their respective light types and also allow separate control over light gizmo size and adaptive scaling so that light icons scale with your zoom level. For updated light gizmos, see [Light sources](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=light-sources).
 
 ### Default loaded level and Template level
 
 You can now set a default level in your project settings, to control which level loads automatically when you open the project. This makes it faster to get going in your daily work, and provides a more intuitive startup experience for new users.
 
-Projects also have a template level option which lets you specify the level to use when creating new levels. For advanced users, this is a useful way to set the starting point for newer users on your project. See ~{ Create or load a level }~.
+Projects also have a template level option which lets you specify the level to use when creating new levels. For advanced users, this is a useful way to set the starting point for newer users on your project. See [Create or load a level](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-or-load-a-level).
 
 ### Select Tool and selection improvements
 
 The Stingray Toolbox now includes a Select Tool with all the intuitive selection options you expect. We’ve improved the marquee selection behavior and added standard selection hotkeys.
 
-The Select tool lets you click objects or drag to draw a rectangular marquee to select the objects. Different modes let you specify whether to select only objects that are entirely within the marquee selection, or to also select those that partially intersect the marquee.  For more information, see ~{ Select objects in a level }~.
+The Select tool lets you click objects or drag to draw a rectangular marquee to select the objects. Different modes let you specify whether to select only objects that are entirely within the marquee selection, or to also select those that partially intersect the marquee.  For more information, see [Select objects in a level](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=select-objects-in-a-level).
 
 ![](../gifs/select_tool.gif)
 
@@ -102,15 +102,15 @@ The Select tool lets you click objects or drag to draw a rectangular marquee to 
 
 You can now right-click to duplicate assets in the Asset Browser, which makes it easier to build out your level by reusing and creating new variations on existing assets.
 
-For example, if you have an existing smoke effect particle system and you want to make another similar effect that is less dense and has a longer falloff, simply duplicate the particle system, then make changes to create the new smoke. See ~{ Asset Browser }~ for more information.
+For example, if you have an existing smoke effect particle system and you want to make another similar effect that is less dense and has a longer falloff, simply duplicate the particle system, then make changes to create the new smoke. See [Asset Browser](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=asset-browser) for more information.
 
 ### Generate UVs option available during import
 
-You can now enable UV-unwrapping for meshes as you import your FBX files by turning on **Generate UVs for Light Baking** in the **FBX Import** options.This eliminates the need to manually unwrap UVs for meshes using the Unit Editor. For updated information, see ~{ Unwrap UVs for light baking }~.
+You can now enable UV-unwrapping for meshes as you import your FBX files by turning on **Generate UVs for Light Baking** in the **FBX Import** options.This eliminates the need to manually unwrap UVs for meshes using the Unit Editor. For updated information, see [Unwrap UVs for light baking](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=unwrap-uvs-for-light-baking).
 
 ### Copy and paste objects in levels
 
-You can now copy and paste level objects in the current level or to other levels to better reuse objects or recreate scenes. This lets you build out your levels more quickly and maintain a common feel throughout the levels as needed. See ~{ Copy and paste objects in a level }~
+You can now copy and paste level objects in the current level or to other levels to better reuse objects or recreate scenes. This lets you build out your levels more quickly and maintain a common feel throughout the levels as needed. See [Copy and paste objects in a level](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=copy-and-paste-objects-in-a-level)
 
 ### Improved support for cloth materials
 
@@ -118,13 +118,13 @@ Normal maps are now supported on materials applied to cloth assets. In earlier v
 
 ### Batch import scene and texture files
 
-Stingray now supports batch importing of asset files in your project. Copy multiple asset files to your project and select **File > Batch Import** to manually trigger importing of scenes and textures files. The batch import scans all the files in your project like scenes, images, textures, creates a .unit file for any FBX file that doesn't have one, and creates a .texture file for any missing textures. It also reimports an FBX file if it’s newer than an existing .dcc_asset file. See ~{ Batch import assets }~.
+Stingray now supports batch importing of asset files in your project. Copy multiple asset files to your project and select **File > Batch Import** to manually trigger importing of scenes and textures files. The batch import scans all the files in your project like scenes, images, textures, creates a .unit file for any FBX file that doesn't have one, and creates a .texture file for any missing textures. It also reimports an FBX file if it’s newer than an existing .dcc_asset file. See [Batch import assets](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=batch-import-assets).
 
 ### Download resource packages from the web
 
 If you use the resource packaging system to define bundles of assets that you stream in and out of your project at runtime, you can now have your project download those bundles at runtime when you stream them into the game. This means that you can avoid distributing the bundled data with your deployed game, but it also means that your project will likely have longer than usual delays when loading the content at runtime.
 
-To do this, use the new `stingray.Application.resource_package_from_url()` function to create your resource package instead of `stingray.Application.resource_package()`. See also ~{ Loading and unloading packages }~.
+To do this, use the new `stingray.Application.resource_package_from_url()` function to create your resource package instead of `stingray.Application.resource_package()`. See also [Loading and unloading packages](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=loading-and-unloading-packages).
 
 ### More editor plug-in extensions
 
@@ -132,7 +132,7 @@ Custom plug-ins can now include:
 
 -	*event* extensions, which respond to named events in the editor. See [Respond to an editor event](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_events_html) and [Emit and handle editor events](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_services_html).
 -	*migration* extensions, which can upgrade project data from one version of your plug-in to another. See [Migrate an older project](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_migrations_html).
--	*preview* extensions, which control the way the ~{ Asset Preview }~ behaves when a given type of resource is selected in the ~{ Asset Browser }~. See [Define previews for custom assets](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_previews_html).
+-	*preview* extensions, which control the way the [Asset Preview](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=asset-preview) behaves when a given type of resource is selected in the [Asset Browser](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=asset-browser). See [Define previews for custom assets](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_previews_html).
 -	*service* extensions, which add new custom services that your plug-in (or other plug-ins) can access just like the standard services built in to Stingray. See [Register a custom service](http://www.autodesk.com/stingray-help?guid=__sdk_help_extend_editor_plugin_extensions_services_html).
 
 Plus:
@@ -365,7 +365,7 @@ This section explains the improvements and fixes that require specific upgrade s
 
 ### Lua API changes
 
-For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](../../lua_ref/versions.html).
+For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__lua_ref_versions_html).
 
 If your project contains any API elements that have been modified or removed, you will need to adjust your code accordingly.
 
@@ -377,13 +377,13 @@ Most changes in this release have been additions of new functions and objects, s
 
 ### Flow node changes
 
-For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
+For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__flow_ref_versions_html).
 
 There are no breaking changes in this release, only additions of new nodes and connections.
 
 ### Material node changes
 
-For a complete list of all new, modified, and removed material shader nodes in this release, see the [version history](../../shader_ref/versions.html).
+For a complete list of all new, modified, and removed material shader nodes in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__shaders_ref_versions_html).
 
 There are no breaking changes in this release, only additions of new nodes and connections.
 
@@ -435,6 +435,6 @@ materials = {
 
 **Note:** Actors defined with an explicit (non-zero) mass in the **Unit Editor** (set and loaded in kg) continue to act as expected.
 
-See also ~{ Global physics properties }~.
+See also [Global physics properties](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=global-physics-properties).
 
 [Return to top](#top)

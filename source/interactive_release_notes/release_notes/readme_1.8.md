@@ -43,7 +43,7 @@ For early adopters of WebGL 2.0 or WebAssembly tech in Stingray, or those who ha
 
 - To support all of this, Stingray now requires a web browser that also supports WebAssembly, like Chrome version 57 or Firefox version 52.
 
-Check out ~{ Get started for the Web }~ for updated information.
+Check out [Get started for the Web](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=get-started-for-the-web) for updated information.
 
 ## Particle Editor updates
 
@@ -53,7 +53,7 @@ Check out ~{ Get started for the Web }~ for updated information.
 
 -	A default particle material gets created when you create a new particle effect.
 
-See ~{ Create and edit particle effects }~.
+See [Create and edit particle effects](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-and-edit-particle-effects).
 
 ## Asset Browser improvements
 
@@ -61,14 +61,14 @@ Searching for online assets indicates the number of results next to the **Online
 
 ![](../images/online_assets_locate.png)
 
-You can also locate an online asset installed in your project using a new option **Locate in Project** from the **Online Assets** view. Select an installed asset (indicated with a green checkmark) and either click the ![](../images/icon_asset_browser_locate.png) icon or right-click and select **Locate in Project**. See ~{ Asset Browser }~.
+You can also locate an online asset installed in your project using a new option **Locate in Project** from the **Online Assets** view. Select an installed asset (indicated with a green checkmark) and either click the ![](../images/icon_asset_browser_locate.png) icon or right-click and select **Locate in Project**. See [Asset Browser](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=asset-browser).
 
 ## Capture Frames Tool updates
 
 You can now define the capture range in your story using the Capture Frames Tool. Instead of recapturing your entire story after making a fix, specify the capture range in frames or seconds, and then quickly recapture.
 
-- ~{ Capture Frames Tool }~
-- ~{ Capture frames to disk }~
+- [Capture Frames Tool](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=capture-frames-tool)
+- [Capture frames to disk](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=capture-frames-to-disk)
 
 ## Texture Manager
 
@@ -76,16 +76,16 @@ Check out the revamped **Texture Manager** with improved texture loading and fil
 
 ![](../images/wn_texture_manager.png)
 
--	~{ Create a texture template }~
--	~{ Create a texture category }~
+-	[Create a texture template](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-a-texture-template)
+-	[Create a texture category](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-a-texture-category)
 
 ## Light baker improvements
 
-A new non-interactive light baking mode has been added to the Stingray baker to better control memory consumption. Instead of baking everything in the scene and showing the progress, this new mode bakes one object in the scene completely and then outputs the lightmap, saving memory in the process. Disable **Interactive** baking in the **Light Baking** window to turn on this mode. Non-interactive baking is also the default baking mode when you launch a baking session from the command line. See ~{ Trigger lightmap baking from the command line }~.
+A new non-interactive light baking mode has been added to the Stingray baker to better control memory consumption. Instead of baking everything in the scene and showing the progress, this new mode bakes one object in the scene completely and then outputs the lightmap, saving memory in the process. Disable **Interactive** baking in the **Light Baking** window to turn on this mode. Non-interactive baking is also the default baking mode when you launch a baking session from the command line. See [Trigger lightmap baking from the command line](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=trigger-lightmap-baking-from-the-command-line).
 
 ## Interop: Updated DCC link plug-in for 3ds Max 2018
 
-This release of Stingray ships with an updated Stingray DCC Link plug-in to support 3ds Max 2018 and 3ds Max 2017. See ~{ Interop with Maya, Maya LT, or 3ds Max }~.
+This release of Stingray ships with an updated Stingray DCC Link plug-in to support 3ds Max 2018 and 3ds Max 2017. See [Linking with Stingray](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=linking-with-productname).
 
 ## Appkit loading screens
 
@@ -93,7 +93,7 @@ We've had many requests from customers who want to know how to start off their p
 
 When you start a new project based on one of the Stingray templates that uses the Appkit, you'll notice that each time you run the project you now start with a "Powered by Autodesk Stingray" loading screen. You can customize this splash screen to show your own logos, or whatever works for your project.
 
-See ~{ Work with the Appkit loading screen }~ for more information.
+See [Work with the Appkit loading screen](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=work-with-the-appkit-loading-screen) for more information.
 
 ## Appkit project script
 
@@ -121,7 +121,7 @@ New functionality has been exposed from the GoogleVR API in the **GoogleVR** tem
 
 ### VR SLI support
 
-VR SLI improves performance for VR applications, and uses multiple GPUs to accelerate stereo rendering. To take advantage of this enhanced performance, manually add two new settings, `disable_implicit_sli` and `nv_vr_sli_enabled`,  to the settings.ini file when working in the VR templates. For more information, see ~{ Stingray engine settings.ini file reference }~.
+VR SLI improves performance for VR applications, and uses multiple GPUs to accelerate stereo rendering. To take advantage of this enhanced performance, manually add two new settings, `disable_implicit_sli` and `nv_vr_sli_enabled`,  to the settings.ini file when working in the VR templates. For more information, see [settings.ini file reference](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=settings-ini-file-reference).
 
 ## Stingray resource files
 
@@ -140,7 +140,7 @@ You can use the **Script Editor** to open and edit Stingray resource files like
 
 ## Experimental feature: HoloLens
 
-Initial support for the HoloLens platform has been added. For more information, see ~{ Get started on HoloLens }~.
+Initial support for the HoloLens platform has been added. For more information, see [Get started on HoloLens](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=get-started-on-hololens).
 
 ## What's New for developers?
 
@@ -170,7 +170,7 @@ This can be useful when you launch multiple instances of the engine from the **C
 
 ## What else is new?
 
-- Motion Blur is now disabled in the default shading environment. (See ~{ Shading environment properties }~.) You can turn Motion Blur on if you want to create a slightly blurred effect when the camera is moving.
+- Motion Blur is now disabled in the default shading environment. (See [Shading environment properties](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=shading-environment-properties).) You can turn Motion Blur on if you want to create a slightly blurred effect when the camera is moving.
 
 - You can now press F1 to open the Stingray Help while using the Editor.
 
@@ -430,8 +430,8 @@ Unless otherwise noted in the **What's Fixed** section, please be aware that thi
 
 	No changes take place when you destroy a shading environment entity and respawn a new entity. After you spawn a new shading environment entity, switching between background levels in the Particle Editor viewport or switching shading environments in the game will not work properly.
 
-	**Workaround:** None. 
-	
+	**Workaround:** None.
+
 	> **Note:** This limitation is fixed in 3ds Max Interactive.
 
 [Return to top](#top)
@@ -450,7 +450,7 @@ The Wwise exporter tool has been updated to finish generating sound banks before
 
 ### Lua API changes
 
-For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](../../lua_ref/versions.html).
+For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__lua_ref_versions_html).
 
 If your project contains any API elements that have been modified or removed, you will need to adjust your code accordingly.
 
@@ -460,7 +460,7 @@ If your project contains any API elements that have been modified or removed, yo
 
 ### Flow node changes
 
-For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
+For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__flow_ref_versions_html).
 
 ### C plug-in API changes
 

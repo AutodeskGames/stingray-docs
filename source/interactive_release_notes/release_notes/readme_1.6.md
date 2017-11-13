@@ -27,7 +27,7 @@ Sections in this topic:
 
 ### Better interop with 3ds Max
 
-New level sync workflows let you automatically rebuild your 3ds Max scenes in Stingray. Once 3ds Max is linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray. Modifications you make to the assets in 3ds Max are then updated inside Stingray. This makes it easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools. This workflow also brings more Vray material properties into the Stingray shader, ensuring your Vray materials look and feel the same in Stingray as they do in 3ds Max. See ~{ Level Sync with Maya, Maya LT, or 3ds Max }~.
+New level sync workflows let you automatically rebuild your 3ds Max scenes in Stingray. Once 3ds Max is linked to the Stingray editor, scene assets can be automatically or manually tagged, and then reproduced with the same layout in Stingray. Modifications you make to the assets in 3ds Max are then updated inside Stingray. This makes it easier to build, iterate, review and change scenes, without having to manually reproduce layouts in two tools. This workflow also brings more Vray material properties into the Stingray shader, ensuring your Vray materials look and feel the same in Stingray as they do in 3ds Max. See [Level Sync with 3ds Max](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=level-sync-with-3ds-max).
 
 ![](../images/wn_3ds_max_vr.jpg)
 
@@ -35,7 +35,7 @@ New level sync workflows let you automatically rebuild your 3ds Max scenes in St
 
 ### Capture frames to disk
 
-You can now capture the active camera or viewport and save frames to disk in the OpenEXR file format. The new Capture Frames tool also supports capturing frames on a test engine. For more information, see ~{ Capture Frames Tool }~.
+You can now capture the active camera or viewport and save frames to disk in the OpenEXR file format. The new Capture Frames tool also supports capturing frames on a test engine. For more information, see [Capture Frames Tool](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=capture-frames-tool).
 
 <br>
 
@@ -72,19 +72,19 @@ Here's [the sample code](../../lua_ref/exa_ex__snippets_proc__meshes.html) for t
 The following Improvements to light baking and post-processing effects (SSAO, SSR) increase the lighting quality and performance of architectural visualization scenes:
 
 - Ambient occlusion is now automatically baked and stored in the alpha channel of your lightmaps.
-- New shading environment properties help you control how to apply baked AO and SSAO to your final scene. You can also run SSAO in screen space or world space. See ~{ Shading Environment Properties }~.
-- A new screen space reflection algorithm allows for better refelection results.
+- New shading environment properties help you control how to apply baked AO and SSAO to your final scene. You can also run SSAO in screen space or world space. See [Shading Environment Properties](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=shading-environment-properties).
+- A new screen space reflection algorithm allows for better reflection results.
 - Normalization of lightmap resolution is now based on the UV space area.
 - UV seam fixup now automatically runs as a post-processing effect when you bake lightmaps.
 - Improved interaction with a lightmapped level, such as material management and object manipulations, without losing the lightmap.
-- The Stingray lightmap baker interface now reflects more meaningful baker settings. See ~{ Baking with the Stingray baker }~ for the updated options.
+- The Stingray lightmap baker interface now reflects more meaningful baker settings. See [Baking with the Stingray baker](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=baking-with-the-built-in-light-baker) for the updated options.
 
 ### VR Improvements
 
-- When running or testing your game using a VR app, the game image appears in your HMD (head mount display) and on your mirror window (your monitor). Set the new vr_mirror_mode setting in the settings.ini to mono (default) or stereo to control the display on the mirror window. See ~{ Stingray engine settings.ini file reference }~.
-- Instanced stereo rendering is now built in to the default renderer provided with Stingray, and all material and post effect shaders are now VR-enabled to implement this optimization. See ~{ Get started in VR }~.
-- The VR Oculus Touch template now supports input from the Oculus Remote and Oculus Touch Controller. The template now ships with Oculus flow nodes. See ~{ Template projects}~.
-- The VR SDK Version has been upgraded to 1.7.0.0. See ~{ Supported platforms }~.
+- When running or testing your game using a VR app, the game image appears in your HMD (head mount display) and on your mirror window (your monitor). Set the new vr_mirror_mode setting in the settings.ini to mono (default) or stereo to control the display on the mirror window. See [Stingray engine settings.ini file reference](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=settings-ini-file-reference).
+- Instanced stereo rendering is now built in to the default renderer provided with Stingray, and all material and post effect shaders are now VR-enabled to implement this optimization. See [Get started in VR](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=get-started-in-vr).
+- The VR Oculus Touch template now supports input from the Oculus Remote and Oculus Touch Controller. The template now ships with Oculus flow nodes. See [Template projects](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=template-projects).
+- The VR SDK Version has been upgraded to 1.7.0.0. See [Supported platforms](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=supported-platforms).
 
 ## Ready to learn Stingray?
 
@@ -94,7 +94,7 @@ Hobbyists, enthusiasts, and early adopters can now run Stingray using a Non-Comm
 
 > **Note:** The Non-Commercial license is not available in all countries.
 
-In addition, if you're tired of searching for and watching tutorial videos, pop open the Stingray **Help** menu and select the brand new top-secret Stingray **Hands-on Training Mission**. We've added 5 quick, *interactive* tutorial lessons that take you through the Stingray basics, and get you well on your way to creating your own project. (Pssst - it's not really a secret. Let us know what you think!) We added a note about this in the ~{ Getting Started }~ topic.
+In addition, if you're tired of searching for and watching tutorial videos, pop open the Stingray **Help** menu and select the brand new top-secret Stingray **Hands-on Training Mission**. We've added 5 quick, *interactive* tutorial lessons that take you through the Stingray basics, and get you well on your way to creating your own project. (Pssst - it's not really a secret. Let us know what you think!) We added a note about this in the [Getting Started](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=getting-started) topic.
 
 <br>
 
@@ -104,11 +104,11 @@ In addition, if you're tired of searching for and watching tutorial videos, pop 
 
 ### Conditional transitions in Animation Controller
 
-The animation controller adds a new node, TransitionSwitch to control the flow of transitions at runtime by evaluating an expression. This expression is defined in the TransitionSwitch and can use Animation Controller variables and functions ("sin", "cos", "abs", etc.). Any transition incoming into a TransitionSwitch, called  TransitionSwitchEntry, is triggered by an Anim Event, and one of the outgoing transitions, called TransitionSwitchExit, is taken depending on the outcome of the expression evaluated against the interval range values for this exit defined in the TransitionSwitch. See ~{ Animation controller states }~.
+The animation controller adds a new node, TransitionSwitch to control the flow of transitions at runtime by evaluating an expression. This expression is defined in the TransitionSwitch and can use Animation Controller variables and functions ("sin", "cos", "abs", etc.). Any transition incoming into a TransitionSwitch, called  TransitionSwitchEntry, is triggered by an Anim Event, and one of the outgoing transitions, called TransitionSwitchExit, is taken depending on the outcome of the expression evaluated against the interval range values for this exit defined in the TransitionSwitch. See [Animation controller states](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=animation-controller-states).
 
 ### Cloth simulation improvements
 
-When importing a cloth object, you do not need to manually add the APEX cloth definitions to the corresponding physics file. The cloth definitions are imported along with the object and you can now add the cloth resources to the object in the Unit Editor. See ~{ Enable APEX Cloth }~.
+When importing a cloth object, you do not need to manually add the APEX cloth definitions to the corresponding physics file. The cloth definitions are imported along with the object and you can now add the cloth resources to the object in the Unit Editor. See [Enable APEX Cloth](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=enable-apex-cloth).
 
 ### Flow support for entities
 
@@ -116,11 +116,11 @@ You can now use Flow to control entities:
 
 -	We've added [several new nodes](../../flow_ref/cat_Entity.html) that you can use to spawn entities dynamically in the level, to set and retrieve data in your entities' components, and to respond to entities being spawned and unspawned.
 
--	You can use the new Flow component to assign a Flow graph to an entity. You can use these Flow components to set up reusable behaviors for your entities, much like the way that each type of unit has its own Unit Flow. See ~{ Set up an entity's behavior using Flow or Lua }~.
+-	You can use the new Flow component to assign a Flow graph to an entity. You can use these Flow components to set up reusable behaviors for your entities, much like the way that each type of unit has its own Unit Flow. See [Set up an entity's behavior using Flow or Lua](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=set-up-an-entity's-behavior-using-flow-or-lua).
 
 ### Stingray file extension
 
-Stingray projects now use the unique file extension *.stingray_project*, making it easy to find and open projects. Double-click the *.stingray_project* file to open the project in the Editor. Updated Help topics include: ~{ Open an existing project }~ and ~{ About the project structure }~.
+Stingray projects now use the unique file extension *.stingray_project*, making it easy to find and open projects. Double-click the *.stingray_project* file to open the project in the Editor. Updated Help topics include: [Open an existing project](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=open-an-existing-project) and [About the project structure](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=about-the-project-structure).
 
 ### Removed restrictions on periods in file and folder names
 
@@ -128,15 +128,15 @@ In previous versions of Stingray, the `.` character had a special meanings when 
 
 ### Simplified texture import
 
-Stingray includes new texture categories and templates such as Normal, Linear Greyscale, Albedo, Albedo Opacity and Roughness/Metallic/AO to help you categorize textures and apply texture settings. The newly added texture templates in the **Texture Manager** come with default compression settings to work on each supported platform. The textures imported in your project are now assigned the default compression settings. See ~{ Import a model with textures and materials }~.
+Stingray includes new texture categories and templates such as Normal, Linear Greyscale, Albedo, Albedo Opacity and Roughness/Metallic/AO to help you categorize textures and apply texture settings. The newly added texture templates in the **Texture Manager** come with default compression settings to work on each supported platform. The textures imported in your project are now assigned the default compression settings. See [Import a model with textures and materials](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=import-a-model-with-textures-and-materials).
 
 ### Occluder boxes
 
-You can use occluder boxes from the **Create** menu to occlude objects and gain performance improvements by avoiding rendering shadows and objects that give no visual impact to your final rendered frame. For more information, see ~{ Create occluder boxes }~.
+You can use occluder boxes from the **Create** menu to occlude objects and gain performance improvements by avoiding rendering shadows and objects that give no visual impact to your final rendered frame. For more information, see [Create occluder boxes](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-occluder-boxes).
 
 ### Download new plug-ins
 
-Download new Stingray plug-ins and update existing ones using the **Get more plugins** selection in the **Plugin Manager**. Select any of the available plugins and click **Install** to download it. See ~{ Add and remove plug-ins using the Plugin Manager }~.
+Download new Stingray plug-ins and update existing ones using the **Get more plugins** selection in the **Plugin Manager**. Select any of the available plugins and click **Install** to download it. See [Add and remove plug-ins using the Plugin Manager](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=add-and-remove-plug-ins-using-the-plugin-manager).
 
 ### Switch between DX11 and DX12 when rendering
 
@@ -355,7 +355,7 @@ This section explains the improvements and fixes that require specific upgrade s
 
 ### Lua API changes
 
-For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](../../lua_ref/versions.html).
+For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__lua_ref_versions_html).
 
 If your project contains any API elements that have been modified or removed, you will need to adjust your code accordingly.
 
@@ -363,7 +363,7 @@ If your project contains any API elements that have been modified or removed, yo
 
 ### Flow node changes
 
-For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
+For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__flow_ref_versions_html).
 
 -	This release mostly features the addition of several Flow nodes for working with entities.
 
@@ -371,7 +371,7 @@ For a complete list of all new, modified, and removed Flow nodes in this release
 
 ### Forward axis settings
 
-To preserve the forward direction in imported assets, set the forward axis setting (`reverse_forward_axis`)   in *.stingray_project*  instead of *settings.ini*. See ~{  Best practices: preserving axis orientation }~.
+To preserve the forward direction in imported assets, set the forward axis setting (`reverse_forward_axis`)   in *.stingray_project*  instead of *settings.ini*. See [Best practices: preserving axis orientation](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=best-practices-preserving-axis-orientation).
 
 In projects that you migrate from earlier versions of Stingray, the forward axis setting is still read from *settings.ini*.
 
@@ -434,7 +434,7 @@ data_compiler = {
 
 You'll also have to change the way that you identify which of these language flags should be active, by calling the new `stingray.Application.set_resource_override(flag_name, priority)` function.
 
-For complete details, see ~{ Localizing resources }~.
+For complete details, see [Localizing resources](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=localizing-resources).
 
 ### Advance notice: moving to Visual Studio 2015
 
