@@ -48,19 +48,17 @@ The following list includes the most common issues that prevent users from runni
 
 1. Make the following ports accessible for 3ds Max Interactive for full software functionality:
 
-	**Local web sockets**
-
-	- 32010-32020
+	- 32010-32011
+	- 34000-34030
+	- 34032
+	- 34034
+	- 36303
 	- 11088
-
-	**Local HTTP connections**
-
-	- 55503-55510
-
-	**TCP/IP connections**
-
-	- 14000-14999
-	- 4888
+	- 3242
+	- 3243
+	- 4601
+	- 14460-14559
+	- 14598
 
 2. **Disable Windows Aero**: To increase UI responsiveness and playback performance, disable Windows Aero while running 3ds Max Interactive.
 
