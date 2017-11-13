@@ -35,8 +35,6 @@ Before you download, verify your system meets the [system requirements](http://w
 
 ## Installing 3ds Max Interactive
 
->	**Important:**  If you have a previously installed version of Autodesk Stingray (including Stingray 1.8 or any newer beta version of Stingray), you'll need to manually uninstall the DCC Link plugin before installing 3ds Max Interactive. Otherwise, the installer mistakenly detects that you have a newer version of the plugin and won't install the latest. You need the right version of this plugin to use the interop features that link 3ds Max with 3ds Max Interactive. After you uninstall your existing version of the plugin (using Windows Control Panel), the correct DCC Link plugin installs automatically when you install 3ds Max Interactive.
-
 #### To install and license 3ds Max Interactive
 
 1. In the 3ds Max Interactive installer window that appears, click **Install**.
