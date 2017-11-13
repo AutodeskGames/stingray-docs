@@ -37,7 +37,7 @@ Sections in this topic:
 
 ![](../images/physical_lights_rn.png)
 
-The new **Physical Light** entity lets you use data from real-world lights to create a realistic distribution of light in your scene. You can add a **Physical Light** from the **Create** panel, and adjust its **Brightness** and **Temperature** using new sliders in the **Property Editor**.  To emulate the distribution of a real-world light source, import an IES Light Profile and assign it to your light. Physical lights are fully compatible with the light baker, so your lights appear when you bake your scene. See ~{ Physically Based Lighting }~ and ~{ Create a physical light }~.
+The new **Physical Light** entity lets you use data from real-world lights to create a realistic distribution of light in your scene. You can add a **Physical Light** from the **Create** panel, and adjust its **Brightness** and **Temperature** using new sliders in the **Property Editor**.  To emulate the distribution of a real-world light source, import an IES Light Profile and assign it to your light. Physical lights are fully compatible with the light baker, so your lights appear when you bake your scene. See [Physically Based Lighting](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=physically-based-lighting) and [Create a physical light](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-a-physical-light).
 
 ## Capture Frame Tool updates
 
@@ -45,7 +45,7 @@ The Capture Frames tool has now been updated to be a frame capturing interface p
 
 ## Favorites in Asset Browser
 
-You can add frequently used assets or folders as favorites ![](../images/icon_asset_favorites.png) to the **Favorites** directory in the **Asset Browser**. Check the favorite icon ![](../images/icon_asset_set_favorite.png) or right-click in the **Asset Browser** and select **Add to Favorites** to mark an asset or folder as favorite. You can also drag and drop assets and folders to the **Favorites** directory. For more information, see ~{ Asset Browser }~.
+You can add frequently used assets or folders as favorites ![](../images/icon_asset_favorites.png) to the **Favorites** directory in the **Asset Browser**. Check the favorite icon ![](../images/icon_asset_set_favorite.png) or right-click in the **Asset Browser** and select **Add to Favorites** to mark an asset or folder as favorite. You can also drag and drop assets and folders to the **Favorites** directory. For more information, see [Asset Browser](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=asset-browser).
 
 ## Texture Manager improvements
 
@@ -53,8 +53,8 @@ Continuing the improvements from the previous release, the **Texture Manager** t
 
 ![](../images/wn_updated_texture_manager.png)
 
--	~{ Create a texture template }~
--	~{ Create a texture category }~
+-	[Create a texture template](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-a-texture-template)
+-	[Create a texture category](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-a-texture-category)
 
 ## Debug projects in Visual Studio Code
 
@@ -68,7 +68,7 @@ This release of Stingray picks up the latest version of FBX (2018.1.1), which pr
 
 ## Updated DCC interop plug-ins
 
-This release also includes an updated Stingray DCC Link plug-in to support Maya 2018 and Maya LT 2018. For information on the plug-ins, see ~{ Interop with Maya, Maya LT, or 3ds Max }~.
+This release also includes an updated Stingray DCC Link plug-in to support Maya 2018 and Maya LT 2018. For information on the plug-ins, see [Linking with Stingray](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=linking-with-productname).
 
 ## Clear coat improvements
 
@@ -78,7 +78,7 @@ Clear coat is now more energy conserving, which reduces bloom when using a clear
 
 ## Custom tone mapping
 
-A new shading environment property lets you disable default tone mapping, and extend tone mapping through a custom plugin. See ~{ Shading environment properties }~.
+A new shading environment property lets you disable default tone mapping, and extend tone mapping through a custom plugin. See [Shading environment properties](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=shading-environment-properties).
 
 >**Note:** It is recommended that you leave default tone mapping enabled unless you are implementing custom post effect features.
 
@@ -88,16 +88,16 @@ Whenever you have to make changes to your project's resources, it's a lot easier
 
 So, as of this release, whenever you're working in the editor and you're connected to a live instance of the Stingray engine (that is, an engine that you launch with either the Test Level ![](../images/icon_test_level.png) or the Run Project ![](../images/icon_run_project.png) buttons), the engine automatically detects any changes you make to your project resources and reloads those modified assets whenever possible.
 
-(Note that for some kinds of assets, like levels and script files, you may need to do a couple of extra steps. For details, see ~{ Reloading resources }~.)
+(Note that for some kinds of assets, like levels and script files, you may need to do a couple of extra steps. For details, see [Reloading resources](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=reloading-resources).)
 
 ## Experimental feature: HoloLens updates
 
-- A new experimental HoloLens project is now available for *source code customers* in the **Online Projects** tab in the **Project Manager**. See ~{ Get started on HoloLens }~.
+- A new experimental HoloLens project is now available for *source code customers* in the **Online Projects** tab in the **Project Manager**. See [Get started on HoloLens](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=get-started-on-hololens).
 - A new option (`mesh_both_sides`) has been added to the `Raycast` Lua function that lets you cast a ray against both sides of triangles. This parameter is needed for raycasting against a spatial mapping mesh on HoloLens.
 
 ## What else is new?
 
--	You can now exclude physics actors from navmesh generation by adding their shape templates in the **Excluded Physics Actor Shape Template** field in the ~{ Navigation options }~.
+-	You can now exclude physics actors from navmesh generation by adding their shape templates in the **Excluded Physics Actor Shape Template** field in the [Navigation options](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=navigation-options).
 -	We have removed the **History** tool from the Stingray Editor. You can view the list of actions executed and undo/redo actions in the Particle Editor or the Texture Manager.
 - The viewport option ![](../images/icon_assetPreview.png) to toggle playing of audio sources in the level is now renamed to **Play Audio Sources**.
 
@@ -403,7 +403,7 @@ Updates have been made to improve clear coat. As a result, the behavior of the `
 
 This release changes the way you interact with entity components in the Lua and C APIs. Each component now requires an ID that is unique within the entity that owns it. You use this ID to retrieve a reference to the individual entity instance from the component manager.
 
-For an overview of how these component IDs and component instances work, check the ~{ Interact with entities during gameplay }~ page.
+For an overview of how these component IDs and component instances work, check the [Interact with entities during gameplay](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=interact-with-entities-during-gameplay) page.
 
 If you're using *either* the Lua or C APIs to interact with your entities, you'll probably have to update your code:
 
@@ -417,7 +417,7 @@ For some background on why we made these changes, see [the blog post](https://ga
 
 ### Lua API changes
 
-For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](../../lua_ref/versions.html).
+For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__lua_ref_versions_html).
 
 If your project contains any API elements that have been modified or removed, you will need to adjust your code accordingly.
 
@@ -445,11 +445,11 @@ If you've used the Stingray SDK to create plug-ins for previous versions of Stin
 
 >	**IMPORTANT NOTE:** Binary compatibility is not guaranteed against the previous version! If you used the C plug-in APIs to create plug-ins for the engine, your plug-in may or may not work correctly against this version of Stingray. It *may* continue to work if your code does not use any of the APIs that have changed since the previous version. However, we strongly recommend getting the latest version of the Stingray SDK header files and re-compiling your plug-in's *.dll* against the new headers.
 
-For a complete list of all new, modified, and removed elements in the engine plug-in API and C script APIs in this release, see the [version history](help.autodesk.com/cloudhelp/ENU/Stingray-SDK-Help/engine_c/versions.html).
+For a complete list of all new, modified, and removed elements in the engine plug-in API and C script APIs in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__engine_c_versions_html).
 
 ### Editor C APIs
 
-For a complete list of all new, modified, and removed elements in the editor plug-in API in this release, see the [version history](help.autodesk.com/cloudhelp/ENU/Stingray-SDK-Help/editor_c/versions.html).
+For a complete list of all new, modified, and removed elements in the editor plug-in API in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__editor_c_versions_html).
 
 In this release, the editor API has not changed significantly. There are no upgrade requirements; it should be binary compatible and API compatible.
 

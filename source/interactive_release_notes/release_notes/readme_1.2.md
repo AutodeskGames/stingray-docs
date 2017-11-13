@@ -99,20 +99,20 @@ Refactored using the Mithril framework, performance in the **Property Editor** i
 
 New entity support in the **Story Editor** lets you configure the shading environment properties of your level. You can now animate an entity’s component properties over time to simulate scenarios like time of day. Add a new entity track to your story, and right-click to browse its keyable components and component properties.
 
-For new information, see ~{ Animate a shading environment with the Story Editor }~.
+For new information, see [Animate a shading environment with the Story Editor](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=animate-a-shading-environment-with-the-story-editor).
 
 
 ## Select and animate sub-objects
 
 Sub-object mode lets you select and animate objects within a unit's hierarchy. Turn on **Sub-object mode** in the toolbar (![](../images/icon_subObjectmode.png)) to select and manipulate any of a unit's nodes in the **Level Viewport**.  You can also key individual nodes in the **Story Editor**. When a new unit track is added, right-click in the tree view and select **Add Sub-object > Object name** to quickly add a new sub-object track.
 
-For new information, see ~{ Animate sub-objects with the Story Editor }~.
+For new information, see [Animate sub-objects with the Story Editor](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=animate-sub-objects-with-the-story-editor).
 
 ## Material interop
 
 The new material interop workflow lets you quickly send material updates between Stingray and Maya. With the Stingray DCC Link plug-in installed, you can import and export Stingray Physically Based Shaders directly to and from a Stingray project folder. When sending a new material between applications, its properties, including all of its input connections and nodes, are preserved.
 
-For new information, see ~{ Send materials to Maya, Maya LT, or 3ds Max }~.
+For new information, see [Send materials to 3ds Max](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=send-materiaks-to-3ds-max).
 
 ## Improved flexibility with Stingray Editor windows
 
@@ -206,7 +206,7 @@ Earlier updates to the plug-in also added the following improvements:
 
 *	Improved Scaleform and Stingray interop
 	*	You can now select a Scaleform project in Stingray Flow using the **Asset Browser**
-	*	You can create a new Scaleform Studio project using the **Create > Scaleform Studio Project** option in the **Asset Browser**. See more in ~{ Integrating a Scaleform Studio project into Stingray }~.
+	*	You can create a new Scaleform Studio project using the **Create > Scaleform Studio Project** option in the **Asset Browser**. See more in [Integrating a Scaleform Studio project into Stingray](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=integrating-a-scaleform-studio-project-into-stingray).
 	*	Run the current Stingray project from Scaleform Studio using the **Player > Run in Stingray** option in Scaleform Studio.
 
 ##FBX Version 2016.1.2
@@ -216,7 +216,7 @@ This release of Stingray picks up the latest version of FBX (2016.1.2), which pr
 
 ##Updated PhysX plug-in
 
-The PhysX plug-in installers for Maya, Maya LT, and 3ds Max that ship with Stingray are now updated to install the latest version of the PhysX plug-in. This plug-in includes several improvements and bug fixes by Nvidia. For related information, see ~{ Install the PhysX plug-in for your DCC tool }~.
+The PhysX plug-in installers for Maya, Maya LT, and 3ds Max that ship with Stingray are now updated to install the latest version of the PhysX plug-in. This plug-in includes several improvements and bug fixes by Nvidia. For related information, see [Install the PhysX plug-in for your DCC tool](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=install-the-physx-plug-in-for-your-dcc-tool).
 
 ##Improved accessibility to Stingray help resources
 
@@ -528,7 +528,7 @@ This section explains the improvements and fixes that require specific upgrade s
 
 The Android SDK version used by Stingray has not changed. However, we have updated the required version for the platform tools and build tools.
 
-See ~{ Get started on Android }~ and make sure that you have installed a version of the platform tools that is compatible with Stingray, and a version of the build tools that is compatible with the version of Android used on your device.
+See [Get started on Android](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=get-started-on-android) and make sure that you have installed a version of the platform tools that is compatible with Stingray, and a version of the build tools that is compatible with the version of Android used on your device.
 
 ### Xbox One XDK version
 
@@ -536,7 +536,7 @@ Stingray now requires the **August 2015 QFE 2** release of the XDK.
 
 ### Lua API changes
 
-For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](../../lua_ref/versions.html).
+For a complete list of all new, modified, and removed elements in the Lua API in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__lua_ref_versions_html).
 
 If your project contains any API elements that have been modified or removed, you will need to adjust your code accordingly.
 

@@ -31,29 +31,29 @@ Sections in this topic:
 
 When you open an existing project, or a project without a version number specified (in the project settings.ini file), you'll be automatically prompted to migrate the project to work with Stingray 1.3.
 
-Note that after you create or open a project in Stingray 1.3, those projects no longer work with earlier versions of Stingray. See ~{ Open an existing project }~.
+Note that after you create or open a project in Stingray 1.3, those projects no longer work with earlier versions of Stingray. See [Open an existing project](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=open-an-existing-project).
 
 ## New in Rendering
 
 ### Texture streaming
 
-The engine can now stream textures from disk automatically when they are needed for rendering, instead of keeping them in memory persistently. This can help you increase the number of different textures you use in your game without increasing your memory requirements or your initial load times. For details, see ~{ Texture streaming }~.
+The engine can now stream textures from disk automatically when they are needed for rendering, instead of keeping them in memory persistently. This can help you increase the number of different textures you use in your game without increasing your memory requirements or your initial load times. For details, see [Texture streaming](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=texture-streaming).
 
 ### Clear coat
 
-The new clear coat shader lets you simulate a translucent layer of film on a surface. For example, you can use clear coat to create colored films on metal, like car paint. See ~{ Create a clear coat material }~.
+The new clear coat shader lets you simulate a translucent layer of film on a surface. For example, you can use clear coat to create colored films on metal, like car paint. See [Create a clear coat material](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-a-clear-coat-material).
 
 ![](../images/wn_clearcoat.png)
 
 ### Cloth shading
 
-You can now use the new **Cloth Falloff** property to mimic a cloth-like appearance. See ~{ Simulate cloth }~.
+You can now use the new **Cloth Falloff** property to mimic a cloth-like appearance. See [Simulate cloth](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=simulate-cloth).
 
 ![](../images/wn_cloth.png)
 
 ### Fur
 
-Stingray now includes a new standard fur material that lets you add short fur to assets like bears, cats, and dogs. See ~{ Create Fur }~.
+Stingray now includes a new standard fur material that lets you add short fur to assets like bears, cats, and dogs. See [Create Fur](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=create-fur).
 
 ![](../images/wn_fur.png)
 
@@ -61,7 +61,7 @@ Stingray now includes a new standard fur material that lets you add short fur to
 
 The Particles system now uses the standard shader graph, making the workflow consistent with how you edit shaders in Stingray.
 
-In the default particle system, the **Material:Billboard** component is replaced by the **Billboard Visualizer** component, which lets you specify a single material, and edit the shader graph to modify it. A new material called particle_default is assigned to the Billboard Visualizer component by default. See ~{ Particle system properties }~ for updated information.
+In the default particle system, the **Material:Billboard** component is replaced by the **Billboard Visualizer** component, which lets you specify a single material, and edit the shader graph to modify it. A new material called particle_default is assigned to the Billboard Visualizer component by default. See [Particle system properties](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=particle-system-properties) for updated information.
 
 Several nodes have been added to support the new physically based materials used for particles. Refer to the [Stingray Shader Node Reference](../../shaders_ref/index.html) for details on the new nodes, including:
 
@@ -102,18 +102,18 @@ The Pool room example to shows off the physically-based rendering capabilities o
 
 ## Updated DCC interop plug-ins
 
-Updated the Stingray DCC Link plug-in to support Maya 2016 Extension 2, Maya LT 2016 Extension 3, and 3ds Max 2017. See ~{ Interop with Maya, Maya LT, or 3ds Max }~.
+Updated the Stingray DCC Link plug-in to support Maya 2016 Extension 2, Maya LT 2016 Extension 3, and 3ds Max 2017. See [Linking with Stingray](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=linking-with-productname).
 
 ## New FBX Import options
 
 ### Import Materials
-You can now group materials together on import. Ensure **Create Materials Folder** is on in the **FBX Import options** to group any materials associated with the imported objects in a new Materials folder. See ~{ Import a model with textures and materials }~.
+You can now group materials together on import. Ensure **Create Materials Folder** is on in the **FBX Import options** to group any materials associated with the imported objects in a new Materials folder. See [Import a model with textures and materials](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=import-a-model-with-textures-and-materials).
 
 ### Mikktspace tangent support
 New mikktspace support consistently generates tangent spaces for an imported mesh. The new **Tangent** option in the **FBX Import options** lets you **Import** vertex tangents or **Calculate** tangents using mikktspace tangent generation. If you import a model that contains vertex tangents, Stingray imports them from the file. Missing tangents are generated using mikktspace.
 
 ## Animation clip updates
-Curves for animated properties are now imported with animation clips. The name of each imported curve is displayed in a read-only list in the animation clip properties, and new options in the ~{ Animation Clip Properties }~ let you select the type of curves (**Transform Curves** or **Property Curves**) that are evaluated during playback.
+Curves for animated properties are now imported with animation clips. The name of each imported curve is displayed in a read-only list in the animation clip properties, and new options in the [Animation Clip Properties](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=animation-clip-properties) let you select the type of curves (**Transform Curves** or **Property Curves**) that are evaluated during playback.
 
 ## Extended custom Flow node variable types
 
@@ -131,7 +131,7 @@ You can now search for nodes in your flow graph using the *Search* in the **Leve
 
 ## Asset Browser improvements
 
-The following new ~{ Asset Browser }~ shortcuts let you browse assets in your game project more efficiently:
+The following new [Asset Browser](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=asset-browser) shortcuts let you browse assets in your game project more efficiently:
 
 * Right-click anywhere in the **File View** and select **Show in Explorer** to open the current directory in Windows Explorer.
 
@@ -139,15 +139,15 @@ The following new ~{ Asset Browser }~ shortcuts let you browse assets in your ga
 
 ## Enable Apex Cloth
 
-You can now view cloth simulation in the viewport. You must make changes directly in your project's settings.ini file before you can enable Apex cloth in the editor. See ~{ Enable Apex Cloth }~.
+You can now view cloth simulation in the viewport. You must make changes directly in your project's settings.ini file before you can enable Apex cloth in the editor. See [Enable Apex Cloth](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=enable-apex-cloth).
 
 ## Updated PhysX plug-in
 
-The PhysX plug-in installers for Maya, Maya LT, and 3ds Max that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.20222.00162a. This plug-in includes several improvements and bug fixes by Nvidia. For related information, see ~{ Install the PhysX plug-in for your DCC tool }~.
+The PhysX plug-in installers for Maya, Maya LT, and 3ds Max that ship with Stingray are now updated to install the latest version of the PhysX plug-in, version 3.3.20222.00162a. This plug-in includes several improvements and bug fixes by Nvidia. For related information, see  [Install the PhysX plug-in for your DCC tool](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=install-the-physx-plug-in-for-your-dcc-tool).
 
 ## Launch data compilation in the Connections Panel
 
-New data compile options let you use the **Connections Panel** to launch a data compilation for a specific target. Right-click a target in the **Connections Panel** and select **Compile Data** or **Compile and Bundle Data**. See ~{ Using the Connections Panel }~.
+New data compile options let you use the **Connections Panel** to launch a data compilation for a specific target. Right-click a target in the **Connections Panel** and select **Compile Data** or **Compile and Bundle Data**. See [Using the Connections Panel](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=using-the-connections-panel).
 
 ## Support for PlayGo on PS4
 
@@ -406,7 +406,7 @@ Major changes:
 
 ### Flow node changes
 
-For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](../../flow_ref/versions.html).
+For a complete list of all new, modified, and removed Flow nodes in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__flow_ref_versions_html).
 
 If your project contains any of the Flow nodes that have been modified or removed, you will need to make sure that your graphs are wired correctly by deleting any old versions of the node and re-inserting the new version.
 
@@ -418,7 +418,7 @@ Major changes:
 
 ### Shader node changes
 
-For a complete list of all new, modified, and removed shader nodes in this release, see the [version history](../../shader_ref/versions.html).
+For a complete list of all new, modified, and removed shader nodes in this release, see the [version history](http://help.autodesk.com/view/Stingray/ENU/?guid=__shaders_ref_versions_html).
 
 Major changes:
 

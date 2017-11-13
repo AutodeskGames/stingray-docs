@@ -26,7 +26,7 @@ This section lists known limitations and workarounds for Stingray 1.0.113.0.
 - GAME-9485 Licensing dialogs are not displaying correctly on high DPI resolutions
 - GAME-9477 Saving a level, creating a particle, give "Failed to generate thumbnail for ..." warnings
 - GAME-9466 Old level editor viewport not responding to mouse clicks after restarting the engine
-- GAME-9441 Games Launcher | Stingray Docuementation link is incorrect
+- GAME-9441 Games Launcher | Stingray Documentation link is incorrect
 - GAME-9439 s2d-content folder missing from installation
 - GAME-9438 Terrain undergrowth with artifacts
 - GAME-9429 **Asset Browser**: thumbnail no longer shown on renaming a material, and Asset Preview name is not updated

@@ -1,7 +1,7 @@
 # Stingray 1.2.5 Release Notes
 <a name="top"></a>
 
-Stingray 1.2.5 (1.2.564.5) is a minor product update which aligns common install and licensing components to work with Maya LT 2016 Extension 3, Maya 2016 Extension 2, and 3ds Max 2017. If you intend to work with those product releases, you'll need the DCC link plug-in included with this release of Stingray. See also ~{ Interop with Maya, Maya LT, or 3ds Max }~.
+Stingray 1.2.5 (1.2.564.5) is a minor product update which aligns common install and licensing components to work with Maya LT 2016 Extension 3, Maya 2016 Extension 2, and 3ds Max 2017. If you intend to work with those product releases, you'll need the DCC link plug-in included with this release of Stingray. See also [Linking with Stingray](http://help-staging.autodesk.com/view/Stingray/ENU/?contextId=linking-with-productname).
 
 Updated Autodesk licensing and installation information is included in this version of the Stingray online help.
 
