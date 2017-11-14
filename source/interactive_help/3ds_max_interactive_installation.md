@@ -21,7 +21,7 @@ You can download 3ds Max Interactive from your [Autodesk Account](https://manage
 
 ## Downloading 3ds Max Interactive
 
-Before you download, verify your system meets the [system requirements](http://www.autodesk.com/stingray-systemreq-enu).
+Before you download, verify your system meets the ~{ System Requirements }~.
 
 #### To download 3ds Max Interactive:
 
