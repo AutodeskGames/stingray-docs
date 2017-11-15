@@ -128,7 +128,15 @@ The deployer creates an *.ipa* file for your app, and copies it to the location 
 
 **After deploying:**
 
--	To copy your deployed app to a connected device for testing, use iTunes.
+-	To copy your deployed app to a connected device for testing, use iTunes on your Windows computer.
+
+	-	If you're using version 12.6.x or earlier, drag and drop your *.ipa* into your Apps library, then sync your device.
+
+	-	If you're using version 12.7 or later, drag your *.ipa* over your device's entry in the vertical ribbon. Your device is outlined in blue to indicate that the app will be copied:
+
+		![Copy with iTunes](../images/ios_copy_with_itunes.png)
+
+		**Tip:** This method may not work for all devices. If it doesn't work for you, try installing the special [12.6.3 version of iTunes](https://support.apple.com/en-us/HT208079) that adds back the Apps library. If this fails, you may have to copy the *.ipa* to your Mac OS X machine and [transfer it from there using Xcode](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW9).
 
 -	To distribute your app on the Apple iTunes Store, use the tools provided by Apple. See the [App Distribution Guide](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html).
 
