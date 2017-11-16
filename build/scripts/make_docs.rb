@@ -94,14 +94,13 @@ def build()
   if $options[:interactive_help] or $options[:all]
 		puts "Building the interactive component help..."
 		output_path = "output/#{$output_path_segment}/#{$lang_dir}/preview/"
+		ENV["SR_DOC_DIR"] = "#{$script_dir}/../.."
 		if $lang_import_dir == ""
 			# Run reference doc generation in the engine submodule
 			ENV["SR_DOCTOOLS_DIR"] = $doctools_dir
-			ENV["SR_DOC_DIR"] = "#{$script_dir}/../.."
 			system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--shader-ref")
 			system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--flow-ref")
 			system("ruby", "#{$engine_dir}/docs/build/make_docs.rb", "--lua-ref")
-			ENV["SR_DOC_DIR"] = ""
 			ENV["SR_DOCTOOLS_DIR"] = ""
 			puts "Getting latest command docs..."
 			system("ruby", "#{$script_dir}/get_content_from_cpp.rb")
@@ -113,6 +112,7 @@ def build()
 		system("#{$doctools_dir}/tools/ADE-HTML-2.1-tools.exe", "#{$script_dir}/../config/interactive_help.xml")
     ENV["SR_PLUGINS_DIR"] = ""
 		ENV["SR_ENGINE_DIR"] = ""
+		ENV["SR_DOC_DIR"] = ""
 		puts "Done. Look under #{output_path}."
 		if $options[:interactive_help] and $options[:launch]
 			system("start", "#{$script_dir}/../../#{output_path}/index.html")
