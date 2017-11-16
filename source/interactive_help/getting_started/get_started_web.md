@@ -51,19 +51,25 @@ See also ~{ Using the Deployer panel }~.
 
 ## About the web project output
 
-Whether you are running the project from the interactive editor or deploying to disk, the same engine binaries will be used for both tasks. However, in the case of deployment, the project data will additionally be bundled, just like other platforms. After deploying, looking into the final deployment folder specified in the **Deployer** panel, you will find:
+After you deploy, you'll find the following files in the **Destination** folder you set in the **Deployer** panel:
 
--	A *.wasm* and a *.js* file that are essentially the result of compiling the engine's runtime into WebAssembly, with some JavaScript glue.
+-	A *.wasm* and a *.js* file that are essentially the result of compiling the engine's runtime into WebAssembly, with some JavaScript glue. (Whether you are running the project from the interactive editor or deploying to disk, the same engine binaries are used for both tasks.)
 
 -	An *.html* wrapper that loads the engine's runtime WebAssembly and JavaScript files and instructs it to launch your project. This default page is branded with default logos, but you can customize it freely if you want, or use it as a model to write your own HTML wrapper page.
 
 -	A *scripts* folder that contains additional JavaScript files required to properly initialize the engine. Those can also be configured at will.
 
--	A *content* folder that contains your project compiled-bundled data.
+-	A *content* folder that contains your project's compiled data. If you use the **Deployer** to package the project for the web, the project data is aggregated into *bundles*, just as it is on other platforms. See also ~{ About the content lifecycle }~.
+
+**To run a deployed project in your browser:**
+
+Host the contents of the destination folder on a web server, and access the *.html* wrapper through an HTTP connection.
+
+>	**NOTE:** You cannot simply open the *.html* wrapper file in a browser directly from your computer's file system. Due to security concerns, most browsers restrict the types of content they will load and run from `file://` URLs on the local disk or a shared drive.
 
 ## About the launch process
 
-Starting up a {{ProductName}} project in the browser is a multi-step process. This sequence happens automatically without you needing to do anything, but it can be helpful to know a bit about what's happening behind the scenes.
+Starting up the {{ProductName}} engine in the browser is a multi-step process. This sequence happens automatically without you needing to do anything, but it can be helpful to know a bit about what's happening behind the scenes.
 
 1.	**Downloading**. In this step, the browser is downloading and compiling the engine's runtime *.wasm* and *.js* files. The actual project data is *not* downloaded in this step.
 
@@ -90,6 +96,8 @@ Starting up a {{ProductName}} project in the browser is a multi-step process. Th
 If your project doesn't run in the browser:
 
 -	Make sure you are using a browser that supports **both** WebAssembly and WebGL 2.0 as specified above.
+
+-	Make sure you're accessing your project's *.html* page through a web server, not by loading it directly from your computer's file system.
 
 -	If you have a problem launching from the **Connections** panel, double-check that your **Browser path** points to the *.exe* of your browser and not any other files.
 
