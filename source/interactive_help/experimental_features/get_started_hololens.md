@@ -1,12 +1,14 @@
 # Get started on HoloLens
 
->**Note: The HoloLens platform is still in development and work on the deployment and editor workflows is ongoing. This page is subject to change.**
+>	**Note: You currently need access to the {{ProductName}} source code in order to work with the HoloLens platform, since we don't yet include engine binaries for UWP (Universal Windows Platform) in the standard {{ProductName}} installer. We're still working on the deployment and editor workflows, so the material on this page is subject to change.**
 
 ## Step 1. Building for HoloLens
 
-Building for UWP requires Visual Studio 2015 with the prerequisites listed on the ~{ Supported Platforms }~ page.
+Building the {{ProductName}} engine for UWP requires Visual Studio 2015 with the prerequisites listed on the ~{ Supported Platforms }~ page.
 
 >**Tip:** You can build the uwp32 engine for HoloLens with the console command `ruby make.rb -p hololens`.
+
+For more information, see the *readme.md* file at the root of the source code repository.
 
 ## Step 2. Deploying to HoloLens
 
