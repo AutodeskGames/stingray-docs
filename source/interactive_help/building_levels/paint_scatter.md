@@ -28,7 +28,7 @@ You can use the Scatter tool to randomly scatter the selected unit either as an 
 
 2.	Adjust the ~{ Scatter Tool Properties }~ to control the **Frequency** and **Orientation** of your scatter.
 
-3.	Click-drag the scatter indicator in your scene to paint. You must scatter on an existing unit. You can not scatter in an empty viewport or on units that have existing scatter.
+3.	Click-drag the scatter indicator in your scene to paint. You must scatter on an existing unit. You cannot scatter in an empty viewport or on units that have existing scatter.
 
 4.	Use the following hotkeys to adjust your scatter brush:
 
