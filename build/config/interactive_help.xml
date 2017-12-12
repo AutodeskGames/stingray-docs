@@ -120,7 +120,7 @@
 	<merge id="interactive_help">
 		<source convert_from="markdown"
 			get_metadata="true"
-			github_root_public="https://git.autodesk.com/gameware/stingray-docs/tree/master/source/interactive_help"
+			github_root_public="https://www.github.com/AutodeskGames/stingray-docs/tree/master/source/interactive_help"
 			github_root_internal="https://git.autodesk.com/gameware/stingray-docs/tree/%CURRENT_BRANCH%/source/interactive_help"
 			>..\..\source\interactive_help\*.md</source>
 		<source>..\..\source\interactive_help\*.png</source>
