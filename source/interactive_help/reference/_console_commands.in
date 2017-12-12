@@ -1,0 +1,386 @@
+﻿# Console commands
+
+This page lists all console commands that you can send to an instance of the engine from the command line in the **Status bar** of the interactive editor.
+
+For details on how to send commands, see ~{ Send commands from the Status bar }~.
+
+---
+Related topics:
+-	~{ Log Console }~
+-	~{ Status bar }~
+-	~{ Send commands from the Status bar }~
+---
+
+# List of all commands
+
+<!-- The following content is automatically generated. Do not edit by hand. -->
+
+*	[apex]
+*	[crash]
+*	[file_system]
+*	[game]
+*	[graph]
+*	[help]
+*	[lua]
+*	[memory_resources]
+*	[memory_tree]
+*	[network]
+*	[particles]
+*	[perfhud]
+*	[physics]
+*	[profiler]
+*	[pump]
+*	[reboot]
+*	[refresh]
+*	[renderer]
+*	[statistics]
+*	[streamer_stats]
+*	[vector_field]
+
+# apex
+
+Controls runtime debugging for the APEX cloth physics system. This command
+is only available if the APEX system is enabled in your version of the
+Stingray engine.
+
+Requires one of the following parameters.
+
+*	`show <PARAMETER>`: shows the specified visualization parameter.
+*	`hide <PARAMETER>`: hides the specified visualization parameter.
+
+The `<PARAMETER>` setting accepts the following values: `normals`, `tangents`, `bitangents`,
+`lod-benefits`, `bone-frames`, `collision-volumes`, `collision-volumes-wire`, `mesh`, `skeleton`,
+`skinned-positions`, `velocities`, and `wind`.
+
+# crash
+
+Causes a crash, in order to test the game's crash handling systems.
+
+Requires one of the following parameters.
+
+*	`access_violation`: causes a memory access violation.
+*	`alignment`: accesses data using the wrong memory alignment.
+*	`assert`: calls `assert(false)` in order to provoke an assert.
+*	`div_by_0`: divides a number by zero.
+*	`error`: causes a system error.
+*	`fpu`: causes a floating-point division by zero.
+*	`out_of_memory`: allocates too much memory.
+*	`purecall`: calls a function declared as `pure virtual`.
+
+# file_system
+
+Simulates running the game on slower file systems.
+
+Accepts only one parameter:
+
+*	`emulate_seek_time <SECONDS>`: sets a minimum seek time for accessing the file system.
+	This delay is applied to all disk read operations *except* when reading from
+	continuous memory locations.
+
+# game
+
+Controls the game.
+
+Requires one of the following parameters.
+
+*	`pause`: pauses the game.
+*	`unpause`: resumes a paused game.
+
+# graph
+
+Draws graphs in the game viewport that show the changes in profiled data over time.
+
+Requires one of the parameters described in the following sections.
+
+Note that any `<FIELD>` name setting you provide must match a value tracked by the
+statistics system. This may be any of the values the engine tracks by default, such
+as `application.fps` or `lua.gc.total`. This may also be a value that you have requested
+to be tracked by calling the `stingray.Profiler.record_statistics()` function in your Lua code.
+
+**Visibility**
+
+*	`show`: lists all the graphs that can be displayed.
+*	`show <NAME>`: shows the graph with the specified name.
+*	`hide`: hides all graphs.
+*	`hide <NAME>`: hides the graph with the specified name.
+
+**Screen layout and position**
+
+*	`layout <MODE>`: sets the layout mode for drawing the graphs. The `<MODE>`
+	parameter accepts any of the following values: `fill`, `top`, `bottom`, `left` or `right`.
+*	`size <SIZE>`: sets the preferred size of the graphs, in pixels.
+	Note that the actual size may be adjusted in order to satisfy the preferred layout setting.
+
+**Customizing graphs and data**
+
+*	`make <NAME>`: creates a new graph with the specified name.
+*	`add <GRAPH> <FIELD>`: adds a numeric field to the specified graph.
+*	`add_vector3 <GRAPH> <FIELD>`: adds a Vector3 field to the specified graph.
+*	`remove <GRAPH> <FIELD>`: removes the specified field from the specified graph.
+*	`profile <COUNTER> <ON/OFF>`: toggles the specified counter on or off in the profile graph.
+	The `<ON/OFF>` setting accepts the values `on` or `off`. Any other value results in
+	toggling the current status.
+
+**Customizing how graph data are displayed**
+
+*	`range <GRAPH>`: sets the range of the specified graph to an automatically computed value.
+*	`range <GRAPH> <MIN> <MAX>`: sets the range of the specified graph to use the specified
+	minimal and maximal floating-point values.
+*	`history <GRAPH> <ITEMS>`: sets the number of history items to show in the specified graph.
+*	`color <FIELD> <COLOR>`: sets the color of the specified field.
+	Accepts `white`, `yellow`, `purple`, `cyan`, `red`, `green`, `blue`, `black`,
+	three-digit and six-digit hexadecimal RGB values (e.g. `FFF`, `F0F0F0`).
+	Default value is `yellow`.
+
+# help
+
+Prints to the log a list of all available console commands, with a brief
+description of each.
+
+To retrieve details about the parameters accepted by any command,
+append the name of that command as an argument to `help`. For example:
+
+~~~
+> help profiler
+~~~
+
+# lua
+
+Controls logging of Lua memory allocations.
+
+Accepts only one parameter:
+
+*	`trace`: traces Lua memory allocations made in the next frame, and
+	prints them to the log console.
+
+# memory_resources
+
+Prints the memory used by resources to the console log. For each type of resource,
+you receive the total memory allocated for all resources of that type, and the
+name of the largest resource of that type.
+
+Requires one of the following parameters.
+
+*	`all`: includes all types of resources in the report.
+*	`sound`: includes only audio resources in the report.
+*	`texture_categories [details]`: includes only texture resources. Add the
+	optional `details` setting to retrieve more detailed information about
+	each.
+*	`list <TYPE>`: includes detailed information about resources of the
+	specified type. For example, `memory_resources list unit`.
+
+# memory_tree
+
+Prints the current memory usage of the engine to the log, arranged in
+a hierarchical tree structure.
+
+# network
+
+Controls the operation of the networking system, and allows you to simulate
+poor connections to specified peers in the network.
+
+Requires one of the parameters described in the following sections.
+
+**Connection strength**
+
+For these parameters, the `[#peer]` setting is optional. If you omit it, the
+operation will be applied to the default peer. If you specify the peer, you must
+provide its ID, prefixed by the `#` character.
+
+Probability values must be expressed as a value between `0.0` and `1.0`.
+
+*	`packet_loss [#peer] <PROBABILITY>`: sets the probability of a simulated packet
+	loss occurring to or from the specified peer.
+*	`packet_loss_duration [#peer] <LOSS_DURATION> <PASS_DURATION>`: sets the duration
+	of a packet loss simulation, in seconds.
+*	`duplication [#peer] <PROBABILITY>`: sets the probability of a duplicated packet
+	occurring to or from the specified peer.
+*	`latency [#peer] <MIN_LATENCY> <MAX_LATENCY>`: sets the minimum and maximum latency
+	to simulate for the connection to the specified peer, in seconds. To disable latency
+	simulation, set both values to `0`.
+*	`limit <UPLOAD_KBPS> <DOWNLOAD_KBPS>`: sets limits on the transfer rates for uploads
+	and downloads, in kilobits per second.
+
+**Logging levels**
+
+*	`log silent`: no messages will be written to the log.
+*	`log warnings`: only warnings will be written to the log.
+*	`log messages`: brief messages and warnings will be written to the log.
+*	`log spew`: detailed messages and warnings will be written to the log.
+
+# particles
+
+Controls runtime debugging for the particle system.
+
+For all parameters, the `<ON/OFF>` setting accepts the values `on` or `off`.
+Any other value toggles the current status.
+
+**Debugging in-game**
+
+*	`debug <ON/OFF>`: determines whether or not the particle system is drawn in the game viewport.
+*	`debug_collision_cache <ON/OFF>`: determines whether or not collision cache is drawn in the game viewport.
+*	`debug_collision_cache_plane_half_width <VALUE>`: set the plane half width when collision cache is drawn in the game viewport.
+*	`list`: lists active particle effects.
+
+# perfhud
+
+Draws performance statistics in the game viewport.
+
+Requires one of the parameters described in the following sections.
+
+**Subsystems**
+
+*	`artist`: toggles graphic performance statistics.
+*	`lua`: toggles performance statistics for the Lua environment.
+*	`culling`: toggles statistics for render culling.
+*	`audio`: toggles statistics for the audio sub-system.
+*	`memory`: toggles memory statistics.
+*	`texture_streaming`: toggles memory statistics and status for the texture streaming system.
+*	`network`: toggles the performance of the networking system.
+
+**Networking statistics**
+
+*	`network_messages`: toggles statistics on network messages.
+*	`network_peer <INDEX>`: toggles statistics related to the peer with the specified
+	index. The `<INDEX>` setting must be between 1 and the current number of connected peers.
+*	`network_peers`: toggles a list of connected peers.
+*	`network peers <UNITS>`: sets the type of units to use for peer graphs. The value of the
+	`<UNITS>` setting may be either `kbps` for kilobits per second, or `bytes`.
+*	`network_ping`: toggles statistics for network pings per peer.
+*	`network_qos`: toggles statistics for the Quality of Service (QOS) system.
+
+# physics
+
+Controls runtime debugging for the physics system.
+
+Requires one of the parameters described in the following sections.
+
+For all parameters, the `<ON/OFF>` setting accepts the values `on` or `off`.
+Any other value toggles the current status.
+
+**Debugging in-game**
+
+*	`debug <ON/OFF>`: determines whether or not physics shapes are drawn in the game viewport.
+*	`debug_raycasts <ON/OFF>`: determines whether or not raycasts are drawn in the game viewport.
+*	`debug_overlaps <ON/OFF>`: determines whether or not physics overlaps are drawn in the game viewport.
+*	`debug_movers <ON/OFF>`: determines whether or not physics movers are drawn in the game viewport.
+*	`scale <VALUE>`: sets the visualization scale. Use `0` to disable scaling.
+*	`show <PARAMETER>`: shows the specified visualization parameter.
+*	`hide <PARAMETER>`: hides the specified visualization parameter.
+
+The `<PARAMETER>` settings for `show` and `hide` accept the following values: `world_axes`,
+`body_axes`, `body_mass_axes`, `body_lin_velocity`, `body_ang_velocity`, `body_joint_groups`,
+`contact_point`, `contact_normal`, `contact_error`, `contact_force`, `actor_axes`, `collision_aabbs`,
+`collision_shapes`, `collision_axes`, `collision_compounds`, `collision_fnormals`, `collision_edges`,
+`collision_static`, `collision_dynamic`, `collision_pairs`, `joint_local_frames`, `joint_limits`,
+`particle_system_position`, `particle_system_velocity`, `particle_system_collision_normal`,
+`particle_system_bounds`, `particle_system_grid`, `particle_system_broadphase_bounds`,
+`particle_system_max_motion_distance`, `cull_box`
+
+**Debugging in the log console**
+
+*	`debug_events <ON/OFF>`: determines whether or not connected physics events are debugged.
+*	`dump_metadata`: Sends a file that contains PhysX metadata to the log console.
+
+**Debugging in visual debugger**
+
+*	`connect`: connects the game to the physics debugger listening on `localhost:5425`.
+*	`connect <HOST> <PORT>`: connects the game to the physics debugger listening on
+	the specified host and post number.
+*	`disconnect`: disconnects the game from the visual debugger.
+
+# profiler
+
+Controls the built-in performance profiling system.
+
+Requires one of the following parameters:
+
+*	`pause`: pauses the game in the profiler.
+*	`unpause`: resumes a paused game in the profiler.
+*	`stall <seconds>`: sets the threshold for stall warnings.
+
+# pump
+
+Advances the game by a single frame when running in pumped mode.
+
+# reboot
+
+Restarts the game application.
+
+Accepts any number of the following parameters. All parameters are optional,
+and you can specify multiple parameters in the same command line.
+
+*	`-ini <RESOURCE>`: uses the specified resource instead of the default
+	*settings.ini* file.
+*	`-editor-ini <RESOURCE>`: uses the specified resource as the initialization
+	file for the editor.
+*	`-force-unload true`: forces unloading all resources from memory.
+*	`-wait-for-debugger true`: waits for a connection to the editor's lua debugger.
+*	`-flag <NAME>=<VALUE>`: sets a configuration parameter for the rebooted game,
+	overriding the value set in the initialization file. The `<VALUE>` setting
+	may be `true`, `false`, or any numeric value.
+
+# refresh
+
+Forces a reload of all resources that have changed since the last time they
+were loaded in the game.
+
+# renderer
+
+Controls the renderer.
+
+Requires one of the following parameters.
+
+*	`reload_shader_lib <LIB>`: reloads the specified shader library.
+*	`reload_config <CONFIG>`: reloads the specified render config.
+*	`caps <VARIABLE> <VALUE>`: sets the specified render cap.
+*	`settings <VARIABLE> <VALUE>`: sets the specified render setting value.
+
+# statistics
+
+Prints a record of current statistics to the log console. For example:
+
+~~~
+application.fps = 32.638138
+application.smoothed_fps = 49.530058
+lua.gc.total = 1008.000000
+lua.frame_alloc_count = 0.000000
+memory.default_allocator.size = 53.452225
+lua.gc.estimate = 1003.000000
+application.smoothed_delta_time = 20.189760
+lua.frame_alloc_bytes = 0.000000
+memory.page_allocator.size = 56.937500
+application.delta_time = 30.639002
+lua.gc.percentage = 0.007976
+lua.gc.collection_ms = 0.500000
+~~~
+
+# streamer_stats
+
+Prints a record of each resource managed by the texture streaming system. See ~{ Texture streaming }~.
+
+Each record includes the following information:
+
+*	`total mips`: The total number of mip levels the compiled texture resource contains for the current platform.
+*	`resident mips`: The number of mip levels that are always loaded into memory for the texture on the current platform.
+*	`current mip`: The mip level that is currently loaded into the streamer's shared memory pool for the texture.
+*	`resident texture mem`: The memory consumption of the resident mip levels only.
+*	`streamable texture mem`: The memory consumption of the mip levels currently loaded into the shared memory pool.
+
+# vector_field
+
+Controls runtime debugging for vector fields.
+
+Requires one of the following parameters.
+
+*	`draw <NAME>`: specifies the name of the vector field whose data will be drawn
+	in the game viewport.
+*	`draw_color <COLOR>`: sets the color to use for drawing the vector field.
+	Accepts `white`, `yellow`, `purple`, `cyan`, `red`, `green`, `blue`, `black`,
+	three-digit and six-digit hexadecimal RGB values (e.g. `FFF`, `F0F0F0`).
+	Default value is `yellow`.
+*	`draw_count <SAMPLES>`: sets the number of samples to use for drawing the vector field.
+	Default value is `20000`.
+*	`draw_lifetime <LIFETIME>`: sets the length of time each drawn sample remains visible,
+	in seconds. Default value is `2`.
+*	`draw_length <LENGTH>`: sets the length of each drawn sample, in meters.

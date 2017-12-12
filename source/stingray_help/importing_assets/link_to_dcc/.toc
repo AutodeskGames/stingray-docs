@@ -1,2 +1,0 @@
-connect_viewports
-send_assets_dcc

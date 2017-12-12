@@ -1,0 +1,833 @@
+{
+  "class":[],
+  "func":[],
+  "example":{
+    "editor_native_code_2editor-native-code_8plugin-example":{
+      "display_name":"editor_native_code/editor-native-code.plugin",
+      "name":"editor_native_code_2editor-native-code_8plugin-example",
+      "data":[]
+    },
+    "editor_native_code_2editor-native-code_8js-example":{
+      "display_name":"editor_native_code/editor-native-code.js",
+      "name":"editor_native_code_2editor-native-code_8js-example",
+      "data":[]
+    },
+    "editor_native_code_2editor-native-code_8html-example":{
+      "display_name":"editor_native_code/editor-native-code.html",
+      "name":"editor_native_code_2editor-native-code_8html-example",
+      "data":[]
+    },
+    "editor_native_code_2src_2editor_native_plugin_8h-example":{
+      "display_name":"editor_native_code/src/editor_native_plugin.h",
+      "name":"editor_native_code_2src_2editor_native_plugin_8h-example",
+      "data":[]
+    },
+    "editor_native_code_2src_2editor_native_plugin_8cpp-example":{
+      "display_name":"editor_native_code/src/editor_native_plugin.cpp",
+      "name":"editor_native_code_2src_2editor_native_plugin_8cpp-example",
+      "data":[]
+    }
+  },
+  "enumvalue":{
+    "CD_TYPE_NUMBER":{
+      "display_name":"CD_TYPE_NUMBER",
+      "name":"editor__plugin__api_8h_1a06fc87d81c62e9abb8790b6e5713c55ba01c272ead476bc1d473458f8e5e6f0f1",
+      "data":{
+        "Declarations":["CD_TYPE_NUMBER = 2,"]
+      }
+    },
+    "EDITOR_ALLOCATOR_ID":{
+      "display_name":"EDITOR_ALLOCATOR_ID",
+      "name":"editor__plugin__api_8h_1a5a5a1f12f1dcfec34062b84b28fcacdaa3dfeb70ffddcb9e8ae725cde823cae57",
+      "data":{
+        "Declarations":[", EDITOR_ALLOCATOR_ID = 7"]
+      }
+    },
+    "CD_TYPE_BOOL":{
+      "display_name":"CD_TYPE_BOOL",
+      "name":"editor__plugin__api_8h_1a06fc87d81c62e9abb8790b6e5713c55ba053f743798ade97886be36e651cb6df4",
+      "data":{
+        "Declarations":["CD_TYPE_BOOL = 1,"]
+      }
+    },
+    "RENDERER":{
+      "display_name":"RENDERER",
+      "name":"editor__plugin__api_8h_1a72f3ac9473220eeb0ec49494549e966da296ef790501e14d5446254860925cb4f",
+      "data":{
+        "Declarations":["RENDERER"]
+      }
+    },
+    "CD_TYPE_HANDLE":{
+      "display_name":"CD_TYPE_HANDLE",
+      "name":"editor__plugin__api_8h_1a06fc87d81c62e9abb8790b6e5713c55ba58f3026827a105d6d9d427b6374c345b",
+      "data":{
+        "Declarations":["CD_TYPE_HANDLE = 4,"]
+      }
+    },
+    "EDITOR_API_ID":{
+      "display_name":"EDITOR_API_ID",
+      "name":"editor__plugin__api_8h_1a5a5a1f12f1dcfec34062b84b28fcacdaa6467f83f62090576915e10d5f1675d07",
+      "data":{
+        "Declarations":["EDITOR_API_ID = 0,"]
+      }
+    },
+    "EDITOR_API_V3_ID":{
+      "display_name":"EDITOR_API_V3_ID",
+      "name":"editor__plugin__api_8h_1a5a5a1f12f1dcfec34062b84b28fcacdaa0dc5f3c28388a5fa1b33689a298275c2",
+      "data":{
+        "Declarations":[", EDITOR_API_V3_ID = 6"]
+      }
+    },
+    "CD_TYPE_NULL":{
+      "display_name":"CD_TYPE_NULL",
+      "name":"editor__plugin__api_8h_1a06fc87d81c62e9abb8790b6e5713c55ba9b0c59861148b058e21d707e479ab4e1",
+      "data":{
+        "Declarations":["CD_TYPE_UNDEFINED = CD_TYPE_NULL"]
+      }
+    },
+    "CD_TYPE_ARRAY":{
+      "display_name":"CD_TYPE_ARRAY",
+      "name":"editor__plugin__api_8h_1a06fc87d81c62e9abb8790b6e5713c55ba6e9eb62588933cb3d92ca121a3d5f068",
+      "data":{
+        "Declarations":["CD_TYPE_ARRAY = 5,"]
+      }
+    },
+    "EDITOR_PLUGIN_SYNC_API_ID":{
+      "display_name":"EDITOR_PLUGIN_SYNC_API_ID",
+      "name":"editor__plugin__api_8h_1aa7efc27a0d280a5c38027657ea5ceca7afa06545d683b41e7d7f0828eb0bedea0",
+      "data":{
+        "Declarations":["EDITOR_PLUGIN_SYNC_API_ID = 0,"]
+      }
+    },
+    "CD_TYPE_STRING":{
+      "display_name":"CD_TYPE_STRING",
+      "name":"editor__plugin__api_8h_1a06fc87d81c62e9abb8790b6e5713c55ba71f3785a8ee3b54ee4ba31378ef52b3b",
+      "data":{
+        "Declarations":["CD_TYPE_STRING = 3,"]
+      }
+    },
+    "EDITOR_PLUGIN_ASYNC_API_ID":{
+      "display_name":"EDITOR_PLUGIN_ASYNC_API_ID",
+      "name":"editor__plugin__api_8h_1aa7efc27a0d280a5c38027657ea5ceca7a9e8a1f0cb4ed425476d136517d80a9e8",
+      "data":{
+        "Declarations":["EDITOR_PLUGIN_ASYNC_API_ID"]
+      }
+    },
+    "BROWSER":{
+      "display_name":"BROWSER",
+      "name":"editor__plugin__api_8h_1a72f3ac9473220eeb0ec49494549e966da4f0f5c913731466b5939cf8d32b346e5",
+      "data":{
+        "Declarations":["BROWSER = 0,"]
+      }
+    },
+    "CD_TYPE_UNDEFINED":{
+      "display_name":"CD_TYPE_UNDEFINED",
+      "name":"editor__plugin__api_8h_1a06fc87d81c62e9abb8790b6e5713c55baa12830bc9c7c5e9afc8edaf1126468af",
+      "data":{
+        "Declarations":["CD_TYPE_UNDEFINED = CD_TYPE_NULL"]
+      }
+    },
+    "CONFIGDATA_API_ID":{
+      "display_name":"CONFIGDATA_API_ID",
+      "name":"editor__plugin__api_8h_1a5a5a1f12f1dcfec34062b84b28fcacdaaa406d533b68004d7e12dab1d191b9775",
+      "data":{
+        "Declarations":["CONFIGDATA_API_ID = 2,"]
+      }
+    },
+    "CD_TYPE_TRUE":{
+      "display_name":"CD_TYPE_TRUE",
+      "name":"editor__plugin__api_8h_1a06fc87d81c62e9abb8790b6e5713c55ba0ab7d897127567b63283f0c32e4e3307",
+      "data":{
+        "Declarations":["CD_TYPE_TRUE, CD_TYPE_FALSE,"]
+      }
+    },
+    "CD_TYPE_OBJECT":{
+      "display_name":"CD_TYPE_OBJECT",
+      "name":"editor__plugin__api_8h_1a06fc87d81c62e9abb8790b6e5713c55ba455435b164759053a0eb4924caba74b1",
+      "data":{
+        "Declarations":["CD_TYPE_OBJECT = 6,"]
+      }
+    },
+    "EDITOR_LOGGING_API_ID":{
+      "display_name":"EDITOR_LOGGING_API_ID",
+      "name":"editor__plugin__api_8h_1a5a5a1f12f1dcfec34062b84b28fcacdaa00f02a5276f24023bf69de4fa7505e6d",
+      "data":{
+        "Declarations":["EDITOR_LOGGING_API_ID = 3,"]
+      }
+    },
+    "EDITOR_EVAL_API_ID":{
+      "display_name":"EDITOR_EVAL_API_ID",
+      "name":"editor__plugin__api_8h_1a5a5a1f12f1dcfec34062b84b28fcacdaadca4b099034111523057a265510e1cf8",
+      "data":{
+        "Declarations":["EDITOR_EVAL_API_ID = 4,"]
+      }
+    },
+    "EDITOR_API_V2_ID":{
+      "display_name":"EDITOR_API_V2_ID",
+      "name":"editor__plugin__api_8h_1a5a5a1f12f1dcfec34062b84b28fcacdaa47947821eb5bd7dc222feab8ce7ae331",
+      "data":{
+        "Declarations":["EDITOR_API_V2_ID = 1,"]
+      }
+    },
+    "EDITOR_ASYNC_API_ID":{
+      "display_name":"EDITOR_ASYNC_API_ID",
+      "name":"editor__plugin__api_8h_1a5a5a1f12f1dcfec34062b84b28fcacdaace5eb98025833139c38928fe31793994",
+      "data":{
+        "Declarations":["EDITOR_ASYNC_API_ID = 5"]
+      }
+    },
+    "CD_TYPE_FALSE":{
+      "display_name":"CD_TYPE_FALSE",
+      "name":"editor__plugin__api_8h_1a06fc87d81c62e9abb8790b6e5713c55ba07efb7cd9074a89884bdf789ca742867",
+      "data":{
+        "Declarations":["CD_TYPE_TRUE, CD_TYPE_FALSE,"]
+      }
+    }
+  },
+  "file":{
+    "editor_plugin_api.h":{
+      "display_name":"editor_plugin_api.h",
+      "name":"editor__plugin__api_8h",
+      "data":[]
+    }
+  },
+  "define":{
+    "CONFIG_DATA_VALUE_TYPE_BITS":{
+      "display_name":"CONFIG_DATA_VALUE_TYPE_BITS",
+      "name":"editor__plugin__api_8h_1aae857b6c3bc1b3b1e0c71262b6b6501b",
+      "data":[]
+    },
+    "CONFIG_DATA_VALUE_TAG_BITS":{
+      "display_name":"CONFIG_DATA_VALUE_TAG_BITS",
+      "name":"editor__plugin__api_8h_1a8ccdcf8cce674112a0f2259ce47bb5f7",
+      "data":[]
+    }
+  },
+  "typedef":{
+    "ConstConfigValue":{
+      "display_name":"ConstConfigValue",
+      "name":"editor__plugin__api_8h_1aff0f82c064d65639923765cf8e549e1f",
+      "data":{
+        "Declarations":["typedef const ConfigValue ConstConfigValue"]
+      }
+    },
+    "ConfigValueResult":{
+      "display_name":"ConfigValueResult",
+      "name":"editor__plugin__api_8h_1a356cd11eafa2229b9199a057aa4512af",
+      "data":{
+        "Declarations":["typedef ConfigValue* ConfigValueResult"]
+      }
+    },
+    "ConfigValueArgs":{
+      "display_name":"ConfigValueArgs",
+      "name":"editor__plugin__api_8h_1aa606cf15b06c66f31dc4c45c5614449c",
+      "data":{
+        "Declarations":["typedef ConfigValueStruct* ConfigValueArgs"]
+      }
+    },
+    "EditorApi::NativeFunctionHandler":{
+      "display_name":"EditorApi::NativeFunctionHandler",
+      "name":"struct_editor_api_1a69f1b265e1f1f706c7da75262b2f2ac1",
+      "data":{
+        "Declarations":["typedef ConfigValue(* EditorApi::NativeFunctionHandler) (ConfigValueArgs args, int num)"]
+      }
+    },
+    "ConfigValue":{
+      "display_name":"ConfigValue",
+      "name":"editor__plugin__api_8h_1a3426838571dffdd2218512bba099a78b",
+      "data":{
+        "Declarations":["typedef struct ConfigValueStruct* ConfigValue"]
+      }
+    },
+    "EditorAllocateHandler":{
+      "display_name":"EditorAllocateHandler",
+      "name":"editor__plugin__api_8h_1a1eafcab280caac6509c3cccace78eebf",
+      "data":{
+        "Declarations":["typedef void*(* EditorAllocateHandler) (size_t size, size_t align, void *param)"]
+      }
+    },
+    "EditorDeallocateHandler":{
+      "display_name":"EditorDeallocateHandler",
+      "name":"editor__plugin__api_8h_1a84beb38f34b56919393bcd0721c2c5ad",
+      "data":{
+        "Declarations":["typedef size_t(* EditorDeallocateHandler) (void *ptr, void *param)"]
+      }
+    },
+    "EditorApi_V2::NativeFunctionHandler":{
+      "display_name":"EditorApi_V2::NativeFunctionHandler",
+      "name":"struct_editor_api___v2_1a487a0c4e5d328eaa2f72b62ef1581af8",
+      "data":{
+        "Declarations":["typedef ConfigValue(* EditorApi_V2::NativeFunctionHandler) (ConfigValueArgs args, int num, GetEditorApiFunction get_editor_api)"]
+      }
+    },
+    "EditorApi_V3::NativeFunctionHandler":{
+      "display_name":"EditorApi_V3::NativeFunctionHandler",
+      "name":"struct_editor_api___v3_1aba54c2bf8641b274d317957d11e5ffe2",
+      "data":{
+        "Declarations":["typedef std::function&lt;ConfigValue(ConfigValueArgs, int)&gt; EditorApi_V3::NativeFunctionHandler"]
+      }
+    },
+    "EditorAllocator":{
+      "display_name":"EditorAllocator",
+      "name":"editor__plugin__api_8h_1a0ca508c4980cb0eded93d6d5e925698b",
+      "data":{
+        "Declarations":["typedef EditorAllocatorObject* EditorAllocator"]
+      }
+    },
+    "EditorAsyncApi::AsyncFunctionHandler":{
+      "display_name":"EditorAsyncApi::AsyncFunctionHandler",
+      "name":"struct_editor_async_api_1aa97a6a2d78cc81dcbf3c21bf09f306f5",
+      "data":{
+        "Declarations":["typedef ConfigValue(* EditorAsyncApi::AsyncFunctionHandler) (ConfigValueArgs args, int num, GetEditorApiFunction get_editor_api)"]
+      }
+    },
+    "ConfigHandle":{
+      "display_name":"ConfigHandle",
+      "name":"editor__plugin__api_8h_1af934919bda2ba345f957efd0b3154341",
+      "data":{
+        "Declarations":["typedef ConfigHandleObject* ConfigHandle"]
+      }
+    },
+    "GetEditorApiFunction":{
+      "display_name":"GetEditorApiFunction",
+      "name":"editor__plugin__api_8h_1a3762aaa9c75a89f27bab9df1ef23e6f9",
+      "data":{
+        "Declarations":["typedef void*(* GetEditorApiFunction) (unsigned api)"]
+      }
+    },
+    "cd_handle_dealloc":{
+      "display_name":"cd_handle_dealloc",
+      "name":"editor__plugin__api_8h_1a0b8ff8f75035b7d61bc22793257304b5",
+      "data":{
+        "Declarations":["typedef void(* cd_handle_dealloc) (ConfigHandle handle)"]
+      }
+    }
+  },
+  "union":[],
+  "struct":{
+    "ConfigValueStruct":{
+      "display_name":"ConfigValueStruct",
+      "name":"struct_config_value_struct",
+      "data":[]
+    },
+    "EditorApi_V2":{
+      "display_name":"EditorApi_V2",
+      "name":"struct_editor_api___v2",
+      "data":[]
+    },
+    "EditorAllocatorApi":{
+      "display_name":"EditorAllocatorApi",
+      "name":"struct_editor_allocator_api",
+      "data":[]
+    },
+    "EditorLoggingApi":{
+      "display_name":"EditorLoggingApi",
+      "name":"struct_editor_logging_api",
+      "data":[]
+    },
+    "ConfigDataApi":{
+      "display_name":"ConfigDataApi",
+      "name":"struct_config_data_api",
+      "data":[]
+    },
+    "EditorAsyncApi":{
+      "display_name":"EditorAsyncApi",
+      "name":"struct_editor_async_api",
+      "data":[]
+    },
+    "EditorPluginSyncApi":{
+      "display_name":"EditorPluginSyncApi",
+      "name":"struct_editor_plugin_sync_api",
+      "data":[]
+    },
+    "EditorPluginAsyncApi":{
+      "display_name":"EditorPluginAsyncApi",
+      "name":"struct_editor_plugin_async_api",
+      "data":[]
+    },
+    "EditorApi":{
+      "display_name":"EditorApi",
+      "name":"struct_editor_api",
+      "data":[]
+    },
+    "EditorApi_V3":{
+      "display_name":"EditorApi_V3",
+      "name":"struct_editor_api___v3",
+      "data":[]
+    },
+    "EditorEvalApi":{
+      "display_name":"EditorEvalApi",
+      "name":"struct_editor_eval_api",
+      "data":[]
+    }
+  },
+  "enum":{
+    "EditorApiID":{
+      "display_name":"EditorApiID",
+      "name":"editor__plugin__api_8h_1a5a5a1f12f1dcfec34062b84b28fcacda",
+      "data":{
+        "Declarations":["enum EditorApiID {"]
+      }
+    },
+    "ProcessId":{
+      "display_name":"ProcessId",
+      "name":"editor__plugin__api_8h_1a72f3ac9473220eeb0ec49494549e966d",
+      "data":[]
+    },
+    "EditorPluginApiID":{
+      "display_name":"EditorPluginApiID",
+      "name":"editor__plugin__api_8h_1aa7efc27a0d280a5c38027657ea5ceca7",
+      "data":[]
+    }
+  },
+  "variable":{
+    "EditorAsyncApi::register_async_function":{
+      "display_name":"EditorAsyncApi::register_async_function",
+      "name":"struct_editor_async_api_1afe0364d21c1b8405c0fb3b21374e99fe",
+      "data":{
+        "Declarations":["bool(* EditorAsyncApi::register_async_function) (const char *name, AsyncFunctionHandler handler)"]
+      }
+    },
+    "ConfigDataApi::add_array":{
+      "display_name":"ConfigDataApi::add_array",
+      "name":"struct_config_data_api_1a09c989b2299a43b0485868c21952bc6a",
+      "data":{
+        "Declarations":["ConfigValue(* ConfigDataApi::add_array) (ConfigValue object, const char *key, ConfigValue a)"]
+      }
+    },
+    "ConfigDataApi::set_array":{
+      "display_name":"ConfigDataApi::set_array",
+      "name":"struct_config_data_api_1ae99e85a6cb59c036939be08ecfa0cbb9",
+      "data":{
+        "Declarations":["ConfigValueArgs(* ConfigDataApi::set_array) (ConfigValue value, int size)"]
+      }
+    },
+    "EditorPluginSyncApi::shutdown":{
+      "display_name":"EditorPluginSyncApi::shutdown",
+      "name":"struct_editor_plugin_sync_api_1adb131996c86cd863321d9eba4e52a215",
+      "data":{
+        "Declarations":["void(* EditorPluginSyncApi::shutdown) (GetEditorApiFunction get_editor_api)"]
+      }
+    },
+    "ConfigDataApi::set_string":{
+      "display_name":"ConfigDataApi::set_string",
+      "name":"struct_config_data_api_1aefcd99fee585217c7e6bfb46c7e26d28",
+      "data":{
+        "Declarations":["void(* ConfigDataApi::set_string) (ConfigValue value, const char *s)"]
+      }
+    },
+    "ConfigDataApi::set_number":{
+      "display_name":"ConfigDataApi::set_number",
+      "name":"struct_config_data_api_1aaf97f9fae9c0bd0ef0db514a7b32993a",
+      "data":{
+        "Declarations":["void(* ConfigDataApi::set_number) (ConfigValue value, double n)"]
+      }
+    },
+    "EditorPluginSyncApi::get_version":{
+      "display_name":"EditorPluginSyncApi::get_version",
+      "name":"struct_editor_plugin_sync_api_1a938e202843f3d45cd5e1cd59f095cf3f",
+      "data":{
+        "Declarations":["const char*(* EditorPluginSyncApi::get_version) ()"]
+      }
+    },
+    "ConfigValueStruct::_array":{
+      "display_name":"ConfigValueStruct::_array",
+      "name":"struct_config_value_struct_1ac1e257f4ff6a38c80e41418c4eee2f4e",
+      "data":{
+        "Declarations":["void* ConfigValueStruct::_array"]
+      }
+    },
+    "EditorAllocatorApi::destroy":{
+      "display_name":"EditorAllocatorApi::destroy",
+      "name":"struct_editor_allocator_api_1a123e1f17eec37995fbca27bf1538acca",
+      "data":{
+        "Declarations":["void(* EditorAllocatorApi::destroy) (EditorAllocator)"]
+      }
+    },
+    "ConfigDataApi::get":{
+      "display_name":"ConfigDataApi::get",
+      "name":"struct_config_data_api_1af8f3b978e2807b1763b1011a68f32166",
+      "data":{
+        "Declarations":["ConfigValue(* ConfigDataApi::get) (ConfigValue object, const char *key)"]
+      }
+    },
+    "EditorPluginSyncApi::plugin_loaded":{
+      "display_name":"EditorPluginSyncApi::plugin_loaded",
+      "name":"struct_editor_plugin_sync_api_1a95925efa7f81cd0606b330f3b8896a02",
+      "data":{
+        "Declarations":["void(* EditorPluginSyncApi::plugin_loaded) (GetEditorApiFunction get_editor_api)"]
+      }
+    },
+    "ConfigDataApi::to_bool":{
+      "display_name":"ConfigDataApi::to_bool",
+      "name":"struct_config_data_api_1a5d9309b86ad38952a88c04cf58ab4eef",
+      "data":{
+        "Declarations":["int(* ConfigDataApi::to_bool) (ConfigValue value)"]
+      }
+    },
+    "EditorPluginAsyncApi::shutdown":{
+      "display_name":"EditorPluginAsyncApi::shutdown",
+      "name":"struct_editor_plugin_async_api_1ab5fcd960959619e6eda86975d5f5efbc",
+      "data":{
+        "Declarations":["void(* EditorPluginAsyncApi::shutdown) (GetEditorApiFunction get_editor_api)"]
+      }
+    },
+    "ConfigDataApi::free":{
+      "display_name":"ConfigDataApi::free",
+      "name":"struct_config_data_api_1aca8b3d1a90ae737b5cdd3ab3b5f60048",
+      "data":{
+        "Declarations":["void(* ConfigDataApi::free) (ConfigValue value)"]
+      }
+    },
+    "ConfigDataApi::set_handle":{
+      "display_name":"ConfigDataApi::set_handle",
+      "name":"struct_config_data_api_1a9d6e81814d25967c285520d3977e6476",
+      "data":{
+        "Declarations":["void(* ConfigDataApi::set_handle) (ConfigValue value, ConfigHandle handle, cd_handle_dealloc deallocator)"]
+      }
+    },
+    "ConfigDataApi::set":{
+      "display_name":"ConfigDataApi::set",
+      "name":"struct_config_data_api_1a787a992f97f4fd61a856689cb01781c6",
+      "data":{
+        "Declarations":["ConfigValue(* ConfigDataApi::set) (ConfigValue object, const char *key, ConfigValue value)"]
+      }
+    },
+    "ConfigDataApi::array_item":{
+      "display_name":"ConfigDataApi::array_item",
+      "name":"struct_config_data_api_1aa782f8afffa1f96a79a5bf11704e1c5f",
+      "data":{
+        "Declarations":["ConfigValue(* ConfigDataApi::array_item) (ConfigValue arr, int i)"]
+      }
+    },
+    "ConfigDataApi::object_value":{
+      "display_name":"ConfigDataApi::object_value",
+      "name":"struct_config_data_api_1aecb1f4c80e3b590858d45a4de16842b1",
+      "data":{
+        "Declarations":["ConfigValue(* ConfigDataApi::object_value) (ConfigValue object, int i)"]
+      }
+    },
+    "ConfigDataApi::add_string":{
+      "display_name":"ConfigDataApi::add_string",
+      "name":"struct_config_data_api_1a0507556ec04b8df735747ae8ff7f134f",
+      "data":{
+        "Declarations":["ConfigValue(* ConfigDataApi::add_string) (ConfigValue object, const char *key, const char *s)"]
+      }
+    },
+    "EditorPluginAsyncApi::get_version":{
+      "display_name":"EditorPluginAsyncApi::get_version",
+      "name":"struct_editor_plugin_async_api_1a583609f34f62a425541d7348d80871a9",
+      "data":{
+        "Declarations":["const char*(* EditorPluginAsyncApi::get_version) ()"]
+      }
+    },
+    "ConfigDataApi::object_lookup":{
+      "display_name":"ConfigDataApi::object_lookup",
+      "name":"struct_config_data_api_1adad8cd7b9b14b16d8275f9471f4e3a51",
+      "data":{
+        "Declarations":["ConfigValue(* ConfigDataApi::object_lookup) (ConfigValue object, const char *key)"]
+      }
+    },
+    "ConfigDataApi::add_number":{
+      "display_name":"ConfigDataApi::add_number",
+      "name":"struct_config_data_api_1a0ff90ab36cac9b2a1ab98ecdf3b84483",
+      "data":{
+        "Declarations":["ConfigValue(* ConfigDataApi::add_number) (ConfigValue object, const char *key, double n)"]
+      }
+    },
+    "EditorAsyncApi::unregister_async_function":{
+      "display_name":"EditorAsyncApi::unregister_async_function",
+      "name":"struct_editor_async_api_1a743e19ea90a439020bd0120b29a1124f",
+      "data":{
+        "Declarations":["bool(* EditorAsyncApi::unregister_async_function) (const char *name)"]
+      }
+    },
+    "EditorPluginAsyncApi::plugin_loaded":{
+      "display_name":"EditorPluginAsyncApi::plugin_loaded",
+      "name":"struct_editor_plugin_async_api_1ad3bbce467ac3ab1bc72b2dd72d5099dc",
+      "data":{
+        "Declarations":["void(* EditorPluginAsyncApi::plugin_loaded) (GetEditorApiFunction get_editor_api)"]
+      }
+    },
+    "EditorLoggingApi::error":{
+      "display_name":"EditorLoggingApi::error",
+      "name":"struct_editor_logging_api_1ad570c31c8084e9ca34252701defed8b6",
+      "data":{
+        "Declarations":["void(* EditorLoggingApi::error) (const char *message)"]
+      }
+    },
+    "ConfigValueStruct::_bool":{
+      "display_name":"ConfigValueStruct::_bool",
+      "name":"struct_config_value_struct_1a1b9984fb25684018c23fce9fc13d5606",
+      "data":{
+        "Declarations":["bool ConfigValueStruct::_bool"]
+      }
+    },
+    "EditorLoggingApi::info":{
+      "display_name":"EditorLoggingApi::info",
+      "name":"struct_editor_logging_api_1ae8eae5d985127676126d72030d0cb1cd",
+      "data":{
+        "Declarations":["void(* EditorLoggingApi::info) (const char *message)"]
+      }
+    },
+    "ConfigValueStruct::_object":{
+      "display_name":"ConfigValueStruct::_object",
+      "name":"struct_config_value_struct_1a395dbb72b504daecb3df088c9a3583cf",
+      "data":{
+        "Declarations":["void* ConfigValueStruct::_object"]
+      }
+    },
+    "ConfigValueStruct::type":{
+      "display_name":"ConfigValueStruct::type",
+      "name":"struct_config_value_struct_1a0bede22b1add178f4663a9e2c477c322",
+      "data":{
+        "Declarations":["unsigned ConfigValueStruct::type"]
+      }
+    },
+    "EditorLoggingApi::debug":{
+      "display_name":"EditorLoggingApi::debug",
+      "name":"struct_editor_logging_api_1acd369413b4d9afd00353af6753c14244",
+      "data":{
+        "Declarations":["void(* EditorLoggingApi::debug) (const char *message)"]
+      }
+    },
+    "ConfigDataApi::add_nil":{
+      "display_name":"ConfigDataApi::add_nil",
+      "name":"struct_config_data_api_1a82b618c4241e37715119c0752226b24e",
+      "data":{
+        "Declarations":["ConfigValue(* ConfigDataApi::add_nil) (ConfigValue object, const char *key)"]
+      }
+    },
+    "ConfigDataApi::add_bool":{
+      "display_name":"ConfigDataApi::add_bool",
+      "name":"struct_config_data_api_1aca505757297bc17e7f09984b2e4fd537",
+      "data":{
+        "Declarations":["ConfigValue(* ConfigDataApi::add_bool) (ConfigValue object, const char *key, int b)"]
+      }
+    },
+    "ConfigDataApi::nil":{
+      "display_name":"ConfigDataApi::nil",
+      "name":"struct_config_data_api_1aa76438628829bdbb49df39c2ad9729c1",
+      "data":{
+        "Declarations":["ConfigValue(* ConfigDataApi::nil) ()"]
+      }
+    },
+    "EditorEvalApi::eval":{
+      "display_name":"EditorEvalApi::eval",
+      "name":"struct_editor_eval_api_1a98b295e848c291e86d3037a6a48906e9",
+      "data":{
+        "Declarations":["bool(* EditorEvalApi::eval) (const char *js_code, ConfigValue return_value, ConfigValue exception)"]
+      }
+    },
+    "ConfigDataApi::object_size":{
+      "display_name":"ConfigDataApi::object_size",
+      "name":"struct_config_data_api_1a2abe53935687b01b4c81dfc19a1be4ff",
+      "data":{
+        "Declarations":["int(* ConfigDataApi::object_size) (ConfigValue object)"]
+      }
+    },
+    "ConfigDataApi::to_number":{
+      "display_name":"ConfigDataApi::to_number",
+      "name":"struct_config_data_api_1a56363bec17691a4ea1d19e890e4903f7",
+      "data":{
+        "Declarations":["double(* ConfigDataApi::to_number) (ConfigValue value)"]
+      }
+    },
+    "EditorApi_V3::unregister_native_function":{
+      "display_name":"EditorApi_V3::unregister_native_function",
+      "name":"struct_editor_api___v3_1ae18d264344d8502472ca490c920e8d03",
+      "data":{
+        "Declarations":["bool(* EditorApi_V3::unregister_native_function) (const char *ns, const char *name)"]
+      }
+    },
+    "EditorAsyncApi::unregister_async_gui_function":{
+      "display_name":"EditorAsyncApi::unregister_async_gui_function",
+      "name":"struct_editor_async_api_1a8390886d696cb4b6288614204edba713",
+      "data":{
+        "Declarations":["bool(* EditorAsyncApi::unregister_async_gui_function) (const char *name)"]
+      }
+    },
+    "EditorAsyncApi::register_async_gui_function":{
+      "display_name":"EditorAsyncApi::register_async_gui_function",
+      "name":"struct_editor_async_api_1a35b54a84a824a1002f2bd6a49ea4f61b",
+      "data":{
+        "Declarations":["bool(* EditorAsyncApi::register_async_gui_function) (const char *name, AsyncFunctionHandler handler)"]
+      }
+    },
+    "ConfigDataApi::make":{
+      "display_name":"ConfigDataApi::make",
+      "name":"struct_config_data_api_1a7495cfef778fb69c689389579e1dd45b",
+      "data":{
+        "Declarations":["ConfigValue(* ConfigDataApi::make) (EditorAllocator allocator)"]
+      }
+    },
+    "EditorApi_V2::unregister_native_function":{
+      "display_name":"EditorApi_V2::unregister_native_function",
+      "name":"struct_editor_api___v2_1a6bc3e924c86dd31b8d9c04ecc7adb787",
+      "data":{
+        "Declarations":["bool(* EditorApi_V2::unregister_native_function) (const char *ns, const char *name)"]
+      }
+    },
+    "EditorApi_V2::register_native_function":{
+      "display_name":"EditorApi_V2::register_native_function",
+      "name":"struct_editor_api___v2_1a975542536f6d9bff948f5959802a31ef",
+      "data":{
+        "Declarations":["bool(* EditorApi_V2::register_native_function) (const char *ns, const char *name, NativeFunctionHandler handler)"]
+      }
+    },
+    "EditorAllocatorApi::create":{
+      "display_name":"EditorAllocatorApi::create",
+      "name":"struct_editor_allocator_api_1a37212d55a127a6938d275cfc5f017b6c",
+      "data":{
+        "Declarations":["EditorAllocator(* EditorAllocatorApi::create) (const char *name, EditorAllocateHandler alloc_handler, EditorDeallocateHandler dealloc_handler, void *user_data)"]
+      }
+    },
+    "ConfigValueStruct::_data":{
+      "display_name":"ConfigValueStruct::_data",
+      "name":"struct_config_value_struct_1a8713592a80b1350315b243c3f6c15362",
+      "data":{
+        "Declarations":["void* ConfigValueStruct::_data"]
+      }
+    },
+    "ConfigDataApi::to_string":{
+      "display_name":"ConfigDataApi::to_string",
+      "name":"struct_config_data_api_1ad9deb4227c9448fb044fd8b5409c69bf",
+      "data":{
+        "Declarations":["const char*(* ConfigDataApi::to_string) (ConfigValue value)"]
+      }
+    },
+    "ConfigDataApi::to_handle_deallocator":{
+      "display_name":"ConfigDataApi::to_handle_deallocator",
+      "name":"struct_config_data_api_1ad965ba4557b5a4960557e66966fcee06",
+      "data":{
+        "Declarations":["cd_handle_dealloc(* ConfigDataApi::to_handle_deallocator) (ConfigValue value)"]
+      }
+    },
+    "EditorPluginSyncApi::get_name":{
+      "display_name":"EditorPluginSyncApi::get_name",
+      "name":"struct_editor_plugin_sync_api_1a9ebb75e29c0cd6ff96c07c6f5aab65e6",
+      "data":{
+        "Declarations":["const char*(* EditorPluginSyncApi::get_name) ()"]
+      }
+    },
+    "ConfigDataApi::object_key":{
+      "display_name":"ConfigDataApi::object_key",
+      "name":"struct_config_data_api_1a61d569156b7a30f06c0678add05b2e18",
+      "data":{
+        "Declarations":["const char*(* ConfigDataApi::object_key) (ConfigValue object, int i)"]
+      }
+    },
+    "EditorApi::unregister_native_function":{
+      "display_name":"EditorApi::unregister_native_function",
+      "name":"struct_editor_api_1a0fb9dcce106f1c30401d2000be33e005",
+      "data":{
+        "Declarations":["bool(* EditorApi::unregister_native_function) (const char *ns, const char *name)"]
+      }
+    },
+    "EditorAllocatorApi::system_default":{
+      "display_name":"EditorAllocatorApi::system_default",
+      "name":"struct_editor_allocator_api_1a3c0d196a8487d4e08d954b427955502d",
+      "data":{
+        "Declarations":["EditorAllocator(* EditorAllocatorApi::system_default) ()"]
+      }
+    },
+    "ConfigDataApi::type":{
+      "display_name":"ConfigDataApi::type",
+      "name":"struct_config_data_api_1aefd56e818072f8e31861b91567b95279",
+      "data":{
+        "Declarations":["int(* ConfigDataApi::type) (ConfigValue value)"]
+      }
+    },
+    "ConfigDataApi::set_bool":{
+      "display_name":"ConfigDataApi::set_bool",
+      "name":"struct_config_data_api_1a785cbeaf4887fd6972b56014bebbc267",
+      "data":{
+        "Declarations":["void(* ConfigDataApi::set_bool) (ConfigValue value, int b)"]
+      }
+    },
+    "ConfigDataApi::to_handle":{
+      "display_name":"ConfigDataApi::to_handle",
+      "name":"struct_config_data_api_1a8e12900cc536c369ce5764dba17b84a4",
+      "data":{
+        "Declarations":["ConfigHandle(* ConfigDataApi::to_handle) (ConfigValue value)"]
+      }
+    },
+    "EditorLoggingApi::warning":{
+      "display_name":"EditorLoggingApi::warning",
+      "name":"struct_editor_logging_api_1a877741ef61fd4ab61698b6c9761e6619",
+      "data":{
+        "Declarations":["void(* EditorLoggingApi::warning) (const char *message)"]
+      }
+    },
+    "ConfigValueStruct::_number":{
+      "display_name":"ConfigValueStruct::_number",
+      "name":"struct_config_value_struct_1a20f245dbd3eed23ac87220aa46f6e621",
+      "data":{
+        "Declarations":["double ConfigValueStruct::_number"]
+      }
+    },
+    "EditorApi::register_native_function":{
+      "display_name":"EditorApi::register_native_function",
+      "name":"struct_editor_api_1aae5711e1d5c0557be6824270efcae20c",
+      "data":{
+        "Declarations":["bool(* EditorApi::register_native_function) (const char *ns, const char *name, NativeFunctionHandler handler)"]
+      }
+    },
+    "ConfigDataApi::set_object":{
+      "display_name":"ConfigDataApi::set_object",
+      "name":"struct_config_data_api_1a71623b189939e9512b248943789d38f6",
+      "data":{
+        "Declarations":["void(* ConfigDataApi::set_object) (ConfigValue value)"]
+      }
+    },
+    "ConfigValueStruct::tag":{
+      "display_name":"ConfigValueStruct::tag",
+      "name":"struct_config_value_struct_1aa06275e5a5881a69007e4b6bd1b25d0b",
+      "data":{
+        "Declarations":["unsigned ConfigValueStruct::tag"]
+      }
+    },
+    "ConfigDataApi::add_object":{
+      "display_name":"ConfigDataApi::add_object",
+      "name":"struct_config_data_api_1a16750d5cdeed6dd1dd59ca892264c1d7",
+      "data":{
+        "Declarations":["ConfigValue(* ConfigDataApi::add_object) (ConfigValue object, const char *key, ConfigValue o)"]
+      }
+    },
+    "EditorApi_V3::register_native_function":{
+      "display_name":"EditorApi_V3::register_native_function",
+      "name":"struct_editor_api___v3_1a3bbf398673af1a6df552d3efe0fb4a39",
+      "data":{
+        "Declarations":["bool(* EditorApi_V3::register_native_function) (const char *ns, const char *name, NativeFunctionHandler handler)"]
+      }
+    },
+    "ConfigDataApi::array_size":{
+      "display_name":"ConfigDataApi::array_size",
+      "name":"struct_config_data_api_1a79727ca0519a0c5b23aa532728b9a91e",
+      "data":{
+        "Declarations":["int(* ConfigDataApi::array_size) (ConfigValue arr)"]
+      }
+    },
+    "ConfigDataApi::push":{
+      "display_name":"ConfigDataApi::push",
+      "name":"struct_config_data_api_1a24d21dd4f97f484b514cc6311523c819",
+      "data":{
+        "Declarations":["ConfigValue(* ConfigDataApi::push) (ConfigValue array, ConfigValue item)"]
+      }
+    },
+    "EditorPluginAsyncApi::get_name":{
+      "display_name":"EditorPluginAsyncApi::get_name",
+      "name":"struct_editor_plugin_async_api_1a23d728bdffe7e8c3c7dc90f7c8fe9a7e",
+      "data":{
+        "Declarations":["const char*(* EditorPluginAsyncApi::get_name) ()"]
+      }
+    },
+    "ConfigValueStruct::_allocator":{
+      "display_name":"ConfigValueStruct::_allocator",
+      "name":"struct_config_value_struct_1ad343959e47b9559387dcb2d1f409d2a6",
+      "data":{
+        "Declarations":["void* ConfigValueStruct::_allocator"]
+      }
+    }
+  }
+}
