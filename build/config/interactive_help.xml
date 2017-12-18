@@ -56,6 +56,7 @@
 		<contextId include="*\skeleton_editor.html" id="tools_skeleton_editor"></contextId>
 		<contextId include="*\anim_clip_editor.html" id="tools_anim_clip"></contextId>
 		<contextId include="*\animation_controller_editor.html" id="tools_animation_controller_editor"></contextId>
+		<contextId include="*\animation_ctrlr_states.html" id="tools_animation_controller_states"></contextId>
 		<contextId include="*\humanik_window.html" id="tools_humanik_window"></contextId>
 		<contextId include="*\navigation_window.html" id="tools_navigation_window"></contextId>
 		<contextId include="*\shading_environment.html" id="tools_shading_environment"></contextId>
@@ -204,7 +205,7 @@
 		<tag name="PROJECT_NAME">"Editor C API Reference"</tag>
 		<tag name="EXAMPLE_PATTERNS">*.c *.h</tag>
 		<tag name="OPTIMIZE_OUTPUT_FOR_C">YES</tag>
-		<tag name="JAVADOC_AUTOBRIEF">YES</tag>	
+		<tag name="JAVADOC_AUTOBRIEF">YES</tag>
 		<tag name="RECURSIVE">YES</tag>
 		<tag name="EXTRACT_ALL">YES</tag>
 		<tag name="HIDE_UNDOC_CLASSES">NO</tag>
@@ -251,7 +252,7 @@
 		<show_topics>false</show_topics>
 		<tag name="PROJECT_NAME">"Engine C API Reference"</tag>
 		<tag name="OPTIMIZE_OUTPUT_FOR_C">YES</tag>
-		<tag name="JAVADOC_AUTOBRIEF">YES</tag>	
+		<tag name="JAVADOC_AUTOBRIEF">YES</tag>
 		<tag name="RECURSIVE">YES</tag>
 		<tag name="EXTRACT_ALL">YES</tag>
 		<tag name="HIDE_UNDOC_CLASSES">NO</tag>
