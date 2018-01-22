@@ -11,7 +11,7 @@ require_relative 'scripts/set_upload_variables'
 
 ENV["SR_DOC_AKN_COMPONENT_ID"] = "Max-Interactive-Help"
 ENV["SR_DOC_AKN_PRODUCT"] = "3DSMAX"
-ENV["SR_DOC_AKN_RELEASE"] = "2018"
+ENV["SR_DOC_AKN_RELEASE"] = "2019"
 ENV["SR_DOC_PROJECT_TITLE"] = "3ds Max Interactive Help"
 ENV["SR_DOC_LOCAL_OUTPUT"] = "max_interactive_help"
 
