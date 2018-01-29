@@ -21,7 +21,7 @@ The **Asset Browser** is the main way to browse and import assets in your projec
 | Open a folder location in Windows Explorer  | Right-click anywhere in the **File View** and select **Show in Explorer**.  |
 | Update assets in a scene  | Right-click the assets and select **Re-import** option to import them again using the **Import FBX** options window. Note that the Re-import option displays only for units, animation clips and skeletons.|
 | Duplicate assets and folders | Right-click assets and select **Duplicate**. For folders in the Asset Browser, right-click and select **Duplicate Folder**. |
-| Update asset thumbnails | Select the asset in the **Asset Browser**, then click ![](../../images/icon_snapshot.png) in the **Asset Preview**. |
+| Update asset thumbnails | Select the unit in the **Asset Browser**, then click ![](../../images/icon_snapshot.png) in the **Asset Preview**. |
 
 ## Tree view
 The Tree view displays all folders in your project. Select a folder to display its contents in the File view area.

@@ -6,7 +6,7 @@ Displays assets as you browse and select them in the **Asset Browser**. You can 
 
 ![](../../images/asset_preview_unit.png)
 
-> **Tip**: To update asset thumbnails that display in the **Asset Browser**, select the asset, then click ![](../../images/icon_snapshot.png) in the **Asset Preview**.
+> **Tip**: To update unit thumbnails that display in the **Asset Browser**, select the asset, then click ![](../../images/icon_snapshot.png) in the **Asset Preview**.
 
 When you select a material, the **Asset Preview** displays the shaderball with your material applied, letting you preview the material within the current lighting environment. You can also preview 2D texture files.
 
