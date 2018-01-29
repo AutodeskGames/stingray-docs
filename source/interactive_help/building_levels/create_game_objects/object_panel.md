@@ -1,7 +1,5 @@
 # Create panel
 
-![UPDATED](../../images/updated.png)
-
 - **Window > Create**
 
 Lets you create standard level objects that can be placed and modified in the level. See also ~{ Create level objects }~.
@@ -74,6 +72,10 @@ Creates an audio source unit. Place this unit in the level to play an event when
 
 See also ~{ About audio sources }~ and ~{ Wwise Workflow Tutorial }~.
 
+**Player Start**
+
+The location and position of the **Player Start** object defines the starting position of the character when you run or deploy your project. If multiple **Player Start** units are added to a level, the start position is randomly selected.
+
 **Marker**
 
 Markers are used for locating a position in your level so you can make actions happen at that location. For example, you can spawn a unit at a given Marker. See ~{ Create markers }~.
@@ -116,7 +118,6 @@ Lets you create a standard camera. See also ~{ Cameras }~.
 
 ### Physical Light
 
-[![NEW](../../images/new.png "What else is new in v1.9?")](../../release_notes/readme_1.9.html)
 Lets you create a physical light entity. See also ~{ Physically Based Lighting }~ and ~{ Create a physical light }~.
 
 ### Light
