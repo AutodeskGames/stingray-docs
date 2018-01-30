@@ -33,7 +33,11 @@ Click the browse icons to select and assign texture files for **Roughness**, **E
   When off, uses the color you set using the Color Picker. (Click the **Base Color** input box to open.)</dd>
 
  <dt>Base Color</dt>
- <dd>Click this color input box to select the color of your material.</dd>
+ <dd>Click this color color swatch to select the color of your material.
+
+ >**Tip:** Right-click the color swatch to copy or paste a color.
+
+ </dd>
 
  <dt>Use Normal Map</dt>
  <dd>Toggles whether the material uses the **Normal** map specified.
@@ -81,6 +85,9 @@ Click the browse icons to select and assign texture files for **Roughness**, **E
 
 <dt>Emissive</dt>
  <dd>When **Use Emissive Map** is off, adjusts the color of your materials emissive (glowing) quality.
+
+ >**Tip:** Right-click the color swatch to copy or paste a color.
+
  </dd>
 
 <dt>Emissive Intensity</dt>

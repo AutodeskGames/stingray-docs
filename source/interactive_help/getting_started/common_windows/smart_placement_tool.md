@@ -2,7 +2,9 @@
 
 The **Smart Placement** tool provides you with an intuitive way to place objects precisely when working in the Level Viewport or editing your scene in VR. This multi-faceted tool lets you snap an object to a surface, align an object, and auto-parent objects. A smart grid lets you measure distances easily, and displays measurements to nearby objects.
 
-The **Smart Placement** tool plugin loads automatically when you launch your project. To manage the following settings, select **Smart Placement > Smart Placement Config** from the main tool bar and toggle **Placement settings** in the window that appears.
+The **Smart Placement** and **Smart Surrounding** plugins load automatically when you launch your project. Both of these plugins must be loaded to use the **Smart Placement** tool. From the main menu, select **Smart Placement > Smart Placement Config** from the main tool bar to adjust the **Placement settings** in the window that appears.
+
+>**Important:** The **Placement settings** are disabled by default. You must enable the options mannually.
 
 ###Measurements
 
