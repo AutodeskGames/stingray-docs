@@ -15,8 +15,6 @@ Tagging assigns a name and target folder for your assets, so 3ds Max knows where
 
 	- **Asset Name:** The name of the asset. By default, the node name is used. When multiple assets are selected, this field is disabled.
 
-	- **Result:** When one asset is selected, this field shows the output path  of the single asset.
-
 3. Click **Apply and Close**.
 
 4. Send your assets from 3ds Max. See  ~{ Send assets from 3ds Max with Level Sync }~.
