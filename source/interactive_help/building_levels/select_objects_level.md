@@ -12,4 +12,5 @@ While the **Window** mode selects only objects within in a marquee selection, th
 3. Marquee select the objects.  During the selection, the objects are highlighted with a white outline and the last selected object is highlighted with a green outline. This object is used when you transform the selected objects, for example when you move or rotate the selection.
 
 To add more objects to the selected objects, Shift-click or Shift-marquee select and to remove objects, Ctrl+ Shift-click or Ctrl + Shift-marquee select. For more information, see ~{ Hotkeys }~.
+
 >**Important:** To optimize performance, it is recommended that you select a maximum of 1024 objects at one time.

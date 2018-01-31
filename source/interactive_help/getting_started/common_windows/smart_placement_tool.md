@@ -4,11 +4,11 @@ The **Smart Placement** tool provides you with an intuitive way to place objects
 
 The **Smart Placement** and **Smart Surrounding** plugins load automatically when you launch your project. Both of these plugins must be loaded to use the **Smart Placement** tool. From the main menu, select **Smart Placement > Smart Placement Config** from the main tool bar to adjust the **Placement settings** in the window that appears.
 
->**Important:** The **Placement settings** are disabled by default. You must enable the options mannually.
+>**Important:** The **Placement settings** are disabled by default. You must enable the options manually.
 
 ###Measurements
 
-When enabled, dragging any object shows measurements to nearby objects in centimeters.
+When enabled, dragging any object shows measurements to nearby objects.
 
 ![](../../images/smart_placement_measure.png)
 
@@ -28,6 +28,19 @@ When enabled, dragging an object's root snaps it to neighboring surfaces.
 
 ###Snap to Smart Grid
 
-When enabled, the smart grid displays red planes as you drag an object close to a neighboring surface, indicating where your object is snapping.
+When enabled, the smart grid displays snap guides as you drag an object close to a neighboring surface. Red and yellow planes appear on the neighboring surface to show snapping options based on your object's location:
+
+  - Red planes:
+    - Snap to an object's edges
+    - Snap to the center of an object's face
+  - Yellow planes:
+    - Divides faces in to thirds and lets you snap to those points
+    - Snap to an object's bounding box
 
 ![](../../images/smart_placement_smartGrid.png)
+
+###Enable Precise Snapping (Slow)
+
+When enabled, snapping locations are computed based on the shape of the neighboring object. The follow example shows that more precise snapping is achieved, even with an irregularly shaped neighboring object.
+
+![](../../images/smart_placement_precise_mesh_option.png)
