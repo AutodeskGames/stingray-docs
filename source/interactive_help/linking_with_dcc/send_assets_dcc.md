@@ -9,6 +9,8 @@ You can use the following ways to connect or send assets between the Interactive
 
 	When you have different versions of the DCC tools like 3ds Max and Maya installed on the same system, use the **DCC Live Link** (Window > DCC Live Link) option in the Interactive editor to connect with the DCC tools. The **DCC Live Link** displays the default port and the plugin version used to connect to the different DCC editors.
 
+	>**Tip:** If a time out occurs when you are trying to connect through the **DCC Live Link**, reload the window.
+
 2. To connect from 3ds Max, select **Interactive > Connect**. If connection fails, select **Interactive > Connect Options** to connect to the interactive using the default port.
 
 ### Send assets to 3ds Max:
