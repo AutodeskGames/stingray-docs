@@ -89,6 +89,8 @@
 		<contextId include="*\loading_unloading.html" id="loading_unloading"></contextId>
 		<contextId include="*\engine_command_line.html" id="engine_command_line"></contextId>
 
+		<meta name="product-feature" content="3ds Max Interactive" include="*" allow_multiple="true"></meta>
+
 		<replace pattern="BEGIN_STANDALONE.*END_STANDALONE" replacement="" include="*.html"></replace>
 		<insert_family_links include="*" exclude="*_ref\*,*_c\*"></insert_family_links>
 		<validate_todos>true</validate_todos>
