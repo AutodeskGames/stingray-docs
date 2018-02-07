@@ -18,15 +18,25 @@ In this step, you'll create two new levels that you'll swap back and forth in th
 
 1.	Repeat steps 2 to 4 for a second level, but call it `content_level_2`. Import and place a different set of content, so that you can tell when your different levels are loaded. If you make one level significantly heavier than the other by including more large units, it will be easier to confirm later on that the resource swapping is working.
 
-1.	Edit your `script/lua/project.lua` file. At line 12, change:
+1.	Edit your `script/lua/project.lua` file. At line 11, change:
 
-	`basic = "content/levels/basic"`
+	`empty = "content/levels/empty"`
 
 	to:
 
-	`basic = "content_level_1/level_1"`
+	`empty = "content_level_1/level_1"`
 
-	This will make the main menu load up your new `level_1` when you run the project and choose **START** from the main menu, instead of the basic level that comes pre-made with the template.
+	This will make your new `level_1` load in when you run the project, instead of the empty level that comes pre-made with the template.
+
+1.	Finally, we're going to make a temporary change in the project's `main.package` so that both new levels will be loaded into memory at the start of the project. Open the `main.package` file that you'll find at the root of your project in the Script Editor or in a text editor. Change line 2 from:
+
+	`"content/levels/*"`
+
+	to
+
+	`"*"`
+
+Now, when you run your project, it should start with the new `level_1.level` that you created above.
 
 ## Step 2. Swap the levels in Level Flow
 
@@ -50,19 +60,15 @@ Test your level, or run your project and choose **START** from the main menu. Yo
 
 ## Step 3. Disable auto-loading
 
-Now that you have the two levels set up and working, it's time to stop auto-loading all project resources so that you can introduce your other resource packages into the mix.
+Now that you have the two levels set up and working, it's time to stop auto-loading your project's `.level` resources so that you can introduce your other resource packages into the mix.
 
-Open your project's `boot.package` in the Script Editor panel, or in your favorite text editor. Change the auto-loading line at the top of the file:
-
-`* = ["*"]`
-
-to
+Open your project's `main.package` in the Script Editor panel, or in your favorite text editor. Delete *all* of the contents, and replace them with this one line:
 
 `* = ["core/*"]`
 
-Now, when you run your project, only the core resources are loaded in at startup. Your levels and their content are not in memory. If you try to run the project and you press **START** in the main menu, you should get an error:
+Now, when you run your project, only the core resources are loaded in at startup. Your level resources, and the units used in those levels, are not loaded into memory. If you try to run the project, you should get an error:
 
->	`basic_project_for_packages / Lua: core/appkit/lua/simple_project.lua:101: Level not loaded: content_level_1/level_1`
+>	`empty_project_for_packages / Lua: core/appkit/lua/simple_project.lua:101: Level not loaded: content_level_1/level_1. Make sure name is correct and the level is referenced by a loaded package.`
 
 Note that your levels *will* load successfully when you do **Test Level** in the editor. In **Test Level** mode, resources are always auto-loaded when they are needed. You need to use **Run Project** in order to really test resource package loading.
 
@@ -80,16 +86,18 @@ In this step, you'll create two packages that will gather up the resources used 
 
 1.	Repeat the same steps for `content_level_2`.
 
-1.	Go back to your `boot.package` and add in references to your new *.package* resource files:
+1.	Open the `boot.package` file at the root of your project folder, and add in references to your new *.package* resource files at line 20, so that the `package` array looks like this:
 
 	~~~{sjson}
 	package = [
 		"content_level_1/level_1"
 		"content_level_2/level_2"
+		"loading_screen"
+		"main"
 	]
 	~~~
 
-For more information about the *.package* file format, see ~{ Defining resource packages }~.
+For more information about the *.package* file format, see ~{ Defining resource packages }~. For more on the boot package, see ~{ About the boot package }~.
 
 ## Step 5. Add code to load and unload packages
 
@@ -103,9 +111,9 @@ For background about the Appkit and the `SimpleProject` class, see also the topi
 
 	You could modify the code in this file directly in your core resources, but it's safer to make a copy of the file and bring it in to your project instead. See also the discussions under ~{ Working with core resources }~ and ~{ Customizing the Appkit }~.
 
-1.	Open your project's `script/lua/project.lua` file, and change its `require` statement to point to the new location of the `simple_project.lua` file:
+1.	Open your project's `script/lua/project.lua` file, and change its `require` statement at line 15 to point to the new location of the `simple_project.lua` file:
 
-	`SimpleProject = require 'script/lua/simple_project'`
+	`local SimpleProject = require 'script/lua/simple_project'`
 
 1.	Open the `script/lua/simple_project.lua` file.
 
@@ -113,9 +121,9 @@ For background about the Appkit and the `SimpleProject` class, see also the topi
 
 	`SimpleProject.resource_package = SimpleProject.resource_package or nil`
 
-	Add this in around line 47, where the other `SimpleProject` member variables are initialized.
+	Add this in around line 51, where the other `SimpleProject` member variables are initialized.
 
-1.	Update the `load_level` function by adding in the following code at the start of the function:
+1.	Update the `load_level` function by adding in the following code at the start of the function, around line 115:
 
 	~~~{lua}
 	if stingray.Application.can_get("package", resource_name) then
@@ -127,7 +135,7 @@ For background about the Appkit and the `SimpleProject` class, see also the topi
 
 	Each time a level is loaded, this code looks for a *.package* resource with the same name. If it finds one, it loads it into memory and sets the `SimpleProject.resource_package` variable to point to it.
 
-1.	Update the `unload_level` function by adding in the following code at the *end* of the function:
+1.	Update the `unload_level` function by adding in the following code at the *end* of the function, around line 106:
 
 	~~~{lua}
 	if SimpleProject.resource_package ~= nil then
@@ -153,9 +161,7 @@ In this step, we'll test to make sure that the memory actually consumed by the e
 
 	The engine viewport should be overlaid with a summary of its current memory usage.
 
-1.	Go to the engine app, and press **START** in its main menu to load the first level.
-
-1.	Press the `l` key to swap back and forth between levels. You should see the memory consumption go up and down each time the levels are swapped. This indicates that the resources are being loaded in and out of memory as expected.
+1.	Switch back to the engine app. Press the `l` key to swap back and forth between levels. You should see the memory consumption go up and down each time the levels are swapped. This indicates that the resources are being loaded in and out of memory as expected.
 
 1.	You can also confirm that the system is working as expected by issuing the `memory_resources list unit` command to print a list of all units currently in memory. When `level_1` is loaded, the output from that command should include only resources in the `core`, `content`, and `content_level_1` folders, but nothing from the `content_level_2` folder.
 
