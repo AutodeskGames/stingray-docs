@@ -95,3 +95,8 @@ You can control the behavior of the `make.rb` script by specifying a variety of 
 If you want to customize the build process further, start by studying all the steps in `make.rb` carefully to understand the main steps in its process. The CMake build relies on scripts located in the `cmake` sub-directory, and configuration files distributed throughout the source tree. If you are familiar with CMake, you can modify these files yourself if you need to make granular changes to the build.
 
 For background information that can help you understand how the system works, see the [CMake documentation](http://www.cmake.org/documentation/).
+
+---
+ExcludeIf:
+-	MaxInteractive
+---

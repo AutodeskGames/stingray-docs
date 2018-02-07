@@ -21,3 +21,8 @@ If you choose to contribute features or fixes, the expected workflow is as follo
 The Autodesk team will examine your changes and determine how best to handle them. This may include coming back to you with additional questions, so keep an eye on your pull request, or set up e-mail notifications.
 
 Assuming your changes are eventually approved to be rolled in to the product, the Autodesk team will merge them into our internal development repository. The results will then be shared back to you in a new revision to the official `develop` branch of the upstream repository. You can then update your own fork in order to pick up the modifications.
+
+---
+ExcludeIf:
+-	MaxInteractive
+---

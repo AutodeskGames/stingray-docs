@@ -49,3 +49,8 @@ If your fork doesn't contain any changes that you have made, you can make sure y
 ## After you update
 
 Always remember to update your libraries again, in case the requirements have changed. See ~{ Library dependencies }~.
+
+---
+ExcludeIf:
+-	MaxInteractive
+---

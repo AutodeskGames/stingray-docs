@@ -55,3 +55,8 @@ Steam integration requires version **{{SR_DOC_STEAMWORKS_VERSION}}** ONLY of the
     -   Copy the extracted files to a directory named `steamworks` within your libraries directory. The build process will look for files in `<SR_LIB_DIR>/steamworks/sdk`.
 
     -   If you want the Steamworks SDK to reside in a different location on your system, set up an environment variable named `SR_STEAM_ROOT` and set it to point to the `sdk` subdirectory.
+
+---
+ExcludeIf:
+-	MaxInteractive
+---

@@ -66,3 +66,8 @@ To avoid seeing these errors in future:
 -	If you need to update submodules, update only the one you need instead of updating *all* submodules in the main repository.
 
 	For example, instead of running `git submodule update`, which updates all submodules in the repository, use `git submodule update runtime/platforms/ps4` and `git submodule update runtime/platforms/xb1`.
+
+---
+ExcludeIf:
+-	MaxInteractive
+---

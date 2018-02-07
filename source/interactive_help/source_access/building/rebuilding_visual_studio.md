@@ -24,3 +24,8 @@ If you configure the Visual Studio solution for the engine with a global path to
 13>Render_DX11.lib(D3D1x_HAL.obj) : error LNK2001: unresolved external symbol IID_ID3DUserDefinedAnnotation
 13>C:\git\b\toolchain\engine\win64\debug\plugins\scaleformstudio_pluginw64_debug.dll : fatal error LNK1120: 1 unresolved external
 ~~~
+
+---
+ExcludeIf:
+-	MaxInteractive
+---

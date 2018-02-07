@@ -13,3 +13,8 @@ The topics in this section will get you up and running with the source code:
 4.	Once you have a revision of the source code residing on your local computer, you need to understand how to get the ~{ Library dependencies }~ you need in order to rebuild the editor and engine binaries from the source code.
 
 After you have completed these steps, you should be ready to start ~{ Building from source }~ and developing with the source code.
+
+---
+ExcludeIf:
+-	MaxInteractive
+---

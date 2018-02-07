@@ -82,3 +82,8 @@ You probably have a source code versioning system in place within your organizat
 In this setup, you'll use GitHub only as a mechanism for picking up changes from Autodesk, and potentially for contributing changes back to us.
 
 However, remember that you are responsible for protecting access to this code. Please do not put the source into your own public repositories, or anywhere else that is accessible to unlicensed users outside of your organization.
+
+---
+ExcludeIf:
+-	MaxInteractive
+---
