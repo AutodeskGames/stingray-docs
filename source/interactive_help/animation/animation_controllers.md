@@ -81,13 +81,13 @@ You can also test anim events using the Preview Controls in the **Anim Controlle
 
 In some places in the animation controller (for example, in the custom blend state) you can use expressions instead of just numbers to produce more advanced behavior.</dd>
 
-<dt>Blend set mask</dt>
+<dt>Blend mask</dt>
 
-<dd>A blend set mask provides a weight (0-100%) for each bone in the animation controller. Use blend set masks to determine which bone poses get overridden by higher layer animations. For example, a layer intended to control eye movement uses a blend set mask that only includes the eye bones.
+<dd>A blend mask provides a weight (0-100%) for each bone in the animation controller. Use blend masks to determine which bone poses get overridden by higher layer animations. For example, a layer intended to control eye movement uses a blend mask that only includes the eye bones.
 
-Each state can have a blend set mask specified. (The default state of a blend set mask is all bones.) So different states can make different decisions about what bones they want to override. For example, you can have one state to control just the eyes, and another to control the entire body.
+Each state can have a blend mask specified. (The default state of a blend mask is all bones.) So different states can make different decisions about what bones they want to override. For example, you can have one state to control just the eyes, and another to control the entire body.
 
-You define a blend set mask for a skeleton by setting the weight of each bone using the **Skeleton Editor**. Note that you can select multiple bones in the list to change their weight simultaneously.
+You define a blend mask for a skeleton by setting the weight of each bone using the **Skeleton Editor**. Note that you can select multiple bones in the list to change their weight simultaneously.
 
 </dd>
 
