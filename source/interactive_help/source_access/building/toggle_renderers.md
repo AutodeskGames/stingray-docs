@@ -18,3 +18,8 @@ win32 = {
     }
 }
 ```
+
+---
+ExcludeIf:
+-	MaxInteractive
+---

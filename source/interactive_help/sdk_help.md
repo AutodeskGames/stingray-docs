@@ -16,7 +16,7 @@ Use this SDK if you want to do things like:
 
 -	And many more.
 
-Any customer can use the {{ProductName}} SDK to make these kinds of plug-ins. You don't need to have access to the source code. (Though, if you want source access for other reasons, you can get it! See the ~{ Introduction to Source Code Access }~ for details.)
+Any customer can use the {{ProductName}} SDK to make these kinds of plug-ins. You don't need to have access to the product's source code. {{#unless MaxInteractive}}(Though, if you want source access for other reasons, you can get it! See the ~{ Introduction to Source Code Access }~ for details.){{/unless}}
 
 ## To get started:
 
