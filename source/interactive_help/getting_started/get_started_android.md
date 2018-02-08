@@ -27,8 +27,8 @@ If you don't already have the Android SDK installed on your computer,
 1.	In the SDK Manager, install the following:
     - Android 7.1.1 SDK Platform (API 25)
     - Android 5.0 SDK Platform (API 21)
-    - Android SDK Tools 25.2.2
-    - Android SDK Platform-tools 25
+    - Android SDK Tools 25.2
+    - Android SDK Platform-tools 27
     - Android SDK Build-tools 25
 
 ### Check your environment variables
@@ -36,7 +36,7 @@ If you don't already have the Android SDK installed on your computer,
 After you install Java and the Android SDK:
 
 -	Make sure that the `JAVA_HOME` environment variable is set to point to the correct installation folder. For example, `C:\Program Files\Java\jdk1.8.0_80`.
--	Make sure that the `ANDROID_HOME` environment variable is set to point to the correct installation folder. For example, `C:\Program Files (x86)\Android\android-sdk`.
+-	Make sure that the `ANDROID_HOME` environment variable is set to point to the correct installation folder. For example, `C:\Program Files (x86)\Android\android-sdk`. The folder you set here should already contain several sub-folders, including `add-ons`, `build-tools`, `extras`, `platforms`, `platform-tools`, `sources`, `system-images`, and `tools`.
 -	Find the `adb.exe` tool in your Android SDK installation directory, and add its location to your `PATH` environment variable. This tool is typically found under `%ANDROID_HOME%\platform-tools`, but it may be in a different location on your system. For example, `D:\android\tools_r25.2.3-windows\platform-tools`.
 
 ### Make a default keystore for app signing
