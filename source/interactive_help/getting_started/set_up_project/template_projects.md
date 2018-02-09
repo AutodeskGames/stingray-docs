@@ -63,7 +63,7 @@ Use iOS devices, Android 7.x+ devices like Nexus 9 or a Daydream device like Pix
 
 ## Live Template
 
-{{ProductName}} lets you download the Live Temaplte project through the Online Projects tab in the Project Manager.
+{{ProductName}} lets you download the Live Template project through the Online Projects tab in the ~{ Project Manager }~.
 The **Live Template** offers all the Live functionality, but with a blank slate, so that you can bring in your own content and modify or extend its behavior. For more information, see the "Live Template" section under "Getting Started" ~{ Get started with the Live Template }~.
 
 ---
