@@ -73,7 +73,9 @@ The most powerful and flexible option that you have for controlling your project
 
 Any project that needs different sets of resources at different times can usually benefit from this approach. For example, if your project has multiple levels, you could create a separate resource package for the assets used in each level. That way, each level can take up the full memory budget for the app without having to share the available memory with other levels. Even if you only have a single level, you might be able to use resource packages for different isolated parts of the level, or for different characters.
 
-For more detail on how to set up this kind of system, see the topics under ~{ Loading and unloading content at runtime }~.
+Splitting your content across multiple resource packages also helps to keep your GPU memory requirements down. When the engine loads a resource package that contains textures, it immediately pushes those textures to the GPU so that they will be ready for use in rendering. If you can defer loading textures that aren't needed right away, you can potentially free up a significant amount of memory on the GPU. In turn, that can allow you to increase the resolution of the textures that you *do* load, making your project look even better.
+
+For more detail on how to set up a system that loads different resource packages dynamically, see the topics under ~{ Loading and unloading content at runtime }~.
 
 Note that even if you decide to set up a custom system for streaming resource packages in and out of memory, you can still benefit from applying the other techniques listed below for optimizing the individual resources that you do load.
 
