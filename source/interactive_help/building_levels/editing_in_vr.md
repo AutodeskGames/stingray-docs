@@ -1,10 +1,14 @@
 # Edit a level in VR
 
+![NEW](../images/new.png)
+
 While you have a level open in the 3ds Max Interactive editor, and a supported VR device hooked up to Steam on your PC, you can use your VR headset to enter your level in virtual reality. While in VR, you can use your controllers to move around the scene, and to select, move and delete objects in the level.
 
 VR editing works for any level in any project. It works even if you didn't start your project from the **Desktop VR** template, and even if you're not planning on deploying your project with support for VR.
 
 >	**Tip:** You can combine VR level editing with the new **Live Transform Tracking** mode in 3ds Max in order to edit your Max scene live in VR! Just do a level sync from 3ds Max and activate the live transform mode before you switch to 3ds Max Interactive and start editing your level in VR. For details, see ~{ Level Sync with 3ds Max }~.
+
+> **Note:** Projects that use the minimap renderer or any custom render config are not guaranteed to work with VR editing.
 
 ## Requirements
 
