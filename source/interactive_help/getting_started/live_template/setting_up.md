@@ -3,7 +3,7 @@
 Once you have imported your content and added it to your level, you will need to set up a few things so your content interacts properly with Live features.
 
 -   **Cameras** 
-Cameras will show up as Points of View in Live. To change the name that the camera will take in Live, a script data entry nammed "name" will need to be added to the camera. The default level contains an example of this. 
+Cameras will show up as Points of View in Live. To change the name that the camera will take in Live, a script data entry named "name" will need to be added to the camera. The default level contains an example of this. 
 
 -   **Adding Navmesh**
 The navmesh (Navigation Mesh) is what allows the "Tap & Go" navigation mode to find its path when walking around. It is also used in VR to determine where a user can teleport to. To generate the Navmesh, open the "Navigation" panel (Windows->Navigation) and click on the "Generate Navmesh" button. For more information on this subject see "Generating the navmesh" under the "Creating Gameplay->AI and Pathfinding" subject ~{ Generate the navigation mesh }~.
