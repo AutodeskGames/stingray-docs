@@ -1,5 +1,7 @@
 # Add and remove plug-ins using the Plugin Manager
 
+![UPDATED](../images/updated.png)
+
 -	**Window > Plugin Manager**
 
 The **Plugin Manager** panel lists each plug-in visible to the interactive editor, along with detailed information and activation status for each. You can use this panel to control which plug-ins are currently active in the editor.
@@ -17,6 +19,10 @@ To unload a plug-in, either:
 -	Uncheck its checkbox in the **Loaded** column of the list view.
 -	Or, select the plug-in in the list view and click the **Unload** button at the bottom right.
 
+>**Important:** ![NEW](../images/new.png) If you unload a plug-in that is dependent on other loaded plug-ins, an error message appears indicating these dependencies.
+
+![](../images/plugin-manager-warnings.png)
+
 After you restart the editor, your plug-in remains unloaded until you intentionally load it again.
 
 ## Load a plug-in
@@ -25,6 +31,8 @@ To load a plug-in that is already listed in the **Plugin Manager**, either:
 
 -	Check its checkbox in the **Loaded** column of the list view.
 -	Or, select the plug-in in the list view and click the **Load** button at the bottom right.
+
+>**Important:** ![NEW](../images/new.png) If you load a plug-in that has unloaded plug-in dependences or has loaded dependencies with invalid versions, an error message appears.
 
 ## Download a plug-in
 
