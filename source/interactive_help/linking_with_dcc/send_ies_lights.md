@@ -15,6 +15,6 @@ When you send photometric lights from 3ds Max, they are imported as physical lig
 	| **ies file**  | **ies Profile** |
 	| **cast shadows** | **Cast Shadows** |
 	| **color** and **color temperature**  | **Temperature (K)** <br> **Note:** To map this setting correctly, **color mode** in 3ds Max must be set to **Temperature**. |
-	| **intensity type** and **intensity value** | **Brightness (lm)** |
+	| **intensity type** and **intensity value** | **Brightness (lm)** <br> **Note:** To optimize results, the intensity value in 3ds Max is divided by 1000 before it is sent to 3ds Max Interactive. For example, a 3ds Max photometric light with an intensity of 1800lm is imported into 3ds Max Interactive with a **Brightness (lm)** value of 1.8lm. |
 
 	>**Note:** When sending Vray IES lights from 3ds Max, the **shape** setting is not supported in 3ds Max Interactive.
