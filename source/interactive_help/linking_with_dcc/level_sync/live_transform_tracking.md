@@ -21,4 +21,4 @@ To sync transform controls:
 
   - Delete objects
 
- 	>**Note:** In 3ds Max Interactive, you can only undo delete actions for instanced objects.
+ 	>**Note:** In 3ds Max Interactive, you can only undo delete actions for instanced units. However, for best results, it is recommended that you do not undo delete actions in Live Transform mode.

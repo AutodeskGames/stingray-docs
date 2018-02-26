@@ -1,5 +1,6 @@
 ﻿# Asset Browser
 
+![UPDATED](../../images/updated.png)
 
 - **Window > Asset Browser**
 
@@ -22,6 +23,10 @@ The **Asset Browser** is the main way to browse and import assets in your projec
 | Update assets in a scene  | Right-click the assets and select **Re-import** option to import them again using the **Import FBX** options window. Note that the Re-import option displays only for units, animation clips and skeletons.|
 | Duplicate assets and folders | Right-click assets and select **Duplicate**. For folders in the Asset Browser, right-click and select **Duplicate Folder**. |
 | Update asset thumbnails | Select the unit in the **Asset Browser**, then click ![](../../images/icon_snapshot.png) in the **Asset Preview**. |
+| ![NEW](../../images/new.png) Enable physics | Right-click assets and select **Enable Static Physics** or **Enable Keyframed Physics**. |
+| ![NEW](../../images/new.png) Unwrap UVs | Right-click assets and select **Generate UV Unwrap**. |
+| ![NEW](../../images/new.png) Rename materials to diffuse texture | Right-click assets and select **Rename Materials To Diffuse Texture**. |
+| ![NEW](../../images/new.png) Copy Asset Resource Name to Clipboard | Right-click assets and select **Copy Asset Resource Name to Clipboard**. |
 
 ## Tree view
 The Tree view displays all folders in your project. Select a folder to display its contents in the File view area.
