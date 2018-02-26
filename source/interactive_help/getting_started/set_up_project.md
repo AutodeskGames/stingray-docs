@@ -54,4 +54,9 @@ In the [Museum of Learning](https://gamedev.autodesk.com/stingray/plugins/museum
 </td><td>
 If you're looking to make a more fun and casual game experience, you won't find a better place to start than [Project Nora](https://gamedev.autodesk.com/stingray/plugins/nora_gamekit) -- a side-scrolling adventure that spans 20 unique levels of play.
 </td></tr>
+<tr><td>
+![Live Template](../images/live_template_icon.png)
+</td><td>
+The Live Template offers all the Live functionality, but with a blank slate. You can bring in your own content and modify or extend its behavior. For more information, see ~{ Get started with the Live Template }~
+</td></tr>
 </table>
