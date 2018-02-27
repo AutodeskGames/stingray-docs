@@ -6,6 +6,6 @@ The best way to start a new VR project is to start from one of these VR template
 
 ![VR Templates](../images/vr_templates.png)
 
-In {{ProductName}}, you can build your desired behaviors and mechanisms using either Lua or the visual node-based Flow scripting language. The Oculus and Vive templates have an almost one-to-one Lua API, as well as a very similar set of Flow nodes.
+In {{ProductName}}, you can build your desired behaviors and mechanisms using either Lua or the visual node-based Flow scripting language. 
 
 The VR templates come with premade functionality built in Flow for doing things like picking up objects, teleporting, playing sound effects, and setting up controller units. These Flow graphs are encapsulated in their own Unit objects. Load those projects and take a look, or check out ~{ VR Flow nodes }~ for an introduction.
