@@ -35,14 +35,14 @@ This template is a simple vehicle level. It contains a driveable four-wheeled ve
 {{ProductName}} includes the following templates for rendering in VR devices. (See also: ~{ Get started in VR }~.)
 
 <dl>
-<dt>VR Desktop</dt>
+<dt>Desktop VR</dt>
 <dd>This flexible VR template can be used with Oculus or HTC Vive systems. This template has a simple VR level with a floor plan to walk around in. It also includes a basic script that lets you spawn a free camera and a walk around camera.
 
 The VR headset that is connected when you launch the template is used. If no headset is connected, then a regular player controller is used.
 
-The **VR Desktop** template supports input from the Oculus Rift, Oculus Remote, Oculus Touch Controller, and Steam VR devices.
+The **Desktop VR** template supports input from the Oculus Rift, Oculus Remote, Oculus Touch Controller, and Steam VR devices.
 
-> **Tip:** If the performance is lower for the VR Desktop template projects, make sure that the editor is **not** set to **Update Mode > Always** in the viewport. It is recommended to use a higher end machine as this was tested on higher end graphics cards.</dd>
+> **Tip:** If the performance is lower for the Desktop VR template projects, make sure that the editor is **not** set to **Update Mode > Always** in the viewport. It is recommended to use a higher end machine as this was tested on higher end graphics cards.</dd>
 
 <dt>VR Google</dt>
 <dd>This template demonstrates simple usage of the GoogleVR plug-in API for Cardboard and Daydream.
