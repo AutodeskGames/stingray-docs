@@ -25,7 +25,6 @@ The **Asset Browser** is the main way to browse and import assets in your projec
 | Update asset thumbnails | Select the unit in the **Asset Browser**, then click ![](../../images/icon_snapshot.png) in the **Asset Preview**. |
 | ![NEW](../../images/new.png) Enable physics | Right-click assets and select **Enable Static Physics** or **Enable Keyframed Physics**. |
 | ![NEW](../../images/new.png) Unwrap UVs | Right-click assets and select **Generate UV Unwrap**. |
-| ![NEW](../../images/new.png) Rename materials to diffuse texture | Right-click assets and select **Rename Materials To Diffuse Texture**. |
 | ![NEW](../../images/new.png) Copy Asset Resource Name to Clipboard | Right-click assets and select **Copy Asset Resource Name to Clipboard**. |
 
 ## Tree view
