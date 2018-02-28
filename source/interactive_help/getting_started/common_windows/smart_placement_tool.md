@@ -34,7 +34,7 @@ When enabled, dragging an object's root snaps it to neighboring surfaces.
 
 ###Snap to Smart Grid
 
-When enabled, the smart grid displays snap guides as you drag an object close to a neighboring surface. Red and yellow planes appear on the neighboring surface to show snapping options based on your object's location:
+When enabled, the smart grid displays snap guides as you drag an object relative to neighboring surfaces. Red, yellow, green, or blue visual guides appear relative to the neighboring surface to show snapping options based on your object's location:
 
   - Red planes:
     - Aligns to the nearest face of an object if moving inside the object bounding box
@@ -52,14 +52,14 @@ When enabled, the smart grid displays snap guides as you drag an object close to
 
     ![](../../images/smart_placement_yellow.png)
 
-  - Green planes:
-    - Snaps in the middle of objects
+  - Green guides:
+    - Snap to an equal distance in between two objects
 
     ![](../../images/smart_placement_green.png)
 
-  - Blue planes:
-    - Snaps to the object below and matches distance between objects
-    
+  - Blue guides:
+    - Snap to an equal distance from an object as its distance to the object on its other side
+
     ![](../../images/smart_placement_blue.png)
 
 ###Enable Precise Snapping (Slow)

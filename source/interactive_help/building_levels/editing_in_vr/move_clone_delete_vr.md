@@ -92,6 +92,8 @@ Cameras are level objects, just like units or lights. You can move and rotate th
 
 However, when you place a camera, you typically need to set up its point of view precisely, so that it is facing in exactly the direction you want, at exactly the right distance. You can do this more easily in VR by opening a *preview* window that shows a rendering of the current level from the point of view of a selected camera.
 
+>**Tip:** Currently, rendering depends on the aspect ratio of the Level Viewport VR.  To prevent a distorted preview, it is recommended that you resize the Level Viewport VR window to remove any black regions that may appear. 
+
 To see the preview, open the VR menu and select the camera icon:
 
 ![Camera preview](../../images/vr_editing_menu_camera.png)
