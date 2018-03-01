@@ -1,12 +1,21 @@
-# Live settigns
+# Live settings
 
-3dsMax Interactive being data-driven, we have exposed a multitude of behaviors in Live through .ini files, which are all in a human-readable format (JSON). These include settings such as navigation speeds, modes, teleport behaviors, icons, debugging tools, component definition etc. In this section, we will give an overview of what each of these setting files, found in the "/settings" folder, does.
+Much of the runtime behavior of the Live interface is determined by configuration files that you'll find in the `settings` folder of your project.
 
-- behavior_settings.ini: Contains behavioral settings common to multiple behaviors in Live, such as navigation speed, mouse sensitivity, etc.
-- component_paths.ini: Contains references to all the component scripts that Live uses. These are used to be able to include and load them automatically.
-- component_config.ini: Defines which components should be loaded by Live
-- component_settings.ini: Exposes many settings used by all the Live components.
-- input_settings.ini: This settings file defines which inputs will get mapped and used in Live. The input defined will raise an event through the EventManager.
-- navigation_settings.ini: Contains all settings relevant to navigation modes in Live.
-- revit_live_scene_settings.ini: This file contains empty settings that get overwritten by the Live data
-- vr_settings.ini: Contains all settings relevant to VR, including navigation, input mappings, tools settings, etc.
+Open up any of these files in the 3ds Max Interactive **Script Editor** or in any text editor to see what settings they offer, and to try out the effect of changing values.
+
+-	`behavior_settings.ini`: Contains behavioral settings common to multiple behaviors in Live, such as navigation speed and mouse sensitivity.
+
+-	`component_paths.ini`: Contains references to all the component scripts that Live uses, so that the template's main Lua script can load them all automatically.
+
+-	`component_config.ini`: Defines which components should be loaded by Live.
+
+-	`component_settings.ini`: Exposes many settings common to all Live components.
+
+-	`input_settings.ini`: Defines which inputs from controllers and keyboards get mapped and used in the runtime engine. The input defined will raise an event through the EventManager.
+
+-	`navigation_settings.ini`: Contains all settings relevant to navigation modes in Live.
+
+-	`revit_live_scene_settings.ini`: Contains empty settings that get overwritten by the Live data.
+
+-	`vr_settings.ini`: Contains all settings relevant to VR, including navigation, input mappings, and tools settings.

@@ -11,4 +11,5 @@ get_started_xb1
 get_started_web
 get_started_hololens
 get_started_vr
+get_started_live
 tutorial_next_steps
