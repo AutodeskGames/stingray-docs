@@ -4,3 +4,4 @@ change_default_level
 modify_home_view
 scan_data
 vr_minimap
+custom_vr
