@@ -1,4 +1,4 @@
-# Customizing the Live VR Minimap
+# Customize the Live VR Minimap
 
 The Live template offers a VR Minimap, which gives you a unique perspective on your scene.
 
@@ -14,7 +14,7 @@ Models that come to 3ds Max Interactive through the Revit Live service will ofte
 
 1.	Open the **Script Data** tab on the right side of the Unit Editor.
 
-1.	Click the **+** icon to add a new script data of type `string`.
+1.	Click the **+** icon to add a new script data of type "string".
 
 	In the **Key** column, set the name to `Category Name`.
 

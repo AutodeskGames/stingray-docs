@@ -18,7 +18,7 @@ One thing to keep in mind is the number of triangles in your mesh. If you find t
 
 ![](../../images/live_scan_data_perfhud.png)
 
-Real-time lighting can also be very expensive with the large amount of data in the point cloud. However, since the colors in the point cloud's materials are sampled from reality, you typically don't need to do much real-time lighting in order to make the points visible in a realistic way. Do feel free to experiment with the settings in your level's shading environment -- for example, you can use the global lighting properties to raise and lower the apparent brightness of the diffuse colors in the point cloud's materials.
+Real-time lighting can also be very expensive with the large amount of data in the point cloud. However, since the colors in the point cloud's materials are sampled from reality, you typically don't need to do much real-time lighting in order to make the points visible in a realistic way. Do feel free to experiment with the settings in your level's shading environment -- for example, you can use the global lighting properties to raise and lower the apparent brightness of the diffuse colors in the point cloud's materials. See ~{ Shading environment properties }~.
 
 ## Normal maps
 

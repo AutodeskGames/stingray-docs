@@ -4,8 +4,6 @@ The **Live** template is an interactive project that offers all the runtime feat
 
 ![Live](../images/live-ui.png)
 
-In this project, you will find all the scripts and runtime content that make the Live experience work. All of the runtime logic is handled by the Lua scripts that you'll find in the `script/lua` folder in the Live template. This documentation doesn't cover everything in detail, so feel free to dig into the gameplay scripts project to see how things work under the hood!
-
 **To get started:**
 
 1.	Create your new project.
@@ -37,3 +35,5 @@ In this project, you will find all the scripts and runtime content that make the
 1.	Run your project and try it out! Click ![Run project](../images/icon_runProject.png) to run the project from the 3ds Max Interactive editor, or use the **Deployer** panel to create a standalone `.exe` or mobile app.
 
 	See ~{ Deploying and Building }~, and the platform-specific topics under ~{ Getting Started }~.
+
+You'll find all the scripts and that make the Live experience work under the `script/lua` folder. The pages in this section only covers a few of the most common things you'll want to set up for your project, so feel free to dig into the gameplay scripts to get a better picture of how things work under the hood!

@@ -12,10 +12,10 @@ Open up any of these files in the 3ds Max Interactive **Script Editor** or in an
 
 -	`component_settings.ini`: Exposes many settings common to all Live components.
 
--	`input_settings.ini`: Defines which inputs from controllers and keyboards get mapped and used in the runtime engine. The input defined will raise an event through the EventManager.
+-	`input_settings.ini`: Defines which inputs from controllers and keyboards get mapped and used in the runtime engine. The inputs you define raise events through the `Project.EventManager`, which the Live script components subscribe to for notifications of new inputs and events.
 
--	`navigation_settings.ini`: Contains all settings relevant to navigation modes in Live.
+-	`navigation_settings.ini`: Contains all settings related to navigation modes in Live.
 
 -	`revit_live_scene_settings.ini`: Contains empty settings that get overwritten by the Live data.
 
--	`vr_settings.ini`: Contains all settings relevant to VR, including navigation, input mappings, and tools settings.
+-	`vr_settings.ini`: Contains all settings related to VR, including navigation, input mappings, and tools settings.

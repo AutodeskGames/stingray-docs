@@ -4,7 +4,7 @@ When you start a project based on the Live template, the viewport starts up in t
 
 ![Home view icon](../../images/live_home_view.png)
 
-(This is also the first item in the list of viewpoints that you can open by pressing the Views icon.)
+(This is also the first item in the list of viewpoints that you can open by pressing the **Views** icon.)
 
 The Live template typically places the Home viewpoint automatically so that all of the important units that you've placed in the scene are visible. However, you can influence the default placement if you want to pick and choose which units should and should not be visible.
 
