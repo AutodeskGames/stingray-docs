@@ -6,7 +6,7 @@ This panel is the main location where you can edit the properties of objects sel
 
 You can select multiple objects in the **Explorer** panel to view and edit multiple shared attributes at the same time in the **Property Editor**.
 
-If the selected objects already share the same value for a property, the value displays in the **Property Editor** as usual. If their values differ, a dash displays.
+If the selected objects already share the same value for a property, the value displays in the **Property Editor** as usual. If their values differ, a dash or the label 'mixed' displays.
 
 ![](../../images/different_setting.png)
 
