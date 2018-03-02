@@ -46,7 +46,7 @@ When enabled, the smart grid displays snap guides as you drag an object relative
     ![](../../images/smart_placement_red2.png)
 
   - Yellow planes:
-    - Divides faces in to thirds and lets you snap to those points
+    - Divides faces into thirds and lets you snap to those points
     - Snap to an object's bounding box
     The following images show examples of alignments to a third of the bounding boxes:
 
