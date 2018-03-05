@@ -44,6 +44,6 @@ When you start editing in VR on an Oculus headset, you may see an old still imag
 
 -	If this happens, shut down and restart both the Oculus app and Steam VR.
 
--	This can happen if your project uses the desktop VR template, and if you have already launched your project from the editor using either the Test Level ![Play](../images/icon_test_level.png) or Run Project ![Play](../images/icon_run_project.png) button.
+-	This can happen if your project uses the **Desktop VR** template, and if you have already launched your project from the editor using either the Test Level ![Play](../images/icon_test_level.png) or Run Project ![Play](../images/icon_run_project.png) button.
 
-	To avoid this happening in future, try not to test or run a VR project from the editor before using the **Level Viewport VR**.
+	To avoid this happening in future, try not to test or run a VR project from the editor before you use the **Level Viewport VR**.
