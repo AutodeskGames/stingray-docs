@@ -37,3 +37,13 @@ While the level is open in VR editing mode, the **Level Viewport VR** panel show
 ## Quit VR editing mode
 
 Press the ![Stop](../images/icon_stop.png) icon in the **Level Viewport VR** panel. You can restart VR editing at any time.
+
+## Troubleshooting
+
+When you start editing in VR on an Oculus headset, you may see an old still image superimposed on your view of the level.
+
+-	If this happens, shut down and restart both the Oculus app and Steam VR.
+
+-	This can happen if your project uses the desktop VR template, and if you have already launched your project from the editor using either the Test Level ![Play](../images/icon_test_level.png) or Run Project ![Play](../images/icon_run_project.png) button.
+
+	To avoid this happening in future, try not to test or run a VR project from the editor before using the **Level Viewport VR**.
