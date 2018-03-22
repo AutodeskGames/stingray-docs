@@ -56,6 +56,7 @@
 		<contextId include="*\skeleton_editor.html" id="tools_skeleton_editor"></contextId>
 		<contextId include="*\anim_clip_editor.html" id="tools_clip_editor"></contextId>
 		<contextId include="*\animation_controller_editor.html" id="tools_animation_controller_editor"></contextId>
+		<contextId include="*\anim_ctrlr_states.html" id="tools_animation_controller_states"></contextId>
 		<contextId include="*\humanik_window.html" id="tools_humanik_window"></contextId>
 		<contextId include="*\navigation_window.html" id="tools_navigation_window"></contextId>
 		<contextId include="*\shading_environment.html" id="tools_shading_environment"></contextId>
@@ -122,7 +123,7 @@
 	<merge id="interactive_help">
 		<source convert_from="markdown"
 			get_metadata="true"
-			github_root_public="https://git.autodesk.com/gameware/stingray-docs/tree/master/source/interactive_help"
+			github_root_public="https://www.github.com/AutodeskGames/stingray-docs/tree/master/source/interactive_help"
 			github_root_internal="https://git.autodesk.com/gameware/stingray-docs/tree/%CURRENT_BRANCH%/source/interactive_help"
 			>..\..\source\interactive_help\*.md</source>
 		<source>..\..\source\interactive_help\*.png</source>
