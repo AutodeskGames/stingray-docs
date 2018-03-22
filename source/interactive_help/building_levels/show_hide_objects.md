@@ -13,6 +13,7 @@ The grid is displayed/hidden in all view panels.
 
 Do any of the following:
 
+- Right-click a unit in the **Explorer** panel, then select **Hide Selected** or **Show Selected** from the menu that appears.
 - Select an object(s) in the **Level Viewport** or the **Explorer** panel, then select **Edit > Object Visibility > Hide\Unhide Selected** (Hotkey: H).
 - In the menu bar, select **Edit > Object Visibility > Hide Unselected** (Hotkey: Alt + H) .
 - In the menu bar, select **Edit > Object Visibility > Unhide All** (Hotkey: Ctrl + Alt + H).

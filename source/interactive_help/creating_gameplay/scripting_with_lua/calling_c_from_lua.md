@@ -19,8 +19,12 @@ In all cases, you need to compile your C code into a dynamically linked library,
 You can only run C code in a dynamically linked library if your app targets a platform that supports dynamic linking and that links dynamically to LuaJIT.
 
 -	Only <span style="color:#007700">**Windows**</span> targets are fully supported.
+
 -	On <span style="color:#CC0000">**iOS**</span> and <span style="color:#CC0000">**Android**</span>, the engine supports dynamic linking at runtime, but links statically against LuaJIT. In addition, you cannot yet package your dynamic libraries into your deployed applications.
+
+{{#unless MaxInteractive}}
 -	The <span style="color:#CC0000">**Xbox One**</span> and <span style="color:#CC0000">**PlayStation 4**</span> consoles do not support dynamic linking at all. If you need to run custom C code on consoles, you will need to link your code in statically and recompile the engine from source. See below.
+{{/unless}}
 
 ## Another option: writing an engine plug-in
 

@@ -33,3 +33,8 @@ If you don't already have a company and a project set up on the Gamedev site, ma
 Finally, e-mail <gamedev@autodesk.com> to request access to the Stingray source for your new project.
 
 When your Autodesk account is granted access rights to this project, your GitHub user account is also granted access to the source code repository on GitHub. You will receive a notification by e-mail. You can then carry on with the next steps listed under ~{ Getting started with source access }~.
+
+---
+ExcludeIf:
+-	MaxInteractive
+---

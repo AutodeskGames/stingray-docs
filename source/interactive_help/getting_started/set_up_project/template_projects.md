@@ -35,19 +35,14 @@ This template is a simple vehicle level. It contains a driveable four-wheeled ve
 {{ProductName}} includes the following templates for rendering in VR devices. (See also: ~{ Get started in VR }~.)
 
 <dl>
-<dt>VR Oculus Touch</dt>
-<dd>This template has a simple VR level with a floor plan to walk around in. Currently for Windows only. It also includes a basic script that lets you spawn a free camera and a walk around camera (again, swap the two by pressing F2), and Oculus flow nodes.
+<dt>Desktop VR</dt>
+<dd>This flexible VR template can be used with Oculus or HTC Vive systems. This template has a simple VR level with a floor plan to walk around in. It also includes a basic script that lets you spawn a free camera and a walk around camera.
 
-Use an Oculus Rift for projects based on this template.
+The VR headset that is connected when you launch the template is used. If no headset is connected, then a regular player controller is used.
 
-The VR Oculus Touch template supports input from the Oculus Remote and Oculus Touch Controller.
+The **Desktop VR** template supports input from the Oculus Rift, Oculus Remote, Oculus Touch Controller, and Steam VR devices.
 
-> **Tip:** If the performance is lower for the VR Oculus Touch template projects, make sure that the editor is **not** set to **Update Mode > Always** in the viewport.</dd>
-
-<dt>VR HTC Vive</dt>
-<dd>This VR template project is set up to showcase the use of Flow in VR to accomplish various tasks and useful VR interactions. It is recommended to use a higher end machine as this was tested on higher end graphics cards.
-
-Use a Steam VR device to visually interact with the scenes in this template.</dd>
+> **Tip:** If the performance is lower for the Desktop VR template projects, make sure that the editor is **not** set to **Update Mode > Always** in the viewport. It is recommended to use a higher end machine as this was tested on higher end graphics cards.</dd>
 
 <dt>VR Google</dt>
 <dd>This template demonstrates simple usage of the GoogleVR plug-in API for Cardboard and Daydream.
@@ -65,6 +60,11 @@ Use iOS devices, Android 7.x+ devices like Nexus 9 or a Daydream device like Pix
 </dl>
 
 > **Note:** The VR templates for mobile devices use the ~{ Mini renderer }~ by default. See ~{ Optimize VR content for mobile devices }~ for tips on preparing your VR scenes.
+
+## Live Template
+
+{{ProductName}} lets you download the Live Template project through the Online Projects tab in the ~{ Project Manager }~.
+The **Live Template** offers all the Live functionality, but with a blank slate, so that you can bring in your own content and modify or extend its behavior. For more information, see the "Live Template" section under "Getting Started" ~{ Get started with the Live Template }~.
 
 ---
 Related topics:

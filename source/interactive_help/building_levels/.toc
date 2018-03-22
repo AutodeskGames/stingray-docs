@@ -5,4 +5,10 @@ copy_paste_level
 move_rotate_scale
 show_hide_objects
 snap_objects
-test_a_level
+cameras
+create_game_objects
+organize_by_categories
+organize_level_objects
+paint_scatter
+terrain_tool
+editing_in_vr

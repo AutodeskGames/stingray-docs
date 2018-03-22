@@ -8,14 +8,12 @@ Tagging assigns a name and target folder for your assets, so 3ds Max knows where
 
 ### Manually tag your asset(s) with Level Sync
 
-1.	In 3ds Max, select your assets and then select **Interactive > Set Engine Resource**.
-2.	In the **Set Engine Resource** window that appears, tag the selected assets to export using the following fields:
+1.	In 3ds Max, select your assets and then select **Interactive > Level Sync Settings**.
+2.	In the **Level Sync Settings** window that appears, tag the selected assets to export using the following fields:
 
 	- **Target Folder:** Sets the path of all the assets to tag. The default path is <i>content/models/[your_scene_name]</i>. If you are working in an unsaved file, the default path is <i>content/models</i>. You can change the default path manually.
 
 	- **Asset Name:** The name of the asset. By default, the node name is used. When multiple assets are selected, this field is disabled.
-
-	- **Result:** When one asset is selected, this field shows the output path  of the single asset.
 
 3. Click **Apply and Close**.
 
@@ -27,7 +25,7 @@ Tagging assigns a name and target folder for your assets, so 3ds Max knows where
 
 ### Automatically tag your asset(s) with level sync
 
-1.	In 3ds Max, select **Interactive > Set Engine Resource**, and then select **Auto Tag All Untagged**.
+1.	In 3ds Max, select **Interactive > Level Sync Settings**, and then select **Auto Tag All Untagged**.
 
   	All of the top level nodes are tagged with the default values.
 

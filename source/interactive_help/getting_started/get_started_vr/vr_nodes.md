@@ -27,15 +27,3 @@ For reference information on all the other Flow nodes available in the interacti
     Let you create simple Fade In/Fade Out effects.
 
 Although there are a few discrepancies between the Oculus nodes and the Vive nodes, most of the essential functionalities remain the same. These nodes, in conjunction with the other default Flow nodes, cover all of the functionality necessary to implement any behavior you want for either device.
-
-## SteamVR Flow node
-
-The following Flow nodes are available in the VR HTC Vive template:
-
-![VR Templates](../../images/vr_steamvr_nodes.png)
-
-## Oculus Flow nodes
-
-The following Flow nodes are available in the Oculus template:
-
-![VR Templates](../../images/vr_occulus_nodes.png)

@@ -12,6 +12,10 @@ If the selected objects already share the same value for a property, the value d
 
 ![](../../images/different_setting.png)
 
+To toggle the visibility of objects, right-click a unit in the **Explorer** panel, then select **Hide Selected** or **Show Selected** from the menu that appears.
+
+![](../../images/level_explorer_hide.png)
+
 For objects that are hidden in all **Level Viewport** views (globally hidden), the **Explorer** panel displays a blue visibility icon. If objects are hidden in individual views (locally), you'll see orange visibility icons. Hover over objects to view a tooltip that explains their visibility settings.
 
 ![](../../images/explorer_visibility.png)

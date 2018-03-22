@@ -31,3 +31,8 @@ Follow all the instructions on the ~{ Getting started with source access }~ page
 Maybe, it depends.
 
 When you apply for source access for a new project, we will get in touch with you and have a conversation to sort it all out. So if you love {{ProductName}} and want to get more deeply involved, don't be shy to request source access.
+
+---
+ExcludeIf:
+-	MaxInteractive
+---

@@ -37,3 +37,8 @@ This build mode is intended only for final builds of your interactive app. It st
 By default, all configurations generate *.pdb* files. This makes it easier for customers with source access (and for Autodesk support) to track down the cause of any crashes that may occur in the engine and tools, regardless of which configuration was used to build the binaries.
 
 You can disable the generation of these *.pdb* files by adding the `--nodebug` option to the command line when you call `make.rb`.
+
+---
+ExcludeIf:
+-	MaxInteractive
+---

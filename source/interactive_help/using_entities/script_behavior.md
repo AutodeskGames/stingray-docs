@@ -109,10 +109,3 @@ For example, you can use `ScriptComponent.broadcast()` to have the script compon
 The `stingray.ScriptComponent` manager is responsible for managing all script components in the world. So, if you're looking to interact only with the entities that are associated with a particular behavior, you will probably want to filter its list by calling `ScriptComponent.instance_ids_with_script()` or `ScriptComponent.entities_with_script()`.
 
 Once you have a filtered list of script component instances, you can have the manager invoke a given function only on that list of behaviors by calling `ScriptComponent.dispatch()`.
-
----
-Features:
--   Lua
--   Flow
-
----

@@ -1,5 +1,7 @@
 # Log Console
 
+![UPDATED](../images/updated.png)
+
 - **Window > Log Console**
 
 Lets you view and filter the messages the engine and editor have written to the log.
@@ -33,6 +35,7 @@ By default, the **Log Console** scrolls automatically so that the newest message
 -	When the auto-scrolling mode is activated, the ![Auto-Scroll](../images/icon_log_console_autoscroll.png) icon is highlighted.
 -	If you scroll the **Log Console** manually, the auto-scrolling mode is automatically disabled, and the ![Auto-Scroll](../images/icon_log_console_autoscroll.png) icon loses its highlight.
 -	To resume auto-scrolling, click the ![Auto-Scroll](../images/icon_log_console_autoscroll.png) icon or scroll manually all the way to the bottom.
+- Auto-scrolling is automatically re-enabled after performing an action that triggers compilation.
 
 ## Open the log folder
 

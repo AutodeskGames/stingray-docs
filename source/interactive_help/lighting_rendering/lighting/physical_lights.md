@@ -6,6 +6,10 @@ Physical lights can be added to your scene from the **Create** panel.
 
 ![](..//../images/physical_light_create.png)
 
+The helper unit is represented in the viewport as a wire frame light fixture.
+
+![](..//../images/marker_light_physical.png)
+
 ## IES Light Profiles
 
 IES Light Profiles are digital profiles of real-world lights. These ASCII data files describe how a light is cast. When assigned to a **Physical Light** entity, IES profiles help create life-like lighting.

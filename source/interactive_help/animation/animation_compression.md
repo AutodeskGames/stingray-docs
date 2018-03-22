@@ -1,4 +1,4 @@
-#Animation compression
+# Animation compression
 
 Animations can consume a lot of memory. To reduce the cost, {{ProductName}} uses a lossy compression scheme. When exported, the animation is sampled at 30 Hz and key frames are recorded. During data compilation, the engine tries to fit curves that match these key frames. Then the control points for these curves are compressed, which loses some precision. Finally, during playback, the engine interpolates in the curves to find the pose at a particular time value.
 It's important to note that the curves the engine uses for interpolation are not the same as the "curves" used by your DCC tool (for example, MotionBuilder). The engine uses its own curve format, just for compression, and it won't match the DCC curves.

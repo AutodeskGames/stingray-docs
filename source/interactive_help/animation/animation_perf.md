@@ -93,17 +93,19 @@ Setting up skeleton LODs (levels of detail) improves performance by disabling th
 
 Use the **Skeleton Editor** to set up LODs for bones:
 
-In each LOD you specify which bones are active for that LOD. Each LOD contains the bones from the previous LOD as well as any additional bones. (Each LOD builds on the previous LOD.)
+In each LOD you specify which bones are active for that LOD. While an LOD is active, only its bones are active, *as well as* any bones that have been activated in other less detailed LODs. Each LOD builds on the previous LOD, where level 5 is the least detailed, and level 0 is the most detailed.
 
-LOD levels for the skeleton are not applied automatically, instead it is up to the script to determine which bone LOD level is suitable for a particular unit, depending on how important that unit is, how far away it is from the camera, and so on.
+So, for example, in LOD level 5 for a character, you might animate only the shoulders and hips. Level 4 could add the elbows, knees and neck. Level 3 could animate the wrists and ankles. Level 2 could animate the fingers and toes. Then level 1 and 0 could animate facial bones.
+
+LOD levels for the skeleton are not applied automatically. It is up to your gameplay code to determine which bone LOD level is suitable for a particular unit, depending on how important that unit is, how far away it is from the camera, and so on.
 
 To set which skeleton LOD is used at runtime, put this command in your Lua script:
 
-> `Unit.set_bones_lod(unit, lod_level)`
+>	`stingray.Unit.set_bones_lod(unit, lod_level)`
 
-Note that the LOD levels for the skeleton are not connected to any other LOD systems (such as the LOD system for meshes). You can use skeleton LOD regardless of whether you use mesh LOD. For more information on mesh LOD, see ~{ Level of Detail (LODs) }~.
+Note that the LOD levels for the skeleton are not connected to any other LOD systems (such as the LOD system for meshes). You can use skeleton LOD regardless of whether you use mesh LOD. (For more information on mesh LOD, see ~{ Level of Detail (LODs) }~.)
 
-Skeleton LOD mainly reduces the cost of the animation_blenders (but it can also cut down the cost of other systems). Look at what that cost is, and experiment with LODs (a quick test is to disable everything but the root for all units) to see if using skeleton LOD is worth it in your projects.
+Skeleton LOD mainly reduces the cost of animation blending, but it can also cut down the cost of other systems. Look at what the peak CPU cost of your animations is, and experiment with LODs to see if activating them is worth it for your project. A quick way to test the effect is to disable everything but the root for all units. If you see a very significant gain in performance, you can work on finding a good balance between performance gains and visual fidelity.
 
 ## Animation merging
 
@@ -115,7 +117,7 @@ The animation merging optimization lets more units to share an animation evaluat
 
 To enable animation merging, put this command in your Lua script:
 
-> `Unit.set_animation_merge_options(u, "max_start_time", t1, "max_drift", t2, "clock_fidelity", f)`
+>	`stingray.Unit.set_animation_merge_options(u, "max_start_time", t1, "max_drift", t2, "clock_fidelity", f)`
 
 <dl>
 

@@ -6,13 +6,15 @@ Displays assets as you browse and select them in the **Asset Browser**. You can 
 
 ![](../../images/asset_preview_unit.png)
 
-- When you select a material, the **Asset Preview** displays the shaderball with your material applied, letting you preview the material within the current lighting environment. You can also preview 2D texture files.
+> **Tip**: To update unit thumbnails that display in the **Asset Browser**, select the asset, then click ![](../../images/icon_snapshot.png) in the **Asset Preview**.
 
-	![](../../images/comp_asset_preview.png)
+When you select a material, the **Asset Preview** displays the shaderball with your material applied, letting you preview the material within the current lighting environment. You can also preview 2D texture files.
 
-- When you select an animation clip, the animation automatically plays back in the **Asset Preview**. To disable automatic playback, select **File > Settings > Editor Settings**, then enable **Disable animation preview autoplay** in the **Property Editor**.
+![](../../images/comp_asset_preview.png)
 
-	![](../../images/anim_clip_preview.png)
+When you select an animation clip, the animation automatically plays back in the **Asset Preview**. To disable automatic playback, select **File > Settings > Editor Settings**, then enable **Disable animation preview autoplay** in the **Property Editor**.
+
+![](../../images/anim_clip_preview.png)
 
 > **Note:** Adjusting the Shading Environment settings (see ~{ The Shading environment and post effects }~) does not update the rendering in the **Asset Preview**  window.
 

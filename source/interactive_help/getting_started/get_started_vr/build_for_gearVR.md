@@ -18,6 +18,7 @@ This topic provides an overview of the steps to successfully build and deploy a 
 
 1.	Run the project.
 
+{{#unless MaxInteractive}}
 ## Advanced: Faster iteration process (for customers with source access)
 
 After you deploy the project to your device, use the following process to iterate faster.
@@ -33,6 +34,7 @@ To connect:
 1. Connect your devices via USB. (See also ~{ Get started on Android }~.)
 2. Enter `adb tcpip 5555` and then `adb connect`.
 3. Unplug your device from the USB and use as usual.
+{{/unless}}
 
 ---
 Related topics:

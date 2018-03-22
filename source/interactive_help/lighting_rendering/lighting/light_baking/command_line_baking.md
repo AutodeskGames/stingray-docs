@@ -18,7 +18,9 @@ You can start the interactive engine application from a command-line prompt, and
 
 -	`--toolchain` should point to the absolute path of your binaries directory. Most users will find this under `C:\Program Files\Autodesk\ {{SR_DOC_SHORT_NAME}}\<version>`.
 
+{{#unless MaxInteractive}}
   	If you build your engine from source, and the root folder of your source code repository is at `C:\git\interactive`, your binaries directory is typically located here: `C:\git\interactive\build\binaries`.
+{{/unless}}
 
 -	`--project-root` should point to the absolute path of your project's source data.
 
