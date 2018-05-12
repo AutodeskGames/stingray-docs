@@ -1,16 +1,16 @@
-# Welcome to the docs repo for the Stingray interactive component
+# Добро пожаловать в реппозиторий документации по Stingray interactive component
 
-This repository hosts all the source files that are used to build public-facing documentation for Stingray, and for the products that ship with Stingray as an interactive component (currently 3ds Max Interactive and Maya Interactive).
+В этом репозитории хранятся все исходные файлы, которые используются для создания публичной документации для Stingray, а также для продуктов, которые поставляются с Stingray в качестве interactive component (cВ данный момент 3ds Max Interactive и Maya Interactive).
 
-This readme is intended to orient internal Autodesk developers and external customers to our help and docs systems.
+Этот readme предназначен для ориентации внутренних разработчиков Autodesk и внешних клиентов на нашу помощь и документы.
 
-# Viewing the docs
+# Просмотр документации
 
-If you just want to read the docs, it's best to use the public docs site, at:
+Если вы только хотите читать документацию, то лучше это делать на специальном публичном сайте документации:
 
 <http://www.autodesk.com/stingray-help>
 
-You'll have access there to all the Stingray material in its final format as viewed by customers, including the API references. The content in this public site always corresponds to the last released version of Stingray, and typically matches the content of the `master` branch in this `stingray-docs` repository.
+У вас будет доступ ко всему материалу Stingray в его окончательном формате, если он будет рассмотрен клиентами, включая руководство API. Содержимое этого общедоступного сайта всегда соответствует последней выпущенной версии Stingray и обычно соответствует содержимому ветки `master` в этом репозитории` stingray-docs`
 
 The best way to find out if something is documented in the Stingray Help for the current release is to search the site above.
 
@@ -62,13 +62,13 @@ Many good text editors can give you previews of what the Markdown format will lo
 
 As a general rule, if the GitHub preview looks good, you can be pretty sure that your content will be formatted correctly in the final build.
 
-## Using conditions to make text appear for different "flavors"
+## Использование условий для создания текста для разных "flavors"
 
-The source material in this repo is used to build customer-facing help for Stingray, 3ds Max Interactive, and Maya Interactive. Although these different flavors are based on the same core interactive component, they are specialized and tweaked by using different build configurations and shipping with different sets of default plug-ins. So, sometimes the help content that accompanies the flavors will need to be different too.
+Исходный материал в этом репо используется для создания справки, ориентированной на клиента для Stingray, 3ds Max Interactive, и Maya Interactive. Хотя эти различные вариации основаны на одном и том же ключевом интерактивном компоненте, они специализируются и настраиваются с использованием различных конфигураций сборки и доставки с различными наборами плагинов по умолчанию. So, sometimes the help content that accompanies the flavors will need to be different too.
 
 There are two ways to change things up for different flavors: variables, and conditions.
 
-Variables are simple text keys that get replaced automatically during the doc build process by new strings that reflect the flavor being built. You can tell a variable by the syntax `{{ variable_name }}`, with two curly-brackets around the variable name. For example, if you write, `Welcome to {{ ProductName }}, the greatest software in history`, that text will be rendered as `Welcome to Stingray, the greatest software in history` or `Welcome to 3ds Max Interactive, the greatest software in history` depending on the flavor you choose to build.
+Переменные - это простые текстовые ключи, которые автоматически заменяются во время процесса сборки doc новыми строками, которые отражают создаваемый вариант. Вы можете указать переменную синтаксисом `{{ variable_name }}`, with two curly-brackets around the variable name. For example, if you write, `Welcome to {{ ProductName }}, the greatest software in history`, that text will be rendered as `Welcome to Stingray, the greatest software in history` or `Welcome to 3ds Max Interactive, the greatest software in history` depending on the flavor you choose to build.
 
 Conditional text means including or excluding a block of text or an entire topic based on whether certain flags are active. For example, if a certain paragraph only applies to 3ds Max Interactive, you could write:
 
