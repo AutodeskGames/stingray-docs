@@ -1,16 +1,16 @@
-# Getting Started
+# Начало работы
 
-Once you've downloaded and installed {{ProductName}}, you can select **Autodesk > {{ProductName}}** from the Windows **Start** menu to launch.
+Как только вы скачали и установили {{ProductName}}, вы можете выбрать **Autodesk > {{ProductName}}** из окна **Start** меню для запуска.
 
-What's next? Well, you can browse more topics in this Getting started section like the ~{ Interface overview }~, watch some [video tutorials](../tutorial_link/tutorials_on_area.html), or jump right in.
+Что теперь? Что ж, вы можете посмотреть больше статей в этом разделе о начале работы например: ~{ Interface overview }~, скачать видео [video tutorials](../tutorial_link/tutorials_on_area.html), или перейти прямо в.
 
-You'll start up in the {{ProductName}} *editor*. This is the main tool that you'll be using to build your content. The editor helps you do things like:
+ЗАпустите {{ProductName}} *editor*. Это основной инструмент который вы будете использовать для создания вашего контента. Редактор помогает делать следующее:
 
--	bring in 3D content like models, animations and textures from other applications like Maya or 3ds Max,
--	lay out your content in scenes, which we call *levels*,
--	set up the way end-users will interact with your scenes and content,
--	create other kinds of content specific to {{ProductName}}, like particle effects,
--	and *deploy* your content in a standalone package or app for one or more target platforms like Windows, iOS, or Android.
+-	вносить 3D контент типа моделей, анимаций и текстур из других приложений типа Maya или 3ds Max,
+-	располагать свой контент по сценам, которые называют *levels*,
+-	настроить способ взаимодействия конечных пользователей с вашими сценами и контентом,
+-	создавать другие виды контента, специфичные для {{ProductName}}, такие как эффекты частиц,
+-	и *разворачивать* ваш контент в автономном пакете или приложении для одной или нескольких целевых платформ, таких как Windows, iOS, или Android.
 
 <table class="not-ruled"><tr><td>
 ![Editor interface](images/thumbnail_interface_overview.png)
@@ -19,8 +19,8 @@ You'll start up in the {{ProductName}} *editor*. This is the main tool that you'
 </td></tr>
 </table>
 
-But the first thing you'll need to do is create and open a *project*. The project contains all the different kinds of files and assets that you'll use to create your interactive app -- 3D models, materials and textures, levels, Lua files, and more. {{ProductName}} comes with some standard template projects you can use as a starting point, or you can download a sample project from the **Online Examples** tab of the ~{ Project Manager }~.
+Но первое, что вам нужно сделать, это создать и открыть *project*. Проект содержит все различные типы файлов и активов, которые вы будете использовать для создания своего интерактивного приложения. -- 3D модели, маткриалы итекстуры, уровни, Lua файлы, и т.д. {{ProductName}} поставляется с некоторыми стандартными проектами шаблонов, которые вы можете использовать в качестве отправной точки, или вы можете загрузить образец проекта из вкладки **Online Examples** в ~{ Project Manager }~.
 
 See the pages under ~{ Set up a project }~ for more on what projects are and how to work with them.
 
-Your project will open up in the interactive editor, but that's not the way people will ultimately experience your project when you distribute it. So, one of the first things you'll want to do with your new project is test it out to see how it behaves in the runtime interactive engine. Don't miss ~{ Test and build a project }~ for an introduction to running your content.
+Ваш проект откроется в интерактивном редакторе, но это не так, как люди в конечном итоге испытают ваш проект, когда вы его распространяете. Итак, одна из первых вещей, которые вы хотите сделать с вашим новым проектом, - это проверить, как это работает в интерактивном движке runtime. Не пропустите ~{ Test and build a project }~ для ознакомления с запуском вашего контента.
