@@ -1,73 +1,73 @@
-# Get started for the Web
+# Приступая к работе с Web
 
-These pages tell you everything you need to know in order to get started developing projects that will run in a web browser.
+Эти страницы сообщают вам все, что вам нужно знать, чтобы начать разработку проектов, которые будут выполняться в web браузере.
 
-In this release, you can:
+В этом релизе вы можете:
 
--	Launch your project in a browser straight from the interactive editor.
--	Deploy your project to disk and host it on a web server later on.
+-	Запустить свой проект в браузере прямо из интерактивного редактора.
+-	Разверните проект на диск и разместите его на веб-сервере позже..
 
-You can't yet:
+Вы еще не можете:
 
 -	Mirror the editor viewport to the browser.
 -	Run the editor or any of its tools in the browser to edit your levels and projects.
 
 In addition, you may notice that not all of the rendering settings offered by the shading environment are available yet when the project is running in the browser. We're still working on making more of these high-quality effects work under WebGL.
 
-## Step 1. Install a supported browser
+## Шаг 1. Установка поддерживаемого браузера
 
-The web version of the interactive engine requires **both** WebAssembly and WebGL 2.0, which are currently supported by:
+web версия interactive engine требует **оба** WebAssembly и WebGL 2.0, которые сейчас поддерживаются:
 
--	Google Chrome (Version 57 and above)
--	Mozilla Firefox (Version 52 and above)
+-	Google Chrome (Версия 57 и выше)
+-	Mozilla Firefox (Версия 52 и выше)
 
-## Step 2. Running the project in a web browser
+## Шаг 2. Запуск проекта в web браузере
 
-To launch your project in a browser from the interactive editor, you'll use the **Connections** panel to set up a new web target for each browser you want to use. (See also ~{ Using the Connections panel }~.)
+Для запуска проекта в браузере из редактора interactive, используйте панель **Connections** для настройки нового web target для каждого используемого браузера. (См. также ~{ Использование панели Connections }~.)
 
-1. In the **Connections** panel (**Window > Deploy and Connect > Connections**), specify a name to identify the connection.
+1. В панели **Connections** (**Window > Deploy and Connect > Connections**), укажите имя идентифицирующее connection.
 
-1. Set the **Platform** option to **Web**.
+1. Задайте опцию **Platform** как **Web**.
 
-1. The **Browser Path** points to the *.exe* file for your default web browser. If it's not a supported web browser (see the list above), you'll need to browse your file system to select the *.exe* of the supported web browser you want to use.
+1. **Browser Path** укажите путь к *.exe* файлу вашего браузера. Если брайзер не поддерживается (см. список выше), you'll need to browse your file system to select the *.exe* of the supported web browser you want to use.
 
-1. Leave the **Command Line** blank. For web connections, this defines extra parameters that are sent to the launched HTML page in the URL search string. These command-line parameters will be passed to the URL as GET parameters, which are then read by the engine and honored just like any platforms. If you want to customize the HTML page, enter the parameters here. Note that parameters that won’t make sense in the context of a web page might not yield the intended results.
+1. Оставьте **Command Line** пустым. Для web connections, this defines extra parameters that are sent to the launched HTML page in the URL search string. These command-line parameters will be passed to the URL as GET parameters, which are then read by the engine and honored just like any platforms. If you want to customize the HTML page, enter the parameters here. Note that parameters that won’t make sense in the context of a web page might not yield the intended results.
 
 	![Web connection](../images/web_connection.png)
 
-1. Press the **Run Project** button either from the **Connections** panel or from the viewport tool bar.
+1. Нажмите кнопку **Run Project** на панели **Connections** или на viewport tool bar.
 
-When you get the project successfully running in the browser, it looks something like this:
+Когда проект успешно запущен в browser, он выглядит примерно так:
 
 ![A project running in WebGL](../images/experimental_webgl_running.jpg)
 
-## Step 3. Deploying the project to disk
+## Шаг 3. Развертывание проекта на диск
 
-To deploy your project to disk (to get it ready for hosting on a web server), you'll use the **Deployer** panel. Go to the tab with the **HTML5** icon, set up the requested fields, and click **Package Project for Web**.
+Для этого (чтобы подготовить его у хостингу на web сервере), используйте панель **Deployer** . Перейдите во вкладку **HTML5** icon, задайте нужные поля, и кликните **Package Project for Web**.
 
 ![WebGL deployment](../images/web_deployer.png)
 
-See also ~{ Using the Deployer panel }~.
+См такжеo ~{ Using the Deployer panel }~.
 
-## About the web project output
+## О web project output
 
-After you deploy, you'll find the following files in the **Destination** folder you set in the **Deployer** panel:
+После развертывания, вы найдете следующие файлы в папке **Destination** которую настроили панели **Deployer** :
 
--	A *.wasm* and a *.js* file that are essentially the result of compiling the engine's runtime into WebAssembly, with some JavaScript glue. (Whether you are running the project from the interactive editor or deploying to disk, the same engine binaries are used for both tasks.)
+-	 *.wasm* и a *.js* файлы которые по сути является результатом компиляции среды выполнения WebAssembly, с некоторым JavaScript клеем. (Независимо от того, выполняете ли вы проект из интерактивного редактора или развертываете на диск, для обеих задач используются одни и те же бинарные файлы ядра.)
 
--	An *.html* wrapper that loads the engine's runtime WebAssembly and JavaScript files and instructs it to launch your project. This default page is branded with default logos, but you can customize it freely if you want, or use it as a model to write your own HTML wrapper page.
+-	Обертки *.html* котрая загружает движок WebAssembly и JavaScript файлы и поручает ему запустить ваш проект. Эта страница по умолчанию имеет фирменные логотипы по умолчанию, но вы можете настроить ее свободно, если хотите, или использовать ее в качестве модели для написания собственных HTML wrapper page.
 
--	A *scripts* folder that contains additional JavaScript files required to properly initialize the engine. Those can also be configured at will.
+-	Папка *scripts* которая содержит дополнительные JavaScript файлы необходимые для корректной инициализации движка. Они также могут быть настроены по желанию.
 
--	A *content* folder that contains your project's compiled data. If you use the **Deployer** to package the project for the web, the project data is aggregated into *bundles*, just as it is on other platforms. See also ~{ About the content lifecycle }~.
+-	Папка *content* которая содержит скомпилированные данные вашего проекта. Если вы использовали **Deployer** для упаковки проекта web, данные проекта аггрегируются в *bundles*, также как и для других платформ. См. Также ~{ About the content lifecycle }~.
 
-**To run a deployed project in your browser:**
+**Запуск развернутого проекта в браузере:**
 
-Host the contents of the destination folder on a web server, and access the *.html* wrapper through an HTTP connection.
+Разместите содержимого папки назначения на web server, и перейдите на *.html* wrapper through an HTTP connection.
 
 >	**NOTE:** You cannot simply open the *.html* wrapper file in a browser directly from your computer's file system. Due to security concerns, most browsers restrict the types of content they will load and run from `file://` URLs on the local disk or a shared drive.
 
-## About the launch process
+## О процессе запуска
 
 Starting up the {{ProductName}} engine in the browser is a multi-step process. This sequence happens automatically without you needing to do anything, but it can be helpful to know a bit about what's happening behind the scenes.
 
