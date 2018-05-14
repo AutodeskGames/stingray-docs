@@ -1,51 +1,51 @@
-# Using Entities in your Project
+# Используем Entities в своем проекте
 
->	**NOTE:** Entities are intended to offer a modular, easily extensible system for constructing and re-using custom building blocks. At the moment, support for entities is just getting started, and mostly centers around supporting ~{ The Shading environment and post effects }~. Feel free to try out using the entity system for other purposes using any of the information you see in this section, but be aware that for the moment most workflows are still based around the use of *units* rather than entities. See also ~{ About units and entities }~.
+>	**NOTE:** Entities нужны для модульности, легко расширяемая система для построения и повторного использования пользовательских строительных блоков. В настоящий момент, поддержка entities только начинается, и в основном сосредоточена вокруг поддержки ~{ шейдинга окружения и пост-эффектов }~. Не стесняйтесь использовать систему сущности для других целей, используя любую информацию, которую вы видите в этом разделе, но имейте в виду, что на данный момент большинство рабочих процессов по-прежнему основаны на использовании *units* а не entities. См. также ~{ О units и entities }~.
 
-Entities are building blocks that you can use in your project to set up complex objects that have their own unique sets of data, behaviors and interactions.
+Entities являются строительными блоками, которые вы можете использовать в своем проекте для создания сложных объектов, которые имеют свои собственные уникальные наборы данных, поведения и интерактивности.
 
-## What are entities for?
+## Для чего нужны сущности?
 
-The goal of the entity system is to be flexible and open enough to model just about any kind of object that you might need in your project.
+TЦель системы сущностей - быть гибкой и достаточно открытой, чтобы моделировать практически любой объект, который вам может понадобиться в вашем проекте.
 
-Under the hood, a few core features and workflows are already built around entities. For example, anytime you create a new level, it comes with an entity that handles the rendering settings used by ~{ The Shading environment and post effects }~.
+Под капотом несколько основных функций и рабочих процессов уже построены на основе entities. Например, в любое время, когда вы создаете новый уровень, он поставляется с сущностью, которая обрабатывает параметры рендеринга, используемые в ~{ The Shading environment and post effects }~.
 
-You can also use the entity system directly to set up your own kinds of objects. In this release, you will find it mainly useful for creating entities that store arbitrary data values: numeric, boolean, strings, resource names, 3D coordinates, colors.
+Вы также можете напрямую использовать систему сущностей для настройки своих видов объектов. В этом выпуске вы найдете его в основном полезным для создания объектов, которые хранят произвольные значения данных: numeric, boolean, strings, resource names, 3D coordinates, colors.
 
-## Entities are *modular*
+## Entities это *модульность*
 
-Every entity is essentially a container that holds various different kinds of *components*.
+Каждая сущность представляет собой контейнер, который содержит различные виды *components*.
 
-Each component has a single, distinct job. This might be things like storing some kind of data, managing a 3D mesh, maintaining a hierarchy of other nested entities, responding to events by running Lua code or Flow graphs.
+Каждый компонент имеет отдельную конкретную работу. Это может быть как хранение данных, управление трехмерной сеткой, сохранение иерархии других вложенных объектов, реагирование на события путем запуска кода Lua или Flow graphs.
 
-You assemble an entity by putting different kinds of components together and setting them up with their own data (e.g. different property values, different meshes, different behaviors). In this way, you can *compose* your own unique kinds of entities that contain just the components and behaviors you need.
+Вы собираете сущность, комбинируя различные компоненты и настраивая их своими собственными данными (например различные значения свойств, различные меши, разные типы поведения). Таким образом, вы можете * составить * свои собственные уникальные типы сущностей, которые содержат только компоненты и поведение, которые вам нужны.
 
-See also ~{ Assign components to an entity }~.
+См также ~{ назначение компонента в сущность }~.
 
-## Entities are *efficient*
+## Entities это *эффективность*
 
-Since entities are built up from a selected set of components, they tend to be relatively lightweight. If you don't need an entity to handle things like physics or 3D meshes, you simply don't assign the relevant components to that entity. Each entity therefore consumes only the minimal amount of memory needed to handle its assigned components, without reserving any unnecessary extra "overhead".
+Поскольку объекты создаются из выбранного набора компонентов, они, как правило, относительно легки. Если вам не нужна сущность для обработки таких вещей, как физика или 3D-сетки, вы просто не назначаете соответствующие компоненты этому объекту. Поэтому каждый объект потребляет только минимальный объем памяти, необходимый для обработки назначенных ему компонентов, не оставляя лишних «накладных расходов»,.
 
-In addition, each type of component is managed by a separate subsystem. Each of these component managers is only aware of the entities that have been assigned an instance of its component, and each manager maintains all of the relevant data for all of those entities in one place. Decoupling the component managers in this way makes each manager as focused and efficient as possible at doing its own particular job.
+Кроме того, каждый тип компонента управляется отдельной подсистемой. Каждый из этих менеджеров компонентов знает только объекты, которым был назначен экземпляр своего компонента, и каждый менеджер сохраняет все соответствующие данные для всех этих объектов в одном месте. Развязка менеджеров компонентов таким образом делает каждого менеджера максимально целенаправленным и эффективным при выполнении своей конкретной работы.
 
-## Entities are *extensible*
+## Entities это *расширяемость*
 
-{{ProductName}} comes with some built-in components that are ready to be assigned to your own entities. (In this release, the set of components that have full end-to-end workflows from the editor to the runtime gameplay is very limited. Future releases will add more built-in component types and easier ways to set them up.)
+{{ProductName}} поставляется с некоторыми встроенными компонентами, которые готовы быть привязаны к вашим собственным объектам. (В этом выпуске набор компонентов, которые имеют полные сквозные рабочие процессы от редактора до игрового процесса исполнения, очень ограничен. В будущих выпусках будут добавлены дополнительные встроенные типы компонентов и более простые способы их настройки.)
 
-Depending on the type of project you are creating, you may need your entities to do different kinds of jobs or manage different kinds of data than the set of built-in components allows.
+В зависимости от типа проекта, который вы создаете, вам могут потребоваться, чтобы ваши объекты выполняли разные виды заданий или управляли различными видами данных, чем набор встроенных компонентов.
 
-To do this, you can create your own custom types of components. This allows you to tailor your entities to fit the needs of your project very closely.
+Для этого вы можете создавать свои собственные настраиваемые типы компонентов. Это позволяет вам приспособить свои сущности в соответствии с потребностями вашего проекта очень близко.
 
-See also ~{ Create a custom component }~.
+См. также ~{ Создание кастомного компонента }~.
 
-## Entities are *reusable*
+## Entities это *повторно-используемость*
 
-You can base new entity definitions on other kinds of entities that you've already set up. This makes your new entity *inherit* all of the same components and settings that its base entity has. You can also override any of these inherited settings, and add new components.
+Вы можете создавать новые определения сущностей для других типов объектов, которые вы уже настроили. Это заставляет ваш новый объект * наследовать * все те же компоненты и настройки, что и его базовый объект. Вы также можете переопределить любой из этих унаследованных параметров и добавить новые компоненты.
 
-This means that you never have to duplicate an entity definition in order to reuse the same set of components or settings. You can reuse each entity definition as many times as you need, specializing it further each time you use it.
+Это означает, что вам никогда не придется дублировать определение сущности, чтобы повторно использовать один и тот же набор компонентов или настроек. Вы можете повторно использовать каждое определение сущности столько раз, сколько вам нужно, специализируясь на этом каждый раз, когда вы его используете.
 
-This lets you create hierarchies of entity definitions, each of which relies on the components and settings that come from its *inherited asset*.
+Это позволяет создавать иерархии определений сущностей, каждый из которых зависит от компонентов и настроек, которые исходят из *наследования активов*.
 
-Note that each entity is persistently connected to its inherited entity. Whenever you retrieve an inherited setting, its value is retrieved from the inherited entity unless it has been overridden. Therefore, when you change a setting at the root of your entity hierarchy, you automatically change that value for all other entities that inherit it.
+Обратите внимание, что каждый объект постоянно связан с его унаследованным объектом. Всякий раз, когда вы извлекаете унаследованный параметр, его значение извлекается из унаследованного объекта, если оно не было переопределено. Поэтому, когда вы изменяете настройку в корне вашей иерархии объектов, вы автоматически изменяете это значение для всех других объектов, которые наследуют его.
 
-See also ~{ Set or remove an inherited asset }~ and ~{ Apply or discard overrides }~.
+См также ~{ установка или удаление inherited asset }~ и ~{ Применени и сброс overrides }~.
