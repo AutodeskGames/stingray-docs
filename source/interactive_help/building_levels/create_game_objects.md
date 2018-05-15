@@ -1,35 +1,35 @@
-# Create level objects
+# Создание объектов уровня
 
-Level objects in {{ProductName}} are basic primitives that you can use to help set up gameplay logic. They're represented visually in your level so you can see their position in 3D.
+Level objects в {{ProductName}} являются базовыми примитивами, которые вы можете использовать, чтобы помочь настроить логику игры. Они визуально отображаются на вашем уровне, чтобы вы могли видеть их положение в 3D.
 
-They give you the simple hooks you need to trigger events using Flow and Lua at specific locations in your level.
+Они дают вам простые крючки, необходимые для запуска событий с использованием Flow и Lua в определенных местах вашего уровня.
 
-Using the **Create** menu  or the ~{ Create panel }~, you can create the following types of level objects.
+Используйте меню **Create** или ~{ Create panel }~, вы можете создать следующие типы объектов уровня.
 
--	**Markers** Display as wireframe cubes with the marker name. Used to locate a position in your level so you can make actions happen at that location.
+-	**Markers** Отобраэаются как каркасные кубы с именем маркера. Используется для определения местоположения на вашем уровне, чтобы вы могли совершать действия в этом месте.
 
 	![](../images/marker.png)
 
-	For example, you can spawn a unit at a given marker.
+	НАпример, вы можете порождать юниты в заданном маркере.
 
 	![](../images/spawn_marker_flow.png)
 
--	**Prototypes**. Simple, adjustable 3D blocks that let you rapidly develop geometry in order to rough out level elements. You can also use prototypes to create invisible physics actors. (See ~{ Create a physics actor }~.)
+-	**Prototypes**. Простые, настраиваемые 3D блоки, которые позволяют быстро развить геометрию, чтобы выровнять элементы уровня. Вы также можете использовать прототипы для создания невидимых субъектов физики. (См. ~{ Создание physics actor }~.)
 
 	![](../images/primitives.png)
 
--	**Triggers** are also simple 3D blocks, but they're set up to act as a switch, so that you can trigger events when other objects come in contact with them.
+-	**Triggers** также простые 3D блоки, но они настроены на то, чтобы действовать как переключатель, так что вы можете инициировать события, когда другие объекты контактируют с ними.
 
 	![](../images/triggers.png)
 
-	After you add the trigger to your level, add an **Event > Trigger** node to the level flow graph, and set the behaviors you want for Touched and Untouched states.
+	После добавления триггера на уровень, добавьте узел **Event > Trigger** на level flow graph, и задайте behaviors you want для Touched и Untouched состояний.
 
 	![](../images/trigger_flow_node.png)
 
 
--	**Volumes** are 3D blocks that are used for tagging the navigation mesh. See ~{ Generate the navigation mesh }~.
+-	**Volumes** это 3D блоки которые используют для пометка навигационной сетки. См. ~{ гненерация navigation mesh }~.
 
--	**Splines** are 3D curved paths, used for constricting motion. The path information is accessible using Lua scripting and Flow nodes.
+-	**Splines** это 3D кривые путей, используют для создания пути движения. Информация о пути доступна с использованием сценариев Lua и узлов Flow.
 
 ##Cancelling creation mode
 
