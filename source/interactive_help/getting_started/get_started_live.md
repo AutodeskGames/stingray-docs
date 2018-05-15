@@ -1,39 +1,39 @@
-# Get started with the Live template
+# Начало работы с шаблоном Live
 
-The **Live** template is an interactive project that offers all the runtime features of Autodesk Live, but without any content. Start a project from this template, bring in your own custom models and materials, and you can deploy your own customized Live experience.
+Шаблон **Live** это интерактивный проект, который предлагает весь функционал runtime Autodesk Live, но без какого-либо контента. Начав проект с этого шаблона, вносите собственные материалы и модели, и вы можете развернуть свой собственный настраиваемый Live-опыт.
 
 ![Live](../images/live-ui.png)
 
-**To get started:**
+**Чтобы начать:**
 
-1.	Create your new project.
+1.	Создайте новый проект.
 
-	In the 3ds Max Interactive editor, open the **Project Manager** to the **Online Projects** tab. Select the **Live** template, click **Download**, and follow the instructions.
+	В 3ds Max Interactive editor, откройте **Project Manager** во вкладке **Online Projects**. Выберите шаблон **Live**, нажмите **Download**, и следуйте инструкциям.
 
 	![Live template icon](../images/live_template_icon.png)
 
 	For details, see the topics under ~{ Set up a project }~.
 
-1.	Open the `content/levels/empty.level` level, if it's not already open. This is the default level you'll want to use for adding your own content.
+1.	Откройте уровень `content/levels/empty.level` , если он уже не открылся. Это дефолтный уровень для добавления собственного контента.
 
-	>	**Tip:** You can change this default level for your project. See ~{ Change the default level for the Live template }~.
+	>	**Tip:** Вы можете изменить этот уровень по умолчанию для своего проекта. См ~{ Измените уровень по умолчанию для Live template }~.
 
-1.	Import some content into your project.
+1.	Импорт контента в ваш проект.
 
-	You import content for the Live template in exactly the same way as any other 3ds Max Interactive project -- for example, for 3D models, you'll typically use the FBX interchange format. For more information on this topic, see the topics under ~{ Importing Assets }~.
+	Все происходит так же как для других типов проектов 3ds Max Interactive -- например, 3D модели, в FBX формате. См. ~{ Importing Assets }~.
 
-1.	Add your own content to your project's default level.
+1.	Добавление контента на дефолтный уровень.
 
-	Once you have imported your content into your project, you can simply drag and drop it from the **Asset Browser** to the **Level Viewport** to place it into your default level. For more information on how to build a scene in the 3ds Max Interactive editor, see the topics under ~{ Building Levels }~.
+	Как только вы импортируете свой контент в свой проект, вы можете просто перетаскивать его с **Asset Browser** на **Level Viewport** для размещения на уровне. Подробнее о создании сцен в 3ds Max Interactive editor, см. ~{ Building Levels }~.
 
-1.	Set up your content so that it will work with the runtime features of the Live template. At a minimum, you'll want to make sure that your main models have physics set up, and that you generate the navigation data that the "tap and go" movement mode depends on.
+1.	Как минимум, вы захотите убедиться, что ваши основные модели настроены по физике, и что вы создаете навигационные данные, от которых зависит режим движения «tap and go».
 
-	See ~{ Set up the Live template }~.
+	Cм. ~{ Set up the Live template }~.
 
-	You can also experiment with a variety of other optional configuration settings to control the way0 your project behaves when you launch it. For details, see ~{ Live settings }~.
+	Вы также можете поэкспериментировать с различными дополнительными настройками конфигурации для управления тем как ваш проект ведет себя при запуске. Подробнее см. ~{ Live settings }~.
 
-1.	Run your project and try it out! Click ![Run project](../images/icon_runProject.png) to run the project from the 3ds Max Interactive editor, or use the **Deployer** panel to create a standalone `.exe` or mobile app.
+1.	ЗАпустите свой проект и попробуйте! Кликните ![Run project](../images/icon_runProject.png) для запуска проекта из 3ds Max Interactive editor, или используйте панель **Deployer** для создания стандартного приложения `.exe` или мобильного приложения.
 
-	See ~{ Deploying and Building }~, and the platform-specific topics under ~{ Getting Started }~.
+	См ~{ Deploying and Building }~, и platform-specific topics under ~{ Getting Started }~.
 
-You'll find all the scripts and that make the Live experience work under the `script/lua` folder. The pages in this section only covers a few of the most common things you'll want to set up for your project, so feel free to dig into the gameplay scripts to get a better picture of how things work under the hood!
+Все скрипты и that make the Live experience work в папке `script/lua`. Страницы в этом разделе охватывают только некоторые из наиболее распространенных вещей, которые вы хотите настроить для своего проекта, поэтому не стесняйтесь копаться в сценариях игрового процесса, чтобы получить лучшее представление о том, как все работает под капотом!
