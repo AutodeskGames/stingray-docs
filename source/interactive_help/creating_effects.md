@@ -1,24 +1,24 @@
-# Creating FX
+# Создание FX
 
-Creating beautiful and lasting impressions in an interactive 3D experience often requires special visual effects. Waterfalls, glow, depth of field, a gentle hazy fog, or particle trails - all are possible in {{ProductName}} and can give your scene that extra quality that's just not possible from standard polygonal modeling alone.
+Создание красивых и длительных впечатлений в интерактивном 3D опыте часто требует специальных визуальных эффектов. Водопады, свечение, глубина резкости, мягкий туман, или след из частиц - все возможно в {{ProductName}} и может придать вашей сцене то экстра-качество которое недоступно только полигональному моделированию.
 
-You can use particle effects to create an entire array of effects including but not limited to explosions, waterfalls, mist and smoke.
+Вы можете использовать эффекты частиц для создания целого множества эффектов, включая, но не ограничиваясь: взрывы, водопады, туман и дым.
 
-> ![](images/icon_video.png) You can find a series of tutorial videos, including a link to download sample files <a href="http://area.autodesk.com/learning/creating-particle-effects-in-stingray" target="blank">here.</a>
+> ![](images/icon_video.png) Вы можете найти серию обучающих видеороликов, включая доступные для загрузки файлы примеров <a href="http://area.autodesk.com/learning/creating-particle-effects-in-stingray" target="blank">here.</a>
 
-The shading environment settings let you create other types of global effects in your scene, including:
+Настройки окружения затенения позволяют создавать другие типы глобальных эффектов в вашей сцене, включая:
 
 - Bloom
 
-    Gives lights and emissive textures a glow or haze.
+    Придает источникам света и светящим текстрам - ореол или дымку.
 
 - Fog
 
-    Gives a scene a simple atmosphere.
+    Придает сцене простую атмосферу.
 
 - Vignette
 
-    Darkens the edging of your screen.
+    Затемняет углы экранаn.
 
 - Lens Quality (Distortion)
 
@@ -26,10 +26,10 @@ The shading environment settings let you create other types of global effects in
 
 - Depth of Field
 
-    Can blur things both closer and farther from a focal point.
+    Может размывать все, что ближе или дальше точки фокуса.
 
 - Motion Blur
 
-    Gives objects in motion a realistic softening effect.
+    Придает объектвм в движении реалистичный смягчающий эффект.
 
-See ~{ The Shading environment and post effects }~ for more.
+См ~{ The Shading environment and post effects }~ for more.
