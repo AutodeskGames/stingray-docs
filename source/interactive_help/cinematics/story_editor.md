@@ -2,107 +2,107 @@
 
 - **Window > Story Editor**
 
-The **Story Editor** is a tool for creating simple animation on objects/units and entities within a level. You can add units and entities to Story and animate their transforms and other parameters using keyframe animation. (You cannot use animation clips in Story.) See also ~{ Create simple animations with the Story Editor }~.
+**Story Editor** это инструмент для создания простых анимаций для объектов/юнитов и сущностей на уровне. Вы можете добавлять units и entities в Story и анимироватьт их трансформации и другие параметры используя keyframe анимацию. (в Story нельзя использовать animation clips .) Смотрите также ~{ Создавайте простые анимации с помощью Story Editor }~.
 
-This editor consists of the following main areas:
+Этот редактор состоит из следующих основных областей:
 
-![Story Editor Overview](../images/comp_story_editor.png)
+![Story Editor обзор](../images/comp_story_editor.png)
 
-Refer to the sections below for more detail on each area.
+Обратитесь к разделам ниже, чтобы узнать больше о каждой области.
 
 ##LIVE button
 
 ![](../images/icon_storyEd_LIVE.png)
 
-Click to toggle Story mode. When on, the **Story Editor** is "live" so you can start to add keyframe animation on selected objects.
+Нажмите, чтобы переключить Story mode. Когда включено,  **Story Editor** будет "live" поэтому вы можете начать добавлять анимацию ключевого кадра на выбранные объекты.
 
-  > **Important:** When Story mode is on, changing the position of the unit in the level has no effect. To edit the position of the unit in the level again, exit Story mode. (Click LIVE to toggle the mode on and off.)
+  > **Important:** Когда включен режим Story, изменение положения объекта на уровне не будет работать. Чтобы снова отредактировать позицию устройства на уровне, выйдите из Story mode. (Нажмите LIVE для включения и выключения режима.)
 
-You can still select, move, delete, or modify key values when the **Story Editor** is not live.
+Вы по-прежнему можете выбирать, перемещать, удалять или изменять значения ключей, когда **Story Editor** не live.
 
-  > **Note:** As you animate units in the **Story Editor**, the animation plays back only in the **Level Viewport**, it cannot playback on connected devices.
+  > **Note:** Когда вы анимируете units в **Story Editor**, анимация воспроизводится только в **Level Viewport**, он не может воспроизводиться на подключенных устройствах.
 
 ##Story controls
 
 ![](../images/comp_story_controls.png)
 
-Click ![](../images/icon_storyEd_addNew.png) to add a new Story to the editor. If you select a unit or entity before clicking ![](../images/icon_storyEd_addNew.png), the editor automatically adds the unit or entity to a new level object track within the story.
+Нажмите ![](../images/icon_storyEd_addNew.png) добавить новый Story в редактор. Если вы выберете unit или entity перед щелчком ![](../images/icon_storyEd_addNew.png), редактор автоматически добавляет unit или entity на новый уровень объекта трека в истории.
 
-When working on multiple stories within a level, use the Current Story drop-down to switch between them.
+При работе над несколькими историями в пределах уровня, используйте выпадающий список Current Story для переключения между ними.
 
 ##Toolbar
 
 ![](../images/comp_story_editor_toolbar.png)
 
-The **Story Editor** toolbar includes the following:
+Панель инструментов **Story Editor** включает:
 
-| Controls |  Description |
+| Контрол |  Описание |
 |----------| -------------|
-| **Playback Controls** ![](../images/storyEd_playbackCtrls.png) | Use the playback controls to preview animations in the **Level Viewport**, as you edit the unit animation in the **Story Editor**. Use ![](../images/icon_story_forwardPlay.png) to play animation in forward direction and ![](../images/icon_story_reversePlay.png) to play in reverse direction.<br> To change the [playback mode](#playback), select ![](../images/storyEd_loopmode_none.png), right-click to select **Loop** or **Ping Pong**.  |
-| **Snap** ![](../images/icon_storyEd_snapping.png) | Enables snapping to frames or seconds in the timeline.|
-| **Autokey** ![](../images/icon_storyEd_autokey.png) | When on, after you keyframe an object once, the object is automatically keyframed every time you manipulate it in the **Level Viewport**. |
-| **Time mode** ![](../images/icon_storyEd_timeMode.png)![](../images/icon_storyEd_timeModeframes.png) | Toggle the timeline to display seconds, or frames. |
-| **Edit key fields** ![](../images/storyEd_keyFields.png) | Manually enter time and value for a selected keyframe.|
-| **Key & Tangent options** ![](../images/comp_storyEd_keyOptions.png) | Use the key and tangent options to add or remove keyframes and tangent modes. |
-| **Story Selection mask** ![](../images/icon_storyEd_selOnlyStory.png) | Masks selection so that you can select only objects in the current story.|
-| **Onion skinning** ![](../images/icon_storyEd_onionskin.png) | Toggles the display of ghosting on selected units. Right-click to specify whether to ghost **Everything**, or only **Selected units**. To access additional **Onion Skinning Settings** (including color) in the **Properties** panel, select a `StoryRoot` in the **Story Editor** tree view, or in the main **Explorer** panel. |
-| **Capture Frames Tool** ![](../images/icon_capture_frame.png) | Opens the ~{ Capture Frames Tool }~. A Story must be selected to start capturing the frames. See also ~{ Capture frames to disk }~. <br>**Note:** The **Story Editor** need not be "Live" for a frame capture. |
-| **Curve editor/Key editor** ![](../images/icon_storyEd_wrench.png) | Use the curve icon in the toolbar to switch between the different editing views in this area. <br>Curve editing mode: ![](../images/storyEd_curvePanel.png) <br> **Tip:** Select keys on the same curve and enter a value in the edit key field on the toolbar to edit multiple keys at once. <br> Key editing mode: ![](../images/storyEd_keysPanel.png) |
+| **Playback Controls** ![](../images/storyEd_playbackCtrls.png) | Используйте элементы управления воспроизведением для просмотра анимаций в **Level Viewport**, при редактировании unit анимации в **Story Editor**. используйте ![](../images/icon_story_forwardPlay.png) для воспроизведения анимации в прямом направлении и ![](../images/icon_story_reversePlay.png) играть в обратном направлении.<br> Чтобы изменить [playback mode](#playback), выделите ![](../images/storyEd_loopmode_none.png), right-click to select **Loop** or **Ping Pong**.  |
+| **Snap** ![](../images/icon_storyEd_snapping.png) | Включает привязку кадров или секунд на временной шкале.|
+| **Autokey** ![](../images/icon_storyEd_autokey.png) | Когда включено, после того, как вы один раз запустите ключевой кадр, объект автоматически будет разбит на ключевые кадры каждый раз, когда вы будете манипулировать им в **Level Viewport**. |
+| **Time mode** ![](../images/icon_storyEd_timeMode.png)![](../images/icon_storyEd_timeModeframes.png) | Переключение временной шкалы для отображения секунд или кадров. |
+| **Edit key fields** ![](../images/storyEd_keyFields.png) | Вручную введите время и значение для выбранного ключевого кадра.|
+| **Key & Tangent options** ![](../images/comp_storyEd_keyOptions.png) | Используйте параметры ключа и касания, чтобы добавить или удалить ключевые кадры и касательные режимы. |
+| **Story Selection mask** ![](../images/icon_storyEd_selOnlyStory.png) | Выбор масок, чтобы вы могли выбрать только объекты в текущей истории.|
+| **Onion skinning** ![](../images/icon_storyEd_onionskin.png) | Переключает отображение ореолов на выбранные единицы. Щелкните правой кнопкой мыши, чтобы указать, следует ли указывать **Все**, или только **выделенные юниты**. Для доступа к дополнительным **Onion Skinning Settings** (включая цвет)  панели **Properties** , выберите `StoryRoot` в **Story Editor** tree view, или в панели main **Explorer** . |
+| **Capture Frames Tool** ![](../images/icon_capture_frame.png) |Открывает ~{ Capture Frames Tool }~.  Story должен быть выбран для начала захвата кадров. See also ~{ Capture frames to disk }~. <br>**Note:**  **Story Editor** не должен быть в режиме "Live" для захвата кадров. |
+| **Curve editor/Key editor** ![](../images/icon_storyEd_wrench.png) | Используйте значок кривой на панели инструментов, чтобы переключаться между различными видами редактирования в этой области. <br>Режим редактирования кривых: ![](../images/storyEd_curvePanel.png) <br> **Tip:** Выберите ключи на одной кривой и введите значение в поле редактирования на панели инструментов, чтобы редактировать сразу несколько ключей. <br> Режим редактирования ключей: ![](../images/storyEd_keysPanel.png) |
 
-**Controlling story playback**
+**Управление воспроизведением истории**
 <a name="playback"></a>
 
-The Story Editor offers the following playback modes, which control what happens when the story reaches the end of its playback range.
+Story Editorпредлагает следующие режимы воспроизведения, которые контролируют, что происходит, когда история достигает конца своего диапазона воспроизведения.
 
--  **None ![](../images/storyEd_loopmode_none.png) :** The animation stops at the end of the timeline range.
-- **Loop ![](../images/storyEd_loopmode.png):**  The animation restarts from the beginning each time it reaches the end of the playback range.
-- **Ping Pong ![](../images/storyEd_pingmode.png):** The animation switches playback direction each time it reaches one end of the playback range. It plays forward until it reaches the end of the playback range, then plays the animation in reverse until it reaches the start of the playback range, and switches direction to repeat the cycle.
+-  **None ![](../images/storyEd_loopmode_none.png) :** Анимация останавливается в конце диапазона шкалы времени.
+- **Loop ![](../images/storyEd_loopmode.png):**  Анимация перезапускается с самого начала каждый раз, когда она достигает конца диапазона воспроизведения.
+- **Ping Pong ![](../images/storyEd_pingmode.png):** Анимация переключает направление воспроизведения каждый раз, когда достигает одного конца диапазона воспроизведения. Он воспроизводит вперед, пока не достигнет конца диапазона воспроизведения, затем воспроизводит анимацию в обратном направлении до тех пор, пока она не достигнет начала диапазона воспроизведения, и переключит направление на повторение цикла.
 
-By default, unit animations play in **None** mode.
+По умолчанию, unit анимации воспроизводятся в режиме **None**.
 
-For a unit track, the **Pre Infinite** and **Post Infinite** settings (right-click the unit’s individual transform or other properties) define the animation curve behavior before the first key and after the last key of the track in the active timeline range. You can use these settings to make animations play longer in **None** mode, and to control the way curves are handled outside the playback range. To set the playback range,
+Для unit track,  **Pre Infinite** и **Post Infinite** настройки (щелкните правой кнопкой мыши индивидуальное преобразование юнита или другие юниты) определить поведение анимационной кривой перед первым ключом и после последнего ключа дорожки в активном диапазоне временной шкалы. Вы можете использовать эти настройки, чтобы анимация играла дольше в режиме **None**, и управлять тем, как кривые обрабатываются вне диапазона воспроизведения. Чтобы установить диапазон воспроизведения,
 
-- Drag the black sliders in the Story Editor timeline to a new time.
-- Modify the story loop range value using `stingray.StoryTeller.set_loop_range()` function in Lua or **Level > Level Story** node in Flow.
-- Select a `StoryRoot` in the Story Editor tree view or **Explorer** panel and modify the **Story Settings** start and end time.
+- Перетащите черные ползунки на таймлайне Story Editor на новое время.
+- Измените значение диапазона цикла истории, используя `stingray.StoryTeller.set_loop_range()` функцию Lua или узел **Level > Level Story** во Flow.
+- Выделите `StoryRoot` в Story Editor tree view или панели **Explorer** и измените **Story Settings** start и end time.
 
 ##Timeline
 
-- Use the snapping icon ![](../images/icon_storyEd_snapping.png) to enable snapping to seconds or frames.
+- Использовать значок привязки ![](../images/icon_storyEd_snapping.png) для включения привязки к секундам или кадрам.
 
-- Use the clock icon ![](../images/icon_storyEd_timeMode.png) to switch between showing seconds or frames on the timeline.
+- Используйте значок часов ![](../images/icon_storyEd_timeMode.png) для переключения между показом секунд или кадров на временной шкале.
 
 
 ##Track options & Tree view
 
 ![](../images/storyEd_treeView.png)
 
-Use the tree view to browse and select stories, tracks, and properties for keyframing. The tree view includes a small tool bar with a search panel, and the following options for adding tracks:
+Используйте древовидное представление для просмотра и выбора сюжетов, дорожек и свойств для ключевого кадра. Древовидная структура включает небольшую панель инструментов с панелью поиска и следующие параметры для добавления дорожек:
 
 ![](../images/comp_storyEd_trackOptions.png)
 
 **Add level object track**
 
-Use level object tracks to organize the keyframe animation for each unit or entity added to the story. A unit track is automatically created if you select an object before clicking ![](../images/icon_storyEd_addNew.png).
+использование level object tracks для организации анимации ключевого кадра для каждого unit или entity добавленных к story. Unit track автоматически создается, если вы выберете объект перед нажатием ![](../images/icon_storyEd_addNew.png).
 <br>
-An entity track is automatically created if you select an entity before clicking ![](../images/icon_storyEd_addNew.png).
+Дорожка entity автоматически создается, если вы выберите entity перед нажатием ![](../images/icon_storyEd_addNew.png).
 
-Right-click level object tracks to add more properties for animation, including the object's material properties.
+Right-click level object tracks для добавления дополнительных свойств для анимации, включая свойства материала объекта.
 
 ![](../images/storyEd_addMaterial.png)
 
 
-**Add event track**
+**Добавить дорожку событий**
 
-Add event tracks and set keys that you want to expose in the **Level Flow** Editor. You can use keys on event tracks to trigger anything in the level flow. (Play a sound, trigger a particle effect, set up a camera switch, and so on.)
+Добавить дорожки событий и установить ключи, которые вы хотите открыть в **Level Flow** Editor. Вы можете использовать rk.xb на дорожках событий, чтобы вызвать что-либо в потоке уровня. (Воспроизведение звука, запуск эффекта частицы, настройка переключателя камеры и т. Д..)
 
-To access the event output in Flow after you create a key in Story, add a **Level > Level Story** node, then click `Story`.
+Чтобы получить доступ к событию в Flow после создания key в Story, добавьте узел **Level > Level Story** , затем нажмите `Story`.
 
 ![](../images/level_story_set.png)
 
-In the pop-up window that appears, select the Story containing the event track you want.
+В появившемся всплывающем окне выберите Story содержащий дорожку событий, которую вы хотите.
 
-This adds the event track parameters to the Story node, so you can then connect the event output to trigger something else.
+Это добавляет параметры дорожки событий к Story node, поэтому вы можете подключить вывод события, чтобы вызвать что-то еще.
 
 ![](../images/level_story_event.png)
 

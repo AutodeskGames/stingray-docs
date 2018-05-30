@@ -1,26 +1,26 @@
-# Animate sub-objects with the Story Editor #
+# Анимировать под-объекты с помощью Story Editor #
 
-Sub-object mode lets you select and animate objects within a unit's hierarchy.
+Sub-object режим позволяет выбирать и анимировать объекты в пределах иерархии юнитов.
 
-1. Select the unit you want to animate.
+1. Выберите unit который вы хотите анимировать.
 
-2. In the **Story Editor**, click ![](../images/icon_storyEd_addNew.png).
+2. В **Story Editor**, нажмите![](../images/icon_storyEd_addNew.png).
 
-	This adds a new story and a new unit track in the tree view area.
+	Это добавляет новый story и новый unit track В tree view area.
 
-3. In the tree view, right-click the unit track and select **Add Sub Object > Object Name**.
+3. В tree view, щелкните правой кнопкой мыши unit track и выберите **Add Sub Object > Object Name**.
 
-	A new sub-object track is added.
+	Новый трэк sub-object добавлен.
 
-	> **Note:** Picking a track auto-selects the appropriate node.
+	> **Note:** Выбор дорожки автоматически выбирает соответствующий узел.
 
-4. In the ~{ Toolbar }~, click ![](../images/icon_subObjectmode.png) to turn on sub-object mode.
+4. В ~{ Toolbar }~, щелчок ![](../images/icon_subObjectmode.png) включить режим под-объекта.
 
- 	In sub-object mode, you can select any of the unit's nodes.
+ 	В sub-object mode, вы можете выбрать любой из узлов юнита.
 
-	> **Note:** Sub-object mode persists when switching between instances of one unit.
+	> **Note:** Sub-object mode сохраняется при переключении между экземплярами одного юнита.
 
-5. Scrub to the frame or time you want in the **Story Editor** timeline, manipulate the sub-object in the **Level Viewport**, then press S or click ![](../images/icon_storyEd_addkey.png) to set a keyframe.
+5. Scrub к кадру или времени, которое вы хотите В **Story Editor** timeline, manipulate the sub-object В **Level Viewport**, then press S or click ![](../images/icon_storyEd_addkey.png) to set a keyframe.
 
 ---
 Related topics:

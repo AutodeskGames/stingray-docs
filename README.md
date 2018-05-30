@@ -36,7 +36,7 @@ What this means is that when you submit a pull request to our public GitHub repo
 
 ## Using GitHub for external customers
 
-If you're not already familiar with using GitHub to contribute to open-source projects, there are lots of primers [like this one](https://guides.github.com/) out there on the Internet. There are also lots of tools that can help make it easier, like [Sourcetree](https://www.sourcetreeapp.com/), [GitKraken](https://www.gitkraken.com/), [GitHub Desktop](https://desktop.github.com/), etc.
+Если вы еще не знакомы с использованием GitHub внести вклад в проекты с открытым исходным кодом, есть много праймеров [like this one](https://guides.github.com/) out there on the Internet. There are also lots of tools that can help make it easier, like [Sourcetree](https://www.sourcetreeapp.com/), [GitKraken](https://www.gitkraken.com/), [GitHub Desktop](https://desktop.github.com/), etc.
 
 You submit modifications to us using *pull requests* -- the mechanism GitHub uses to exchange, review and accept changes to a repo from other users. Here's a couple of different ways you can go about proposing changes to us through a pull request:
 
@@ -46,9 +46,9 @@ You submit modifications to us using *pull requests* -- the mechanism GitHub use
 
 ## Source organization
 
-Source files for these parts of the doc are all maintained in the *source/interactive_help* folder. The organization of the files in this folder more or less matches the organization of the final TOC shown on the public docs site, so it should be pretty easy to figure out where to make your edits and additions.
+Исходные файлы для этих частей документа поддерживаются в папке *source/interactive_help* . Организация файлов в этой папке более или менее соответствует организации окончательного ТОС, отображаемого на сайте публичных документов, поэтому довольно легко понять, где можно внести изменения и дополнения.
 
-**NOTE:** This repo also has a couple of *submodules* that point to other repositories. Currently these submodules are hidden away in our private GitHub cloud, so you can't access them. If you're working in the public mirror, you might occasionally run into errors when cloning or pulling from this repo, telling you that the submodules can't be found. Don't worry about it, that's expected! If the errors are getting in the way though, you might be able to avoid these errors by configuring your Git client not to *recurse* into submodules.
+**NOTE:** В этом репо также есть пара *submodules* это указывает на другие репозитории. В настоящее время эти подмодули скрыты в наших частных GitHub облако, so you can't access them. If you're working in the public mirror, you might occasionally run into errors when cloning or pulling from this repo, telling you that the submodules can't be found. Don't worry about it, that's expected! If the errors are getting in the way though, you might be able to avoid these errors by configuring your Git client not to *recurse* into submodules.
 
 ## File format
 
