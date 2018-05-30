@@ -155,24 +155,24 @@ Sometimes, especially for software versions, you'll see places where the Markdow
 
 The following sections are intended only for people with access to the internal version of this source repository. Our build tools are still private for the moment. And the content in the reference docs is pulled from comments in the engine source, so it's also private. (But if you spot an error or a problem in the reference docs, don't hesitate to tell us about it -- see above!)
 
-## Building the docs
+## Сборка документации
 
-1.	Install [Ruby](https://www.ruby-lang.org/en/downloads/), if you don't have it already.
+1.	Установите [Ruby](https://www.ruby-lang.org/en/downloads/), если у вас его нетy.
 
-2.	Install [Git](https://git-scm.com/download/win), if you don't have it already. The build process will run `git status` to find the current branch your content is tracking, so make sure that the `Path` environment variable for your system contains the location of your Git binaries. For example, `C:\Program Files (x86)\Git\bin`.
+2.	Установите [Git](https://git-scm.com/download/win), если его у вас еще нет. В процесс сборки будет запущен `git status` для поиска текущей ветку вашего контента, так что убедитесь что переменная окружения `Path` вашей системы содержит положение вашего Git binaries. Пример, `C:\Program Files (x86)\Git\bin`.
 
-3.	If you're building the main Stingray Help, which includes the reference docs, you'll need the MSBuild tools for Visual Studio 2015, available [here](
+3.	Если вы собираете главный хелп Stingray, который включает reference docs, вам понадобиться MSBuild инструмент для Visual Studio 2015, доступный [здесь](
 https://www.microsoft.com/en-us/download/details.aspx?id=48159).
 
-4.	Install [Lua for Windows](http://files.luaforge.net/releases/luaforwindows/luaforwindows), and make sure that the `Path` environment variable for your system contains the location of `lua.exe`. For example, `C:\Program Files (x86)\Lua\5.1`.
+4.	Установите [Lua for Windows](http://files.luaforge.net/releases/luaforwindows/luaforwindows), и убедитесь, что `Path` переменная среды окружения содержит путь к `lua.exe`. Например, `C:\Program Files (x86)\Lua\5.1`.
 
-5.	Make sure that you have fully cloned this repo *and* its submodules. You should have a `build/ixg-doc-tools` folder full of stuff, and a `stingray-engine` folder full of stuff.
+5.	Убедитесь, что вы полностью клонировали это репо *и* его подмодули. У вас должна быть папка `build/ixg-doc-tools` со всем необходимым, и заполненая папка `stingray-engine`.
 
-6.	Go to the `build` folder, and look for the Ruby scripts. You'll find three convenient `make_....rb` files for building the main help in each of its flavors: Stingray, Max Interactive and Maya Interactive.
+6.	Перейдите в папку `build`, и найдите скрипт Ruby. Вы найдете три удобных файла `make_....rb` для сборки хелпа main для каждого вида: Stingray, Max Interactive и Maya Interactive.
 
-By default, you'll get a local build, which is placed in the `output` folder. You can also have it upload to the public Autodesk Knowledge Network (AKN) site on the cloud.
+По умолчанию вы получите локальную сборку, которая помещается в папку `output` . Вы также можете загрузить его для публики Autodesk Knowledge Network (AKN) site on the cloud.
 
-### Build settings
+### Настройки сборки
 
 The build process for each flavor of the help is controlled by variables in the Ruby script file, and configuration files that you'll find in the `config` folder. You can modify these files to change how the docs are generated and where they end up. For more information on the settings in the .xml files, see the readme `.docx` file in the `build/ixg-doc-tools/tools` folder.
 
@@ -208,16 +208,16 @@ Submodules don't "advance" automatically; we have to specifically set them every
 
 ### Release workflow
 
-The overall release workflow is this:
+Общий рабочий процесс выпуска - такой:
 
--	We work in our `develop` branch on new features as they get done in the engine's `develop` branch.
+-	Мы работаем в нашей ветви `develop` над новыми фичами по мере их разработки в `develop` ветви.
 
--	When the engine branches for a release, we create a corresponding `release` branch and start working on release-specific content in there.
+-	Для релизной ветви движка, мы создаем соответствующую ветвь `release` и начать работу над содержимым, специфичным для этого редиза.
 
 -	Every sprint:
 
-	-	we merge our `release` branch back into our `develop` branch.
+	-	мы мержим `release` ветвь обратно в нашу ветвь `develop` .
 
-	-	we update the submodules for our `develop` and `release` branches to point to the most recent commits.
+	-	мы обновляем подмодули для наших `develop` и `release` ветви, чтобы указать на последние коммиты.
 
 -	When the release goes FCD and we want to publish the help, we merge our `release` branch into `master`, and update its submodule to point to the newest `master` of the Stingray engine.
