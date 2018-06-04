@@ -1,22 +1,23 @@
-# Organize level objects in categories
+# Организация объектов уровня по категориям
 
-You can keep the objects in a level organized in the **Explorer** panel by creating your own custom categories. These new categories appear in the tree view of **Explorer** view, and in the filter control in both **Explorer** view and **Layers** view.
+Вы можете сохранить объекты на уровне, организованными в панели **Explorer** по созданным вами произвольным категориям. Эти новые категории появляются в дереве в **Explorer** , и в управлении фильрами в **Explorer** и в **Layers** .
 
-For example, this image shows custom categories like "Enemies" and "Targets" alongside the built-in categories like "Entities", "Units", "Lights", and "Triggers".
+Например, на этом изображении отображаются настраиваемые категории, такие как "Enemies" и "Targets" наряду со встроенными категориями, такими как "Entities", "Units", "Lights", и "Triggers".
 
 ![](../images/level_explorer_categories.png)
 
-**To create a new category:**
+**для создания новой категории:**
 
-Categories are defined in *.object_filter* resource files in your project folder. For each new category you want to show up in your **Explorer** panel, you need to create a new text file that follows the SJSON format shown below, and give it the *.object_filter* extension.
 
-**To re-apply a category filter**
+Категории определены в файлах ресурсов *.object_filter* вашей папки проекта. Для каждой новой категории на панели **Explorer** , вам нужно создать новый текстовый файл который следует SJSON формату показанному ниже, и дать ему расширение *.object_filter* .
 
-When you create or modify a category, you do not need to restart the interactive editor to make your changes show up in the **Explorer** panel. Instead, press **F5** to refresh the resource from your project's source folder.
+**Повторное применение фильтра категорий**
 
-## The *.object_filter* resource format
+Когда вы создаете или модифицируете категорию, вам не нужно перезапускать интерактивный редактор, чтобы ваши изменения отображались в панели **Explorer** . Вместо этого нажмите **F5** для обновления ресурсов вашей папки проекта.
 
-The following *.object_filter* example was used to create the "Enemies" category shown above:
+## Формат ресурсов *.object_filter* 
+
+Следующий пример *.object_filter* был использован для создания категории "Enemies" показанной выше:
 
 ~~~{sjson}
 category_display_name = "Enemies"
@@ -34,15 +35,15 @@ is_type = """
 """
 ~~~
 
-You can set the following parameters:
+Вы можете задать следующие параметры:
 
 `category_display_name`
 
->	The name of the category as it will appear in the **Explorer** panel.
+>	Название категории, которое будет отображаться в панели **Explorer**.
 
 `category_type_name`
 
->	An internal name for this category type. This name must be unique across all *.object_filter* definitions used in the project, including the built-in categories in the core resources.
+>	Внутреннее имя для этой категории. Это имя должно быть уникальным для всех *.object_filter* объявлений проекта, включая встроенные категории в основные ресурсы.
 
 `evaluation_priority`
 

@@ -1,33 +1,33 @@
-# Communication between {{ProductName}} and Scaleform Studio
+# Взаимодействие между {{ProductName}} и Scaleform Studio
 
-The Scaleform Studio plug-in and the {{ProductName}} engine share a common Lua virtual machine, which means that Lua code run by Scaleform Studio (when running integrated with {{ProductName}}) can invoke Lua commands from {{ProductName}}, and that {{ProductName}} can invoke Lua commands from Scaleform Studio.
+Плагин Scaleform Studio и {{ProductName}} engine разделяет common Lua virtual machine, что означает что Lua code запущенный из Scaleform Studio (при запущенной интеграции с  {{ProductName}}) может вызывать Lua команды из {{ProductName}}, и что {{ProductName}} может вызывать Lua команды из Scaleform Studio.
 
-If you want your Scaleform Studio project to run in the stand-alone Scaleform Studio Player, we recommend that most communication between {{ProductName}} and Scaleform Studio be handled using  the `scaleform.Stage.dispatch_event` and custom event listeners in the Scaleform Studio and {{ProductName}} Lua scripts.
+Если вы хотите запускать проект Scaleform Studio в stand-alone Scaleform Studio Player, мы рекомендуем для лучшего взаимодействия между  {{ProductName}} и Scaleform Studio использовать `scaleform.Stage.dispatch_event` и собственные слушатели событий в Scaleform Studio и {{ProductName}} Lua скриптах.
 
-The Scaleform Studio plug-in also provides `scaleform.Stingray.send_message` for sending events like mouse, keyboard, touch events from {{ProductName}} to Scaleform Studio.
+Плагин Scaleform Studio также предлагает `scaleform.Stingray.send_message` для отсылки events таких как клики мыши, клавиатуры, касаний из {{ProductName}} в Scaleform Studio.
 
->  **Note**: Calling {{ProductName}} functions within Scaleform Studio Lua scripts prevents the Scaleform Studio project from running in stand-alone mode.
+>  **Note**: Вызов функций {{ProductName}} со Scaleform Studio Lua scripts предотвращает Scaleform Studio project от запуска в режиме stand-alone .
 
 
-*	For custom events, use `scaleform.Stage.dispatch_event`.
+*	Для кастомных events, используйте `scaleform.Stage.dispatch_event`.
 
-	You can send other event types using `scaleform.Stage.dispatch_event`, but the plug-in also provides direct support for many of these events with `scaleform.Stingray.send_message`, such as Keyboard, Mouse, or Touch.
+	Вы можете отправлять другие типы событий, используя `scaleform.Stage.dispatch_event`, но плагин также обеспечивает прямую поддержку для многих из этих событий с помощью `scaleform.Stingray.send_message`, таких как Keyboard, Mouse, или Touch.
 
-	For a complete list of event types in Scaleform Studio, refer to the Lua reference documentation [here](http://www.autodesk.com/scaleformstudio-help?guid=__lua_ref_enu_scaleform_EventTypes_html).
+	Полный список типов событий в Scaleform Studio, доступен в Lua reference documentation [here](http://www.autodesk.com/scaleformstudio-help?guid=__lua_ref_enu_scaleform_EventTypes_html).
 
-*	`scaleform.Stage.dispatch_event` processes the event immediately.
+*	`scaleform.Stage.dispatch_event` немедленно обрабатывает событие.
 
 *	`scaleform.Stingray.send_message` buffers until the next `Update` is called to advance the Scaleform Studio project (s2dproj).
 
-*	If your project uses the Appkit, like all of the default template projects, the player's Mouse, Keyboard, and Touch input is automatically passed to Scaleform Studio from {{ProductName}}.
+*	Если ваш проект использует Appkit, как все дефолтные шаблоны проектов, то действия игрока с Mouse, Keyboard, и Touch input автоматически передаются в Scaleform Studio из {{ProductName}}.
 
 
-**Example: Sending mouse input to Scaleform Studio from {{ProductName}}**
+**Пример: Отсылаем mouse input в Scaleform Studio из {{ProductName}}**
 
 
 ~~~
 
-	--Send Mouse Cursor motion and Left Button Down and Up events.
+	--Посылаем движение курсора мыши и события Left Button Down и Up.
 	scaleform.Stingray.send_message("mouse_move" ,
 		stingray.Mouse.axis(stingray.Mouse.axis_index("cursor"), stingray.Mouse.RAW, 3).x,
 		stingray.Mouse.axis(stingray.Mouse.axis_index("cursor"), stingray.Mouse.RAW, 3).y)
@@ -48,9 +48,9 @@ The Scaleform Studio plug-in also provides `scaleform.Stingray.send_message` for
 
 ~~~
 
-**Example: Loading a Main Menu template using custom messages**
+**Пример: Загружаем шаблон Main Menu используя custom messages**
 
-From Lua scripts in your {{ProductName}} project, you can load a Scaleform Studio project and send custom events to the project.
+Из Lua scripts вашего {{ProductName}} project, вы можете загружать Scaleform Studio проект и отсылать кастомные события в проект.
 
 ~~~
 
@@ -68,9 +68,9 @@ From Lua scripts in your {{ProductName}} project, you can load a Scaleform Studi
 
 ~~~
 
-**Example: Registering a Scaleform Studio custom Listener in {{ProductName}}**
+**Пример: регистрируем собственного слушателя событий Scaleform Studio в {{ProductName}}**
 
-This listens for all custom events and processes them using a provided function.
+Он прослушивает все пользовательские события и обрабатывает их с помощью предоставленной функции.
 
 ~~~
 

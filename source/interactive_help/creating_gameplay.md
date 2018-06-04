@@ -1,8 +1,8 @@
-# Creating Gameplay
+# Создание Геймплэя
 
-With {{ProductName}}, you can set up interactive gameplay using Flow visual programming, and Lua scripting. Topics in this section introduce you to both.
+В {{ProductName}}, вы можете настроить interactive gameplay используя визуальное программирование Flow, и скриптинг на Lua. Статьи этого раздела познакомят вас с обоими.
 
->  A great way to get started with interactive authoring is to check out some real working projects. These kits are built mostly in Flow, so they demonstrate the kind of interactive applications you can create without needing to write a ton of custom code.
+>  Прекрасный способ познакомиться с созданием интерактивности это разобрать пару рабочих проектов. Они построены в основном на Flow, поэтому они демонстрируют интерактивные приложения, которые вы можете создать без необходимости писать тонны собственного кода.
 
 <table class="not-ruled"><tr><td>
 ![Space shooter gamekit](images/project_example_space_shooter.png)

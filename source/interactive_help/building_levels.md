@@ -1,3 +1,3 @@
-# Building Levels
+# Построение уровней
 
-Building a level in {{ProductName}} starts by placing and manipulating objects in the editor's Level Viewport. The topics in this section describe the tools and workflows that make creating gameplay simple.
+Постройка уровня в {{ProductName}} начинается с размещения и манипулирования объектами в editor's Level Viewport. Темы в этом разделе описывают инструменты и рабочие процессы, которые делают создание геймплея проще.

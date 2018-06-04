@@ -1,48 +1,48 @@
-# Using Flow for UI control
+# Используем Flow для управления UI
 
-In addition to using scripts to control communication between Scaleform Studio and {{ProductName}}, we provide a basic set of Flow nodes to facilitate communication between the two systems.
+Помимо использования скриптов для управления взаимодействием между Scaleform Studio и {{ProductName}}, мы предоставляем базовый набор узлов Flow для облегчения взаимодействия между двумя системами.
 
 <dl>
 
 <dt>Scaleform Load Project</dt>
 
-<dd>This node loads a Scaleform Studio project.  This node must be called before using any other Scaleform Flow nodes.
+<dd>Этот узел загружает проект Scaleform Studio.  Этот узел нужно вызвать прежде чем использовать любой другой Scaleform Flow узел.
 
-The ProjectName argument is the name of the project with the .s2dproj extension, for example: MyProject.s2dproj.
+Аргумент ProjectName это имя проекта с разрешением .s2dproj , например: MyProject.s2dproj.
 
-The BundlePath argument is the relative path to the root of the {{ProductName}} project, for example: content/ui/MyProjectFolder</dd>
+Аргумент BundlePath это относительный путь к root проекта {{ProductName}}, например: content/ui/MyProjectFolder</dd>
 
 <dt>Scaleform Load Project and Scene</dt>
 
-<dd>This node loads a Scaleform Studio project.  This node must be called before using any other Scaleform Flow nodes. If a scene is provided it will set that scene as the start up scene.
+<dd>Этот узел загружает проект Scaleform Studio. Этот узел нужно вызвать прежде чем использовать любой другой Scaleform Flow узел. Если scene предоставлена то она будет установлена в качестве стартовой.
 
-The Project argument allows you to select the resource id of the Scaleform Studio project to load.
+Аргумент Project позволяет вам выбрать resource id в Scaleform Studio project для загрузки.
 
-The Scene argument allows you to select the resource id of the Scaleform Studio scene associated with the project.
-This node returns a boolean value to indicate if the project was successfully loaded.
+Аргумент Scene позволяет выбрать resource id сцены Scaleform Studio ассоциированной с проектом.
+Этот узел возвращает boolean значение для индикации был ли проект успешно загружен.
 </dd>
 
 <dt>Scaleform Unload Project</dt>
 
-<dd>This node clears the currently loaded project.  It should be used before switching projects or before shutting down.</dd>
+<dd>Этот узел очищает текущий проект.  Вызывается перед переключением проектов или перед завершением работы.</dd>
 
 <dt>Scaleform Dispatch Custom Event</dt>
 
-<dd>This node sends a custom event to the currently loaded Scaleform Studio project. Any custom event listener will be notified and can check to see if the custom event is something to which they should respond.
+<dd>Этот узел отсылает кастомное событие в загруженный сейчас проект Scaleform Studio. Любой пользовательский прослушиватель событий будет уведомлен и может проверить, не является ли пользовательское событие чем-то, на что они должны ответить.
 
-The Event argument is a string which contains the name of the event and a colon delimited series of arguments, for example: `MyEvent:40:AString:true` would dispatch an event named MyEvent with arguments `40`, `AString` and `true`. In the appropriate event handler, the name string would be processed to extract the data. </dd>
+Аргумент Event это строка которая содержит имя события и разделенные двоеточием аргументы, например: `MyEvent:40:AString:true` отправит событие с именем MyEvent с аргументами `40`, `AString` и `true`. В соответствующем обработчике события, строка name будет обработана для извлечения данных. </dd>
 
 <dt>Scaleform Register Custom Event Listener</dt>
 
-<dd>This node registers a listener for a custom event in the interactive engine. Any custom event which is not registered will be ignored.
+<dd> этот узел регистрирует слушателя для кастомных событий в interactive engine. Любое кастомное событие которое не было зарегистрировано будет проигнорировано.
 
-The Event argument should be the name of the custom event independent of any data, for example: for a name string of MyEvent:40:true the name of the event to register is just MyEvent.</dd>
+Аргумент Event должно быть именем кастомного события независимо от любых данных, например: для имени строки MyEvent:40:true имя события для регистрации должно быть MyEvent.</dd>
 
 <dt>Scaleform Unregister Custom Event Listener</dt>
 
-<dd>This node causes a registered listener to stop listening for a custom event.
+<dd>Этот узел заставляет зарегистрированного слушателя прекратить прослушивание кастомного события.
 
-The Event argument should be the name of the custom event independent of any data, for example: MyEvent.</dd>
+Аргумент Event должно быть именем кастомного события независимо от любых данных, например: MyEvent.</dd>
 
 
 <dt>Scaleform Unregister All Event Listeners</dt>

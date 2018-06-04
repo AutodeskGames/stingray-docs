@@ -1,52 +1,52 @@
-# Creating User Interfaces
+# Создание GUI
 
-Most interactive 3D projects need to use a variety of 2D elements to communicate information to the player, and to give the player a simple way to communicate intentions or commands back to the gameplay logic. For example, you might want to use 2D elements to provide:
+Большинство 3D проектов нуждаются в различных 2D элементах для получения информации от пользователя, и дать игроку простой способ сообщить намерения или команды обратно в логику игры. Например 2D элементы пригодятся для:
 
--	Menus and input buttons
--	Text that provides information about the scene or the objects in the scene
--	Heads-up displays (HUDs), like targeting reticules, mini-maps, health bars, and hints about the controls available to the player
+-	Меню и кнопок ввода
+-	Текст, который предоставляет информацию о сцене или объектах в сцене
+-	НАшлемный дисплэй (HUDs), like targeting reticules, мини-карты, полоски здоровья, и подсказки пользователю
 
-You have a few different options for creating and managing these UI elements in {{ProductName}}.
+Есть несколько различных опций для использования UI элементов в {{ProductName}}.
 
 ## Scaleform Studio
 
-{{ProductName}} ships with a standalone UI creation tool called Scaleform Studio, and a plug-in integration that makes the UIs you create in Scaleform Studio show in the engine viewport.
+{{ProductName}} поставляется с готовым инструментом создания UI называемым Scaleform Studio, и плагином интеграции который делает UIs созданный вами в Scaleform Studio отображаемым в engine viewport.
 
-You use the Scaleform Studio editor to create *.s2d* projects that contain visual elements like images, text, and drawings. You can create timeline animations that move these visual elements around and change their state, and assign Lua scripts to the elements in order to make them respond to triggers that happen during the project. You can then import your Scaleform project into your {{ProductName}} project, and use Flow or Lua in {{ProductName}} to launch the UI and handle its events.
+Используйте Scaleform Studio editor для создания *.s2d* проектов которые используют такие 2D элементы как images, text, и drawings. Вы можете создавать анимации временной шкалы, которые перемещают эти визуальные элементы вокруг и меняют свое состояние, и назначать Lua скрипты элементам чтобы они реагировали на триггеры, которые происходят во время проекта. ЗАтем вы можете импортировать ваш Scaleform проект в ваш {{ProductName}} проект, и использовать Flow или Lua в {{ProductName}} для запуска UI и обработки его событий.
 
-Scaleform Studio is a great option for you if:
+Scaleform Studio замечательная опция для вас если:
 
--	You want a full-featured set of tools to design your 2D elements and animations
--	You want to build complex UIs with many interrelated elements
--	You need your UI to accept input from the player, and you want a built-in framework for listening and respond to interaction events like mouse clicks on your widgets
+-	Вы хотите использовать полнофункциональный набор инструментов для 2D элементов и анимаций
+-	Вы хотите построить комплексный UIs со многими взаимосвязанными элементами
+-	Вы нуждаетесь в UI для принятия ввода от игрока, принимать входные данные от игрока, и вы хотите встроенную структуру для прослушивания и реагирования на события взаимодействия, такие как щелчки мыши на ваших виджетах
 
-The other topics in this section explain the basics of integrating a Scaleform Studio UI into your interactive application in {{ProductName}}.
+Другие темы в этом разделе объясняют основы интеграции Scaleform Studio UI в ваше интерактивное приложение в {{ProductName}}.
 
-For complete information about working in Scaleform Studio to set up the visual elements of your UI, visit the [Scaleform Studio Help](http://www.autodesk.com/scaleformstudio-help). (Also available from the **Help** menu in the Scaleform Studio editor.)
+Для получения полной информации о работе в Scaleform Studio для создания визуальных элементов вашего UI, посетите [Scaleform Studio Help](http://www.autodesk.com/scaleformstudio-help). (ТАкже доступно через меню **Help** в Scaleform Studio editor.)
 
-## The built-in Gui system
+## Встроенная система Gui 
 
-The {{ProductName}} interactive engine offers a built-in system for drawing 2D shapes, images, and text in the engine viewport. The editor uses this system to draw things like menus, volumes, prototypes, and triggers in its embedded viewport. You can also use it in your own gameplay and plug-in code.
+{{ProductName}} interactive engine предлагает и свою встроенную систему для отрисовки 2D форм, изображений, и текста в engine viewport. Редактор использует эту систему для рисования таких вещей, как меню, volumes, prototypes, и triggers во встроенном окне просмотра. Вы также можете использовать его в своем собственном игровом процессе и подключаемом модуле.
 
-The Gui system is a great option for you if:
+Система Gui хорошая вещь для вас если:
 
--	You want a script-based system with a fine level of granularity that you can build your own layers on top of
--	You mostly want to *show* 2D elements, with limited need for built-in interactivity. (With the Gui system, you need to set up things like handling mouse picking yourself.)
--	You want to show 2D elements placed in the 3D world at arbitrary positions and rotations
--	You want to control your UI from within a plug-in that extends the engine. The Gui system is exposed in both Lua and C
+-	Вам нужна скриптовая система с высоким уровнем гранулярности который посзолит вам строить собственные слои поверх него
+-	Вы в основном хотите *отображать* 2D элементы, с ограниченной потребностью в встроенной интерактивности. (вам самому нужно настраивать такие вещи, как управление мышью.)
+-	Вы хотите отображать 2D elements размещенные в 3D мире в произвольных координатах и ориентацией
+-	Вы хотите контролировать свой UI из плагина расширения движка. Gui system представлена и в Lua и в C
 
-For more information about the Gui system and how it works, see the documentation for the `stingray.Gui` Lua object.
+Подробнее о Gui system и о том как она работает, вы узнаете из документации Lua объекта `stingray.Gui`.
 
-## Community-supported options
+## Опции поддержки коммьюнити
 
 If you're willing to try a community-supported alternative to the built-in {{ProductName}} UI tools, you might be interested in this option.
 
-### HTML5 and JavaScript
+### HTML5 и JavaScript
 
-The [HTML5 plug-in](https://github.com/jschmidt42/stingray-html5) lets you create your UI elements in HTML and JavaScript. This plug-in integrates the Chrome Embedded Framework (CEF) into the interactive engine. It uses CEF to load HTML content either from a project folder or from a URL, and to render that content inside the engine. It also passes player mouse clicks through to CEF, so that your web content can respond by triggering JavaScript.
+Плагин [HTML5 plug-in](https://github.com/jschmidt42/stingray-html5) позволяет создавать свои UI элементы в HTML и JavaScript. Этот плагин интегрирует фрэймворк Chrome Embedded Framework (CEF) в interactive engine. Он использует CEF для загрузки HTML контента либо из папки проекта, либо из URL, и рендерит этот контент в движке. Он также передает клики мышью пользователя в CEF, так что ваш web content может реагировать на triggering JavaScript.
 
-This is a great option for you if:
+Это подойдет вам если:
 
--	Your project is for Windows platforms only
--	You are already comfortable with HTML5 and JavaScript development
--	You don't need UIs with transparency
+-	Ваш проект только под Windows 
+-	Вы уже знакомы с HTML5 и JavaScript разработкой
+-	Вам не нужен UIs с transparency

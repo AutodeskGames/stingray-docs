@@ -1,44 +1,44 @@
-# Cameras
+# Камеры
 
-Cameras in {{ProductName}} are your way of viewing your 3d scenes. Because they are necessary to see your world at all, they are one of the most essential parts of {{ProductName}}. Every project uses at least one camera, but often a project will use many different cameras to render the scene from different perspectives.
+Камера в {{ProductName}} это ваш способ увидеть 3d сцены. Потому что они необходимы, чтобы видеть ваш мир вообще, они являются одной из важнейших частей {{ProductName}}. В каждом проекте используется как минимум одна камера, но часто проект будет использовать множество различных камер для рендеринга сцены с разных точек зрения.
 
-> ![](../images/icon_video.png) For video tutorials on controlling game cameras, check out <a href="http://area.autodesk.com/learning/series/controlling-game-cameras-in-stingray" target="blank">Controlling Game Cameras</a>.
+> ![](../images/icon_video.png) Видеоуроки по управлению игровыми камерами, смотрите <a href="http://area.autodesk.com/learning/series/controlling-game-cameras-in-stingray" target="blank">Controlling Game Cameras</a>.
 
-## Switching cameras
+## Переключение камер
 
-1. Create a camera from the ~{ Create panel }~.
+1. Создайте камеру на панели ~{ Create panel }~.
 
-2. In the **Flow Editor**, assign your camera as the active camera.
+2. Во **Flow Editor**, установите вашу камеру как active camera.
 
   	![](../images/active_camera_flow.png)
 
-3. Click the Play icon ![](../images/icon_test_level.png) in the ~{ Toolbar }~, and you can now press C to assume your new camera.
+3. Кликните иконку Play ![](../images/icon_test_level.png) на ~{ Toolbar }~, и теперь вы можете нажать C чтобы получить вашу новую камеру.
 
-## Setting clipping planes
+## Настройка плоскостей отсеченния
 
-By default, the interactive engine sets up clipping planes with expected distances for general real world scale. This may not be ideal for your project and sometimes you'll need to adjust your clipping planes accordingly.
+По умолчанию, interactive engine устанавливает плоскость отсечения с ожидаемыми расстояниями для общей масштаба реального мира.Это может быть не идеально для вашего проекта, и иногда вам нужно будет отрегулировать свои отсекающие плоскости соответственно .
 
-**To adjust clipping planes in the viewport:**
+**Для настройки плоскостей отсечения во вьюпорте:**
 
-1. Click the gear icon in viewport, then select **Viewport Options**.
-2. Set the **Near Range** and **Far Range** according to your needs.
+1. Кликните иконку с шестеренкой во viewport, затем выберите **Viewport Options**.
+2. Задайте **Near Range** и **Far Range** как вам нужно.
 
-**To adjust clipping planes:**
+**Для подстройки плоскостей отсечения:**
 
-In **Level Flow**, access the camera with the **Get Active Camera** node, then use the **Set Camera Near Range** and **Set Camera Far Range** nodes to set distances as needed.
+В **Level Flow**, перейдите на камеру с помощью узла **Get Active Camera**, затем используйте узлы **Set Camera Near Range** и **Set Camera Far Range** для задания необходимой дистанции.
 
 ![](../images/ingame-camera-flow.png)
 
-## Moving cameras
+## Движение камер
 
-You can control camera movement with many different methods.
+Камерами можно управлять несколькими способами.
 
--	Use Story to animate cameras. See ~{ Create simple animations with the Story Editor }~.
--	Use Flow or Lua to move the position of cameras. See the Camera category in the [Flow Node Reference](../../flow_ref/index.html) or [Lua API Reference](../../lua_ref/index.html).
--	Link cameras to units that have animated paths or motion.
+-	Использовать Story для анимации камер. См. ~{ Создание простой анимации в Story Editor }~.
+-	ИСпользовать Flow или Lua для перемещения позиции камеры. См Camera category в [Flow Node Reference](../../flow_ref/index.html) или [Lua API Reference](../../lua_ref/index.html).
+-	Привязывая камеры к юнитам (units) у которых есть путь движения или просто движение.
 
-## Storing the template start camera
+## Сохранение стартового шаблонв камеры
 
-The default “fly mode” cameras found in some of the default ~{ Template projects }~ can be useful to switch to and from. Unfortunately, because they are not level units they can be tricky to get at. You can use this simple bit of Flow code to store those cameras for use later on. Use this trick to store any camera so that you can return to it.
+Дефолтная “fly mode” камера из некоторых примерных проектов ~{ Template projects }~ могут быть полезны для переключения на и из. К сожалению, поскольку они не level units им может быть сложно попасть. Вы можете использовать этот простой прием Flow code для сохранения этих камер на будущее. Используйте этот трюк, чтобы сохранить любую камеру, чтобы вы могли вернуться к ней.
 
   ![](../images/store_camera_flow.png)

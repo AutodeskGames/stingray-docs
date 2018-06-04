@@ -1,6 +1,6 @@
-# Animation
+# Анимация
 
-Topics in this section explain the animation tools and workflows in the interactive engine. You’ll learn how to create animations and use them in your project. These topics are intended both for animators that create animated characters and gameplay programmers that work with them in the interactive editor.
+Темы этого раздела посвящены инструментам анимации и рабочему процессу анимации в interactive engine. Вы узнаете как создавать и использовать анимации в своих проектах. Эти темы предназначены как для аниматоров, создающих анимированные персонажи, так и для программистов, играющих с ними в интерактивном редакторе.
 
 ---
 Related topics:

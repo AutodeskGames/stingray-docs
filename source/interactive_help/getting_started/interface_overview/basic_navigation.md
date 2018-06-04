@@ -1,33 +1,33 @@
-# Navigate in the Level Viewport
+# Навигация в Level Viewport
 ﻿
-﻿Use the following hotkeys for general navigation in the **Level Viewport**.
+﻿Используйте следующие горячие клавиши для основной навигации в **Level Viewport**.
 
-| To:  | Do this: |
+| Для:  | Делайте: |
 | ------------- | ------------- |
-| Pan  | Middle-drag or Alt + middle-drag  |
-| Zoom  | Scroll wheel or Alt + right-drag |
-| Orbit (tumble)  | Alt + left-drag |
-| Frame a selected object |  Press F  |
-| Frame all objects  | Press A  |
-| Look around  | Right-drag |
+| Pan  | Middle-drag или Alt + middle-drag  |
+| Zoom  | Scroll wheel или Alt + right-drag |
+| Orbit (облет)  | Alt + left-drag |
+| Frame по выбранному объекту |  Нажмите F  |
+| Frame по всем объектам  | Нажмите A  |
+| Осмотреться  | Right-drag |
 
 
-## Navigate the viewport in game mode
+## Навигация во вьюпорте в game mode
 
-You can also right-click and hold to enter game navigation mode, then use the following hotkeys to navigate:
+Вы также можете задержать правый клик чтобы войти в game navigation mode, затем используйте следующие горячие клавиши:
 
-| To:  | Do this: |
+| Для:  | Делайте: |
 | ------------- | ------------- |
-| Enter game mode navigation  | Right-click and hold  |
-| Move forward  | W |
-| Move left  | A |
-| Move back  | S |
-| Move right  | D |
-| Move up  | E |
-| Move down  | Q |
+| Вход в game mode navigation  | Удерживайте правый клик  |
+| Вперед  | W |
+| Влево  | A |
+| Назад  | S |
+| Вправо  | D |
+| Вверх  | E |
+| Вниз  | Q |
 
 
-> **Tip:** To adjust viewport navigation speed in game mode, press W to move forward, then use your mouse scroll wheel to adjust speed. Scroll forward to move faster in the viewport, scroll backwards to move slower. You can also press Shift to increase the speed of the camera while navigating in game mode or press Ctrl to decrease the speed.
+> **Tip:** Чтобы настроить скорость навигации в game mode, нажмите W, затем используйте колесо прокрутки мыши для регулировки скорости. Scroll forward to move faster in the viewport, scroll backwards to move slower. You can also press Shift to increase the speed of the camera while navigating in game mode or press Ctrl to decrease the speed.
 
 ---
 Related topics:

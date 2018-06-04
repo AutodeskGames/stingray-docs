@@ -1,29 +1,29 @@
-# Create simple animations with the **Story Editor**
+# Создавайте простые анимации с помощью **Story Editor**
 
-1. Select the unit (or units) you want to animate and click ![](../images/icon_storyEd_addNew.png) in the ~{ Story Editor }~. Click *Yes* when prompted on whether you want to add the units to a story.
+1. Выберите unit (или units) которые хотите анимировать и щелкните ![](../images/icon_storyEd_addNew.png) в ~{ Story Editor }~. Нажмите *Yes* когда будет предложено указать, хотите ли вы добавить юниты в историю.
 
-	This adds a new story and a new unit track in the tree view area.
+	Это добавляет новый story и новый unit track в tree view area.
 
-	By default, the unit track lets you access the object's transform properties for animation. Right-click to select and add more properties to the unit track, including material properties.
+	По умолчанию unit track позволяет получить доступ к свойствам преобразования объекта для анимации. Щелкните правой кнопкой мыши, чтобы выбрать и добавить дополнительные свойства в unit track, включая свойства материала.
 
-2. Click ![](../images/icon_storyEd_LIVE.png) to enable editing for the unit.
+2. Нажмите ![](../images/icon_storyEd_LIVE.png) чтобы включить редактирование юнита.
 
-3. Scrub to the frame or time you want in the **Story Editor** timeline, manipulate the object in the **Level Viewport**, then press S or click  ![](../images/icon_storyEd_addkey.png) to set a keyframe.
+3. Скраб к кадру или времени, которое вы хотите в **Story Editor** timeline, манипулируйте объектом в **Level Viewport**, затем нажмите S или click  ![](../images/icon_storyEd_addkey.png) чтобы задать ключевой кадр.
 
-4. Once you've set a few keyframes, use the playback controls in the **Story Editor** to watch your animation playback in the **Level Viewport**.
+4. После того, как вы установили несколько ключевых кадров, используйте элементы управления воспроизведением в **Story Editor** для просмотра анимации в **Level Viewport**.
 
-5. Edit keys as needed, using either the curve editing view, or the key editing view. (Click ![](../images/icon_storyEd_wrench.png) or ![](../images/icon_storyEd_keyEditor.png) to switch between view panels.)
+5. Редактируйте ключи по мере необходимости, используя либо просмотр редактирования кривой, либо вид редактирования ключей. (Click ![](../images/icon_storyEd_wrench.png) or ![](../images/icon_storyEd_keyEditor.png) для переключения между панелями просмотра.)
 
-	>	Copy a key (or multiple keys) and paste in a track (or multiple tracks) using Ctrl + C, Ctrl + X, Ctrl + V hotkeys or right click context menu options. Use the time slider to drag to the position to paste in a track. The keys are pasted on multiple tracks in the order of tracks selected.
+	>	Скопируйте ключ (или несколько ключей) и вставить дорожку (или несколько дорожек) используя клавиши Ctrl + C, Ctrl + X, Ctrl + V или контекстное меню правой кнопкой мыши. Используйте ползунок времени для перетаскивания в позицию для вставки дорожки. Ключи вставляются на несколько дорожек в порядке выбранных дорожек.
 
-When you're finished editing animation for the unit, click ![](../images/icon_storyEd_LIVE.png) again to disable the **Story Editor** and go back to editing your level.
+Когда вы закончите редактирование анимации для unit, нажмите снова ![](../images/icon_storyEd_LIVE.png) чтобы отключить **Story Editor** и вернитесь к редактированию своего уровня.
 
-## Important notes about working with the **Story Editor**
+## Важные замечания о работе с **Story Editor**
 
-- You can still select, move, delete, or modify key values when the **Story Editor** is not Live.
-- When **Story Editor** is live, changing the position of the unit in the level has no effect. To edit the position of the unit in the level again, exit Story mode. (Click LIVE to toggle the mode on and off.)
-- As you animate units in the **Story Editor**, the animation plays back only in the **Level Viewport**, it cannot playback on connected devices.
-- When animating a property of a unit or entity, editing values in the **Property Editor** has no effect on keys in the **Story Editor**. When animating a unit transform (position, rotation, scale), you can use the **Property Editor** to edit animation values.
+- Вы по-прежнему можете выбирать, перемещать, удалять или изменять значения ключей, когда **Story Editor** не является Live.
+- когда **Story Editor** в live, изменение положения устройства на уровне не даст эффекта. Чтобы снова отредактировать положение устройства на уровне, выйдите из Story mode. (Кликните LIVE для включения и выключения режима.)
+- Когда вы анимируете units в **Story Editor**, анимация воспроизводится только в **Level Viewport**, он не может воспроизводиться на подключенных устройствах.
+- При анимации свойства юнита или сущности, редактирование значений в **Property Editor** не влияет на ключи в **Story Editor**. При анимации unit transform (position, rotation, scale), вы можете использовать **Property Editor** для редактирования значений animation.
 
 ---
 Related topics:
